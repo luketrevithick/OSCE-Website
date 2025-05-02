@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Heroin Overdose</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-gray-800">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Suspected Heroin Overdose</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Young adult found unresponsive with suspected opioid overdose.</div>
+                <div><strong>Simulated Patient:</strong> 28-year-old Male Mannequin or Actor</div>
+                <div><strong>Actor/Actress:</strong> Friend (panicked, provides limited history)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-gray-100 p-4 rounded-md border border-gray-300">
+                <li>Urgent response - Unresponsive Person / Overdose</li>
+                <li>28-year-old male found unresponsive by friend</li>
+                <li>Possible drug overdose</li>
+                <li>Patient not breathing normally</li>
+                <li>Friend on scene</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Paramedics arrive at a small apartment. A distressed friend directs them to the bathroom where the patient is lying slumped against the wall, unresponsive. There is drug paraphernalia (syringe, spoon, lighter) visible on the floor nearby. The patient appears cyanotic around the lips.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Unresponsive, cyanotic, signs of IV drug use nearby.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Unresponsive to voice or painful stimuli (AVPU=U).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Partially obstructed by tongue due to decreased LOC, occasional snoring respirations heard initially, then apnoea.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Apnoeic / Occasional gasping respirations initially, rapidly becoming apnoeic. Minimal chest wall movement.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Pale, cool skin. Peripheral cyanosis. Carotid pulse palpable but may be slow/thready. Radial pulse weak or absent.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">Unresponsive (GCS 3). Pupils pinpoint (miosis).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Bathroom environment. Drug paraphernalia present (sharps risk). Patient partially clothed. Need to check for injuries/other issues.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (Collateral from Friend, Patient unresponsive)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">Unknown (Friend unsure)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">None known prescribed. Known history of heroin use.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">History of opioid dependence, previous non-fatal overdoses. Possible Hepatitis C.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Unknown.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding</td><td class="border-b px-4 py-2">Friend reports they used heroin together approx 15-20 minutes ago. Friend states the patient used "his usual amount". Patient went to the bathroom shortly after. Friend became concerned after hearing no noise, found patient unresponsive and called emergency services.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value (Approximate/Expected)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">0-4 (Apnoeic or occasional gasps)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Minimal/absent air entry.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">< 70% or unreadable initially (due to poor perfusion/hypoxia)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">Likely very high if measurable, or absent waveform if apnoeic.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">40-60, may be normal or bradycardic initially. Can deteriorate to PEA/asystole if prolonged hypoxia.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">> 3-4 seconds, sluggish.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus bradycardia initially, potential for deterioration.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">(Obtain if possible post-resuscitation) Check for hypoxic changes, underlying rhythm.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">May be low (e.g., 80/50) or initially maintained.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Pale, cool, cyanotic.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">Unresponsive.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">3/15 (U)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">Within normal limits (e.g., 6.2) - Rule out hypoglycaemia.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">Pinpoint (1-2mm), equal, may be sluggishly reactive or non-reactive if severe hypoxia.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Pinpoint, potentially sluggish/non-reactive.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">May be normal or low (hypothermic).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Focused - once safe/during resuscitation)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**General:** Unresponsive, cyanotic, poor respiratory effort/apnoea.</li>
+                <li>**Airway:** Check for foreign body obstruction (vomitus).</li>
+                <li>**Skin:** Look for track marks (arms, legs, neck, groin), signs of skin popping/abscesses. Check for medication patches (e.g., fentanyl).</li>
+                <li>**Chest:** Check for signs of trauma, aspiration (crackles on auscultation later).</li>
+                <li>**Neurology:** Confirm GCS 3, pinpoint pupils.</li>
+                <li>**Environment:** Note paraphernalia present (needles - sharps safety!).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise opioid toxidrome / overdose leading to respiratory arrest. **Time critical emergency.**</li>
+                <li>**Safety:** Ensure scene safety (sharps!). Use PPE.</li>
+                <li>**Airway Management:** Open airway (head-tilt/chin-lift or jaw thrust). Insert OPA/NPA if tolerated (unlikely initially). Suction if needed.</li>
+                <li>**Breathing Support:** **Immediate assisted ventilation** with Bag-Valve-Mask (BVM) and high-flow oxygen (15L/min). Aim for adequate chest rise and improving SpO2. Ventilate at approx 10-12 breaths/min.</li>
+                <li>**Naloxone Administration:** Administer Naloxone (opioid antagonist) promptly. Route depends on access and local protocols:
+                    <ul>
+                        <li>**IM:** Often preferred initially if IV access not readily available (e.g., 0.8mg - 2mg depending on protocol). Can be repeated.</li>
+                        <li>**IN:** Intranasal naloxone is an option if available (e.g., 1.6mg - 2mg).</li>
+                        <li>**IV:** If IV access established, smaller titrated doses (e.g., 0.1mg - 0.4mg) can be given, titrating to adequate respiratory effort (aim RR > 10-12/min), not necessarily full consciousness.</li>
+                    </ul>
+                </li>
+                <li>**Monitor Response:** Continuously monitor respiratory rate, effort, SpO2, EtCO2, LOC, and pupils after naloxone. Repeat naloxone doses as needed if initial response is inadequate or wears off (naloxone half-life is shorter than many opioids).</li>
+                <li>**Circulation Support:** Monitor pulse and BP. IV access establishment. Fluids usually not required unless hypotensive or other factors present. Manage cardiac arrest according to standard ALS protocols if patient deteriorates.</li>
+                <li>**Consider Co-ingestions/Other Causes:** Rule out hypoglycaemia (check BGL). Consider other sedatives or causes of decreased LOC if poor response to naloxone.</li>
+                <li>**Post-Naloxone Care:**
+                    <ul>
+                        <li>Patient may wake up agitated or combative (withdrawal). Manage calmly.</li>
+                        <li>Risk of vomiting/aspiration as LOC improves. Position appropriately (recovery position if appropriate and C-spine cleared).</li>
+                        <li>Risk of re-narcosis as naloxone wears off. Continuous monitoring is essential.</li>
+                    </ul>
+                </li>
+                <li>**Transport:** All patients receiving naloxone require transport to hospital for observation and further management, due to risk of re-narcosis and potential complications (e.g., aspiration pneumonia, hypoxic brain injury, rhabdomyolysis).</li>
+                <li>**Pre-notify:** Inform receiving hospital about suspected opioid overdose, patient's initial state (apnoeic, GCS 3), naloxone administered (dose, route, response), current vital signs and GCS.</li>
+                <li>Documentation: Record details of assessment, interventions (ventilation, naloxone dose/route/time), patient response, and monitoring.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

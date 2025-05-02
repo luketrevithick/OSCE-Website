@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Acute Stroke</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-red-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Acute Stroke</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Acute onset neurological deficit - Suspected Stroke</div>
+                <div><strong>Simulated Patient:</strong> 68-year-old Male Mannequin or Actor</div>
+                <div><strong>Actor/Actress:</strong> Spouse (present on scene, provides history)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-red-50 p-4 rounded-md border border-red-200">
+                <li>Urgent response - Possible Stroke / CVA</li>
+                <li>68-year-old male with sudden onset weakness</li>
+                <li>Patient responding abnormally</li>
+                <li>Patient breathing normally</li>
+                <li>Spouse present</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Patient is sitting in an armchair in the living room. He appears distressed, with noticeable left-sided facial droop and slurred speech. His left arm is resting limply in his lap. Spouse is standing beside him, anxious.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Obvious distress, left facial droop, slurred speech, left arm weakness.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Opens eyes to voice, attempts to speak but speech is slurred and difficult to understand (dysarthric/aphasic). Obeys commands with right side, weak effort on left. (AVPU = V/P)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Clear, but potential risk due to facial weakness/dysphagia.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Rate and effort appear normal.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Skin warm, colour normal. Radial pulse strong and regular.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">Significant neurological deficit (facial droop, arm weakness, speech difficulty).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Indoor home environment, safe. Patient wearing day clothes.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">Penicillin (rash)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">Ramipril 10mg daily, Atorvastatin 20mg nocte, Metformin 1g BD, Aspirin 75mg daily.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Hypertension, Type 2 Diabetes Mellitus, Hypercholesterolaemia, Ex-smoker (quit 10 years ago). No previous stroke or TIA.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Breakfast (toast and coffee) approx 2 hours ago.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding / Time Last Seen Well</td><td class="border-b px-4 py-2">Spouse reports patient was completely normal watching TV approx 45 minutes ago. He suddenly complained of feeling "strange", then his face drooped and speech became slurred. She noticed his left arm was weak when he tried to stand. She called emergency services immediately. **Time last seen well: 45 minutes ago.**</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">16</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Clear bilaterally</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">97% (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">N/A</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">88, Regular</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">&lt; 2 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Rhythm</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Sinus rhythm, no acute ischaemic changes.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">175/95</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Warm, dry, normal colour.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">0/10 (Patient denies pain, may report headache if asked specifically).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">12-13/15 (E4, V3-4 - slurred/confused, M5-6 - localises/obeys R>L) - Score may vary based on assessment.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">8.2</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">3mm L / 3mm R, Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">36.9</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Focused Neuro Exam / Stroke Screen)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**Facial Droop:** Present on Left (ask patient to smile/show teeth).</li>
+                <li>**Arm Drift:** Left arm drifts downwards rapidly when held out; Right arm holds position.</li>
+                <li>**Leg Weakness:** Left leg weak against resistance/gravity; Right leg normal strength.</li>
+                <li>**Speech:** Dysarthria (slurred) and/or Aphasia (difficulty finding words/understanding).</li>
+                <li>**Vision:** May report blurred vision or visual field defect (hemianopia) - Assess via confrontation if possible.</li>
+                <li>**Grip Strength:** Weak on Left, Normal on Right.</li>
+                <li>**Sensation:** May be reduced on Left side (assess light touch).</li>
+                <li>**Coordination:** Difficult to assess due to weakness, but likely impaired on Left.</li>
+                <li>**(Use local stroke screening tool e.g., FAST, MASS, RACE, etc.)**</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise signs/symptoms of acute stroke. **Time critical emergency.**</li>
+                <li>Confirm time last seen well (critical for thrombolysis/clot retrieval).</li>
+                <li>Primary survey (ABCDE), ensure airway patency. Consider positioning (semi-upright if tolerated and airway secure).</li>
+                <li>Perform focused neurological assessment / stroke screen (e.g., FAST/MASS).</li>
+                <li>Obtain vital signs, including BGL (rule out hypoglycaemia as mimic).</li>
+                <li>Oxygen therapy ONLY if SpO2 < 94%. Avoid routine high-flow oxygen.</li>
+                <li>Establish IV access (large bore cannula, preferably antecubital fossa on unaffected side - Right arm). Avoid excessive attempts.</li>
+                <li>Do NOT administer Aspirin or other antiplatelets/anticoagulants pre-hospital unless directed by specific protocol/receiving facility.</li>
+                <li>Manage blood pressure according to local stroke guidelines (often permissive hypertension is allowed unless extremely high or specific contraindications exist). Avoid rapid lowering unless indicated (e.g., >220/120 or specific circumstances).</li>
+                <li>Keep patient Nil By Mouth (NBM) due to risk of aspiration.</li>
+                <li>Minimise on-scene time. Rapid transport is crucial.</li>
+                <li>**Pre-notify receiving hospital (Stroke Alert):** Provide age, gender, time last seen well, key neurological findings (stroke screen results), vital signs (esp. BP, BGL), ETA.</li>
+                <li>Transport patient safely, minimising movement, continuous monitoring en route.</li>
+                <li>Provide reassurance to patient and spouse.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

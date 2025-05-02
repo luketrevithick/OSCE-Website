@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Neurogenic Shock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-blue-900">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Neurogenic Shock (Spinal Cord Injury)</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Young adult male post-diving accident with signs of shock and neurological deficit.</div>
+                <div><strong>Simulated Patient:</strong> 22-year-old Male Mannequin or Actor</div>
+                <div><strong>Actor/Actress:</strong> Bystander/Friend (provides mechanism details).</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-blue-50 p-4 rounded-md border border-blue-200">
+                <li>Urgent response - Diving Accident / Trauma</li>
+                <li>22-year-old male, dived into shallow water</li>
+                <li>Patient complaining of neck pain, unable to move legs</li>
+                <li>Patient conscious but parameters abnormal</li>
+                <li>Friends present</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Paramedics arrive at a riverside location. The patient is lying supine on the river bank, having been pulled from the water by friends. Manual C-spine immobilisation is being held by a friend. Patient is awake but appears distressed, stating he hit his head on the bottom when diving in and now can't feel or move his legs and has neck pain. His skin below the chest appears warm and dry, contrasting with cool, pale skin above.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Awake, distressed, potential C-spine injury, obvious neurological deficit. Paradoxical skin findings.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Alert, oriented, answers questions appropriately but anxious. Complains of neck pain and inability to move/feel legs. (AVPU=A).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Clear and self-maintaining currently. Maintain C-spine immobilisation.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">May exhibit diaphragmatic breathing (abdominal movement without significant chest wall movement) if injury is high cervical (C3-C5). Rate may be normal or slightly slow. Effort appears shallow.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">**Hypotensive**. **Bradycardic** (or inappropriately normal heart rate for hypotension). Skin below mid-chest level is warm, dry, and possibly flushed. Skin above this level (upper chest, arms, face) is cool and pale. Peripheral pulses may be palpable but rate is slow. Capillary refill may appear normal peripherally despite hypotension.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">GCS 15. Obvious motor and sensory deficit below approximate nipple line (T4 level). Complains of neck pain. Pupils equal and reactive. Priapism may be present (assess if appropriate).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Riverside, patient wet from water. High risk of hypothermia despite peripherally warm skin below injury level (due to poikilothermia). Need to remove wet clothing and keep warm.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (Friend collateral, Patient input)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">NKDA</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">None.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Generally fit and well.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Lunch approx 2 hours ago. Possible alcohol consumption (friend unsure).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding / History of Presenting Complaint</td><td class="border-b px-4 py-2">Patient dived into river from bank (~2m height), impacting head on shallow bottom (~1m depth). Immediately felt neck pain and couldn't move legs. Friends pulled him out quickly. No reported loss of consciousness. Consistent complaint of neck pain and paralysis/numbness below chest since incident (~10 mins ago).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value (Approximate/Expected)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">12-16, shallow (diaphragmatic)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Clear, air entry may be reduced at bases.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">94-96% on Room Air (May decrease if respiratory muscle fatigue occurs).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">35-45 mmHg initially (May rise if hypoventilation develops).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">**50-60**, regular (Bradycardia despite hypotension).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">Variable, may appear normal (<2s) in warm peripheries below injury.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Bradycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Sinus bradycardia. No other acute changes.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">**80/45** (Hypotensive - MAP < 65 mmHg).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Warm, dry below T4 level. Cool, pale above T4 level.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">Reports 7/10 neck pain. Denies pain below chest.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">15/15</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">Within normal limits (e.g., 5.5).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">Equal and reactive.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Equal and Reactive.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">Core temperature likely dropping (e.g., 35.5°C) despite warm peripheral skin below injury (Poikilothermia).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Focused Neuro/Spinal)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**Neurology:**
+                    <ul>
+                        <li>**Motor:** Normal power in upper limbs (C5-T1 intact). Absent voluntary movement in lower limbs (below T1).</li>
+                        <li>**Sensory:** Intact sensation in upper limbs and upper chest. Absent sensation to light touch and pinprick below nipple line (approx T4 dermatome).</li>
+                        <li>**Reflexes:** May be initially absent below level of injury (spinal shock).</li>
+                        <li>**Priapism:** Check for sustained erection (sign of spinal cord injury).</li>
+                    </ul>
+                 </li>
+                 <li>**Spine:** Palpate cervical spine gently for tenderness or deformity (midline tenderness likely present). Maintain immobilisation.</li>
+                 <li>**Skin:** Confirm demarcation between warm/dry skin below injury level and cool/pale skin above.</li>
+                 <li>Differentiate from Hypovolaemic Shock: Key difference is bradycardia (or normal HR) and warm peripheries below injury level in neurogenic shock, versus tachycardia and cool peripheries in hypovolaemic shock. Must also rule out occult haemorrhage.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise Neurogenic Shock secondary to acute traumatic spinal cord injury (likely cervical/high thoracic). **Time critical.**</li>
+                <li>**Spinal Motion Restriction:** Maintain full spinal precautions throughout (manual immobilisation initially, then appropriate device e.g., vacuum mattress/scoop + collar + head blocks).</li>
+                <li>Primary survey (ABCDE), manage immediate life threats.</li>
+                <li>**Airway:** Maintain patent airway with appropriate spinal precautions (e.g., jaw thrust). Monitor for respiratory fatigue.</li>
+                <li>**Breathing:** High-flow oxygen via non-rebreather mask or nasal cannula to maintain SpO2 ≥94%. Monitor respiratory rate, depth, and effort closely. Be prepared to assist ventilations if hypoventilation develops.</li>
+                <li>**Circulation:**
+                    <ul>
+                        <li>Establish IV access x 2 if possible.</li>
+                        <li>**Fluid Therapy:** Administer IV crystalloid fluids **cautiously**. Neurogenic shock involves vasodilation, but patients are often not volume depleted initially. Give small boluses (e.g., 250-500ml) and reassess BP frequently. Aim for MAP improvement (target MAP 85-90 mmHg often cited for spinal cord perfusion, follow local guidelines). Avoid aggressive fluid loading which can cause overload/pulmonary oedema.</li>
+                        <li>**Vasopressors:** Often required early. If hypotension persists despite cautious fluid challenge, initiate vasopressor infusion (e.g., Noradrenaline/Norepinephrine or Metaraminol) according to local protocols, titrating to target MAP. Aim to restore vascular tone.</li>
+                        <li>**Bradycardia:** If severe symptomatic bradycardia (e.g., HR < 40-50 with worsening hypotension), consider Atropine per local guidelines.</li>
+                    </ul>
+                </li>
+                <li>**Disability:** Assess and document neurological level accurately. Manage neck pain appropriately (analgesia - consider IV Paracetamol, cautious opioids).</li>
+                <li>**Exposure/Environment:** Remove wet clothing, cover patient with blankets (including space blanket), actively prevent heat loss. Monitor core temperature if possible.</li>
+                <li>Transport urgently to a Major Trauma Centre with spinal injury capabilities.</li>
+                <li>**Pre-notify:** **Spinal Trauma Alert** to receiving hospital. Provide age, mechanism, neurological level (motor/sensory), vital signs (confirming hypotension AND bradycardia), treatments given (fluids - volume and response, vasopressors, atropine if used), ETA.</li>
+                <li>Documentation: Detailed record of mechanism, neurological assessment, vital signs trends, spinal precautions, fluid volumes, vasopressor doses, response to treatment.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

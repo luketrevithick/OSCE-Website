@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Acute Behavioural Disturbance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-red-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Acute Behavioural Disturbance</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Young adult male with acute agitation and paranoia</div>
+                <div><strong>Simulated Patient:</strong> 24-year-old Male Actor</div>
+                <div><strong>Actor/Actress:</strong> Patient (can provide limited/distorted history), Flatmate (provides collateral)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-red-50 p-4 rounded-md border border-red-200">
+                <li>Urgent response - Behavioural Disturbance / Possible Psychosis</li>
+                <li>24-year-old male, agitated, paranoid</li>
+                <li>Police requested to attend / en route (Paramedics arrive first)</li>
+                <li>Patient potentially aggressive</li>
+                <li>Flatmate present</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Paramedics are met outside the apartment by the flatmate, who appears anxious. Flatmate states the patient has been increasingly erratic over the past 24 hours, not sleeping, talking nonsensically about conspiracies, and accusing the flatmate of spying on him. Today he became highly agitated, shouting, and threw a chair. He is currently locked in his bedroom. Paramedics can hear shouting and banging from behind the bedroom door. Scene safety check: No immediate hazards visible in common areas, await police backup before attempting entry to bedroom if deemed unsafe.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <p class="text-sm text-gray-600 mb-2">(Initial assessment may be limited until safe access is gained, potentially with police assistance)</p>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Highly agitated, loud vocalizations, potentially aggressive/unpredictable. Appears physically imposing. (Observed once door open).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Alert, but grossly disorganized thought process, paranoid delusions evident. Responds aggressively/suspiciously to attempts at communication. (AVPU=A, but quality impaired).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Patent, loud vocalizations.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Rapid rate, appears adequate effort.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Flushed appearance, possibly sweating. Pulse likely rapid (difficult to assess initially).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">Grossly altered mental state. Unable to assess GCS reliably due to behaviour. Pupils may be dilated (suggesting substance use).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Bedroom is messy, possibly damaged furniture. Potential for hidden hazards/weapons. Need for careful assessment once safe. Patient partially clothed, sweating.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (Collateral from Flatmate, Limited/Unreliable from Patient)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">Unknown (Flatmate unsure)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">None known prescribed. Flatmate suspects recreational drug use (possibly stimulants like 'ice'/methamphetamine or cannabis) but hasn't witnessed recent use.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Flatmate reports patient had a similar, less severe episode about a year ago, saw a GP but unsure of diagnosis/treatment. No known physical health problems. Possible underlying mental health condition (e.g., schizophrenia, bipolar disorder).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Unclear, likely poor intake over last 24 hours according to flatmate.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding</td><td class="border-b px-4 py-2">Gradual escalation over 24-48 hours. Poor sleep, increasing paranoia, disorganized speech, social withdrawal followed by agitation and aggression today. Patient may shout things like "They're watching me!", "Get out!", "You're part of it!".</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Obtained once safe, may require restraint/sedation)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value (Approximate/Expected)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">24-28</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Clear (if assessable)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">96-98% (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">Normal or slightly low (due to tachypnoea)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">120-140, regular</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">&lt; 2 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Tachycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Sinus tachycardia, check QTc if considering certain sedatives.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">150/90 - 170/100 (Elevated due to agitation/sympathetic drive)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Flushed, diaphoretic.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">Unable to assess reliably. Patient not complaining of pain.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">Difficult/impossible to score accurately due to behaviour. Appears E4, V variable (confused/inappropriate words), M variable (agitated/restless).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">Within normal limits (e.g., 6.0) - Rule out hypoglycaemia.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">May be dilated (e.g., 5-6mm), equal and reactive.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">May be elevated (e.g., 37.5-38.5) due to agitation/stimulants.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Brief, Focused - once safe)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**General:** Agitated, restless, pacing, diaphoretic, flushed. Disorganised appearance.</li>
+                <li>**Head/Neck:** Check for signs of trauma (especially if fall or struggle occurred).</li>
+                <li>**Chest/Abdo/Limbs:** Brief check for obvious injury, signs of track marks (IVDU).</li>
+                <li>**Neurology:** Gross assessment - pupils dilated, significant thought disorder, paranoia, possible hallucinations (auditory/visual). No obvious focal motor/sensory deficit noted (difficult to fully assess). Tremor may be present.</li>
+                <li>**Mental State Exam (Brief):** Appearance (dishevelled), Behaviour (agitated, restless, poor eye contact), Speech (rapid, pressured, tangential), Mood (irritable, fearful), Thought Content (paranoid delusions), Perception (possible hallucinations), Cognition (impaired attention/concentration), Insight/Judgement (poor).</li>
+                <li>Consider potential organic causes: Substance intoxication/withdrawal, infection (encephalitis/meningitis - check for neck stiffness if possible), metabolic disturbance (check BGL), head injury, hypoxia.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>**Prioritise Safety:** Scene safety, personal safety (PPE), safety of patient and others. Await police if necessary. Maintain safe distance. Plan escape route.</li>
+                <li>**Communication & De-escalation:** Attempt verbal de-escalation in calm, non-threatening manner. Use simple language, acknowledge patient's distress (without validating delusions). Avoid confrontation. Build rapport if possible.</li>
+                <li>**Team Approach:** Work closely with partner and police (if present). Clear roles and communication.</li>
+                <li>**Assessment:** Attempt primary survey and vital signs once safe. Focus on ruling out/identifying immediate life threats and reversible causes (e.g., hypoglycaemia, hypoxia, head injury). Obtain collateral history.</li>
+                <li>**Chemical Sedation (if de-escalation fails and patient remains significant risk):**
+                    <ul>
+                        <li>Follow local guidelines for sedation in ABD.</li>
+                        <li>Consider options like IM Droperidol, IM Olanzapine, or IM Midazolam (often used in combination or alone depending on protocol and suspected cause). Ketamine may be an option in some services for severe agitation.</li>
+                        <li>Choose appropriate dose based on age, weight, frailty, level of agitation, suspected substance use.</li>
+                        <li>Administer safely (ideally with police assistance for restraint if required).</li>
+                        <li>**Monitor closely post-sedation:** Airway, breathing (rate, depth, SpO2, EtCO2), circulation (HR, BP), LOC. Be prepared for airway management/respiratory depression.</li>
+                    </ul>
+                </li>
+                <li>**Physical Restraint:** Use only as a last resort for safety, apply minimum force necessary, follow local protocols. Ensure humane application, monitor neurovascular status, remove as soon as safe (often post-sedation). Requires police involvement typically.</li>
+                <li>**Medical Assessment:** Once sedated/calmer, perform more thorough assessment including 12-lead ECG, temperature, BGL. Establish IV access if possible/necessary.</li>
+                <li>**Transport:** Transport to Emergency Department equipped for mental health assessment and management of ABD. Consider need for security escort.</li>
+                <li>**Pre-notify:** Inform receiving hospital about presentation, suspected cause, vital signs, behaviour, any sedation/restraint used, response to treatment, and police involvement.</li>
+                <li>Documentation: Thoroughly document assessment, interventions, rationale for sedation/restraint, response, and monitoring.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Renal Calculi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-teal-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Renal Calculi (Kidney Stones)</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Adult with acute severe flank pain - Suspected Renal Calculi</div>
+                <div><strong>Simulated Patient:</strong> 35-year-old Male Actor</div>
+                <div><strong>Actor/Actress:</strong> Patient (can provide own history)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-teal-50 p-4 rounded-md border border-teal-200">
+                <li>Urgent response - Severe Abdominal/Flank Pain</li>
+                <li>35-year-old male</li>
+                <li>Patient awake and alert, severe pain</li>
+                <li>Patient breathing normally</li>
+                <li>Patient at home</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Patient is found pacing restlessly in his living room, clutching his right flank. He appears pale and is sweating. There is a vomit bowl nearby with a small amount of clear fluid.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Alert, in severe distress due to pain, restless, pale, diaphoretic.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Alert and oriented, answers questions appropriately between waves of pain (AVPU=A).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Clear and self-maintaining.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Rate slightly increased due to pain, depth appears normal. Symmetrical chest expansion.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Pale, diaphoretic. Radial pulse strong but rapid. Capillary refill < 2 seconds.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">No focal neurological deficit. GCS 15.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Indoor home environment. Patient wearing normal clothes.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">NKDA (No Known Drug Allergies)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">None regular. Took Paracetamol 1g approx 2 hours ago with minimal effect.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Previous episode of kidney stones 3 years ago (left side), managed conservatively. Otherwise generally fit and well.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Dinner last night, approx 12 hours ago. Small sips of water since pain started.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding</td><td class="border-b px-4 py-2">Woke up around 4 hours ago with a dull ache in the right flank. Pain rapidly escalated over the last hour to become severe, sharp, and colicky (comes in waves). Pain radiates down towards the groin/testicle. Felt nauseous and vomited once about 30 minutes ago. Unable to find a comfortable position. Noticed urine was slightly pink-tinged this morning.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">20</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Clear bilaterally</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">98% (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">N/A</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">110, regular</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">&lt; 2 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Tachycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Sinus tachycardia, no acute ischaemic changes.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">155/90 (Likely elevated due to pain)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Pale, diaphoretic.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">10/10 during waves, describes as "worst pain ever". Settles slightly between waves but remains severe (e.g., 7/10).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">15/15</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">5.9</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">3mm L / 3mm R, Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">37.1 (Afebrile - fever might suggest associated UTI)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Focused Abdominal/Renal)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**General:** Patient is restless, unable to lie still.</li>
+                <li>**Abdomen:** Soft on palpation, non-distended. Mild tenderness in right lower quadrant, but maximal tenderness elicited on palpation of the right flank / Costovertebral Angle (CVA tenderness). No rebound tenderness or guarding suggesting peritonitis. Bowel sounds present.</li>
+                <li>**Back:** Marked tenderness over right CVA.</li>
+                <li>**Genitalia:** (Verbalise check if appropriate for scenario/mannequin) No obvious abnormalities. Patient reports pain radiating to right testicle.</li>
+                <li>**Urinalysis:** (If point-of-care testing available) May show haematuria (blood), leukocytes, or nitrites (latter two suggest infection).</li>
+                <li>Consider differentials: AAA (especially if older/risk factors), appendicitis, cholecystitis, pyelonephritis, testicular torsion, musculoskeletal pain.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise presentation consistent with acute renal colic, likely due to renal calculus.</li>
+                <li>Primary survey (ABCDE).</li>
+                <li>**Pain Management:** This is the priority.
+                    <ul>
+                        <li>Consider NSAIDs (e.g., IV Ketorolac or Diclofenac) if not contraindicated (renal impairment, peptic ulcer disease, allergy, anticoagulation, heart failure, third trimester pregnancy). Often first-line for renal colic.</li>
+                        <li>If NSAIDs contraindicated or ineffective, use IV opioids (e.g., titrated Fentanyl or Morphine).</li>
+                        <li>Methoxyflurane may be used for initial rapid relief while establishing IV access/administering other analgesia.</li>
+                    </ul>
+                </li>
+                <li>**Antiemetics:** Administer IV antiemetic (e.g., Ondansetron) for nausea/vomiting.</li>
+                <li>**IV Access:** Establish IV access.</li>
+                <li>**Fluid Therapy:** Administer IV fluids (e.g., 500-1000ml Sodium Chloride 0.9%) especially if patient has been vomiting, is diaphoretic, or unable to tolerate oral fluids. Avoid fluid overload.</li>
+                <li>Monitor vital signs frequently, including pain score reassessment after analgesia.</li>
+                <li>Consider differentials and perform focused examination to rule out red flags (e.g., check for pulsatile mass for AAA).</li>
+                <li>Transport to hospital for further assessment, imaging (CT KUB often preferred), and management.</li>
+                <li>Provide reassurance to the patient.</li>
+                <li>Pre-notify receiving hospital with suspected diagnosis, vitals, and treatments given.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

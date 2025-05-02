@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trevithick.com.au</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind Customization (Optional)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy-dark': '#001f3f',
+                        'navy-medium': '#003366',
+                        'navy-light': '#e6eaf0',
+                        'navy-border': '#cdd5e0',
+                    },
+                    fontFamily: {
+                      sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Styles */
+        .dropdown-content {
+            z-index: 50; /* Ensure dropdown appears above other content */
+        }
+        /* Consistent vertical alignment for nav links */
+        nav ul li a.nav-link {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        /* Simple transition for dropdown visibility (optional) */
+        .dropdown-content {
+            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+        }
+        .dropdown-content.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .dropdown-content:not(.hidden) {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-navy-dark">
+
+    <header class="bg-navy-dark text-white shadow-md sticky top-0 z-40"> <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl sm:text-3xl font-bold">Trevithick.com.au</h1>
+
+            <nav>
+                <ul class="flex space-x-2 sm:space-x-4 items-center">
+                    <li class="relative h-full">
+                        <a href="javascript:void(0)" id="home-button" class="nav-link dropdown-button px-3 py-2 rounded-md hover:bg-navy-medium transition duration-150 ease-in-out">
+                            Mental Health
+                            <svg class="ml-1 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </a>
+                        <div id="home-dropdown" class="dropdown-content absolute left-0 mt-1 w-48 bg-navy-dark rounded-md shadow-lg py-1 hidden">
+                            <a href="Mental Health/Anxiety.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Anxiety</a>
+<a href="Mental Health/Non Suicidality Self Harm.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Non Suicidality Self Harm</a>
+<a href="Mental Health/Intoxicated Adult - Suicide.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Intoxicated Adult Suicide</a>
+<a href="Mental Health/Teenage acute psychosis.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Teenager Acute Psychosis</a>
+<a href="Mental Health/Geriatric UTI-Induced psychosis.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Geriatric UTI-Induced psychosis</a>
+<a href="Mental Health/Schizophrenia.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Schizophrenia</a>
+<a href="Mental Health/Geriatric Depression.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Geriatric Depression</a>
+<a href="Mental Health/Teenage depression.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Teenage depression</a>
+<a href="Mental Health/Borderline personality disorder.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Borderline personality disorder</a>
+<a href="Mental Health/Acute behavioural disturbance.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Acute behavioural disturbance</a>
+                            
+                        </div>
+                    </li>
+
+                    <li class="relative h-full">
+                        <a href="javascript:void(0)" id="about-button" class="nav-link dropdown-button px-3 py-2 rounded-md hover:bg-navy-medium transition duration-150 ease-in-out">
+                            Shock
+                            <svg class="ml-1 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </a>
+                        <div id="about-dropdown" class="dropdown-content absolute left-0 mt-1 w-48 bg-navy-dark rounded-md shadow-lg py-1 hidden">
+                            <a href="Shock/Cardiogenic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Cardiogenic Shock</a> 
+<a href="Shock/Neurogenic shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Neurogenic Shock</a> 
+<a href="Shock/Anaphylactic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Anaphylactic Shock</a> 
+<a href="Shock/Septic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Septic Shock</a> 
+<a href="Shock/Hypovolaemic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Hypovolaemic Shock</a> 
+                       </div>
+                    </li>
+
+                    <li class="relative h-full">
+                        <a href="javascript:void(0)" id="services-button" class="nav-link dropdown-button px-3 py-2 rounded-md hover:bg-navy-medium transition duration-150 ease-in-out">
+                            Trauma
+                            <svg class="ml-1 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </a>
+                        <div id="services-dropdown" class="dropdown-content absolute left-0 mt-1 w-48 bg-navy-dark rounded-md shadow-lg py-1 hidden">
+                            <a href="Trauma/Hyperkalaemia.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Hyperkalaemia</a>
+                           <a href="Trauma/Autonomic Dysreflexia.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Autonomic Dysreflexia</a>
+<a href="Trauma/Forearm Fracture.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Forearm Fracture</a>
+<a href="Trauma/Spontaneous Pneumothorax.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Spontaneous Pneumothorax</a>
+<a href="Trauma/Diabetic Ketoacidosis.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Diabetic Ketoacidosis</a>
+<a href="Trauma/Hypothermia.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Hypothermia</a>
+<a href="Trauma/Heroin overdose.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Heroin overdose</a>
+<a href="Trauma/Renal Calculi.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Renal Calculi</a>
+<a href="Trauma/Acute Stroke.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Acute Stroke</a>
+                        </div>
+                    </li>
+
+                    <li class="relative h-full">
+                        <a href="javascript:void(0)" id="contact-button" class="nav-link dropdown-button px-3 py-2 rounded-md hover:bg-navy-medium transition duration-150 ease-in-out">
+                            Non-Emergency
+                            <svg class="ml-1 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                        </a>
+                        <div id="contact-dropdown" class="dropdown-content absolute left-0 mt-1 w-48 bg-navy-dark rounded-md shadow-lg py-1 hidden">
+                            <a href="Non-Emergency/Migraine.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Migraine</a>
+<a href="Non-Emergency/Acute lower back pain.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Acute lower back pain</a>
+<a href="Non-Emergency/Neck of Femur Fracture.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Neck of Femur Fracture</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 min-h-[calc(100vh-200px)]"> <h2 class="text-3xl font-semibold mb-4">Welcome</h2>
+        <p class="text-lg mb-6">Navigate using the menus above.</p>
+        <div class="h-96"></div> </main>
+
+    <footer class="bg-navy-dark text-white py-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Trevithick.com.au - All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Dropdown Menu Functionality
+         * Handles toggling multiple dropdown menus on click and closing them
+         * when clicking outside.
+         */
+        document.addEventListener('DOMContentLoaded', () => { // Ensure DOM is loaded
+
+            // Select all dropdown trigger buttons
+            const dropdownButtons = document.querySelectorAll('.dropdown-button');
+
+            // Function to close all currently open dropdowns
+            const closeAllDropdowns = (exceptButton = null) => {
+                document.querySelectorAll('.dropdown-content:not(.hidden)').forEach(content => {
+                    // Check if the content belongs to the button that should be excepted
+                    const contentButtonId = content.id.replace('-dropdown', '-button');
+                    if (!exceptButton || contentButtonId !== exceptButton.id) {
+                        content.classList.add('hidden');
+                    }
+                });
+            }
+
+            // Add click listener to each dropdown button
+            dropdownButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    event.stopPropagation(); // Prevent the click from propagating to the document listener
+
+                    // Find the target dropdown content div based on the button's ID
+                    const targetDropdownId = button.id.replace('-button', '-dropdown');
+                    const targetDropdown = document.getElementById(targetDropdownId);
+
+                    if (!targetDropdown) {
+                        console.error(`Dropdown content #${targetDropdownId} not found for button #${button.id}`);
+                        return;
+                    }
+
+                    // Check if the target dropdown is currently hidden (closed)
+                    const isHidden = targetDropdown.classList.contains('hidden');
+
+                    // Close all other dropdowns *before* toggling the target one
+                    closeAllDropdowns(button); // Pass the current button to potentially keep it open
+
+                    // Toggle the target dropdown's visibility
+                    if (isHidden) {
+                        targetDropdown.classList.remove('hidden'); // Open it
+                    } else {
+                         targetDropdown.classList.add('hidden'); // Close it (already handled by closeAllDropdowns, but safe)
+                    }
+                });
+            });
+
+            // Add global click listener to close dropdowns when clicking outside
+            document.addEventListener('click', (event) => {
+                // Check if the click was outside of any dropdown button or content area
+                const clickedElement = event.target;
+                if (!clickedElement.closest('.dropdown-button') && !clickedElement.closest('.dropdown-content')) {
+                    closeAllDropdowns(); // Close all dropdowns
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

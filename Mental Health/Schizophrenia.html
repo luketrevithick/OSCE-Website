@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Schizophrenia Relapse</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-cyan-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Schizophrenia - Acute Psychosis Relapse</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Adult male with known schizophrenia presenting with acute psychosis.</div>
+                <div><strong>Simulated Patient:</strong> 32-year-old Male Actor</div>
+                <div><strong>Actor/Actress:</strong> Patient (exhibiting psychosis), Sibling/Parent (provides collateral).</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-cyan-50 p-4 rounded-md border border-cyan-200">
+                <li>Urgent response - Behavioural Disturbance / Psychosis</li>
+                <li>32-year-old male, known Schizophrenia, increasingly erratic</li>
+                <li>Family concerned, patient talking to self, paranoid</li>
+                <li>Police requested/en route for assistance</li>
+                <li>Patient potentially unpredictable</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Paramedics arrive at a cluttered apartment. The patient's sibling meets them, looking distressed. Sibling reports the patient stopped taking his antipsychotic medication (depot injection overdue by 2 weeks) and has deteriorated significantly over the past week. He is now talking constantly about being monitored by ASIO, believes the TV is sending him messages, and is responding to unseen people. He is pacing in the living room, occasionally shouting at the walls, appears dishevelled and suspicious of the paramedics' arrival.</p>
+            <p class="mt-2 text-sm text-red-700 font-semibold">Scene safety is paramount. Maintain distance initially, await police if behaviour escalates or feels unsafe.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Alert but disoriented/psychotic, agitated, responding to internal stimuli, poor self-care.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Alert, but thought process grossly disorganized. Speech tangential/incoherent at times. Paranoid towards paramedics. May respond verbally but content is delusional. (AVPU=A).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Clear and self-maintaining (talking/shouting).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Rate may be normal or slightly increased due to agitation. Effort appears adequate.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Skin possibly flushed/sweaty from agitation. Pulse likely rapid.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">Acute psychosis. Disorganized thought, delusions, hallucinations. GCS difficult to apply meaningfully but likely E4 V(confused/inappropriate words) M(obeys/localises/withdraws - variable).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Apartment cluttered, potentially neglected. Assess for immediate hazards. Patient dishevelled.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (Sibling collateral essential, Patient input unreliable)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">NKDA (per sibling)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">Prescribed long-acting injectable antipsychotic (e.g., Paliperidone or Zuclopenthixol) - dose due 2 weeks ago, missed appointment. May have PRN oral meds but likely not taking.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Diagnosed Schizophrenia (paranoid type) approx 10 years ago. Multiple previous psychiatric hospital admissions for relapse, usually related to medication non-adherence. History of cannabis use (may exacerbate psychosis). No other significant physical health issues known.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Sibling reports poor intake over last few days, suspicious of food.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding / History of Presenting Complaint</td><td class="border-b px-4 py-2">Deterioration since missing depot injection. Increased social withdrawal, poor sleep, stopped attending appointments. Over last few days, became overtly psychotic - talking/muttering to self, expressing paranoid ideas (being watched, plotted against), ideas of reference (TV talking to him), auditory hallucinations ("hearing voices telling him things"). Became more agitated and disorganised today, prompting sibling to call. Denies illness, lacks insight.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Obtain once safe, may require sedation/police presence)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value (Approximate/Expected)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">18-24</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Clear (if assessable)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">97-100% (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">Normal range (if assessable)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">100-120, regular (due to agitation)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">&lt; 2 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Tachycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Sinus tachycardia. Check QTc interval (baseline, relevant if considering certain antipsychotics).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">140/85 - 160/95 (Elevated due to agitation)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Possibly sweaty.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">Unlikely to report pain unless injured. May have bizarre somatic delusions.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">Not clinically useful due to psychosis. Document behaviour instead.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">Within normal limits (e.g., 6.5) - Rule out hypoglycaemia.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">Equal and reactive, normal size (unless co-ingestion).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">Normal (e.g., 37.0). (Fever could suggest infection or NMS - less likely focus here).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Focused Mental State & Brief Physical)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**Mental State Exam (MSE):**
+                    <ul>
+                        <li>**Appearance/Behaviour:** Dishevelled, poor hygiene, agitated or withdrawn, pacing, gesturing, talking to self, suspicious, poor eye contact.</li>
+                        <li>**Speech:** May be rapid, pressured, loud, illogical, tangential, circumstantial, word salad, neologisms.</li>
+                        <li>**Mood/Affect:** Mood often irritable, anxious, fearful, or perplexed. Affect may be labile, blunted, flat, or inappropriate to thought content.</li>
+                        <li>**Thought Form:** Formal thought disorder evident (loosening of associations, tangentiality, etc.).</li>
+                        <li>**Thought Content:** Delusions (likely paranoid, referential, possibly grandiose or bizarre). Assess for thoughts of harm to self or others (may be driven by delusions).</li>
+                        <li>**Perception:** Auditory hallucinations common ("hearing voices" - assess command hallucinations). Possible visual or other hallucinations.</li>
+                        <li>**Cognition:** Attention and concentration significantly impaired. Orientation may be intact or impaired.</li>
+                        <li>**Insight/Judgement:** Insight into illness is typically absent/poor. Judgement severely impaired.</li>
+                    </ul>
+                 </li>
+                 <li>**Physical:** Brief check for signs of injury (especially if agitated/combative), infection, or substance use. Rule out obvious organic causes mimicking psychosis (e.g., delirium due to infection, substance intoxication/withdrawal).</li>
+                 <li>**Risk Assessment:** High risk of unpredictable behaviour, potential aggression (often fear-driven), self-neglect. Assess risk of harm to self/others based on delusions/hallucinations.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise acute psychotic relapse in patient with known schizophrenia, likely precipitated by medication non-adherence.</li>
+                <li>**Prioritise Safety:** Scene safety, personal safety, patient safety, safety of others (sibling). Await/utilise police assistance as needed. Maintain calm environment, minimise stimuli. Have clear exit strategy.</li>
+                <li>**Communication & De-escalation:** Approach calmly, confidently, respectfully. Introduce self clearly. Use simple, clear, concise language. Avoid challenging delusions directly. Focus on patient's distress/fear ("You seem very frightened"). Attempt to build rapport, express desire to help.</li>
+                <li>**Team Approach:** Coordinate closely with partner, police, and sibling.</li>
+                <li>**Assessment:** Attempt primary survey and vital signs once safe. Obtain collateral history. Perform focused MSE. Rule out immediate organic causes (BGL, hypoxia).</li>
+                <li>**Chemical Sedation (Consider if severe agitation/aggression persists despite de-escalation, posing risk):**
+                    <ul>
+                        <li>Follow local mental health/sedation guidelines.</li>
+                        <li>Preferred agents often IM antipsychotics (e.g., Olanzapine, Droperidol) +/- benzodiazepines (e.g., Midazolam) depending on protocol.</li>
+                        <li>Administer safely, usually requiring police assistance for restraint.</li>
+                        <li>Monitor closely post-sedation (Airway, Breathing, Circulation, LOC).</li>
+                    </ul>
+                </li>
+                <li>**Physical Restraint:** Use only if essential for safety, minimum force, per protocol, typically with police. Monitor closely.</li>
+                <li>**Medical Assessment:** Once calmer/sedated, complete assessment (ECG, temp). Check for injuries.</li>
+                <li>**Transport:** Transport to Emergency Department with psychiatric assessment capabilities is required.</li>
+                <li>**Mental Health Act:** Patient likely lacks capacity and insight, requiring involuntary assessment/transport under relevant mental health legislation (liaise with police/authorised personnel as per local procedures).</li>
+                <li>**Pre-notify:** Provide detailed handover to ED (Mental Health Alert): Known diagnosis, likely trigger (med non-adherence), presenting psychotic phenomena (delusions, hallucinations), behaviour, risk assessment, vital signs, any sedation/restraint used, response, legal status (if under Act). Request urgent psychiatric assessment.</li>
+                <li>Documentation: Meticulous documentation of MSE, risk assessment, de-escalation attempts, rationale for/details of sedation/restraint, monitoring, legal status, communication with family/police.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

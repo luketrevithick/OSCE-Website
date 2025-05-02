@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Teenage Depression</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-blue-800">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Teenage Depression / Low Mood</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Teenager presenting with persistent low mood, withdrawal, and possible suicidal ideation.</div>
+                <div><strong>Simulated Patient:</strong> 16-year-old Female Actor</div>
+                <div><strong>Actor/Actress:</strong> Patient (may be reluctant to talk), Parent (concerned, provides collateral).</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-blue-50 p-4 rounded-md border border-blue-200">
+                <li>Non-urgent response - Welfare Check / Low Mood</li>
+                <li>16-year-old female, parent concerned about withdrawal and mood</li>
+                <li>Possible depression / self-harm risk</li>
+                <li>Patient is awake</li>
+                <li>Parent present</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Paramedics arrive at a suburban home. The parent meets them at the door, appearing worried. Parent explains their daughter has been withdrawn, tearful, and irritable for several weeks, spending most of her time in her room, refusing to go to school some days, and has stopped seeing her friends. Parent found some concerning drawings/writings and called for help. The patient is in her bedroom, lying on her bed, looking sullen and avoids eye contact initially.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Appears withdrawn, sad affect, poor eye contact, possibly unkempt appearance.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Alert, but may be slow to respond or give minimal answers initially. Oriented. (AVPU=A).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Clear and self-maintaining.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Rate and effort appear normal.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Skin appears normal colour and temperature. Pulse regular. Capillary refill < 2 seconds.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">Low mood and withdrawal evident. No gross focal neurology. GCS 15.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Bedroom environment. Assess for safety, signs of self-harm (e.g., hidden sharps, blood stains), substance use, or concerning items. Patient wearing casual clothes/pyjamas.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (Patient interview - build rapport, Parent collateral)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">NKDA</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">None.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Possible history of anxiety. No previous formal mental health diagnosis or treatment. Generally physically healthy.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Parent reports decreased appetite, skipped breakfast.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding / History of Presenting Complaint</td><td class="border-b px-4 py-2">Gradual onset over several weeks/months. Patient describes feeling "sad", "empty", "numb", or "irritable". Loss of interest/pleasure in usual activities (anhedonia) - e.g., sports, hobbies, seeing friends. Changes in sleep (insomnia or hypersomnia). Changes in appetite/weight (decrease or increase). Fatigue, low energy. Difficulty concentrating, impacting schoolwork (grades dropping). Feelings of worthlessness or excessive guilt. Social withdrawal. Parent notes increased tearfulness, irritability, isolation. **Crucially, need to screen for self-harm and suicidal ideation.** Patient may initially deny or minimize these thoughts/behaviours.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value (Approximate/Expected)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">14-18</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Clear</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">98-100% (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">N/A</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">70-90, regular (May be slightly higher if anxious)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">&lt; 2 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Rhythm</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Normal sinus rhythm.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">110/70 - 120/80</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Normal colour and temperature. Check forearms/thighs for evidence of self-harm (scars, fresh cuts).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">Denies physical pain, but may describe emotional pain intensely.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">15/15</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">Within normal limits (e.g., 5.0)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">Equal and reactive, normal size.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">Normal (e.g., 36.7)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Focused Mental State & Risk Assessment)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**General Appearance/Behaviour:** May appear tired, sad, withdrawn, poor self-care. May be tearful or irritable. Poor eye contact. Psychomotor retardation (slowed movements/speech) or agitation possible.</li>
+                <li>**Speech:** May be quiet, slow, monotone, minimal responses.</li>
+                <li>**Mood/Affect:** Subjective mood described as "sad", "down", "hopeless", "empty". Objective affect appears congruent - depressed, constricted, possibly tearful or irritable.</li>
+                <li>**Thought Content:** Ruminations on negative themes, feelings of worthlessness, hopelessness, guilt. **Assess suicidal ideation:** Use direct questions (e.g., "Sometimes when people feel this down, they have thoughts about harming themselves or ending their life. Have you had any thoughts like that?"). Explore frequency, intensity, duration, plans, intent, access to means. **Assess self-harm:** Ask directly about thoughts or acts of self-harm (cutting, burning, etc.).</li>
+                <li>**Perception:** Usually no hallucinations or delusions in uncomplicated depression.</li>
+                <li>**Cognition:** Reports difficulty concentrating. Orientation intact.</li>
+                <li>**Insight/Judgement:** Insight may be variable. Judgement regarding safety may be impaired.</li>
+                <li>**Risk Assessment:** Synthesise information regarding suicidal ideation/self-harm, hopelessness, impulsivity, access to means, protective factors (family support, future plans - often diminished), stressors, past history.</li>
+                <li>**Physical:** Check for signs of self-harm. Brief physical exam to rule out obvious organic causes (though less likely given history).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise presentation suggestive of moderate to severe depression in an adolescent. Prioritise risk assessment.</li>
+                <li>**Build Rapport:** Approach calmly, patiently, and non-judgmentally. Attempt to speak with the patient alone initially (if appropriate and safe) to facilitate disclosure, while ensuring parent is involved. Validate their feelings ("It sounds like things have been really tough for you lately").</li>
+                <li>**Safety:** Ensure immediate safety. Remove any obvious means of self-harm if identified and safe to do so.</li>
+                <li>**Comprehensive Risk Assessment:** Conduct a thorough suicide and self-harm risk assessment using information from both patient and parent. Document findings clearly.</li>
+                <li>**Communication:** Communicate findings and concerns clearly with the patient (age-appropriately) and parent. Explain the need for further assessment.</li>
+                <li>**Involve Parent/Guardian:** Essential for decision-making, safety planning, and ongoing support. Discuss findings and management plan with them.</li>
+                <li>**Rule out Organic Causes:** While less likely, consider if any physical symptoms warrant investigation (perform basic vitals, BGL).</li>
+                <li>**Medical Treatment:** Usually limited pre-hospital unless co-existing medical issue or self-harm requires wound care. No role for sedation unless extreme agitation (highly unlikely).</li>
+                <li>**Decision Regarding Transport:** Based on risk assessment. Any disclosure of current suicidal ideation (especially with intent/plan), recent self-harm, or significant deterioration warrants urgent transport to ED for comprehensive mental health assessment. If risk seems low and strong safety plan/supports are in place, referral to GP/community mental health *might* be considered *in consultation with senior clinician/mental health services* (follow local guidelines strictly), but ED is often the safest initial disposition.</li>
+                <li>**Safety Planning (if applicable and awaiting transport/assessment):** Briefly discuss coping strategies, reasons for living, support contacts (parent, helpline). Ensure means restriction.</li>
+                <li>**Transport:** Transport patient (with parent) to ED equipped for paediatric/adolescent mental health assessment.</li>
+                <li>**Pre-notify:** Inform receiving hospital about patient's presentation (low mood, withdrawal), key symptoms, risk assessment findings (SI/SH details), relevant history, and parental involvement. Request mental health liaison/team assessment.</li>
+                <li>Documentation: Detailed record of assessment, mental state exam, risk assessment (including specific questions asked and responses), collateral information, rationale for transport/management plan.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

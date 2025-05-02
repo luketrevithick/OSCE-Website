@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Anaphylactic Shock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-amber-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Anaphylactic Shock</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Adult patient with sudden onset multi-system allergic reaction progressing to shock.</div>
+                <div><strong>Simulated Patient:</strong> 40-year-old Female Actor/Mannequin</div>
+                <div><strong>Actor/Actress:</strong> Patient (initially able to speak, deteriorates), Friend/Partner (provides collateral).</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-amber-50 p-4 rounded-md border border-amber-200">
+                <li>Urgent response - Allergic Reaction / Difficulty Breathing</li>
+                <li>40-year-old female, sudden onset SOB, rash</li>
+                <li>Possible Anaphylaxis</li>
+                <li>Patient conscious but distressed</li>
+                <li>Friend present</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Paramedics arrive at a cafe. The patient is sitting at a table, appearing anxious, flushed, and audibly wheezing. She is scratching at her arms where a widespread urticarial rash is visible. Her friend reports the patient ate a pastry a few minutes ago which she thought might have contained nuts (patient has a known severe nut allergy and carries an EpiPen, but hasn't used it yet). The patient complains of throat tightness and difficulty swallowing.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Acutely unwell, distressed, audible wheeze, visible rash/flushing.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Alert but anxious and struggling to speak in full sentences due to dyspnoea/throat tightness (AVPU=A).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Compromised - patient reports throat tightness/swelling, voice may be hoarse, potential for stridor (listen carefully).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Rapid respiratory rate, increased work of breathing (accessory muscle use), audible wheeze bilaterally on auscultation. SpO2 may be dropping.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Tachycardic, peripheral vasodilation (flushed, warm skin initially), pulse may feel weak/thready, **hypotension likely developing or present**. Capillary refill may become sluggish.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">Alert initially but may become confused/agitated/drowsy as hypoxia/hypoperfusion worsens. GCS 15 initially.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Cafe environment. Patient wearing normal clothes. Expose chest/skin to assess rash fully (urticaria, angioedema - especially lips, tongue, eyelids).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (Friend collateral, Patient input limited by distress)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">**Known severe allergy to Peanuts and Tree Nuts.** Carries EpiPen. No other known allergies.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">Salbutamol inhaler PRN (mild asthma), Oral contraceptive pill.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Previous anaphylactic reaction to nuts 5 years ago requiring hospital admission and adrenaline. Mild intermittent asthma.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Ate a pastry ~10-15 minutes ago at the cafe.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding / History of Presenting Complaint</td><td class="border-b px-4 py-2">Within minutes of eating the pastry, started feeling itchy mouth/throat, followed rapidly by widespread rash, feeling hot, throat tightness, difficulty breathing, and wheezing. Symptoms progressed quickly. Friend confirms timeline and known allergy. Patient feels dizzy and nauseous.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial & Progression)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value (Approximate/Expected - may deteriorate rapidly)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">30-35, increased effort</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Widespread wheeze, possible stridor (inspiratory noise indicating upper airway obstruction). Air entry may decrease if severe bronchospasm/obstruction.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">88-92% on Room Air initially, dropping further without intervention.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">May be low initially due to hyperventilation, but rises if respiratory failure develops. Waveform may show 'shark fin' shape (bronchospasm).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">130-150, may become thready.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">> 3 seconds, sluggish.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Tachycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Sinus tachycardia. (May show ischaemic changes in severe shock/hypotension).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">**75/45** (Hypotensive - crucial sign of shock).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Flushed initially, may become pale/mottled/cool as shock progresses. Urticaria widespread. Possible angioedema (lips, eyes).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">May report abdominal pain/cramps. Primary complaint is dyspnoea/throat tightness.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">15 initially, decreasing to 12-13 (confused/drowsy) if shock/hypoxia worsens.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">Within normal limits (e.g., 6.0).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">Equal and reactive.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Equal and Reactive.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">Normal.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Focused)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**General:** Anxious, distressed, tachypnoeic, tachycardic, hypotensive.</li>
+                <li>**Airway:** Hoarse voice, stridor, patient reporting throat swelling/difficulty swallowing. Angioedema of lips/tongue.</li>
+                <li>**Breathing:** Increased work of breathing, accessory muscle use, audible wheeze, bilateral wheeze on auscultation, low SpO2.</li>
+                <li>**Circulation:** Tachycardia, hypotension, delayed capillary refill.</li>
+                <li>**Skin:** Widespread urticaria (hives), flushing, angioedema (face, lips, eyelids).</li>
+                <li>**Abdomen:** May be soft but patient might report cramping.</li>
+                <li>**Neurology:** Initially alert, potential for deterioration in LOC.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise Anaphylaxis with signs of shock (hypotension, altered mental status) and airway/breathing compromise. **Life-threatening emergency.**</li>
+                <li>Primary survey (ABCDE), manage immediate life threats FIRST.</li>
+                <li>**Adrenaline (Epinephrine):** **Administer IMMEDIATELY.** First line treatment.
+                    <ul>
+                        <li>Route: Intramuscular (IM) injection into anterolateral thigh (vastus lateralis).</li>
+                        <li>Dose: Adult 0.5mg (e.g., 0.5ml of 1:1000 solution). Repeat every 5 minutes if no significant improvement.</li>
+                        <li>Consider patient's own EpiPen if available while preparing own medication.</li>
+                    </ul>
+                </li>
+                <li>**Airway Management:** Position patient upright if airway patent and breathing allows. Monitor airway closely for obstruction. Prepare for advanced airway management (intubation) if obstruction worsens or LOC decreases significantly - this can be very difficult due to swelling.</li>
+                <li>**Oxygen:** High-flow oxygen via non-rebreather mask aiming SpO2 ≥94%. Assist ventilations with BVM if respiratory effort inadequate.</li>
+                <li>**Circulation Support:**
+                    <ul>
+                        <li>Establish large bore IV access x 2 if possible.</li>
+                        <li>**Aggressive IV Fluid Resuscitation:** Administer rapid bolus of isotonic crystalloid (e.g., 1000ml Sodium Chloride 0.9% or Hartmann's solution) due to vasodilation and capillary leak causing relative hypovolaemia. Repeat boluses as needed based on BP response.</li>
+                        <li>Consider IV Adrenaline infusion if unresponsive to IM adrenaline and fluids (follow local protocols - critical care setting usually).</li>
+                    </ul>
+                </li>
+                <li>**Adjunctive Therapies (Secondary - AFTER Adrenaline):**
+                    <ul>
+                        <li>**Antihistamines:** (e.g., IV Chlorphenamine or Promethazine) - Helps with skin symptoms but does NOT treat life-threatening features.</li>
+                        <li>**Corticosteroids:** (e.g., IV Hydrocortisone or Oral Prednisolone) - May help prevent biphasic reaction/protracted symptoms, but slow onset, not for acute life threats.</li>
+                        <li>**Bronchodilators:** Nebulised Salbutamol (+/- Ipratropium) for persistent wheeze/bronchospasm after adrenaline.</li>
+                    </ul>
+                </li>
+                <li>Remove allergen if possible (e.g., bee sting).</li>
+                <li>Continuous monitoring of vital signs, respiratory status, mental status.</li>
+                <li>Transport urgently to hospital, pre-notifying with "Anaphylaxis Alert".</li>
+                <li>**Pre-notify:** Inform receiving hospital about anaphylaxis, suspected trigger, vital signs (confirming airway/breathing compromise and hypotension), **Adrenaline given (dose, route, time, response)**, fluids given, other medications, ETA.</li>
+                <li>Documentation: Detailed record of symptom onset, trigger, assessment findings, timings and doses of all medications (especially adrenaline), fluid volumes, vital sign trends, response to treatment.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

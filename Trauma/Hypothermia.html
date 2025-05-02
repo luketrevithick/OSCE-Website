@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Hypothermia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-blue-600">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Hypothermia (Elderly Fall)</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Elderly patient found outdoors after a fall, presenting with confusion and signs of hypothermia.</div>
+                <div><strong>Simulated Patient:</strong> 80-year-old Male Mannequin or Actor</div>
+                <div><strong>Actor/Actress:</strong> Neighbour (found patient, provides limited info).</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-blue-50 p-4 rounded-md border border-blue-200">
+                <li>Non-urgent response initially (Welfare Check), upgraded - Fall / Exposure</li>
+                <li>80-year-old male found lying in garden by neighbour</li>
+                <li>Patient confused, cold to touch</li>
+                <li>Unknown duration of exposure</li>
+                <li>Neighbour present</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Paramedics arrive on a cool, overcast morning (ambient temp ~10°C). The patient is found lying on his side on damp grass in the back garden, partially covered by a thin blanket provided by the neighbour. He appears pale and is shivering weakly. The neighbour reports finding him ~20 minutes ago when checking on him, unsure how long he's been there but possibly overnight after a fall.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Elderly male, pale, shivering weakly, altered mental status.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Opens eyes to voice, appears confused and disoriented, speech slow and slightly slurred (AVPU=V, confused).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Clear and self-maintaining currently.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Slow respiratory rate (bradypnoea), shallow depth.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Skin pale, cool/cold to touch peripherally and centrally. Peripheral pulses weak, difficult to palpate. Central pulse slow (bradycardia). Capillary refill significantly delayed (>5 seconds).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">Altered mental status (confusion, lethargy). GCS ~12-13 (E3 V4 M5-6). Pupils may be sluggishly reactive. Muscle rigidity may be present.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Outdoor environment, cool ambient temperature, patient on damp ground, clothing likely damp. High risk of further heat loss.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (Neighbour collateral, Patient input limited/unreliable)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">Unknown (Neighbour unsure)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">Neighbour thinks he takes "heart and blood pressure tablets".</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Neighbour knows he has had heart problems and lives alone since wife died last year. Seems more forgetful recently.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Unknown.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding / History of Presenting Complaint</td><td class="border-b px-4 py-2">Unknown mechanism of fall or time down. Found lying in garden this morning. Patient unable to provide clear history due to confusion/hypothermia. Likely fell sometime yesterday evening or overnight and was unable to get up, leading to prolonged cold exposure.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value (Approximate/Expected)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">8-10, shallow</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Clear, air entry may be poor due to shallow breathing.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">Difficult to obtain reliable reading due to poor perfusion/cold peripheries. May read low (e.g., 88-92%).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">May be elevated due to hypoventilation.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">45-55, regular or irregular (risk of AF).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">> 5 seconds.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Bradycardia. **Monitor closely for Osborn (J) waves**, Atrial Fibrillation, Ventricular Fibrillation, or Asystole.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Sinus bradycardia. Look for Osborn waves (positive deflection at J point), prolonged intervals (PR, QRS, QT).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">May be low (e.g., 90/60) or surprisingly normal/high initially due to vasoconstriction. Often difficult to measure accurately.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Pale, cold centrally and peripherally. Possible cyanosis.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">Unable to assess reliably. May have pain from fall (e.g., hip).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">~12-13 (E3 V4 M5-6)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">May be low, normal, or high. Check promptly.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">May be dilated and sluggishly reactive.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Sluggish.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">**Crucial:** Measure core temperature (tympanic, oral if possible, ideally oesophageal/rectal if equipped/protocol allows). **Expected < 35°C** (e.g., 32-34°C indicating moderate hypothermia).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Focused)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**General:** Lethargic, confused, shivering (may be weak or absent if severe <32°C), cold to touch.</li>
+                <li>**Skin:** Pale/ashen/cyanotic, cold. Check for frostbite (unlikely at 10°C ambient unless wet/prolonged).</li>
+                <li>**Neurology:** Altered LOC, slurred speech, ataxia/poor coordination if able to move, muscle rigidity.</li>
+                <li>**Cardiovascular:** Bradycardia, hypotension (or normal BP), weak pulses.</li>
+                <li>**Respiratory:** Bradypnoea, shallow breathing.</li>
+                <li>**Trauma Assessment:** Perform head-to-toe assessment carefully (minimising movement) to identify injuries from fall (e.g., head injury, hip fracture, other fractures).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise Moderate Hypothermia (<35°C, e.g., 32-34°C) secondary to environmental exposure after a fall. Consider underlying medical conditions/frailty as contributing factors. **Potential for cardiac instability.**</li>
+                <li>Primary survey (ABCDE), manage immediate life threats. **Handle patient gently** - rough handling can precipitate VF.</li>
+                <li>**Airway:** Maintain patent airway. Consider basic adjuncts if needed.</li>
+                <li>**Breathing:** Provide supplemental oxygen (warmed and humidified if possible) via mask to maintain SpO2 ≥94%. Assist ventilations with BVM if RR severely depressed or inadequate tidal volume.</li>
+                <li>**Circulation:**
+                    <ul>
+                        <li>Continuous ECG monitoring. Be vigilant for dysrhythmias (esp. AF, VF).</li>
+                        <li>IV Access: Establish IV access if possible (may be difficult).</li>
+                        <li>**Fluid Therapy:** Administer **warmed** IV crystalloid fluids (e.g., Sodium Chloride 0.9% heated to ~40°C). Give cautiously, especially if heart failure history suspected. Primarily for volume expansion if hypotensive and to aid core rewarming.</li>
+                        <li>Treat hypotension primarily via rewarming. Vasopressors generally avoided unless refractory hypotension persists after initial rewarming/fluids.</li>
+                        <li>If VF/VT occurs, standard defibrillation attempts (may be less effective at low core temps). Follow local hypothermic cardiac arrest protocols (may involve limited shocks, delayed drugs, focus on rewarming).</li>
+                    </ul>
+                </li>
+                <li>**Rewarming:** **PRIORITY**.
+                    <ul>
+                        <li>**Remove wet clothing** immediately.</li>
+                        <li>**Passive external rewarming:** Cover with warm, dry blankets (including head). Use space blanket/hypothermia wrap. Prevent further heat loss.</li>
+                        <li>**Active external rewarming:** Apply warming blankets (e.g., Bair Hugger) or heat packs to trunk (axillae, groin, torso) - avoid direct skin contact, avoid peripheral rewarming initially (can cause afterdrop).</li>
+                        <li>**Minimally invasive core rewarming:** Warmed IV fluids. Warmed humidified oxygen.</li>
+                    </ul>
+                </li>
+                <li>**Disability:** Check BGL, treat hypoglycaemia if present. Maintain spinal precautions if trauma suspected.</li>
+                <li>**Handle Gently:** Avoid unnecessary or rough movement.</li>
+                <li>Transport urgently to hospital capable of managing hypothermia and potential underlying trauma/medical issues. Minimise heat loss during transport.</li>
+                <li>**Pre-notify:** **Hypothermia Alert** to receiving hospital. Provide age, circumstances (fall, exposure time), **core temperature**, vital signs (confirming bradycardia, bradypnoea, hypotension), GCS, ECG findings (Osborn waves?), suspected injuries, rewarming measures initiated, ETA.</li>
+                <li>Documentation: Detailed record of circumstances, core temperature readings, vital signs trends, ECG findings, neurological status, rewarming methods used, fluid volumes, response to treatment.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

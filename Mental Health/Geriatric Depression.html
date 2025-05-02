@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Geriatric Depression</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-green-800">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Geriatric Depression / Low Mood</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Elderly patient with apathy, functional decline, and suspected depression.</div>
+                <div><strong>Simulated Patient:</strong> 78-year-old Female Mannequin or Actor</div>
+                <div><strong>Actor/Actress:</strong> Patient (may have cognitive limitations/apathy), Adult Daughter/Son (concerned, provides collateral).</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>Non-urgent response - Welfare Check / Decreased Function</li>
+                <li>78-year-old female, noted decline by family</li>
+                <li>Possible depression / self-neglect</li>
+                <li>Patient is awake but withdrawn</li>
+                <li>Adult child present</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Paramedics arrive at the patient's home. The patient's adult daughter meets them, expressing concern about her mother's decline over the past few months, especially since the death of her husband 6 months ago. She reports her mother seems apathetic, has lost weight, neglects personal hygiene, rarely leaves the house, and often complains of vague aches and fatigue but dismisses feeling "sad". The patient is sitting in an armchair, looking blankly at the television, appearing somewhat dishevelled.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Appears frail, apathetic, withdrawn, possible self-neglect.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Alert, opens eyes spontaneously but makes poor eye contact. Slow to respond, speech is quiet with minimal content. May state "I'm fine" or "Just tired". Oriented to person, possibly place, may be unsure of date. (AVPU=A).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Clear and self-maintaining.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Rate and effort appear normal.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Skin pale, possibly dry. Pulse regular. Capillary refill < 3 seconds.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">Apathy, psychomotor slowing evident. Possible mild cognitive impairment. GCS 14-15 (may lose point on verbal response due to slowness/lack of content).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Home environment, may show signs of neglect (clutter, poor hygiene). Patient wearing old clothes, possibly unwashed. Assess mobility/falls risk.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (Patient interview - may be difficult, Daughter collateral essential)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">NKDA (per daughter)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">Metoprolol, Perindopril, Atorvastatin, Aspirin, Paracetamol Osteo PRN. (Daughter manages medications via blister pack, unsure if patient taking them regularly recently).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Hypertension, Osteoarthritis (knees, hips), Mild hearing impairment, Hypercholesterolaemia. Husband died 6 months ago. Possible undiagnosed Mild Cognitive Impairment.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Daughter reports poor appetite, weight loss (~5kg in 3 months), often skips meals. Unsure about last intake today.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding / History of Presenting Complaint</td><td class="border-b px-4 py-2">Insidious decline over months following bereavement. Marked decrease in activity levels, stopped gardening and seeing friends. Increased somatic complaints (fatigue, aches, poor sleep - waking early). Daughter notes self-neglect (hygiene, nutrition, medication compliance). Patient denies feeling "sad" but admits to low energy, lack of motivation, and states "there's no point". May express passive death wishes ("I wouldn't mind if I didn't wake up") but denies active suicidal plans when asked directly. Daughter concerned about hopelessness and functional decline.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value (Approximate/Expected)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">16</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Clear</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">96% (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">N/A</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">65, regular (Beta-blocker use)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">&lt; 3 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Rhythm (or Sinus Bradycardia)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Normal sinus rhythm/bradycardia. No acute changes.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">135/75 (Controlled HTN)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Pale, dry, possibly reduced turgor.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">Reports vague aches (e.g., 3/10), mainly attributes symptoms to fatigue/age.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">14-15 (E4, V4-5, M6)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">Within normal limits (e.g., 5.8)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">Equal and reactive, normal size.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">Normal (e.g., 36.5)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Focused Geriatric/Mental State Assessment)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**General Appearance/Behaviour:** Appears frail, poor hygiene, flat affect, psychomotor slowing. Limited interaction, poor eye contact.</li>
+                <li>**Speech:** Slow, quiet, reduced content.</li>
+                <li>**Mood/Affect:** Subjective mood often denied ("fine", "tired"). Objective affect appears flat, apathetic, possibly dysphoric.</li>
+                <li>**Thought Content:** May express hopelessness, helplessness, being a burden. Somatic preoccupations (aches, fatigue). Assess suicidal ideation carefully (passive thoughts common, need to probe for active intent/plans).</li>
+                <li>**Perception:** No evidence of psychosis.</li>
+                <li>**Cognition:** Assess orientation. May show signs of mild cognitive impairment (difficulty with recall, concentration). Consider brief screen (e.g., Mini-Cog, MoCA if trained/time permits). Differentiate from depressive pseudodementia.</li>
+                <li>**Insight/Judgement:** Insight into mood/functional decline often poor. Judgement regarding self-care impaired.</li>
+                <li>**Risk Assessment:** Assess risk of self-neglect, functional decline, falls, social isolation, and suicide (elderly white males highest risk, but important in all). Consider passive ideation, hopelessness, access to means (e.g., medications).</li>
+                <li>**Physical:** Assess for signs of malnutrition, dehydration, self-neglect. Check mobility, balance, falls risk. Brief systems review to screen for medical causes of symptoms (e.g., thyroid disease, anaemia, infection, malignancy, medication side effects).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise presentation suggestive of major depression in an elderly patient, possibly complicated by grief and mild cognitive impairment. Note significant functional decline and self-neglect.</li>
+                <li>**Build Rapport:** Use patient, empathetic approach. Speak clearly (consider hearing impairment). Allow time for responses. Validate feelings of fatigue/being overwhelmed, even if mood is denied.</li>
+                <li>**Safety:** Assess immediate environment for safety and signs of severe neglect.</li>
+                <li>**Comprehensive Assessment:** Integrate information from patient and daughter. Perform thorough geriatric assessment including mood (consider Geriatric Depression Scale if feasible), cognition, function (ADLs/IADLs), mobility, nutrition, social support, and risk assessment.</li>
+                <li>**Involve Family/Carer:** Daughter is key informant and support. Discuss findings, concerns, and plan with her.</li>
+                <li>**Rule out/Consider Organic Causes:** Depression in elderly often co-exists with or is caused by medical illness. Maintain high index of suspicion. Basic vitals, BGL, brief physical screen. Transport allows for medical workup (blood tests, etc.).</li>
+                <li>**Medical Treatment:** Address any immediate physical needs (e.g., hydration if dehydrated, wound care if injury found). Primarily supportive care pre-hospital.</li>
+                <li>**Decision Regarding Transport:** Transport to ED is strongly indicated due to functional decline, self-neglect, weight loss, possible passive death wishes, and need for comprehensive geriatric/medical/mental health assessment. Explain rationale clearly to patient and daughter.</li>
+                <li>**Capacity Assessment:** Assess capacity for decision-making, considering potential cognitive impairment and depression. If lacking capacity and refusing transport despite risks, may need involvement of guardianship processes or mental health legislation (jurisdiction-dependent), but often persuasion/family involvement is sufficient.</li>
+                <li>**Transport:** Transport patient (with daughter) to ED with geriatric assessment capabilities. Ensure safe mobilisation.</li>
+                <li>**Pre-notify:** Inform receiving hospital about elderly patient with suspected depression, functional decline, self-neglect, key history (bereavement), collateral info from daughter, vital signs, cognitive status (if assessed), and request geriatric and mental health assessment.</li>
+                <li>Documentation: Detailed record of geriatric assessment components (mood, cognition, function, risk), collateral history, vital signs, physical findings, rationale for transport.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

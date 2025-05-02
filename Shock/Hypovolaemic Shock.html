@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Hypovolaemic Shock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add some spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-orange-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-center text-gray-700 mt-2">Hypovolaemic Shock (Adult Trauma)</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Adult patient with signs of shock following a fall</div>
+                <div><strong>Simulated Patient:</strong> 45-year-old Male Mannequin or Actor</div>
+                <div><strong>Actor/Actress:</strong> Bystander/Witness (provides limited initial info)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-orange-50 p-4 rounded-md border border-orange-200">
+                <li>Urgent response - Fall from height</li>
+                <li>45-year-old male, fell approx 3-4 meters from ladder</li>
+                <li>Patient confused, pale</li>
+                <li>Patient breathing rapidly</li>
+                <li>Bystander present</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200">Patient is lying supine on grass at the base of a ladder leaning against a house. He is moaning, restless, and pale. A bystander states they saw him fall from the ladder while cleaning gutters. No obvious external haemorrhage noted initially.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Initial Impression</td><td class="border-b px-4 py-2">Acutely unwell, pale, restless.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Response</td><td class="border-b px-4 py-2">Opens eyes to pain, moans incomprehensibly, withdraws from pain (AVPU=P, GCS E2 V2 M4 = 8).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Airway</td><td class="border-b px-4 py-2">Clear currently, but at risk due to decreased LOC. Moaning present.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Breathing</td><td class="border-b px-4 py-2">Rapid (tachypnoeic) and shallow. Chest expansion appears symmetrical.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Circulation</td><td class="border-b px-4 py-2">Markedly pale, cool peripheries, diaphoretic. Radial pulses weak and rapid. Capillary refill > 4 seconds. No obvious major external bleeding.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Disability</td><td class="border-b px-4 py-2">Altered level of consciousness (GCS 8). Pupils equal and reactive (initially).</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Exposure/Environment</td><td class="border-b px-4 py-2">Outdoor environment, on grass. Need to expose fully to assess for injuries, consider hypothermia prevention.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (Obtained from bystander initially, patient unable to provide)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold w-1/3">Allergies</td><td class="border-b px-4 py-2">Unknown</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Medications</td><td class="border-b px-4 py-2">Unknown (Consider possibility of anticoagulants/antiplatelets)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Past Medical History</td><td class="border-b px-4 py-2">Unknown</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Last Oral Intake</td><td class="border-b px-4 py-2">Unknown</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Events Preceding</td><td class="border-b px-4 py-2">Witnessed fall from ladder (approx 3-4m) onto grass about 10 minutes ago. No loss of consciousness reported by witness initially, but patient became progressively more confused and restless. Landed heavily on his side/back.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Resp. Rate (/min.)</td><td class="border-b px-4 py-2">32, shallow</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Lung Sounds (L/R)</td><td class="border-b px-4 py-2">Clear initially, equal air entry. (Monitor for deterioration)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">SpO2 (%)</td><td class="border-b px-4 py-2">91% (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">EtCO2 (mmHg)</td><td class="border-b px-4 py-2">30 mmHg (If available - indicates hyperventilation/shock)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pulse Rate (/min.)</td><td class="border-b px-4 py-2">135, weak, regular</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">CRT (sec.)</td><td class="border-b px-4 py-2">> 4 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">ECG rhythm</td><td class="border-b px-4 py-2">Sinus Tachycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">12-lead ECG</td><td class="border-b px-4 py-2">Sinus tachycardia, no acute ischaemic changes.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BP (mmHg)</td><td class="border-b px-4 py-2">80/50</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Skin</td><td class="border-b px-4 py-2">Pale, cool, diaphoretic.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pain (/10)</td><td class="border-b px-4 py-2">Unable to rate reliably due to LOC, but moaning/restless suggesting severe pain.</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">GCS (/15: E,V,M)</td><td class="border-b px-4 py-2">8/15 (E2 V2 M4)</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">BGL (mmol/L)</td><td class="border-b px-4 py-2">6.8</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupils (mmL/mmR)</td><td class="border-b px-4 py-2">4mm L / 4mm R, Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Pupil reac. (L/R)</td><td class="border-b px-4 py-2">Equal and Reactive</td></tr>
+                        <tr><td class="border-b px-4 py-2 font-semibold">Temp. (°C)</td><td class="border-b px-4 py-2">36.2 (Rectal/core if possible, peripheral likely cooler)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Secondary Survey - Trauma Focused)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200">
+                <li>**Head/Neck:** No obvious trauma, check C-spine tenderness (difficult to assess reliably).</li>
+                <li>**Chest:** Rapid shallow breathing, equal air entry bilaterally on auscultation. Tenderness over left lower ribs on palpation. No crepitus or flail segment noted.</li>
+                <li>**Abdomen:** Distended, tense, and generally tender on palpation, particularly left upper quadrant and flank. Guarding present. Bruising may start to appear over flank/abdomen (Grey Turner's/Cullen's sign - likely develops later).</li>
+                <li>**Pelvis:** Appears stable on gentle compression/palpation (avoid 'springing').</li>
+                <li>**Limbs:** Check for fractures/deformity. No gross deformity noted in limbs. Peripheral pulses weak.</li>
+                <li>**Back:** Log roll required (maintain C-spine precautions) to assess spine and back for tenderness or deformity.</li>
+                <li>**(Consider FAST scan if available and trained)**</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200">
+                <li>Recognise signs of decompensated hypovolaemic shock secondary to suspected intra-abdominal and/or retroperitoneal haemorrhage (e.g., splenic/hepatic/renal injury, pelvic fracture bleed) post-trauma. **Time critical.**</li>
+                <li>Primary survey (ABCDE), manage immediate life threats.</li>
+                <li>Airway management: Consider basic adjuncts (OPA/NPA) if tolerated, monitor closely for deterioration requiring advanced airway (RSI). High risk of aspiration.</li>
+                <li>Breathing: High-flow oxygen via non-rebreather mask aiming SpO2 >94%. Assist ventilations if inadequate.</li>
+                <li>Circulation:
+                    <ul>
+                        <li>Attempt haemorrhage control (limited pre-hospital options for internal bleeding). Pelvic binder if suspected pelvic involvement.</li>
+                        <li>Establish large bore IV access x 2, preferably antecubital fossae. Consider IO access if IV difficult/delayed.</li>
+                        <li>**Aggressive fluid resuscitation:** Initial bolus of warmed crystalloid (e.g., 1000ml Sodium Chloride 0.9% or Hartmann's solution) rapidly. Reassess response (BP, HR, mental status). Titrate further fluid to maintain radial pulse or target BP (e.g., systolic 80-90 mmHg - permissive hypotension until definitive haemorrhage control, follow local guidelines). Avoid excessive fluid resuscitation causing haemodilution/hypothermia.</li>
+                        <li>Consider Tranexamic Acid (TXA) according to local trauma guidelines (e.g., 1g IV over 10 mins within 3 hours of injury).</li>
+                        <li>Keep patient warm (blankets, warmed fluids) to prevent/treat hypothermia (part of lethal triad).</li>
+                    </ul>
+                </li>
+                <li>Disability: Maintain C-spine precautions. Reassess GCS frequently. Manage pain cautiously with IV analgesia (e.g., small titrated doses of Fentanyl) once BP allows, monitor respiratory status.</li>
+                <li>Exposure: Expose fully to assess injuries, then cover to prevent heat loss.</li>
+                <li>Minimise on-scene time. Package patient safely (e.g., scoop stretcher, vacuum mattress) maintaining spinal alignment.</li>
+                <li>**Pre-notify receiving hospital (Trauma Alert):** Provide age, mechanism, suspected injuries (intra-abdominal bleed), GCS, vital signs, treatments given (fluids, TXA), ETA. Specify need for trauma team activation / potential need for massive transfusion protocol.</li>
+                <li>Rapid transport to the nearest appropriate Major Trauma Centre. Continuous monitoring en route.</li>
+            </ul>
+        </section>
+
+    </div> </body>
+</html>

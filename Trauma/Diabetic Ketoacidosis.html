@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Diabetic Ketoacidosis (DKA)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 equivalent */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+            color: #1d4ed8; /* text-blue-700 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #374151; /* text-gray-700 */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        /* Ensure strong tags are bold */
+        strong {
+            font-weight: 600; /* font-semibold */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6 text-center">
+            <h1 class="text-3xl font-bold text-blue-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-gray-700 mt-2">Diabetic Ketoacidosis (DKA)</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Diabetic Ketoacidosis (DKA)</div>
+                <div><strong>Simulated Patient:</strong> 24-year-old Male</div>
+                <div><strong>Actor/Actress:</strong> Student Actor (Patient), Student Actor (Flatmate)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-blue-50 p-4 rounded-md border border-blue-200 text-blue-800">
+                <li>Urgent Response - Unwell Person / Altered Consciousness</li>
+                <li>24-year-old male, known diabetic, found unwell by flatmate</li>
+                <li>Reported confusion, vomiting, rapid breathing</li>
+                <li>Patient is conscious but drowsy</li>
+                <li>Location: Apartment</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200 text-yellow-800">You arrive at an apartment where a concerned flatmate meets you. They lead you to the patient's bedroom. The patient, a 24-year-old male, is lying in bed, appearing lethargic and unwell. His breathing is rapid and deep, and you notice a faint fruity odour on his breath as you approach. A vomit bucket is next to the bed. The patient looks flushed and his skin appears dry.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Initial Impression</strong></td><td class="border-b px-4 py-2">Acutely unwell, lethargic, tachypnoeic, signs of dehydration.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Response</strong></td><td class="border-b px-4 py-2">Drowsy, responds to voice but slow and slightly confused. (AVPU = V)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Airway</strong></td><td class="border-b px-4 py-2">Clear and self-maintaining. Fruity odour noted.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Breathing</strong></td><td class="border-b px-4 py-2">Rapid, deep, sighing respirations (Kussmaul's breathing). Rate elevated.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Circulation</strong></td><td class="border-b px-4 py-2">Skin flushed, warm centrally but peripheries may be cool. Mucous membranes dry. Tachycardic. Cap refill may be slightly delayed.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Disability</strong></td><td class="border-b px-4 py-2">Altered mental state (drowsy, confused).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Exposure/Environment</strong></td><td class="border-b px-4 py-2">Indoor bedroom. Patient wearing pyjamas. Check for insulin pens, glucose meter, signs of infection.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (obtained from patient - may be difficult, and flatmate)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 w-1/3"><strong>Allergies</strong></td><td class="border-b px-4 py-2">NKDA</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Medications</strong></td><td class="border-b px-4 py-2">Insulin (e.g., Novorapid and Lantus - patient unsure of doses today). Maybe Paracetamol.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Past Medical History</strong></td><td class="border-b px-4 py-2">Type 1 Diabetes Mellitus (diagnosed age 14). Occasional previous high BGLs, one previous DKA admission 3 years ago. Otherwise generally well.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Last Oral Intake</strong></td><td class="border-b px-4 py-2">Flatmate reports patient hasn't eaten much today. Patient vaguely recalls drinking water earlier but has been vomiting for several hours.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Events Preceding</strong></td><td class="border-b px-4 py-2">Flatmate reports patient had 'flu-like symptoms' (cough, feeling feverish) starting 2 days ago. Patient admits to poor BGL monitoring recently and possibly missing some insulin doses due to feeling unwell/not eating. Started feeling increasingly thirsty, nauseous yesterday. Vomiting started overnight. Complaining of abdominal pain. Became progressively more lethargic and confused today. Flatmate became concerned and called.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Resp. Rate (/min.)</strong></td><td class="border-b px-4 py-2">30 (deep, Kussmaul's)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Lung Sounds (L/R)</strong></td><td class="border-b px-4 py-2">Clear bilaterally, good air entry despite altered pattern.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>SpO2 (%)</strong></td><td class="border-b px-4 py-2">96% (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>EtCO2 (mmHg)</strong></td><td class="border-b px-4 py-2">Low (e.g., 20-25 mmHg) - If available, indicates respiratory compensation for metabolic acidosis.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pulse Rate (/min.)</strong></td><td class="border-b px-4 py-2">125, regular but may feel weak peripherally</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>CRT (sec.)</strong></td><td class="border-b px-4 py-2">3-4 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>ECG rhythm</strong></td><td class="border-b px-4 py-2">Sinus Tachycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>12-lead ECG</strong></td><td class="border-b px-4 py-2">Sinus Tachycardia. May show peaked T waves if hyperkalaemic (less common initially). Check for underlying ischaemia.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BP (mmHg)</strong></td><td class="border-b px-4 py-2">95/60 (Hypotensive due to dehydration)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Skin</strong></td><td class="border-b px-4 py-2">Flushed, dry mucous membranes, decreased skin turgor.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pain (/10)</strong></td><td class="border-b px-4 py-2">Reports generalised abdominal pain (5/10).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>GCS (/15: E,V,M)</strong></td><td class="border-b px-4 py-2">13/15 (E3 - opens eyes to voice, V4 - confused, M6 - obeys commands)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BGL (mmol/L)</strong></td><td class="border-b px-4 py-2">HIGH (e.g., 28.5 mmol/L or reads "HI" on meter)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Ketones</strong></td><td class="border-b px-4 py-2">Blood ketones HIGH (e.g., >3.0 mmol/L) if meter available. Urine ketones strongly positive (if tested).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pupils (mmL/mmR)</strong></td><td class="border-b px-4 py-2">3mm L / 3mm R, Equal and Reactive (PERL)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Temp. (°C)</strong></td><td class="border-b px-4 py-2">37.8 (May be normal, low, or slightly elevated despite infection)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200 text-green-800">
+                <li><strong>General Appearance:</strong> Acutely unwell, lethargic, dehydrated.</li>
+                <li><strong>Respiratory:</strong> Kussmaul's respirations (deep, sighing pattern). Tachypnoea. Clear lungs on auscultation. Fruity (acetone) odour on breath.</li>
+                <li><strong>Cardiovascular:</strong> Tachycardia. Hypotension. Peripheral pulses may be weak. Delayed capillary refill. Dry mucous membranes, poor skin turgor.</li>
+                <li><strong>Abdomen:</strong> May be diffusely tender on palpation. Bowel sounds may be hypoactive.</li>
+                <li><strong>Neurological:</strong> Altered mental status (drowsiness, confusion). GCS 13. Moving all limbs.</li>
+                <li><strong>Other:</strong> Look for potential sources of infection (e.g., respiratory symptoms, signs of UTI - though history is key here). Check injection sites.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management Focus</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200 text-purple-800">
+                <li><strong>Primary Survey (ABCDE):</strong> Ensure patent airway. Assess breathing adequacy despite Kussmaul's pattern. Assess circulatory status (hypotension, tachycardia). Assess neurological status (GCS, BGL, Ketones).</li>
+                <li><strong>Oxygen Therapy:</strong> Apply oxygen via non-rebreather mask if SpO2 <94% or signs of significant respiratory distress/shock, otherwise nasal prongs may suffice depending on SpO2.</li>
+                <li><strong>Vascular Access:</strong> Establish large-bore IV access (x2 if possible).</li>
+                <li><strong>Fluid Resuscitation:</strong> **Crucial intervention.** Administer intravenous fluids (e.g., Sodium Chloride 0.9%) aggressively according to local protocols for DKA/dehydration/shock. Typically start with 1000mL bolus over 30-60 mins for adults (adjust based on patient condition, age, comorbidities, and local guidelines). Reassess frequently.</li>
+                <li><strong>Monitoring:</strong> Continuous ECG monitoring. Frequent vital signs reassessment (every 5-15 mins). Monitor mental status closely. Recheck BGL periodically.</li>
+                <li><strong>Investigations:</strong> Obtain BGL and blood ketone level (if available).</li>
+                <li><strong>Do NOT administer insulin pre-hospitally</strong> (unless specifically directed by medical control and local protocols, which is rare - fluid resuscitation is the priority).</li>
+                <li><strong>Manage Nausea/Vomiting:</strong> Consider antiemetic (e.g., Ondansetron) if available and indicated.</li>
+                <li><strong>Identify Precipitant:</strong> Consider potential triggers (infection, missed insulin, stress).</li>
+                <li><strong>Transport:</strong> Urgent transport to an Emergency Department capable of managing DKA. Pre-notify receiving hospital (suspected DKA, vitals, BGL/ketones, fluids commenced).</li>
+                <li><strong>Teamwork & Communication:</strong> Clear roles, effective communication with partner and flatmate. Calm reassurance to patient. Clear handover to ED.</li>
+            </ul>
+        </section>
+
+        <section>
+             <h2>Debrief Focus Points</h2>
+             <ul class="list-disc list-inside bg-gray-50 p-4 rounded-md border border-gray-200 text-gray-800">
+                 <li>Recognizing the clinical presentation of DKA (hyperglycaemia, ketones, acidosis signs like Kussmaul's breathing, dehydration).</li>
+                 <li>Understanding the pathophysiology of DKA (insulin deficiency, counter-regulatory hormones, dehydration, acidosis).</li>
+                 <li>Prioritizing management steps: ABCDE, IV access, aggressive fluid resuscitation.</li>
+                 <li>Importance of BGL and ketone measurement.</li>
+                 <li>Rationale for withholding prehospital insulin in most cases.</li>
+                 <li>Recognizing potential DKA precipitants.</li>
+                 <li>Importance of frequent reassessment and monitoring.</li>
+                 <li>Effective communication and pre-notification.</li>
+             </ul>
+         </section>
+
+    </div>
+
+</body>
+</html>
