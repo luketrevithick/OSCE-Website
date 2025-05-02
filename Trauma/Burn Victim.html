@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Adult Burn Victim</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 equivalent */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+            color: #1d4ed8; /* text-blue-700 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #374151; /* text-gray-700 */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+             /* Default font weight for list items */
+            font-weight: 400;
+        }
+        /* Ensure strong tags are bold */
+        strong {
+            font-weight: 600; /* font-semibold */
+        }
+         /* Specific style for critical findings */
+        .critical-finding {
+            font-weight: bold;
+            color: #c81e1e; /* Red color for emphasis */
+        }
+         /* Ensure nested list items also have normal weight unless specified */
+        ul ul li {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6 text-center">
+            <h1 class="text-3xl font-bold text-blue-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-gray-700 mt-2">Adult Burn Victim</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Adult Thermal Burns - House Fire</div>
+                <div><strong>Simulated Patient:</strong> 45-year-old Male</div>
+                <div><strong>Actor/Actress:</strong> Student Actor (Patient), Bystander/Neighbour</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-blue-50 p-4 rounded-md border border-blue-200 text-blue-800">
+                <li>Urgent Response - Structure Fire / Person Injured</li>
+                <li>Reports of house fire, possible person trapped, now extricated</li>
+                <li>Patient conscious, reported burns</li>
+                <li>Fire services on scene / en route</li>
+                <li>Location: Residential address</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200 text-yellow-800">You arrive at a single-story house with smoke still emanating from windows. Firefighters are present. A neighbour directs you to the front lawn where the patient, a 45-year-old male, is lying supine. He has been moved away from the immediate fire scene. He is conscious, moaning in pain, and has obvious burns to his face, neck, chest, and both arms. His clothing appears partially burned and singed. He has soot around his nose and mouth, and his voice sounds hoarse.</p>
+            <p class="mt-2 text-sm text-red-700"><strong>Scene Safety Note:</strong> Ensure scene is safe, liaise with fire command regarding hazards before approaching patient.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Initial Impression</strong></td><td class="border-b px-4 py-2">Critically unwell adult, extensive burns, potential airway compromise, severe pain.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Response</strong></td><td class="border-b px-4 py-2">Opens eyes to voice, moaning, appears confused/agitated. (AVPU = V / Confused)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Airway</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Hoarse voice, soot around nose/mouth, facial/neck burns. High risk of airway obstruction.</strong> Possible stridor developing.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Breathing</strong></td><td class="border-b px-4 py-2">Rapid, shallow respirations. Possible difficulty with chest expansion due to circumferential burns (assess later).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Circulation</strong></td><td class="border-b px-4 py-2">Skin appears burned/damaged on exposed areas. Tachycardic. Peripheral pulses may be difficult to assess due to burns/swelling.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Disability</strong></td><td class="border-b px-4 py-2">Altered mental state (agitated/confused - GCS approx 13-14: E3, V4-5, M6). Assess for associated trauma.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Exposure/Environment</strong></td><td class="border-b px-4 py-2">Outdoor lawn. Patient exposed to elements. Need to remove burning/smoldering clothing, prevent heat loss.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (obtained from patient - difficult, and bystander/firefighters)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 w-1/3"><strong>Allergies</strong></td><td class="border-b px-4 py-2">NKDA (Patient unable to confirm reliably)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Medications</strong></td><td class="border-b px-4 py-2">Unknown.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Past Medical History</strong></td><td class="border-b px-4 py-2">Unknown.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Last Oral Intake</strong></td><td class="border-b px-4 py-2">Unknown.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Events Preceding</strong></td><td class="border-b px-4 py-2">Firefighters report finding patient in smoke-filled room near the origin of the fire (believed to be kitchen). Patient was conscious but disoriented when extricated ~5-10 minutes ago. Duration of entrapment unknown. Mechanism involves thermal burns and potential smoke inhalation.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Resp. Rate (/min.)</strong></td><td class="border-b px-4 py-2">28 (Shallow)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Lung Sounds (L/R)</strong></td><td class="border-b px-4 py-2">May be difficult to assess due to noise/pain. Possible wheeze/crackles developing (inhalation injury).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>SpO2 (%)</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">90%</strong> (On room air initially - May be falsely high if CO poisoning present)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>EtCO2 (mmHg)</strong></td><td class="border-b px-4 py-2">30 mmHg (Low initially due to tachypnoea)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pulse Rate (/min.)</strong></td><td class="border-b px-4 py-2">125, regular</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>CRT (sec.)</strong></td><td class="border-b px-4 py-2">3 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>ECG rhythm</strong></td><td class="border-b px-4 py-2">Sinus Tachycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>12-lead ECG</strong></td><td class="border-b px-4 py-2">Sinus Tachycardia. Rule out ischaemia (stress/hypoxia).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BP (mmHg)</strong></td><td class="border-b px-4 py-2">100/65 (May be initially maintained then drop)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Skin</strong></td><td class="border-b px-4 py-2">Burned areas as described. Unburned skin pale, possibly clammy.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pain (/10)</strong></td><td class="border-b px-4 py-2">Severe pain reported (patient moaning, agitated). Difficult to quantify.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>GCS (/15: E,V,M)</strong></td><td class="border-b px-4 py-2">13/15 (E3, V4 - confused, M6 - obeys) - Monitor closely for deterioration.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BGL (mmol/L)</strong></td><td class="border-b px-4 py-2">8.5 (Stress hyperglycaemia common).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pupils (mmL/mmR)</strong></td><td class="border-b px-4 py-2">Equal and Reactive (PERL).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Temp. (°C)</strong></td><td class="border-b px-4 py-2">Difficult to assess accurately, risk of hypothermia.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200 text-green-800">
+                <li><strong>General Appearance:</strong> Acutely unwell, lethargic, pale, profoundly weak.</li>
+                <li><strong>Airway:</strong> <strong class="critical-finding">Facial/neck burns, singed nasal hairs, soot in mouth/nose, hoarse voice, brassy cough, potential stridor.</strong> High risk of imminent airway obstruction.</li>
+                <li><strong>Breathing:</strong> Tachypnoea, shallow effort. Assess chest wall movement - risk of restriction from circumferential torso burns. Auscultate lungs for wheeze, crackles (inhalation injury).</li>
+                <li><strong>Circulation:</strong> Assess extent and depth of burns. Use Rule of Nines for TBSA estimation (e.g., Face/Neck ~9%, Anterior Chest ~9%, Full Ant Arm ~4.5%, Full Post Arm ~4.5% = ~27% TBSA - adjust based on visual). Burns appear mixed depth (superficial partial to deep partial/full thickness - red, blistering, possibly white/leathery areas). Check peripheral pulses, especially in circumferentially burned limbs.</li>
+                <li><strong>Disability:</strong> Monitor GCS. Assess for associated traumatic injuries from fall/collapse during fire.</li>
+                <li><strong>Exposure:</strong> Remove all clothing/jewellery carefully (cut around areas stuck to burns). Keep patient warm.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management Focus</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200 text-purple-800">
+                <li><strong>Safety & Stop Burning:</strong> Ensure scene safe. Remove patient from source. Extinguish any smoldering clothing/debris. Remove non-adherent clothing and jewellery.</li>
+                <li><strong>Airway Management:</strong> <strong>Highest priority.</strong> Recognize signs of airway burns/inhalation injury. Prepare for definitive airway management (intubation) if signs of obstruction develop or are anticipated based on mechanism/findings. Provide high-flow oxygen via NRB mask initially. Early senior paramedic/critical care backup essential.</li>
+                <li><strong>Breathing Support:</strong> Maintain high-flow oxygen (humidified if possible). Monitor SpO2 (aware of potential CO interference). Monitor respiratory rate, effort, lung sounds, EtCO2. Assist ventilations if necessary. Consider escharotomy need for circumferential chest burns (hospital procedure).</li>
+                <li><strong>Circulation - Fluid Resuscitation:</strong> Establish large-bore IV access (x2 if possible) through unburned skin where feasible. Commence IV fluid resuscitation using Parkland formula (or similar local protocol) as a guide: Volume (mL) = TBSA (%) x Weight (kg) x 4mL. Give half over first 8 hours (from time of burn). Titrate to vital signs and urine output (hospital). Start infusion promptly.</li>
+                <li><strong>Burn Cooling:</strong> Cool burns with cool running water (ideally 15-20°C) for up to 20 minutes if within 3 hours of injury AND logistically feasible. Focus on cooling the burn, not the patient. Stop if patient becomes hypothermic. Avoid ice.</li>
+                <li><strong>Burn Covering:</strong> Cover cooled burns with sterile, non-adherent dressings (e.g., cling film - applied longitudinally, not circumferentially; specialised burn dressings).</li>
+                <li><strong>Pain Management:</strong> Provide aggressive IV opioid analgesia (e.g., Morphine or Fentanyl titrated doses). Burns are extremely painful.</li>
+                <li><strong>Temperature Management:</strong> Prevent hypothermia. Keep patient covered with blankets after cooling/dressing. Monitor temperature if possible.</li>
+                <li><strong>Consider Carbon Monoxide/Cyanide:</strong> High index of suspicion in enclosed space fires. Maintain high-flow oxygen. Specific antidotes (hospital based).</li>
+                <li><strong>Transport:</strong> Urgent transport to a designated Burns Centre/Unit is required. Pre-notify early with detailed information (mechanism, TBSA%, depth, airway status, vitals, treatments).</li>
+                <li><strong>Teamwork & Communication:</strong> Coordinate with fire services. Clear roles within team (airway, IV/fluids, dressings). Communicate calmly with patient. Detailed handover.</li>
+            </ul>
+        </section>
+
+        <section>
+             <h2>Debrief Focus Points</h2>
+             <ul class="list-disc list-inside bg-gray-50 p-4 rounded-md border border-gray-200 text-gray-800">
+                 <li>Scene safety in fire incidents.</li>
+                 <li>Recognizing signs of airway burns and inhalation injury - prioritizing airway management.</li>
+                 <li>Principles of burn assessment (TBSA estimation - Rule of Nines, depth assessment).</li>
+                 <li>Burn management priorities: Stop burning, ABCDE, Cooling, Covering, Fluids, Analgesia, Warmth.</li>
+                 <li>Fluid resuscitation in burns (Parkland formula application).</li>
+                 <li>Appropriate burn cooling techniques and duration.</li>
+                 <li>Pain management strategies in burn patients.</li>
+                 <li>Preventing and managing hypothermia.</li>
+                 <li>Considering associated injuries (trauma, CO/cyanide poisoning).</li>
+                 <li>Importance of transport to a specialised Burns Unit and effective pre-notification.</li>
+             </ul>
+         </section>
+
+    </div>
+
+</body>
+</html>

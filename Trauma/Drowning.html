@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Paediatric Drowning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 equivalent */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+            color: #1d4ed8; /* text-blue-700 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #374151; /* text-gray-700 */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+             /* Default font weight for list items */
+            font-weight: 400;
+        }
+        /* Ensure strong tags are bold */
+        strong {
+            font-weight: 600; /* font-semibold */
+        }
+         /* Specific style for critical findings */
+        .critical-finding {
+            font-weight: bold;
+            color: #c81e1e; /* Red color for emphasis */
+        }
+         /* Ensure nested list items also have normal weight unless specified */
+        ul ul li {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6 text-center">
+            <h1 class="text-3xl font-bold text-blue-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-gray-700 mt-2">Paediatric Drowning</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Paediatric Drowning - Cardiac Arrest</div>
+                <div><strong>Simulated Patient:</strong> 4-year-old Child Mannequin</div>
+                <div><strong>Actor/Actress:</strong> Parent (highly distressed)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-blue-50 p-4 rounded-md border border-blue-200 text-blue-800">
+                <li>Urgent Response - Drowning / Cardiac Arrest</li>
+                <li>4-year-old child pulled from backyard swimming pool</li>
+                <li>Unresponsive, not breathing</li>
+                <li>Bystander CPR reportedly in progress (quality unknown)</li>
+                <li>Location: Residential address</li>
+                <li>Police responding</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200 text-yellow-800">You arrive at a suburban house. A highly distressed parent meets you, pointing towards the backyard pool area. You see a small child lying supine on the poolside paving. Another adult (neighbour/bystander) is performing chest compressions, appearing panicked and possibly ineffective. The child is cyanotic, wet, and appears lifeless. The pool area is fenced but the gate is open.</p>
+             <p class="mt-2 text-sm text-red-700"><strong>Scene Safety Note:</strong> Ensure pool area is safe, be mindful of wet surfaces. Manage distressed bystanders calmly.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey (Assume bystander CPR stops on your arrival)</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Initial Impression</strong></td><td class="border-b px-4 py-2">Lifeless child, cyanotic, wet, likely cardiac arrest post-drowning.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Response</strong></td><td class="border-b px-4 py-2">Unresponsive to all stimuli. (AVPU = U)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Airway</strong></td><td class="border-b px-4 py-2">May be obstructed by water, vomit, or laryngospasm. Froth may be present. Requires immediate opening and clearing.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Breathing</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Apneic. No respiratory effort observed.</strong></td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Circulation</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">No palpable central pulse (e.g., carotid/femoral).</strong> Skin cyanotic, cool, mottled.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Disability</strong></td><td class="border-b px-4 py-2">Unresponsive (GCS 3). Pupils may be fixed and dilated.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Exposure/Environment</strong></td><td class="border-b px-4 py-2">Poolside, wet environment. Child is wet and likely hypothermic. Remove wet clothing quickly.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression (Performed concurrently with resuscitation)</h2>
+
+            <h3>History (obtained rapidly from parent/bystander)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 w-1/3"><strong>Allergies</strong></td><td class="border-b px-4 py-2">NKDA (Parent confirms)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Medications</strong></td><td class="border-b px-4 py-2">None.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Past Medical History</strong></td><td class="border-b px-4 py-2">Previously well child. No history of seizures or cardiac issues.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Last Oral Intake</strong></td><td class="border-b px-4 py-2">Breakfast ~ 2 hours ago.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Events Preceding</strong></td><td class="border-b px-4 py-2">Child was playing in backyard near the pool. Parent lost sight of them for a brief period (estimated 3-5 minutes). Found floating unresponsive in the pool. Pulled out immediately. Neighbour started CPR. Total submersion time unknown but likely < 5-10 minutes. Water temperature cool (ambient temperature day). No witnessed trauma/fall prior to entering water.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (During Resuscitation)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Resp. Rate (/min.)</strong></td><td class="border-b px-4 py-2">Apneic - requiring BVM ventilation.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Lung Sounds (L/R)</strong></td><td class="border-b px-4 py-2">Difficult to assess during CPR. May hear gurgling initially. Aim for chest rise with ventilation.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>SpO2 (%)</strong></td><td class="border-b px-4 py-2">Unrecordable initially. Aim for >94% with effective oxygenation/ventilation.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>EtCO2 (mmHg)</strong></td><td class="border-b px-4 py-2">Low or absent initially. Monitor trend with CPR/ventilation (aim >10-15 mmHg during CPR).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pulse Rate (/min.)</strong></td><td class="border-b px-4 py-2">Absent central pulse initially.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>CRT (sec.)</strong></td><td class="border-b px-4 py-2">Not reliable in arrest/hypothermia.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>ECG rhythm</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Asystole or PEA (Pulseless Electrical Activity) most likely initially.</strong> Possible VF/VT (less common in paediatric drowning).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>12-lead ECG</strong></td><td class="border-b px-4 py-2">Not a priority during initial CPR. Rhythm strip analysis is key.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BP (mmHg)</strong></td><td class="border-b px-4 py-2">Unrecordable (in cardiac arrest).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Skin</strong></td><td class="border-b px-4 py-2">Cyanotic, cool/cold, wet, mottled.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pain (/10)</strong></td><td class="border-b px-4 py-2">Unresponsive.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>GCS (/15: E,V,M)</strong></td><td class="border-b px-4 py-2">3/15 (E1, V1, M1)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BGL (mmol/L)</strong></td><td class="border-b px-4 py-2">Check early - may be low.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pupils (mmL/mmR)</strong></td><td class="border-b px-4 py-2">Likely fixed and dilated.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Temp. (°C)</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">< 35°C</strong> (Hypothermic) - Rectal temp if feasible/protocol.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (During Resuscitation)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200 text-green-800">
+                <li><strong>General Appearance:</strong> Unresponsive, apneic, pulseless, cyanotic, wet, cold.</li>
+                <li><strong>Airway:</strong> Check for foreign material, water, vomit. Froth may be present at mouth/nose.</li>
+                <li><strong>Breathing:</strong> No spontaneous effort. Assess chest rise/fall with BVM ventilation.</li>
+                <li><strong>Circulation:</strong> Confirm absence of central pulse. Assess skin signs.</li>
+                <li><strong>Neurological:</strong> GCS 3. Fixed, dilated pupils common.</li>
+                <li><strong>Exposure:</strong> Remove wet clothing rapidly. Check for signs of trauma (especially head/neck if fall suspected).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment (Paediatric ALS for Drowning)</h2>
+            <h3>Appropriate Management Focus</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200 text-purple-800">
+                <li><strong>Safety & Scene Management:</strong> Ensure rescuer safety. Remove patient from water. Manage bystanders/family supportively.</li>
+                <li><strong>Immediate Resuscitation (DRSABCD):</strong> Confirm unresponsiveness, check for breathing/pulse. Commence high-quality CPR immediately (Rate 100-120/min, Depth 1/3 chest diameter ~5cm, full recoil, minimise interruptions). 15:2 compression:ventilation ratio (two rescuers).</li>
+                <li><strong>Airway Management:</strong> Open airway (head-tilt/chin-lift or jaw thrust if trauma suspected). Suction airway clear of water/vomit/froth. Insert oropharyngeal airway (OPA) or nasopharyngeal airway (NPA) if tolerated/needed.</li>
+                <li><strong>Breathing/Ventilation:</strong> Provide positive pressure ventilation with Bag-Valve-Mask (BVM) using 100% oxygen. Focus on effective chest rise. Consider advanced airway (LMA/ETT) early if BVM ineffective or prolonged resuscitation anticipated, performed by appropriately skilled provider.</li>
+                <li><strong>Circulation/CPR:</strong> Continue high-quality CPR. Apply defibrillator pads/monitor ASAP. Analyse rhythm. Follow Paediatric ALS algorithm:
+                    <ul class="list-circle list-inside ml-4 mt-2">
+                        <li><strong>Non-Shockable (Asystole/PEA):</strong> Continue CPR, gain IV/IO access, administer Adrenaline (10mcg/kg IV/IO) every 3-5 minutes. Identify and treat reversible causes (Hypoxia, Hypothermia, Hypo/Hyperkalaemia, Hypoglycaemia, Hypovolemia, Tamponade, Tension pneumo, Toxins, Thrombosis).</li>
+                        <li><strong>Shockable (VF/Pulseless VT):</strong> Defibrillate immediately (4 J/kg), resume CPR immediately for 2 mins, analyse rhythm. If still shockable, defibrillate again, resume CPR, administer Adrenaline (10mcg/kg IV/IO) after 2nd shock (then every 3-5 mins). Consider Amiodarone (5mg/kg IV/IO) after 3rd shock.</li>
+                    </ul>
+                </li>
+                 <li><strong>Hypothermia Management:</strong> Remove wet clothing. Dry patient thoroughly. Cover with warm blankets. Use active warming measures if available (e.g., forced air warmer, warmed IV fluids - use caution).</li>
+                 <li><strong>Glucose Management:</strong> Check BGL. Treat hypoglycaemia (<3.0-3.5 mmol/L depending on protocol) with IV Dextrose (e.g., 2-5mL/kg Dextrose 10%) or IM Glucagon if no IV/IO access.</li>
+                 <li><strong>Cervical Spine:</strong> Maintain manual in-line stabilisation only if significant trauma is suspected based on mechanism (e.g., dive into shallow water, fall from height into water). Routine C-spine immobilisation not recommended in simple drowning.</li>
+                 <li><strong>Gastric Decompression:</strong> Consider nasogastric/orogastric tube insertion by skilled provider to decompress stomach (improves ventilation), especially if prolonged BVM used.</li>
+                 <li><strong>Transport:</strong> Rapid transport to the nearest appropriate Emergency Department (preferably with paediatric critical care capabilities) once initial resuscitation is underway or if ROSC achieved. Continue full resuscitation during transport. Pre-notify hospital early (Paediatric drowning arrest, rhythm, interventions, ETA).</li>
+                 <li><strong>Family Support:</strong> Communicate updates calmly and compassionately to parent/family. Assign a team member for family liaison if possible.</li>
+                 <li><strong>Teamwork & Communication:</strong> Clear roles, closed-loop communication, adherence to ALS algorithms.</li>
+            </ul>
+        </section>
+
+        <section>
+             <h2>Debrief Focus Points</h2>
+             <ul class="list-disc list-inside bg-gray-50 p-4 rounded-md border border-gray-200 text-gray-800">
+                 <li>Recognizing drowning and initiating resuscitation promptly.</li>
+                 <li>Key differences in drowning resuscitation (emphasis on oxygenation/ventilation).</li>
+                 <li>High-quality paediatric CPR techniques (rate, depth, ratio).</li>
+                 <li>Airway management in drowning (clearing airway, BVM technique, advanced airway considerations).</li>
+                 <li>Paediatric ALS algorithm application (rhythm analysis, drug doses - Adrenaline, Amiodarone, defibrillation energy - 4J/kg).</li>
+                 <li>Management of hypothermia in drowning.</li>
+                 <li>Importance of checking and correcting hypoglycaemia.</li>
+                 <li>Considerations for C-spine immobilisation in drowning.</li>
+                 <li>Teamwork, communication, and family support during paediatric resuscitation.</li>
+                 <li>Importance of rapid transport and pre-notification.</li>
+             </ul>
+         </section>
+
+    </div>
+
+</body>
+</html>

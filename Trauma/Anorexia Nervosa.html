@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Anorexia Nervosa Complications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 equivalent */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+            color: #1d4ed8; /* text-blue-700 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #374151; /* text-gray-700 */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+            /* Ensure list items are not bold by default */
+            font-weight: 400; /* Normal font weight */
+        }
+        /* Ensure strong tags are bold */
+        strong {
+            font-weight: 600; /* font-semibold */
+        }
+         /* Specific style for critical findings */
+        .critical-finding {
+            font-weight: bold;
+            color: #c81e1e; /* Red color for emphasis */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6 text-center">
+            <h1 class="text-3xl font-bold text-blue-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-gray-700 mt-2">Anorexia Nervosa Complications</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Collapse / Bradycardia secondary to Anorexia Nervosa</div>
+                <div><strong>Simulated Patient:</strong> 18-year-old Female</div>
+                <div><strong>Actor/Actress:</strong> Student Actor (Patient), Student Actor (Parent)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-blue-50 p-4 rounded-md border border-blue-200 text-blue-800">
+                <li>Urgent Response - Collapse / Faint</li>
+                <li>18-year-old female, collapsed at home</li>
+                <li>History of eating disorder</li>
+                <li>Patient now conscious but weak and dizzy</li>
+                <li>Parent on scene</li>
+                <li>Location: Home address</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200 text-yellow-800">You arrive at a house where an anxious parent meets you. They lead you to the living room where the patient, an 18-year-old female, is lying pale and frail-looking on the sofa. She is awake but appears lethargic and weak. The parent states the patient fainted while trying to stand up a short while ago.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Initial Impression</strong></td><td class="border-b px-4 py-2">Alert but lethargic, appears cachectic, pale, unwell.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Response</strong></td><td class="border-b px-4 py-2">Opens eyes spontaneously, responds verbally but speech is quiet and slow. Oriented. (AVPU = A)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Airway</strong></td><td class="border-b px-4 py-2">Clear and self-maintaining.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Breathing</strong></td><td class="border-b px-4 py-2">Rate appears slow, depth normal to shallow.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Circulation</strong></td><td class="border-b px-4 py-2">Skin pale, cool peripheries. Radial pulse weak and slow (bradycardia). Cap refill delayed.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Disability</strong></td><td class="border-b px-4 py-2">Alert (GCS 15), but lethargic, weak, dizzy on sitting/standing.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Exposure/Environment</strong></td><td class="border-b px-4 py-2">Indoor home environment. Patient wearing loose clothing, appears very thin.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (obtained from patient - may be guarded, and parent)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 w-1/3"><strong>Allergies</strong></td><td class="border-b px-4 py-2">NKDA (Parent confirms)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Medications</strong></td><td class="border-b px-4 py-2">None prescribed. Parent suspects possible laxative abuse but patient denies.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Past Medical History</strong></td><td class="border-b px-4 py-2">Diagnosed Anorexia Nervosa 2 years ago. Several previous hospital admissions for medical stabilisation and refeeding. Currently under outpatient mental health team and dietitian, but has been struggling recently. History of bradycardia and orthostatic hypotension.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Last Oral Intake</strong></td><td class="border-b px-4 py-2">Parent reports very poor intake over last few days (e.g., half a piece of toast yesterday, sips of water). Patient states she "isn't hungry".</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Events Preceding</strong></td><td class="border-b px-4 py-2">Patient has been increasingly withdrawn and restricting intake more severely over the past week. Complained of feeling weak and dizzy this morning. Attempted to stand up from sofa ~20 minutes ago, felt very lightheaded, and fainted briefly (parent witnessed, lasted < 1 minute, no seizure activity, immediate recovery on lying flat). Has felt weak, cold, and dizzy since. Denies chest pain or palpitations specifically, but feels generally unwell.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value (Supine)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Resp. Rate (/min.)</strong></td><td class="border-b px-4 py-2">12 (Slow)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Lung Sounds (L/R)</strong></td><td class="border-b px-4 py-2">Clear bilaterally.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>SpO2 (%)</strong></td><td class="border-b px-4 py-2">97% (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>EtCO2 (mmHg)</strong></td><td class="border-b px-4 py-2">Not indicated unless decreased LOC/resp effort</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pulse Rate (/min.)</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">42</strong>, regular but weak</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>CRT (sec.)</strong></td><td class="border-b px-4 py-2">3-4 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>ECG rhythm</strong></td><td class="border-b px-4 py-2">Sinus Bradycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>12-lead ECG</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Sinus Bradycardia. Possible prolonged QT interval, low voltage QRS, T wave flattening/inversion.</strong> No acute ischaemic changes.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BP (mmHg)</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">85/55</strong> (Hypotensive)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Postural BP</strong></td><td class="border-b px-4 py-2">Significant drop on sitting/standing attempt (e.g., >20mmHg systolic or >10mmHg diastolic drop with symptoms) - Assess cautiously.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Skin</strong></td><td class="border-b px-4 py-2">Pale, cool peripheries, dry. Possible lanugo hair.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pain (/10)</strong></td><td class="border-b px-4 py-2">Denies pain. Reports weakness and dizziness.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>GCS (/15: E,V,M)</strong></td><td class="border-b px-4 py-2">15/15 (E4, V5, M6) but lethargic.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BGL (mmol/L)</strong></td><td class="border-b px-4 py-2">3.2 (Hypoglycaemic or low-normal)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pupils (mmL/mmR)</strong></td><td class="border-b px-4 py-2">3mm L / 3mm R, Equal and Reactive (PERL)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Temp. (°C)</strong></td><td class="border-b px-4 py-2">35.4 (Hypothermic)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200 text-green-800">
+                <li><strong>General Appearance:</strong> Cachectic, frail, lethargic, pale. Appears significantly underweight.</li>
+                <li><strong>Cardiovascular:</strong> Marked bradycardia, hypotension. Weak peripheral pulses. Delayed capillary refill. Possible orthostatic hypotension.</li>
+                <li><strong>Skin:</strong> Cool, dry, poor turgor. Fine downy hair (lanugo) may be present on face/arms/back. Peripheral cyanosis may be present if very cold/poor perfusion.</li>
+                <li><strong>Neurological:</strong> GCS 15 but lethargic. Weakness. Dizziness reported.</li>
+                <li><strong>Other:</strong> May have muscle wasting, brittle nails/hair, dental erosion (if purging history). Abdomen may be scaphoid.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management Focus</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200 text-purple-800">
+                <li><strong>Primary Survey (ABCDE):</strong> Recognize critical illness related to anorexia complications (bradycardia, hypotension, hypothermia, potential hypoglycaemia, risk of electrolyte disturbance/arrhythmia).</li>
+                <li><strong>ECG Acquisition & Interpretation:</strong> **Obtain 12-lead ECG early.** Look for bradycardia, prolonged QT, other T wave/QRS changes indicative of electrolyte imbalance or structural changes.</li>
+                <li><strong>Oxygen Therapy:</strong> Apply oxygen via nasal prongs or mask if hypoxic (SpO2 < 94%) or signs of shock.</li>
+                <li><strong>Glucose Management:</strong> Check BGL. If hypoglycaemic (<4.0 mmol/L), administer oral glucose if alert and able to swallow, or IV Dextrose / IM Glucagon per local protocols.</li>
+                <li><strong>Temperature Management:</strong> Actively warm the patient using blankets. Prevent further heat loss.</li>
+                <li><strong>Vascular Access:</strong> Establish IV access (may be difficult due to dehydration/cachexia).</li>
+                <li><strong>Fluid Therapy:</strong> Administer IV fluids (e.g., Sodium Chloride 0.9%) cautiously. Start with a small bolus (e.g., 250-500mL) for hypotension/poor perfusion, reassess frequently. Avoid rapid large volumes due to risk of refeeding syndrome/fluid shifts in malnourished patients.</li>
+                <li><strong>Monitoring:</strong> Continuous ECG monitoring is essential due to arrhythmia risk. Frequent vital signs (including temperature). Monitor mental status. Recheck BGL after treatment if initially low.</li>
+                <li><strong>Positioning:</strong> Keep patient supine initially due to hypotension/orthostasis. Move gently.</li>
+                <li><strong>Communication & Rapport:</strong> Approach patient with sensitivity and empathy. Avoid focus on weight/food initially. Communicate concerns clearly to patient and parent.</li>
+                <li><strong>Transport:</strong> **Urgent transport** to an Emergency Department equipped for medical stabilisation of eating disorder complications. Pre-notify receiving hospital (CRITICAL PATIENT: Suspected severe anorexia complications - bradycardia, hypotension, hypothermia, ?hypoglycaemia, ECG findings).</li>
+                <li><strong>Teamwork & Communication:</strong> Clear roles. Gentle handling. Sensitive communication. Clear handover emphasizing medical instability and history of anorexia.</li>
+            </ul>
+        </section>
+
+        <section>
+             <h2>Debrief Focus Points</h2>
+             {/* Ensure list items here use standard font weight */}
+             <ul class="list-disc list-inside bg-gray-50 p-4 rounded-md border border-gray-200 text-gray-800" style="font-weight: normal;">
+                 <li>Recognizing the signs and symptoms of severe medical compromise in Anorexia Nervosa (bradycardia, hypotension, hypothermia, hypoglycaemia, cachexia).</li>
+                 <li>Understanding the potential for life-threatening complications (arrhythmias, electrolyte imbalances, refeeding syndrome).</li>
+                 <li>Importance of early ECG acquisition and interpretation in this patient group.</li>
+                 <li>Cautious approach to IV fluid administration.</li>
+                 <li>Management of hypothermia and hypoglycaemia.</li>
+                 <li>Communicating sensitively with patients with eating disorders and their families.</li>
+                 <li>Importance of transport to an appropriate facility for medical stabilisation.</li>
+                 <li>Recognizing the limitations of prehospital assessment for underlying electrolyte disturbances.</li>
+             </ul>
+         </section>
+
+    </div>
+
+</body>
+</html>

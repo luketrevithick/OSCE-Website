@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: COPD Exacerbation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 equivalent */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+            color: #1d4ed8; /* text-blue-700 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #374151; /* text-gray-700 */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+             /* Default font weight for list items */
+            font-weight: 400;
+        }
+        /* Ensure strong tags are bold */
+        strong {
+            font-weight: 600; /* font-semibold */
+        }
+         /* Specific style for critical findings */
+        .critical-finding {
+            font-weight: bold;
+            color: #c81e1e; /* Red color for emphasis */
+        }
+         /* Ensure nested list items also have normal weight unless specified */
+        ul ul li {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6 text-center">
+            <h1 class="text-3xl font-bold text-blue-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-gray-700 mt-2">COPD Exacerbation</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Exacerbation of Chronic Obstructive Pulmonary Disease (COPD)</div>
+                <div><strong>Simulated Patient:</strong> 67-year-old Male</div>
+                <div><strong>Actor/Actress:</strong> Student Actor (Patient)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-blue-50 p-4 rounded-md border border-blue-200 text-blue-800">
+                <li>Urgent Response - Difficulty Breathing</li>
+                <li>67-year-old male, known COPD</li>
+                <li>Increased shortness of breath and cough</li>
+                <li>Patient sounds very breathless on phone</li>
+                <li>Patient is conscious and alert</li>
+                <li>Location: Home address, patient lives alone</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200 text-yellow-800">You arrive at a small house. The front door is unlocked. You find the patient, a 67-year-old male, sitting in a chair in the living room, leaning forward with hands on his knees (tripod position). He appears anxious and is using significant effort to breathe, with visible accessory muscle use. He has pursed-lip breathing and audible expiratory wheezing. His skin appears slightly grey/cyanotic around the lips. A home nebuliser machine is on a table nearby.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Initial Impression</strong></td><td class="border-b px-4 py-2">Alert male in severe respiratory distress, tachypnoeic, using accessory muscles, audible wheeze, possible cyanosis.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Response</strong></td><td class="border-b px-4 py-2">Alert, anxious, speaks only in single words or short phrases. (AVPU = A)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Airway</strong></td><td class="border-b px-4 py-2">Clear and self-maintaining, but audible wheeze present.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Breathing</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Severe respiratory distress: Marked tachypnoea, significant accessory muscle use (sternocleidomastoid, intercostals), pursed-lip breathing, prolonged expiration, audible wheeze.</strong></td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Circulation</strong></td><td class="border-b px-4 py-2">Skin pale/greyish tinge, warm centrally. Tachycardic. Peripheral pulses may be difficult to feel due to position/distress.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Disability</strong></td><td class="border-b px-4 py-2">Alert (GCS 15), anxious.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Exposure/Environment</strong></td><td class="border-b px-4 py-2">Indoor home environment. Note presence of inhalers, nebuliser, home oxygen (if any).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression</h2>
+
+            <h3>History (obtained from patient - difficult due to breathlessness)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 w-1/3"><strong>Allergies</strong></td><td class="border-b px-4 py-2">NKDA</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Medications</strong></td><td class="border-b px-4 py-2">Tiotropium (Spiriva) HandiHaler daily, Seretide Accuhaler BD, Salbutamol MDI PRN, Home nebuliser with Salbutamol/Ipratropium solutions. Occasional Prednisolone course for exacerbations.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Past Medical History</strong></td><td class="border-b px-4 py-2">Severe COPD (diagnosed 15+ years ago). Ex-smoker (quit 5 years ago, 40 pack-year history). Hypertension. Frequent exacerbations requiring hospitalisation (2 admissions in last 12 months). Not on home oxygen.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Last Oral Intake</strong></td><td class="border-b px-4 py-2">Poor appetite, only had tea this morning.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Events Preceding</strong></td><td class="border-b px-4 py-2">Patient reports increased cough with yellow/green sputum and worsening shortness of breath over the past 3 days. Used Salbutamol inhaler frequently yesterday and today with little relief. Used home nebuliser (Salbutamol/Ipratropium) about 1 hour ago, also with minimal effect. Breathlessness became much worse in the last hour, prompting call. Denies chest pain, fever explicitly but feels generally unwell.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (Initial)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Resp. Rate (/min.)</strong></td><td class="border-b px-4 py-2">32 (Tachypnoeic)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Lung Sounds (L/R)</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Widespread polyphonic expiratory wheeze bilaterally. Reduced air entry throughout. Possible coarse crackles at bases.</strong></td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>SpO2 (%)</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">86%</strong> (Room Air)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>EtCO2 (mmHg)</strong></td><td class="border-b px-4 py-2">55 mmHg (High - indicates hypercapnia/respiratory acidosis)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pulse Rate (/min.)</strong></td><td class="border-b px-4 py-2">115, regular</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>CRT (sec.)</strong></td><td class="border-b px-4 py-2">2-3 sec</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>ECG rhythm</strong></td><td class="border-b px-4 py-2">Sinus Tachycardia</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>12-lead ECG</strong></td><td class="border-b px-4 py-2">Sinus Tachycardia. May show signs of right heart strain (P pulmonale, RAD, RBBB) if chronic cor pulmonale present. Rule out ischaemia.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BP (mmHg)</strong></td><td class="border-b px-4 py-2">150/90 (May be elevated due to hypoxia/stress)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Skin</strong></td><td class="border-b px-4 py-2">Pale, slightly grey/cyanotic lips, warm centrally, possibly cool peripheries.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pain (/10)</strong></td><td class="border-b px-4 py-2">Denies pain, reports severe breathlessness.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>GCS (/15: E,V,M)</strong></td><td class="border-b px-4 py-2">14/15 (E4, V4 - confused/single words, M6) - May deteriorate with worsening hypercapnia.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BGL (mmol/L)</strong></td><td class="border-b px-4 py-2">7.0 (Can be elevated due to stress/steroids).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pupils (mmL/mmR)</strong></td><td class="border-b px-4 py-2">Equal and Reactive (PERL).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Temp. (°C)</strong></td><td class="border-b px-4 py-2">37.5 (May have low-grade fever if infective trigger).</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200 text-green-800">
+                <li><strong>General Appearance:</strong> Anxious, severe respiratory distress, tripod position, pursed-lip breathing, speaking single words. Barrel chest appearance.</li>
+                <li><strong>Respiratory:</strong> Marked accessory muscle use. Tachypnoea. <strong class="critical-finding">Audible wheeze. Diffuse expiratory wheeze on auscultation, prolonged expiratory phase, reduced air entry. Possible basal crackles.</strong> Percussion note may be hyperresonant.</li>
+                <li><strong>Cardiovascular:</strong> Tachycardia. BP may be elevated. JVD may be present if cor pulmonale.</li>
+                <li><strong>Neurological:</strong> Alert but potentially becoming drowsy/confused due to hypercapnia (GCS 14).</li>
+                <li><strong>Skin:</strong> Central/peripheral cyanosis may be present.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management Focus</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200 text-purple-800">
+                <li><strong>Primary Survey (ABCDE) & Severity Assessment:</strong> Recognize severe COPD exacerbation with hypoxia and likely hypercapnia. Risk of respiratory failure.</li>
+                <li><strong>Oxygen Therapy:</strong> **Administer controlled/titrated oxygen.** Start with low-moderate flow via nasal prongs or simple face mask aiming for target SpO2 range of **88-92%** (per local guidelines for known COPD/risk of hypercapnia). Avoid high concentrations unless patient is critically hypoxic or peri-arrest. Monitor SpO2 and respiratory status closely.</li>
+                <li><strong>Bronchodilator Therapy:**
+                    <ul class="list-circle list-inside ml-4 mt-2">
+                        <li>Administer **Salbutamol** and **Ipratropium Bromide** via nebuliser (driven by air if possible, or oxygen at appropriate flow rate to maintain target SpO2). Use doses per local protocol (e.g., Salbutamol 5mg, Ipratropium 500mcg).</li>
+                        <li>Repeat nebulisers frequently (e.g., back-to-back or every 20 mins) based on clinical response.</li>
+                    </ul>
+                </li>
+                 <li><strong>Corticosteroids:</strong> Administer early corticosteroids per local protocol (e.g., IV Hydrocortisone or oral Prednisolone if patient can tolerate/swallow safely).</li>
+                <li><strong>Positioning:</strong> Allow patient to maintain position of comfort (usually sitting upright, leaning forward).</li>
+                <li><strong>Monitoring:</strong> Continuous SpO2, ECG, and EtCO2 (if available - monitor trend). Frequent reassessment of respiratory status (work of breathing, RR, air entry, wheeze, conscious state), HR, BP.</li>
+                <li><strong>Consider Non-Invasive Ventilation (NIV - CPAP/BiPAP):</strong> Prehospital NIV may be indicated for severe exacerbations with respiratory acidosis/hypercapnia if available and crew are trained/credentialed per local protocols.</li>
+                <li><strong>IV Access:</strong> Establish IV access.</li>
+                <li><strong>Transport:</strong> Urgent transport to the nearest appropriate Emergency Department. Pre-notify receiving hospital (Severe COPD exacerbation, hypoxic, hypercapnic, treatments given, response, ?NIV candidate).</li>
+                <li><strong>Teamwork & Communication:</strong> Calm, reassuring approach. Explain interventions. Clear handover focusing on severity, treatments, and response.</li>
+            </ul>
+        </section>
+
+        <section>
+             <h2>Debrief Focus Points</h2>
+             <ul class="list-disc list-inside bg-gray-50 p-4 rounded-md border border-gray-200 text-gray-800">
+                 <li>Recognizing signs/symptoms of severe COPD exacerbation.</li>
+                 <li>Assessing severity and identifying potential respiratory failure (hypoxia, hypercapnia, exhaustion).</li>
+                 <li>Principles of controlled oxygen therapy in COPD (target SpO2 88-92%).</li>
+                 <li>Appropriate administration of bronchodilators (Salbutamol, Ipratropium).</li>
+                 <li>Role and timing of corticosteroids.</li>
+                 <li>Indications and considerations for prehospital NIV (if applicable).</li>
+                 <li>Monitoring for deterioration (worsening WOB, drowsiness, rising EtCO2).</li>
+                 <li>Differentiating COPD exacerbation from other causes of dyspnoea (e.g., heart failure, PE, pneumonia).</li>
+             </ul>
+         </section>
+
+    </div>
+
+</body>
+</html>
