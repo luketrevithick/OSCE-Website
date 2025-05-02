@@ -29,31 +29,43 @@
             z-index: 50; /* Ensure dropdown appears above other content */
         }
         /* Consistent vertical alignment for nav links */
-        nav ul li a.nav-link {
+        nav ul li a.nav-link, .mobile-nav a { /* Apply to both desktop and mobile links */
             display: flex;
             align-items: center;
-            height: 100%;
         }
-        /* Simple transition for dropdown visibility (optional) */
-        .dropdown-content {
-            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+        /* Simple transition for dropdown visibility */
+        .dropdown-content, .mobile-nav-items {
+            transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out, max-height 0.3s ease-out;
         }
-        .dropdown-content.hidden {
+        .dropdown-content.hidden, .mobile-nav-items.hidden {
             opacity: 0;
             visibility: hidden;
+            max-height: 0; /* Add max-height for transition */
         }
-        .dropdown-content:not(.hidden) {
+        .dropdown-content:not(.hidden), .mobile-nav-items:not(.hidden) {
             opacity: 1;
             visibility: visible;
+            max-height: 1000px; /* Arbitrary large value for open state */
+        }
+        /* Style for mobile sub-menu */
+        .mobile-submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: rgba(0, 0, 0, 0.1); /* Slightly darker background for sub-items */
+        }
+        .mobile-submenu.open {
+             max-height: 500px; /* Adjust as needed */
         }
     </style>
 </head>
 <body class="font-sans bg-white text-navy-dark">
 
-    <header class="bg-navy-dark text-white shadow-md sticky top-0 z-40"> <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+    <header class="bg-navy-dark text-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <h1 class="text-2xl sm:text-3xl font-bold">Trevithick.com.au</h1>
 
-            <nav>
+            <nav class="hidden md:block">
                 <ul class="flex space-x-2 sm:space-x-4 items-center">
                     <li class="relative h-full">
                         <a href="javascript:void(0)" id="home-button" class="nav-link dropdown-button px-3 py-2 rounded-md hover:bg-navy-medium transition duration-150 ease-in-out">
@@ -74,7 +86,6 @@
                             
                         </div>
                     </li>
-
                     <li class="relative h-full">
                         <a href="javascript:void(0)" id="about-button" class="nav-link dropdown-button px-3 py-2 rounded-md hover:bg-navy-medium transition duration-150 ease-in-out">
                             Shock
@@ -86,9 +97,8 @@
 <a href="Shock/Anaphylactic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Anaphylactic Shock</a> 
 <a href="Shock/Septic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Septic Shock</a> 
 <a href="Shock/Hypovolaemic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Hypovolaemic Shock</a> 
-                       </div>
+                        </div>
                     </li>
-
                     <li class="relative h-full">
                         <a href="javascript:void(0)" id="services-button" class="nav-link dropdown-button px-3 py-2 rounded-md hover:bg-navy-medium transition duration-150 ease-in-out">
                             Trauma
@@ -106,7 +116,6 @@
 <a href="Trauma/Acute Stroke.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Acute Stroke</a>
                         </div>
                     </li>
-
                     <li class="relative h-full">
                         <a href="javascript:void(0)" id="contact-button" class="nav-link dropdown-button px-3 py-2 rounded-md hover:bg-navy-medium transition duration-150 ease-in-out">
                             Non-Emergency
@@ -120,6 +129,77 @@
                     </li>
                 </ul>
             </nav>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                        <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="mobile-nav-items md:hidden hidden bg-navy-dark pb-3">
+            <div>
+                <a href="javascript:void(0)" class="mobile-nav-toggle block px-4 py-2 text-white hover:bg-navy-medium flex justify-between items-center">
+                    Mental Health
+                    <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                </a>
+                <div class="mobile-submenu pl-4">
+                    <a href="Mental Health/Anxiety.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Anxiety</a>
+<a href="Mental Health/Non Suicidality Self Harm.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Non Suicidality Self Harm</a>
+<a href="Mental Health/Intoxicated Adult - Suicide.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Intoxicated Adult Suicide</a>
+<a href="Mental Health/Teenage acute psychosis.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Teenager Acute Psychosis</a>
+<a href="Mental Health/Geriatric UTI-Induced psychosis.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Geriatric UTI-Induced psychosis</a>
+<a href="Mental Health/Schizophrenia.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Schizophrenia</a>
+<a href="Mental Health/Geriatric Depression.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Geriatric Depression</a>
+<a href="Mental Health/Teenage depression.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Teenage depression</a>
+<a href="Mental Health/Borderline personality disorder.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Borderline personality disorder</a>
+<a href="Mental Health/Acute behavioural disturbance.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Acute behavioural disturbance</a>
+
+                </div>
+            </div>
+            <div>
+                <a href="javascript:void(0)" class="mobile-nav-toggle block px-4 py-2 text-white hover:bg-navy-medium flex justify-between items-center">
+                    Shock
+                    <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                </a>
+                <div class="mobile-submenu pl-4">
+                    <a href="Shock/Cardiogenic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Cardiogenic Shock</a> 
+<a href="Shock/Neurogenic shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Neurogenic Shock</a> 
+<a href="Shock/Anaphylactic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Anaphylactic Shock</a> 
+<a href="Shock/Septic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Septic Shock</a> 
+<a href="Shock/Hypovolaemic Shock.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Hypovolaemic Shock</a> 
+                </div>
+            </div>
+            <div>
+                <a href="javascript:void(0)" class="mobile-nav-toggle block px-4 py-2 text-white hover:bg-navy-medium flex justify-between items-center">
+                    Trauma
+                    <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                </a>
+                <div class="mobile-submenu pl-4">
+                    <a href="Trauma/Hyperkalaemia.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Hyperkalaemia</a>
+                           <a href="Trauma/Autonomic Dysreflexia.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Autonomic Dysreflexia</a>
+<a href="Trauma/Forearm Fracture.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Forearm Fracture</a>
+<a href="Trauma/Spontaneous Pneumothorax.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Spontaneous Pneumothorax</a>
+<a href="Trauma/Diabetic Ketoacidosis.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Diabetic Ketoacidosis</a>
+<a href="Trauma/Hypothermia.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Hypothermia</a>
+<a href="Trauma/Heroin overdose.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Heroin overdose</a>
+<a href="Trauma/Renal Calculi.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Renal Calculi</a>
+<a href="Trauma/Acute Stroke.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Acute Stroke</a>
+                </div>
+            </div>
+            <div>
+                <a href="javascript:void(0)" class="mobile-nav-toggle block px-4 py-2 text-white hover:bg-navy-medium flex justify-between items-center">
+                    Non-Emergency
+                    <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                </a>
+                <div class="mobile-submenu pl-4">
+                    <a href="Non-Emergency/Migraine.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Migraine</a>
+<a href="Non-Emergency/Acute lower back pain.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Acute lower back pain</a>
+<a href="Non-Emergency/Neck of Femur Fracture.html" class="block px-4 py-2 text-sm text-white hover:bg-navy-medium">Neck of Femur Fracture</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -129,25 +209,20 @@
 
     <footer class="bg-navy-dark text-white py-6">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            
-        </div>
+                    </div>
     </footer>
 
     <script>
         /**
-         * Dropdown Menu Functionality
-         * Handles toggling multiple dropdown menus on click and closing them
-         * when clicking outside.
+         * Dropdown Menu & Mobile Menu Functionality
          */
-        document.addEventListener('DOMContentLoaded', () => { // Ensure DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
 
-            // Select all dropdown trigger buttons
+            // --- Desktop Dropdown Logic ---
             const dropdownButtons = document.querySelectorAll('.dropdown-button');
 
-            // Function to close all currently open dropdowns
-            const closeAllDropdowns = (exceptButton = null) => {
+            const closeAllDesktopDropdowns = (exceptButton = null) => {
                 document.querySelectorAll('.dropdown-content:not(.hidden)').forEach(content => {
-                    // Check if the content belongs to the button that should be excepted
                     const contentButtonId = content.id.replace('-dropdown', '-button');
                     if (!exceptButton || contentButtonId !== exceptButton.id) {
                         content.classList.add('hidden');
@@ -155,41 +230,83 @@
                 });
             }
 
-            // Add click listener to each dropdown button
             dropdownButtons.forEach(button => {
                 button.addEventListener('click', (event) => {
-                    event.stopPropagation(); // Prevent the click from propagating to the document listener
-
-                    // Find the target dropdown content div based on the button's ID
+                    event.stopPropagation();
                     const targetDropdownId = button.id.replace('-button', '-dropdown');
                     const targetDropdown = document.getElementById(targetDropdownId);
-
-                    if (!targetDropdown) {
-                        console.error(`Dropdown content #${targetDropdownId} not found for button #${button.id}`);
-                        return;
-                    }
-
-                    // Check if the target dropdown is currently hidden (closed)
+                    if (!targetDropdown) return;
                     const isHidden = targetDropdown.classList.contains('hidden');
-
-                    // Close all other dropdowns *before* toggling the target one
-                    closeAllDropdowns(button); // Pass the current button to potentially keep it open
-
-                    // Toggle the target dropdown's visibility
+                    closeAllDesktopDropdowns(button); // Close others first
                     if (isHidden) {
-                        targetDropdown.classList.remove('hidden'); // Open it
+                        targetDropdown.classList.remove('hidden');
                     } else {
-                         targetDropdown.classList.add('hidden'); // Close it (already handled by closeAllDropdowns, but safe)
+                         targetDropdown.classList.add('hidden');
                     }
                 });
             });
 
-            // Add global click listener to close dropdowns when clicking outside
+            // --- Mobile Menu Logic ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileNavToggles = document.querySelectorAll('.mobile-nav-toggle');
+
+            // Toggle mobile menu visibility
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    mobileMenu.classList.toggle('hidden');
+                    // Optional: Close any open desktop dropdowns when opening mobile menu
+                    closeAllDesktopDropdowns();
+                });
+            }
+
+            // Toggle mobile submenus
+            mobileNavToggles.forEach(toggle => {
+                toggle.addEventListener('click', (event) => {
+                    event.preventDefault(); // Prevent default link behavior
+                    event.stopPropagation();
+                    const submenu = toggle.nextElementSibling; // The .mobile-submenu div
+                    if (submenu && submenu.classList.contains('mobile-submenu')) {
+                         // Optional: Close other open submenus
+                        // document.querySelectorAll('.mobile-submenu.open').forEach(openSubmenu => {
+                        //     if (openSubmenu !== submenu) {
+                        //         openSubmenu.classList.remove('open');
+                        //         openSubmenu.style.maxHeight = null;
+                        //     }
+                        // });
+
+                        // Toggle the clicked submenu
+                        submenu.classList.toggle('open');
+                        if (submenu.classList.contains('open')) {
+                            submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                        } else {
+                            submenu.style.maxHeight = null;
+                        }
+                    }
+                });
+            });
+
+
+            // --- Global Click Listener (Closes Menus) ---
             document.addEventListener('click', (event) => {
-                // Check if the click was outside of any dropdown button or content area
                 const clickedElement = event.target;
+
+                // Close desktop dropdowns if click is outside
                 if (!clickedElement.closest('.dropdown-button') && !clickedElement.closest('.dropdown-content')) {
-                    closeAllDropdowns(); // Close all dropdowns
+                    closeAllDesktopDropdowns();
+                }
+
+                // Close mobile menu if click is outside header and mobile menu itself
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    if (!clickedElement.closest('header')) {
+                         mobileMenu.classList.add('hidden');
+                         // Also close any open mobile submenus when closing the main mobile menu
+                         document.querySelectorAll('.mobile-submenu.open').forEach(openSubmenu => {
+                             openSubmenu.classList.remove('open');
+                             openSubmenu.style.maxHeight = null;
+                         });
+                    }
                 }
             });
         });
