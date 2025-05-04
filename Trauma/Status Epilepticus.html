@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSCE Scenario: Status Epilepticus</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // Set Inter as the default font
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Basic body styling for better readability */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style tables for better presentation */
+        th, td {
+            padding: 0.75rem; /* p-3 equivalent */
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb; /* border-b border-gray-200 */
+        }
+        th {
+            background-color: #f9fafb; /* bg-gray-50 */
+            font-weight: 600; /* font-semibold */
+        }
+        /* Add spacing between sections */
+        section {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        h2 {
+            margin-bottom: 1rem; /* mb-4 */
+            font-size: 1.5rem; /* text-2xl */
+            font-weight: 600; /* font-semibold */
+            border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+            padding-bottom: 0.5rem; /* pb-2 */
+            color: #1d4ed8; /* text-blue-700 */
+        }
+        h3 {
+            margin-top: 1.5rem; /* mt-6 */
+            margin-bottom: 0.75rem; /* mb-3 */
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+            color: #374151; /* text-gray-700 */
+        }
+        /* Style list items */
+        ul {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        li {
+            margin-bottom: 0.5rem; /* mb-2 */
+             /* Default font weight for list items */
+            font-weight: 400;
+        }
+        /* Ensure strong tags are bold */
+        strong {
+            font-weight: 600; /* font-semibold */
+        }
+         /* Specific style for critical findings */
+        .critical-finding {
+            font-weight: bold;
+            color: #c81e1e; /* Red color for emphasis */
+        }
+         /* Ensure nested list items also have normal weight unless specified */
+        ul ul li {
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-4 md:p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 md:p-8 rounded-lg shadow-md">
+
+        <header class="mb-6 text-center">
+            <h1 class="text-3xl font-bold text-blue-700">Simulated Patient Scenario</h1>
+            <p class="text-xl font-semibold text-gray-700 mt-2">Status Epilepticus</p>
+        </header>
+
+        <section>
+            <h2>Scenario Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div><strong>Scenario:</strong> Status Epilepticus</div>
+                <div><strong>Simulated Patient:</strong> 35-year-old Male (Mannequin capable of seizure simulation if possible, or Actor)</div>
+                <div><strong>Actor/Actress:</strong> Partner/Flatmate (present on scene)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>MDT Information</h2>
+            <ul class="list-disc list-inside bg-blue-50 p-4 rounded-md border border-blue-200 text-blue-800">
+                <li>Urgent Response - Seizure / Fitting</li>
+                <li>35-year-old male, known epileptic</li>
+                <li>Reported continuous seizure activity for > 5 minutes</li>
+                <li>Partner on scene, unable to manage</li>
+                <li>Location: Patient's apartment</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>On Arrival</h2>
+            <p class="bg-yellow-50 p-4 rounded-md border border-yellow-200 text-yellow-800">You arrive at an apartment where a distressed partner meets you. They lead you to the living room where the patient is lying on the floor between the sofa and coffee table (area cleared slightly by partner). The patient is actively experiencing a generalised tonic-clonic seizure: rhythmic jerking of limbs, clenched jaw, excessive salivation, cyanosis around the lips. The partner states the seizure started about 8 minutes ago and hasn't stopped.</p>
+             <p class="mt-2 text-sm text-red-700"><strong>Scene Safety Note:</strong> Ensure sufficient space around patient, protect head from injury during seizure, manage partner's distress.</p>
+        </section>
+
+        <section>
+            <h2>Initial Impression and Primary Survey (During Seizure)</h2>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Category</th>
+                            <th class="px-4 py-2 border-b">Finding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Initial Impression</strong></td><td class="border-b px-4 py-2">Patient actively seizing (tonic-clonic), compromised airway/breathing likely.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Response</strong></td><td class="border-b px-4 py-2">Unresponsive during seizure activity. (AVPU = U)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Airway</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Potentially compromised due to tonic muscle contraction, clenching, excessive secretions/salivation.</strong> Gurgling sounds may be present.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Breathing</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Impaired/ineffective during tonic-clonic phase.</strong> Apneic periods or poor chest excursion. Cyanosis present.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Circulation</strong></td><td class="border-b px-4 py-2">Tachycardic. Pulse strong initially. Skin may be flushed or cyanotic.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Disability</strong></td><td class="border-b px-4 py-2">Actively seizing (GCS 3 during seizure).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Exposure/Environment</strong></td><td class="border-b px-4 py-2">Indoor living room. Protect patient from injury. Check for incontinence.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Secondary Survey and Simulation Progression (Obtain history concurrently with management)</h2>
+
+            <h3>History (obtained rapidly from partner)</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md mb-6">
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2 w-1/3"><strong>Allergies</strong></td><td class="border-b px-4 py-2">NKDA (Partner confirms)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Medications</strong></td><td class="border-b px-4 py-2">Sodium Valproate, Levetiracetam (Keppra). Partner thinks he may have missed doses recently. No emergency benzodiazepines prescribed for home use.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Past Medical History</strong></td><td class="border-b px-4 py-2">Known epilepsy (generalised tonic-clonic seizures) since teenage years. Usually well-controlled, last seizure ~6 months ago. No other significant medical history.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Last Oral Intake</strong></td><td class="border-b px-4 py-2">Breakfast ~ 3 hours ago.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Events Preceding / Seizure Details:</strong></td><td class="border-b px-4 py-2">
+                            <ul class="list-disc list-inside mt-1">
+                                <li>Patient seemed tired and "a bit off" this morning.</li>
+                                <li>Partner witnessed sudden onset of tonic-clonic seizure while patient was sitting on sofa (~8-10 minutes ago).</li>
+                                <li>Seizure activity has been continuous since onset, with no return to consciousness between phases.</li>
+                                <li>Partner tried to protect head but was unable to administer any medication.</li>
+                                <li>No known recent illness, fever, head injury, alcohol or drug use mentioned by partner. Possible trigger: missed medication doses.</li>
+                            </ul>
+                        </td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Vital Signs/Assessment (During/Immediately Post Seizure)</h3>
+             <div class="overflow-x-auto">
+                <table class="min-w-full bg-white border border-gray-200 rounded-md">
+                     <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-2 border-b">Parameter</th>
+                            <th class="px-4 py-2 border-b">Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="border-b px-4 py-2"><strong>Resp. Rate (/min.)</strong></td><td class="border-b px-4 py-2">Variable/ineffective during seizure. Post-ictal: May be slow/stertorous initially, then tachypnoeic.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Lung Sounds (L/R)</strong></td><td class="border-b px-4 py-2">Difficult during seizure. Post-ictal: May be noisy initially, clearing with positioning/suction.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>SpO2 (%)</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Low during seizure (e.g., <85%).</strong> Improve with oxygen/ventilation post-seizure.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>EtCO2 (mmHg)</strong></td><td class="border-b px-4 py-2">Likely high during seizure due to hypoventilation. Monitor trend post-seizure/intervention.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pulse Rate (/min.)</strong></td><td class="border-b px-4 py-2">130+, regular (Tachycardic during seizure)</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>CRT (sec.)</strong></td><td class="border-b px-4 py-2">May be difficult to assess accurately.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>ECG rhythm</strong></td><td class="border-b px-4 py-2">Sinus Tachycardia common. Monitor for post-ictal changes.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>12-lead ECG</strong></td><td class="border-b px-4 py-2">Not priority during active seizure. Obtain post-ictal if possible.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BP (mmHg)</strong></td><td class="border-b px-4 py-2">Often elevated during seizure. Monitor post-ictal.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Skin</strong></td><td class="border-b px-4 py-2">Cyanotic during seizure, flushed/diaphoretic post-ictal.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pain (/10)</strong></td><td class="border-b px-4 py-2">Unresponsive during seizure. May complain of headache/muscle soreness post-ictally.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>GCS (/15: E,V,M)</strong></td><td class="border-b px-4 py-2">3/15 during seizure. Post-ictal: Gradually improves but likely remains low initially (drowsy, confused).</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>BGL (mmol/L)</strong></td><td class="border-b px-4 py-2"><strong class="critical-finding">Check IMMEDIATELY.</strong> May be low (trigger), normal, or high (stress response). Crucial to exclude hypoglycaemia. Assume BGL 6.5 for this scenario unless hypo needed.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Pupils (mmL/mmR)</strong></td><td class="border-b px-4 py-2">May be dilated and poorly reactive during seizure. Check post-ictally.</td></tr>
+                        <tr><td class="border-b px-4 py-2"><strong>Temp. (°C)</strong></td><td class="border-b px-4 py-2">May be elevated due to muscle activity.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Physical Examination (Post-Ictal Focus)</h2>
+            <ul class="list-disc list-inside bg-green-50 p-4 rounded-md border border-green-200 text-green-800">
+                <li><strong>General Appearance:</strong> Initially unresponsive post-seizure, gradually becoming drowsy/confused. Diaphoretic, flushed.</li>
+                <li><strong>Airway:</strong> May be noisy (stertorous) initially due to relaxed pharyngeal muscles. Excessive secretions common.</li>
+                <li><strong>Breathing:</strong> Respiratory rate may be slow initially then become rapid. Assess for adequate chest excursion.</li>
+                <li><strong>Neurological:</strong> Assess GCS frequently as patient recovers. Check for focal neurological deficits (e.g., Todd's paresis - temporary weakness on one side). Check pupils.</li>
+                <li><strong>Head/Body:</strong> Check for injuries sustained during seizure (head laceration, tongue biting, shoulder dislocation, back injury). Check for incontinence.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Assessment and Treatment</h2>
+            <h3>Appropriate Management Focus</h3>
+            <ul class="list-disc list-inside bg-purple-50 p-4 rounded-md border border-purple-200 text-purple-800">
+                <li><strong>Safety:</strong> Protect patient from injury during seizure. Do NOT restrain forcefully or place objects in mouth. Move hazards away.</li>
+                <li><strong>Primary Survey (ABCDE):</strong> Manage concurrently. <strong>Prioritise stopping the seizure.</strong>
+                    <ul class="list-circle list-inside ml-4 mt-2">
+                        <li><strong>Airway:</strong> Position patient (recovery position once seizure stops/safe). Suction secretions as needed. Consider NPA/OPA once seizure ceases if airway compromised.</li>
+                        <li><strong>Breathing:</strong> Apply high-flow oxygen via NRB mask. Assist ventilations with BVM if breathing inadequate/apneic during or after seizure.</li>
+                        <li><strong>Circulation:</strong> Assess pulse. Gain IV/IO access urgently.</li>
+                        <li><strong>Disability:</strong> Check BGL immediately. Treat hypoglycaemia if present. Administer anticonvulsant medication.</li>
+                    </ul>
+                </li>
+                 <li><strong>Anticonvulsant Therapy (Status Epilepticus > 5 mins):</strong>
+                    <ul class="list-circle list-inside ml-4 mt-2">
+                        <li><strong>First Line:</strong> Benzodiazepines. Administer IV Lorazepam or IV/IM/IN/PR Midazolam according to local protocols and preferred route based on access/patient status (e.g., Midazolam 10mg IM for adult).</li>
+                        <li><strong>Second Line:</strong> If seizure continues after first-line agent, consider second dose of benzodiazepine or second-line agent (e.g., Levetiracetam, Sodium Valproate, Phenytoin IV) per protocol, often requiring medical consultation/critical care support.</li>
+                    </ul>
+                 </li>
+                 <li><strong>Monitoring:</strong> Continuous ECG, SpO2, EtCO2 monitoring. Frequent vital signs and GCS reassessment. Monitor respiratory status closely, especially after benzodiazepine administration.</li>
+                 <li><strong>Identify & Treat Reversible Causes:</strong> Check BGL. Consider other potential causes if seizure refractory or atypical presentation (e.g., electrolyte disturbance, toxins, infection, structural lesion - history is key).</li>
+                 <li><strong>Post-Ictal Care:</strong> Maintain airway, provide oxygen, monitor vital signs, protect from injury, provide reassurance as patient recovers consciousness.</li>
+                 <li><strong>Transport Decision:</strong> Urgent transport to ED is required for all patients with status epilepticus, even if seizure terminates prehospital, for investigation and further management.</li>
+                 <li><strong>Teamwork & Communication:</strong> Clear roles (airway, meds, monitoring). Calm communication with partner/family. Provide clear pre-notification to ED (Status epilepticus, duration, suspected cause, treatments given, current status). Detailed handover.</li>
+            </ul>
+        </section>
+
+        <section>
+             <h2>Debrief Focus Points</h2>
+             <ul class="list-disc list-inside bg-gray-50 p-4 rounded-md border border-gray-200 text-gray-800">
+                 <li>Definition and recognition of Status Epilepticus (≥5 mins continuous seizure, or ≥2 seizures without full recovery between).</li>
+                 <li>Prioritizing management in active seizure (Safety, ABCDEs, stopping seizure).</li>
+                 <li>Airway and breathing management during and after seizure.</li>
+                 <li>Importance of rapid BGL assessment.</li>
+                 <li>Pharmacological management of status epilepticus (Benzodiazepines first-line, routes of administration - IV/IM/IN/PR).</li>
+                 <li>Monitoring for complications (hypoxia, hyperthermia, rhabdomyolysis, aspiration, injury).</li>
+                 <li>Post-ictal assessment and care.</li>
+                 <li>Identifying potential seizure triggers and reversible causes.</li>
+                 <li>Rationale for urgent transport even if seizure terminates.</li>
+                 <li>Effective teamwork and communication during a critical event.</li>
+             </ul>
+         </section>
+
+    </div>
+
+</body>
+</html>
