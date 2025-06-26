@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood and Urine Tests Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .clinical-note {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .clinical-note strong {
+            color: #b45309;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem; /* text-sm */
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Blood and Urine Tests</h1>
+            <p class="text-xl text-gray-600 mt-2">A Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#fbc" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Full Blood Count</a>
+                <a href="#inflammation" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Inflammatory Markers</a>
+                <a href="#iron" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Iron Studies</a>
+                <a href="#glucose" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Glucose Tests</a>
+                <a href="#lipids" class="bg-sky-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-sky-600">Lipid Profile</a>
+                <a href="#cardiac" class="bg-sky-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-sky-600">Cardiac Markers</a>
+                <a href="#lft" class="bg-rose-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-rose-600">Liver Function</a>
+                <a href="#haemostasis" class="bg-rose-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-rose-600">Haemostasis</a>
+                <a href="#kft" class="bg-amber-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-amber-600">Kidney Function</a>
+                <a href="#electrolytes" class="bg-amber-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-amber-600">Electrolytes</a>
+                <a href="#abg" class="bg-fuchsia-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-fuchsia-600">Arterial Blood Gas</a>
+                <a href="#urinalysis" class="bg-fuchsia-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-fuchsia-600">Urinalysis</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+            
+            <div class="clinical-note">
+                <strong>Understanding Reference Ranges:</strong> A reference range is a set of values that includes 95% of the normal, healthy population. A result outside this range doesn't automatically mean disease, and a result within it doesn't guarantee health. All test results must be interpreted in the context of the individual patient's clinical presentation.
+            </div>
+
+            <!-- Full Blood Count -->
+            <section id="fbc" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Full Blood Count (FBC)</h2>
+                
+                <h3>Red Blood Cells (RBCs)</h3>
+                <table>
+                    <thead><tr><th>Test</th><th>Normal Range</th><th>Clinical Significance</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Haemoglobin (Hb)</strong></td><td>Men: 130-180 g/L<br>Women: 115-165 g/L</td><td>Measures oxygen-carrying capacity. Decreased in anemia. Increased in polycythemia or dehydration.</td></tr>
+                        <tr><td><strong>Haematocrit (Hct)</strong></td><td>Men: 40-50%<br>Women: 36-47%</td><td>Percentage of blood volume occupied by RBCs. Parallels Hb levels.</td></tr>
+                        <tr><td><strong>Mean Corpuscular Volume (MCV)</strong></td><td>80-98 fL</td><td>Average size of one RBC. Used to classify anemia as microcytic (<80), normocytic (80-98), or macrocytic (>98).</td></tr>
+                        <tr><td><strong>Mean Corpuscular Haemoglobin (MCH)</strong></td><td>27-32 pg</td><td>Average weight of Hb in each RBC.</td></tr>
+                        <tr><td><strong>Mean Corpuscular Haemoglobin Concentration (MCHC)</strong></td><td>300-350 g/L</td><td>Concentration of Hb in RBCs. Used to classify anemia as hypochromic (low) or normochromic (normal).</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>White Blood Cells (WBCs)</h3>
+                 <table>
+                    <thead><tr><th>Test</th><th>Normal Range</th><th>Clinical Significance</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Total WCC</strong></td><td>4-10 x 10⁹/L</td><td>Measures total number of leukocytes. High (leukocytosis) suggests infection/inflammation. Low (leukopenia) suggests bone marrow suppression.</td></tr>
+                        <tr><td><strong>Neutrophils</strong></td><td>2.5-7.5 x 10⁹/L (40-75%)</td><td>Increased (neutrophilia) in bacterial infections and tissue damage.</td></tr>
+                        <tr><td><strong>Lymphocytes</strong></td><td>1.0-3.5 x 10⁹/L (20-45%)</td><td>Increased (lymphocytosis) in viral infections.</td></tr>
+                        <tr><td><strong>Monocytes</strong></td><td>0.2-0.8 x 10⁹/L (2-10%)</td><td>Increased in chronic bacterial infections (e.g., TB) and autoimmune diseases.</td></tr>
+                        <tr><td><strong>Eosinophils</strong></td><td>0.04-0.4 x 10⁹/L (1-6%)</td><td>Increased (eosinophilia) in allergic reactions and parasitic infections.</td></tr>
+                        <tr><td><strong>Basophils</strong></td><td>0.01-0.1 x 10⁹/L (0-1%)</td><td>Increased in some allergic reactions.</td></tr>
+                    </tbody>
+                 </table>
+
+                 <h3>Platelets</h3>
+                 <table>
+                    <thead><tr><th>Test</th><th>Normal Range</th><th>Clinical Significance</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Platelet Count</strong></td><td>150-400 x 10⁹/L</td><td>Measures platelets (thrombocytes). Low (thrombocytopenia) increases bleeding risk. High (thrombocytosis) can increase thrombosis risk.</td></tr>
+                    </tbody>
+                 </table>
+            </section>
+
+            <!-- Inflammatory Markers -->
+            <section id="inflammation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Inflammatory Markers</h2>
+                 <table>
+                    <thead><tr><th>Test</th><th>Normal Range</th><th>Clinical Significance</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Erythrocyte Sedimentation Rate (ESR)</strong></td><td>&lt; 16 mm/hour</td><td>A non-specific marker of inflammation. Elevated in infections, autoimmune diseases, and malignancy.</td></tr>
+                        <tr><td><strong>C-reactive Protein (CRP)</strong></td><td>&lt; 5 mg/L</td><td>A more sensitive and specific marker of acute inflammation. Rises quickly in response to infection and tissue injury.</td></tr>
+                    </tbody>
+                 </table>
+            </section>
+            
+            <!-- Iron Studies -->
+            <section id="iron" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Iron Studies</h2>
+                <table>
+                    <thead><tr><th>Test</th><th>Normal Range</th><th>Clinical Significance</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Serum Iron</strong></td><td>10-30 &micro;mol/L</td><td>Measures iron bound to transferrin. Highly variable and of little value alone.</td></tr>
+                        <tr><td><strong>Serum Ferritin</strong></td><td>15-300 &micro;g/L</td><td>Measures the body's iron stores. Best indicator of iron deficiency (low levels).</td></tr>
+                        <tr><td><strong>Transferrin / TIBC</strong></td><td>1.7-3.0 g/L / 45-80 &micro;mol/L</td><td>Transferrin is the main iron transport protein. Both increase in iron deficiency.</td></tr>
+                        <tr><td><strong>Transferrin Saturation</strong></td><td>15-45%</td><td>Percentage of transferrin saturated with iron. Decreased in iron deficiency, increased in iron overload.</td></tr>
+                    </tbody>
+                 </table>
+            </section>
+            
+            <!-- Glucose -->
+            <section id="glucose" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Glucose Tests</h2>
+                <table>
+                     <thead><tr><th>Test</th><th>Normal / Desirable Range</th><th>Clinical Significance</th></tr></thead>
+                     <tbody>
+                         <tr><td><strong>Fasting Blood Glucose</strong></td><td>3.0-5.5 mmol/L</td><td>> 7.0 mmol/L is diagnostic for diabetes mellitus.</td></tr>
+                         <tr><td><strong>Random Blood Glucose</strong></td><td>3.3-7.7 mmol/L</td><td>Used for opportunistic screening.</td></tr>
+                         <tr><td><strong>Oral Glucose Tolerance Test (OGTT)</strong></td><td>2-hour level < 7.7 mmol/L</td><td>Used to diagnose diabetes when fasting glucose is borderline. A 2-hour level > 11.1 mmol/L is diagnostic.</td></tr>
+                         <tr><td><strong>Glycosylated Haemoglobin (HbA1c)</strong></td><td>3.5-6.0% (15-42 mmol/mol)</td><td>Reflects average blood glucose over ~3 months. Used to monitor long-term control in diabetics (target < 7.0%).</td></tr>
+                     </tbody>
+                </table>
+            </section>
+            
+            <!-- Lipid Profile -->
+            <section id="lipids" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Lipid Profile</h2>
+                 <table>
+                     <thead><tr><th>Test</th><th>Desirable Level</th><th>Clinical Significance</th></tr></thead>
+                     <tbody>
+                         <tr><td><strong>Total Cholesterol (TC)</strong></td><td>&lt; 5.5 mmol/L (Ideal < 4.0)</td><td>Total amount of cholesterol. High levels are a risk factor for atherosclerosis.</td></tr>
+                         <tr><td><strong>LDL Cholesterol ("Bad")</strong></td><td>&lt; 3.0 mmol/L</td><td>Transports cholesterol to tissues. High levels are a major risk factor for atherosclerosis.</td></tr>
+                         <tr><td><strong>HDL Cholesterol ("Good")</strong></td><td>&gt; 1.0 mmol/L</td><td>Transports excess cholesterol back to the liver. High levels are protective.</td></tr>
+                         <tr><td><strong>Triglycerides (TG)</strong></td><td>&lt; 1.7 mmol/L</td><td>A type of fat in blood. High levels can be an independent risk factor for atherosclerosis.</td></tr>
+                     </tbody>
+                 </table>
+            </section>
+
+            <!-- Cardiac Markers -->
+            <section id="cardiac" class="section-box">
+                 <h2 class="text-3xl font-bold text-gray-800">Cardiac Markers</h2>
+                 <table>
+                     <thead><tr><th>Marker</th><th>Normal Range</th><th>Clinical Significance</th></tr></thead>
+                     <tbody>
+                         <tr><td><strong>Cardiac Troponin (cTnT, cTnI)</strong></td><td>Undetectable</td><td>The most sensitive and specific markers for myocardial necrosis (MI). Rise within 3-6 hours of an MI.</td></tr>
+                         <tr><td><strong>Creatine Kinase (CK-MB)</strong></td><td>Essentially 0% of total CK</td><td>An isoenzyme found mainly in the heart. Rises in MI but is less specific than troponins.</td></tr>
+                         <tr><td><strong>Myoglobin</strong></td><td>Variable</td><td>An early but non-specific marker of muscle injury (cardiac or skeletal).</td></tr>
+                     </tbody>
+                 </table>
+            </section>
+
+            <!-- LFTs -->
+            <section id="lft" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Liver Function Tests (LFTs)</h2>
+                 <table>
+                     <thead><tr><th>Test</th><th>Normal Range</th><th>Clinical Significance</th></tr></thead>
+                     <tbody>
+                         <tr><td><strong>Bilirubin</strong></td><td>Variable (Total < 21 µmol/L)</td><td>Increased levels cause jaundice. Helps differentiate hepatocellular vs. cholestatic liver disease.</td></tr>
+                         <tr><td><strong>ALT (Alanine Aminotransferase)</strong></td><td>< 40 IU/L</td><td>A specific marker for hepatocellular injury (e.g., viral hepatitis, toxic damage).</td></tr>
+                         <tr><td><strong>AST (Aspartate Aminotransferase)</strong></td><td>< 40 IU/L</td><td>Less specific than ALT (also in heart/muscle), but a sensitive marker of liver cell damage.</td></tr>
+                         <tr><td><strong>ALP (Alkaline Phosphatase)</strong></td><td>30-120 IU/L</td><td>Elevated in cholestasis (bile duct obstruction) and certain bone diseases.</td></tr>
+                         <tr><td><strong>GGT (Gamma-Glutamyl Transferase)</strong></td><td>< 50 IU/L</td><td>A sensitive marker of liver cell damage and cholestasis. Elevated by alcohol consumption.</td></tr>
+                         <tr><td><strong>Albumin</strong></td><td>35-50 g/L</td><td>A true test of liver *synthetic function*. Low levels suggest chronic liver disease or malnutrition.</td></tr>
+                     </tbody>
+                 </table>
+            </section>
+
+            <!-- Haemostasis -->
+            <section id="haemostasis" class="section-box">
+                 <h2 class="text-3xl font-bold text-gray-800">Tests of Haemostasis</h2>
+                 <table>
+                     <thead><tr><th>Test</th><th>Normal / Desirable Range</th><th>Clinical Significance</th></tr></thead>
+                     <tbody>
+                         <tr><td><strong>Prothrombin Time (PT) / INR</strong></td><td>11-13 sec / INR ~1.0</td><td>Measures extrinsic/common pathways. Prolonged in liver disease, vit K deficiency. Used to monitor warfarin (target INR 2-3).</td></tr>
+                         <tr><td><strong>Activated Partial Thromboplastin Time (aPTT)</strong></td><td>25-35 sec</td><td>Measures intrinsic/common pathways. Prolonged in haemophilias. Used to monitor heparin.</td></tr>
+                     </tbody>
+                 </table>
+            </section>
+            
+            <!-- Kidney Function -->
+            <section id="kft" class="section-box">
+                 <h2 class="text-3xl font-bold text-gray-800">Kidney Function Tests</h2>
+                 <table>
+                     <thead><tr><th>Test</th><th>Normal Range</th><th>Clinical Significance</th></tr></thead>
+                     <tbody>
+                         <tr><td><strong>Urea</strong></td><td>3-8 mmol/L</td><td>Waste product of protein metabolism. Increases with impaired renal function or dehydration.</td></tr>
+                         <tr><td><strong>Creatinine</strong></td><td>< 0.12 mmol/L</td><td>Waste product of muscle metabolism. A more reliable indicator of renal function than urea.</td></tr>
+                         <tr><td><strong>eGFR (Estimated GFR)</strong></td><td>> 90 mL/min/1.73m²</td><td>Best overall indicator of kidney function. A value < 60 suggests chronic kidney disease.</td></tr>
+                     </tbody>
+                 </table>
+            </section>
+            
+            <!-- Electrolytes -->
+            <section id="electrolytes" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Electrolytes</h2>
+                 <table>
+                    <thead><tr><th>Test</th><th>Normal Range</th><th>Clinical Significance</th></tr></thead>
+                    <tbody>
+                         <tr><td><strong>Sodium (Na⁺)</strong></td><td>135-145 mmol/L</td><td>Major extracellular cation. Regulates osmotic pressure. Imbalances often reflect water balance issues.</td></tr>
+                         <tr><td><strong>Potassium (K⁺)</strong></td><td>3.5-5.3 mmol/L</td><td>Major intracellular cation. Crucial for nerve and muscle function. Imbalances can cause life-threatening cardiac arrhythmias.</td></tr>
+                         <tr><td><strong>Calcium (Ca²⁺)</strong></td><td>2.1-2.6 mmol/L (total)</td><td>Crucial for muscle contraction, nerve function, and blood clotting. Imbalances affect neuromuscular excitability.</td></tr>
+                         <tr><td><strong>Chloride (Cl⁻)</strong></td><td>96-106 mmol/L</td><td>Major extracellular anion. Levels generally follow sodium.</td></tr>
+                    </tbody>
+                 </table>
+            </section>
+            
+             <!-- ABGs -->
+            <section id="abg" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Arterial Blood Gas (ABG) Analysis</h2>
+                 <table>
+                     <thead><tr><th>Parameter</th><th>Normal Range</th><th>Significance</th></tr></thead>
+                     <tbody>
+                         <tr><td><strong>pH</strong></td><td>7.35 - 7.45</td><td>Measures acidity/alkalinity. < 7.35 = Acidosis, > 7.45 = Alkalosis.</td></tr>
+                         <tr><td><strong>PaCO₂</strong></td><td>35 - 45 mmHg</td><td>The respiratory component. High in respiratory acidosis (hypoventilation), low in respiratory alkalosis (hyperventilation).</td></tr>
+                         <tr><td><strong>HCO₃⁻</strong></td><td>22 - 26 mmol/L</td><td>The metabolic component. Low in metabolic acidosis, high in metabolic alkalosis.</td></tr>
+                         <tr><td><strong>PaO₂</strong></td><td>80 - 100 mmHg</td><td>Measures adequacy of blood oxygenation.</td></tr>
+                         <tr><td><strong>Oxygen Saturation (SaO₂)</strong></td><td>> 95%</td><td>Percentage of haemoglobin saturated with oxygen.</td></tr>
+                     </tbody>
+                 </table>
+            </section>
+
+             <!-- Urinalysis -->
+            <section id="urinalysis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Urine Tests (Urinalysis)</h2>
+                 <table>
+                     <thead><tr><th>Test</th><th>Normal Finding</th><th>Abnormal Finding Suggests</th></tr></thead>
+                     <tbody>
+                         <tr><td><strong>Specific Gravity (SG)</strong></td><td>1.010 - 1.025</td><td>Hydration status. High SG = dehydration, Low SG = overhydration or diabetes insipidus.</td></tr>
+                         <tr><td><strong>pH</strong></td><td>4.6 - 8.0</td><td>Can indicate systemic acid-base disorders or urinary tract infections.</td></tr>
+                         <tr><td><strong>Glucose</strong></td><td>Negative</td><td>Diabetes mellitus.</td></tr>
+                         <tr><td><strong>Ketones</strong></td><td>Negative</td><td>Diabetic ketoacidosis, starvation.</td></tr>
+                         <tr><td><strong>Protein</strong></td><td>Negative/Trace</td><td>Kidney disease (e.g., glomerulonephritis, nephrotic syndrome).</td></tr>
+                         <tr><td><strong>Blood</strong></td><td>Negative</td><td>UTI, kidney stones, glomerulonephritis, malignancy.</td></tr>
+                         <tr><td><strong>Leukocytes</strong></td><td>Negative</td><td>Urinary tract infection (UTI).</td></tr>
+                         <tr><td><strong>Nitrites</strong></td><td>Negative</td><td>Bacterial UTI (many common bacteria convert nitrates to nitrites).</td></tr>
+                     </tbody>
+                 </table>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Always integrate this knowledge with clinical reasoning and patient context. Good luck!</p>
+            <p class="text-xs text-gray-400 mt-2">Disclaimer: This guide is for study purposes only and should not replace official university course material. Reference ranges may vary between laboratories.</p>
+        </footer>
+    </div>
+</body>
+</html>
