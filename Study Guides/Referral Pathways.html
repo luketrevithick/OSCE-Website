@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSW Ambulance Referral Pathways</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .protocol-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #6366f1;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .protocol-box strong {
+            color: #4338ca;
+        }
+        .exclusion-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .exclusion-box strong {
+            color: #b91c1c;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem; /* text-sm */
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">NSW Ambulance Referral Pathways</h1>
+            <p class="text-xl text-gray-600 mt-2">A Study Guide for Non-Transport Options</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#disposition" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Disposition Protocols</a>
+                <a href="#p1" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">P1: Authorised Care</a>
+                <a href="#p2" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">P2: Patient Refusal</a>
+                <a href="#p5" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">P5: Referral Decision</a>
+                <a href="#indigenous" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Indigenous Health</a>
+                <a href="#aged-care" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Aged Care</a>
+                <a href="#mental-health" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Mental Health</a>
+                <a href="#community" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Community & Allied Health</a>
+                <a href="#urgent-care" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Urgent Care</a>
+                <a href="#after-hours" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">After Hours GP</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Patient Disposition Protocols -->
+            <section id="disposition" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">NSW Ambulance Patient Disposition Protocols</h2>
+                <p class="mt-4">These protocols guide paramedics in determining the most appropriate care pathway for a patient after an assessment.</p>
+                <table>
+                    <thead>
+                        <tr><th>Protocol</th><th>Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>P1: Authorised Care</strong></td><td>For patients with an existing valid treatment directive (e.g., palliative care plan) related to their current condition who are not transported.</td></tr>
+                        <tr><td><strong>P2: Patient Refuses Recommendation</strong></td><td>For competent patients (or their person responsible) who refuse assessment, treatment, and/or transport against paramedic advice.</td></tr>
+                        <tr><td><strong>P4: Patient Deceased</strong></td><td>For patients who are deceased upon examination and are not transported.</td></tr>
+                        <tr><td><strong>P5: Referral Decision</strong></td><td>For patients assessed as suitable for alternative referral options who do not require emergency ambulance transport to an ED.</td></tr>
+                        <tr><td><strong>P6: Incident in Control of Another Agency</strong></td><td>For patients who cannot be assessed by paramedics because another agency (e.g., Police) has control of the scene.</td></tr>
+                        <tr><td><strong>P7: No Acute Health Issues Identified</strong></td><td>For patients who have no acute health issues, normal clinical assessment, or state they are not unwell and do not require assessment.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- P1 Authorised Care -->
+            <section id="p1" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">P1: Authorised Care</h2>
+                <div class="protocol-box">
+                    <strong>Criteria:</strong> This protocol applies when a patient has an existing diagnosed condition, a valid medical treatment directive related to that condition, and their current presentation is related to that diagnosis.
+                </div>
+                <h3>Valid Treatment Directives Include:</h3>
+                <ul class="list-disc list-inside mt-4 space-y-2">
+                    <li>NSW Ambulance Authorised Adult General Care Plan (AGCP)</li>
+                    <li>Medical Practitioner Treatment Plan (e.g., Asthma Action Plan)</li>
+                    <li>Advance Care Directive</li>
+                </ul>
+                <p class="mt-4">Paramedics can follow the instructions on these plans, which may include providing specific treatments or referring the patient to their GP/Specialist. Palliative care patients with a valid plan are exempt from the generic exclusion criteria for non-transport.</p>
+            </section>
+
+            <!-- P2 Patient Refusal -->
+            <section id="p2" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">P2: Patient Refuses Paramedic Recommendation</h2>
+                <div class="protocol-box">
+                    <strong>Process:</strong> This protocol is used when a patient with decision-making capacity refuses recommended assessment, treatment, or transport.
+                </div>
+                <ol class="list-decimal list-inside mt-4 space-y-2">
+                    <li><strong>Assess Capacity:</strong> Ensure the patient understands the situation, the risks of refusal, and can communicate their decision.</li>
+                    <li><strong>Reconcile:</strong> Attempt to understand the patient's reasons for refusal and explain the risks clearly. Involve family or carers where appropriate.</li>
+                    <li><strong>Document:</strong> Thoroughly document the recommendations made, the patient's refusal, and the information provided about the risks. The patient should sign the refusal on the clinical record.</li>
+                    <li><strong>Provide Advice:</strong> Advise the patient to call '000' if their condition deteriorates or they change their mind. Provide a Referral/Advice Letter.</li>
+                </ol>
+            </section>
+
+            <!-- P5 Referral Decision -->
+            <section id="p5" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">P5: Referral Decision</h2>
+                <p class="mt-4">This protocol is for patients with minor illness or injury who, after a thorough assessment, are deemed suitable for an alternative care pathway instead of ED transport via ambulance.</p>
+                <h3>P5 Disposition Options:</h3>
+                <ul class="list-disc list-inside mt-4 space-y-2">
+                    <li><strong>Self-Care with Advice:</strong> For minor issues where the patient can manage their condition at home with advice from the paramedic.</li>
+                    <li><strong>Referral to Alternative Care:</strong> Referral to a GP, community health service, or medical centre for follow-up.</li>
+                    <li><strong>ED via Alternative Transport:</strong> For patients who need ED assessment but are stable and can safely travel by private vehicle or other means.</li>
+                </ul>
+                
+                <div class="exclusion-box mt-6">
+                    <strong>P5 Generic Exclusion Criteria (Non-Transport is NOT an option if any are present):</strong>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li>Any red observations or un-reconciled yellow observations.</li>
+                        <li>Patient does not demonstrate competency and capacity.</li>
+                        <li>Multiple co-morbidities that are not adequately reconciled.</li>
+                        <li>Suspected to be under the influence of alcohol/drugs with signs of trauma or syncope.</li>
+                        <li>Medical practitioner requests transport to ED.</li>
+                        <li>Recent surgical procedure or hospital admission related to the presenting complaint.</li>
+                    </ul>
+                </div>
+                
+                <div class="protocol-box mt-6">
+                    <h3>Elder at Risk (EAR) Assessment</h3>
+                    <p><strong>MANDATORY</strong> for all non-transported patients ≥ 65 years (or ≥ 50 for Aboriginal or Torres Strait Islander people).</p>
+                    <p>An EAR assessment is POSITIVE if the patient answers "Yes" to any EAR questions, OR is identified as a "High" falls risk on the FROP-Com screen, OR has any functional/balance problems identified.</p>
+                    <p class="mt-2">A positive EAR assessment requires paramedics to attempt to reconcile risks and determine an appropriate disposition, which may include referral to services like My Aged Care, a GP, or a physiotherapist.</p>
+                </div>
+            </section>
+
+            <!-- Specific Referral Pathways -->
+            <section class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Specific Referral Pathways</h2>
+                <p class="mt-4">The availability of these services is highly dependent on the Local Health District (LHD) and time of day.</p>
+                
+                <h3 id="indigenous">Indigenous Health Pathways</h3>
+                <table>
+                    <thead><tr><th>Service</th><th>Description</th><th>Eligibility</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Aboriginal Hospital Liaison Officer (AHLO)</strong></td><td>Provides culturally sensitive support to Aboriginal individuals to help them navigate the health system.</td><td>Identifies as Aboriginal, requires cultural support, and meets P5 criteria.</td></tr>
+                        <tr><td><strong>Orange Aboriginal Medical Service (OAMS)</strong></td><td>A GP service providing a wide variety of care for all ages and backgrounds in the Orange community.</td><td>Meets P5 criteria, resides in the area, and is able to attend the service.</td></tr>
+                    </tbody>
+                </table>
+                
+                <h3 id="aged-care">Aged Care Pathways</h3>
+                <table>
+                    <thead><tr><th>Service Type</th><th>Description</th><th>Common Conditions Referred</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Geriatric Outreach / Flying Squads (e.g., COGS, GRACE)</strong></td><td>Provides timely medical and nursing care by a specialist aged care team for older people experiencing an acute decline in a Residential Aged Care Facility (RACF) or at home.</td><td>Falls without major injury, mild CCF exacerbations, acute infections (UTI, pneumonia), pain management review, decreased mobility.</td></tr>
+                        <tr><td><strong>Extended Community Care (e.g., St George ECC)</strong></td><td>Provides sub-acute and post-acute care (physiotherapy, occupational therapy, nursing) within 48-72 hours of referral to help manage functional decline at home.</td><td>Patients >65 years with functional decline, requiring mobility assessment, ADL support, or wound care.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 id="mental-health">Mental Health Pathways</h3>
+                <table>
+                    <thead><tr><th>Service Type</th><th>Description</th><th>Key Features</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Mental Health Line (e.g., NBMLHD)</strong></td><td>A 24/7 telephone triage service staffed by experienced mental health clinicians who can provide advice and link patients to appropriate services.</td><td>Provides telehealth triage while paramedics are on scene to determine disposition (ED, community referral, or GP).</td></tr>
+                        <tr><td><strong>PACER / MHAPP</strong></td><td>A co-response model where a senior mental health clinician attends the scene with Police and/or Ambulance to provide on-site triage and assessment for a mental health crisis.</td><td>Can conduct face-to-face assessments to determine the safest and most appropriate disposition, avoiding unnecessary ED presentations.</td></tr>
+                    </tbody>
+                </table>
+                
+                <h3 id="community">Community Nursing and Allied Health</h3>
+                 <table>
+                    <thead><tr><th>Service Type</th><th>Description</th><th>Eligibility</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Fairfield Falls Collaborative</strong></td><td>A rapid response allied health service providing multifactorial falls assessment and prevention interventions for at-risk older people.</td><td>>65 years, resides in Fairfield LGA, identified as a "high" falls risk.</td></tr>
+                        <tr><td><strong>Diabetes in Mudgee</strong></td><td>A GP-led project to support patients with Type 2 diabetes to optimise their self-management skills.</td><td>>16 years, diagnosed with Type 2 diabetes, patient of a participating Mudgee medical centre.</td></tr>
+                    </tbody>
+                </table>
+                
+                <h3 id="urgent-care">Urgent Care Centres / Services</h3>
+                 <table>
+                    <thead><tr><th>Service Type</th><th>Description</th><th>Common Conditions Referred</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Medicare Urgent Care Clinics / UCCs</strong></td><td>Provides assessment and management for urgent but non-life-threatening conditions that would otherwise present to an ED (Triage Category 4 or 5).</td><td>Minor illnesses (fever, URTI), minor injuries (sprains, simple fractures), mild asthma/COPD exacerbations, simple wounds/burns, UTIs.</td></tr>
+                    </tbody>
+                </table>
+                
+                 <h3 id="after-hours">After Hours GP / Telehealth</h3>
+                 <table>
+                    <thead><tr><th>Service Type</th><th>Description</th><th>Key Use Case</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>My Emergency Doctor (MED)</strong></td><td>A 24/7 telehealth service providing ECPs with on-scene support from emergency specialists for complex decision-making, including medication prescriptions and referrals.</td><td>Used when other referral options are exhausted or unavailable, to facilitate safe management on scene.</td></tr>
+                        <tr><td><strong>National Home Doctor Service</strong></td><td>Provides after-hours home visits from a doctor for conditions that require assessment but cannot wait until the next day for the patient's regular GP.</td><td>For patients who meet P5 criteria but need assessment outside of regular GP hours.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides an overview of non-transport pathways. Always refer to the latest NSW Ambulance Protocols and Procedures for specific criteria and operational details.</p>
+        </footer>
+    </div>
+</body>
+</html>
