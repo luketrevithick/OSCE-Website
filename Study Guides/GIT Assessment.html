@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT System, Abdominal Assessment, and Pathologies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .key-concept-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #6366f1;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .key-concept-box strong {
+            color: #4338ca;
+        }
+        .clinical-box {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .clinical-box strong {
+            color: #15803d;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 2rem;
+            font-weight: 600;
+            color: #374151;
+            font-size: 1.25rem;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">GIT System, Abdominal Assessment, and Pathologies</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#anatomy" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">GIT Anatomy</a>
+                <a href="#history" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">History Taking</a>
+                <a href="#assessment" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Abdominal Assessment</a>
+                <a href="#signs" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Specific Clinical Signs</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Anatomy and Physiology -->
+            <section id="anatomy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Anatomy and Physiology of the GIT System</h2>
+                <p class="mt-4">The gastrointestinal (GIT) system is responsible for the digestion and absorption of food and the excretion of waste products. It consists of the GIT tract and accessory organs.</p>
+                
+                <h3>GIT Tract Organs</h3>
+                <table>
+                    <thead><tr><th>Organ</th><th>Function</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Oesophagus</strong></td><td>Connects the mouth to the stomach; uses peristalsis to move food.</td></tr>
+                        <tr><td><strong>Stomach</strong></td><td>Uses gastric secretions (HCl, pepsin) to break down food; muscular walls churn food into chyme.</td></tr>
+                        <tr><td><strong>Small Intestine</strong></td><td>Primary site for digestion and absorption of nutrients. Consists of the duodenum, jejunum, and ileum.</td></tr>
+                        <tr><td><strong>Large Intestine</strong></td><td>Absorbs water. Consists of the caecum, colon (ascending, transverse, descending, sigmoid), and rectum.</td></tr>
+                        <tr><td><strong>Appendix</strong></td><td>Small pouch at the end of the caecum.</td></tr>
+                        <tr><td><strong>Rectum & Anus</strong></td><td>Stores stool before excretion through the internal and external sphincters.</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>Accessory Organs</h3>
+                <table>
+                    <thead><tr><th>Organ</th><th>Function</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Liver</strong></td><td>Produces bile for fat digestion; detoxifies chemicals.</td></tr>
+                        <tr><td><strong>Gallbladder</strong></td><td>Stores and concentrates bile.</td></tr>
+                        <tr><td><strong>Pancreas</strong></td><td>Secretes digestive enzymes into the duodenum; produces insulin.</td></tr>
+                        <tr><td><strong>Spleen</strong></td><td>Part of the lymphatic system; filters blood and stores blood cells.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- History Taking -->
+            <section id="history" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">History Taking for Abdominal Complaints</h2>
+                <div class="key-concept-box">
+                    <strong>SOCRATES for Abdominal Pain:</strong> A systematic approach to understanding the patient's pain.
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>S</strong>ite, <strong>O</strong>nset, <strong>C</strong>haracter, <strong>R</strong>adiation, <strong>A</strong>ssociated Symptoms, <strong>T</strong>iming, <strong>E</strong>xacerbating/Relieving Factors, <strong>S</strong>everity.</li>
+                    </ul>
+                </div>
+
+                <h3>Types of Abdominal Pain</h3>
+                <table>
+                    <thead><tr><th>Pain Type</th><th>Description</th><th>Innervation</th><th>Common Descriptors</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Visceral</strong></td><td>Stimulation of nociceptors in the visceral peritoneum lining the organs.</td><td>Autonomic nerve fibers.</td><td>Poorly localized, dull, aching, colicky, nauseating.</td></tr>
+                        <tr><td><strong>Somatic (Parietal)</strong></td><td>Irritation of the parietal peritoneum lining the abdominal wall.</td><td>Somatic nerves.</td><td>Well-localized, sharp, intense, constant. Worsened by movement.</td></tr>
+                        <tr><td><strong>Referred</strong></td><td>Pain perceived at a site distant from its source due to convergence of nerve pathways at the spinal cord.</td><td>Shared spinal segments.</td><td>Varies by source (e.g., gallbladder pain referred to the right shoulder).</td></tr>
+                    </tbody>
+                </table>
+                
+                <h3>Pain Location and Potential Causes</h3>
+                <p>The location of somatic pain can provide strong clues to the underlying pathology. The abdomen is divided into nine regions or four quadrants.</p>
+                <!-- A simplified table for key locations -->
+                <table>
+                    <thead><tr><th>Region/Quadrant</th><th>Common Pathologies</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Epigastric</strong></td><td>Gastritis, peptic ulcer, pancreatitis, myocardial infarction.</td></tr>
+                        <tr><td><strong>Right Upper Quadrant (RUQ)</strong></td><td>Cholecystitis (gallbladder), hepatitis (liver), duodenal ulcer, renal colic.</td></tr>
+                        <tr><td><strong>Left Upper Quadrant (LUQ)</strong></td><td>Spleen pathology, pancreatitis, renal colic.</td></tr>
+                        <tr><td><strong>Periumbilical</strong></td><td>Early appendicitis, small bowel obstruction, aortic aneurysm.</td></tr>
+                        <tr><td><strong>Right Lower Quadrant (RLQ)</strong></td><td>Appendicitis, ectopic pregnancy, ovarian cyst, diverticulitis, hernia.</td></tr>
+                        <tr><td><strong>Left Lower Quadrant (LLQ)</strong></td><td>Diverticulitis, ectopic pregnancy, ovarian cyst, hernia.</td></tr>
+                        <tr><td><strong>Suprapubic</strong></td><td>Cystitis (bladder infection), urinary retention, pelvic inflammatory disease.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Abdominal Assessment -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Physical Abdominal Examination</h2>
+                 <div class="key-concept-box">
+                    <strong>Correct Sequence:</strong> The abdominal assessment must be performed in the correct order to avoid altering bowel sounds:
+                    <ol class="list-decimal list-inside mt-2">
+                        <li><strong>General Appearance</strong></li>
+                        <li><strong>Inspection</strong></li>
+                        <li><strong>Auscultation</strong></li>
+                        <li><strong>Percussion</strong></li>
+                        <li><strong>Palpation</strong></li>
+                    </ol>
+                </div>
+                
+                <h3>Key Examination Findings</h3>
+                <table>
+                    <thead><tr><th>Component</th><th>What to Look For</th><th>Potential Significance</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>General Appearance</strong></td><td>Jaundice, conjunctival pallor, palmar erythema, finger clubbing, spider naevi, gynaecomastia.</td><td>Signs of chronic liver disease, anaemia, or other systemic issues.</td></tr>
+                        <tr><td><strong>Inspection</strong></td><td>Scars, distension (Fat, Fluid, Fetus, Flatus, Faeces, 'Filthy' big tumour), hernias, pulsations, caput medusae, stomas.</td><td>Previous surgeries, ascites, bowel obstruction, aortic aneurysm, portal hypertension.</td></tr>
+                        <tr><td><strong>Auscultation</strong></td><td>Presence and character of bowel sounds.</td><td>High-pitched sounds suggest obstruction. Absent sounds (after 4 mins) suggest paralytic ileus.</td></tr>
+                        <tr><td><strong>Percussion</strong></td><td>Tympany (air-filled) vs. Dullness (solid/fluid-filled). Shifting dullness.</td><td>Helps identify organ size (hepatomegaly, splenomegaly) and presence of ascites.</td></tr>
+                        <tr><td><strong>Palpation</strong></td><td>Tenderness, voluntary vs. involuntary guarding, rebound tenderness, masses.</td><td>Identifies areas of pain, peritonitis, and abnormal masses. Palpate tender areas last.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Specific Clinical Signs -->
+            <section id="signs" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Specific Clinical Signs for Acute Abdominal Pain</h2>
+                <p>These are specific manoeuvres used to elicit signs of inflammation of particular organs.</p>
+                <table>
+                    <thead><tr><th>Sign</th><th>How to Perform</th><th>Positive Finding & Indication</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Murphy's Sign</strong></td><td>Place fingers at the right costal margin in the mid-clavicular line. Ask the patient to take a deep breath.</td><td>Sharp pain and inspiratory arrest as the inflamed gallbladder descends onto the examiner's hand. Suggests <strong>Cholecystitis</strong>.</td></tr>
+                        <tr><td><strong>Kehr's Sign</strong></td><td>Patient is supine. Palpate the upper left quadrant.</td><td>Pain referred to the tip of the left shoulder. Suggests diaphragmatic irritation from a <strong>Ruptured Spleen</strong> or ectopic pregnancy.</td></tr>
+                        <tr><td><strong>Rovsing's Sign</strong></td><td>Palpate deeply and evenly in the left lower quadrant (LLQ).</td><td>Pain is felt in the right lower quadrant (RLQ). Suggests peritoneal irritation and <strong>Appendicitis</strong>.</td></tr>
+                        <tr><td><strong>McBurney's Point Tenderness</strong></td><td>Palpate the point two-thirds of the way from the umbilicus to the anterior superior iliac spine.</td><td>Maximal tenderness at this point. A classic sign of <strong>Appendicitis</strong>.</td></tr>
+                        <tr><td><strong>Blumberg's Sign (Rebound Tenderness)</strong></td><td>Press down deeply and slowly in a tender area, then release the pressure quickly.</td><td>Pain is worse on the quick release of pressure than on the initial pressing down. Indicates <strong>Peritonitis</strong>.</td></tr>
+                        <tr><td><strong>Psoas Sign</strong></td><td>Patient lies supine. Ask them to lift their right leg against your resistance. OR, have them lie on their left side and extend their right leg backwards.</td><td>Pain is elicited as the psoas muscle rubs against the inflamed appendix. Suggests <strong>Appendicitis</strong>.</td></tr>
+                        <tr><td><strong>Obturator Sign</strong></td><td>Patient lies supine. Flex their right hip and knee to 90 degrees, then internally rotate the hip.</td><td>Pain is elicited as the obturator muscle stretches and irritates the inflamed appendix. Suggests <strong>Appendicitis</strong>.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Always integrate this knowledge with a thorough patient history and clinical reasoning.</p>
+        </footer>
+    </div>
+</body>
+</html>
