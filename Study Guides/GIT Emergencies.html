@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gastrointestinal Emergencies Study Guide</title>
+    <title>Gastrointestinal Emergencies: A Paramedic Study Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -47,6 +47,16 @@
         }
         .pharmacology-box strong {
             color: #4338ca;
+        }
+        .clinical-box {
+             background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .clinical-box strong {
+            color: #b91c1c;
         }
         h2 {
             border-bottom: 2px solid #e5e7eb;
@@ -105,13 +115,20 @@
         </header>
 
         <!-- Navigation -->
-        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12 sticky top-4 z-10">
             <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <a href="#gord" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">GORD</a>
                 <a href="#upper-gi" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Upper GI Bleeding</a>
-                <a href="#gastro" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Gastroenteritis</a>
-                <a href="#emesis" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Nausea & Vomiting</a>
+                <a href="#lower-gi" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Lower GI Bleeding</a>
+                <a href="#biliary" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Biliary Tract Disease</a>
+                <a href="#pancreatitis" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Pancreatitis</a>
+                <a href="#appendicitis" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Appendicitis</a>
+                <a href="#bowel-obstruction" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Bowel Obstruction & Ileus</a>
+                <a href="#ibd" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">IBD & Diverticular Disease</a>
+                <a href="#hepatitis" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Hepatitis</a>
+                <a href="#gastro" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Gastroenteritis</a>
+                <a href="#special-pops" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Special Populations</a>
                 <a href="#antiemetics" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Antiemetic Pharmacology</a>
             </div>
         </nav>
@@ -122,29 +139,34 @@
             <section id="gord" class="section-box">
                 <h2 class="text-3xl font-bold text-gray-800">Gastro-oesophageal Reflux Disease (GORD)</h2>
                 <div class="disorder-box">
-                    <h3>Pathophysiology</h3>
-                    <p>GORD is a condition where gastric contents reflux into the oesophagus. This occurs when the lower oesophageal sphincter (LES) is compromised, either due to increased intragastric pressure or a decrease in the sphincter's tone. Chronic reflux can lead to inflammation of the oesophagus (reflux oesophagitis).</p>
+                    <h3>Pathogenesis and Pathophysiology</h3>
+                    <p>GORD is a chronic condition where stomach acid and other gastric contents persistently reflux into the oesophagus. The primary defect is a dysfunctional <strong>lower oesophageal sphincter (LES)</strong>. This dysfunction arises from two main mechanisms:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Decreased LES Tone:</strong> The sphincter muscle is abnormally relaxed, failing to maintain a barrier against reflux.</li>
+                        <li><strong>Increased Intragastric Pressure:</strong> Conditions like obesity, pregnancy, or large meals increase pressure within the stomach, physically overcoming the sphincter's resistance.</li>
+                    </ul>
+                    <p>This chronic exposure of the oesophageal mucosa to acidic gastric contents leads to inflammation (<strong>reflux oesophagitis</strong>), which can cause cellular changes, fibrosis, and the formation of strictures (narrowing) over time.</p>
                 </div>
                 <div class="clinical-box">
-                    <h3>Signs, Symptoms & Differentials</h3>
+                    <h3>Clinical Presentation and Differentials</h3>
                     <table>
-                        <thead><tr><th>Typical Symptoms</th><th>Atypical Symptoms</th><th>Key Differentials</th></tr></thead>
+                        <thead><tr><th>Typical Symptoms</th><th>Atypical Symptoms</th><th>Key Differential Diagnosis</th></tr></thead>
                         <tbody>
                             <tr>
-                                <td>Heartburn (retrosternal burning), regurgitation (sour/bitter taste), chest pain, bloating. Symptoms are often worse after meals and when lying down.</td>
-                                <td>Persistent cough, chronic sore throat, hoarseness, difficulty swallowing (dysphagia), asthma-like symptoms.</td>
-                                <td>Acute Coronary Syndrome (ACS) must always be considered and excluded, as cardiac chest pain can mimic GORD.</td>
+                                <td><strong>Heartburn:</strong> A retrosternal burning sensation, often radiating towards the throat. It is typically postprandial (after meals) and exacerbated by lying flat or bending over.<br><strong>Regurgitation:</strong> The effortless return of sour or bitter gastric contents into the mouth.</td>
+                                <td>Persistent cough (especially at night), chronic sore throat, hoarseness, dysphagia (difficulty swallowing), and asthma-like symptoms (from micro-aspiration of acid).</td>
+                                <td><strong>Acute Coronary Syndrome (ACS):</strong> This is the most critical differential. The retrosternal, burning pain of GORD can perfectly mimic the pain of myocardial ischaemia. ACS must be excluded in any patient with new-onset chest pain.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="management-box">
-                    <h3>Out-of-Hospital Management</h3>
+                    <h3>Out-of-Hospital Assessment and Management</h3>
                     <ol class="list-decimal list-inside space-y-2">
-                        <li><strong>Assessment:</strong> Perform a thorough history (CHAMPSS) and pain assessment (SOCRATES). Ask about triggers (meals, position) and relieving factors (antacids). A focused cardiac and GIT assessment is crucial.</li>
-                        <li><strong>Rule out Red Flags:</strong> Prioritise excluding ACS. Perform a 12-lead ECG and treat as per cardiac chest pain protocols if there is any suspicion.</li>
-                        <li><strong>Symptomatic Treatment:</strong> Advise the patient on positioning (e.g., sitting up). Analgesia may be considered if appropriate and ACS is excluded.</li>
-                        <li><strong>Disposition:</strong> Transport is required if ACS cannot be excluded or if symptoms are severe. For known GORD, referral to a GP may be appropriate if the presentation is typical and not severe.</li>
+                        <li><strong>Focused History:</strong> Use SOCRATES to characterize the pain. Ask specifically about relationship to meals, posture, and response to antacids. A history of similar episodes more than once a week is suggestive of GORD.</li>
+                        <li><strong>Exclude Cardiac Causes:</strong> This is the priority. A thorough cardiovascular assessment, including a 12-lead ECG, is mandatory to rule out ACS. Any suspicion of a cardiac cause requires management as per the relevant chest pain protocol.</li>
+                        <li><strong>Symptomatic Treatment:</strong> If ACS is confidently excluded, management is supportive. Positioning the patient upright can provide relief. Analgesia may be considered.</li>
+                        <li><strong>Disposition:</strong> Patients with suspected ACS require urgent transport. Patients with a clear history of GORD and typical, manageable symptoms may be suitable for a non-transport pathway with advice to see their GP.</li>
                     </ol>
                 </div>
             </section>
@@ -153,24 +175,23 @@
             <section id="upper-gi" class="section-box">
                 <h2 class="text-3xl font-bold text-gray-800">Upper GI Bleeding</h2>
                 <div class="disorder-box">
-                    <h3>Pathophysiology & Causes</h3>
-                    <p>Bleeding that originates proximal to the Ligament of Treitz (the junction between the duodenum and jejunum). It can be visible (overt) or hidden (occult).</p>
-                    <ul>
-                        <li><strong>Peptic Ulcer Disease:</strong> Erosion of the mucosal lining of the stomach or duodenum, often caused by H. pylori infection or chronic NSAID use.</li>
-                        <li><strong>Oesophageal Varices:</strong> Dilated veins in the lower oesophagus caused by portal hypertension (often from liver cirrhosis). Rupture leads to massive, life-threatening haemorrhage.</li>
-                        <li><strong>Mallory-Weiss Tear:</strong> A tear in the mucosal lining at the gastro-oesophageal junction, typically caused by forceful retching or vomiting.</li>
-                        <li><strong>Oesophagitis:</strong> Inflammation of the oesophagus.</li>
+                    <h3>Pathogenesis and Pathophysiology</h3>
+                    <p>An upper GI bleed is defined as bleeding originating from a source proximal to the Ligament of Treitz. Key causes include:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Peptic Ulcer Disease (PUD):</strong> An ulcer erodes through the mucosal wall and into an underlying artery or vein. This is often driven by <em>H. pylori</em> infection or chronic NSAID use, which disrupt the protective mucosal barrier of the stomach and duodenum.</li>
+                        <li><strong>Oesophageal Varices:</strong> Chronic liver disease (e.g., cirrhosis from alcoholism) leads to <strong>portal hypertension</strong> (increased pressure in the portal venous system). This forces blood to be shunted into collateral vessels, including the veins at the gastro-oesophageal junction. These veins become engorged and fragile (varices) and can rupture under pressure, leading to catastrophic, high-volume haemorrhage.</li>
+                        <li><strong>Mallory-Weiss Tear:</strong> A longitudinal tear in the mucosa at the gastro-oesophageal junction caused by a sudden increase in intra-abdominal pressure, typically from forceful vomiting or retching.</li>
                     </ul>
                 </div>
                 <div class="clinical-box">
-                    <h3>Signs, Symptoms & Differentials</h3>
+                    <h3>Clinical Presentation and Differentials</h3>
                      <table>
                         <thead><tr><th>Key Signs</th><th>Associated Symptoms</th><th>Key Differentials</th></tr></thead>
                         <tbody>
                             <tr>
-                                <td><strong>Haematemesis:</strong> Vomiting of blood. Can be fresh red blood or "coffee-ground" in appearance (partially digested blood).<br><strong>Melaena:</strong> Black, tarry, foul-smelling stools due to digested blood.</td>
-                                <td>Signs of hypovolaemic shock: lightheadedness, hypotension, tachycardia, altered level of consciousness (ALOC), pallor. Epigastric pain may be present with peptic ulcers.</td>
-                                <td>The primary goal is to identify the source and severity. Oesophageal varices are a key life-threatening differential, especially in patients with a history of alcoholism or liver disease.</td>
+                                <td><strong>Haematemesis:</strong> Vomiting blood. Bright red indicates active, brisk bleeding. "Coffee-ground" appearance indicates blood has been altered by gastric acid, suggesting a slower bleed.<br><strong>Melaena:</strong> Black, tarry, foul-smelling stool. Results from the digestion of blood as it passes through the GIT. A sign of an upper GI source.</td>
+                                <td>Symptoms are related to the volume and rate of blood loss. Can include epigastric pain (PUD), signs of chronic liver disease (jaundice, ascites), and symptoms of hypovolaemic shock (tachycardia, hypotension, pallor, altered LOC).</td>
+                                <td>The most critical differential is <strong>ruptured oesophageal varices</strong>, which carries a high mortality rate (around 15%) and requires immediate, aggressive resuscitation. A history of liver disease or alcoholism should raise suspicion significantly.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -178,23 +199,261 @@
                 <div class="management-box">
                     <h3>Out-of-Hospital Management</h3>
                     <ol class="list-decimal list-inside space-y-2">
-                        <li><strong>Safety & ABCs:</strong> A massive upper GI bleed is a life-threatening emergency. Prioritise airway management. Anticipate a difficult airway due to blood and prepare high-volume suction.</li>
-                        <li><strong>Oxygenation:</strong> Provide high-flow oxygen to manage hypoxia from blood loss.</li>
-                        <li><strong>Circulation:</strong> Establish large-bore IV access (x2 if possible). Commence fluid resuscitation with crystalloids to manage haemodynamic instability. Recognise that this is an uncontrollable haemorrhage.</li>
-                        <li><strong>Disposition:</strong> This is a time-critical emergency. Rapid transport to an appropriate hospital with surgical and endoscopic capabilities is required. Pre-notify the receiving hospital.</li>
+                        <li><strong>Systematic Approach (ABCs):</strong> A massive upper GI bleed is a time-critical emergency. The airway is at high risk of aspiration. <strong>Anticipate a difficult airway</strong> and have high-volume suction immediately available.</li>
+                        <li><strong>Oxygen:</strong> Administer high-flow oxygen to maximize arterial oxygen content in the setting of reduced haemoglobin.</li>
+                        <li><strong>Circulation:</strong> Establish large-bore IV access (x2 if possible). Begin aggressive fluid resuscitation with crystalloids for haemodynamic instability, titrating to a palpable radial pulse or adequate mentation.</li>
+                        <li><strong>Disposition:</strong> This is an uncontrollable internal haemorrhage. Rapid transport to a hospital with capabilities for emergency endoscopy and surgery is paramount. Provide an urgent pre-notification.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Lower GI Bleeding -->
+            <section id="lower-gi" class="section-box">
+                 <h2 class="text-3xl font-bold text-gray-800">Lower GI Bleeding</h2>
+                <div class="disorder-box">
+                    <h3>Pathogenesis and Pathophysiology</h3>
+                    <p>Bleeding originating distal to the Ligament of Treitz. Common causes include:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Haemorrhoids:</strong> Dilated veins in the rectum and anus.</li>
+                        <li><strong>Diverticular Disease:</strong> Inflammation or erosion of small pouches (diverticula) in the colon wall into a blood vessel.</li>
+                        <li><strong>Colitis:</strong> Inflammation of the colon (e.g., inflammatory bowel disease) causing mucosal friability and bleeding.</li>
+                        <li><strong>Angiodysplasia:</strong> Small, fragile, abnormal blood vessels in the colon wall.</li>
+                        <li><strong>Malignancy:</strong> Colon cancer can present with bleeding.</li>
+                    </ul>
+                </div>
+                <div class="clinical-box">
+                    <h3>Clinical Presentation</h3>
+                     <table>
+                        <thead><tr><th>Cardinal Sign</th><th>Associated Symptoms</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Haematochezia:</strong> The passage of fresh, bright red blood from the rectum. The volume can range from streaks on the toilet paper to large-volume bleeds.</td>
+                                <td>Cramp-like abdominal pain, diarrhoea. Severe bleeding will lead to signs of hypovolemic shock. Often, bleeding from haemorrhoids or angiodysplasia is painless.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="management-box">
+                    <h3>Out-of-Hospital Management</h3>
+                     <p>Management is guided by haemodynamic stability. A small, self-limiting bleed may not be an emergency. However, a large-volume lower GI bleed is managed identically to a severe upper GI bleed:</p>
+                     <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Assess for haemodynamic instability.</strong></li>
+                        <li><strong>Manage ABCs:</strong> Secure airway, provide oxygen.</li>
+                        <li><strong>Aggressive Fluid Resuscitation:</strong> Establish large-bore IV access and administer fluids for signs of shock.</li>
+                        <li><strong>Urgent Transport:</strong> Transport to an appropriate facility for further investigation and management.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Biliary Tract Disease -->
+            <section id="biliary" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Biliary Tract Disease</h2>
+                <div class="disorder-box">
+                    <h3>Cholelithiasis (Gallstones)</h3>
+                    <p><strong>Pathophysiology:</strong> Gallstones form in the gallbladder when bile becomes supersaturated with cholesterol, which then precipitates out of solution to form solid stones. This is promoted by insufficient bile salts and gallbladder stasis (impaired emptying).</p>
+                    <p><strong>Clinical Presentation:</strong> Often asymptomatic. When a stone temporarily obstructs the cystic duct, it causes <strong>biliary colic</strong>: an intense, constant, dull pain in the RUQ or epigastrium, often radiating to the right shoulder/scapula. It is typically triggered by fatty meals.</p>
+                </div>
+                <div class="disorder-box">
+                    <h3>Cholecystitis</h3>
+                    <p><strong>Pathophysiology:</strong> Acute inflammation of the gallbladder wall, almost always caused by a gallstone becoming permanently impacted in the cystic duct. The obstruction leads to bile stasis, increased pressure, and chemical irritation, followed by inflammation and often secondary bacterial infection.</p>
+                    <p><strong>Clinical Presentation:</strong> The patient presents with biliary colic that is persistent and more severe, accompanied by systemic signs of inflammation such as fever, tachycardia, and nausea. The key physical sign is a <strong>positive Murphy's sign</strong>.</p>
+                </div>
+                 <div class="clinical-box">
+                    <h3>Specific Test: Murphy's Sign</h3>
+                    <p>To perform, place your fingers at the right costal margin in the mid-clavicular line. Ask the patient to take a deep breath. A positive sign is a sharp increase in pain and an abrupt stop to inspiration as the inflamed gallbladder descends and makes contact with your hand.</p>
+                </div>
+                 <div class="management-box">
+                    <h3>Out-of-Hospital Management</h3>
+                     <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Assessment:</strong> A detailed history and abdominal examination are key. Elicit Murphy's sign carefully.</li>
+                        <li><strong>Treatment:</strong> Focus on symptomatic relief.
+                            <ul>
+                                <li><strong>Analgesia:</strong> Simple analgesics like NSAIDs or paracetamol may be sufficient for biliary colic. Severe pain, especially in cholecystitis, often requires opiates.</li>
+                                <li><strong>IV Fluids & Antiemetics:</strong> Consider for patients with signs of dehydration or persistent vomiting.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Disposition:</strong> Transport to hospital is required for definitive diagnosis and management.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Pancreatitis -->
+            <section id="pancreatitis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Acute Pancreatitis</h2>
+                <div class="disorder-box">
+                    <h3>Pathogenesis and Pathophysiology</h3>
+                    <p>Acute pancreatitis is an inflammatory condition of the pancreas. It is triggered by an event (most commonly a gallstone obstructing the pancreatic duct, or excessive alcohol intake) that leads to the premature activation of digestive enzymes *within* the pancreatic acinar cells. These activated enzymes, particularly trypsin, begin to digest the pancreatic tissue itself (<strong>autodigestion</strong>). This process causes severe inflammation, cell necrosis, and can trigger a massive systemic inflammatory response, potentially leading to shock and multi-organ failure.</p>
+                </div>
+                <div class="clinical-box">
+                    <h3>Clinical Presentation and Differentials</h3>
+                     <table>
+                        <thead><tr><th>Signs & Symptoms</th><th>Specific Physical Signs</th><th>Key Differentials</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>Sudden onset of severe, constant, sharp/stabbing epigastric pain that classically <strong>radiates through to the back</strong>. The pain is often partially relieved by sitting forward. Nausea, vomiting, fever, and dyspnoea are common.</td>
+                                <td><strong>Cullen's Sign:</strong> Periumbilical bruising.<br><strong>Grey-Turner's Sign:</strong> Flank bruising.<br>Both are rare signs of retroperitoneal haemorrhage from severe necrotizing pancreatitis. The abdomen is often tender and distended.</td>
+                                <td>Perforated peptic ulcer, biliary tract diseases, mesenteric ischemia, and myocardial infarction.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="management-box">
+                    <h3>Out-of-Hospital Management</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Assessment:</strong> Maintain a high index of suspicion based on the characteristic pain and risk factors (gallstones, alcohol). Assess for signs of systemic inflammatory response or shock.</li>
+                        <li><strong>Treatment:</strong> Management is supportive and focused on preventing progression to shock.
+                            <ul>
+                                <li><strong>IV Fluids:</strong> Aggressive fluid resuscitation is critical as patients can lose large volumes of fluid into the retroperitoneal space ("third-spacing").</li>
+                                <li><strong>Analgesia:</strong> Severe pain requires opiate analgesia.</li>
+                                <li><strong>Antiemetics & Oxygen:</strong> Administer as required.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Disposition:</strong> Acute pancreatitis is a serious condition that requires urgent transport to hospital.</li>
                     </ol>
                 </div>
             </section>
 
+            <!-- Appendicitis -->
+            <section id="appendicitis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Appendicitis</h2>
+                <div class="disorder-box">
+                    <h3>Pathogenesis and Pathophysiology</h3>
+                    <p>Acute inflammation of the appendix, almost always caused by obstruction of the appendiceal lumen (e.g., by a faecolith, stool, or lymphoid hyperplasia). The obstruction leads to a buildup of mucus, increasing intraluminal pressure. This pressure impairs venous drainage, leading to ischaemia, inflammation, and bacterial overgrowth. If untreated, it can progress to gangrene and perforation, causing peritonitis.</p>
+                </div>
+                <div class="clinical-box">
+                    <h3>Clinical Presentation and Specific Tests</h3>
+                    <p>The classic presentation involves a migratory pain pattern:</p>
+                    <ol class="list-decimal list-inside space-y-2 mb-4">
+                        <li><strong>Early Stage:</strong> Vague, dull, periumbilical pain (visceral pain from appendiceal distension).</li>
+                        <li><strong>Late Stage:</strong> The pain migrates and localizes to the Right Lower Quadrant (RLQ) as the inflammation irritates the overlying parietal peritoneum, becoming a sharp, constant somatic pain.</li>
+                    </ol>
+                    <p>Nausea, vomiting, anorexia, and a low-grade fever are common. Specific tests can increase suspicion:</p>
+                     <table>
+                        <thead><tr><th>Test</th><th>Description</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>McBurney's Point Tenderness</strong></td><td>Maximal tenderness on palpation of the point 2/3 of the way from the umbilicus to the ASIS.</td></tr>
+                            <tr><td><strong>Rovsing's Sign</strong></td><td>Palpation of the LLQ causes pain in the RLQ.</td></tr>
+                            <tr><td><strong>Blumberg's Sign (Rebound Tenderness)</strong></td><td>Pain is worse on quick release of pressure in the RLQ, indicating peritonitis.</td></tr>
+                            <tr><td><strong>Psoas Sign</strong></td><td>RLQ pain on resisted hip flexion or passive hip extension.</td></tr>
+                            <tr><td><strong>Obturator Sign</strong></td><td>RLQ pain on passive internal rotation of the flexed right hip.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="management-box">
+                    <h3>Out-of-Hospital Management</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Assessment:</strong> Perform a thorough history and abdominal exam, including the specific tests listed above.</li>
+                        <li><strong>Treatment:</strong> Provide symptomatic relief with analgesia (opiates are often required) and antiemetics. Administer IV fluids if the patient is dehydrated or septic.</li>
+                        <li><strong>Disposition:</strong> Appendicitis is a surgical emergency. Urgent transport to hospital is required.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Bowel Obstruction & Ileus -->
+            <section id="bowel-obstruction" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Bowel Obstruction & Ileus</h2>
+                <div class="disorder-box">
+                    <h3>Pathogenesis and Pathophysiology</h3>
+                    <p><strong>Mechanical Obstruction:</strong> A physical blockage of the bowel lumen. Common causes are adhesions (scar tissue from previous surgery), hernias, and tumours. The bowel proximal to the obstruction dilates with accumulated fluid, gas, and faecal matter. This increases intraluminal pressure, which can compromise blood flow to the bowel wall, leading to ischaemia, necrosis, and perforation.</p>
+                    <p><strong>Ileus:</strong> A functional obstruction where peristalsis ceases, despite no physical blockage. Common causes include recent abdominal surgery, systemic illness (sepsis), and narcotic use.</p>
+                </div>
+                <div class="clinical-box">
+                    <h3>Clinical Presentation</h3>
+                    <table>
+                        <thead><tr><th>Obstruction Type</th><th>Key Features</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Small Bowel Obstruction (SBO)</strong></td>
+                                <td>Severe, cramping, intermittent abdominal pain. Prominent nausea and vomiting (may be feculent). Abdominal distension. High-pitched bowel sounds.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Large Bowel Obstruction (LBO)</strong></td>
+                                <td>More gradual onset. Prominent abdominal bloating and distension. Constipation/failure to pass flatus is a key feature. Vomiting occurs late.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="management-box">
+                    <h3>Out-of-Hospital Management</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Assessment:</strong> A thorough history (especially prior surgeries) and abdominal exam are crucial. Assess for signs of dehydration or shock.</li>
+                        <li><strong>Treatment:</strong>
+                            <ul>
+                                <li><strong>Nil by Mouth:</strong> Do not allow the patient to eat or drink.</li>
+                                <li><strong>IV Fluids:</strong> Fluid resuscitation is vital to correct dehydration.</li>
+                                <li><strong>Analgesia:</strong> Opiates are first-line for severe pain.</li>
+                                <li><strong>Antiemetics:</strong> To manage vomiting.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Disposition:</strong> Bowel obstruction is a surgical emergency requiring urgent transport.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- IBD and Diverticular Disease -->
+            <section id="ibd" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Inflammatory Bowel Disease & Diverticular Disease</h2>
+                <div class="disorder-box">
+                    <h3>Inflammatory Bowel Disease (IBD)</h3>
+                    <p><strong>Pathophysiology:</strong> A group of chronic, relapsing-remitting inflammatory conditions of the GIT, thought to result from an overly aggressive T-cell mediated immune response.</p>
+                    <ul>
+                        <li><strong>Ulcerative Colitis (UC):</strong> Diffuse, superficial (mucosal) inflammation limited to the colon.</li>
+                        <li><strong>Crohn's Disease (CD):</strong> Transmural (full-thickness) inflammation that can affect any part of the GIT from mouth to anus, often in a "skip lesion" pattern.</li>
+                    </ul>
+                    <p><strong>Clinical Presentation:</strong> Bloody diarrhoea, abdominal pain, tenesmus (feeling of incomplete defecation), fever, and weight loss during flare-ups.</p>
+                </div>
+                <div class="disorder-box">
+                    <h3>Diverticular Disease</h3>
+                    <p><strong>Pathophysiology:</strong> <strong>Diverticulosis</strong> is the presence of small, sac-like protrusions (diverticula) of the colonic mucosa through the muscular wall. <strong>Diverticulitis</strong> occurs when these pouches become inflamed or infected.</p>
+                    <p><strong>Clinical Presentation:</strong> Classic symptom is constant pain in the Left Lower Quadrant (LLQ), often with fever and constipation.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Out-of-Hospital Management (for Acute Flares)</h3>
+                    <p>Management is supportive and focuses on treating the acute symptoms.</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Assessment:</strong> Perform a thorough history and abdominal exam.</li>
+                        <li><strong>Treatment:</strong> Provide analgesia and IV fluids as required for pain and dehydration.</li>
+                        <li><strong>Disposition:</strong> Transport to hospital is necessary for diagnosis and management of acute flare-ups.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Hepatitis -->
+            <section id="hepatitis" class="section-box">
+                 <h2 class="text-3xl font-bold text-gray-800">Hepatitis</h2>
+                 <div class="disorder-box">
+                    <h3>Pathogenesis and Pathophysiology</h3>
+                    <p>Hepatitis is inflammation of the liver. It can be acute or chronic. Common causes include viruses (Hepatitis A, B, C), alcohol, and non-alcoholic fatty liver disease (NAFLD). The inflammation leads to injury and necrosis of hepatocytes (liver cells), which can impair the liver's vast metabolic functions.</p>
+                </div>
+                 <div class="clinical-box">
+                    <h3>Clinical Presentation</h3>
+                    <p>Many cases can be asymptomatic. When symptomatic, patients may present with:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Vague symptoms: Fatigue, malaise, muscle/joint aches, nausea, anorexia.</li>
+                        <li>Specific signs of liver dysfunction: <strong>Jaundice</strong> (yellowing of skin/sclera), dark urine, pale stools, pruritus (itching).</li>
+                        <li>Abdominal examination may reveal RUQ pain and hepatomegaly (enlarged liver).</li>
+                    </ul>
+                </div>
+                 <div class="management-box">
+                    <h3>Out-of-Hospital Management</h3>
+                    <p>Management is primarily supportive.</p>
+                     <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Assessment:</strong> A thorough history is crucial to identify risk factors (alcohol use, IV drug use, travel history).</li>
+                        <li><strong>Treatment:</strong> Provide symptomatic relief with analgesia and antiemetics as needed.</li>
+                        <li><strong>Disposition:</strong> Transport to hospital for diagnosis and management.</li>
+                    </ol>
+                </div>
+            </section>
+            
             <!-- Gastroenteritis -->
             <section id="gastro" class="section-box">
                 <h2 class="text-3xl font-bold text-gray-800">Gastroenteritis</h2>
                 <div class="disorder-box">
                     <h3>Pathophysiology</h3>
-                    <p>Acute inflammation of the lining of the stomach and intestines, most commonly caused by a viral infection (e.g., Norovirus, Rotavirus). It leads to fluid loss through vomiting and diarrhoea.</p>
+                    <p>Acute inflammation of the lining of the stomach and intestines, most commonly caused by a viral infection (e.g., Norovirus, Rotavirus). The inflammation disrupts the normal absorptive and secretory functions of the gut, leading to significant fluid and electrolyte loss through vomiting and diarrhoea.</p>
                 </div>
                 <div class="clinical-box">
-                    <h3>Signs, Symptoms & Complications</h3>
+                    <h3>Clinical Presentation and Complications</h3>
                      <table>
                         <thead><tr><th>Symptoms</th><th>Complication: Dehydration</th></tr></thead>
                         <tbody>
@@ -221,41 +480,23 @@
                 </div>
             </section>
 
-            <!-- Nausea and Vomiting -->
-            <section id="emesis" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Nausea & Vomiting (Emesis)</h2>
-                <div class="disorder-box">
-                    <h3>The Emetic Reflex</h3>
-                    <p>Vomiting is a complex reflex coordinated by the <strong>vomiting centre</strong> in the medulla oblongata. This centre receives inputs from:</p>
-                    <ul class="list-disc list-inside mt-2">
-                        <li>The <strong>chemoreceptor trigger zone (CTZ)</strong>, which detects emetic chemicals in the blood.</li>
-                        <li>The vestibular system (motion sickness).</li>
-                        <li>Vagal afferent nerves from the GIT (irritation/distension).</li>
-                        <li>Higher cortical centres (psychogenic vomiting).</li>
-                    </ul>
-                    <p>Key receptors involved include Dopamine (D₂), Serotonin (5-HT₃), Histamine (H₁), and Muscarinic (M₁).</p>
+            <!-- Special Populations -->
+            <section id="special-pops" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">GIT Emergencies in Special Populations</h2>
+                <h3>Paediatric Presentations</h3>
+                <div class="clinical-box">
+                    <strong>Paediatric Red Flags:</strong> Bilious (green) vomiting, blood in stool, peritonism (guarding, rigidity), weight loss, age < 6 weeks.
                 </div>
-                 <div class="clinical-box">
-                    <h3>Differentials & Red Flags</h3>
-                     <p>The causes of nausea and vomiting are vast. It is crucial to identify potential life-threatening causes.</p>
-                     <table>
-                        <thead><tr><th>Common Causes</th><th>Red Flag Differentials</th></tr></thead>
-                        <tbody>
-                            <tr>
-                                <td>Gastroenteritis, pregnancy, medications, food poisoning, alcoholism.</td>
-                                <td>Bowel obstruction, increased intracranial pressure (e.g., meningitis, head injury), peptic ulcer disease, acute hepatobiliary disease.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="management-box">
-                    <h3>Out-of-Hospital Management</h3>
-                    <ol class="list-decimal list-inside space-y-2">
-                        <li><strong>Assessment:</strong> Take a detailed history. Ask about the character of the vomit (Is it blood-stained? Feculent?), associated abdominal pain, and any neurological symptoms (worsening headache?).</li>
-                        <li><strong>Treatment:</strong> Administer antiemetics as indicated. Treat complications such as dehydration with IV fluids.</li>
-                        <li><strong>Disposition:</strong> Transport is required if red flag features are present or if the patient is unable to manage their symptoms at home.</li>
-                    </ol>
-                </div>
+                 <table>
+                    <thead><tr><th>Condition</th><th>Pathophysiology</th><th>Key Presentation</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Intussusception</strong></td><td>Telescoping of a proximal segment of bowel into the distal segment, leading to obstruction and vascular compromise.</td><td>Most common in infants (2 months - 2 years). Presents with sudden, severe, colicky abdominal pain, drawing up of the legs, and "red-currant jelly" stool (a mix of blood and mucus).</td></tr>
+                        <tr><td><strong>Midgut Volvulus</strong></td><td>Twisting of the small intestine around the superior mesenteric artery, obstructing blood flow. A true surgical emergency.</td><td>Most common in infants < 1 year. Presents with sudden onset of <strong>bilious vomiting</strong> and abdominal pain.</td></tr>
+                        <tr><td><strong>Incarcerated Hernia</strong></td><td>A protrusion of bowel through a weak point in the abdominal wall becomes trapped and cannot be reduced.</td><td>Presents as a firm, tender, irreducible mass (inguinal or umbilical), with signs of bowel obstruction (vomiting, pain).</td></tr>
+                    </tbody>
+                </table>
+                <h3>End-of-Life Care</h3>
+                <p>GIT symptoms like constipation, nausea, vomiting, and anorexia are very common in palliative care. The primary goal of paramedic intervention is to alleviate suffering and manage symptoms in line with the patient's goals of care and any existing treatment directives.</p>
             </section>
             
             <!-- Antiemetics -->
