@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Assessment and Emergencies: A Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #3730a3;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Respiratory Assessment and Emergencies</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#assessment" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Respiratory Assessment</a>
+                <a href="#failure" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Respiratory Failure</a>
+                <a href="#airway-mgmt" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Airway Management</a>
+                <a href="#asthma" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Asthma</a>
+                <a href="#copd" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">COPD</a>
+                <a href="#pneumonia" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Pneumonia</a>
+                <a href="#pe" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Pulmonary Embolism</a>
+                <a href="#covid" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">COVID-19</a>
+                <a href="#croup" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Croup</a>
+                <a href="#bronchiolitis" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Bronchiolitis</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Respiratory Assessment -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Out-of-Hospital Respiratory Assessment</h2>
+                <p class="mt-4">A systematic approach is crucial for identifying the nature and severity of a respiratory complaint.</p>
+                <div class="assessment-box">
+                    <h3>Systematic Approach (Look, Listen, Feel)</h3>
+                    <table>
+                        <thead><tr><th>Component</th><th>Key Areas to Assess</th><th>Potential Findings & Significance</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Look (Inspection)</strong></td>
+                                <td>Positioning, work of breathing, skin colour, audible sounds, chest shape, symmetry.</td>
+                                <td><strong>Tripod position, accessory muscle use, pursed-lip breathing:</strong> Signs of severe respiratory distress.<br><strong>Cyanosis:</strong> Indicates significant hypoxemia.<br><strong>Audible wheeze/stridor:</strong> Suggests significant airway obstruction.<br><strong>Barrel chest:</strong> Associated with chronic air trapping (e.g., COPD).</td>
+                            </tr>
+                             <tr>
+                                <td><strong>Listen (Auscultation)</strong></td>
+                                <td>Presence and quality of breath sounds, adventitious sounds.</td>
+                                <td><strong>Wheeze:</strong> Continuous, high-pitched sound from narrowed lower airways (asthma, COPD).<br><strong>Crackles (Rales):</strong> Discontinuous sounds from fluid in the alveoli (pneumonia, pulmonary oedema).<br><strong>Stridor:</strong> High-pitched inspiratory sound from upper airway obstruction (croup, foreign body).<br><strong>Absent/Reduced sounds:</strong> May indicate pneumothorax, pleural effusion, or severe airway obstruction.</td>
+                            </tr>
+                             <tr>
+                                <td><strong>Feel (Palpation)</strong></td>
+                                <td>Chest wall tenderness, symmetry of expansion, subcutaneous emphysema.</td>
+                                <td><strong>Asymmetrical expansion:</strong> Suggests unilateral pathology (e.g., pneumothorax).<br><strong>Subcutaneous emphysema:</strong> Air trapped under the skin, feels like "crackling"; indicates air leak from the thoracic cavity.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Respiratory Failure -->
+            <section id="failure" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Respiratory Failure</h2>
+                <p class="mt-4">Respiratory failure occurs when the respiratory system cannot maintain adequate gas exchange, leading to hypoxemia and/or hypercapnia.</p>
+                <table>
+                    <thead><tr><th>Type</th><th>Pathophysiology</th><th>ABG Findings</th><th>Common Causes</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Type 1 (Hypoxemic)</strong></td>
+                            <td>Failure of oxygenation. Occurs due to a ventilation/perfusion (V/Q) mismatch or impaired diffusion across the alveolar-capillary membrane. The ability to remove CO₂ is often preserved or even enhanced by compensatory hyperventilation.</td>
+                            <td><strong>Low PaO₂</strong> (<60 mmHg)<br><strong>Normal or Low PaCO₂</strong></td>
+                            <td>Pneumonia, Pulmonary Oedema, Pulmonary Embolism, ARDS.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 2 (Hypercapnic)</strong></td>
+                            <td>Failure of ventilation. Occurs due to alveolar hypoventilation, where the respiratory system cannot adequately remove CO₂. This always leads to a secondary hypoxemia.</td>
+                            <td><strong>Low PaO₂</strong> (<60 mmHg)<br><strong>High PaCO₂</strong> (>45 mmHg)</td>
+                            <td>COPD exacerbation, severe asthma, drug overdose (opioids), neuromuscular disease.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Airway Management -->
+            <section id="airway-mgmt" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Airway Management Techniques</h2>
+                <div class="management-box">
+                    <h3>Foreign Body Removal (Laryngoscopy & Forceps)</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Indication:</strong> Complete or near-complete upper airway obstruction by a visible foreign body in an unconscious or obtunded patient.</li>
+                        <li><strong>Technique:</strong>
+                            <ul>
+                                <li>Perform direct laryngoscopy to visualise the glottic opening and the foreign body.</li>
+                                <li>Use Magill forceps to grasp the object firmly.</li>
+                                <li>Remove the object under direct vision, being careful not to push it further down.</li>
+                                <li>Reassess airway patency and ventilate.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="management-box">
+                    <h3>Supraglottic Airway (SGA) Insertion</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Indication:</strong> As a primary advanced airway in cardiac arrest or as a rescue airway after failed intubation.</li>
+                        <li><strong>Technique (e.g., i-gel):</strong>
+                            <ul>
+                                <li>Select the appropriate size based on patient weight.</li>
+                                <li>Lubricate the device.</li>
+                                <li>Position the patient's head and neck appropriately ("sniffing" position).</li>
+                                <li>Insert the SGA along the hard palate until a definitive "stop" is felt.</li>
+                                <li>Confirm placement by observing chest rise with ventilation, auscultation, and capnography. Secure the device.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                 <div class="management-box">
+                    <h3>Continuous Positive Airway Pressure (CPAP)</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Indication:</strong> Acute cardiogenic pulmonary oedema, some cases of severe respiratory distress in COPD.</li>
+                        <li><strong>Mechanism:</strong> Delivers constant positive pressure to the airways, which stents open collapsed alveoli, reduces the work of breathing, and pushes fluid out of the alveoli back into the interstitium.</li>
+                        <li><strong>Application:</strong>
+                            <ul>
+                                <li>Ensure the patient is conscious, cooperative, and can maintain their own airway.</li>
+                                <li>Select the correct mask size and ensure a good seal.</li>
+                                <li>Start at a low pressure (e.g., 5 cmH₂O) and titrate upwards based on patient response and vital signs.</li>
+                                <li>Continuously monitor the patient's respiratory status, vital signs, and level of consciousness.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Adult Respiratory Emergencies -->
+            <section class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Adult Respiratory Emergencies</h2>
+                
+                <h3 id="asthma">Asthma</h3>
+                <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> A chronic inflammatory disorder characterized by bronchial hyper-responsiveness and reversible airflow obstruction. An acute exacerbation involves three key components: 1) Bronchospasm (smooth muscle contraction), 2) Mucosal oedema (airway wall swelling), and 3) Mucus plugging.</p>
+                </div>
+                <div class="assessment-box">
+                    <p><strong>Assessment:</strong> History of asthma, known triggers, recent medication use. Assess work of breathing, ability to speak in sentences, respiratory rate, and heart rate. Auscultation reveals widespread, polyphonic expiratory wheeze. A silent chest in a distressed asthmatic is an ominous sign of severe obstruction.</p>
+                </div>
+                <div class="management-box">
+                    <p><strong>Management:</strong> Focuses on reversing bronchospasm and reducing inflammation. Administer high-flow oxygen, continuous nebulised salbutamol (β₂-agonist), and ipratropium bromide (anticholinergic). For severe, life-threatening asthma, administer IM adrenaline and IV corticosteroids. Consider CPAP in severe cases.</p>
+                </div>
+
+                <h3 id="copd">Chronic Obstructive Pulmonary Disease (COPD)</h3>
+                <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> A progressive disease characterized by persistent airflow limitation. An acute exacerbation is often triggered by infection, leading to increased airway inflammation, mucus production, and bronchospasm, worsening the baseline obstruction.</p>
+                </div>
+                <div class="assessment-box">
+                    <p><strong>Assessment:</strong> History of smoking, chronic cough, and dyspnoea. Presentation includes increased work of breathing, wheeze, and often a productive cough. Be alert for signs of Type 2 respiratory failure (drowsiness, confusion).</p>
+                </div>
+                <div class="management-box">
+                    <p><strong>Management:</strong> Titrate oxygen to a target SpO₂ of 88-92% to avoid worsening hypercapnia. Administer nebulised salbutamol and ipratropium bromide. Corticosteroids are also indicated. CPAP can be highly effective in reducing work of breathing and preventing the need for intubation.</p>
+                </div>
+
+                <h3 id="pneumonia">Pneumonia</h3>
+                <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> An infection of the lung parenchyma (alveoli). The inflammatory response causes the alveoli to fill with fluid, pus, and cellular debris (consolidation), impairing gas exchange and leading to a V/Q mismatch and hypoxemia.</p>
+                </div>
+                <div class="assessment-box">
+                    <p><strong>Assessment:</strong> History of fever, productive cough (often purulent sputum), and pleuritic chest pain. On examination, the patient may be febrile and tachycardic. Auscultation often reveals focal crackles over the affected area and bronchial breath sounds.</p>
+                </div>
+                <div class="management-box">
+                    <p><strong>Management:</strong> Primarily supportive. Administer oxygen to correct hypoxemia. Provide IV fluids for dehydration or signs of sepsis. Consider CPAP for severe respiratory distress or hypoxemia. Transport for antibiotic therapy.</p>
+                </div>
+
+                <h3 id="pe">Pulmonary Embolism (PE)</h3>
+                <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> Obstruction of a pulmonary artery by an embolus (usually a thrombus from a DVT). This blocks blood flow to a section of the lung, creating a large area of alveolar dead space (ventilation without perfusion). This leads to a significant V/Q mismatch and hypoxemia. A massive PE can cause acute right ventricular failure and obstructive shock.</p>
+                </div>
+                <div class="assessment-box">
+                    <p><strong>Assessment:</strong> High index of suspicion is key. Look for risk factors for DVT (immobility, surgery, cancer). Classic presentation is sudden onset of pleuritic chest pain and dyspnoea. Patient may be tachycardic, tachypnoeic, and hypoxic. Unilateral leg swelling may be present.</p>
+                </div>
+                <div class="management-box">
+                    <p><strong>Management:</strong> High-flow oxygen is critical. For haemodynamically unstable patients (obstructive shock), provide supportive care with fluids and prepare for potential cardiac arrest. Rapid transport to a hospital with thrombolysis/embolectomy capabilities is essential.</p>
+                </div>
+
+                <h3 id="covid">COVID-19</h3>
+                <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> A viral respiratory illness caused by SARS-CoV-2. In severe cases, it can cause widespread lung inflammation and damage to the alveolar-capillary membrane, leading to Acute Respiratory Distress Syndrome (ARDS), profound hypoxemia, and multi-organ failure.</p>
+                </div>
+                <div class="assessment-box">
+                    <p><strong>Assessment:</strong> Symptoms include fever, cough, fatigue, and dyspnoea. A key feature can be "silent hypoxia," where patients have very low SpO₂ levels without proportional signs of respiratory distress.</p>
+                </div>
+                <div class="management-box">
+                    <p><strong>Management:</strong> Follow appropriate PPE protocols. Administer oxygen to maintain target saturation. Consider CPAP for severe hypoxemic respiratory failure. Manage any associated complications like sepsis or PE.</p>
+                </div>
+            </section>
+
+            <!-- Paediatric Respiratory Emergencies -->
+            <section class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Paediatric Respiratory Emergencies</h2>
+                
+                <h3 id="croup">Croup (Laryngotracheobronchitis)</h3>
+                 <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> A viral infection (commonly Parainfluenza virus) causing inflammation and swelling of the subglottic region (larynx, trachea, bronchi). This narrowing of the upper airway leads to the characteristic signs.</p>
+                </div>
+                <div class="assessment-box">
+                    <p><strong>Assessment:</strong> Typically affects children aged 6 months to 6 years. Presents with a gradual onset of a distinctive "barking" cough, hoarse voice, and inspiratory stridor, often worse at night.</p>
+                </div>
+                <div class="management-box">
+                    <p><strong>Management:</strong> Mild cases can be managed with reassurance and cool air. For moderate to severe croup (stridor at rest, significant work of breathing), the primary treatment is nebulised adrenaline to cause vasoconstriction and reduce subglottic swelling. Corticosteroids are also a mainstay of treatment.</p>
+                </div>
+
+                <h3 id="bronchiolitis">Bronchiolitis</h3>
+                 <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> A viral infection (most commonly RSV) of the lower respiratory tract in infants and young children (<2 years). It causes inflammation, oedema, and necrosis of the epithelial cells lining the small airways (bronchioles), leading to mucus plugging and obstruction.</p>
+                </div>
+                <div class="assessment-box">
+                    <p><strong>Assessment:</strong> Presents with initial cold-like symptoms followed by increasing respiratory distress, tachypnoea, and widespread expiratory wheeze and fine inspiratory crackles. Feeding difficulties and apnoea (in young infants) are common.</p>
+                </div>
+                <div class="management-box">
+                    <p><strong>Management:</strong> Purely supportive. The mainstay of treatment is gentle nasal suctioning to clear secretions and maintain airway patency. Provide oxygen if hypoxic. Bronchodilators are generally not effective. Transport is required for infants with significant respiratory distress, hypoxia, or apnoea.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Always integrate this knowledge with a thorough patient history and clinical reasoning, especially when managing paediatric patients.</p>
+        </footer>
+    </div>
+</body>
+</html>
