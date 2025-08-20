@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renal and Urinary Emergencies: A Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #3730a3;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Renal and Urinary Emergencies</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#anatomy" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Anatomy & Physiology</a>
+                <a href="#assessment" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Patient Assessment</a>
+                <a href="#aki" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Acute Kidney Injury</a>
+                <a href="#ckd" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Chronic Kidney Disease</a>
+                <a href="#dialysis" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Dialysis Emergencies</a>
+                <a href="#dehydration" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Dehydration</a>
+                <a href="#uti" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">UTIs & Pyelonephritis</a>
+                <a href="#calculi" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Renal Calculi</a>
+                <a href="#retention" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Urinary Retention</a>
+                <a href="#electrolytes" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Electrolyte Imbalances</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Anatomy and Physiology -->
+            <section id="anatomy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Anatomy and Physiology of the Renal System</h2>
+                <div class="disorder-box">
+                    <h3>Core Functions of the Kidneys</h3>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Filtration:</strong> Removing waste products (like urea) from the blood to form urine.</li>
+                        <li><strong>Regulation of Blood Volume & Pressure:</strong> Adjusting water excretion via the RAAS and ADH.</li>
+                        <li><strong>Regulation of Blood Composition & pH:</strong> Maintaining electrolyte balance (Na⁺, K⁺, Ca²⁺) and acid-base balance by excreting H⁺ and conserving HCO₃⁻.</li>
+                        <li><strong>Hormone Production:</strong> Producing erythropoietin (stimulates RBC production) and renin (regulates BP).</li>
+                    </ul>
+                </div>
+                <h3>The Nephron: The Functional Unit</h3>
+                <p>Each kidney contains over a million nephrons, where blood filtration and urine formation occur.</p>
+                <ol class="list-decimal list-inside space-y-2 mt-4">
+                    <li><strong>Glomerulus:</strong> A high-pressure capillary bed that filters water and solutes from the blood into Bowman's capsule. The rate of this filtration (Glomerular Filtration Rate or GFR) is normally 120-140 mL/min.</li>
+                    <li><strong>Proximal Convoluted Tubule:</strong> Reabsorbs the majority of water, electrolytes (Na⁺, K⁺), and all glucose and amino acids back into the blood.</li>
+                    <li><strong>Loop of Henle:</strong> Creates a concentration gradient in the medulla, which is crucial for concentrating urine.</li>
+                    <li><strong>Distal Convoluted Tubule & Collecting Duct:</strong> Fine-tunes water and electrolyte balance under the control of hormones like ADH and Aldosterone.</li>
+                </ol>
+                <h3>Regulation of Renal Blood Flow and GFR</h3>
+                <p>Maintaining a stable GFR is vital. This is achieved through:</p>
+                <ul>
+                    <li><strong>Autoregulation:</strong> Intrinsic mechanisms within the kidney that keep renal blood flow and GFR constant despite changes in systemic blood pressure.</li>
+                    <li><strong>Neural Regulation:</strong> Sympathetic nervous system stimulation (e.g., in shock) constricts afferent arterioles, reducing GFR and conserving fluid.</li>
+                    <li><strong>Hormonal Regulation (RAAS):</strong> When blood pressure drops, the kidneys release renin. This triggers a cascade that produces Angiotensin II (a potent vasoconstrictor) and Aldosterone (promotes Na⁺ and water reabsorption), ultimately increasing blood volume and pressure.</li>
+                </ul>
+            </section>
+
+            <!-- Patient Assessment -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">History and Physical Examination</h2>
+                <div class="assessment-box">
+                    <h3>Key Components of History Taking</h3>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Pain Assessment (SOCRATES):</strong> Crucial for differentiating conditions. For example, the severe, colicky, unilateral flank pain of renal calculi is distinct from the suprapubic pain of a UTI.</li>
+                        <li><strong>Urinary Symptoms:</strong> Use specific terminology to ask about changes in urination (see table below).</li>
+                        <li><strong>Urine Appearance:</strong> Ask about colour (haematuria, dark/concentrated), clarity (cloudy), and odour.</li>
+                        <li><strong>Systemic Symptoms:</strong> Inquire about fever, nausea/vomiting, malaise, or signs of fluid overload (oedema, shortness of breath).</li>
+                        <li><strong>Past Medical History:</strong> Ask about known kidney disease, diabetes, hypertension, previous UTIs or stones, and dialysis status.</li>
+                    </ul>
+                </div>
+                <h3>Physical Examination</h3>
+                <ol class="list-decimal list-inside space-y-2 mt-4">
+                    <li><strong>Vital Signs:</strong> Look for fever (infection), tachycardia (pain, dehydration, sepsis), and hypotension (sepsis, dehydration).</li>
+                    <li><strong>General Appearance:</strong> Assess for signs of dehydration (dry mucous membranes, poor skin turgor) or fluid overload (peripheral oedema, pulmonary oedema).</li>
+                    <li><strong>Abdominal Exam:</strong> Palpate for suprapubic tenderness (cystitis, retention) or a distended bladder.</li>
+                    <li><strong>Flank/Back Exam:</strong> Assess for <strong>costovertebral angle (CVA) tenderness</strong>. Gently percussing the area over the kidneys on the back will elicit sharp pain if inflammation (pyelonephritis) is present.</li>
+                </ol>
+                <h3>Urinary Terminology</h3>
+                <table>
+                    <thead><tr><th>Term</th><th>Meaning</th><th>Common Causes</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Dysuria</strong></td><td>Painful or difficult urination</td><td>UTI, urethritis, renal calculi</td></tr>
+                        <tr><td><strong>Haematuria</strong></td><td>Blood in the urine</td><td>UTI, calculi, trauma, malignancy</td></tr>
+                        <tr><td><strong>Oliguria</strong></td><td>Low urine output (<400 mL/day)</td><td>AKI, dehydration, obstruction</td></tr>
+                        <tr><td><strong>Anuria</strong></td><td>Absence of urine output</td><td>Complete obstruction, end-stage renal disease</td></tr>
+                        <tr><td><strong>Polyuria</strong></td><td>Excessive urine output</td><td>Diabetes mellitus, diuretics</td></tr>
+                        <tr><td><strong>Nocturia</strong></td><td>Waking at night to urinate</td><td>Prostate disease, CCF, diabetes</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- AKI -->
+            <section id="aki" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Acute Kidney Injury (AKI)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>AKI is a sudden decline in kidney function occurring over hours to days, resulting in the accumulation of waste products and dysregulation of fluid and electrolytes. It is categorized by its cause:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Pre-renal AKI:</strong> Caused by reduced blood flow to the kidneys (hypoperfusion). The kidney structure is initially intact. Common causes include hypovolemia (dehydration, haemorrhage) and hypotension (sepsis, heart failure).</li>
+                        <li><strong>Intra-renal (Intrinsic) AKI:</strong> Direct damage to the kidney tissue itself, often the tubules (acute tubular necrosis or ATN). Causes include prolonged ischaemia (from pre-renal causes), nephrotoxins (drugs like NSAIDs, antibiotics), and rhabdomyolysis.</li>
+                        <li><strong>Post-renal AKI:</strong> Caused by an obstruction in the urinary tract that prevents urine from draining, leading to back-pressure and damage to the kidneys. Causes include benign prostatic hyperplasia (BPH), kidney stones, and tumours.</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Signs and Symptoms</h3>
+                    <p>Often non-specific. The most common sign is <strong>oliguria</strong> (low urine output). Other symptoms relate to the underlying cause (e.g., signs of dehydration) or the consequences of renal failure (e.g., fluid overload, nausea/vomiting from uremia, altered mental state).</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pre-hospital Management</h3>
+                    <p>Management is directed at the underlying cause and supporting vital functions.</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Identify and Treat the Cause:</strong> If pre-renal AKI from hypovolemia is suspected, the cornerstone of treatment is <strong>IV fluid resuscitation</strong>. In cases of rhabdomyolysis, early and aggressive fluid administration is crucial to flush out myoglobin.</li>
+                        <li><strong>Monitor for Complications:</strong> Assess for signs of fluid overload (if the cause is not hypovolemia) and life-threatening electrolyte imbalances, particularly <strong>hyperkalemia</strong> (perform an ECG).</li>
+                        <li><strong>Supportive Care:</strong> Manage symptoms like nausea and pain.</li>
+                        <li><strong>Disposition:</strong> All patients with suspected AKI require urgent transport to hospital for diagnosis and management.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- CKD -->
+            <section id="ckd" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Chronic Kidney Disease (CKD)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>CKD is a progressive, gradual, and irreversible decline in kidney function over months or years. The most common causes are <strong>diabetes mellitus</strong> and <strong>hypertension</strong>, which cause long-term damage to the glomeruli. As nephrons are progressively destroyed, the remaining nephrons hypertrophy to compensate. This compensation eventually fails, leading to a decline in GFR and the onset of symptoms.</p>
+                </div>
+                <div class="assessment-box">
+                    <h3>Signs and Symptoms</h3>
+                    <p>CKD is often asymptomatic until the GFR falls below 25% of normal. As the disease progresses, signs and symptoms of <strong>uremia</strong> (waste product accumulation) develop, including lethargy, nausea, fatigue, altered mental state, and pruritus. Other common findings include hypertension, fluid overload (peripheral and pulmonary oedema), and anaemia.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pre-hospital Management</h3>
+                    <p>Management focuses on treating acute complications of the chronic disease.</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Identify the Acute Problem:</strong> The patient may be presenting with fluid overload, a dialysis-related complication, or a non-renal issue exacerbated by their CKD.</li>
+                        <li><strong>Treat Complications:</strong>
+                            <ul>
+                                <li><strong>Fluid Overload/Pulmonary Oedema:</strong> Provide oxygen, consider CPAP, and administer nitrates as per protocol. Be cautious with fluids.</li>
+                                <li><strong>Hyperkalemia:</strong> This is a common and life-threatening complication. Obtain an ECG to look for characteristic changes (peaked T waves, widened QRS).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Disposition:</strong> Transport to hospital is required, often to a facility with renal services.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Dialysis Emergencies -->
+            <section id="dialysis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Dialysis Emergencies</h2>
+                 <div class="disorder-box">
+                    <h3>Types of Dialysis</h3>
+                    <ul>
+                        <li><strong>Haemodialysis:</strong> Blood is filtered externally via a machine, requiring vascular access (AV fistula, graft, or central line).</li>
+                        <li><strong>Peritoneal Dialysis:</strong> Dialysis fluid is instilled into the abdominal cavity via a catheter, using the peritoneum as a filter.</li>
+                    </ul>
+                </div>
+                 <div class="assessment-box">
+                    <h3>Common Emergencies</h3>
+                    <ul>
+                        <li><strong>Access Site Problems:</strong> Bleeding or thrombosis of an AV fistula/graft. Infection at the catheter exit site, which can lead to sepsis.</li>
+                        <li><strong>Hypotension:</strong> Common during or immediately after haemodialysis due to rapid fluid removal.</li>
+                        <li><strong>Electrolyte Imbalances:</strong> Especially hyperkalemia, which can occur between dialysis sessions.</li>
+                        <li><strong>Peritonitis:</strong> A serious infection of the peritoneum in patients on peritoneal dialysis, presenting with abdominal pain and cloudy dialysis fluid.</li>
+                    </ul>
+                </div>
+                 <div class="management-box">
+                    <h3>Pre-hospital Management</h3>
+                     <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Control Bleeding:</strong> Apply direct, firm pressure to a bleeding AV fistula. Do not use a tourniquet unless bleeding is catastrophic and uncontrollable.</li>
+                        <li><strong>Manage Hypotension:</strong> Administer a cautious IV fluid bolus.</li>
+                        <li><strong>Treat Suspected Sepsis:</strong> Administer oxygen, IV fluids, and provide rapid transport.</li>
+                        <li><strong>History:</strong> Ask about their dialysis schedule, recent treatments, and baseline blood pressure.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Dehydration -->
+            <section id="dehydration" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Dehydration</h2>
+                 <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Dehydration is a state of total body fluid loss, involving both water and sodium. It can result from decreased intake or increased losses (e.g., vomiting, diarrhoea, excessive sweating, diuretic use). This fluid loss leads to a reduction in circulating blood volume, which can progress to hypovolemic shock if not corrected.</p>
+                </div>
+                 <div class="assessment-box">
+                    <h3>Signs and Symptoms</h3>
+                    <table>
+                        <thead><tr><th>Severity</th><th>Adult Signs</th><th>Paediatric Signs</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Mild</strong></td><td>Thirst, dry mucous membranes, oliguria.</td><td>Thirst, restlessness, normal vital signs.</td></tr>
+                            <tr><td><strong>Moderate</strong></td><td>Tachycardia, orthostatic hypotension, decreased skin turgor, lethargy.</td><td>Irritability/lethargy, tachycardia, sunken fontanelle, absent tears, slow capillary refill.</td></tr>
+                            <tr><td><strong>Severe</strong></td><td>Signs of hypovolemic shock: marked tachycardia, hypotension, poor peripheral perfusion, altered mental state.</td><td>Drowsiness/unconsciousness, signs of shock.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                 <div class="management-box">
+                    <h3>Pre-hospital Management</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Assess Severity:</strong> Determine the degree of dehydration based on clinical signs and vital signs.</li>
+                        <li><strong>Fluid Replacement:</strong>
+                            <ul>
+                                <li><strong>Mild:</strong> Encourage oral rehydration solutions.</li>
+                                <li><strong>Moderate/Severe:</strong> Establish IV access and administer crystalloid fluid boluses (e.g., 10-20 mL/kg), reassessing after each bolus.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Treat Underlying Cause:</strong> Administer antiemetics for vomiting if necessary.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- UTI -->
+            <section id="uti" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Urinary Tract Infections (UTIs) & Pyelonephritis</h2>
+                 <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A UTI is an infection of the urinary system, most commonly caused by bacteria (especially <em>E. coli</em>) ascending from the urethra.</p>
+                    <ul>
+                        <li><strong>Cystitis (Lower UTI):</strong> Infection confined to the bladder.</li>
+                        <li><strong>Pyelonephritis (Upper UTI):</strong> The infection ascends via the ureters to infect the kidney parenchyma. This is a more serious condition that can lead to sepsis (urosepsis).</li>
+                    </ul>
+                </div>
+                 <div class="assessment-box">
+                    <h3>Signs and Symptoms</h3>
+                     <table>
+                        <thead><tr><th>Cystitis (Lower UTI)</th><th>Pyelonephritis (Upper UTI)</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>Urinary frequency, urgency, dysuria, suprapubic pain, cloudy/malodorous urine.</td>
+                                <td>Includes all the symptoms of cystitis, PLUS systemic signs: fever, chills, rigors, nausea/vomiting, and unilateral flank pain with <strong>CVA tenderness</strong>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                     <p class="mt-4">In the elderly, the primary presenting symptom of a UTI may be acute delirium or confusion.</p>
+                </div>
+                 <div class="management-box">
+                    <h3>Pre-hospital Management</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Assessment:</strong> Differentiate between a simple lower UTI and pyelonephritis by assessing for systemic symptoms and CVA tenderness.</li>
+                        <li><strong>Symptomatic Care:</strong> Provide analgesia for pain.</li>
+                        <li><strong>Manage Sepsis:</strong> If pyelonephritis is suspected and the patient shows signs of sepsis (hypotension, tachycardia, fever), manage according to sepsis protocols with oxygen and IV fluids.</li>
+                        <li><strong>Disposition:</strong> Patients with simple cystitis may be suitable for a non-transport pathway. Patients with pyelonephritis or signs of sepsis require urgent transport.</li>
+                    </ol>
+                </div>
+            </section>
+            
+             <!-- Renal Calculi -->
+            <section id="calculi" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Renal Calculi (Kidney Stones)</h2>
+                 <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Renal calculi are hard mineral and salt deposits that form inside the kidneys. <strong>Renal colic</strong> occurs when a stone passes from the kidney into the ureter, causing obstruction. The obstruction leads to increased pressure and stretching of the upper urinary tract, causing intense spasm and pain.</p>
+                </div>
+                 <div class="assessment-box">
+                    <h3>Signs and Symptoms</h3>
+                    <p>The hallmark is the sudden onset of severe, unilateral, colicky (waxing and waning) flank pain that often radiates to the groin or testicles/labia. Patients are often restless and unable to find a comfortable position. Nausea, vomiting, and haematuria are common.</p>
+                </div>
+                 <div class="management-box">
+                    <h3>Pre-hospital Management</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Pain Management:</strong> This is the priority. Severe renal colic often requires opiate analgesia.</li>
+                        <li><strong>Antiemetics:</strong> Administer for nausea and vomiting.</li>
+                        <li><strong>IV Fluids:</strong> Provide IV fluids, as they may help facilitate stone passage and correct any dehydration.</li>
+                        <li><strong>Disposition:</strong> Transport to hospital is required for pain management and further investigation.</li>
+                    </ol>
+                </div>
+            </section>
+            
+             <!-- Urinary Retention -->
+            <section id="retention" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Acute Urinary Retention</h2>
+                 <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>The inability to voluntarily void urine. It is most commonly caused by a mechanical obstruction of the bladder outlet, with benign prostatic hyperplasia (BPH) in men being the most frequent cause. Other causes include neurogenic dysfunction and certain medications.</p>
+                </div>
+                 <div class="assessment-box">
+                    <h3>Signs and Symptoms</h3>
+                    <p>Presents with moderate to severe suprapubic pain, a marked urgency with the inability to urinate, and a palpably distended bladder. The patient is often very distressed.</p>
+                </div>
+                 <div class="management-box">
+                    <h3>Pre-hospital Management</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Symptomatic Care:</strong> Provide analgesia for pain.</li>
+                        <li><strong>Disposition:</strong> Transport to hospital for bladder decompression via catheterization. In some services, Extended Care Paramedics may be able to perform this in the community.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Electrolytes -->
+            <section id="electrolytes" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Life-Threatening Electrolyte Imbalances</h2>
+                 <table>
+                    <thead><tr><th>Imbalance</th><th>Pathophysiology</th><th>Signs, Symptoms & ECG Changes</th><th>Pre-hospital Management Principles</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hyperkalemia</strong><br>(K⁺ > 5.0 mmol/L)</td>
+                            <td>Most commonly caused by reduced renal excretion in patients with AKI or CKD. Can also be caused by medications (e.g., ACE inhibitors) or cellular shifts (e.g., in acidosis). High potassium levels decrease the resting membrane potential of cardiac cells, leading to life-threatening arrhythmias.</td>
+                            <td>Muscle weakness, cramps, palpitations. ECG changes are progressive: <strong>peaked T waves</strong> → prolonged PR interval → widened QRS complex → sine wave pattern → cardiac arrest (PEA/asystole).</td>
+                            <td>This is a true medical emergency. Management focuses on stabilizing the cardiac membrane (<strong>IV Calcium Gluconate</strong>), shifting potassium into cells (IV insulin/glucose, salbutamol), and facilitating removal (diuretics, dialysis). Rapid transport is essential.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hyponatremia</strong><br>(Na⁺ < 135 mmol/L)</td>
+                            <td>Low serum sodium, which can occur with low, normal, or high total body fluid (hypovolemic, euvolemic, or hypervolemic hyponatremia). Severe, acute hyponatremia causes osmotic fluid shifts into brain cells, leading to cerebral oedema.</td>
+                            <td>Mild: Nausea, fatigue. Moderate: Confusion, muscle cramps. Severe: Seizures, coma, respiratory arrest due to cerebral oedema.</td>
+                            <td>Management depends on the underlying cause and severity. Severe symptomatic hyponatremia is a medical emergency requiring careful correction in hospital. Pre-hospitally, manage seizures and support vital functions.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Always integrate this knowledge with a thorough patient history and clinical reasoning, especially when managing vulnerable populations.</p>
+        </footer>
+    </div>
+</body>
+</html>
