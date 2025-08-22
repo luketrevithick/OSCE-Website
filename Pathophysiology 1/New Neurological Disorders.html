@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neurological Disorders: A Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Neurological Disorders</h1>
+            <p class="text-xl text-gray-600 mt-2">A Pathophysiology Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12 sticky top-4 z-10">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#anatomy" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Neuroanatomy & Physiology</a>
+                <a href="#tbi" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Traumatic Brain Injury</a>
+                <a href="#sci" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Spinal Cord Injury</a>
+                <a href="#cva" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Cerebrovascular Accident</a>
+                <a href="#seizures" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Seizure Disorders</a>
+                <a href="#neurodegenerative" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Neurodegenerative Diseases</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Anatomy and Physiology -->
+            <section id="anatomy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Neuroanatomy and Physiology</h2>
+                <div class="physiology-box">
+                    <h3>Anatomy of the Brain and Cerebral Functions</h3>
+                    <p>The brain is the control center of the nervous system. Key regions include:</p>
+                    <ul>
+                        <li><strong>Cerebral Cortex:</strong> The outer layer responsible for higher functions. It is divided into lobes:
+                            <ul>
+                                <li><strong>Frontal Lobe:</strong> Executive functions (planning, problem-solving), personality, and voluntary motor control (Primary Motor Cortex). Broca's area controls speech production.</li>
+                                <li><strong>Parietal Lobe:</strong> Processes sensory information like touch, temperature, and pain (Primary Somatosensory Cortex). Involved in spatial awareness.</li>
+                                <li><strong>Temporal Lobe:</strong> Auditory processing, memory (hippocampus), and language comprehension (Wernicke's area).</li>
+                                <li><strong>Occipital Lobe:</strong> Primary visual processing center.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Brainstem:</strong> Connects the cerebrum to the spinal cord. Controls vital autonomic functions (respiration, heart rate) and houses the Reticular Activating System (RAS), which is crucial for consciousness.</li>
+                        <li><strong>Cerebellum:</strong> Coordinates voluntary movements, posture, balance, and motor learning.</li>
+                    </ul>
+                </div>
+                <div class="physiology-box">
+                    <h3>Spinal Cord, Nerves, and Tracts</h3>
+                    <p>The spinal cord is a long bundle of nerves extending from the brainstem. It transmits signals between the brain and the rest of the body.</p>
+                    <ul>
+                        <li><strong>Spinal Nerves:</strong> 31 pairs emerge from the spinal cord, each serving a specific region (dermatome for sensation, myotome for motor function).</li>
+                        <li><strong>Ascending (Sensory) Tracts:</strong> Carry sensory information to the brain (e.g., Spinothalamic tract for pain and temperature).</li>
+                        <li><strong>Descending (Motor) Tracts:</strong> Carry motor commands from the brain (e.g., Corticospinal tract for voluntary movement).</li>
+                    </ul>
+                </div>
+                <div class="physiology-box">
+                    <h3>Blood Supply to the Brain</h3>
+                    <p>The brain receives blood from two main sources: the <strong>internal carotid arteries</strong> (anterior circulation) and the <strong>vertebral arteries</strong> (posterior circulation). These arteries connect at the base of the brain to form the <strong>Circle of Willis</strong>, an arterial ring that provides collateral blood flow.</p>
+                </div>
+            </section>
+
+            <!-- TBI -->
+            <section id="tbi" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Traumatic Brain Injury (TBI)</h2>
+                <p>TBI results from an external mechanical force causing brain dysfunction. It can be focal (localized) or diffuse (widespread).</p>
+                <table>
+                    <thead><tr><th>Injury Type</th><th>Pathophysiology</th><th>Clinical Features</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Concussion (Mild TBI)</strong></td>
+                            <td>A temporary disturbance of brain function due to stretching and damage of axons, without macroscopic structural damage.</td>
+                            <td>Confusion, amnesia (retrograde or antegrade), headache, dizziness. Loss of consciousness is not required for diagnosis.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contusion</strong></td>
+                            <td>A bruise on the brain tissue, involving small bleeds and localized swelling. Often occurs in coup-contrecoup injuries.</td>
+                            <td>Symptoms depend on location and size. Can lead to increased intracranial pressure (ICP).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Diffuse Axonal Injury (DAI)</strong></td>
+                            <td>Widespread shearing and tearing of axons in the white matter due to rotational or acceleration/deceleration forces.</td>
+                            <td>A major cause of prolonged coma after trauma. Often has minimal findings on initial CT scan.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Epidural Hematoma (EDH)</strong></td>
+                            <td>Arterial bleeding (usually middle meningeal artery) between the dura mater and the skull, often from a temporal bone fracture.</td>
+                            <td>Classic presentation is a brief loss of consciousness, followed by a "lucid interval," then rapid neurological decline due to expanding hematoma and rising ICP.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Subdural Hematoma (SDH)</strong></td>
+                            <td>Venous bleeding from tearing of bridging veins between the dura and arachnoid mater. Can be acute, subacute, or chronic.</td>
+                            <td>Acute SDH presents with rapid decline. Chronic SDH is common in the elderly and alcoholics, with a gradual onset of headache, confusion, and weakness.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                 <div class="management-box">
+                    <h3>Increased Intracranial Pressure (ICP)</h3>
+                    <p>A rise in pressure within the rigid skull, caused by a hematoma, edema, or tumor. Increased ICP reduces cerebral perfusion pressure (CPP = MAP - ICP), leading to cerebral ischemia. A late and ominous sign is <strong>Cushing's Triad</strong>: hypertension, bradycardia, and irregular respirations.</p>
+                </div>
+            </section>
+
+            <!-- SCI -->
+            <section id="sci" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Spinal Cord Injury (SCI)</h2>
+                <p>Damage to the spinal cord that results in a loss or impairment of motor function, sensory function, or autonomic function below the level of the injury.</p>
+                <table>
+                    <thead><tr><th>Lesion Type</th><th>Clinical Manifestations</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Upper Motor Neuron (UMN) Lesion</strong></td>
+                            <td>Damage to descending motor tracts (e.g., corticospinal). Results in spastic paralysis/paresis, hyperreflexia, and a positive Babinski sign.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lower Motor Neuron (LMN) Lesion</strong></td>
+                            <td>Damage to the anterior horn cells or spinal nerves. Results in flaccid paralysis/paresis, hypotonia, hyporeflexia, and significant muscle atrophy.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Complete Transection</strong></td>
+                            <td>Total loss of motor and sensory function below the level of the lesion.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Brown-Séquard Syndrome (Hemisection)</strong></td>
+                            <td>Ipsilateral (same side) loss of motor function, fine touch, and proprioception. Contralateral (opposite side) loss of pain and temperature sensation.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="disorder-box">
+                    <h3>Systemic Effects of SCI</h3>
+                    <ul>
+                        <li><strong>Respiratory Function:</strong> Injuries above C3 cause paralysis of the diaphragm and require mechanical ventilation. Lower cervical and thoracic injuries impair intercostal and abdominal muscles, weakening cough and breathing.</li>
+                        <li><strong>Autonomic Dysfunction:</strong> Can lead to neurogenic shock (in acute high-level injuries), autonomic dysreflexia, and impaired bladder, bowel, and sexual function.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CVA -->
+            <section id="cva" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Cerebrovascular Accident (CVA / Stroke)</h2>
+                <p>A stroke is a sudden neurological deficit caused by an interruption of blood flow to the brain.</p>
+                <table>
+                    <thead><tr><th>Stroke Type</th><th>Pathophysiology</th><th>Key Features</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ischemic Stroke (85%)</strong></td>
+                            <td>Caused by the occlusion of a cerebral artery, most commonly by a thrombus forming on an atherosclerotic plaque or by an embolus from the heart (e.g., in atrial fibrillation). This leads to infarction of the brain tissue supplied by that vessel.</td>
+                            <td>Sudden onset of focal neurological deficits (e.g., contralateral hemiparesis, aphasia, visual field defects) corresponding to the affected arterial territory.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hemorrhagic Stroke (15%)</strong></td>
+                            <td>Caused by the rupture of a blood vessel within the brain. <strong>Intracerebral hemorrhage</strong> is often due to chronic hypertension. <strong>Subarachnoid hemorrhage (SAH)</strong> is typically from a ruptured berry aneurysm.</td>
+                            <td>Presents with signs of rapidly increasing ICP: severe headache ("worst headache of my life"), vomiting, and altered level of consciousness.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transient Ischemic Attack (TIA)</strong></td>
+                            <td>A temporary episode of neurological dysfunction caused by focal brain ischemia, <strong>without</strong> acute infarction. Symptoms typically resolve within an hour.</td>
+                            <td>A "warning stroke." Carries a high risk of a subsequent major stroke.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Seizures -->
+            <section id="seizures" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Seizure Disorders</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A seizure is a transient occurrence of signs and/or symptoms due to abnormal, excessive, or synchronous neuronal activity in the brain. It represents an imbalance between excitatory (glutamate) and inhibitory (GABA) neurotransmission. <strong>Epilepsy</strong> is a chronic disorder characterized by recurrent, unprovoked seizures.</p>
+                </div>
+                <table>
+                    <thead><tr><th>Seizure Onset</th><th>Type</th><th>Description</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2"><strong>Focal Onset</strong></td>
+                            <td><strong>Focal Aware</strong> (Simple Partial)</td>
+                            <td>Awareness is intact. Manifestations depend on the brain region involved (e.g., motor twitching, sensory hallucinations).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Focal Impaired Awareness</strong> (Complex Partial)</td>
+                            <td>Awareness is altered. Often associated with automatisms (e.g., lip-smacking, repetitive movements).</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3"><strong>Generalized Onset</strong></td>
+                            <td><strong>Absence</strong> (Petit Mal)</td>
+                            <td>Brief lapse of awareness with a blank stare, common in children.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Myoclonic</strong></td>
+                            <td>Brief, shock-like jerks of a muscle or group of muscles.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tonic-Clonic</strong> (Grand Mal)</td>
+                            <td>A convulsive seizure with a tonic phase (stiffening) followed by a clonic phase (jerking), and a post-ictal period of confusion/lethargy.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Neurodegenerative -->
+            <section id="neurodegenerative" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Neurodegenerative Diseases</h2>
+                <table>
+                    <thead><tr><th>Disease</th><th>Pathophysiology</th><th>Key Clinical Features</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Parkinson's Disease</strong></td>
+                            <td>Progressive loss of dopamine-producing neurons in the substantia nigra of the midbrain. This dopamine deficiency disrupts the function of the basal ganglia, which are crucial for motor control. The pathological hallmark is the presence of Lewy bodies (abnormal α-synuclein protein aggregates) in neurons.</td>
+                            <td>Characterized by a triad of <strong>bradykinesia</strong> (slowness of movement), <strong>resting tremor</strong> (often "pill-rolling"), and <strong>rigidity</strong> ("cogwheel" type). Also features postural instability and a shuffling gait.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Multiple Sclerosis (MS)</strong></td>
+                            <td>An autoimmune disease where the immune system attacks the myelin sheath of neurons in the central nervous system. This demyelination disrupts nerve impulse conduction, leading to a wide range of neurological symptoms that are "disseminated in time and space."</td>
+                            <td>Highly variable. Common symptoms include sensory disturbances (numbness, tingling), muscle weakness, visual problems (optic neuritis), fatigue, and ataxia. Most common form is relapsing-remitting.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Motor Neuron Disease (MND) / ALS</strong></td>
+                            <td>A group of progressive disorders characterized by the degeneration and death of motor neurons (both upper and lower). Amyotrophic Lateral Sclerosis (ALS) is the most common form.</td>
+                            <td>Progressive muscle weakness, atrophy, and fasciculations (LMN signs) combined with spasticity and hyperreflexia (UMN signs). Sensation and cognition are typically spared. Death usually results from respiratory failure.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dementia (e.g., Alzheimer's)</strong></td>
+                            <td>A progressive decline in cognitive function severe enough to interfere with daily life. <strong>Alzheimer's Disease</strong> is the most common cause, characterized by the extracellular deposition of amyloid-β plaques and intracellular neurofibrillary tangles of tau protein, leading to widespread neuronal death and brain atrophy.</td>
+                            <td>Initial and most prominent symptom is short-term memory loss, which progresses to include language deficits, disorientation, and impaired executive function.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Neurological assessment requires integrating these concepts with a thorough patient history and physical examination.</p>
+        </footer>
+    </div>
+</body>
+</html>

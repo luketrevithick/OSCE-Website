@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respiratory Disorders: A Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #3730a3;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Respiratory Disorders</h1>
+            <p class="text-xl text-gray-600 mt-2">A Pathophysiology Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#anatomy" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Anatomy & Physiology</a>
+                <a href="#obstructive" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Obstructive Disorders</a>
+                <a href="#restrictive" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Restrictive Disorders</a>
+                <a href="#pleural" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Pleural Space Disorders</a>
+                <a href="#infections" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Respiratory Infections</a>
+                <a href="#pe" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Pulmonary Embolism</a>
+                <a href="#failure" class="bg-gray-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-gray-600">Respiratory Failure</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Anatomy and Physiology -->
+            <section id="anatomy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Anatomy and Physiology of the Respiratory System</h2>
+                <div class="assessment-box">
+                    <h3>Anatomy of the Lungs</h3>
+                    <p>The respiratory system is divided into the upper and lower respiratory tracts. The <strong>upper tract</strong> includes the nose, pharynx, and larynx, which warm, filter, and humidify incoming air. The <strong>lower tract</strong> begins at the trachea and branches into the bronchi, bronchioles, and finally the alveoli.</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Trachea & Bronchi:</strong> Rigid airways supported by cartilage that conduct air to the lungs.</li>
+                        <li><strong>Bronchioles:</strong> Smaller airways without cartilage, whose diameter is controlled by smooth muscle.</li>
+                        <li><strong>Alveoli:</strong> The terminal air sacs where gas exchange occurs. They are thin-walled and surrounded by a dense network of pulmonary capillaries.</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Physiology of Breathing (Ventilation)</h3>
+                    <p>Breathing is the mechanical process of moving air in and out of the lungs.</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Inspiration:</strong> An active process where the diaphragm and external intercostal muscles contract, increasing thoracic volume and creating negative pressure that draws air into the lungs.</li>
+                        <li><strong>Expiration:</strong> A largely passive process where the muscles relax, and the elastic recoil of the lungs and chest wall pushes air out. Forced expiration is an active process involving abdominal and internal intercostal muscles.</li>
+                    </ul>
+                    <p><strong>Gas Exchange (Respiration)</strong> occurs via diffusion across the alveolar-capillary membrane, driven by partial pressure gradients of oxygen and carbon dioxide.</p>
+                </div>
+            </section>
+
+            <!-- Obstructive Disorders -->
+            <section id="obstructive" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Obstructive Lung Disorders</h2>
+                <p>Characterized by increased resistance to airflow due to airway narrowing. This makes expiration, particularly forced expiration, difficult and prolonged.</p>
+                <div class="assessment-box">
+                    <h3>Spirometry Findings in Obstructive Disease</h3>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Reduced FEV₁:</strong> The volume of air exhaled in the first second is significantly decreased.</li>
+                        <li><strong>Normal or Reduced FVC:</strong> The total volume of air exhaled may be normal or reduced due to air trapping.</li>
+                        <li><strong>Reduced FEV₁/FVC Ratio (<70%):</strong> This is the hallmark of obstruction. The proportion of air exhaled in the first second is disproportionately low.</li>
+                        <li><strong>Concave "scooped out" Flow-Volume Loop.</strong></li>
+                    </ul>
+                </div>
+                
+                <h3 id="asthma">Asthma</h3>
+                <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> A chronic inflammatory disorder causing bronchial hyper-responsiveness and reversible airflow obstruction. It involves bronchospasm, mucosal edema, and mucus plugging. Allergic (extrinsic) asthma is a Type I hypersensitivity reaction mediated by IgE antibodies, which bind to mast cells. Upon re-exposure to an allergen, mast cells degranulate, releasing histamine and other mediators that cause acute bronchoconstriction and inflammation.</p>
+                </div>
+
+                <h3 id="copd">Chronic Obstructive Pulmonary Disease (COPD)</h3>
+                <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> A progressive disease, mainly caused by smoking, encompassing two conditions:</p>
+                    <ul>
+                        <li><strong>Chronic Bronchitis ("Blue Bloater"):</strong> Defined by a clinical history of productive cough. Characterized by inflammation of the airways, hypertrophy of mucus glands, and mucus hypersecretion, leading to airway obstruction. Hypoxic vasoconstriction leads to pulmonary hypertension and right heart failure (cor pulmonale), causing cyanosis and peripheral edema.</li>
+                        <li><strong>Emphysema ("Pink Puffer"):</strong> Characterized by the destruction of alveolar walls, leading to the formation of large, abnormal airspaces. This loss of elastic tissue reduces the lung's recoil, causing air trapping and expiratory airway collapse. Patients often use pursed-lip breathing to maintain airway pressure and remain non-cyanotic ("pink") until late stages.</li>
+                    </ul>
+                </div>
+                
+                <h3 id="bronchiectasis">Bronchiectasis</h3>
+                <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> A condition of localized, irreversible dilation of parts of the bronchial tree, caused by destruction of the muscle and elastic tissue in the airway walls. This is typically the result of chronic or recurrent severe infections. The dilated airways allow mucus to pool, leading to a cycle of further infection and inflammation.</p>
+                </div>
+
+                <h3 id="cf">Cystic Fibrosis (CF)</h3>
+                <div class="disorder-box">
+                    <p><strong>Pathophysiology:</strong> An autosomal recessive genetic disorder caused by mutations in the CFTR gene. This leads to a defective chloride ion channel, resulting in abnormally thick, viscous secretions in multiple organs. In the lungs, this thick mucus impairs mucociliary clearance, leading to airway obstruction, chronic bacterial infections, and progressive bronchiectasis.</p>
+                </div>
+            </section>
+
+            <!-- Restrictive Disorders -->
+            <section id="restrictive" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Restrictive Lung Disorders</h2>
+                <p>Characterized by a restriction in lung expansion, resulting in a decreased total lung capacity. The primary problem is a reduction in lung volumes.</p>
+                <div class="assessment-box">
+                    <h3>Spirometry Findings in Restrictive Disease</h3>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Reduced FEV₁ and FVC:</strong> Both are proportionally decreased.</li>
+                        <li><strong>Normal or Increased FEV₁/FVC Ratio (>70%):</strong> Because both values are reduced together, the ratio remains normal or can even be high.</li>
+                    </ul>
+                </div>
+                <table>
+                    <thead><tr><th>Category</th><th>Pathophysiology</th><th>Examples</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Intrinsic (Parenchymal)</strong></td>
+                            <td>Diseases that cause inflammation and scarring (fibrosis) of the lung tissue itself, making the lungs stiff and non-compliant.</td>
+                            <td>Idiopathic Pulmonary Fibrosis (IPF), Sarcoidosis, Pneumoconioses (e.g., asbestosis, silicosis).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Extrinsic (Extra-pulmonary)</strong></td>
+                            <td>Conditions outside the lungs that limit lung expansion by affecting the chest wall, pleura, or respiratory muscles.</td>
+                            <td>Kyphoscoliosis, severe obesity, neuromuscular diseases (e.g., Myasthenia Gravis, Guillain-Barré Syndrome), large pleural effusions.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Pleural Space Disorders -->
+            <section id="pleural" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Pleural Space Disorders</h2>
+                <table>
+                    <thead><tr><th>Condition</th><th>Pathophysiology</th><th>Key Features</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pleuritis (Pleurisy)</strong></td>
+                            <td>Inflammation of the pleura, causing the two layers to rub against each other during breathing.</td>
+                            <td>Sharp, stabbing, pleuritic chest pain that is worse with inspiration and coughing.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pleural Effusion</strong></td>
+                            <td>Abnormal accumulation of fluid in the pleural space. Can be a transudate (from high hydrostatic pressure, e.g., heart failure) or an exudate (from inflammation/infection).</td>
+                            <td>Dyspnea, pleuritic pain. Examination reveals decreased breath sounds and dullness to percussion over the effusion.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pneumothorax</strong></td>
+                            <td>Air in the pleural space, which breaks the negative pressure seal and causes the lung to collapse (atelectasis). Can be spontaneous or traumatic.</td>
+                            <td>Sudden onset of unilateral pleuritic chest pain and dyspnea. Examination reveals decreased breath sounds and hyper-resonance to percussion on the affected side.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tension Pneumothorax</strong></td>
+                            <td>A life-threatening variant where a one-way valve mechanism allows air to enter the pleural space but not exit. Pressure builds, causing mediastinal shift, compression of the contralateral lung, and obstructive shock.</td>
+                            <td>Severe respiratory distress, hypotension, JVD, tracheal deviation away from the affected side. Requires immediate needle decompression.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Infections -->
+            <section id="infections" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Respiratory Infections</h2>
+                <table>
+                    <thead><tr><th>Infection</th><th>Pathophysiology</th><th>Clinical Presentation</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Influenza</strong></td>
+                            <td>A highly contagious viral infection of the upper and lower respiratory tracts. The virus damages respiratory epithelium, causing inflammation and systemic symptoms.</td>
+                            <td>Rapid onset of fever, myalgia (muscle aches), headache, malaise, cough, and sore throat.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>COVID-19</strong></td>
+                            <td>Caused by SARS-CoV-2. In severe cases, it leads to widespread lung inflammation, diffuse alveolar damage, and can progress to Acute Respiratory Distress Syndrome (ARDS) and profound hypoxemia.</td>
+                            <td>Fever, cough, dyspnea, fatigue. A key feature can be "silent hypoxia."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tuberculosis (TB)</strong></td>
+                            <td>A chronic infection caused by *Mycobacterium tuberculosis*. The host mounts a cell-mediated immune response, forming granulomas (tubercles) to contain the bacteria. Reactivation of latent infection can cause destructive cavitary lung disease.</td>
+                            <td>Chronic cough, haemoptysis, weight loss, fever, and night sweats.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pneumonia</strong></td>
+                            <td>Infection of the lung parenchyma (alveoli). The inflammatory response fills the alveoli with exudate (consolidation), impairing gas exchange.</td>
+                            <td>Fever, productive cough with purulent sputum, pleuritic chest pain, and dyspnea. Auscultation reveals crackles and bronchial breath sounds over the consolidation.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- PE -->
+            <section id="pe" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Pulmonary Embolism (PE)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Obstruction of a pulmonary artery by an embolus, most commonly a thrombus that has dislodged from a deep vein in the leg (DVT). The obstruction prevents blood flow to a section of the lung, creating <strong>alveolar dead space</strong> (an area that is ventilated but not perfused). This leads to a profound V/Q mismatch and hypoxemia. A large PE increases pulmonary vascular resistance, causing acute right ventricular strain and potentially obstructive shock.</p>
+                </div>
+                <div class="assessment-box">
+                    <h3>Clinical Presentation and Management</h3>
+                    <p><strong>Presentation:</strong> The classic triad is sudden onset of dyspnea, pleuritic chest pain, and haemoptysis, but this is uncommon. More often, the presentation is non-specific, with unexplained dyspnea and tachycardia being the most common signs. A high index of suspicion is crucial, especially in patients with risk factors for DVT.</p>
+                    <p><strong>Management:</strong> High-flow oxygen is the primary treatment to manage hypoxemia. In haemodynamically unstable patients (obstructive shock), provide supportive care with cautious fluid administration and prepare for potential cardiac arrest. Rapid transport to a hospital with capabilities for thrombolysis or embolectomy is essential.</p>
+                </div>
+            </section>
+            
+            <!-- Respiratory Failure -->
+            <section id="failure" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Respiratory Failure</h2>
+                <p>Respiratory failure occurs when the respiratory system cannot maintain adequate gas exchange, leading to hypoxemia and/or hypercapnia.</p>
+                <table>
+                    <thead><tr><th>Type</th><th>Pathophysiology</th><th>ABG Findings</th><th>Common Causes</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Type 1 (Hypoxemic)</strong></td>
+                            <td>Failure of oxygenation. Occurs due to a ventilation/perfusion (V/Q) mismatch or impaired diffusion across the alveolar-capillary membrane. The ability to remove CO₂ is often preserved or even enhanced by compensatory hyperventilation.</td>
+                            <td><strong>Low PaO₂</strong> (<60 mmHg)<br><strong>Normal or Low PaCO₂</strong></td>
+                            <td>Pneumonia, Pulmonary Oedema, Pulmonary Embolism, ARDS.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Type 2 (Hypercapnic)</strong></td>
+                            <td>Failure of ventilation. Occurs due to alveolar hypoventilation, where the respiratory system cannot adequately remove CO₂. This always leads to a secondary hypoxemia.</td>
+                            <td><strong>Low PaO₂</strong> (<60 mmHg)<br><strong>High PaCO₂</strong> (>45 mmHg)</td>
+                            <td>COPD exacerbation, severe asthma, drug overdose (opioids), neuromuscular disease.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Always integrate this knowledge with a thorough patient history and clinical reasoning.</p>
+        </footer>
+    </div>
+</body>
+</html>

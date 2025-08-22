@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiovascular Disorders: A Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Cardiovascular Disorders</h1>
+            <p class="text-xl text-gray-600 mt-2">A Pathophysiology Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#anatomy" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">CV Anatomy & Physiology</a>
+                <a href="#hemodynamics" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Hemodynamic Disorders</a>
+                <a href="#atherosclerosis" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Atherosclerosis</a>
+                <a href="#ihd" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Ischemic Heart Disease</a>
+                <a href="#inflammatory" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Inflammatory Conditions</a>
+                <a href="#valvular" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Valvular Disorders</a>
+                <a href="#cardiomyopathy" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Cardiomyopathies</a>
+                <a href="#hf" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Heart Failure</a>
+                <a href="#venous" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Venous & Arterial Disease</a>
+                <a href="#hypertension" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Hypertension</a>
+                <a href="#shock" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Shock</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Anatomy and Physiology -->
+            <section id="anatomy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Cardiovascular Anatomy & Physiology</h2>
+                <div class="physiology-box">
+                    <h3>The Heart and Cardiac Cycle</h3>
+                    <p>The heart is a four-chambered pump responsible for circulating blood. The <strong>cardiac cycle</strong> describes the sequence of events during one heartbeat, divided into two phases:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Systole:</strong> The period of ventricular contraction and blood ejection.</li>
+                        <li><strong>Diastole:</strong> The period of ventricular relaxation and filling.</li>
+                    </ul>
+                    <p><strong>Heart valves</strong> (tricuspid, pulmonary, mitral, aortic) are crucial for ensuring unidirectional blood flow by opening and closing in response to pressure changes between the chambers.</p>
+                </div>
+                <div class="physiology-box">
+                    <h3>Cardiac Output and Blood Pressure</h3>
+                    <p><strong>Cardiac Output (CO)</strong> is the volume of blood pumped by each ventricle per minute. It is the primary determinant of oxygen delivery to the tissues.</p>
+                    <p class="text-center font-mono my-2">CO = Heart Rate (HR) × Stroke Volume (SV)</p>
+                    <p><strong>Stroke Volume (SV)</strong> is the volume of blood ejected per beat, influenced by:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Preload:</strong> The stretch on the ventricular muscle at the end of diastole (determined by venous return).</li>
+                        <li><strong>Afterload:</strong> The resistance the ventricle must overcome to eject blood.</li>
+                        <li><strong>Contractility:</strong> The intrinsic strength of the cardiac muscle.</li>
+                    </ul>
+                    <p><strong>Blood Pressure (BP)</strong> is the force exerted by blood against the vessel walls.</p>
+                     <p class="text-center font-mono my-2">BP = Cardiac Output (CO) × Systemic Vascular Resistance (SVR)</p>
+                </div>
+                <div class="physiology-box">
+                    <h3>Blood Vessels, Clotting, and Capillary Exchange</h3>
+                    <p><strong>Arteries</strong> are thick, muscular, elastic vessels that carry oxygenated blood away from the heart under high pressure. <strong>Veins</strong> are thin-walled, compliant vessels with valves that return deoxygenated blood to the heart under low pressure.</p>
+                    <p><strong>Blood Clotting (Hemostasis)</strong> is the process that stops bleeding. It involves platelet aggregation to form a plug and the activation of the coagulation cascade to form a stable fibrin clot.</p>
+                    <p><strong>Capillary Exchange</strong> is the movement of fluid, nutrients, and waste between the blood and interstitial fluid. It is governed by the balance between <strong>hydrostatic pressure</strong> (pushes fluid out of capillaries) and <strong>colloid osmotic pressure</strong> (pulls fluid into capillaries).</p>
+                </div>
+            </section>
+
+            <!-- Hemodynamic Disorders -->
+            <section id="hemodynamics" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Hemodynamic Disorders</h2>
+                <table>
+                    <thead><tr><th>Disorder</th><th>Pathophysiology</th><th>Clinical Features</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hyperemia</strong></td>
+                            <td>An <strong>active</strong> process of increased arterial inflow into a tissue, usually due to vasodilation. Part of the normal inflammatory response or physiological adaptation (e.g., exercise).</td>
+                            <td>Affected tissue is red (erythema) and warm.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Congestion</strong></td>
+                            <td>A <strong>passive</strong> process of impaired venous outflow from a tissue, leading to an increased volume of deoxygenated blood. Caused by local obstruction (DVT) or systemic failure (heart failure).</td>
+                            <td>Affected tissue is dusky red or blue (cyanosis) and cool. Can lead to edema and impaired tissue function.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Edema</strong></td>
+                            <td>Accumulation of excess fluid in the interstitial space. Caused by increased hydrostatic pressure (congestion), decreased colloid osmotic pressure (low albumin), lymphatic obstruction, or increased capillary permeability (inflammation).</td>
+                            <td>Swelling. <strong>Pitting edema</strong> is common in pressure-related causes. Can be life-threatening in the lungs (pulmonary edema) or brain (cerebral edema).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hemorrhage</strong></td>
+                            <td>Leakage of blood from a ruptured blood vessel. Can be external or internal.</td>
+                            <td>Manifestations depend on volume and rate of blood loss. Rapid loss of >20% of blood volume can lead to hypovolemic shock.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Atherosclerosis -->
+            <section id="atherosclerosis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Atherosclerosis</h2>
+                <div class="disorder-box">
+                    <h3>Pathogenesis</h3>
+                    <p>Atherosclerosis is a chronic inflammatory disease of medium to large arteries, characterized by the formation of lipid-rich plaques (atheromas) in the vessel wall. The "response to injury" hypothesis is the most accepted model:</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Endothelial Injury:</strong> Chronic injury to the inner lining of the artery, caused by risk factors like hypertension, smoking, and hyperlipidemia.</li>
+                        <li><strong>Lipid Accumulation & Inflammation:</strong> The damaged endothelium becomes permeable, allowing LDL ("bad") cholesterol to enter the vessel wall. This LDL becomes oxidized, triggering an inflammatory response. Monocytes are recruited, enter the wall, and transform into macrophages.</li>
+                        <li><strong>Foam Cell Formation:</strong> Macrophages engulf the oxidized LDL, becoming lipid-laden "foam cells." Aggregates of foam cells form the earliest visible lesion, the <strong>fatty streak</strong>.</li>
+                        <li><strong>Plaque Progression:</strong> Smooth muscle cells migrate into the lesion and proliferate, depositing collagen and forming a fibrous cap over the lipid core. This creates a mature <strong>fibrofatty atheroma</strong> that narrows the arterial lumen.</li>
+                    </ol>
+                    <p><strong>Complications</strong> arise when plaques become unstable and rupture, exposing the thrombogenic lipid core and leading to acute thrombosis.</p>
+                </div>
+                <h3>Risk Factors</h3>
+                <table>
+                    <thead><tr><th>Modifiable</th><th>Non-Modifiable</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td>Hyperlipidemia (especially high LDL), Hypertension, Cigarette Smoking, Diabetes Mellitus, Obesity, Physical Inactivity.</td>
+                            <td>Increasing Age, Male Gender, Family History.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Ischemic Heart Disease -->
+            <section id="ihd" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Ischemic Heart Disease (IHD)</h2>
+                <p>IHD is a group of conditions resulting from myocardial ischemia—an imbalance between myocardial oxygen supply and demand, almost always caused by coronary atherosclerosis.</p>
+                <table>
+                    <thead><tr><th>Condition</th><th>Pathophysiology</th><th>Clinical Presentation</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Stable Angina Pectoris</strong></td>
+                            <td>Caused by a <strong>fixed</strong> atherosclerotic plaque that narrows a coronary artery (>70%). Ischemia and chest pain are predictably triggered by increased myocardial demand (e.g., exertion, stress) and relieved by rest or GTN.</td>
+                            <td>Transient, predictable, exertional chest pain/pressure. ECG is often normal at rest but shows ST depression during an attack. No myocardial necrosis.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Acute Coronary Syndrome (ACS)</strong></td>
+                            <td colspan="2">An umbrella term for acute myocardial ischemia, typically caused by the rupture of an unstable plaque and subsequent thrombus formation.</td>
+                        </tr>
+                        <tr>
+                            <td><em>Unstable Angina (UA)</em></td>
+                            <td>Caused by a non-occlusive thrombus on a ruptured plaque. Ischemia is severe enough to cause chest pain at rest or with minimal exertion, but not severe enough to cause myocyte necrosis.</td>
+                            <td>Unpredictable chest pain, often at rest. ECG may show ST depression or T-wave inversion. <strong>Cardiac biomarkers (troponin) are negative.</strong></td>
+                        </tr>
+                        <tr>
+                            <td><em>Myocardial Infarction (MI)</em></td>
+                            <td>Prolonged ischemia leading to irreversible myocardial cell death (necrosis). Caused by a more persistent or complete coronary occlusion by a thrombus.</td>
+                            <td>Severe, prolonged chest pain not relieved by rest or GTN. <strong>Cardiac biomarkers (troponin) are elevated.</strong> ECG changes differentiate NSTEMI and STEMI.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                 <div class="management-box">
+                    <h3>Management of ACS</h3>
+                    <p>Immediate goals are to relieve pain, restore coronary blood flow, and prevent complications.</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Oxygen:</strong> If SpO₂ < 94%.</li>
+                        <li><strong>Aspirin:</strong> To inhibit platelet aggregation.</li>
+                        <li><strong>Nitrates (GTN):</strong> For vasodilation and pain relief (use with caution in hypotension).</li>
+                        <li><strong>Analgesia (Morphine):</strong> For severe pain.</li>
+                        <li><strong>Reperfusion Therapy (for STEMI):</strong> The definitive treatment is to restore blood flow, either mechanically with Percutaneous Coronary Intervention (PCI) or pharmacologically with thrombolysis.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <!-- Inflammatory Conditions -->
+            <section id="inflammatory" class="section-box">
+                 <h2 class="text-3xl font-bold text-gray-800">Inflammatory Heart Conditions</h2>
+                 <table>
+                    <thead><tr><th>Condition</th><th>Pathophysiology</th><th>Key Features</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pericarditis</strong></td>
+                            <td>Inflammation of the pericardium (the sac surrounding the heart), most commonly viral. The inflamed layers rub against each other, causing pain.</td>
+                            <td>Sharp, pleuritic chest pain that is worse when lying flat and relieved by sitting forward. A pericardial friction rub may be heard on auscultation. Diffuse ST elevation on ECG.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Myocarditis</strong></td>
+                            <td>Inflammation of the myocardium (heart muscle), most commonly viral. The inflammation can directly damage myocytes, leading to impaired contractility and arrhythmias.</td>
+                            <td>Can present with chest pain, signs of heart failure, or arrhythmias. Cardiac biomarkers may be elevated.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Infective Endocarditis</strong></td>
+                            <td>A microbial infection of the heart valves or endocardium. Bacteria in the bloodstream adhere to a damaged valve, proliferate, and form destructive, friable masses called "vegetations."</td>
+                            <td>Presents with fever and a new or changing heart murmur. Fragments of vegetations can break off, causing systemic emboli (e.g., stroke, renal infarction).</td>
+                        </tr>
+                    </tbody>
+                 </table>
+            </section>
+            
+            <!-- Valvular Disorders -->
+            <section id="valvular" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Valvular Heart Disease</h2>
+                <p>Valvular dysfunction occurs in two main forms: stenosis (failure to open completely) and regurgitation/incompetence (failure to close completely). Both increase cardiac workload, leading to hypertrophy and eventually failure.</p>
+                <table>
+                    <thead><tr><th>Disorder</th><th>Pathophysiology</th><th>Hemodynamic Consequence</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Aortic Stenosis</strong></td>
+                            <td>Narrowing of the aortic valve, obstructing outflow from the left ventricle (LV).</td>
+                            <td>Causes a massive increase in LV afterload, leading to significant concentric LV hypertrophy. Can cause angina, syncope, and heart failure.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aortic Regurgitation</strong></td>
+                            <td>Leaky aortic valve allows blood to flow back into the LV during diastole.</td>
+                            <td>Causes LV volume overload, leading to LV dilation and hypertrophy. Characterized by a wide pulse pressure.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mitral Stenosis</strong></td>
+                            <td>Narrowing of the mitral valve, obstructing flow from the left atrium (LA) to the LV.</td>
+                            <td>Causes increased LA pressure, LA dilation, pulmonary congestion, and pulmonary hypertension. A major cause of atrial fibrillation.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mitral Regurgitation</strong></td>
+                            <td>Leaky mitral valve allows blood to flow back into the LA during systole.</td>
+                            <td>Causes LA and LV volume overload, leading to dilation and eventual failure.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Cardiomyopathies -->
+            <section id="cardiomyopathy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Cardiomyopathies</h2>
+                <p>Cardiomyopathies are diseases of the heart muscle itself, leading to deterioration of myocardial function.</p>
+                 <table>
+                    <thead><tr><th>Type</th><th>Pathophysiology</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Dilated (DCM)</strong></td>
+                            <td>Characterized by ventricular enlargement and impaired systolic function (weak contraction). Can be idiopathic, genetic, or secondary to toxins (e.g., alcohol) or myocarditis.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Hypertrophic (HCM)</strong></td>
+                            <td>Characterized by inappropriate myocardial hypertrophy, often of the septum. The stiff, thickened ventricle has impaired diastolic function (impaired filling). It is a major cause of sudden cardiac death in young athletes.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Restrictive (RCM)</strong></td>
+                            <td>A rare form where the ventricular walls are rigid but not necessarily thickened, leading to severely impaired diastolic filling.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Takotsubo ("Broken Heart Syndrome")</strong></td>
+                            <td>An acute, transient LV dysfunction, often triggered by profound emotional or physical stress. It mimics an MI but occurs in the absence of significant coronary artery disease.</td>
+                        </tr>
+                    </tbody>
+                 </table>
+            </section>
+            
+            <!-- Heart Failure -->
+            <section id="hf" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Heart Failure (HF)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>HF is a complex clinical syndrome where the heart is unable to pump enough blood to meet the body's metabolic demands. It is the final common pathway for many cardiovascular diseases. The body activates compensatory mechanisms (SNS, RAAS) to maintain cardiac output, but these become maladaptive long-term, causing fluid retention and increased cardiac workload, which worsens the failure.</p>
+                </div>
+                <table>
+                    <thead><tr><th>Type of Failure</th><th>Primary Problem</th><th>Clinical Manifestations</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Left-Sided Heart Failure</strong></td>
+                            <td>The left ventricle fails to pump blood effectively to the body. Blood backs up into the pulmonary circulation.</td>
+                            <td><strong>Pulmonary Congestion:</strong> Dyspnea (especially on exertion), orthopnea (shortness of breath when lying flat), paroxysmal nocturnal dyspnea, cough, and pulmonary edema (crackles on auscultation).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Right-Sided Heart Failure</strong></td>
+                            <td>The right ventricle fails to pump blood effectively to the lungs. Blood backs up into the systemic venous circulation. Most commonly caused by left-sided HF.</td>
+                            <td><strong>Systemic Venous Congestion:</strong> Peripheral pitting edema (ankles, legs), jugular venous distension (JVD), hepatomegaly (enlarged liver), and ascites (abdominal fluid).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Venous and Arterial Disease -->
+            <section id="venous" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Peripheral Venous and Arterial Disease</h2>
+                 <table>
+                    <thead><tr><th>Condition</th><th>Pathophysiology</th><th>Clinical Features</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Deep Vein Thrombosis (DVT)</strong></td>
+                            <td>Formation of a thrombus in a deep vein, usually in the leg. Risk is defined by <strong>Virchow's Triad:</strong> 1) Venous stasis, 2) Endothelial injury, and 3) Hypercoagulability. The major life-threatening complication is pulmonary embolism (PE).</td>
+                            <td>Unilateral leg pain, swelling, warmth, and redness. Homan's sign is unreliable.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Peripheral Arterial Disease (PAD)</strong></td>
+                            <td>Atherosclerotic narrowing of the arteries supplying the limbs, most commonly the legs.</td>
+                            <td><strong>Intermittent Claudication:</strong> Ischemic muscle pain (usually in the calf) that occurs with exertion and is relieved by rest. Other signs include cool, pale skin, diminished pulses, and poor wound healing.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Aneurysms</strong></td>
+                            <td>A localized, permanent dilation of a blood vessel wall, most commonly the aorta. Atherosclerosis is the primary cause.</td>
+                            <td>Often asymptomatic. The major risk is <strong>rupture</strong>, a catastrophic event causing massive internal hemorrhage and shock. A dissecting aneurysm involves a tear in the intima, allowing blood to track within the vessel wall.</td>
+                        </tr>
+                    </tbody>
+                 </table>
+            </section>
+            
+            <!-- Hypertension -->
+            <section id="hypertension" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Hypertension</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Hypertension (HTN) is defined as persistently elevated arterial blood pressure. It is a major risk factor for IHD, stroke, and kidney disease.</p>
+                    <ul>
+                        <li><strong>Primary (Essential) HTN (~95% of cases):</strong> The cause is unknown (idiopathic), but it is a multifactorial condition involving genetic predisposition and lifestyle factors (high salt intake, obesity, stress).</li>
+                        <li><strong>Secondary HTN (~5% of cases):</strong> Caused by an identifiable underlying condition, most commonly renal artery stenosis or other kidney diseases.</li>
+                    </ul>
+                    <p>Long-term HTN damages blood vessels throughout the body (arteriolosclerosis) and increases the workload of the left ventricle, leading to left ventricular hypertrophy.</p>
+                </div>
+            </section>
+            
+             <!-- Shock -->
+            <section id="shock" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Shock</h2>
+                <p>Shock is a life-threatening state of circulatory failure causing inadequate oxygen delivery to the tissues (systemic hypoperfusion), leading to cellular hypoxia and widespread metabolic dysfunction.</p>
+                 <table>
+                    <thead><tr><th>Type</th><th>Core Problem</th><th>Key Hemodynamic Features</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hypovolemic</strong></td>
+                            <td>Loss of intravascular volume (e.g., hemorrhage, severe dehydration).</td>
+                            <td>↓ Preload, ↓ CO, ↑ SVR. Patient is cold, clammy, and tachycardic.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Cardiogenic</strong></td>
+                            <td>Failure of the heart's pumping function (e.g., massive MI, end-stage HF).</td>
+                            <td>↓ Contractility, ↓ CO, ↑ SVR. Patient is cold, clammy, tachycardic, and often has signs of pulmonary edema.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Distributive</strong></td>
+                            <td>Massive vasodilation and increased capillary permeability, leading to a relative hypovolemia. Includes:
+                                <ul class="list-disc list-inside mt-1">
+                                    <li><strong>Septic:</strong> Systemic inflammatory response to infection.</li>
+                                    <li><strong>Anaphylactic:</strong> Severe allergic reaction.</li>
+                                    <li><strong>Neurogenic:</strong> Loss of sympathetic vascular tone (e.g., spinal cord injury).</li>
+                                </ul>
+                            </td>
+                            <td>↓ SVR, ↓ Preload. Patient is often warm and flushed initially (septic, neurogenic) with tachycardia (except in neurogenic shock, where bradycardia is common).</td>
+                        </tr>
+                    </tbody>
+                 </table>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Always integrate this knowledge with a thorough patient history and clinical reasoning.</p>
+        </footer>
+    </div>
+</body>
+</html>
