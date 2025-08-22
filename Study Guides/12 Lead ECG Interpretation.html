@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Lead ECG Interpretation: A Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .ecg-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .ecg-box strong {
+            color: #3730a3;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .patho-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .patho-box strong {
+            color: #b91c1c;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">12 Lead ECG Interpretation</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#fundamentals" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">ECG Fundamentals</a>
+                <a href="#systematic-approach" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Systematic Approach</a>
+                <a href="#axis" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Axis & Hypertrophy</a>
+                <a href="#bbb" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Bundle Branch Blocks</a>
+                <a href="#ischemia" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Ischemia & STEMI</a>
+                <a href="#stemi-mimics" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">STEMI Mimics</a>
+                <a href="#brady" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Bradydysrhythmias</a>
+                <a href="#tachy" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Tachydysrhythmias</a>
+                <a href="#therapies" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Dysrhythmia Therapies</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- ECG Fundamentals -->
+            <section id="fundamentals" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">ECG Fundamentals</h2>
+                <div class="assessment-box">
+                    <h3>Accurate 12-Lead ECG Acquisition</h3>
+                    <p>Effective acquisition is foundational to accurate interpretation. Prioritise patient comfort, privacy, and dignity by explaining the procedure, providing a gown or sheet, and ensuring the patient is warm and relaxed.</p>
+                    <p><strong>Electrode Placement:</strong></p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Limb Leads (4):</strong> Placed on the fleshy parts of the wrists and ankles. (RA, LA, RL, LL).</li>
+                        <li><strong>Precordial (Chest) Leads (6):</strong>
+                            <ul>
+                                <li><strong>V1:</strong> 4th intercostal space, right sternal border.</li>
+                                <li><strong>V2:</strong> 4th intercostal space, left sternal border.</li>
+                                <li><strong>V3:</strong> Midway between V2 and V4.</li>
+                                <li><strong>V4:</strong> 5th intercostal space, mid-clavicular line.</li>
+                                <li><strong>V5:</strong> Anterior axillary line, same horizontal level as V4.</li>
+                                <li><strong>V6:</strong> Mid-axillary line, same horizontal level as V4.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>Ensure good skin contact by cleaning and, if necessary, shaving the sites to reduce artifact.</p>
+                </div>
+                <div class="ecg-box">
+                    <h3>Components of the ECG Waveform</h3>
+                    <p>Each part of the ECG waveform represents a specific electrical event in the cardiac cycle.</p>
+                    <table>
+                        <thead><tr><th>Component</th><th>Represents</th><th>Normal Duration/Morphology</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>P wave</strong></td><td>Atrial depolarization</td><td>Upright in Lead II, < 0.12s duration, < 2.5mm height</td></tr>
+                            <tr><td><strong>PR interval</strong></td><td>Time for impulse to travel from SA node through AV node</td><td>0.12 - 0.20 seconds (3-5 small squares)</td></tr>
+                            <tr><td><strong>QRS complex</strong></td><td>Ventricular depolarization</td><td>< 0.12 seconds (3 small squares)</td></tr>
+                            <tr><td><strong>ST segment</strong></td><td>Early phase of ventricular repolarization (isoelectric period)</td><td>Should be at the same level as the baseline (isoelectric line)</td></tr>
+                            <tr><td><strong>T wave</strong></td><td>Ventricular repolarization</td><td>Upright in most leads, asymmetrical</td></tr>
+                            <tr><td><strong>QT interval</strong></td><td>Total duration of ventricular electrical activity (depolarization + repolarization)</td><td>Varies with heart rate, should be less than half the preceding R-R interval</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Systematic Approach -->
+            <section id="systematic-approach" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">A Systematic Approach to Interpretation</h2>
+                <p>A consistent, step-by-step method prevents missing critical findings.</p>
+                <ol class="list-decimal list-inside space-y-3 mt-4">
+                    <li><strong>Rate:</strong> Is it fast (>100), slow (<60), or normal? (Use the 300 method or the 10-second rule).</li>
+                    <li><strong>Rhythm:</strong> Is it regular or irregular? Are there P waves? Is there a P wave for every QRS? Is there a QRS for every P wave?</li>
+                    <li><strong>Axis:</strong> What is the general direction of ventricular depolarization? (See next section).</li>
+                    <li><strong>Intervals:</strong> Measure the PR, QRS, and QT intervals. Are they normal, short, or prolonged?</li>
+                    <li><strong>Morphology (Hypertrophy & Blocks):</strong> Examine the shape of the P waves, QRS complexes, and T waves. Are there signs of atrial or ventricular hypertrophy? Is there a bundle branch block?</li>
+                    <li><strong>Ischemia, Injury, Infarction:</strong> Systematically examine all 12 leads for ST segment elevation or depression, T wave inversion, and pathological Q waves.</li>
+                </ol>
+            </section>
+
+            <!-- Axis Deviation & Hypertrophy -->
+            <section id="axis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Axis Deviation and Hypertrophy</h2>
+                <div class="patho-box">
+                    <h3>Pathophysiology of Axis and Hypertrophy</h3>
+                    <p>The <strong>cardiac axis</strong> represents the net direction of ventricular depolarization. <strong>Hypertrophy</strong> is an increase in muscle mass of a heart chamber. Both conditions alter the normal flow of electricity through the heart, causing predictable changes on the ECG.</p>
+                    <ul>
+                        <li><strong>Axis Deviation:</strong> When a large area of myocardium is hypertrophied, it generates more electrical signal, pulling the mean QRS axis towards it. Conversely, when an area is infarcted (electrically dead), the axis shifts away from it.</li>
+                        <li><strong>Hypertrophy:</strong> Increased muscle mass takes longer to depolarize and generates a larger electrical potential, leading to wider and taller waveforms from that chamber.</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Determining Axis</h3>
+                    <p>Use the QRS complexes in Leads I and aVF.</p>
+                    <table>
+                        <thead><tr><th>Lead I</th><th>Lead aVF</th><th>Axis</th><th>Common Causes</th></tr></thead>
+                        <tbody>
+                            <tr><td>Positive (Up)</td><td>Positive (Up)</td><td><strong>Normal Axis</strong></td><td>-</td></tr>
+                            <tr><td>Positive (Up)</td><td>Negative (Down)</td><td><strong>Left Axis Deviation</strong></td><td>LVH, LBBB, inferior MI</td></tr>
+                            <tr><td>Negative (Down)</td><td>Positive (Up)</td><td><strong>Right Axis Deviation</strong></td><td>RVH, RBBB, lateral MI, PE</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ecg-box">
+                    <h3>Recognizing Hypertrophy</h3>
+                     <table>
+                        <thead><tr><th>Condition</th><th>ECG Criteria</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Right Atrial Enlargement (RAE)</strong></td><td>Tall, peaked P waves (>2.5mm) in Lead II ("P pulmonale").</td></tr>
+                            <tr><td><strong>Left Atrial Enlargement (LAE)</strong></td><td>Broad, notched P waves (>0.12s) in Lead II ("P mitrale").</td></tr>
+                            <tr><td><strong>Right Ventricular Hypertrophy (RVH)</strong></td><td>Right Axis Deviation; Tall R wave in V1 (R>S); Deep S wave in V6 (S>R).</td></tr>
+                            <tr><td><strong>Left Ventricular Hypertrophy (LVH)</strong></td><td>Left Axis Deviation; Deep S wave in V1 + Tall R wave in V5 or V6 > 35mm (Sokolow-Lyon criteria).</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Bundle Branch Blocks -->
+            <section id="bbb" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Bundle Branch Blocks (BBB)</h2>
+                <div class="patho-box">
+                    <h3>Pathophysiology of BBB</h3>
+                    <p>A bundle branch block is a delay or blockage of electrical conduction down the right or left bundle branch. This forces the impulse to spread slowly through the affected ventricle via cell-to-cell conduction rather than the rapid His-Purkinje system. This slow, inefficient depolarization results in a wide QRS complex (≥ 0.12s) and a characteristic pattern in the chest leads.</p>
+                </div>
+                <div class="ecg-box">
+                    <h3>Recognizing Bundle Branch Blocks</h3>
+                    <table>
+                        <thead><tr><th>Block</th><th>Key ECG Features</th><th>Clinical Implications</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Right Bundle Branch Block (RBBB)</strong></td>
+                                <td><strong>Wide QRS (≥0.12s)</strong>; <strong>RSR' ("bunny ears") pattern in V1</strong>; Wide, slurred S wave in lateral leads (I, aVL, V6).</td>
+                                <td>Can be a normal variant in healthy individuals. A new RBBB can be associated with pulmonary embolism or right heart strain.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Left Bundle Branch Block (LBBB)</strong></td>
+                                <td><strong>Wide QRS (≥0.12s)</strong>; <strong>Broad, monophasic R wave in lateral leads (I, aVL, V6)</strong>; Deep S wave in V1. Absence of Q waves in lateral leads.</td>
+                                <td>Almost always indicates underlying heart disease (e.g., IHD, cardiomyopathy, hypertension). A new LBBB in a patient with chest pain is treated as a STEMI equivalent. It significantly complicates the diagnosis of acute MI.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Ischemia and Infarction -->
+            <section id="ischemia" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Ischemia, Injury, and ST-Elevation MI (STEMI)</h2>
+                <div class="patho-box">
+                    <h3>Pathophysiology of ECG Changes in ACS</h3>
+                    <ul>
+                        <li><strong>Ischemia:</strong> Reduced oxygen supply alters myocyte repolarization. This manifests as <strong>ST segment depression</strong> or <strong>T wave inversion</strong>.</li>
+                        <li><strong>Injury:</strong> Prolonged ischemia causes cellular injury. The cells cannot maintain their normal resting membrane potential, leading to a current of injury that manifests as <strong>ST segment elevation</strong>. This indicates acute, transmural (full-thickness) injury.</li>
+                        <li><strong>Infarction:</strong> Irreversible cell death (necrosis). Necrotic tissue is electrically dead, resulting in the formation of deep, wide <strong>pathological Q waves</strong>.</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Localizing the STEMI</h3>
+                    <p>The leads showing ST elevation correspond to the specific area of the heart and the likely occluded coronary artery.</p>
+                    <table>
+                        <thead><tr><th>Leads with ST Elevation</th><th>Infarct Location</th><th>Coronary Artery</th><th>Reciprocal Leads (ST Depression)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>II, III, aVF</strong></td><td>Inferior Wall</td><td>Right Coronary Artery (RCA)</td><td>I, aVL</td></tr>
+                            <tr><td><strong>V1, V2</strong></td><td>Septal Wall</td><td>Left Anterior Descending (LAD)</td><td>None</td></tr>
+                            <tr><td><strong>V3, V4</strong></td><td>Anterior Wall</td><td>Left Anterior Descending (LAD)</td><td>None</td></tr>
+                            <tr><td><strong>I, aVL, V5, V6</strong></td><td>Lateral Wall</td><td>Left Circumflex (LCx)</td><td>II, III, aVF</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- STEMI Mimics -->
+            <section id="stemi-mimics" class="section-box">
+                 <h2 class="text-3xl font-bold text-gray-800">ECGs Mimicking STEMI</h2>
+                 <p>Several conditions can cause ST elevation that is not due to acute coronary occlusion. Differentiating these is a critical skill.</p>
+                 <table>
+                    <thead><tr><th>Condition</th><th>Differentiating ECG Features</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pericarditis</strong></td>
+                            <td><strong>Widespread, diffuse ST elevation</strong> (often in most leads except aVR and V1). The ST segments are typically concave ("smiley face"). PR segment depression is often present. No reciprocal ST depression (except in aVR).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Benign Early Repolarization (BER)</strong></td>
+                            <td>Common in young, healthy individuals. Widespread, concave ST elevation, most prominent in precordial leads. Often has a characteristic "fish hook" or notched appearance at the J-point. The T waves are typically tall and concordant. The pattern is stable over time.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Left Bundle Branch Block (LBBB)</strong></td>
+                            <td>LBBB naturally causes ST elevation in leads with a negative QRS (discordance), especially V1-V3. This can mask or mimic an anterior STEMI. <strong>Sgarbossa's Criteria</strong> are used to identify MI in the presence of LBBB (e.g., concordant ST elevation).</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Left Ventricular Hypertrophy (LVH)</strong></td>
+                            <td>LVH with a "strain pattern" causes ST depression and T-wave inversion in lateral leads, but can also cause ST elevation in the right precordial leads (V1-V3) that can mimic an anterior STEMI.</td>
+                        </tr>
+                    </tbody>
+                 </table>
+            </section>
+
+            <!-- Bradydysrhythmias -->
+            <section id="brady" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Management of Bradydysrhythmias</h2>
+                <div class="management-box">
+                    <h3>General Management Approach</h3>
+                    <p>The key decision point is patient stability. An unstable patient has signs of poor perfusion due to the slow heart rate (e.g., hypotension, altered LOC, chest pain, acute heart failure). <strong>Treat the patient, not the monitor.</strong></p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Assess and support ABCs. Provide oxygen if required.</li>
+                        <li>If the patient is <strong>unstable</strong> due to the bradycardia:
+                            <ul>
+                                <li>Administer <strong>Atropine</strong>.</li>
+                                <li>If atropine is ineffective, initiate <strong>Transcutaneous Pacing (TCP)</strong>.</li>
+                                <li>Consider adrenaline or dopamine infusion.</li>
+                            </ul>
+                        </li>
+                        <li>If the patient is <strong>stable</strong>, monitor closely and transport for further evaluation.</li>
+                    </ol>
+                </div>
+                <table>
+                    <thead><tr><th>Rhythm</th><th>ECG Features</th><th>Pathophysiology</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Sinus Bradycardia</strong></td><td>Normal sinus rhythm with a rate < 60 bpm.</td><td>Slow firing of the SA node. Can be physiological (athletes) or pathological.</td></tr>
+                        <tr><td><strong>1st Degree AV Block</strong></td><td>PR interval is constantly prolonged > 0.20s.</td><td>Delayed conduction through the AV node.</td></tr>
+                        <tr><td><strong>2nd Degree AV Block, Type I (Wenckebach)</strong></td><td>PR interval progressively lengthens until a P wave is not conducted (a "dropped" QRS).</td><td>Progressive fatigue of the AV node. Usually benign.</td></tr>
+                        <tr><td><strong>2nd Degree AV Block, Type II</strong></td><td>PR interval is constant, but some P waves are not conducted, leading to intermittently dropped QRS complexes.</td><td>A block below the AV node (e.g., in the Bundle of His). More serious and can progress to complete block.</td></tr>
+                        <tr><td><strong>3rd Degree (Complete) AV Block</strong></td><td>No relationship between P waves and QRS complexes (AV dissociation). Atria and ventricles beat independently.</td><td>Complete failure of conduction from atria to ventricles. The ventricles are driven by a slow escape rhythm.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Tachydysrhythmias -->
+            <section id="tachy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Management of Tachydysrhythmias</h2>
+                <div class="management-box">
+                    <h3>General Management Approach</h3>
+                    <p>Assessment is guided by patient stability and the QRS width.</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Assess and support ABCs. Provide oxygen.</li>
+                        <li>If the patient is <strong>unstable</strong> (hypotension, altered LOC, etc.): Immediate <strong>Synchronized Cardioversion</strong> is indicated.</li>
+                        <li>If the patient is <strong>stable</strong>:
+                            <ul>
+                                <li><strong>Narrow Complex (QRS < 0.12s):</strong> Attempt Vagal Maneuvers. If unsuccessful, administer <strong>Adenosine</strong>.</li>
+                                <li><strong>Wide Complex (QRS ≥ 0.12s):</strong> Treat as Ventricular Tachycardia. Administer Amiodarone.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <table>
+                    <thead><tr><th>Rhythm</th><th>ECG Features</th><th>Pathophysiology</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Supraventricular Tachycardia (SVT)</strong></td><td>Regular, narrow complex tachycardia, rate 150-250 bpm. P waves often hidden.</td><td>A re-entry circuit involving the AV node.</td></tr>
+                        <tr><td><strong>Atrial Fibrillation (AF)</strong></td><td>Irregularly irregular rhythm, no discernible P waves, narrow QRS complexes.</td><td>Chaotic, rapid firing of multiple atrial ectopic sites.</td></tr>
+                        <tr><td><strong>Atrial Flutter</strong></td><td>Regular (usually), narrow complex tachycardia. "Saw-tooth" flutter waves are characteristic.</td><td>A single, large re-entry circuit within the atria.</td></tr>
+                        <tr><td><strong>Ventricular Tachycardia (VT)</strong></td><td>Regular, wide complex tachycardia, rate > 100 bpm. AV dissociation may be present.</td><td>A rapid firing ectopic focus or re-entry circuit within the ventricles. Can be life-threatening.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Therapies -->
+            <section id="therapies" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Broad Therapies for Dysrhythmias</h2>
+                <table>
+                    <thead><tr><th>Therapy Type</th><th>Mechanism</th><th>Indications</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pharmacological</strong></td>
+                            <td>Antiarrhythmic drugs that alter the electrical properties of cardiac cells (e.g., blocking ion channels, altering autonomic tone).</td>
+                            <td><strong>Atropine:</strong> Blocks vagal tone to speed up the heart in bradycardia.<br><strong>Adenosine:</strong> Temporarily blocks the AV node to terminate SVT.<br><strong>Amiodarone:</strong> Blocks potassium channels to treat both atrial and ventricular tachycardias.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Electrical</strong></td>
+                            <td>Application of a controlled electrical shock to the heart.</td>
+                            <td><strong>Synchronized Cardioversion:</strong> A shock timed with the R wave to depolarize all myocardial cells simultaneously, allowing the SA node to reset. Used for unstable tachycardias with a pulse.<br><strong>Defibrillation:</strong> An unsynchronized shock used to terminate VF/pulseless VT.<br><strong>Transcutaneous Pacing (TCP):</strong> Delivers small electrical impulses through the skin to stimulate ventricular contraction. Used for unstable bradycardias.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. ECG interpretation is a skill that requires continuous practice and integration with the patient's clinical presentation.</p>
+        </footer>
+    </div>
+</body>
+</html>
