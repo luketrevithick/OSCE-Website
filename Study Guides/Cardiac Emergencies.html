@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiac Emergencies: A Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Cardiac Emergencies</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#acs" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Acute Coronary Syndrome</a>
+                <a href="#apo" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Acute Pulmonary Oedema</a>
+                <a href="#other-cardiac" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Other Cardiac Pathologies</a>
+                <a href="#cardiac-arrest" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Cardiac Arrest (OOHCA)</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Acute Coronary Syndrome (ACS) -->
+            <section id="acs" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Acute Coronary Syndrome (ACS)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology and Epidemiology</h3>
+                    <p>ACS is a life-threatening manifestation of coronary heart disease (CHD), which remains a leading cause of death in Australia. Over 90% of cases are caused by <strong>atherosclerosis</strong>, the progressive narrowing of coronary arteries by lipid-rich plaques.</p>
+                    <p>ACS occurs when an atherosclerotic plaque becomes unstable and ruptures. This exposes the thrombogenic core of the plaque, leading to the formation of a thrombus that can partially or completely occlude the coronary artery. This results in myocardial ischemia (reduced blood flow) and, if prolonged, infarction (cell death).</p>
+                    <p><strong>The ACS Spectrum:</strong></p>
+                    <ul>
+                        <li><strong>Unstable Angina (UA):</strong> Partial occlusion. Ischemia is severe enough to cause symptoms at rest but not severe enough to cause myocyte necrosis. Troponins are negative.</li>
+                        <li><strong>Non-ST-Elevation Myocardial Infarction (NSTEMI):</strong> Partial or intermittent occlusion causing subendocardial (partial thickness) infarction. Troponins are positive.</li>
+                        <li><strong>ST-Elevation Myocardial Infarction (STEMI):</strong> Complete and persistent occlusion causing transmural (full thickness) infarction. This is reflected by ST-segment elevation on the ECG. Troponins are positive.</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Assessment of the ACS Patient</h3>
+                    <p><strong>Clinical Presentation & History:</strong> The classic symptom is central, crushing chest pain or discomfort, often described as pressure or heaviness, which may radiate to the jaw, neck, shoulders, or arms. Other symptoms include dyspnea, diaphoresis, nausea, and lightheadedness. It is crucial to use a structured pain assessment tool (e.g., OPQRST) and recognise that non-ACS chest pain is often sharp, localised, pleuritic, and reproducible on palpation.</p>
+                    <p><strong>Physical Examination:</strong> Assess for signs of cardiac compromise such as pallor, diaphoresis, tachycardia, and hypotension.</p>
+                    <p><strong>12-Lead ECG:</strong> This is a cornerstone of diagnosis and should be acquired within 10 minutes of first medical contact. Look for ST elevation/depression, T-wave inversion, and new Q waves to diagnose and localise the event.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Management of ACS</h3>
+                    <p>The primary goal is to restore myocardial oxygen supply and reduce demand.</p>
+                    <ol>
+                        <li><strong>Oxygen:</strong> Administer only if SpO₂ is <94%, as hyperoxia can cause coronary vasoconstriction and increase infarct size.</li>
+                        <li><strong>Aspirin:</strong> 300mg orally (chewed). An anti-platelet that inhibits thromboxane A2, reducing further clot formation.</li>
+                        <li><strong>Nitrates (GTN):</strong> A potent vasodilator that reduces preload and afterload, decreasing myocardial workload. Administered sublingually. Contraindicated in hypotension (SBP <90 mmHg), bradycardia, and use of PDE5 inhibitors.</li>
+                        <li><strong>Analgesia (Morphine/Fentanyl):</strong> For pain relief. Opiates also provide some anxiolysis and venodilation, which reduces preload.</li>
+                        <li><strong>Reperfusion (for STEMI):</strong> The definitive treatment is to reopen the occluded artery. Pre-hospital notification to a PCI-capable hospital is critical to minimise door-to-balloon time.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Acute Pulmonary Oedema (APO) -->
+            <section id="apo" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Acute Pulmonary Oedema (APO)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology and Epidemiology</h3>
+                    <p>APO is the abnormal accumulation of fluid in the extravascular compartments of the lungs. <strong>Cardiogenic APO</strong>, the most common form, results from acute left ventricular failure (often secondary to an MI or severe hypertension). When the left ventricle fails, it cannot effectively pump blood forward. This causes a backup of pressure through the left atrium and into the pulmonary veins and capillaries.</p>
+                    <p>According to <strong>Starling's Law</strong>, this increased pulmonary capillary hydrostatic pressure overwhelms the opposing oncotic pressure, forcing fluid out of the capillaries and into the lung interstitium and alveoli. This fluid accumulation severely impairs gas exchange, leading to acute hypoxemic respiratory failure.</p>
+                </div>
+                <div class="assessment-box">
+                    <h3>Assessment of the APO Patient</h3>
+                    <p><strong>Clinical Presentation & History:</strong> Patients present in severe respiratory distress, often sitting upright and appearing anxious. They typically report a sudden onset of extreme shortness of breath, a feeling of drowning, and a cough producing pink, frothy sputum. A history of heart failure, MI, or hypertension is common.</p>
+                    <p><strong>Physical Examination:</strong></p>
+                    <ul>
+                        <li><strong>Respiratory:</strong> Tachypnea, use of accessory muscles, audible inspiratory crackles on auscultation (starting at the bases and moving upwards), and potential wheezing ("cardiac asthma").</li>
+                        <li><strong>Cardiovascular:</strong> Tachycardia, hypertension (often severe), pale and diaphoretic skin, and potentially a raised JVP.</li>
+                    </ul>
+                </div>
+                <div class="management-box">
+                    <h3>Management of APO</h3>
+                    <p>The goals are to improve oxygenation, reduce preload, and reduce afterload.</p>
+                    <ol>
+                        <li><strong>Positioning:</strong> Sit the patient fully upright with legs dependent to reduce venous return (preload).</li>
+                        <li><strong>Oxygenation:</strong> High-flow oxygen is crucial. For severe respiratory distress and hypoxia, <strong>Continuous Positive Airway Pressure (CPAP)</strong> is a key intervention. CPAP increases intrathoracic pressure, which reduces preload and afterload, and provides PEEP (Positive End-Expiratory Pressure) to recruit collapsed alveoli and improve oxygenation.</li>
+                        <li><strong>Vasodilation (Nitrates - GTN):</strong> High-dose GTN (sublingual or infusion) is a cornerstone of therapy. It causes potent venodilation (reducing preload) and arteriolar dilation (reducing afterload), which decreases the workload of the failing left ventricle.</li>
+                        <li><strong>Diuretics (Frusemide):</strong> While historically used, their role in the acute pre-hospital phase is diminishing as their onset is slow. Their primary benefit is in managing chronic fluid overload.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Other Cardiac Pathologies -->
+            <section id="other-cardiac" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Other Cardiac Pathologies</h2>
+                <table>
+                    <thead><tr><th>Condition</th><th>Pathophysiology</th><th>Key Clinical Features & Management</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Cardiac Tamponade</strong></td>
+                            <td>Accumulation of fluid in the pericardial sac, compressing the heart and restricting ventricular filling. This leads to a dramatic decrease in preload and stroke volume, causing obstructive shock.</td>
+                            <td>Presents with <strong>Beck's Triad:</strong> hypotension, distended jugular veins, and muffled heart sounds. Pulsus paradoxus and electrical alternans on ECG may be present. Management is supportive with fluids and rapid transport for pericardiocentesis.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aortic Dissection</strong></td>
+                            <td>A tear in the intimal layer of the aorta allows blood to track between the layers of the aortic wall, creating a false lumen. This can occlude branch arteries or rupture catastrophically.</td>
+                            <td>Sudden, severe, tearing or ripping chest or back pain. A key sign is a significant blood pressure difference (>20 mmHg) between arms. Management involves pain control and careful blood pressure management (aiming for SBP 100-120 mmHg) to prevent rupture, with rapid transport.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Inherited Arrhythmia Syndromes (Channelopathies)</strong></td>
+                            <td>Genetic disorders affecting cardiac ion channels, predisposing individuals to life-threatening arrhythmias. Examples include Brugada Syndrome, Long/Short QT Syndrome, and CPVT.</td>
+                            <td>Often present with unexplained syncope (especially during exercise or emotional stress) or sudden cardiac death in young people. Pre-hospital management is focused on treating the arrhythmia (e.g., defibrillation for VF/VT) and supportive care.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cardiomyopathy</strong></td>
+                            <td>A disease of the heart muscle itself, leading to impaired function. Can be dilated (weak pump), hypertrophic (thickened muscle), or restrictive (stiff muscle).</td>
+                            <td>Presents with signs and symptoms of heart failure (dyspnea, fatigue, edema). ECG may show signs of hypertrophy (e.g., LVH by Sokolov-Lyon criteria). Management is focused on treating the resultant heart failure.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Cardiac Arrest -->
+            <section id="cardiac-arrest" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Out-of-Hospital Cardiac Arrest (OOHCA)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology and Epidemiology</h3>
+                    <p>Cardiac arrest is the sudden cessation of effective cardiac function, recognized by the absence of response, normal breathing, and movement. In Australia, the incidence is over 100 per 100,000 people, but EMS attempts resuscitation in less than half of these cases. Survival to discharge is approximately 12%. The most common initial rhythms are asystole and PEA, with shockable rhythms (VF/VT) present in a minority of cases, though these carry a better prognosis.</p>
+                </div>
+                <div class="management-box">
+                    <h3>ALS Management of OOHCA</h3>
+                    <p>Management is guided by the <strong>Chain of Survival</strong>: early recognition and call, early CPR, early defibrillation, and early advanced care. The overarching goal is to maintain cerebral and coronary perfusion while attempting to restore a perfusing rhythm.</p>
+                    <p><strong>Key Interventions & Rationale:</strong></p>
+                    <ul>
+                        <li><strong>High-Quality CPR:</strong> Uninterrupted chest compressions at the correct rate (100-120/min) and depth (1/3rd chest depth) with full recoil are paramount. This is the single most important intervention for survival.</li>
+                        <li><strong>Airway & Ventilation:</strong> Initial airway management with basic adjuncts and BVM is appropriate. Advanced airways (SGA or ETT) should be placed with minimal interruption to CPR. Avoid hyperventilation, which increases intrathoracic pressure and reduces venous return. Monitor with waveform capnography (EtCO₂ > 20mmHg suggests effective CPR).</li>
+                        <li><strong>Defibrillation:</strong> The definitive treatment for VF/VT. Each minute of delay reduces survival by ~10%. Administer a 200J biphasic shock as soon as a shockable rhythm is identified.</li>
+                        <li><strong>Pharmacology:</strong>
+                            <ul>
+                                <li><strong>Adrenaline:</strong> A vasopressor given every 3-5 minutes in all arrests. Its alpha-adrenergic effects cause peripheral vasoconstriction, increasing coronary and cerebral perfusion pressure.</li>
+                                <li><strong>Amiodarone/Lignocaine:</strong> Antiarrhythmics used for refractory VF/VT after the third shock to help stabilize the myocardium.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Mechanical CPR (mCPR):</strong> Devices like the LUCAS can provide consistent, high-quality compressions, freeing up paramedic resources and being particularly useful during extrication and transport. However, evidence does not show superiority over high-performance manual CPR.</li>
+                        <li><strong>Reversible Causes (H's and T's):</strong> Actively search for and treat potential reversible causes of the arrest (e.g., hypoxia, hypovolemia, tension pneumothorax, tamponade, toxins, thrombosis).</li>
+                    </ul>
+                    <p><strong>Post-ROSC Care:</strong> If Return of Spontaneous Circulation is achieved, focus on optimizing ventilation (SpO₂ 94-98%), hemodynamics (SBP >100 mmHg), and temperature (targeted temperature management), and rapidly transport to an appropriate receiving facility.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Effective management of cardiac emergencies requires integrating these concepts with strong practical skills, teamwork, and robust clinical reasoning.</p>
+        </footer>
+    </div>
+</body>
+</html>

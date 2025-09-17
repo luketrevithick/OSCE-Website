@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endocrine Emergencies: A Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Endocrine Emergencies</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#anatomy" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Endocrine System A&P</a>
+                <a href="#assessment" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Assessment</a>
+                <a href="#diabetes" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Diabetes Mellitus</a>
+                <a href="#hypoglycemia" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Hypoglycemia</a>
+                <a href="#hyperglycemia" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Hyperglycemia</a>
+                <a href="#thyroid" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Thyroid Disorders</a>
+                <a href="#adrenal" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Adrenal Gland Disorders</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Anatomy and Physiology -->
+            <section id="anatomy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Anatomy and Physiology of the Endocrine System</h2>
+                <div class="physiology-box">
+                    <h3>Overview of the Endocrine System</h3>
+                                        <p>The endocrine system is a network of glands that produce and secrete hormones, which are chemical messengers that travel through the bloodstream to regulate the function of distant target cells and organs. It works in conjunction with the nervous system to maintain homeostasis.</p>
+                    <p><strong>Key Organs and their Primary Hormones:</strong></p>
+                    <ul>
+                        <li><strong>Hypothalamus & Pituitary Gland:</strong> The "command center." The hypothalamus controls the pituitary gland, which in turn regulates many other endocrine glands by releasing tropic hormones (e.g., TSH, ACTH).</li>
+                        <li><strong>Thyroid Gland:</strong> Produces thyroid hormones (T3 and T4), which regulate the body's metabolic rate.</li>
+                        <li><strong>Parathyroid Glands:</strong> Secrete parathyroid hormone (PTH), which regulates blood calcium levels.</li>
+                        <li><strong>Adrenal Glands:</strong>
+                            <ul>
+                                <li><strong>Cortex:</strong> Produces corticosteroids (cortisol) and mineralocorticoids (aldosterone).</li>
+                                <li><strong>Medulla:</strong> Produces catecholamines (adrenaline, noradrenaline).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Pancreas (Islets of Langerhans):</strong> Produces insulin (lowers blood glucose) and glucagon (raises blood glucose).</li>
+                    </ul>
+                    <p>Hormone release is typically regulated by <strong>negative feedback loops</strong>, where the final hormone in a pathway inhibits its own production to maintain balance.</p>
+                </div>
+            </section>
+
+            <!-- Assessment -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">History Taking and Assessment</h2>
+                <div class="management-box">
+                    <h3>Key Components of Endocrine History</h3>
+                    <p>A thorough history is vital as endocrine disorders often have subtle or non-specific presentations. Key areas to explore include:</p>
+                    <ul>
+                        <li><strong>Changes in Weight and Appetite:</strong> Unexplained weight loss (hyperthyroidism, DKA, adrenal insufficiency) or gain (hypothyroidism, Cushing's syndrome).</li>
+                        <li><strong>Changes in Energy Levels:</strong> Profound fatigue is common in hypothyroidism, Addison's disease, and diabetes.</li>
+                        <li><strong>Changes in Bowel Habits:</strong> Diarrhea (hyperthyroidism) or constipation (hypothyroidism).</li>
+                        <li><strong>Polyuria & Polydipsia:</strong> Excessive urination and thirst are classic signs of diabetes mellitus.</li>
+                        <li><strong>Skin and Hair Changes:</strong> Dry skin (hypothyroidism), thin/fragile skin (Cushing's), hyperpigmentation (Addison's disease).</li>
+                        <li><strong>Past Medical History:</strong> Known endocrine disorders, autoimmune conditions, recent infections, surgery, or radiation.</li>
+                        <li><strong>Medication History:</strong> Insulin, oral hypoglycemics, steroids, thyroid medications.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Diabetes Mellitus -->
+            <section id="diabetes" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Diabetes Mellitus</h2>
+                <p>A group of metabolic disorders characterized by hyperglycemia resulting from defects in insulin secretion, insulin action, or both.</p>
+                <table>
+                    <thead><tr><th>Feature</th><th>Type 1 Diabetes (T1DM)</th><th>Type 2 Diabetes (T2DM)</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pathophysiology</strong></td>
+                            <td>An autoimmune disease causing the destruction of pancreatic beta cells, leading to an <strong>absolute insulin deficiency</strong>.</td>
+                            <td>A progressive condition characterized by <strong>insulin resistance</strong> (target cells don't respond effectively to insulin) and a relative insulin deficiency.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Onset</strong></td>
+                            <td>Typically occurs in childhood or adolescence; onset is often abrupt.</td>
+                            <td>Typically occurs in adulthood; onset is gradual. Strong association with obesity and lifestyle factors.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Management</strong></td>
+                            <td>Requires lifelong insulin therapy (via injections or pump).</td>
+                            <td>Managed with lifestyle changes (diet, exercise), oral anti-hyperglycemic medications, and sometimes insulin.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Hypoglycemia -->
+            <section id="hypoglycemia" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Hypoglycemia</h2>
+                <div class="disorder-box">
+                    <p><strong>Definition:</strong> A blood glucose level (BGL) of &lt; 4.0 mmol/L in a symptomatic patient. The brain relies almost exclusively on glucose for energy, so hypoglycemia is a true medical emergency.</p>
+                    <p><strong>Causes:</strong> Most common in patients with diabetes due to excessive insulin or oral hypoglycemic medication, missed meals, or unplanned exercise. Can also occur in non-diabetics due to liver disease, alcoholism, or insulin-producing tumors.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Signs, Symptoms, and Management</h3>
+                    <p><strong>Signs & Symptoms:</strong> Manifestations result from both neuroglycopenia (lack of glucose to the brain) and the sympathoadrenal response.</p>
+                    <ul>
+                        <li><strong>Early (Adrenergic):</strong> Diaphoresis (sweating), trembling, tachycardia, palpitations, anxiety, hunger.</li>
+                        <li><strong>Late (Neuroglycopenic):</strong> Confusion, dizziness, weakness, altered level of consciousness, seizures, coma. Can mimic stroke or intoxication.</li>
+                    </ul>
+                    <p><strong>Pre-hospital Management:</strong></p>
+                    <ol>
+                        <li><strong>If Conscious and Able to Swallow:</strong> Administer oral glucose (e.g., glucose gel, sugary drink) followed by a complex carbohydrate (e.g., sandwich) to prevent recurrence.</li>
+                        <li><strong>If Unconscious or Unable to Swallow:</strong>
+                            <ul>
+                                <li>Establish IV/IO access and administer <strong>IV Glucose 10%</strong>.</li>
+                                <li>If IV/IO access is not available, administer <strong>IM Glucagon</strong>. Glucagon works by stimulating the liver to release stored glucose (glycogenolysis) and is only effective if the patient has adequate glycogen stores.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Hyperglycemia -->
+            <section id="hyperglycemia" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Hyperglycemic Emergencies</h2>
+                <p>Life-threatening conditions resulting from uncontrolled hyperglycemia and insulin deficiency.</p>
+                <table>
+                    <thead><tr><th>Condition</th><th>Diabetic Ketoacidosis (DKA)</th><th>Hyperosmolar Hyperglycemic Syndrome (HHS)</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Typical Patient</strong></td>
+                            <td>Type 1 Diabetes</td>
+                            <td>Type 2 Diabetes (often elderly)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pathophysiology</strong></td>
+                            <td><strong>Absolute insulin deficiency</strong> leads to severe hyperglycemia. Cells starve, so the body breaks down fat for energy (lipolysis), producing acidic ketone bodies. This results in a triad of <strong>hyperglycemia, ketosis, and metabolic acidosis</strong>.</td>
+                            <td><strong>Relative insulin deficiency</strong>. There is enough insulin to prevent ketosis, but not enough to control glucose. This leads to profound hyperglycemia, causing severe dehydration and hyperosmolarity.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Key Signs & Symptoms</strong></td>
+                            <td>Polyuria, polydipsia, dehydration. Nausea/vomiting, abdominal pain. <strong>Kussmaul's respirations</strong> (deep, rapid breathing to compensate for acidosis). Fruity (acetone) odor on breath.</td>
+                            <td>Profound dehydration, severe altered mental status (confusion, coma), polyuria, polydipsia. Onset is more gradual than DKA.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Pre-hospital Management</strong></td>
+                            <td colspan="2">The cornerstone of pre-hospital management for both DKA and HHS is aggressive <strong>fluid resuscitation</strong> with isotonic crystalloids (e.g., Sodium Chloride 0.9%) to correct dehydration and improve tissue perfusion. Manage ABCs and transport rapidly. Insulin administration is typically an in-hospital therapy.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <!-- Thyroid Disorders -->
+            <section id="thyroid" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Thyroid Disorders</h2>
+                 <table>
+                    <thead><tr><th>Condition</th><th>Pathophysiology</th><th>Signs & Symptoms</th><th>Emergency Presentation</th><th>Management</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hyperthyroidism</strong></td>
+                            <td>Excess production of thyroid hormones (T3/T4), leading to a hypermetabolic state. The most common cause is Graves' disease, an autoimmune condition.</td>
+                            <td>Weight loss, heat intolerance, sweating, tachycardia, palpitations, anxiety, tremor. Goiter and exophthalmos (bulging eyes) may be present.</td>
+                            <td><strong>Thyroid Storm:</strong> A rare, life-threatening exacerbation characterized by extreme hyperthermia, severe tachycardia/arrhythmias, agitation, delirium, and shock.</td>
+                            <td>Supportive care: ABCs, cooling measures for hyperthermia, management of arrhythmias, and rapid transport.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hypothyroidism</strong></td>
+                            <td>Deficiency of thyroid hormones, leading to a hypometabolic state. The most common cause is Hashimoto's thyroiditis, an autoimmune disease.</td>
+                            <td>Weight gain, cold intolerance, fatigue, lethargy, bradycardia, dry skin, constipation.</td>
+                            <td><strong>Myxedema Coma:</strong> A rare, life-threatening decompensation characterized by profound hypothermia, altered mental status (coma), hypoventilation, bradycardia, and hypotension.</td>
+                            <td>Supportive care: ABCs (may require ventilatory support), active warming measures, management of bradycardia/hypotension, and rapid transport.</td>
+                        </tr>
+                    </tbody>
+                 </table>
+            </section>
+
+            <!-- Adrenal Disorders -->
+            <section id="adrenal" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Adrenal Gland Disorders</h2>
+                <div class="disorder-box">
+                    <h3>Adrenal Insufficiency (Addison's Disease)</h3>
+                    <p><strong>Pathophysiology:</strong> The adrenal gland fails to produce adequate amounts of cortisol and often aldosterone. Primary adrenal insufficiency (Addison's disease) is usually due to autoimmune destruction of the adrenal cortex. Cortisol is the body's primary stress hormone; its absence means the body cannot mount an effective response to physiological stress.</p>
+                </div>
+                 <div class="management-box">
+                    <h3>Adrenal Crisis</h3>
+                    <p><strong>Definition:</strong> A life-threatening emergency caused by an acute deficiency of cortisol. It is often triggered by a stressor (e.g., infection, trauma, surgery) in a patient with known adrenal insufficiency or in a patient who has been on long-term steroid therapy.</p>
+                    <p><strong>Assessment & Signs/Symptoms:</strong> A high index of suspicion is required. Look for a medical alert bracelet. The key features are profound, refractory <strong>hypotension and shock</strong>, often accompanied by non-specific symptoms like vomiting, abdominal pain, fever, and altered mental state. Hypoglycemia and hyperkalemia may also be present.</p>
+                    <p><strong>Pharmacology and Management:</strong></p>
+                    <ol>
+                        <li>Support ABCs.</li>
+                        <li>Aggressive fluid resuscitation with isotonic crystalloids for hypotension.</li>
+                        <li>Correct hypoglycemia with IV Glucose.</li>
+                        <li>The definitive treatment is urgent steroid replacement. Administer <strong>Hydrocortisone</strong> (IM or IV) as per local guidelines. This is a life-saving intervention.</li>
+                        <li>Transport immediately.</li>
+                    </ol>
+                </div>
+                <div class="disorder-box">
+                    <h3>Cushing's Syndrome</h3>
+                    <p><strong>Pathophysiology:</strong> A condition caused by prolonged exposure to excess cortisol. This can be due to an adrenal tumor or, more commonly, from long-term use of high-dose glucocorticoid medications.</p>
+                    <p><strong>Clinical Features:</strong> Central obesity, "moon face," "buffalo hump," thin skin, purple striae, hypertension, and hyperglycemia.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Always integrate this knowledge with a thorough patient history and clinical reasoning, as endocrine emergencies can present in varied and non-specific ways.</p>
+        </footer>
+    </div>
+</body>
+</html>
