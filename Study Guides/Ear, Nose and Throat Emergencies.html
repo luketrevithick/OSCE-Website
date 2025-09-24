@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ear, Nose, and Throat Emergencies: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Ear, Nose, and Throat Emergencies</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="#ear" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Ear Emergencies</a>
+                <a href="#nose" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Nose Emergencies</a>
+                <a href="#throat" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Throat Emergencies</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+            
+            <section id="assessment-principles" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">General ENT Assessment Principles</h2>
+                <div class="assessment-box">
+                    <h3>Key Components of History Taking</h3>
+                    <p>A focused history is essential for diagnosing ENT emergencies. Key questions should cover:</p>
+                    <ul>
+                        <li><strong>Onset and Duration:</strong> When did the symptoms start? Are they constant or intermittent?</li>
+                        <li><strong>Pain:</strong> Use SOCRATES (Site, Onset, Character, Radiation, Associated symptoms, Timing, Exacerbating/relieving factors, Severity).</li>
+                        <li><strong>Fever and Systemic Symptoms:</strong> Presence of fever, malaise, or other signs of infection.</li>
+                        <li><strong>Associated Symptoms:</strong>
+                            <ul>
+                                <li><strong>Ear:</strong> Discharge (otorrhea), hearing loss, tinnitus, vertigo/dizziness.</li>
+                                <li><strong>Nose:</strong> Bleeding (epistaxis), discharge, obstruction, facial pain/pressure.</li>
+                                <li><strong>Throat:</strong> Sore throat, difficulty swallowing (dysphagia), painful swallowing (odynophagia), voice changes (dysphonia), breathing difficulties (stridor).</li>
+                            </ul>
+                        </li>
+                        <li><strong>History:</strong> Recent upper respiratory tract infections, trauma, allergies, foreign body insertion, or pre-existing conditions.</li>
+                    </ul>
+                </div>
+                <div class="management-box">
+                    <h3>General Physical Examination</h3>
+                    <ol>
+                        <li><strong>Inspection:</strong> Look for swelling, redness, deformity, discharge, or signs of trauma. Observe for respiratory distress (e.g., stridor, tripod position).</li>
+                        <li><strong>Palpation:</strong> Gently palpate for tenderness, swelling, or crepitus over the sinuses, mastoid process, and lymph nodes.</li>
+                        <li><strong>Specialized Examination (as appropriate):</strong>
+                            <ul>
+                                <li><strong>Otoscopy:</strong> To visualize the external ear canal and tympanic membrane.</li>
+                                <li><strong>Nasal Examination:</strong> To check for foreign bodies, swelling, or bleeding source.</li>
+                                <li><strong>Oral/Pharyngeal Examination:</strong> To assess the tonsils, pharynx, and for signs of abscess or obstruction.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Ear Emergencies -->
+            <section id="ear" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Ear Emergencies</h2>
+                                <div class="disorder-box">
+                    <h3>Otitis Externa vs. Otitis Media</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>Pathophysiology</th>
+                                <th>Key Signs & Symptoms</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Otitis Externa ("Swimmer's Ear")</strong></td>
+                                <td>Infection or inflammation of the <strong>external ear canal</strong>. Often caused by bacteria or fungi, commonly due to persistent moisture.</td>
+                                <td>Otalgia (ear pain), especially when pulling on the auricle; itchiness; otorrhea (discharge); feeling of fullness.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Otitis Media</strong></td>
+                                <td>Infection or inflammation of the <strong>middle ear</strong>, the space behind the eardrum. Common in children due to their shorter, more horizontal Eustachian tubes.</td>
+                                <td>Otalgia, fever, hearing loss, irritability (in infants). The tympanic membrane may be bulging and red on otoscopy.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="disorder-box">
+                    <h3>Foreign Bodies in the Ear</h3>
+                    <p><strong>Presentation:</strong> Common in children. Can cause pain, decreased hearing, and discharge. Live insects can cause significant distress due to buzzing and movement.</p>
+                </div>
+                 <div class="management-box">
+                    <h3>Pre-hospital Management of Ear Emergencies</h3>
+                    <ul>
+                        <li><strong>Primary Goal:</strong> Symptomatic relief and transport for definitive diagnosis and care. Sudden hearing loss is an emergency requiring prompt evaluation.</li>
+                        <li><strong>Pain Management:</strong> Provide analgesia as required.</li>
+                        <li><strong>Foreign Bodies:</strong> Do not attempt removal in the pre-hospital setting unless it is easily visible and accessible at the canal entrance. Probing deeper can cause trauma. For live insects, instilling mineral oil can provide relief by immobilizing the insect.</li>
+                        <li><strong>Disposition:</strong> Transport for further assessment. Patients with suspected otitis media may require antibiotics, while foreign bodies require specialized removal.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Nose Emergencies -->
+            <section id="nose" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Nose Emergencies</h2>
+                                <div class="disorder-box">
+                    <h3>Epistaxis (Nosebleed)</h3>
+                    <p><strong>Pathophysiology:</strong> Bleeding from the nasal mucosa. Can be anterior or posterior.</p>
+                    <ul>
+                        <li><strong>Anterior Epistaxis:</strong> Most common (90%). Bleeding originates from <strong>Kiesselbach's plexus</strong>, a rich vascular network on the anterior nasal septum. Usually less severe.</li>
+                        <li><strong>Posterior Epistaxis:</strong> Bleeding from <strong>Woodruff's plexus</strong> in the posterior nasal cavity. Less common but more severe, often causing blood to flow down the back of the throat.</li>
+                    </ul>
+                    <p><strong>Causes:</strong> Trauma, dry air, infections (sinusitis), vigorous nose blowing, anticoagulant use, or tumors.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Management of Epistaxis</h3>
+                    <ol>
+                        <li>Have the patient sit upright and lean <strong>forward</strong> to prevent blood from being swallowed.</li>
+                        <li>Instruct the patient to firmly pinch the soft, fleshy part of their nose for at least 20 minutes without interruption.</li>
+                        <li>Apply a cold pack to the bridge of the nose.</li>
+                        <li>If bleeding is severe, prolonged, or associated with haemodynamic instability, provide supportive care (IV access, fluid resuscitation) and transport rapidly. Consider referral to an Extended Care Paramedic (ECP) for nasal packing if available and bleeding persists.</li>
+                    </ol>
+                </div>
+                <div class="disorder-box">
+                    <h3>Other Nasal Conditions</h3>
+                     <ul>
+                        <li><strong>Sinusitis:</strong> Inflammation of the paranasal sinuses, usually following a viral URI. Presents with facial pain/pressure, purulent nasal discharge, and congestion. Management is symptomatic.</li>
+                        <li><strong>Foreign Bodies:</strong> Common in children. Presents with unilateral foul-smelling nasal discharge. Do not attempt removal unless easily visible. The "parent's kiss" technique (positive pressure) may be attempted under medical guidance.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- Throat Emergencies -->
+            <section id="throat" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Throat Emergencies</h2>
+                                <table>
+                    <thead>
+                        <tr>
+                            <th>Condition</th>
+                            <th>Pathophysiology</th>
+                            <th>Key Signs & Assessment</th>
+                            <th>Management</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tonsillitis</strong></td>
+                            <td>Inflammation of the tonsils, usually viral. Bacterial cases are often caused by Streptococcus ("strep throat").</td>
+                            <td>Sore throat, dysphagia, fever, swollen/red tonsils, possibly with exudates.</td>
+                            <td>Symptomatic care, analgesia, and transport for assessment.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Peritonsillar Abscess (Quinsy)</strong></td>
+                            <td>A collection of pus that forms between the tonsil and the pharyngeal muscles. A serious complication of tonsillitis.</td>
+                            <td>Severe unilateral sore throat, fever, muffled "hot potato" voice, trismus (difficulty opening the mouth), and uvular deviation away from the affected side.</td>
+                            <td>This is an airway emergency. Provide analgesia, maintain a position of comfort, and transport rapidly for definitive drainage.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Post-Tonsillectomy Hemorrhage</strong></td>
+                            <td>Bleeding from the tonsillar bed after surgery. Can be primary (within 24 hours) or secondary (5-10 days post-op).</td>
+                            <td>Frequent swallowing, hematemesis, or visible bleeding from the mouth. Can lead to significant blood loss and hypovolemic shock.</td>
+                            <td>Manage as a major hemorrhage. Maintain airway, provide fluid resuscitation if needed, and transport rapidly to an appropriate surgical facility.</td>
+                        </tr>
+                         <tr>
+                            <td><strong>Tracheostomy Issues</strong></td>
+                            <td>Emergencies can include obstruction (mucus plug), dislodgement, or bleeding.</td>
+                            <td>Assess for respiratory distress, check patency by attempting suctioning. Note the type of tube (cuffed/uncuffed).</td>
+                            <td>If obstructed, attempt suctioning. If dislodged and patient is in distress, attempt to ventilate via stoma with a pediatric mask or via mouth/nose while occluding the stoma. Rapid transport is critical.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Always prioritize a thorough patient assessment and manage life threats according to your clinical practice guidelines.</p>
+        </footer>
+    </div>
+</body>
+</html>

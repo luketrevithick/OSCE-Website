@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepsis Assessment and Management: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .concept-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .concept-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Sepsis Assessment and Management</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#definitions" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Definitions</a>
+                <a href="#assessment" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Assessment & Signs</a>
+                <a href="#meningococcal" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Meningococcal Septicaemia</a>
+                <a href="#management" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Pre-hospital Management</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Definitions -->
+            <section id="definitions" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Understanding Sepsis: Definitions</h2>
+                <div class="concept-box">
+                    <h3>The Sepsis-3 Definitions</h3>
+                    <p>The understanding and definition of sepsis have evolved to focus on organ dysfunction as the key identifier of a life-threatening condition, moving away from a purely inflammation-based model.</p>
+                    <ul>
+                        <li><strong>Sepsis:</strong> Life-threatening organ dysfunction caused by a dysregulated host response to infection.</li>
+                        <li><strong>Septic Shock:</strong> A subset of sepsis with profound circulatory, cellular, and metabolic abnormalities, characterized by persistent hypotension requiring vasopressors to maintain a MAP ≥65 mmHg and a serum lactate level >2 mmol/L despite adequate fluid resuscitation.</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>SIRS vs. Sepsis</h3>
+                    <p>It is crucial to differentiate Systemic Inflammatory Response Syndrome (SIRS) from sepsis.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>SIRS</th>
+                                <th>Sepsis (Sepsis-3 Definition)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Trigger</strong></td>
+                                <td>A non-specific, exaggerated defense response to any noxious stressor (infectious or non-infectious, e.g., trauma, burns, pancreatitis).</td>
+                                <td>Specifically triggered by a host's dysregulated response to an <strong>infection</strong>.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Core Component</strong></td>
+                                <td>Systemic inflammation. Defined by ≥2 SIRS criteria (Temp >38°C or <36°C; HR >90; RR >20; abnormal WBC).</td>
+                                <td><strong>Life-threatening organ dysfunction</strong>. An infection is only considered sepsis if it causes organ dysfunction.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Clinical Significance</strong></td>
+                                <td>Indicates a systemic inflammatory response but does not necessarily imply a severe condition or organ failure.</td>
+                                <td>Always a severe, life-threatening condition with a significant risk of progressing to septic shock and death. Requires immediate, aggressive treatment.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Assessment & Signs -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Assessment and Signs of Sepsis</h2>
+                <div class="assessment-box">
+                    <h3>Pre-hospital Assessment Tools: qSOFA</h3>
+                    <p>The <strong>quick Sequential Organ Failure Assessment (qSOFA)</strong> score is a simple bedside prompt to identify patients with suspected infection who are at greater risk for a poor outcome. It is not a diagnostic tool for sepsis but a screening tool for severity.</p>
+                    <p><strong>Allocate one point for each of the following (Score of ≥2 is high risk):</strong></p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Respiratory Rate:</strong> ≥ 22 breaths per minute</li>
+                        <li><strong>Altered Mentation:</strong> GCS < 15</li>
+                        <li><strong>Systolic Blood Pressure:</strong> ≤ 100 mmHg</li>
+                    </ul>
+                </div>
+                <div class="concept-box">
+                    <h3>Key Signs and Symptoms of Sepsis</h3>
+                    <p>Sepsis presents with signs of both infection and organ dysfunction.</p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <strong>In Adults:</strong>
+                            <ul class="list-disc list-inside">
+                                <li>Altered level of consciousness (confusion, lethargy)</li>
+                                <li>Fever or hypothermia</li>
+                                <li>Tachycardia and hypotension</li>
+                                <li>Tachypnea</li>
+                                <li>Pale, cool, or mottled skin</li>
+                                <li>Decreased urine output</li>
+                                <li>Hyperglycemia</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <strong>In Children:</strong>
+                            <ul class="list-disc list-inside">
+                                <li>Cyanosis</li>
+                                <li>Non-blanching rash</li>
+                                <li>Increased work of breathing (grunting, recessions)</li>
+                                <li>Weak, high-pitched, or continuous cry</li>
+                                <li>Disinterested, lethargic, or floppy</li>
+                                <li>Food refusal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="assessment-box">
+                    <h3>Biomarkers in Sepsis Assessment</h3>
+                    <ul>
+                        <li><strong>Lactate:</strong> A key biomarker for tissue hypoxia. In sepsis, poor perfusion forces cells into anaerobic metabolism, producing lactate. A level >2 mmol/L indicates significant hypoperfusion and is associated with increased mortality.</li>
+                        <li><strong>End-Tidal CO2 (EtCO2):</strong> A non-invasive indicator of perfusion and metabolism. In sepsis, low EtCO2 can reflect poor pulmonary perfusion (due to shock) and metabolic acidosis. It is a valuable tool for monitoring CPR quality and response to treatment.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Meningococcal Septicaemia -->
+            <section id="meningococcal" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Meningococcal Septicaemia</h2>
+                <div class="concept-box">
+                    <h3>Pathophysiology and Presentation</h3>
+                    <p>Meningococcal septicaemia is a severe, rapidly progressing form of sepsis caused by the bacterium <em>Neisseria meningitidis</em> entering the bloodstream. The bacteria multiply uncontrollably, releasing toxins that cause widespread vascular damage, leading to circulatory collapse and multi-organ failure.</p>
+                    <p><strong>Key Differentiating Sign:</strong> While patients present with general signs of sepsis (fever, ALOC, headache, muscle aches), the hallmark sign is a <strong>petechial or purpuric non-blanching rash</strong>. This rash is caused by bleeding into the skin from damaged capillaries and is a sign of advanced disease.</p>
+                                    </div>
+            </section>
+
+            <!-- Pre-hospital Management -->
+            <section id="management" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Pre-hospital Management of Sepsis</h2>
+                <div class="management-box">
+                    <h3>The One-Hour Sepsis Bundle</h3>
+                    <p>The "Surviving Sepsis Campaign" emphasizes rapid, aggressive intervention. The "one-hour bundle" outlines key actions that must be initiated as soon as sepsis is recognized.</p>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Measure Lactate Level.</strong></li>
+                        <li>Obtain blood cultures before administering antibiotics.</li>
+                        <li><strong>Administer Broad-Spectrum Antibiotics.</strong></li>
+                        <li><strong>Begin rapid administration of 30 mL/kg crystalloid for hypotension or lactate ≥4 mmol/L.</strong></li>
+                        <li>Apply vasopressors if hypotensive during or after fluid resuscitation to maintain a MAP ≥65 mmHg.</li>
+                    </ol>
+                </div>
+                <div class="management-box">
+                    <h3>Paramedic Management Priorities</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Early Identification:</strong> Maintain a high index of suspicion. Use qSOFA and clinical judgment to identify at-risk patients.</li>
+                        <li><strong>Oxygen:</strong> Correct hypoxia to maintain SpO2 >94%.</li>
+                        <li><strong>IV Fluid Resuscitation: DO NOT DELAY.</strong> This is the cornerstone of pre-hospital management. For patients with signs of shock, administer large-volume boluses of isotonic crystalloids (e.g., Normal Saline or Compound Sodium Lactate) as per local guidelines (often 20 mL/kg).</li>
+                        <li><strong>Antibiotics:</strong> For suspected meningococcal septicaemia, early pre-hospital administration of antibiotics (e.g., Benzylpenicillin, Ceftriaxone) is a life-saving intervention.</li>
+                        <li><strong>Supportive Care:</strong> Administer paracetamol for fever, manage ABCs, and obtain IV/IO access early.</li>
+                        <li><strong>Pre-notification and Rapid Transport:</strong> Alert the receiving hospital early to activate their sepsis pathway.</li>
+                    </ol>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview. Sepsis is a time-critical emergency where early recognition and aggressive management are key to improving patient outcomes.</p>
+        </footer>
+    </div>
+</body>
+</html>
