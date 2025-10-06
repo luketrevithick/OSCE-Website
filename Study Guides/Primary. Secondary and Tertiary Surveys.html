@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primary, Secondary, and Tertiary Surveys: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .primary-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .primary-box strong {
+            color: #b91c1c;
+        }
+        .secondary-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .secondary-box strong {
+            color: #b45309;
+        }
+        .tertiary-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .tertiary-box strong {
+            color: #15803d;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Primary, Secondary, and Tertiary Surveys</h1>
+            <p class="text-xl text-gray-600 mt-2">A Comprehensive Guide for Paramedic Assessment</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#primary" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Primary Survey</a>
+                <a href="#secondary" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Secondary Survey</a>
+                 <a href="#vitals" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Vital Signs</a>
+                <a href="#tertiary" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Tertiary Surveys</a>
+                <a href="#handover" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Handover</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Primary Survey -->
+            <section id="primary" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Primary Survey (DRCABCDE)</h2>
+                <p class="mt-2 text-gray-600">The primary survey is a rapid, systematic approach to identify and manage immediate life-threatening conditions. The sequence must be followed in order, treating life threats as they are found.</p>
+                
+                <div class="primary-box"><strong>D - Danger:</strong> Assess the scene for any dangers to yourself, your partner, the patient, and bystanders. Ensure the scene is safe before proceeding.</div>
+                <div class="primary-box"><strong>R - Response:</strong> Assess the patient's level of consciousness using the AVPU scale (Alert, Voice, Pain, Unresponsive). For a more detailed assessment, use the Glasgow Coma Scale (GCS).</div>
+                
+                <h3>Glasgow Coma Scale (GCS)</h3>
+                <table>
+                    <thead>
+                        <tr><th>Response</th><th>Score</th><th>Paediatric Modification (Pre-verbal)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td colspan="3" class="font-bold bg-gray-200">Eye Opening</td></tr>
+                        <tr><td>Spontaneous</td><td>4</td><td>Spontaneous</td></tr>
+                        <tr><td>To Voice</td><td>3</td><td>To Shout</td></tr>
+                        <tr><td>To Pain</td><td>2</td><td>To Pain</td></tr>
+                        <tr><td>None</td><td>1</td><td>None</td></tr>
+                        <tr><td colspan="3" class="font-bold bg-gray-200">Verbal Response</td></tr>
+                        <tr><td>Oriented</td><td>5</td><td>Coos, babbles</td></tr>
+                        <tr><td>Confused</td><td>4</td><td>Irritable cry</td></tr>
+                        <tr><td>Inappropriate Words</td><td>3</td><td>Cries to pain</td></tr>
+                        <tr><td>Incomprehensible Sounds</td><td>2</td><td>Moans to pain</td></tr>
+                        <tr><td>None</td><td>1</td><td>None</td></tr>
+                         <tr><td colspan="3" class="font-bold bg-gray-200">Motor Response</td></tr>
+                        <tr><td>Obeys Commands</td><td>6</td><td>Normal spontaneous movements</td></tr>
+                        <tr><td>Localises to Pain</td><td>5</td><td>Withdraws to touch</td></tr>
+                        <tr><td>Withdraws from Pain</td><td>4</td><td>Withdraws to pain</td></tr>
+                        <tr><td>Abnormal Flexion (Decorticate)</td><td>3</td><td>Abnormal Flexion</td></tr>
+                        <tr><td>Abnormal Extension (Decerebrate)</td><td>2</td><td>Abnormal Extension</td></tr>
+                        <tr><td>None</td><td>1</td><td>None</td></tr>
+                    </tbody>
+                </table>
+                <p class="mt-2 text-sm"><strong>Total Score:</strong> 15 (Best) to 3 (Worst). A score of ≤ 8 indicates severe brain injury and inability to protect the airway.</p>
+                
+                <h3>Paediatric Assessment Triangle (PAT)</h3>
+                <p>A rapid "from the doorway" assessment tool for paediatrics that provides a general impression of the child's condition before hands-on assessment. It evaluates three components:</p>
+                 <ul>
+                    <li><strong>Appearance:</strong> Tone, Interactiveness, Consolability, Look/Gaze, Speech/Cry (TICLS). This reflects adequacy of brain perfusion and oxygenation.</li>
+                    <li><strong>Work of Breathing:</strong> Assesses respiratory effort. Look for abnormal sounds (stridor, grunting), abnormal positioning (tripod), retractions, and nasal flaring.</li>
+                    <li><strong>Circulation to the Skin:</strong> Reflects adequacy of cardiac output and core perfusion. Look for pallor, mottling, or cyanosis.</li>
+                </ul>
+
+                <div class="primary-box"><strong>C - Catastrophic Haemorrhage:</strong> Check for and control any immediately life-threatening bleeding.</div>
+                <div class="primary-box"><strong>A - Airway:</strong> Is the airway patent? Look for obstructions. Use airway opening manoeuvres (head-tilt-chin-lift or jaw thrust if C-spine injury is suspected) and consider basic adjuncts (OPA/NPA) if necessary.</div>
+                <div class="primary-box"><strong>B - Breathing:</strong> Look, listen, and feel for breathing. Assess rate, rhythm, and quality. Check for equal chest rise and fall and auscultate for breath sounds. Provide oxygen or assisted ventilations as required.</div>
+<div class="primary-box"><strong>C - Circulation:</strong> Check for a central pulse (carotid in adults/children, brachial in infants) for no more than 10 seconds. Assess skin colour, temperature, and capillary refill. Identify and control any catastrophic external haemorrhage immediately.</div>
+                <div class="primary-box"><strong>D - Disability:</strong> A more detailed neurological assessment. Check pupillary response (size, equality, reactivity to light) and BGL. Re-evaluate GCS.</div>
+                <div class="primary-box"><strong>E - Exposure/Environment:</strong> Expose the patient to perform a thorough examination, looking for injuries, rashes, etc., while preventing hypothermia by keeping them covered and warm.</div>
+            </section>
+
+            <!-- Secondary Survey -->
+            <section id="secondary" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Secondary Survey (AMPLE)</h2>
+                <p class="mt-2 text-gray-600">Performed after the primary survey is complete and immediate life threats have been managed. This is a systematic approach to gathering a detailed patient history.</p>
+                <div class="secondary-box"><strong>A - Allergies:</strong> Are you allergic to any medications, foods, or environmental substances? What is the reaction?</div>
+                <div class="secondary-box"><strong>M - Medications:</strong> What medications do you take, including prescribed, over-the-counter, and recreational drugs? What is the dose and when was the last time you took them?</div>
+                <div class="secondary-box"><strong>P - Past Medical History:</strong> Do you have any medical conditions? Have you had any surgeries? Are you pregnant?</div>
+                <div class="secondary-box"><strong>L - Last Meal (and Last Ins/Outs):</strong> When was the last time you ate or drank anything? What was your last bowel motion and urination like?</div>
+                <div class="secondary-box"><strong>E - Events Leading Up To Incident:</strong> What were you doing when the symptoms started? Describe the sequence of events.</div>
+            </section>
+            
+            <!-- Vital Signs -->
+            <section id="vitals" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Vital Signs and Normal Ranges</h2>
+                <p class="mt-2 text-gray-600">A full set of vital signs provides a baseline and is crucial for trending the patient's condition.</p>
+                 <table>
+                    <thead>
+                        <tr><th>Vital Sign</th><th>Normal Adult Range</th><th>Normal Paediatric Range (Approximate)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Pulse Rate (bpm)</strong></td><td>60 - 100</td><td>Infant: 100-160, Child: 70-120, Adolescent: 60-100</td></tr>
+                        <tr><td><strong>Respiratory Rate (breaths/min)</strong></td><td>12 - 20</td><td>Infant: 30-60, Child: 20-30, Adolescent: 12-20</td></tr>
+                        <tr><td><strong>Blood Pressure (mmHg)</strong></td><td>Systolic: 90-140, Diastolic: 60-90</td><td>Varies significantly with age. A simple guide for minimum systolic is 70 + (2 x age in years).</td></tr>
+                        <tr><td><strong>Blood Glucose Level (mmol/L)</strong></td><td>4.0 - 8.0</td><td>4.0 - 8.0</td></tr>
+                        <tr><td><strong>O₂ Saturation (%)</strong></td><td>94% - 100% on room air</td><td>94% - 100% on room air</td></tr>
+                        <tr><td><strong>End-Tidal CO₂ (mmHg)</strong></td><td>35 - 45</td><td>35 - 45</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Tertiary Surveys -->
+            <section id="tertiary" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Tertiary Surveys: Focused Assessments</h2>
+                <p class="mt-2 text-gray-600">These are detailed, systematic examinations or assessments focused on a specific body system or complaint, performed after the primary and secondary surveys are complete.</p>
+                
+                <div class="tertiary-box">
+                    <h3>Pain Assessment</h3>
+                    <p>Quantifying pain is essential for guiding treatment and evaluating its effectiveness. In addition to a numeric score, use a mnemonic like SOCRATES or PQRST to characterize the pain.</p>
+                    <p><strong>Adult:</strong> Use a numeric rating scale (0-10) where 0 is no pain and 10 is the worst pain imaginable.</p>
+                    <p><strong>Paediatric (FLACC Scale):</strong> A behavioral scale used for pre-verbal or non-verbal children (typically 2 months to 7 years). Score 0, 1, or 2 for each of the five categories, for a total score of 0-10.</p>
+                    <table>
+                        <thead><tr><th>Category</th><th>Score 0</th><th>Score 1</th><th>Score 2</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Face</strong></td><td>No particular expression or smile</td><td>Occasional grimace or frown, withdrawn</td><td>Frequent to constant quivering chin, clenched jaw</td></tr>
+                            <tr><td><strong>Legs</strong></td><td>Normal position or relaxed</td><td>Uneasy, restless, tense</td><td>Kicking, or legs drawn up</td></tr>
+                            <tr><td><strong>Activity</strong></td><td>Lying quietly, normal position, moves easily</td><td>Squirming, shifting back and forth, tense</td><td>Arched, rigid or jerking</td></tr>
+                            <tr><td><strong>Cry</strong></td><td>No cry (awake or asleep)</td><td>Moans or whimpers; occasional complaint</td><td>Crying steadily, screams or sobs, frequent complaints</td></tr>
+                            <tr><td><strong>Consolability</strong></td><td>Content, relaxed</td><td>Reassured by occasional touching, hugging or being talked to</td><td>Difficult to console or comfort</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="tertiary-box">
+                    <h3>Stroke Assessment (BEFAST)</h3>
+                    <p>A tool for rapid identification of stroke symptoms to facilitate early recognition and hospital pre-notification.</p>
+                    <ul>
+                        <li><strong>B - Balance:</strong> Sudden loss of balance, headache, or dizziness.</li>
+                        <li><strong>E - Eyes:</strong> Sudden vision loss or change in one or both eyes.</li>
+                        <li><strong>F - Face:</strong> Ask the patient to smile. Does one side of the face droop?</li>
+                        <li><strong>A - Arms:</strong> Ask the patient to raise both arms. Does one arm drift downward?</li>
+                        <li><strong>S - Speech:</strong> Is speech slurred or strange? Ask the patient to repeat a simple sentence (e.g., "The sky is blue").</li>
+                        <li><strong>T - Time:</strong> If any of these signs are present, it's time to call emergency services. Critically, note the time the patient was last seen well.</li>
+                    </ul>
+                </div>
+
+                <div class="tertiary-box">
+                    <h3>Respiratory Examination</h3>
+                    <p>A systematic assessment to identify the cause of respiratory distress.</p>
+                    <ol>
+                        <li><strong>Inspect:</strong> Respiratory rate, rhythm, effort (use of accessory muscles, tripod position), skin color (cyanosis), chest symmetry, and audible sounds (wheeze, stridor).</li>
+                        <li><strong>Palpate:</strong> Chest wall for tenderness, crepitus (subcutaneous emphysema), and symmetrical expansion.</li>
+                        <li><strong>Percuss:</strong> Tapping on the chest wall. Hyper-resonance suggests pneumothorax; dullness suggests fluid or consolidation (effusion, pneumonia).</li>
+                        <li><strong>Auscultate:</strong> Listen for normal (vesicular) breath sounds and identify any added sounds.</li>
+                    </ol>
+                    <table>
+                        <thead><tr><th>Added Sound</th><th>Description</th><th>Common Differential Diagnoses</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Wheeze</strong></td><td>High-pitched continuous sound, usually on expiration.</td><td>Asthma, COPD, Anaphylaxis, lower airway obstruction.</td></tr>
+                            <tr><td><strong>Crackles (Rales)</strong></td><td>Fine or coarse popping/crackling sounds, usually on inspiration.</td><td>Pulmonary edema, Pneumonia, Atelectasis, Pulmonary fibrosis.</td></tr>
+                            <tr><td><strong>Stridor</strong></td><td>High-pitched, harsh sound on inspiration.</td><td>Upper airway obstruction (e.g., foreign body, epiglottitis, croup). <strong>A medical emergency.</strong></td></tr>
+                            <tr><td><strong>Pleural Rub</strong></td><td>Leathery, grating sound on inspiration and expiration.</td><td>Pleurisy (inflammation of the pleura).</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tertiary-box">
+                    <h3>Cardiovascular Examination</h3>
+                     <ol>
+                        <li><strong>Inspect:</strong> Look for signs of poor perfusion (pallor, cyanosis), peripheral edema, and jugular venous distension (JVD).</li>
+                        <li><strong>Palpate:</strong> Central and peripheral pulses (rate, rhythm, character), capillary refill time, skin temperature, and for heaves or thrills on the chest wall.</li>
+                        <li><strong>Auscultate:</strong> Listen to heart sounds (S1, S2) for rate and rhythm. Identify any murmurs (indicating valvular disease) or extra heart sounds (S3/S4, indicating heart failure).</li>
+                    </ol>
+                     <table>
+                        <thead><tr><th>Finding</th><th>Common Differential Diagnoses</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Central Chest Pain</strong></td><td>Acute Coronary Syndrome (ACS), Pulmonary Embolism (PE), Aortic Dissection, Pericarditis, Esophageal spasm.</td></tr>
+                            <tr><td><strong>Raised JVD + Peripheral Edema</strong></td><td>Congestive Heart Failure (right-sided), Cardiac Tamponade.</td></tr>
+                            <tr><td><strong>Absent/Weak Pulses</strong></td><td>Shock, Peripheral Arterial Disease, Aortic Dissection.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tertiary-box">
+                    <h3>Abdominal Examination (Nine-Region Assessment)</h3>
+                     <ol>
+                        <li><strong>Inspect:</strong> Look for distension, scars, bruising (e.g., Cullen's or Grey Turner's sign in pancreatitis), or visible pulsations.</li>
+                        <li><strong>Auscultate:</strong> Listen for bowel sounds in all nine regions <strong>before</strong> palpating.</li>
+                        <li><strong>Percuss:</strong> Assess for tympany (gas) or dullness (fluid/organs).</li>
+                        <li><strong>Palpate:</strong> Start with light palpation away from the area of pain, then proceed to deep palpation. Assess for tenderness, rigidity (involuntary guarding), and masses. A pulsatile mass may indicate an Abdominal Aortic Aneurysm (AAA).</li>
+                    </ol>
+                    <table>
+                        <thead><tr><th>Region</th><th>Common Differential Diagnoses</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Right Hypochondriac</strong></td><td>Cholecystitis, Hepatitis, Gallstones, Liver abscess, Pneumonia</td></tr>
+                            <tr><td><strong>Epigastric</strong></td><td>Peptic ulcer, Gastritis, Pancreatitis, Myocardial Infarction, GERD, AAA</td></tr>
+                            <tr><td><strong>Left Hypochondriac</strong></td><td>Splenic injury/rupture, Pancreatitis, Gastritis, Pneumonia</td></tr>
+                            <tr><td><strong>Right Lumbar</strong></td><td>Kidney stones (renal colic), Pyelonephritis, Constipation</td></tr>
+                             <tr><td><strong>Umbilical</strong></td><td>Early appendicitis, Small bowel obstruction, AAA, Gastroenteritis</td></tr>
+                            <tr><td><strong>Left Lumbar</strong></td><td>Kidney stones (renal colic), Pyelonephritis, Constipation, Diverticulitis</td></tr>
+                            <tr><td><strong>Right Iliac (Fossa)</strong></td><td>Appendicitis, Ovarian cyst, Ectopic pregnancy, Inguinal hernia, Inflammatory bowel disease</td></tr>
+                             <tr><td><strong>Hypogastric (Suprapubic)</strong></td><td>Urinary tract infection (UTI), Bladder distention, Pelvic inflammatory disease (PID), Ectopic pregnancy</td></tr>
+                            <tr><td><strong>Left Iliac (Fossa)</strong></td><td>Diverticulitis, Ovarian cyst, Ectopic pregnancy, Inguinal hernia, Inflammatory bowel disease</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tertiary-box">
+                    <h3>Neurological and Cranial Nerve Examination</h3>
+                    <p>A focused neuro exam evaluates the central and peripheral nervous systems.</p>
+                    <p><strong>Components:</strong> GCS, pupil assessment, motor function (strength, tone, coordination), and sensory function (response to touch/pain).</p>
+                    <p><strong>Cranial Nerve Assessment:</strong> A quick assessment can help localize a lesion.</p>
+                     <table>
+                        <thead><tr><th>Nerve</th><th>Function</th><th>Pre-hospital Test</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>II - Optic</strong></td><td>Vision</td><td>Assess visual fields.</td></tr>
+                            <tr><td><strong>III, IV, VI - Oculomotor, Trochlear, Abducens</strong></td><td>Eye Movements</td><td>Assess extraocular movements ("H" pattern), check for PERRL.</td></tr>
+                            <tr><td><strong>V - Trigeminal</strong></td><td>Facial Sensation, Mastication</td><td>Test sensation on face, ask patient to clench jaw.</td></tr>
+                            <tr><td><strong>VII - Facial</strong></td><td>Facial Expression</td><td>Ask patient to smile, raise eyebrows, puff cheeks.</td></tr>
+                            <tr><td><strong>VIII - Vestibulocochlear</strong></td><td>Hearing and Balance</td><td>Rub fingers by ear, assess balance/gait if safe.</td></tr>
+                            <tr><td><strong>IX, X - Glossopharyngeal, Vagus</strong></td><td>Swallow, Gag, Voice</td><td>Assess speech, ask patient to swallow.</td></tr>
+                            <tr><td><strong>XI - Accessory</strong></td><td>Shoulder Shrug</td><td>Ask patient to shrug shoulders against resistance.</td></tr>
+                            <tr><td><strong>XII - Hypoglossal</strong></td><td>Tongue Movement</td><td>Ask patient to stick out tongue and move it side to side.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="tertiary-box">
+                    <h3>Mental State Examination (MSE)</h3>
+                    <p>The MSE is a systematic observation of a patient's psychological functioning at a single point in time. It is a critical tool in assessing mental health presentations.</p>
+                    <table>
+                        <thead><tr><th>Domain</th><th>Description</th><th>What to Assess</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Appearance</strong></td><td>Physical appearance</td><td>Grooming, hygiene, clothing, posture.</td></tr>
+                            <tr><td><strong>Behaviour</strong></td><td>Observable actions</td><td>Eye contact, psychomotor activity (agitation/retardation), rapport, abnormal movements.</td></tr>
+                            <tr><td><strong>Speech</strong></td><td>The mechanical production of speech</td><td>Rate (pressured/slow), volume, tone, quantity (poverty of speech).</td></tr>
+                            <tr><td><strong>Mood</strong></td><td>The patient's subjective emotional state</td><td>Ask the patient directly: "How has your mood been?". Document in their own words.</td></tr>
+                            <tr><td><strong>Affect</strong></td><td>The objective, observable emotional state</td><td>Range (full, restricted), congruency (with mood), appropriateness, stability.</td></tr>
+                            <tr><td><strong>Thought Form</strong></td><td>How thoughts are connected</td><td>Logical and linear, or disorganised (e.g., flight of ideas, tangential, word salad).</td></tr>
+                            <tr><td><strong>Thought Content</strong></td><td>What the patient is thinking about</td><td>Themes, preoccupations, delusions, suicidal or homicidal ideation.</td></tr>
+                            <tr><td><strong>Perception</strong></td><td>Sensory experience</td><td>Hallucinations (auditory, visual, olfactory, tactile, gustatory), illusions.</td></tr>
+                            <tr><td><strong>Cognition</strong></td><td>Intellectual functioning</td><td>Orientation (time, place, person), attention, concentration, memory (short/long term).</td></tr>
+                            <tr><td><strong>Insight</strong></td><td>Patient's understanding of their situation</td><td>Do they recognize they have a problem? Do they understand its impact?</td></tr>
+                            <tr><td><strong>Judgment</strong></td><td>Ability to make sound decisions</td><td>Assess through their decisions and actions regarding their current situation.</td></tr>
+                             <tr><td><strong>Risk</strong></td><td>Risk of harm to self or others</td><td>Assess suicidal/homicidal ideation, intent, plan, access to means.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tertiary-box">
+                    <h3>Suicidality Risk Assessment</h3>
+                    <p>A critical assessment for any patient in a mental health crisis, or any patient who expresses hopelessness. It must be conducted directly and compassionately.</p>
+                    <ul>
+                        <li><strong>Ideation:</strong> "Have you been having any thoughts of harming yourself or ending your life?"</li>
+                        <li><strong>Intent:</strong> "How strong are these thoughts?" "Do you want to act on them?"</li>
+                        <li><strong>Plan:</strong> "Have you thought about how you might do this?" (Ask for specifics: what, where, when).</li>
+                        <li><strong>Access:</strong> "Do you have access to [the means mentioned in the plan]?"</li>
+                        <li><strong>Past Attempts:</strong> "Have you ever tried to harm yourself before?"</li>
+                        <li><strong>Protective Factors:</strong> "What are some of the things that have stopped you from acting on these thoughts?" (e.g., family, future plans).</li>
+                    </ul>
+                </div>
+
+                <div class="tertiary-box">
+                    <h3>Head-to-Toe Assessment (DCAP-BTLS)</h3>
+                    <p>A systematic physical examination used primarily in trauma patients to identify all injuries.</p>
+                     <ul>
+                        <li><strong>D</strong> - Deformities</li>
+                        <li><strong>C</strong> - Contusions (bruises)</li>
+                        <li><strong>A</strong> - Abrasions</li>
+                        <li><strong>P</strong> - Punctures/Penetrations</li>
+                        <li><strong>B</strong> - Burns</li>
+                        <li><strong>T</strong> - Tenderness</li>
+                        <li><strong>L</strong> - Lacerations</li>
+                        <li><strong>S</strong> - Swelling</li>
+                    </ul>
+                </div>
+                
+                <div class="tertiary-box">
+                    <h3>Altered Conscious State (AEIOU-TIPS)</h3>
+                    <p>A mnemonic used to systematically consider the potential causes of a patient's altered level of consciousness.</p>
+                    <ul>
+                        <li><strong>A</strong> - Alcohol, Abuse (drugs/substances)</li>
+                        <li><strong>E</strong> - Epilepsy (post-ictal), Electrolytes, Environment (hypo/hyperthermia)</li>
+                        <li><strong>I</strong> - Insulin (hypoglycemia/DKA/HHS)</li>
+                        <li><strong>O</strong> - Overdose, Oxygen (hypoxia)</li>
+                        <li><strong>U</strong> - Uremia (renal failure)</li>
+                        <li><strong>T</strong> - Trauma, Tumor</li>
+                        <li><strong>I</strong> - Infection (sepsis)</li>
+                        <li><strong>P</strong> - Psychiatric, Poisoning</li>
+                        <li><strong>S</strong> - Stroke, Shock</li>
+                    </ul>
+                </div>
+
+                 <div class="tertiary-box">
+                    <h3>Lower Back Pain Red Flags</h3>
+                    <p>While most back pain is musculoskeletal, paramedics must screen for "red flags" that indicate a potentially serious underlying spinal pathology requiring urgent investigation.</p>
+                     <ul>
+                        <li><strong>Cauda Equina Syndrome:</strong> Saddle anesthesia (numbness in the groin/buttocks), bladder or bowel incontinence/retention.</li>
+                        <li><strong>Spinal Cord Compression:</strong> Severe or progressive bilateral neurological deficit (weakness/sensory loss in legs).</li>
+                        <li><strong>Spinal Fracture:</strong> History of significant trauma, or minor trauma in an osteoporotic patient.</li>
+                        <li><strong>Cancer/Infection:</strong> Unexplained weight loss, fever, history of cancer, IV drug use.</li>
+                    </ul>
+                </div>
+
+                 <div class="tertiary-box">
+                    <h3>Skin Tear Assessment (STAR Classification System)</h3>
+                    <p>The STAR (Skin Tear Audit Research) system provides a simple way to classify skin tears to guide management and documentation.</p>
+                     <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Management Goal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Category 1a</strong></td>
+                                <td>A skin tear where the
+edges <strong>can</strong> be realigned
+to the normal anatomical
+position (without undue
+stretching) and the skin
+or flap colour <strong>is not</strong> pale,
+dusky or darkened. </td>
+                                <td>Realign flap, secure with steri-strips, apply non-adherent dressing.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Category 1b</strong></td>
+                                <td>A skin tear where the
+edges <strong>can</strong> be realigned
+to the normal
+anatomical position
+(without undue
+stretching) and the skin
+or flap colour <strong>is</strong> pale,
+dusky or darkened. </td>
+                                <td>Gently realign flap over as much of the wound as possible, dress as above.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Category 2a</strong></td>
+                                <td>A skin tear where the
+edges <strong>cannot</strong> be
+realigned to the normal
+anatomical position
+and the skin or flap
+colour <strong>is not</strong> pale,
+dusky or darkened. </td>
+                                <td>Protect remaining flap, apply appropriate dressing to promote moist wound healing.</td>
+                            </tr>
+                             <tr>
+                                <td><strong>Category 2b</strong></td>
+                                <td>A skin tear where the
+edges <strong>cannot</strong> be
+realigned to the normal
+anatomical position and
+the skin or flap colour <strong>is</strong>
+pale, dusky or
+darkened. </td>
+                                <td>Focus on protecting the exposed wound bed and managing exudate with an appropriate dressing.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Category 3</strong></td>
+                                <td>A skin tear where the
+skin flap is <strong>completely
+absent.</strong> </td>
+                                <td>Protect the wound bed, manage exudate, and prevent infection.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </section>
+            
+             <!-- Handover -->
+            <section id="handover" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Handover (IMIST-AMBO)</h2>
+                <p class="mt-2 text-gray-600">A structured handover ensures the safe and effective transfer of care to the receiving clinical team.</p>
+                <div class="tertiary-box">
+                    <ul>
+                        <li><strong>I</strong> - Identification: Patient's name, age, and gender.</li>
+                        <li><strong>M</strong> - Mechanism / Medical Complaint: The reason for the call.</li>
+                        <li><strong>I</strong> - Injuries / Information: The primary physical findings or relevant history.</li>
+                        <li><strong>S</strong> - Signs: The patient's vital signs and GCS.</li>
+                        <li><strong>T</strong> - Treatment and Trends: Interventions provided and the patient's response.</li>
+                    </ul>
+                    <ul>
+                        <li><strong>A</strong> - Allergies: Any known allergies.</li>
+                        <li><strong>M</strong> - Medications: Current medications.</li>
+                        <li><strong>B</strong> - Background: Relevant past medical history.</li>
+                        <li><strong>O</strong> - Other: Any other pertinent information (e.g., social situation, advance care directives).</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a framework for systematic patient assessment. Clinical judgment, critical thinking, and adapting these tools to the individual patient are the hallmarks of excellent paramedic practice.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
