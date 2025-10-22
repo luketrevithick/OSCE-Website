@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiac Arrest: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Out-of-Hospital Cardiac Arrest (OOHCA)</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide for Advanced Life Support</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#patho" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Pathophysiology & Epidemiology</a>
+                <a href="#assessment" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Assessment & Recognition</a>
+                <a href="#als" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">ALS Management</a>
+                <a href="#pediatric" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Paediatric Cardiac Arrest</a>
+                <a href="#ethics" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Ethical Considerations</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Pathophysiology and Epidemiology -->
+            <section id="patho" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Pathophysiology and Epidemiology of OOHCA</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology of Cardiac Arrest</h3>
+                    <p>Cardiac arrest is the cessation of effective blood circulation due to the heart's failure to contract adequately. This leads to global ischemia and cellular death if not rapidly reversed. The underlying electrical activity determines the classification and management:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Shockable Rhythms:</strong>
+                            <ul>
+                                <li><strong>Ventricular Fibrillation (VF):</strong> Chaotic, rapid, and uncoordinated electrical activity in the ventricles, resulting in no cardiac output.</li>
+                                <li><strong>Pulseless Ventricular Tachycardia (pVT):</strong> A very rapid ventricular rhythm that does not produce a palpable pulse.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Non-Shockable Rhythms:</strong>
+                            <ul>
+                                <li><strong>Pulseless Electrical Activity (PEA):</strong> Organized electrical activity is present on the ECG, but there is no mechanical contraction of the heart.</li>
+                                <li><strong>Asystole:</strong> The absence of any discernible cardiac electrical activity.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Epidemiology of OOHCA in Australia and New Zealand</h3>
+                    <p>Data from the Aus-ROC registry (2019) highlights the scale of the challenge:</p>
+                    <ul>
+                        <li><strong>Incidence:</strong> Approximately 108 cases per 100,000 people in Australia.</li>
+                        <li><strong>Witnessed Arrests:</strong> A significant portion (around 66% in Australia) are unwitnessed, which negatively impacts outcomes.</li>
+                        <li><strong>Bystander CPR:</strong> Performed in only about 39% of non-EMS witnessed cases.</li>
+                        <li><strong>Initial Rhythm:</strong> The majority of arrests present with a non-shockable rhythm (Asystole or PEA), which has a much poorer prognosis than shockable rhythms.</li>
+                        <li><strong>Survival:</strong> Survival to hospital discharge for all EMS-attempted resuscitations is low, around 12.5% in Australia.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Assessment and Recognition -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Assessment and Recognition of Cardiac Arrest</h2>
+                <div class="management-box">
+                    <h3>Recognizing Cardiac Arrest</h3>
+                    <p>Cardiac arrest is a clinical diagnosis based on the absence of signs of life. The assessment must be rapid and decisive.</p>
+                    <p><strong>Signs of Cardiac Arrest:</strong></p>
+                    <ul>
+                        <li><strong>Unresponsiveness:</strong> No response to verbal or painful stimuli.</li>
+                        <li><strong>Abnormal Breathing:</strong> Absence of normal breathing. Agonal gasps are a sign of cardiac arrest and should not be confused with effective breathing.</li>
+                        <li><strong>Absence of Pulse:</strong> A carotid pulse cannot be confidently palpated within 10 seconds. <strong>If there is any doubt, start CPR.</strong></li>
+                    </ul>
+                    <p>It's also crucial to identify patients with signs of grossly inadequate perfusion who are at imminent risk of arresting (e.g., unresponsive with pallor/cyanosis and a heart rate <40 bpm in an adult).</p>
+                </div>
+            </section>
+
+            <!-- ALS Management -->
+            <section id="als" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Advanced Life Support (ALS) Management of OOHCA</h2>
+                <p>The management of OOHCA is built upon the "Chain of Survival": early recognition, early CPR, early defibrillation, and early advanced care. High-performance CPR, with a focus on teamwork and minimizing interruptions, is the foundation of successful resuscitation.</p>
+                                <div class="management-box">
+                    <h3>Core ALS Interventions and Rationale</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Intervention</th>
+                                <th>Rationale and Key Principles</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>High-Quality CPR</strong></td>
+                                <td>The cornerstone of resuscitation. Maintain a rate of 100-120 compressions/min, depth of one-third of the chest, and allow full chest recoil. Use a team approach with designated roles and swap compressors every 2 minutes to prevent fatigue. Use checklists (e.g., NSW Ambulance Cardiac Arrest Checklist) to ensure all critical tasks are completed.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Advanced Airway Management</strong></td>
+                                <td>An advanced airway (SGA or ETT) secures the airway and allows for asynchronous ventilation (continuous compressions). Evidence shows no superiority of ETT over SGA for initial airway management in OOHCA. The priority is a successful first-pass attempt with minimal CPR interruption. Confirmation and continuous monitoring with waveform capnography (EtCO₂) is mandatory.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mechanical CPR (mCPR)</strong></td>
+                                <td>Devices like the LUCAS are adjuncts, not replacements for high-quality manual CPR. They provide consistent, high-quality compressions, which is particularly beneficial during patient extrication or transport. Evidence does not show superior outcomes over manual CPR but indicates they are a reasonable alternative when manual CPR is impractical or unsafe.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Defibrillation</strong></td>
+                                <td>The only definitive treatment for VF/pVT. The goal is to deliver a shock with the shortest possible pre- and post-shock pause. A structured approach like <strong>COACHED</strong> (Compressions, Oxygen away, All clear, Charging, Hands off, Evaluate rhythm, Defibrillate/Disarm) minimizes interruptions. A single 200J biphasic shock is the standard.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Vascular Access & Pharmacology</strong></td>
+                                <td>IV access is preferred, but IO is a rapid and effective alternative.
+                                    <ul>
+                                        <li><strong>Adrenaline 1mg:</strong> Administered every 3-5 mins (every 2nd cycle). Its primary (alpha) effect is vasoconstriction, which increases coronary and cerebral perfusion pressure during CPR.</li>
+                                        <li><strong>Amiodarone 300mg:</strong> An antiarrhythmic used for VF/pVT that is refractory to defibrillation (typically after the 3rd shock).</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Reversible Causes (H's and T's)</strong></td>
+                                <td>Continuously search for and treat reversible causes: <strong>H</strong>ypoxia, <strong>H</strong>ypovolemia, <strong>H</strong>ypo/hyperkalemia, <strong>H</strong>ypothermia, <strong>T</strong>ension pneumothorax, <strong>T</strong>amponade (cardiac), <strong>T</strong>oxins, <strong>T</strong>hrombosis (pulmonary/coronary).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Paediatric Cardiac Arrest -->
+            <section id="pediatric" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Paediatric Cardiac Arrest</h2>
+                <div class="disorder-box">
+                    <h3>Epidemiology and Pathophysiology</h3>
+                    <p>Paediatric cardiac arrest is much less common than in adults and is typically a secondary event resulting from progressive respiratory failure or shock (asphyxial arrest). Primary cardiac causes (e.g., arrhythmias) are rare. This means hypoxia and acidosis are the primary drivers, making effective ventilation and oxygenation the most critical interventions.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Management of Paediatric Arrest (PALS)</h3>
+                    <p>The PALS algorithm adapts adult ALS with key differences reflecting paediatric physiology and etiology.</p>
+                    <ul>
+                        <li><strong>Compressions:</strong> Depth is one-third of the chest (approx. 4cm for infants, 5cm for children). The compression-to-ventilation ratio is <strong>15:2</strong> for two rescuers.</li>
+                        <li><strong>Airway & Breathing:</strong> As asphyxia is a common cause, <strong>two initial rescue breaths</strong> are recommended before starting compressions. BVM ventilation is the suggested initial airway strategy in the out-of-hospital setting.</li>
+                        <li><strong>Defibrillation:</strong> If a shockable rhythm is present, deliver a shock at <strong>4 J/kg</strong>.</li>
+                        <li><strong>Pharmacology:</strong> Doses are weight-based. Adrenaline is <strong>10 mcg/kg</strong>. Amiodarone is <strong>5 mg/kg</strong>.</li>
+                        <li><strong>Vascular Access:</strong> The IO route is often preferred and faster to establish in critically ill children.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Ethical Considerations -->
+            <section id="ethics" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Ethical and Legal Considerations: Starting and Stopping Resuscitation</h2>
+                <div class="assessment-box">
+                    <h3>Decision to Start and Stop Resuscitation</h3>
+                    <p>Decisions regarding resuscitation are complex and guided by clinical criteria, legal frameworks, and ethical principles. The primary goal is to act in the patient's best interests while respecting their known wishes (e.g., advance care directives).</p>
+                    <p><strong>General Criteria for Withholding Resuscitation:</strong></p>
+                    <ul>
+                        <li>Obvious signs of death (e.g., rigor mortis, post-mortem lividity).</li>
+                        <li>Injuries incompatible with life.</li>
+                        <li>The presence of a valid advance care directive or similar legal document refusing CPR.</li>
+                    </ul>
+                    <p><strong>General Criteria for Ceasing Resuscitation (Termination of Resuscitation - TOR):</strong></p>
+                    <ul>
+                        <li>No ROSC after a specified period of effective ALS (e.g., >20 minutes).</li>
+                        <li>Persistent asystole or PEA (no shocks delivered).</li>
+                        <li>Arrest was unwitnessed by EMS.</li>
+                    </ul>
+                </div>
+                <div class="management-box">
+                    <h3>Verification of Death and Communicating with Families</h3>
+                    <p>Once resuscitation is terminated, paramedics must formally verify death. This involves a thorough clinical assessment for the absence of vital signs over a defined period (e.g., no carotid pulse, no heart/breath sounds for 2 minutes, fixed and dilated pupils). An asystolic ECG strip is a supportive finding.</p>
+                    <p><strong>Breaking Bad News:</strong> This is a core paramedic skill. Use a structured, empathetic approach:</p>
+                    <ul>
+                        <li><strong>Preparation:</strong> Gather all the facts and prepare yourself emotionally.</li>
+                        <li><strong>Setting:</strong> Find a private, quiet space. Sit down.</li>
+                        <li><strong>Delivery:</strong> Use clear, direct language. Avoid jargon or euphemisms (e.g., say "died," not "passed away"). Deliver the news and then be silent to allow it to be absorbed.</li>
+                        <li><strong>Emotion:</strong> Acknowledge and validate the family's emotions. It is okay to show empathy.</li>
+                        <li><strong>Next Steps:</strong> Explain what will happen next (e.g., involvement of police/coroner, funeral arrangements) and provide support resources.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide is based on current clinical evidence and guidelines. Always adhere to your local protocols and apply sound clinical judgment in every resuscitation attempt.</p>
+        </footer>
+    </div>
+</body>
+</html>
