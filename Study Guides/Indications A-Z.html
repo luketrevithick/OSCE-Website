@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indications A-Z: A Paramedic Pharmacology Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Indications A-Z</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Pharmacology Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-7 gap-2">
+                <a href="#acs" class="bg-blue-100 text-blue-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-blue-200">ACS</a>
+                <a href="#adrenal" class="bg-blue-100 text-blue-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-blue-200">Adrenal Crisis</a>
+                <a href="#allergic" class="bg-blue-100 text-blue-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-blue-200">Allergic Reaction</a>
+                <a href="#analgesia" class="bg-blue-100 text-blue-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-blue-200">Analgesia</a>
+                <a href="#anaphylaxis" class="bg-blue-100 text-blue-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-blue-200">Anaphylaxis</a>
+                <a href="#asthma" class="bg-blue-100 text-blue-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-blue-200">Asthma</a>
+                <a href="#autonomic" class="bg-blue-100 text-blue-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-blue-200">Autonomic Dysreflexia</a>
+                <a href="#behavioural" class="bg-green-100 text-green-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-green-200">Behavioural</a>
+                <a href="#bradycardia" class="bg-green-100 text-green-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-green-200">Bradycardia</a>
+                <a href="#cpo" class="bg-yellow-100 text-yellow-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-yellow-200">Cardiogenic Pulm. Oedema</a>
+                <a href="#copd" class="bg-yellow-100 text-yellow-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-yellow-200">COPD</a>
+                <a href="#cpric" class="bg-yellow-100 text-yellow-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-yellow-200">CPRIC</a>
+                <a href="#hyperk" class="bg-orange-100 text-orange-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-orange-200">Hyperkalaemia</a>
+                <a href="#hypogly" class="bg-orange-100 text-orange-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-orange-200">Hypoglycaemia</a>
+                <a href="#mening" class="bg-red-100 text-red-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-red-200">Meningococcal</a>
+                <a href="#nausea" class="bg-purple-100 text-purple-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-purple-200">Nausea/Vomiting</a>
+                <a href="#nerve" class="bg-purple-100 text-purple-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-purple-200">Nerve Agent</a>
+                <a href="#organo" class="bg-indigo-100 text-indigo-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-indigo-200">Organophosphate</a>
+                <a href="#overdose" class="bg-indigo-100 text-indigo-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-indigo-200">Overdose</a>
+                <a href="#eye" class="bg-pink-100 text-pink-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-pink-200">Penetrating Eye Injury</a>
+                <a href="#rosc" class="bg-pink-100 text-pink-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-pink-200">Post ROSC Sedation</a>
+                <a href="#io" class="bg-pink-100 text-pink-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-pink-200">Post IO Access</a>
+                <a href="#pph" class="bg-pink-100 text-pink-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-pink-200">Post Partum Care</a>
+                <a href="#thrombo" class="bg-pink-100 text-pink-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-pink-200">Prehospital Thrombolysis</a>
+                <a href="#seizure" class="bg-gray-100 text-gray-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-gray-200">Seizures</a>
+                <a href="#tachy" class="bg-gray-100 text-gray-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-gray-200">Tachycardia</a>
+                <a href="#tdp" class="bg-gray-100 text-gray-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-gray-200">Torsades De Pointes</a>
+                <a href="#fluids" class="bg-blue-100 text-blue-800 text-center font-semibold py-2 px-3 rounded-lg shadow-sm hover:bg-blue-200">Fluids</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Acute Coronary Syndrome -->
+            <section id="acs" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Acute Coronary Syndrome (ACS)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>ACS is a spectrum of conditions resulting from acute myocardial ischemia (inadequate blood flow to the heart muscle). It is most commonly caused by the rupture of an atherosclerotic plaque in a coronary artery. This rupture triggers platelet aggregation and thrombus (clot) formation, which partially or completely occludes the artery, leading to unstable angina, NSTEMI (non-ST-elevation myocardial infarction), or STEMI (ST-elevation myocardial infarction).</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Aspirin</strong></td>
+                                <td>An anti-platelet drug that works by irreversibly inhibiting cyclo-oxygenase (COX-1) in platelets. This prevents the synthesis of thromboxane A2, a potent promoter of platelet aggregation.</td>
+                                <td>Reduces platelet aggregation, slows clot formation, and decreases the risk of further coronary occlusion. Helps to limit infarct size and improve survival.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Glyceryl Trinitrate (GTN)</strong></td>
+                                <td>A potent vasodilator. It is converted to nitric oxide (NO) in smooth muscle cells, which activates guanylate cyclase, increasing cGMP. This leads to smooth muscle relaxation.</td>
+                                <td>Reduces myocardial oxygen demand by decreasing preload (venous dilation) and afterload (arterial dilation). It also dilates coronary arteries, increasing oxygen supply to ischemic tissue and relieving chest pain.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Adrenal Crisis -->
+            <section id="adrenal" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Adrenal Crisis (Acute Adrenal Insufficiency)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A life-threatening emergency caused by an acute, severe deficiency of cortisol (a glucocorticoid) and often aldosterone (a mineralocorticoid). This occurs in patients with known adrenal insufficiency (Addison's disease) or those on long-term steroid therapy who are exposed to a physiological stressor (e.g., infection, trauma) without an increase in their steroid dose. The lack of cortisol leads to an inability to maintain blood glucose and mount a stress response, while the lack of aldosterone causes sodium wasting and potassium retention, leading to severe hypovolemia, hypoglycemia, and shock.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Hydrocortisone</strong></td>
+                                <td>A synthetic glucocorticoid that mimics the body's natural stress hormone, cortisol. It has both glucocorticoid (metabolic, anti-inflammatory) and mineralocorticoid (sodium/water retention) effects.</td>
+                                <td>Replaces the deficient cortisol, enabling the body to mount a stress response. It increases blood glucose, improves cardiovascular function (increasing sensitivity to catecholamines), reverses inflammation, and helps correct electrolyte abnormalities, thereby treating profound shock.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Allergic Reaction -->
+            <section id="allergic" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Allergic Reaction (Mild to Moderate)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A hypersensitivity reaction of the immune system to an allergen (e.g., pollen, food, insect sting). On exposure, IgE antibodies trigger mast cells and basophils to release inflammatory mediators, most notably histamine. This causes localized vasodilation (redness), increased vascular permeability (swelling, urticaria), and sensory nerve stimulation (itching).</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Fexofenadine</strong></td>
+                                <td>A second-generation antihistamine. It selectively blocks peripheral H1 histamine receptors, preventing histamine from binding and causing its inflammatory effects. It does not readily cross the blood-brain barrier.</td>
+                                <td>Reduces or eliminates the symptoms of an allergic reaction, such as itching (pruritus) and hives (urticaria), without causing significant sedation.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Analgesia -->
+            <section id="analgesia" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Analgesia (Pain Relief)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Pain is an unpleasant sensory and emotional experience associated with actual or potential tissue damage. It is transmitted via nociceptors (pain-sensing nerves) from the periphery, through the spinal cord, to the brain. The experience of pain is subjective and can be modulated by inflammatory mediators (peripheral sensitization) and central nervous system pathways (central sensitization).</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Paracetamol</strong></td>
+                                <td>Complex and not fully understood. It is a weak inhibitor of COX enzymes in the periphery but is thought to have a primary central action, possibly involving serotonergic pathways and modulation of the endocannabinoid system.</td>
+                                <td>Provides analgesia (pain relief) and antipyresis (fever reduction) with minimal anti-inflammatory effects.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ibuprofen</strong></td>
+                                <td>A non-steroidal anti-inflammatory drug (NSAID) that reversibly inhibits COX-1 and COX-2 enzymes, preventing the synthesis of prostaglandins (inflammatory mediators that cause pain, fever, and inflammation).</td>
+                                <td>Provides analgesia, antipyresis, and anti-inflammation. Particularly effective for inflammatory pain.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Methoxyflurane</strong></td>
+                                <td>An inhaled anesthetic agent. At low, sub-anesthetic doses, its exact mechanism for analgesia is unclear, but it is thought to modulate neurotransmitter channels (e.g., GABA, glutamate) in the brain and spinal cord.</td>
+                                <td>Provides rapid-onset, short-term, patient-controlled analgesia for moderate to severe pain, often used for procedural pain or trauma.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Morphine</strong></td>
+                                <td>A potent opioid analgesic. It acts as an agonist primarily at mu-opioid receptors in the central nervous system (brain and spinal cord), mimicking the effects of endogenous endorphins.</td>
+                                <td>Decreases the perception of pain, alters the emotional response to pain (anxiolysis), and causes sedation. Provides effective relief from severe pain.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fentanyl</strong></td>
+                                <td>A synthetic opioid analgesic that is a potent mu-opioid receptor agonist. It is highly lipid-soluble, allowing for rapid onset (especially via IV or intranasal routes).</td>
+                                <td>Provides powerful, rapid-onset analgesia for severe pain. Has a shorter duration of action than morphine and causes less histamine release (less hypotension).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ketamine</strong></td>
+                                <td>A dissociative anesthetic. At sub-anesthetic doses, it acts as an N-methyl-D-aspartate (NMDA) receptor antagonist, blocking glutamate. This action prevents central sensitization and "wind-up" of the pain response.</td>
+                                <td>Provides potent analgesia (especially for neuropathic pain) and sedation while preserving airway reflexes and respiratory drive at analgesic doses.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Anaphylaxis -->
+            <section id="anaphylaxis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Anaphylaxis</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A severe, life-threatening, systemic hypersensitivity reaction. Following re-exposure to an allergen, IgE antibodies trigger a massive, body-wide degranulation of mast cells and basophils. This releases a flood of mediators (histamine, leukotrienes) that cause systemic vasodilation (leading to profound hypotension and shock), increased capillary permeability (leading to angioedema), and bronchospasm (leading to respiratory distress and airway compromise).</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Adrenaline (IM)</strong></td>
+                                <td>A non-selective adrenergic agonist. It is the first-line, life-saving drug. Its Alpha-1 effects cause vasoconstriction. Its Beta-1 effects increase heart rate and contractility. Its Beta-2 effects cause bronchodilation.</td>
+                                <td>Reverses the life-threatening features: reverses hypotension (vasoconstriction), improves cardiac output, and relieves bronchospasm/airway edema (bronchodilation).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Adrenaline Infusion</strong></td>
+                                <td>Provides continuous, titratable adrenergic stimulation for patients with persistent shock refractory to initial IM doses and fluid resuscitation.</td>
+                                <td>Provides sustained vasoconstriction and inotropic/chronotropic support to maintain blood pressure and perfusion.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Glucagon</strong></td>
+                                <td>A hormone that activates adenylyl cyclase via a different receptor from beta-agonists. This increases cAMP, which has positive inotropic and chronotropic effects on the heart.</td>
+                                <td>Used in severe anaphylaxis with refractory hypotension, particularly in patients on beta-blockers who may not respond to adrenaline. It bypasses the blocked beta-receptors to increase heart rate and contractility.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hydrocortisone</strong></td>
+                                <td>A glucocorticoid with anti-inflammatory and immunosuppressive properties. It works slowly to reduce the late-phase inflammatory response.</td>
+                                <td>Reduces the likelihood of a biphasic (recurrent) reaction and persistent symptoms. It is a second-line therapy and does not treat acute life-threats.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Salbutamol</strong></td>
+                                <td>A short-acting beta-2 adrenergic agonist. It stimulates beta-2 receptors in the lungs, leading to bronchodilation.</td>
+                                <td>Treats persistent bronchospasm that is not fully relieved by IM adrenaline. It is an adjunctive, second-line therapy for the respiratory component.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Asthma -->
+            <section id="asthma" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Asthma (Severe Exacerbation)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A chronic inflammatory disease of the airways. During an exacerbation (triggered by allergens, infection, etc.), three key events occur: 1) Bronchospasm (acute contraction of bronchial smooth muscle), 2) Airway inflammation and edema (swelling), and 3) Increased mucus production. This combination leads to widespread, reversible airway obstruction, air trapping, and increased work of breathing.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Salbutamol</strong></td>
+                                <td>A short-acting beta-2 adrenergic agonist. It stimulates beta-2 receptors on bronchial smooth muscle, causing them to relax.</td>
+                                <td>Rapid bronchodilation, relieving bronchospasm and improving airflow. This is the first-line, life-saving treatment.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ipratropium Bromide</strong></td>
+                                <td>An anticholinergic agent. It blocks muscarinic receptors in the airways, inhibiting parasympathetic-mediated bronchoconstriction and reducing mucus secretion.</td>
+                                <td>Provides additional bronchodilation by targeting a different pathway from salbutamol. It has a synergistic effect when given with beta-2 agonists.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Adrenaline (IM)</strong></td>
+                                <td>A non-selective adrenergic agonist. Used in life-threatening asthma refractory to nebulized therapies or in cases with concurrent anaphylaxis.</td>
+                                <td>Provides potent systemic bronchodilation via its Beta-2 effects and supports cardiovascular function.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hydrocortisone</strong></td>
+                                <td>A systemic glucocorticoid. It suppresses the underlying airway inflammation and immune response. Its effects are not immediate (take hours).</td>
+                                <td>Reduces airway inflammation and edema, and prevents a late-phase (rebound) exacerbation. It is critical for recovery but not for acute relief.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Autonomic Dysreflexia -->
+            <section id="autonomic" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Autonomic Dysreflexia</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A life-threatening syndrome in patients with a spinal cord injury at or above T6. A noxious stimulus (e.g., full bladder, bowel impaction) below the injury level triggers a massive, uncontrolled sympathetic reflex discharge. This causes widespread vasoconstriction below the injury, leading to severe, acute hypertension. The brain detects this hypertension and tries to compensate by sending inhibitory signals (which are blocked by the spinal injury) and by stimulating the vagus nerve, causing bradycardia and vasodilation above the injury level.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Glyceryl Trinitrate (GTN)</strong></td>
+                                <td>A potent, short-acting vasodilator (see ACS entry).</td>
+                                <td>Rapidly decreases blood pressure by causing profound arterial and venous dilation, mitigating the risk of hypertensive emergency (e.g., stroke) while the underlying stimulus is being identified and removed.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Behavioural Disturbance -->
+            <section id="behavioural" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Behavioural Disturbance (Acute)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Acute behavioural disturbance is a presentation of severe agitation, aggression, or psychosis that poses an immediate risk of harm to the patient or others. It is a symptom, not a diagnosis. Causes are broad and include psychiatric illness (e.g., schizophrenia, mania), drug intoxication (e.g., stimulants, hallucinogens), drug withdrawal, delirium (due to infection, hypoxia, metabolic issues), or dementia.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <p>The goal is chemical restraint to facilitate safe assessment and transport. Verbal de-escalation is always attempted first.</p>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Midazolam</strong></td>
+                                <td>A benzodiazepine. It enhances the effect of the inhibitory neurotransmitter GABA at the GABA-A receptor, leading to widespread CNS depression.</td>
+                                <td>Provides rapid, dose-dependent sedation and anxiolysis (anxiety reduction). Effective for sedation in many agitated states.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Droperidol</strong></td>
+                                <td>A typical antipsychotic. It is a potent D2 dopamine receptor antagonist, which has a powerful antipsychotic and sedative (tranquilizing) effect.</td>
+                                <td>Provides rapid sedation and chemical restraint, particularly effective for psychosis-induced agitation.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ketamine</strong></td>
+                                <td>A dissociative anesthetic (see Analgesia). At higher doses, it blocks NMDA receptors, causing a dissociative state and profound sedation.</td>
+                                <td>Provides rapid and deep sedation for patients with severe, undifferentiated agitation (e.g., excited delirium), allowing for rapid control of a dangerous situation.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Olanzapine</strong></td>
+                                <td>An atypical antipsychotic. It blocks multiple neurotransmitter receptors, primarily dopamine (D2) and serotonin (5-HT2A).</td>
+                                <td>Provides calming and tranquilizing effects, often with less extrapyramidal side effects than typical antipsychotics. Useful for acute psychosis or agitation.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Bradycardia -->
+            <section id="bradycardia" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Bradycardia (Symptomatic)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A heart rate below the normal range (e.g., <60 bpm in adults) that is insufficient to maintain adequate cardiac output, leading to symptoms of hypoperfusion (e.g., ALOC, hypotension, chest pain, syncope). This can be caused by sinus node dysfunction (e.g., sinus bradycardia) or a failure of conduction through the AV node (e.g., heart blocks).</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Atropine</strong></td>
+                                <td>An anticholinergic agent. It competitively blocks muscarinic acetylcholine receptors, specifically inhibiting the vagus nerve's parasympathetic influence on the heart.</td>
+                                <td>Increases the firing rate of the SA node and improves conduction through the AV node, resulting in an increased heart rate. (Note: Unlikely to work on high-degree AV blocks).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Adrenaline (Infusion)</strong></td>
+                                <td>A non-selective adrenergic agonist. Its Beta-1 effects are key here, increasing chronotropy (heart rate), inotropy (contractility), and dromotropy (conduction speed).</td>
+                                <td>Provides continuous, titratable cardiovascular support to increase heart rate and blood pressure when atropine is ineffective or not appropriate (e.g., high-degree blocks).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Cardiogenic Pulmonary Oedema -->
+            <section id="cpo" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Cardiogenic Pulmonary Oedema (CPO)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>CPO is a form of acute heart failure where the left ventricle fails to pump blood effectively (e.g., due to an AMI or chronic heart failure). This failure causes blood to back up into the left atrium and pulmonary veins. The resulting increase in pulmonary capillary hydrostatic pressure forces fluid to leak from the capillaries into the lung's interstitial spaces and alveoli, impairing gas exchange and causing severe dyspnoea.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Glyceryl Trinitrate (GTN)</strong></td>
+                                <td>A potent vasodilator (see ACS). In CPO, its primary benefit comes from profound venodilation.</td>
+                                <td>Venodilation causes pooling of blood in the periphery, drastically reducing preload (the volume of blood returning to the failing heart). This reduces pulmonary congestion, lowers left ventricular filling pressure, and rapidly alleviates dyspnoea.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Frusemide (Furosemide)</strong></td>
+                                <td>A potent loop diuretic. It inhibits the Na-K-2Cl cotransporter in the thick ascending limb of the Loop of Henle, preventing the reabsorption of sodium and water.</td>
+                                <td>Causes a rapid and significant diuresis (fluid removal via urine), which reduces total blood volume and pulmonary congestion. (Note: This is a second-line therapy; the immediate benefit in CPO may also come from its mild venodilating effects).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- COPD Exacerbation -->
+            <section id="copd" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">COPD Exacerbation</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>An acute worsening of respiratory symptoms in a patient with Chronic Obstructive Pulmonary Disease (COPD). It is typically triggered by a respiratory infection or environmental irritant. This trigger causes a rapid increase in airway inflammation, bronchospasm, and mucus production, superimposed on the patient's baseline chronic bronchitis and/or emphysema. This leads to severe airflow limitation, air trapping, and potential respiratory failure (hypoxia and/or hypercarbia).</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Salbutamol</strong></td>
+                                <td>A short-acting beta-2 adrenergic agonist. (See Asthma).</td>
+                                <td>Rapid bronchodilation, relieving bronchospasm and improving airflow.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ipratropium Bromide</strong></td>
+                                <td>An anticholinergic agent. (See Asthma). Particularly effective in COPD as cholinergic tone is a major component of bronchoconstriction.</td>
+                                <td>Provides synergistic bronchodilation with Salbutamol and helps to reduce mucus secretion.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hydrocortisone</strong></td>
+                                <td>A systemic glucocorticoid. (See Anaphylaxis/Asthma).</td>
+                                <td>Suppresses the intense airway inflammation driving the exacerbation, leading to faster recovery and reduced risk of relapse.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- CPRIC -->
+            <section id="cpric" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">CPR-Induced Consciousness (CPRIC)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A phenomenon where high-quality CPR generates enough cerebral perfusion to cause a patient in cardiac arrest to exhibit signs of consciousness (e.g., purposeful movement, eye-opening, fighting the ventilator, groaning). This creates a distressing and dangerous situation, as the patient's "CPR-induced interference" (fighting the resuscitation) can compromise the quality of compressions and ventilation, thereby worsening outcomes.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <p>The goal is to provide sedation to stop the interference and associated distress, without compromising the resuscitation effort.</p>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Midazolam</strong></td>
+                                <td>A benzodiazepine (see Behavioural Disturbance). Provides sedation and amnesia.</td>
+                                <td>Induces unconsciousness, allowing for high-quality CPR to continue without patient interference.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ketamine</strong></td>
+                                <td>A dissociative anesthetic (see Analgesia). Provides sedation and amnesia while maintaining hemodynamic stability (it has sympathomimetic properties).</td>
+                                <td>Induces dissociation and unconsciousness, stopping interference while helping to support blood pressure. Often considered the preferred agent in this setting.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Hyperkalaemia -->
+            <section id="hyperk" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Hyperkalaemia</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A dangerously high serum potassium level. High extracellular potassium reduces the resting membrane potential of cardiac myocytes (makes it less negative), decreasing excitability. This slows conduction, and at severe levels, can lead to life-threatening arrhythmias (e.g., bradycardia, heart blocks, ventricular fibrillation) and asystole. Classic ECG changes include tall, peaked T-waves, widened QRS, and loss of P-waves.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Calcium Gluconate</strong></td>
+                                <td>Cardioprotective agent. It does <strong>not</strong> lower serum potassium. It increases the threshold potential of cardiac myocytes, restoring the normal gradient between resting and threshold potentials.</td>
+                                <td>Immediately stabilizes the cardiac membrane against the arrhythmogenic effects of hyperkalaemia, preventing fatal arrhythmias while other treatments work to lower the potassium level.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sodium Bicarbonate</strong></td>
+                                <td>Increases serum pH (makes blood more alkaline). This causes an intracellular shift of potassium, as the body exchanges extracellular potassium ions (K+) for intracellular hydrogen ions (H+).</td>
+                                <td>Temporarily lowers serum potassium levels by shifting potassium into the cells. Most effective in patients with a concurrent metabolic acidosis.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Hypoglycaemia -->
+            <section id="hypogly" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Hypoglycaemia</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A blood glucose level (BGL) &lt; 4.0 mmol/L in a symptomatic patient. The brain relies almost exclusively on glucose for energy. A lack of glucose (neuroglycopenia) impairs CNS function, leading to confusion, ALOC, seizures, and coma. The body's counter-regulatory response also triggers adrenergic symptoms (sweating, tachycardia, anxiety) as it tries to raise BGL.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Glucagon</strong></td>
+                                <td>A hormone that stimulates the liver to convert its stored glycogen into glucose, which is then released into the bloodstream (glycogenolysis).</td>
+                                <td>Raises BGL. Used when IV/IO access is unavailable. It is only effective if the patient has adequate glycogen stores in their liver.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Glucose 10%</strong></td>
+                                <td>A hypertonic solution of dextrose (glucose) in water. When given intravenously, it directly enters the circulation.</td>
+                                <td>Provides an immediate and direct supply of glucose to the bloodstream, rapidly reversing neuroglycopenia and restoring brain function.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Glucose Gel</strong></td>
+                                <td>A simple carbohydrate in an absorbable gel form. It is swallowed and absorbed through the gastrointestinal tract.</td>
+                                <td>Raises BGL. It is a safe and effective treatment for conscious patients who are able to swallow and protect their own airway.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Meningococcal Disease -->
+            <section id="mening" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Meningococcal Disease</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>An invasive infection caused by the bacterium *Neisseria meningitidis*. It most commonly presents as meningitis (inflammation of the meninges) or meningococcal septicaemia (sepsis). In septicaemia, the bacteria release endotoxins that trigger a massive inflammatory cascade, leading to widespread vascular damage, disseminated intravascular coagulation (DIC), and a characteristic non-blanching purpuric rash. This progresses rapidly to multi-organ failure and shock.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Benzyl Penicillin</strong></td>
+                                <td>A narrow-spectrum antibiotic. It inhibits the synthesis of the bacterial cell wall, causing the bacteria to lyse and die (bactericidal).</td>
+                                <td>Kills the *Neisseria meningitidis* bacteria, halting the progression of the infection and endotoxin release. Early pre-hospital administration is a time-critical, life-saving intervention.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Nausea and Vomiting -->
+            <section id="nausea" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Nausea and Vomiting</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Nausea and vomiting are protective reflexes controlled by the vomiting center in the brainstem. This center receives inputs from several sources, including the chemoreceptor trigger zone (CTZ) (which detects toxins/drugs in the blood), the vestibular system (motion sickness), the GI tract (irritation), and higher cortical centers (anxiety, pain). Mediators like dopamine, serotonin, and histamine play key roles in signaling.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Ondansetron</strong></td>
+                                <td>A serotonin (5-HT3) receptor antagonist. It blocks 5-HT3 receptors in the CTZ and on vagal nerve terminals in the GI tract.</td>
+                                <td>A powerful antiemetic, particularly effective for nausea caused by chemotherapy, radiation, or anaesthesia. It prevents afferent signals from the GI tract from reaching the vomiting center.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Metoclopramide</strong></td>
+                                <td>A dopamine (D2) receptor antagonist that blocks D2 receptors in the CTZ. It also has a prokinetic effect, increasing upper GI motility.</td>
+                                <td>Reduces nausea by blocking dopamine signals in the CTZ and promotes gastric emptying, which can also relieve nausea.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Nerve Agent Poisoning -->
+            <section id="nerve" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Nerve Agent Poisoning</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Nerve agents are a class of organophosphates that irreversibly inhibit the enzyme acetylcholinesterase. This enzyme is responsible for breaking down the neurotransmitter acetylcholine (ACh) in the synapse. With the enzyme inhibited, ACh accumulates and continuously stimulates all muscarinic and nicotinic receptors in the parasympathetic, sympathetic, and central nervous systems, leading to a cholinergic crisis (SLUDGEM: Salivation, Lacrimation, Urination, Defecation, GI upset, Emesis, Miosis) and ultimately death from respiratory muscle paralysis.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Atropine</strong></td>
+                                <td>A competitive muscarinic receptor antagonist. It blocks the effects of the excess acetylcholine at muscarinic receptors (but not nicotinic receptors).</td>
+                                <td>Dries secretions, increases heart rate, and relieves bronchospasm. It is a symptomatic treatment that counters the life-threatening parasympathetic effects. Very large, repeated doses are required.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Organophosphate Poisoning -->
+            <section id="organo" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Organophosphate Poisoning</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Identical to nerve agent poisoning. Organophosphates are commonly found in insecticides. They irreversibly inhibit the acetylcholinesterase enzyme, leading to a cholinergic crisis (SLUDGEM) due to the accumulation and overstimulation of acetylcholine at muscarinic and nicotinic receptors. This causes respiratory failure from excessive bronchial secretions, bronchospasm, and skeletal muscle paralysis.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Atropine</strong></td>
+                                <td>A competitive muscarinic receptor antagonist. It blocks the effects of the excess acetylcholine at muscarinic receptors.</td>
+                                <td>The primary goal is to dry bronchial secretions and reverse bronchospasm, which are the main life-threats. It also increases heart rate. Large, titratable doses are used until the "atropinization" (drying of secretions) is achieved.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Overdose -->
+            <section id="overdose" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Overdose (Opioid)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Opioids (e.g., heroin, fentanyl, oxycodone) cause an overdose by binding to mu-opioid receptors in the brainstem. This stimulation directly suppresses the respiratory drive, leading to respiratory depression (slow, shallow breathing) which progresses to apnea, anoxia, and death. It also causes miosis (pinpoint pupils) and CNS depression (coma).</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Naloxone</strong></td>
+                                <td>A pure opioid antagonist. It has a higher affinity for opioid receptors than agonists (like heroin) and competitively displaces them, rapidly reversing their effects.</td>
+                                <td>Rapidly reverses respiratory depression and CNS depression, restoring spontaneous breathing and consciousness. Its duration may be shorter than the opioid's, requiring repeat doses.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Penetrating Eye Injury -->
+            <section id="eye" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Penetrating Eye Injury</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A traumatic breach of the globe (eyeball) by a foreign object. This is a sight-threatening emergency. Any pressure on the globe (e.g., from the object, rubbing, or vomiting) can cause the extrusion of intraocular contents (vitreous humor, iris), leading to permanent blindness. Vomiting significantly increases intraocular pressure.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <p>The primary goal is to prevent any increase in intraocular pressure.</p>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Ondansetron</strong></td>
+                                <td>A 5-HT3 receptor antagonist (see Nausea).</td>
+                                <td>Prophylactically prevents vomiting, thereby preventing a spike in intraocular pressure and extrusion of eye contents.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Metoclopramide</strong></td>
+                                <td>A D2 receptor antagonist (see Nausea).</td>
+                                <td>Prophylactically prevents vomiting and the associated rise in intraocular pressure.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Post ROSC Sedation -->
+            <section id="rosc" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Post ROSC Sedation</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>After Return of Spontaneous Circulation (ROSC) from cardiac arrest, many patients remain comatose. Those who regain consciousness are often agitated, confused, or combative due to post-anoxic brain injury. This agitation can lead to "patient-ventilator dyssynchrony" (fighting the advanced airway), increased metabolic demand, and hemodynamic instability, all of which worsen neurological outcomes. Sedation is required to facilitate ongoing ventilation, cooling, and transport.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Morphine/Midazolam Mix</strong></td>
+                                <td>An opioid (Morphine) combined with a benzodiazepine (Midazolam). This provides both analgesia (pain relief from CPR-related trauma) and potent sedation/amnesia.</td>
+                                <td>Achieves and maintains a deep level of sedation, facilitating controlled ventilation and minimizing the body's stress response, which helps protect the recovering brain.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Fentanyl/Midazolam Mix</strong></td>
+                                <td>A potent, rapid-onset opioid (Fentanyl) combined with a benzodiazepine (Midazolam). Fentanyl has less impact on blood pressure than morphine.</td>
+                                <td>Provides rapid and effective analgesia and sedation, which is ideal for patients who may have hemodynamic instability post-ROSC.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Post Intraosseous Access -->
+            <section id="io" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Post Intraosseous Access</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Intraosseous (IO) access involves placing a needle into the medullary cavity of a long bone. While a life-saving procedure, the infusion of fluid or medication into this non-collapsible space can be extremely painful for a conscious or semi-conscious patient, as it rapidly increases intra-medullary pressure and stimulates nociceptors within the bone.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Lignocaine</strong></td>
+                                <td>A local anesthetic. It blocks voltage-gated sodium channels, preventing the initiation and conduction of nerve impulses (pain signals).</td>
+                                <td>Provides localized anesthesia within the bone marrow cavity, significantly reducing or eliminating the pain associated with IO infusion in conscious patients.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Post Partum Care -->
+            <section id="pph" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Post Partum Care (Hemorrhage)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Post-Partum Hemorrhage (PPH) is excessive bleeding after childbirth. The most common cause is uterine atony, where the uterus fails to contract adequately after the placenta is delivered. The "living ligatures" (interwoven muscle fibers of the uterus) do not clamp down on the blood vessels that supplied the placenta, leading to catastrophic, rapid blood loss.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Oxytocin</strong></td>
+                                <td>A synthetic version of the natural hormone. It binds to oxytocin receptors on the myometrium (uterine muscle).</td>
+                                <td>Causes a powerful, sustained, and rhythmic contraction of the uterus. This clamps down on the open blood vessels at the placental site, achieving mechanical hemostasis and stopping the bleeding.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Prehospital Thrombolysis -->
+            <section id="thrombo" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Prehospital Thrombolysis (for STEMI)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>In an ST-Elevation Myocardial Infarction (STEMI), a coronary artery is typically 100% occluded by a thrombus (blood clot). This starves the downstream myocardium of oxygen, leading to transmural ischemia and irreversible cell death (infarction). "Time is muscle," and the goal of therapy is to restore blood flow (reperfuse) as quickly as possible.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Clopidogrel</strong></td>
+                                <td>An anti-platelet agent. It is a prodrug that is metabolized into its active form, which irreversibly blocks the P2Y12 receptor on platelets, preventing their activation and aggregation.</td>
+                                <td>Works synergistically with Aspirin (which blocks the TXA2 pathway) to potently inhibit platelet aggregation, preventing the existing clot from expanding and new clots from forming.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Enoxaparin Sodium</strong></td>
+                                <td>A low-molecular-weight heparin (LMWH). It is an anticoagulant that binds to and potentiates antithrombin III, which in turn inactivates Factor Xa and, to a lesser extent, Factor IIa (thrombin).</td>
+                                <td>Prevents the formation and propagation of fibrin clots. It "thins the blood" by inhibiting the coagulation cascade, supporting the primary reperfusion therapy.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tenecteplase</strong></td>
+                                <td>A fibrinolytic (or "clot buster"). It is a modified form of human tissue plasminogen activator (tPA) that binds to fibrin within a thrombus. It then converts plasminogen to plasmin.</td>
+                                <td>Plasmin actively dissolves the fibrin mesh of the clot, breaking it down and restoring blood flow (recanalizing the occluded artery). This is the primary reperfusion therapy.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Seizures -->
+            <section id="seizure" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Seizures (Status Epilepticus)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A seizure is a transient disturbance of cerebral function caused by abnormal, excessive, and hypersynchronous neuronal activity in the brain. Status Epilepticus is a state of continuous seizure activity (≥5 minutes) or recurrent seizures without recovery. This is a neurological emergency, as prolonged seizure activity can cause neuronal death, hypoxia, acidosis, and rhabdomyolysis.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Midazolam</strong></td>
+                                <td>A benzodiazepine (see Behavioural Disturbance). It enhances the effect of the brain's primary inhibitory neurotransmitter, GABA, at the GABA-A receptor.</td>
+                                <td>Rapidly suppresses the abnormal, excessive electrical activity in the brain, thereby terminating the seizure.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Tachycardia -->
+            <section id="tachy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Tachycardia (Refractory VT/VF)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>Ventricular Tachycardia (VT) and Ventricular Fibrillation (VF) are life-threatening arrhythmias originating from the ventricles. In cardiac arrest, these rhythms may be "refractory," meaning they persist despite defibrillation attempts. This is often due to underlying ischemia, electrolyte abnormalities, or structural heart disease creating an unstable electrical environment.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Amiodarone</strong></td>
+                                <td>A complex antiarrhythmic drug (Class III). It primarily works by blocking potassium channels, which prolongs the repolarization phase (cardiac action potential). It also blocks sodium and calcium channels and has anti-adrenergic effects.</td>
+                                <td>Increases the ventricular fibrillation threshold (makes it harder for VF to occur) and prolongs the refractory period. This helps to chemically stabilize the myocardium, making defibrillation more likely to succeed in terminating the arrhythmia.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Torsades De Pointes -->
+            <section id="tdp" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Torsades De Pointes (TdP)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A specific form of polymorphic ventricular tachycardia (pVT) characterized by a "twisting" of the QRS complex around the isoelectric line on an ECG. It is almost always associated with a prolonged QT interval (either congenital or acquired, e.g., from drugs or electrolyte imbalance). This prolonged repolarization phase allows for early afterdepolarizations, which can trigger the arrhythmia. It can degenerate into VF.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Pharmacological Management</h3>
+                    <table>
+                        <thead><tr><th>Medication</th><th>Mechanism of Action (MOA)</th><th>Therapeutic Outcome</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                D<td><strong>Lignocaine</strong></td>
+                                <td>A Class Ib antiarrhythmic. It blocks fast sodium channels, which is most effective on depolarized (ischemic) tissue. It shortens the action potential duration. (Note: Magnesium is the first-line drug for TdP).</td>
+                                <td>Suppresses ventricular ectopy and can terminate ventricular arrhythmias. Its use in TdP is controversial, but it may be used for TdP that degenerates into pVT/VF, particularly if related to ischemia.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <!-- Fluids -->
+            <section id="fluids" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Fluids (Isotonic Crystalloid)</h2>
+                <div class="management-box">
+                    <h3>General Mechanism and Outcome</h3>
+                    <p><strong>Mechanism of Action (MOA):</strong> Isotonic crystalloids (e.g., 0.9% Sodium Chloride, Compound Sodium Lactate) are solutions with a tonicity similar to human plasma. When administered intravenously, their primary effect is to expand the intravascular (blood) volume.</p>
+                    <p><strong>Therapeutic Outcome:</strong> The goal of fluid resuscitation is to increase intravascular volume, which in turn increases venous return (preload), stroke volume, and cardiac output. This ultimately raises blood pressure and improves tissue perfusion to vital organs.</p>
+                </div>
+                <div class="disorder-box">
+                    <h3>Indications for Fluid Therapy</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Indication</th>
+                                <th>Pathophysiology (Why Fluids are Given)</th>
+                                <th>Therapeutic Outcome (Goal of Fluid Therapy)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Anaphylaxis</strong></td>
+                                <td>Massive systemic vasodilation and capillary leak ("distributive shock") cause a profound <strong>relative hypovolemia</strong> as fluid shifts from the blood vessels into the tissues.</td>
+                                <td>Aggressive volume replacement to fill the "leaky" and dilated vascular container, supporting blood pressure (in conjunction with adrenaline).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Burns</strong></td>
+                                <td>Widespread inflammatory response causes massive capillary leak, leading to significant fluid loss from the intravascular space into the interstitial space (edema). This causes severe <strong>hypovolemic shock</strong>.</td>
+                                <td>Large-volume resuscitation to compensate for ongoing fluid losses and maintain vital organ perfusion.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cardiogenic Shock</strong></td>
+                                <td>The heart (pump) fails, leading to a backup of fluid into the lungs (pulmonary edema) and poor forward flow. The patient is <strong>hypervolemic</strong>, not hypovolemic.</td>
+                                <td><strong>CAUTION:</strong> Fluids are generally contraindicated and can worsen pulmonary edema. Judicious, small boluses may be considered only if hypovolemia is strongly suspected.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Crush Injuries / Trapped Patients</strong></td>
+                                <td>Prolonged muscle compression causes rhabdomyolysis (cell death), which releases myoglobin and potassium. Reperfusion (on release) floods the body with these toxins.</td>
+                                <td>Pre-release fluid loading dilutes toxins (especially potassium to reduce cardiotoxicity), protects the kidneys from myoglobin (flushing), and treats associated hypovolemia.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Dehydration</strong></td>
+                                <td>Net loss of water and electrolytes from the body (e.g., vomiting, diarrhea, heat exposure), leading to <strong>absolute hypovolemia</strong>.</td>
+                                <td>Restore total body water and electrolyte balance, thereby increasing intravascular volume and improving perfusion.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hyperglycaemia (DKA/HHS)</strong></td>
+                                <td>Extremely high BGL acts as an osmotic diuretic, pulling large volumes of water into the urine. This leads to profound dehydration and electrolyte loss.</td>
+                                <td>Aggressive rehydration to restore intravascular volume, improve tissue perfusion, and enhance renal clearance of glucose and ketones.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hyperkalaemia</strong></td>
+                                <td>High potassium is cardiotoxic.</td>
+                                <td>Fluids help to dilute serum potassium and promote its renal excretion, reducing the immediate risk of arrhythmia.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Medical Hypoperfusion (e.g., Sepsis)</strong></td>
+                                <td>Sepsis causes systemic vasodilation and capillary leak (distributive shock), leading to profound **relative hypovolemia** and poor organ perfusion.</td>
+                                <td>Rapid, large-volume fluid boluses to fill the dilated vascular space, increase preload, and restore blood pressure and organ perfusion.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Trauma in Pregnancy</strong></td>
+                                <td>A pregnant patient has a 40-50% larger blood volume. They can compensate for massive blood loss for a long time, and hypotension is a very late and pre-arrest sign.</td>
+                                <td>Aggressive fluid resuscitation is vital to support both maternal blood pressure and fetal perfusion. Treat hypotension immediately.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Traumatic Cardiac Arrest</strong></td>
+                                <td>The most common reversible cause is profound hypovolemia (hemorrhagic shock). CPR is ineffective if the "tank is empty."</td>
+                                <td>Rapid, large-volume fluid boluses are essential to "fill the tank," enabling CPR to generate a cardiac output and making defibrillation/drugs effective.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Traumatic Hypovolaemia</strong></td>
+                                <td>Hemorrhage (internal or external bleeding) leads to a rapid loss of circulating blood volume, causing hemorrhagic shock.</td>
+                                <td>Fluid resuscitation to restore volume and maintain perfusion to the brain and heart. (Note: Often guided by "permissive hypotension" to avoid "popping the clot").</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide provides a foundational overview of common pre-hospital indications and treatments. Always adhere to your local clinical practice guidelines and apply sound clinical judgment.</p>
+        </footer>
+    </div>
+</body>
+</html>
+
