@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Pharmacology: A Comprehensive Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .concept-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .concept-box strong {
+            color: #b91c1c;
+        }
+        .drug-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .drug-box strong {
+            color: #15803d;
+        }
+        .pathophysiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .pathophysiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Clinical Pharmacology</h1>
+            <p class="text-xl text-gray-600 mt-2">A Comprehensive Study Guide for NATS2008</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <a href="#pns" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Peripheral Nervous System</a>
+                <a href="#cvs" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Cardiovascular System</a>
+                <a href="#blood-renal" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Blood & Renal Systems</a>
+                <a href="#cns" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Central Nervous System</a>
+                <a href="#antimicrobial" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Antimicrobial Drugs</a>
+                 <a href="#pain" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Pain & Inflammation</a>
+                <a href="#respiratory" class="bg-pink-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-pink-600">Respiratory System</a>
+                <a href="#digestive" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Digestive System</a>
+                <a href="#endocrine" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Endocrine System</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Drugs Affecting the Peripheral Nervous System -->
+            <section id="pns" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drugs Affecting the Peripheral Nervous System</h2>
+                <div class="concept-box">
+                    <h3>The Autonomic Nervous System (ANS)</h3>
+                    <p>The ANS regulates involuntary body functions and is divided into two main branches that often have opposing effects:</p>
+                    <ul>
+                        <li><strong>Sympathetic Nervous System (SNS):</strong> "Fight or Flight". Neurotransmitters: Noradrenaline (Norepinephrine) and Adrenaline (Epinephrine). Receptors: Adrenergic (Alpha and Beta).</li>
+                        <li><strong>Parasympathetic Nervous System (PNS):</strong> "Rest and Digest". Neurotransmitter: Acetylcholine (ACh). Receptors: Cholinergic (Muscarinic and Nicotinic).</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Cholinergic Pharmacology</h3>
+                    <p>Drugs that affect the parasympathetic system by interacting with acetylcholine receptors.</p>
+                    <ul>
+                        <li><strong>Muscarinic Agonists (Parasympathomimetics):</strong> Mimic ACh at muscarinic receptors. Effects: decreased heart rate, increased GI motility, bronchoconstriction, miosis (pupil constriction). Used for glaucoma (e.g., pilocarpine) and urinary retention.</li>
+                        <li><strong>Muscarinic Antagonists (Anticholinergics/Parasympatholytics):</strong> Block ACh at muscarinic receptors. Effects: increased heart rate, bronchodilation, decreased secretions, mydriasis (pupil dilation). Example: <strong>Atropine</strong> (used for bradycardia, organophosphate poisoning).</li>
+                        <li><strong>Anticholinesterases:</strong> Inhibit the enzyme acetylcholinesterase, which breaks down ACh, leading to increased ACh levels. Used for Myasthenia Gravis and Alzheimer's disease (e.g., neostigmine, donepezil).</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Adrenergic Pharmacology</h3>
+                    <p>Drugs that affect the sympathetic system by interacting with adrenergic receptors (Alpha-1, Alpha-2, Beta-1, Beta-2).</p>
+                    <ul>
+                        <li><strong>Adrenergic Agonists (Sympathomimetics):</strong>
+                            <ul>
+                                <li><strong>Alpha-1 Agonists:</strong> Cause vasoconstriction (e.g., phenylephrine for nasal congestion).</li>
+                                <li><strong>Beta-1 Agonists:</strong> Increase heart rate and contractility (e.g., dobutamine for heart failure).</li>
+                                <li><strong>Beta-2 Agonists:</strong> Cause bronchodilation (e.g., <strong>Salbutamol</strong> for asthma).</li>
+                                <li><strong>Adrenaline (Epinephrine):</strong> Non-selective agonist (Alpha-1, Beta-1, Beta-2). Used for anaphylaxis and cardiac arrest.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Adrenergic Antagonists (Sympatholytics):</strong>
+                            <ul>
+                                <li><strong>Alpha-Blockers:</strong> Cause vasodilation, used for hypertension (e.g., prazosin).</li>
+                                <li><strong>Beta-Blockers:</strong> Block Beta-1 receptors to decrease heart rate and contractility, used for hypertension, angina, and arrhythmias (e.g., <strong>propranolol, metoprolol, atenolol</strong>).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Drugs Affecting the Cardiovascular System -->
+            <section id="cvs" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drugs Affecting the Cardiovascular System</h2>
+                <div class="pathophysiology-box">
+                    <h3>Hypertension</h3>
+                    <p>Defined as sustained high blood pressure (≥140/90 mmHg). It is a major risk factor for heart disease, stroke, and renal failure. Blood pressure is determined by Cardiac Output (CO) and Total Peripheral Resistance (TPR): BP = CO x TPR.</p>
+                </div>
+                <div class="drug-box">
+                    <h3>Antihypertensive Drugs</h3>
+                    <ul>
+                        <li><strong>Diuretics:</strong> Increase urine output, reducing blood volume and cardiac output. Thiazides are first-line (e.g., hydrochlorothiazide).</li>
+                        <li><strong>ACE Inhibitors (ACEIs):</strong> Block the conversion of Angiotensin I to Angiotensin II (a potent vasoconstrictor). They cause vasodilation and reduce aldosterone secretion (reducing sodium/water retention). Examples: <strong>captopril, enalapril, ramipril</strong>. Common side effect: persistent dry cough.</li>
+                        <li><strong>Angiotensin II Receptor Blockers (ARBs):</strong> Block Angiotensin II receptors directly. Similar effects to ACEIs but without the cough. Examples: <strong>losartan, irbesartan</strong>.</li>
+                        <li><strong>Calcium Channel Blockers (CCBs):</strong> Block calcium entry into vascular smooth muscle (causing vasodilation) and cardiac muscle (reducing heart rate and contractility). Examples: <strong>nifedipine, amlodipine</strong> (vascular selective), <strong>verapamil, diltiazem</strong> (cardiac selective).</li>
+                        <li><strong>Beta-Blockers:</strong> Reduce cardiac output by decreasing heart rate and contractility. (See Adrenergic Pharmacology).</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Drugs for Heart Failure</h3>
+                    <p>Heart failure is the inability of the heart to pump sufficient blood to meet the body's needs. Treatment aims to reduce the workload on the heart and improve its pumping ability.</p>
+                    <ul>
+                        <li><strong>ACE Inhibitors/ARBs:</strong> Cornerstone therapy to reduce afterload (TPR) and preload (blood volume).</li>
+                        <li><strong>Beta-Blockers:</strong> Carefully used to reduce excessive sympathetic stimulation of the heart.</li>
+                        <li><strong>Diuretics:</strong> Reduce fluid overload (pulmonary and peripheral edema). Loop diuretics (e.g., <strong>furosemide</strong>) are most potent.</li>
+                        <li><strong>Cardiac Glycosides (Digoxin):</strong> Increase the force of cardiac contraction (positive inotrope) by inhibiting the Na+/K+ ATPase pump, leading to increased intracellular calcium. It has a narrow therapeutic index and can cause toxicity (arrhythmias, nausea, visual disturbances).</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Antianginal Drugs</h3>
+                    <p>Angina pectoris is chest pain caused by myocardial ischemia (oxygen demand > oxygen supply). Drugs aim to either decrease oxygen demand or increase oxygen supply.</p>
+                    <ul>
+                        <li><strong>Nitrates (Glyceryl Trinitrate - GTN):</strong> Potent vasodilators that form nitric oxide (NO). They primarily dilate veins (reducing preload) and also dilate coronary arteries (increasing oxygen supply).</li>
+                        <li><strong>Beta-Blockers:</strong> Reduce oxygen demand by decreasing heart rate and contractility.</li>
+                        <li><strong>Calcium Channel Blockers:</strong> Reduce oxygen demand (reduced afterload and contractility) and increase supply (coronary vasodilation).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Drugs Affecting the Blood and the Renal System -->
+            <section id="blood-renal" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drugs Affecting the Blood and the Renal System</h2>
+                <div class="drug-box">
+                    <h3>Anticoagulants, Antiplatelets, and Fibrinolytics</h3>
+                    <p>Used to prevent or treat thrombosis (inappropriate blood clot formation).</p>
+                    <ul>
+                        <li><strong>Antiplatelet Drugs:</strong> Inhibit platelet aggregation. Used to prevent arterial thrombosis (e.g., in MI, stroke).
+                            <ul>
+                                <li><strong>Aspirin:</strong> Irreversibly inhibits COX-1, preventing thromboxane A2 formation.</li>
+                                <li><strong>Clopidogrel:</strong> Blocks ADP receptors on platelets.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Anticoagulants:</strong> Inhibit clotting factors in the coagulation cascade. Used to prevent venous thrombosis (DVT, PE) and emboli from atrial fibrillation.
+                            <ul>
+                                <li><strong>Heparin:</strong> Activates antithrombin III, which inactivates thrombin and Factor Xa. Administered parenterally (IV/SC). Low Molecular Weight Heparins (e.g., <strong>enoxaparin</strong>) have a more predictable response.</li>
+                                <li><strong>Warfarin:</strong> Vitamin K antagonist. Inhibits the synthesis of Vitamin K-dependent clotting factors (II, VII, IX, X). Administered orally. Requires careful monitoring (INR) due to narrow therapeutic index and many drug interactions.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Fibrinolytics ("Clot Busters"):</strong> Actively dissolve existing clots by converting plasminogen to plasmin, which breaks down fibrin. Used for acute MI, ischemic stroke, and massive PE. Example: <strong>tissue plasminogen activator (tPA)</strong>, streptokinase. Main risk is severe hemorrhage.</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Diuretics</h3>
+                    <p>Drugs that increase the rate of urine flow and sodium excretion. Used for hypertension, heart failure, and edematous states.</p>
+                    <ul>
+                        <li><strong>Loop Diuretics (e.g., Furosemide):</strong> Most potent. Act on the thick ascending Loop of Henle to inhibit Na+/K+/2Cl- co-transport. Can cause hypokalemia (low potassium).</li>
+                        <li><strong>Thiazide Diuretics (e.g., Hydrochlorothiazide):</strong> Act on the distal convoluted tubule. Moderately potent. Also cause hypokalemia.</li>
+                        <li><strong>Potassium-Sparing Diuretics:</strong> Act on the collecting duct. Weak diuretics often used in combination with others to prevent potassium loss.
+                            <ul>
+                                <li><strong>Aldosterone Antagonists (e.g., Spironolactone):</strong> Block aldosterone receptors.</li>
+                                <li><strong>Sodium Channel Blockers (e.g., Amiloride):</strong> Directly block Na+ channels.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Drugs Affecting the Central Nervous System -->
+            <section id="cns" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drugs Affecting the Central Nervous System</h2>
+                <div class="concept-box">
+                    <h3>Neurotransmission in the CNS</h3>
+                    <p>CNS drugs work by modulating neurotransmitter activity at synapses. Key neurotransmitters include:</p>
+                    <ul>
+                        <li><strong>Acetylcholine (ACh):</strong> Memory, cognitive function (reduced in Alzheimer's).</li>
+                        <li><strong>Dopamine (DA):</strong> Movement, reward/pleasure, reality perception (reduced in Parkinson's, excess in Schizophrenia).</li>
+                        <li><strong>Norepinephrine (NE) & Serotonin (5-HT):</strong> Mood, sleep/wake cycle, pain perception (reduced in Depression/Anxiety).</li>
+                        <li><strong>GABA:</strong> Major inhibitory neurotransmitter (enhanced by anxiolytics/sedatives).</li>
+                        <li><strong>Glutamate:</strong> Major excitatory neurotransmitter.</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Drugs for Neurodegenerative Diseases</h3>
+                    <ul>
+                        <li><strong>Parkinson's Disease:</strong> Caused by loss of dopaminergic neurons. Treatment aims to increase dopamine activity.
+                            <ul>
+                                <li><strong>Levodopa:</strong> A precursor to dopamine that can cross the BBB (dopamine cannot). Usually given with <strong>Carbidopa</strong> to prevent peripheral breakdown.</li>
+                                <li><strong>Dopamine Agonists:</strong> Directly stimulate dopamine receptors (e.g., bromocriptine).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Alzheimer's Disease:</strong> Associated with loss of cholinergic neurons.
+                            <ul>
+                                <li><strong>Acetylcholinesterase Inhibitors:</strong> Increase ACh levels by inhibiting its breakdown (e.g., <strong>donepezil, rivastigmine</strong>).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Psychotropic Drugs</h3>
+                    <ul>
+                        <li><strong>Antipsychotics:</strong> Used for schizophrenia and psychosis. Main mechanism is blocking dopamine (D2) receptors.
+                            <ul>
+                                <li><strong>Typical (1st Gen):</strong> High risk of extrapyramidal side effects (motor disorders) (e.g., haloperidol, chlorpromazine).</li>
+                                <li><strong>Atypical (2nd Gen):</strong> Lower risk of motor side effects, but higher risk of metabolic side effects (weight gain, diabetes) (e.g., <strong>clozapine, risperidone, olanzapine</strong>).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Antidepressants:</strong> Increase synaptic levels of monoamines (serotonin, NE).
+                            <ul>
+                                <li><strong>Tricyclic Antidepressants (TCAs):</strong> Block reuptake of NE and 5-HT. Effective but have many side effects (anticholinergic, cardiotoxic in overdose) (e.g., amitriptyline).</li>
+                                <li><strong>Selective Serotonin Reuptake Inhibitors (SSRIs):</strong> Selectively block 5-HT reuptake. Safer profile, first-line for depression/anxiety (e.g., <strong>fluoxetine, sertraline, paroxetine</strong>).</li>
+                                <li><strong>Monoamine Oxidase Inhibitors (MAOIs):</strong> Inhibit the enzyme MAO that breaks down monoamines. Require strict dietary restrictions (no tyramine) to avoid hypertensive crisis.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Anxiolytics & Hypnotics:</strong> Used for anxiety and insomnia.
+                            <ul>
+                                <li><strong>Benzodiazepines:</strong> Potentiate the inhibitory action of GABA. Effective but carry risk of dependence and tolerance (e.g., <strong>diazepam, midazolam, temazepam</strong>).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Antimicrobial Drugs and Infection Control -->
+            <section id="antimicrobial" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Antimicrobial Drugs and Infection Control</h2>
+                <div class="concept-box">
+                    <h3>Principles of Antimicrobial Therapy</h3>
+                    <ul>
+                        <li><strong>Selective Toxicity:</strong> The drug must harm the microorganism without harming the host.</li>
+                        <li><strong>Bactericidal vs. Bacteriostatic:</strong> Bactericidal drugs kill bacteria; bacteriostatic drugs inhibit their growth, relying on the host's immune system to clear the infection.</li>
+                        <li><strong>Spectrum of Activity:</strong> Narrow-spectrum (effective against a few types) vs. Broad-spectrum (effective against many types, but can disrupt normal flora).</li>
+                        <li><strong>Resistance:</strong> A major global health threat. Occurs when microorganisms mutate or acquire genes that allow them to survive exposure to antimicrobial drugs.</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Major Classes of Antibiotics</h3>
+                    <ol>
+                        <li><strong>Inhibitors of Cell Wall Synthesis:</strong> (Bactericidal)
+                            <ul>
+                                <li><strong>Penicillins:</strong> (e.g., benzylpenicillin, amoxicillin). Often combined with beta-lactamase inhibitors (e.g., clavulanic acid) to overcome resistance.</li>
+                                <li><strong>Cephalosporins:</strong> (e.g., cephalexin, ceftriaxone). Grouped into generations with increasing gram-negative activity.</li>
+                                <li><strong>Glycopeptides:</strong> (e.g., <strong>vancomycin</strong>). Used for severe gram-positive infections like MRSA.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Inhibitors of Protein Synthesis:</strong> (Mostly Bacteriostatic)
+                            <ul>
+                                <li><strong>Aminoglycosides:</strong> (e.g., gentamicin). Bactericidal, used for severe gram-negative infections. Ototoxic and nephrotoxic.</li>
+                                <li><strong>Macrolides:</strong> (e.g., erythromycin, azithromycin). Often used in penicillin-allergic patients.</li>
+                                <li><strong>Tetracyclines:</strong> (e.g., doxycycline). Broad-spectrum. Avoid in children/pregnancy (teeth discoloration).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Inhibitors of Nucleic Acid Synthesis:</strong>
+                            <ul>
+                                <li><strong>Fluoroquinolones:</strong> (e.g., ciprofloxacin). Inhibit DNA gyrase. Broad-spectrum.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Antimetabolites:</strong>
+                            <ul>
+                                <li><strong>Sulfonamides & Trimethoprim:</strong> Inhibit folic acid synthesis. Often used together (co-trimoxazole).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="drug-box">
+                    <h3>Antiviral Drugs</h3>
+                    <p>Viruses are intracellular parasites, making them difficult to target without harming host cells. Current drugs inhibit specific steps in viral replication.</p>
+                    <ul>
+                        <li><strong>Anti-Herpes:</strong> Acyclovir (inhibits viral DNA polymerase).</li>
+                        <li><strong>Anti-HIV (Antiretrovirals):</strong> Used in combination (HAART) to prevent resistance. Classes include Reverse Transcriptase Inhibitors (NRTIs, NNRTIs), Protease Inhibitors, and Fusion Inhibitors.</li>
+                        <li><strong>Anti-Influenza:</strong> Neuraminidase inhibitors (e.g., oseltamivir/Tamiflu) prevent release of new virus particles.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Drugs for Pain and Inflammation -->
+            <section id="pain" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drugs for Pain and Inflammation</h2>
+                <div class="drug-box">
+                    <h3>Opioid Analgesics</h3>
+                    <p>Act on opioid receptors (mu, kappa, delta) in the CNS to alter pain perception and emotional response to pain.</p>
+                    <ul>
+                        <li><strong>Agonists:</strong> Morphine (the gold standard), codeine (prodrug, metabolized to morphine), fentanyl (highly potent, rapid onset), methadone (long-acting, used for opioid dependence), pethidine (less used now due to neurotoxic metabolite).</li>
+                        <li><strong>Antagonists:</strong> Naloxone (used to reverse opioid overdose).</li>
+                        <li><strong>Side Effects:</strong> Respiratory depression (major cause of death in overdose), constipation, nausea/vomiting, sedation, dependence/addiction.</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Non-Steroidal Anti-Inflammatory Drugs (NSAIDs)</h3>
+                    <p>Work by inhibiting cyclooxygenase (COX) enzymes, which prevents the synthesis of prostaglandins (mediators of pain, fever, and inflammation).</p>
+                    <ul>
+                        <li><strong>Non-selective COX Inhibitors:</strong> Aspirin, Ibuprofen, Diclofenac, Naproxen. Inhibit both COX-1 (constitutive, protects stomach lining, regulates platelets) and COX-2 (inducible, involved in inflammation).</li>
+                        <li><strong>Selective COX-2 Inhibitors (Coxibs):</strong> Celecoxib. Target inflammation while sparing the stomach lining. However, they may increase cardiovascular risk.</li>
+                        <li><strong>Side Effects:</strong> Gastric irritation/ulceration (due to COX-1 inhibition), renal impairment, increased bleeding risk (antiplatelet effect), bronchospasm in sensitive asthmatics.</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Paracetamol (Acetaminophen)</h3>
+                    <p>Has analgesic and antipyretic effects but weak anti-inflammatory activity. Its exact mechanism is unknown but likely involves central COX inhibition. It is generally safe but highly hepatotoxic in overdose due to the accumulation of a toxic metabolite (NAPQI) when normal glutathione pathways are saturated.</p>
+                </div>
+            </section>
+
+            <!-- Drugs Affecting the Respiratory System -->
+            <section id="respiratory" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drugs Affecting the Respiratory System</h2>
+                <div class="pathophysiology-box">
+                    <h3>Asthma</h3>
+                    <p>A chronic inflammatory disorder characterized by reversible airway obstruction due to bronchospasm, mucosal edema, and increased mucus production.</p>
+                </div>
+                <div class="drug-box">
+                    <h3>Drugs for Asthma</h3>
+                    <ul>
+                        <li><strong>Bronchodilators ("Relievers"):</strong>
+                            <ul>
+                                <li><strong>Short-acting Beta-2 Agonists (SABA):</strong> Salbutamol, Terbutaline. Provide rapid relief of acute bronchospasm.</li>
+                                <li><strong>Long-acting Beta-2 Agonists (LABA):</strong> Salmeterol, Formoterol. Used for long-term control, always in combination with inhaled corticosteroids.</li>
+                                <li><strong>Antimuscarinics:</strong> Ipratropium bromide. Block bronchoconstrictor effects of the vagus nerve. Less effective than beta-2 agonists in asthma but very useful in COPD.</li>
+                                <li><strong>Methylxanthines:</strong> Theophylline. Weak bronchodilator with a narrow therapeutic window.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Anti-inflammatory Agents ("Preventers"):</strong>
+                            <ul>
+                                <li><strong>Corticosteroids (Inhaled - ICS):</strong> Beclomethasone, Budesonide, Fluticasone. The most effective long-term control medication. Reduce airway inflammation and hyperresponsiveness. Side effects: oral thrush, dysphonia.</li>
+                                <li><strong>Systemic Corticosteroids:</strong> Prednisolone (oral), Hydrocortisone (IV). Used for severe acute exacerbations.</li>
+                                <li><strong>Leukotriene Receptor Antagonists:</strong> Montelukast. Oral add-on therapy.</li>
+                                <li><strong>Mast Cell Stabilizers:</strong> Cromoglycate. Used primarily for prophylaxis in children.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Drugs Affecting the Digestive System -->
+            <section id="digestive" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drugs Affecting the Digestive System</h2>
+                <div class="drug-box">
+                    <h3>Drugs for Peptic Ulcer Disease & GORD</h3>
+                    <p>Aim to reduce gastric acid secretion or protect the mucosa.</p>
+                    <ul>
+                        <li><strong>Proton Pump Inhibitors (PPIs):</strong> Irreversibly inhibit the H+/K+ ATPase ("proton pump") in parietal cells, the final step in acid secretion. Most potent acid suppressants. Examples: <strong>omeprazole, esomeprazole, pantoprazole</strong>.</li>
+                        <li><strong>H2-Receptor Antagonists:</strong> Block histamine H2 receptors on parietal cells, reducing acid secretion. Examples: <strong>ranitidine, cimetidine</strong>.</li>
+                        <li><strong>Antacids:</strong> Weak bases that neutralize existing gastric acid. Provide rapid but short-term relief. Examples: Mylanta, Gaviscon.</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Antiemetics</h3>
+                    <p>Used to treat nausea and vomiting by blocking neurotransmitter receptors in the vomiting center and chemoreceptor trigger zone (CTZ).</p>
+                    <ul>
+                        <li><strong>Dopamine (D2) Antagonists:</strong> Metoclopramide (also prokinetic), Prochlorperazine. Can cause extrapyramidal side effects.</li>
+                        <li><strong>Serotonin (5-HT3) Antagonists:</strong> Ondansetron. Very effective for chemotherapy- and post-operative-induced nausea.</li>
+                        <li><strong>Antihistamines (H1) & Anticholinergics:</strong> Promethazine, Hyoscine. Effective for motion sickness.</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Laxatives and Antidiarrheals</h3>
+                    <ul>
+                        <li><strong>Laxatives:</strong> Treat constipation. Types: Bulk-forming (psyllium), Osmotic (lactulose), Stimulant (senna, bisacodyl), Stool softeners (docusate).</li>
+                        <li><strong>Antidiarrheals:</strong> Opioids like <strong>loperamide</strong> reduce intestinal motility and increase water absorption. Oral rehydration therapy is crucial for treating dehydration from diarrhea.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Drugs Affecting the Endocrine System -->
+            <section id="endocrine" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drugs Affecting the Endocrine System</h2>
+                <div class="pathophysiology-box">
+                    <h3>Diabetes Mellitus</h3>
+                    <ul>
+                        <li><strong>Type 1 DM:</strong> Autoimmune destruction of pancreatic beta cells leading to absolute insulin deficiency. Requires lifelong insulin therapy.</li>
+                        <li><strong>Type 2 DM:</strong> Insulin resistance and progressive beta-cell failure. Managed with lifestyle changes and oral hypoglycemic agents, potentially insulin later.</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Insulin</h3>
+                    <p>Essential for Type 1 DM and advanced Type 2 DM. Classified by duration of action: ultra-short (Lispro, Aspart), short (Neutral/Regular), intermediate (Isophane/NPH), and long-acting (Glargine, Detemir). Main hazard is <strong>hypoglycemia</strong>.</p>
+                </div>
+                <div class="drug-box">
+                    <h3>Oral Hypoglycemic Agents (for Type 2 DM)</h3>
+                    <ul>
+                        <li><strong>Biguanides (Metformin):</strong> First-line therapy. Decreases hepatic glucose production and increases peripheral insulin sensitivity. Does not cause hypoglycemia or weight gain.</li>
+                        <li><strong>Sulfonylureas (e.g., Gliclazide, Glipizide):</strong> Stimulate pancreatic beta cells to release more insulin. Major side effects: hypoglycemia and weight gain.</li>
+                        <li><strong>Thiazolidinediones (Glitazones):</strong> Insulin sensitizers (e.g., pioglitazone).</li>
+                        <li><strong>Incretin-based therapies:</strong> DPP-4 inhibitors (e.g., sitagliptin) and GLP-1 agonists (e.g., exenatide) enhance glucose-dependent insulin secretion.</li>
+                        <li><strong>SGLT2 Inhibitors (e.g., Empagliflozin):</strong> Block glucose reabsorption in the kidney, causing glucose to be excreted in urine.</li>
+                    </ul>
+                </div>
+                <div class="drug-box">
+                    <h3>Corticosteroids (Glucocorticoids)</h3>
+                    <p>Powerful anti-inflammatory and immunosuppressive drugs used for asthma, autoimmune diseases, and allergic reactions. Examples: <strong>prednisolone, hydrocortisone, dexamethasone</strong>. Long-term use causes serious side effects (Cushing's syndrome features, osteoporosis, diabetes, infection risk, adrenal suppression).</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide integrates core concepts from Lectures 4-12 to provide a solid foundation in clinical pharmacology.</p>
+        </footer>
+    </div>
+</body>
+</html>
