@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extremity Trauma - Paramedicine Trauma Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .clinical-pearl {
+            background-color: #f0fdf4;
+            border-left: 4px solid #22c55e;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .warning-box {
+            background-color: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .patho-flow {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        h2 { border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-top: 3rem; color: #1e293b; font-weight: 800; }
+        h3 { margin-top: 2rem; color: #4338ca; font-weight: 700; }
+        .step-circle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background-color: #4338ca;
+            color: white;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-12 max-w-5xl">
+        <header class="text-center mb-12">
+            <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-bold tracking-wider uppercase">Trauma Care 4</span>
+            <h1 class="text-4xl md:text-6xl font-black text-slate-900 mt-4">Extremity Trauma</h1>
+            <p class="text-xl text-slate-500 mt-4 max-w-2xl mx-auto">Advanced management of fractures, amputations, and life-threatening crush injuries.</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-2 rounded-2xl shadow-lg mb-12 sticky top-4 z-20 border border-slate-200">
+            <div class="flex flex-wrap justify-center gap-1 md:gap-4">
+                <a href="#femur" class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-all">Femur & Traction</a>
+                <a href="#amputation" class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-all">Amputations</a>
+                <a href="#compartment" class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-all">Compartment Sx</a>
+                <a href="#crush" class="px-4 py-2 rounded-xl text-sm font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-all">Crush Syndrome</a>
+            </div>
+        </nav>
+
+        <main class="space-y-16">
+
+            <!-- SECTION 1: Traction & NOF -->
+            <section id="femur">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-indigo-600 rounded-full"></div>
+                    <h2 class="text-3xl font-bold m-0 border-0 p-0">Femoral Fractures</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div>
+                        <h3 class="mt-0">1. Mid-Shaft & Traction Splinting</h3>
+                        <p class="text-sm text-slate-600 mb-4 leading-relaxed">Mid-shaft fractures can result in 1–1.5L of blood loss into the thigh. Traction reduces pain, realigns the bone, and creates a "tamponade" effect by narrowing the diameter of the thigh.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="flex items-start">
+                                <span class="step-circle">1</span>
+                                <p class="text-sm"><strong>Manual Traction:</strong> Maintain distal pulses and alignment.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="step-circle">2</span>
+                                <p class="text-sm"><strong>Measure Splint:</strong> Using the <em>uninjured</em> leg (Sager or CT-6/Kendrick).</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="step-circle">3</span>
+                                <p class="text-sm"><strong>Ankle Hitch:</strong> Secure firmly; ensure distal perfusion checks post-application.</p>
+                            </div>
+                            <div class="flex items-start">
+                                <span class="step-circle">4</span>
+                                <p class="text-sm"><strong>Apply Tension:</strong> 10% of body weight (max ~7kg) or until pain relief.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="warning-box">
+                        <strong>Contraindications for Traction:</strong>
+                        <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                            <li>Partial amputation / Near-avulsion.</li>
+                            <li>Injuries close to the knee or ankle (distal fractures).</li>
+                            <li>Pelvic fractures (unstable pelvis cannot take the counter-traction).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mt-8">
+                    <h3 class="mt-0">2. Neck of Femur (NOF) Immobilisation</h3>
+                    <p class="text-sm text-slate-600 mb-4">Common in elderly "ground-level falls." Presentation: <strong>Shortened and externally rotated</strong> limb.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="clinical-pearl mt-0">
+                            <strong>Standard Management:</strong>
+                            <p class="text-xs mt-2 italic">Ref: Moore et al. (2021)</p>
+                            <ul class="text-sm mt-2 space-y-1">
+                                <li>• Analgesia (Fentanyl or Fascia Iliaca Block where available).</li>
+                                <li>• Support with pillows/blankets in the position of comfort.</li>
+                                <li>• "Splinting to the uninjured limb" using broad-fold bandages.</li>
+                            </ul>
+                        </div>
+                        <div class="p-4 bg-indigo-50 rounded-xl">
+                            <h4 class="font-bold text-indigo-900 text-sm mb-2">Why NO Traction for NOF?</h4>
+                            <p class="text-xs text-indigo-800">Traction is contraindicated for hip/NOF fractures as the injury is within the joint capsule. Pulling may cause further damage or increase intracapsular pressure.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: Amputations -->
+            <section id="amputation">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-emerald-600 rounded-full"></div>
+                    <h2 class="text-3xl font-bold m-0 border-0 p-0">Amputation Management</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 mb-4 uppercase text-xs tracking-widest">The Patient</h4>
+                        <ul class="text-sm space-y-3">
+                            <li class="flex gap-2"><span>⚠️</span> <strong>Hemorrhage Control:</strong> Direct pressure first. If fails, apply <strong>Arterial Tourniquet</strong> immediately.</li>
+                            <li class="flex gap-2"><span>⚠️</span> <strong>Analgesia:</strong> High doses usually required.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                        <h4 class="font-bold text-slate-900 mb-4 uppercase text-xs tracking-widest">The Part (Preservation)</h4>
+                        <ol class="text-sm space-y-2 list-decimal list-inside text-slate-700">
+                            <li>Clean loosely with sterile saline (do not scrub).</li>
+                            <li>Wrap in <strong>saline-moistened</strong> gauze (not soaking wet).</li>
+                            <li>Place in a sealed plastic bag.</li>
+                            <li>Place the bag into a container of <strong>iced water</strong> (slurry).</li>
+                        </ol>
+                        <div class="mt-4 p-2 bg-red-100 text-red-900 text-[10px] font-bold rounded">
+                            NEVER PLACE THE AMPUTATED PART DIRECTLY ON ICE (Frostbite/Tissue Death).
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: Compartment Syndrome -->
+            <section id="compartment">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-red-600 rounded-full"></div>
+                    <h2 class="text-3xl font-bold m-0 border-0 p-0">Compartment Syndrome</h2>
+                </div>
+
+                <div class="patho-flow">
+                    <h3 class="mt-0 text-red-800">Pathophysiology</h3>
+                    <p class="text-sm">Increased pressure within a non-distensible fascial compartment exceeds capillary perfusion pressure (typically >30mmHg). This leads to muscle and nerve ischemia.</p>
+                </div>
+
+                <div class="mt-8">
+                    <h4 class="font-bold text-slate-900 mb-4">The "6 Ps" Assessment:</h4>
+                    <div class="grid grid-cols-2 md:grid-cols-6 gap-2">
+                        <div class="p-3 bg-white border border-slate-200 rounded text-center">
+                            <p class="font-bold text-indigo-600">Pain</p>
+                            <p class="text-[10px]">Out of proportion</p>
+                        </div>
+                        <div class="p-3 bg-white border border-slate-200 rounded text-center">
+                            <p class="font-bold text-indigo-600">Pressure</p>
+                            <p class="text-[10px]">Tense, wood-like</p>
+                        </div>
+                        <div class="p-3 bg-white border border-slate-200 rounded text-center">
+                            <p class="font-bold text-indigo-600">Pain</p>
+                            <p class="text-[10px]">On Passive Stretch</p>
+                        </div>
+                        <div class="p-3 bg-white border border-slate-200 rounded text-center">
+                            <p class="font-bold text-indigo-600">Paresthesia</p>
+                            <p class="text-[10px]">Late sign</p>
+                        </div>
+                        <div class="p-3 bg-white border border-slate-200 rounded text-center">
+                            <p class="font-bold text-indigo-600">Pallor</p>
+                            <p class="text-[10px]">Late sign</p>
+                        </div>
+                        <div class="p-3 bg-white border border-slate-200 rounded text-center">
+                            <p class="font-bold text-indigo-600">Pulseless</p>
+                            <p class="text-[10px]">Extremely late</p>
+                        </div>
+                    </div>
+                    <p class="text-xs mt-4 italic text-slate-500">Note: Distal pulses often remain present even in severe compartment syndrome.</p>
+                </div>
+            </section>
+
+            <!-- SECTION 4: Crush Injury & Syndrome -->
+            <section id="crush">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-black rounded-full"></div>
+                    <h2 class="text-3xl font-bold m-0 border-0 p-0">Crush Injury & Syndrome</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-bold text-slate-900 mb-2">1. The Injury vs. The Syndrome</h4>
+                            <p class="text-sm text-slate-600"><strong>Crush Injury:</strong> Direct tissue damage from pressure.<br><strong>Crush Syndrome:</strong> Systemic manifestations (Rhabdomyolysis) occurring <em>after</em> the weight is released.</p>
+                        </div>
+                        <div class="patho-flow mt-0">
+                            <h4 class="font-bold text-red-900 mb-2">The "Toxin Cloud"</h4>
+                            <p class="text-xs leading-relaxed">Release of weight allows circulation to return to ischemic muscle, flushing toxins into the systemic circulation:</p>
+                            <ul class="text-xs mt-2 space-y-1 font-semibold">
+                                <li>• Potassium ($\uparrow K^{+}$) $\rightarrow$ Dysrhythmias / Cardiac Arrest.</li>
+                                <li>• Myoglobin $\rightarrow$ Acute Renal Failure (clogs tubules).</li>
+                                <li>• Lactic Acid $\rightarrow$ Metabolic Acidosis.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="nswa-protocol bg-slate-900 text-white border-0">
+                        <h4 class="font-bold text-orange-400 mb-4">Management (ANZCOR 9.1.7 / UK Faculty)</h4>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase">Pre-Release</p>
+                                <ul class="text-sm space-y-1">
+                                    <li>• <strong>IV Fluid Loading:</strong> Essential to dilute toxins (2L Normal Saline initial bolus).</li>
+                                    <li>• 12-Lead ECG: Monitor for peaked T-waves.</li>
+                                    <li>• Tourniquets: Consider *only* if life-threatening hemorrhage or if release is imminent and fluids aren't established.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase">Pharmacology (Hyperkalemia Guard)</p>
+                                <ul class="text-sm space-y-1">
+                                    <li>• <strong>Calcium Gluconate/Chloride:</strong> Stabilises myocardium.</li>
+                                    <li>• <strong>Sodium Bicarbonate:</strong> Treats acidosis, shifts $K^{+}$ intracellularly.</li>
+                                    <li>• <strong>Salbutamol:</strong> Large doses (10-20mg) shift $K^{+}$ intracellularly.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="mt-24 border-t border-slate-200 pt-12 pb-8 text-center">
+            <p class="text-slate-400 text-sm">Created for WSU Paramedicine Care 4 - Trauma Module.</p>
+            <p class="text-slate-300 text-xs mt-2 italic">Ref: ANZCOR Guideline 9.1.7, Faculty of Pre-Hospital Care (RCSEd), Moore et al. (2021).</p>
+        </footer>
+    </div>
+
+</body>
+</html>
