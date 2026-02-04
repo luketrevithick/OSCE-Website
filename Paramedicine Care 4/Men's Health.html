@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's Health - Paramedicine Care 4 Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .pro-tip {
+            background-color: #f5f3ff;
+            border-left: 4px solid #8b5cf6;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .pro-tip strong {
+            color: #5b21b6;
+        }
+        .nswa-protocol {
+            background-color: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        .nswa-protocol strong {
+            color: #9a3412;
+        }
+        .patho-card {
+            background-color: #fdf2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            border-radius: 0.5rem;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 3rem;
+            color: #1e293b;
+        }
+        h3 {
+            margin-top: 2rem;
+            color: #4338ca;
+            font-weight: 700;
+        }
+        .anatomy-badge {
+            display: inline-block;
+            background-color: #e0e7ff;
+            color: #3730a3;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        th, td {
+            border: 1px solid #e2e8e0;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f8fafc;
+            color: #475569;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 md:p-12 max-w-5xl">
+        <header class="text-center mb-12">
+            <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-bold tracking-wider uppercase">Paramedicine Care 4</span>
+            <h1 class="text-4xl md:text-6xl font-black text-indigo-900 mt-4">Men's Health</h1>
+            <p class="text-xl text-slate-500 mt-4 max-w-2xl mx-auto">Assessment, pathophysiology, and out-of-hospital management of male-specific presentations.</p>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="bg-white p-2 rounded-2xl shadow-xl mb-12 sticky top-4 z-20 border border-slate-200">
+            <div class="flex flex-wrap justify-center gap-2">
+                <a href="#strategy" class="px-6 py-3 rounded-xl text-sm font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-all">Strategy & History</a>
+                <a href="#torsion" class="px-6 py-3 rounded-xl text-sm font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-all">Testicular Torsion</a>
+                <a href="#erectile" class="px-6 py-3 rounded-xl text-sm font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-all">Priapism & ED</a>
+                <a href="#prostate" class="px-6 py-3 rounded-xl text-sm font-bold text-slate-600 hover:bg-indigo-50 hover:text-indigo-600 transition-all">Prostate & IDC</a>
+            </div>
+        </nav>
+
+        <main class="space-y-16">
+
+            <!-- SECTION 1: National Strategy & History Taking -->
+            <section id="strategy">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-purple-600 rounded-full"></div>
+                    <h2 class="text-3xl font-bold m-0 border-0 p-0">Clinical Strategy & Assessment</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">National Men's Health Strategy 2020-2030</h3>
+                        <p class="text-slate-600 mb-4 leading-relaxed">Men are often over-represented in injuries, risk-taking, and preventable chronic conditions. Paramedics encounter men at points of crisis where health engagement is traditionally low.</p>
+                        <div class="bg-indigo-50 p-4 rounded-xl border border-indigo-100">
+                            <h4 class="font-bold text-indigo-900 mb-2">Five Priority Health Issues:</h4>
+                            <ul class="text-sm space-y-1 text-indigo-800">
+                                <li>• Mental Health</li>
+                                <li>• Chronic Conditions</li>
+                                <li>• Sexual and Reproductive Health</li>
+                                <li>• Injuries and Risk Taking</li>
+                                <li>• Healthy Ageing</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pro-tip">
+                        <strong>Sensitive History Taking:</strong>
+                        <p class="text-sm mt-2 mb-2">Patients may be embarrassed or stoic. Use professional, clinical language while maintaining empathy.</p>
+                        <ul class="list-disc list-inside text-sm space-y-1">
+                            <li><strong>Environment:</strong> Ensure a private space for assessment.</li>
+                            <li><strong>OPQRST:</strong> Specifically ask about onset during activity or sleep.</li>
+                            <li><strong>Associated Sx:</strong> Nausea/Vomiting (common in torsion), urinary changes, or fever.</li>
+                            <li><strong>Meds:</strong> Specifically ask about ED meds (PDE5 inhibitors) or medications for BPH.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 2: Scrotal Emergencies -->
+            <section id="torsion">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-indigo-600 rounded-full"></div>
+                    <h2 class="text-3xl font-bold m-0 border-0 p-0">Testicular Torsion</h2>
+                </div>
+
+                <div class="patho-card">
+                    <h3 class="text-xl font-bold text-red-700 mt-0">Pathophysiology & Time Sensitivity</h3>
+                    <p class="text-sm mt-2">Twisting of the spermatic cord cuts off venous drainage followed by arterial supply. <strong>Ischemia begins immediately.</strong></p>
+                    <ul class="mt-2 text-sm space-y-1 font-semibold text-red-900">
+                        <li>• < 6 hours: ~90-100% salvage rate</li>
+                        <li>• 12-24 hours: < 20% salvage rate</li>
+                    </ul>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                    <div>
+                        <h4 class="font-bold text-indigo-900 mb-2">Clinical Presentation</h4>
+                        <ul class="list-disc list-inside text-sm space-y-2 text-slate-700">
+                            <li>Sudden onset severe unilateral pain.</li>
+                            <li>Nausea and vomiting (occurs in ~90% of cases).</li>
+                            <li><strong>Phren’s Sign:</strong> Negative (elevation of scrotum does <em>not</em> relieve pain).</li>
+                            <li><strong>Cremasteric Reflex:</strong> Usually absent on affected side.</li>
+                            <li>High-riding or horizontal "Bell-clapper" deformity.</li>
+                        </ul>
+                    </div>
+                    <div class="nswa-protocol">
+                        <strong>NSW Ambulance Management:</strong>
+                        <ul class="list-disc list-inside mt-2 text-sm space-y-2">
+                            <li><strong>Priority:</strong> Immediate transport to a facility with surgical (urology) capability.</li>
+                            <li><strong>Analgesia:</strong> High priority (IV Fentanyl/Morphine per CPG).</li>
+                            <li><strong>Anti-emetics:</strong> Metoclopramide or Ondansetron.</li>
+                            <li>Keep patient <strong>Fast-Nil-By-Mouth</strong> in anticipation of surgery.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 3: Sexual Physiology & Priapism -->
+            <section id="erectile">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-red-600 rounded-full"></div>
+                    <h2 class="text-3xl font-bold m-0 border-0 p-0">Male Sexual Physiology & Priapism</h2>
+                </div>
+
+                <div class="mt-6 flex flex-wrap gap-4">
+                    <div class="flex-1 min-w-[300px] bg-white p-6 rounded-2xl border border-slate-200">
+                        <span class="anatomy-badge">Sexual Physiology</span>
+                        <p class="text-sm text-slate-600">Erection involves <strong>Parasympathetic</strong> stimulation (S2-S4) causing vasodilation via Nitric Oxide. Ejaculation involves <strong>Sympathetic</strong> (T11-L2) and Somatic control.</p>
+                        <div class="mt-4 p-3 bg-red-50 rounded border border-red-100 text-xs text-red-800">
+                            <strong>Paramedic Alert:</strong> Spinal Cord Injuries (SCI) above T12 can lead to Reflexogenic erections without psychological stimulus.
+                        </div>
+                    </div>
+                    <div class="flex-1 min-w-[300px] bg-white p-6 rounded-2xl border border-slate-200">
+                        <span class="anatomy-badge">Priapism (Ischemic)</span>
+                        <p class="text-sm text-slate-600 font-bold mb-2">Painful erection lasting > 4 hours.</p>
+                        <ul class="text-xs space-y-1 text-slate-600">
+                            <li>• Causes: Sickle cell, SCI, medications (PDE5 inhibitors, illicit drugs).</li>
+                            <li>• Management: Analgesia, cold packs (caution), and <strong>urgent urology referral</strong> to avoid permanent fibrosis.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold mt-10">Balanitis & Phimosis</h3>
+                <table class="mt-4">
+                    <thead>
+                        <tr><th>Condition</th><th>Presentation</th><th>Paramedic Management</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Balanitis</strong></td><td>Inflammation of glans penis (redness, itching, discharge).</td><td>Refer to GP; maintain hygiene; check BGL (common in undiagnosed Diabetics).</td></tr>
+                        <tr><td><strong>Phimosis</strong></td><td>Inability to retract foreskin.</td><td>Non-urgent unless urinary obstruction present.</td></tr>
+                        <tr class="bg-red-50"><td><strong>Paraphimosis</strong></td><td>Retracted foreskin trapped behind glans, causing constriction.</td><td><strong>Urgent.</strong> Risk of glans necrosis. Cold packs and rapid transport.</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 4: Prostate & Urinary Issues -->
+            <section id="prostate">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-teal-600 rounded-full"></div>
+                    <h2 class="text-3xl font-bold m-0 border-0 p-0">Prostate & Catheter Management</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Benign Prostatic Hyperplasia (BPH)</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed">Common in older males. The enlarged prostate compresses the urethra, leading to <strong>Lower Urinary Tract Symptoms (LUTS)</strong>.</p>
+                        <div class="mt-4 bg-slate-100 p-4 rounded-lg">
+                            <h4 class="text-xs font-bold uppercase tracking-widest text-slate-500 mb-2">Common Symptoms:</h4>
+                            <ul class="text-xs space-y-1 font-medium">
+                                <li>• Hesitancy / Weak stream</li>
+                                <li>• Nocturia (Urgency at night)</li>
+                                <li>• Acute Urinary Retention (The common 000 call)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nswa-protocol">
+                        <strong>Catheter Management (ECP Scope):</strong>
+                        <p class="text-sm mb-4">Extended Care Paramedics (ECP) in NSW manage catheter issues via **Protocol ECP010**.</p>
+                        <ul class="list-disc list-inside text-sm space-y-2">
+                            <li><strong>Blocked IDC/SPC:</strong> Attempt to flush with sterile saline.</li>
+                            <li><strong>Insertion:</strong> ECPs may replace/insert IDC or Suprapubic Catheters (SPC).</li>
+                            <li><strong>UTI Risk:</strong> Check for cloudy/foul urine, fever, or suprapubic pain.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="patho-card bg-teal-50 border-teal-500">
+                    <h3 class="text-xl font-bold text-teal-800 mt-0">Prostate Cancer</h3>
+                    <p class="text-sm mt-2">1 in 6 Australian males will be diagnosed by age 85. Early stages are often asymptomatic. Paramedics may see late-stage patients with <strong>bone pain (metastases)</strong>, hematuria, or obstructive symptoms similar to BPH.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="mt-24 border-t border-slate-200 pt-12 pb-8 text-center">
+            <p class="text-slate-400 text-sm">Created for Western Sydney University - Paramedicine Care 4.</p>
+            <p class="text-slate-300 text-xs mt-2 italic">Ref: National Men's Health Strategy 2020-2030, NSWA ECP010, Healthy Male (2024).</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+```
