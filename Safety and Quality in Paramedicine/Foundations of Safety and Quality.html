@@ -3,192 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundations of Safety and Quality - Paramedicine</title>
+    <title>Foundations of Safety and Quality: Study Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .dimension-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-        .gradient-border {
-            border-image: linear-gradient(to right, #4f46e5, #ec4899) 1;
-            border-width: 0 0 0 4px;
-        }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .section-box { background-color: #f3f4f6; border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 2rem 0; border-radius: 0.5rem; }
+        .theory-box { background-color: #eff6ff; border-left: 4px solid #2563eb; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .framework-box { background-color: #f0fdf4; border-left: 4px solid #16a34a; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .proposition-box { background-color: #fff7ed; border-left: 4px solid #ea580c; padding: 1rem; margin: 1rem 0; border-radius: 0.25rem; }
+        h2 { border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-top: 2.5rem; font-size: 1.875rem; font-weight: 700; color: #111827; }
+        h3 { margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600; color: #374151; }
+        .highlight { font-weight: 600; color: #1d4ed8; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 leading-relaxed">
+<body class="bg-gray-50 text-gray-900">
 
-    <!-- Header Section -->
-    <header class="bg-indigo-900 text-white py-16 px-6">
-        <div class="max-w-5xl mx-auto">
-            <div class="flex items-center gap-3 mb-4">
-                <span class="bg-indigo-500 text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">Module 1</span>
-                <span class="text-indigo-200 text-sm font-medium">HLTH3024</span>
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Foundations of Safety & Quality</h1>
+            <p class="text-xl text-gray-600 mt-2">HLTH 3024: Paramedicine Quality Frameworks & Improvement Science</p>
+        </header>
+
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Core Modules</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="#definitions" class="bg-blue-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-blue-700">Defining Quality</a>
+                <a href="#donabedian" class="bg-green-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-green-700">Donabedian Model</a>
+                <a href="#improvement-science" class="bg-orange-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-orange-700">Improvement Science</a>
+                <a href="#propositions" class="bg-purple-600 text-white text-center font-semibold py-3 px-4 rounded-lg hover:bg-purple-700">7 Propositions</a>
             </div>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Foundations of Safety & Quality</h1>
-            <p class="text-xl text-indigo-100 max-w-2xl">Exploring the science of improvement and the frameworks used to define excellence in out-of-hospital care.</p>
-        </div>
-    </header>
+        </nav>
 
-    <main class="max-w-5xl mx-auto px-6 py-12">
-        
-        <!-- SECTION 1: DEFINING QUALITY -->
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                <span class="text-indigo-600">01.</span> Defining Quality in Healthcare
-            </h2>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                    <h3 class="text-xl font-bold mb-4 text-indigo-900">The Challenge of Definition</h3>
-                    <p class="text-slate-600 mb-4">As noted by Goldenberg (2012), there is <strong>no common understanding</strong> of "quality of care." Definitions are often <em>persuasive</em>—designed to align with specific professional or organizational interests.</p>
-                    <div class="bg-indigo-50 p-4 rounded-xl border-l-4 border-indigo-500">
-                        <p class="text-sm font-semibold text-indigo-800 italic">"The degree to which health services for individuals and populations increase the likelihood of desired health outcomes and are consistent with current professional knowledge." — IOM Definition</p>
-                    </div>
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Section 1: Defining Quality -->
+            <section id="definitions" class="section-box">
+                <h2 class="text-3xl font-bold">Defining Healthcare Quality</h2>
+                <p class="mt-4 italic">"Quality is the standard of something when compared to other things like it; how good or bad something is."</p>
+                
+                <div class="theory-box">
+                    <h3>The Complexity of Definition</h3>
+                    <p>According to <span class="highlight">Goldenberg (2012)</span>, there is no single, universally accepted definition of "quality of care." Definitions are often <strong>persuasive</strong>, meaning they reflect the values and priorities of the person or organization defining them (e.g., a patient vs. a hospital manager vs. a paramedic).</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
-                    <h3 class="text-xl font-bold mb-4 text-pink-600">The Paramedicine Context</h3>
-                    <p class="text-slate-600 mb-4">In paramedicine, quality is shift-based and influenced by:</p>
-                    <ul class="space-y-2 text-sm text-slate-700">
-                        <li class="flex items-center gap-2 font-medium">✅ Clinical Effectiveness (Correct diagnosis/treatment)</li>
-                        <li class="flex items-center gap-2 font-medium">✅ Patient Experience (Communication/empathy)</li>
-                        <li class="flex items-center gap-2 font-medium">✅ Operational Efficiency (Response times/resource use)</li>
-                        <li class="flex items-center gap-2 font-medium">✅ Safety (Absence of preventable harm)</li>
+                <div class="framework-box">
+                    <h3>Dimensions of Quality (WHO/OECD)</h3>
+                    <p>High-quality healthcare must be:</p>
+                    <ul class="list-disc list-inside space-y-2 mt-2">
+                        <li><span class="highlight">Effective:</span> Providing evidence-based care to those who need it.</li>
+                        <li><span class="highlight">Safe:</span> Avoiding injuries to patients from the care that is intended to help them.</li>
+                        <li><span class="highlight">People-Centred:</span> Providing care that is respectful of individual preferences.</li>
+                        <li><span class="highlight">Timely:</span> Reducing waits and sometimes harmful delays.</li>
+                        <li><span class="highlight">Equitable:</span> Care that does not vary in quality because of personal characteristics (gender, ethnicity, location).</li>
+                        <li><span class="highlight">Efficient:</span> Avoiding waste (equipment, ideas, energy).</li>
                     </ul>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- SECTION 2: THE DONABEDIAN MODEL -->
-        <section class="mb-20">
-            <div class="bg-indigo-900 text-white rounded-3xl p-10 shadow-xl overflow-hidden relative">
-                <div class="relative z-10">
-                    <h2 class="text-3xl font-bold mb-2">The Donabedian Model</h2>
-                    <p class="text-indigo-200 mb-10">The gold standard for assessing healthcare quality.</p>
-                    
-                    <div class="grid md:grid-cols-3 gap-6">
-                        <!-- Structure -->
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
-                            <h4 class="font-bold text-lg mb-2">Structure</h4>
-                            <p class="text-xs text-indigo-100 mb-4 italic">The "Attributes" of the setting.</p>
-                            <ul class="text-xs space-y-2 text-indigo-50">
-                                <li>• Staffing levels / Skill mix</li>
-                                <li>• Equipment availability</li>
-                                <li>• Protocols & Guidelines</li>
-                                <li>• Organizational structure</li>
-                            </ul>
-                        </div>
-                        <!-- Process -->
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
-                            <h4 class="font-bold text-lg mb-2">Process</h4>
-                            <p class="text-xs text-indigo-100 mb-4 italic">What is actually done.</p>
-                            <ul class="text-xs space-y-2 text-indigo-50">
-                                <li>• Adherence to protocols</li>
-                                <li>• Time to intervention</li>
-                                <li>• Patient-Clinician interaction</li>
-                                <li>• Documentation quality</li>
-                            </ul>
-                        </div>
-                        <!-- Outcome -->
-                        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
-                            <h4 class="font-bold text-lg mb-2">Outcome</h4>
-                            <p class="text-xs text-indigo-100 mb-4 italic">Effects on health status.</p>
-                            <ul class="text-xs space-y-2 text-indigo-50">
-                                <li>• Mortality rates</li>
-                                <li>• Patient satisfaction</li>
-                                <li>• Recovery / Functional status</li>
-                                <li>• Avoidable complications</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 3: IMPROVEMENT AS A SCIENCE -->
-        <section class="mb-20">
-            <h2 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                <span class="text-indigo-600">02.</span> The Science of Improvement
-            </h2>
-            
-            <p class="text-slate-600 mb-8 max-w-3xl">Quality Improvement (QI) is not just "trying harder." It is a formal science that combines <strong>clinical epidemiology, social psychology, and systems engineering.</strong></p>
-
-            <div class="space-y-4">
-                <h4 class="font-bold text-slate-800 uppercase tracking-widest text-xs">The Seven Propositions (Perla et al., 2013)</h4>
+            <!-- Section 2: Donabedian's Model -->
+            <section id="donabedian" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Donabedian’s Triad</h2>
+                <p class="mt-2">A fundamental framework for assessing quality by looking at three categories of information.</p>
                 
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm dimension-card gradient-border">
-                        <span class="text-xs font-bold text-indigo-600">P1: Aim</span>
-                        <p class="text-sm font-semibold mt-1">Science is guided by an explicit purpose.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                    <div class="p-4 border rounded-lg bg-gray-50">
+                        <h4 class="font-bold text-blue-700">1. Structure</h4>
+                        <p class="text-sm">The attributes of the setting where care occurs.</p>
+                        <ul class="text-xs list-disc mt-2">
+                            <li>Facilities & Equipment</li>
+                            <li>Staff qualifications</li>
+                            <li>Organizational protocols</li>
+                        </ul>
                     </div>
-                    <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm dimension-card gradient-border">
-                        <span class="text-xs font-bold text-indigo-600">P2: Context</span>
-                        <p class="text-sm font-semibold mt-1">Local context is a crucial variable in outcomes.</p>
+                    <div class="p-4 border rounded-lg bg-gray-50">
+                        <h4 class="font-bold text-green-700">2. Process</h4>
+                        <p class="text-sm">What is actually done in giving and receiving care.</p>
+                        <ul class="text-xs list-disc mt-2">
+                            <li>Patient assessment</li>
+                            <li>Clinical interventions</li>
+                            <li>Communication</li>
+                        </ul>
                     </div>
-                    <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm dimension-card gradient-border">
-                        <span class="text-xs font-bold text-indigo-600">P3: Integration</span>
-                        <p class="text-sm font-semibold mt-1">Integrates different types of knowledge.</p>
-                    </div>
-                    <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm dimension-card gradient-border">
-                        <span class="text-xs font-bold text-indigo-600">P4: Iteration</span>
-                        <p class="text-sm font-semibold mt-1">Uses iterative learning (PDSA cycles).</p>
-                    </div>
-                    <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm dimension-card gradient-border">
-                        <span class="text-xs font-bold text-indigo-600">P5: Language</span>
-                        <p class="text-sm font-semibold mt-1">Requires precise and shared definitions.</p>
-                    </div>
-                    <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm dimension-card gradient-border">
-                        <span class="text-xs font-bold text-indigo-600">P6: Variation</span>
-                        <p class="text-sm font-semibold mt-1">Distinguishes Common vs. Special cause variation.</p>
-                    </div>
-                    <div class="p-5 bg-white rounded-xl border border-slate-200 shadow-sm col-span-full gradient-border">
-                        <span class="text-xs font-bold text-indigo-600">P7: Systems Theory</span>
-                        <p class="text-sm font-semibold mt-1">Views organizations as dynamic, interdependent systems.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SECTION 4: PERFORMANCE FRAMEWORK -->
-        <section>
-            <h2 class="text-3xl font-bold mb-8">Performance Frameworks</h2>
-            <div class="bg-slate-100 p-8 rounded-3xl">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="md:w-1/2">
-                        <h3 class="text-xl font-bold mb-4">Assurance vs. Improvement</h3>
-                        <p class="text-sm text-slate-600 mb-4"><strong>Quality Assurance (QA)</strong> is backward-looking. It asks, "Did we meet the minimum standard?" It focuses on accountability.</p>
-                        <p class="text-sm text-slate-600"><strong>Quality Improvement (QI)</strong> is forward-looking. It asks, "How can we do this better tomorrow?" It focuses on learning and process refinement.</p>
-                    </div>
-                    <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                        <div class="bg-white p-6 rounded-2xl text-center shadow-sm">
-                            <span class="block text-2xl mb-2">🔍</span>
-                            <p class="text-xs font-bold uppercase">QA</p>
-                            <p class="text-[10px] text-slate-400">Compliance</p>
-                        </div>
-                        <div class="bg-white p-6 rounded-2xl text-center shadow-sm border-2 border-indigo-500">
-                            <span class="block text-2xl mb-2">🚀</span>
-                            <p class="text-xs font-bold uppercase text-indigo-600">QI</p>
-                            <p class="text-[10px] text-slate-400">Transformation</p>
-                        </div>
+                    <div class="p-4 border rounded-lg bg-gray-50">
+                        <h4 class="font-bold text-orange-700">3. Outcome</h4>
+                        <p class="text-sm">The effects of care on the health status of patients.</p>
+                        <ul class="text-xs list-disc mt-2">
+                            <li>Mortality/Morbidity rates</li>
+                            <li>Patient satisfaction</li>
+                            <li>Functional recovery</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-        </section>
 
-    </main>
+                <div class="theory-box mt-6">
+                    <h3>Assurance vs. Improvement</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Quality Assurance (QA):</strong> Focuses on meeting <em>minimum standards</em> and identifying outliers (Reactive).</li>
+                        <li><strong>Quality Improvement (QI):</strong> Focuses on <em>continuously raising the bar</em> for the entire system (Proactive/Iterative).</li>
+                    </ul>
+                </div>
+            </section>
 
-    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-sm mb-4 font-bold text-white uppercase tracking-widest">Key Exam Takeaways</p>
-            <div class="flex flex-wrap justify-center gap-6 text-xs mb-8">
-                <span>• Donabedian: S-P-O</span>
-                <span>• Seven Propositions: System of Profound Knowledge</span>
-                <span>• Goldenberg: Persuasive Definitions</span>
-                <span>• Science: Iterative Learning</span>
-            </div>
-            <p class="text-[10px] opacity-50">Western Sydney University - HLTH3024 Safety and Quality in Paramedicine</p>
-        </div>
-    </footer>
+            <!-- Section 3: Improvement as a Science -->
+            <section id="improvement-science" class="section-box">
+                <h2 class="text-3xl font-bold">The Science of Improvement</h2>
+                <p class="mt-4">Improvement is not just "doing better"; it is a structured methodology combining multiple disciplines (sociology, psychology, engineering, epidemiology).</p>
+                
+                <div class="theory-box">
+                    <h3>Deming’s System of Profound Knowledge (SoPK)</h3>
+                    <p>The theoretical foundation of improvement science consists of four pillars:</p>
+                    <ol class="list-decimal list-inside mt-2 space-y-2">
+                        <li><span class="highlight">Appreciation for a System:</span> Understanding how all parts of an organization work together toward a goal.</li>
+                        <li><span class="highlight">Knowledge of Variation:</span> Distinguishing between <em>common cause</em> (inherent in the system) and <em>special cause</em> (external/unusual) variation.</li>
+                        <li><span class="highlight">Theory of Knowledge:</span> Learning through the use of models and predictions (e.g., PDSA cycles).</li>
+                        <li><span class="highlight">Psychology:</span> Understanding human behavior, motivation, and the culture of change.</li>
+                    </ol>
+                </div>
+            </section>
 
+            <!-- Section 4: Seven Propositions -->
+            <section id="propositions" class="section-box">
+                <h2 class="text-3xl font-bold">7 Propositions of Improvement Science</h2>
+                <p class="mb-6">Based on <span class="highlight">Perla, Provost, and Parry (2013)</span>.</p>
+
+                <div class="proposition-box">
+                    <strong>1. Grounded in Pragmatism:</strong> It focuses on practical applications and "what works" in real-world settings.
+                </div>
+                <div class="proposition-box">
+                    <strong>2. Iterative Learning (PDSA):</strong> Knowledge is built through small-scale tests of change (Plan-Do-Study-Act).
+                </div>
+                <div class="proposition-box">
+                    <strong>3. Contextual Knowledge:</strong> Improvement is highly dependent on the local environment and social factors.
+                </div>
+                <div class="proposition-box">
+                    <strong>4. Prediction-Based:</strong> It moves away from simple descriptive statistics toward predictive models of how changes will impact the future.
+                </div>
+                <div class="proposition-box">
+                    <strong>5. Operational Definitions:</strong> Using clear, consistent terms so everyone in the system has a shared understanding of what is being measured.
+                </div>
+                <div class="proposition-box">
+                    <strong>6. Cause Systems (Variation):</strong> Uses Shewhart Charts to understand if a process is stable or unstable.
+                </div>
+                <div class="proposition-box">
+                    <strong>7. Systems Theory:</strong> Viewing an organization as a dynamic, adaptive system where everything is interdependent.
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-8 text-gray-500">
+            <p>Study Guide Summary: Integrating Donabedian's Triad, Deming's SoPK, and Perla's Seven Propositions for HLTH 3024.</p>
+        </footer>
+    </div>
 </body>
 </html>
