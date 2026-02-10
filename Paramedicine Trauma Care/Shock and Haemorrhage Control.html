@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shock and Haemorrhage Control: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Shock and Haemorrhage Control</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#pathophysiology" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Pathophysiology of Shock</a>
+                <a href="#diamond" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">The Trauma Diamond</a>
+                <a href="#assessment" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Assessment (Hateful 8)</a>
+                <a href="#fluids" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Fluid Resuscitation</a>
+                <a href="#packing" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Wound Packing</a>
+                <a href="#txa" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">TXA & Coagulopathy</a>
+                <a href="#pelvic" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Pelvic Binders</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Pathophysiology of Shock -->
+            <section id="pathophysiology" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Pathophysiology of Shock</h2>
+                <div class="physiology-box">
+                    <h3>Cellular Metabolism and Acidosis</h3>
+                    <p>Shock is fundamentally a failure of the cardiovascular system to perfuse tissues adequately, leading to widespread impairment of cellular metabolism.</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Aerobic vs. Anaerobic:</strong> Without adequate oxygen delivery ($DO_2$), cells shift from aerobic to anaerobic metabolism. This depletes ATP stores and produces <strong>lactic acid</strong> as a byproduct.</li>
+                        <li><strong>Ion Pump Failure:</strong> Lack of ATP causes the Na⁺/K⁺ pump to fail. Sodium and water enter the cell (causing swelling), while potassium exits.</li>
+                        <li><strong>Acidosis:</strong> Lactic acid accumulation lowers blood pH (metabolic acidosis). Enzymes necessary for cellular function dissociate in acidic conditions, halting cell repair and division. Acidosis also reduces the oxygen-carrying capacity of hemoglobin.</li>
+                        <li><strong>Lysosomal Release:</strong> Acidosis disrupts lysosomal membranes, releasing enzymes that digest the cell and surrounding tissues, extending injury.</li>
+                    </ul>
+                </div>
+                
+                <div class="disorder-box">
+                    <h3>Types of Shock in Trauma</h3>
+                    <p>While hypovolemia is the leading cause of preventable death, trauma patients often present with mixed shock states:</p>
+                    <ul>
+                        <li><strong>Hypovolemic:</strong> Loss of circulating volume (hemorrhage, burns).</li>
+                        <li><strong>Obstructive:</strong> Physical obstruction to blood flow (Tension Pneumothorax, Cardiac Tamponade).</li>
+                        <li><strong>Distributive:</strong> Vasodilation/Vasoplegia (Neurogenic shock from spinal cord injury).</li>
+                        <li><strong>Cardiogenic:</strong> Myocardial dysfunction (Myocardial contusion, or "Takotsubo" cardiomyopathy following TBI due to catecholamine surge).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Trauma Diamond -->
+            <section id="diamond" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">The "Trauma Diamond" of Death</h2>
+                <p>The traditional "Lethal Triad" (Hypothermia, Acidosis, Coagulopathy) has been updated to the "Lethal Diamond" with the recognition of <strong>Hypocalcemia</strong> as a critical fourth component.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Pathophysiology</th>
+                            <th>Paramedic Impact (Positive/Negative)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hypothermia</strong><br>(<35°C)</td>
+                            <td>Reduces enzymatic activity required for clotting. Causes platelet dysfunction. Shifts oxyhemoglobin curve left (holding onto O2).</td>
+                            <td><strong>(+)</strong> Active warming, removal of wet clothes.<br><strong>(-)</strong> Exposure to environment, cold fluids.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Acidosis</strong><br>(pH <7.35)</td>
+                            <td>Metabolic acidosis from lactate (anaerobic metabolism). Reduces coagulation factor activity and clot strength.</td>
+                            <td><strong>(+)</strong> Optimise perfusion/oxygenation, judicious fluids.<br><strong>(-)</strong> Excessive crystalloids (0.9% NaCl is acidic), hyperventilation (causes compensatory vasoconstriction).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Coagulopathy</strong><br>(TIC)</td>
+                            <td><strong>Trauma Induced Coagulopathy (TIC):</strong> Early onset (minutes). Consumption of factors, hemodilution, and fibrinolysis.</td>
+                            <td><strong>(+)</strong> Hemorrhage control, TXA administration, permissive hypotension (prevents "popping the clot").<br><strong>(-)</strong> Hemodilution with large volume crystalloids.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Hypocalcemia</strong><br>(iCa <1.0 mmol/L)</td>
+                            <td>Calcium is Factor IV; it is required for the clotting cascade, platelet adhesion, and myocardial contractility. Citrate in blood transfusions chelates calcium.</td>
+                            <td><strong>(+)</strong> Early recognition, Calcium administration (if in scope).<br><strong>(-)</strong> Ignoring calcium during massive transfusion protocols.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Assessment -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Assessment: The "Hateful Eight"</h2>
+                <div class="assessment-box">
+                    <h3>Recognizing Decompensated Shock</h3>
+                    <p>Traditional vital signs (BP, HR) can be misleading. Young healthy patients compensate well; older patients on beta-blockers may not mount a tachycardia. The "Hateful Eight" are clinical signs of hypovolemia:</p>
+                    <ol class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                        <li><strong>1. Air Hunger</strong> (Acidosis driven tachypnea)</li>
+                        <li><strong>2. Low End-Tidal CO₂</strong> (Poor perfusion/return)</li>
+                        <li><strong>3. Sweaty/Clammy</strong> (Sympathetic drive)</li>
+                        <li><strong>4. Pallor</strong> (Peripheral vasoconstriction)</li>
+                        <li><strong>5. Venous Collapse</strong> (Low JVP/peripheral veins)</li>
+                        <li><strong>6. Abnormal Pulse</strong> (Thready/Weak)</li>
+                        <li><strong>7. Hypotension</strong> (Late sign)</li>
+                        <li><strong>8. Altered Mental Status</strong> (Agitation/Confusion)</li>
+                    </ol>
+                    <p class="mt-4"><strong>Clinical Pitfall:</strong> A "Biphasic Response" may occur in severe hemorrhage where vagal reflexes cause a paradoxical <strong>bradycardia</strong> instead of tachycardia.</p>
+                </div>
+            </section>
+
+            <!-- Fluid Resuscitation -->
+            <section id="fluids" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Fluid Resuscitation Strategies</h2>
+                
+                <div class="management-box">
+                    <h3>Permissive Hypotension vs. TBI Targets</h3>
+                    <p><strong>Permissive Hypotension:</strong> In active hemorrhage (without TBI), raising BP too high can dislodge clots ("pop the clot") and dilute clotting factors.
+                    <br><strong>Target:</strong> Palpable radial pulse OR Systolic BP <strong>80-90 mmHg</strong>.</p>
+                    
+                    <p class="mt-2 border-t border-green-200 pt-2"><strong>Traumatic Brain Injury (TBI) Exception:</strong> Hypotension doubles mortality in TBI. The brain requires higher pressure to overcome intracranial pressure (ICP).
+                    <br><strong>Target:</strong> Systolic BP <strong>>110 mmHg</strong> (or MAP >80 mmHg).</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Fluid Choice: Crystalloids vs. Blood</h3>
+                    <ul>
+                        <li><strong>Crystalloids (Saline/Hartmann's):</strong> Poor oxygen carriers. Dilute clotting factors. Acidic (Normal Saline pH ~5.5). Can worsen the "Lethal Diamond". Use sparingly.</li>
+                        <li><strong>Blood Products:</strong> Restore volume, oxygen capacity, and clotting factors. Risk of hypocalcemia (citrate) and hypothermia (if cold).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Wound Packing -->
+            <section id="packing" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Haemostatic Wound Packing</h2>
+                <p>Indicated for life-threatening hemorrhage not controlled by tourniquets (e.g., junctional wounds: groin, axilla, neck).</p>
+                
+                <div class="management-box">
+                    <h3>Haemostatic Agents</h3>
+                    <ul>
+                        <li><strong>Kaolin (e.g., QuikClot):</strong> Inert mineral. Activates Factor XII (intrinsic pathway). Requires at least <strong>3 minutes</strong> of direct pressure.</li>
+                        <li><strong>Chitosan (e.g., Celox-A):</strong> Derived from shellfish (but safe for allergic patients). Forms a gel-like clot on contact with blood. Independent of the body's clotting cascade (works in hypothermic/heparinized patients). Requires <strong>5 minutes</strong> of pressure.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Procedure</h3>
+                    <ol class="list-decimal list-inside space-y-1">
+                        <li>Expose the wound completely. Identify the precise point of bleeding.</li>
+                        <li>Pack gauze directly onto the bleeding vessel (bone/source). <strong>Pack tight.</strong></li>
+                        <li>For narrow tracks (e.g., stab/bullet), use an applicator (Celox-A).</li>
+                        <li>Apply continuous, firm manual pressure for the required time (3-5 mins).</li>
+                        <li>Apply a pressure dressing over the top. <strong>Do not release pressure to check.</strong></li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- TXA -->
+            <section id="txa" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Tranexamic Acid (TXA)</h2>
+                <div class="physiology-box">
+                    <h3>Mechanism & Evidence</h3>
+                    <p><strong>Mechanism:</strong> TXA is an <strong>antifibrinolytic</strong>. It inhibits the breakdown of fibrin clots by blocking the binding of plasminogen to fibrin.</p>
+                    <p><strong>CRASH-2 Trial:</strong> Showed a significant reduction in all-cause mortality if TXA is given within <strong>3 hours</strong> of injury. No benefit (and potential harm) if given after 3 hours.</p>
+                    <p><strong>PATCH-Trauma Trial:</strong> Recent evidence suggests TXA improves survival but may not improve "favorable functional outcome" (disability-free survival) at 6 months in advanced trauma systems. However, it is still recommended for survival benefit.</p>
+                </div>
+                <div class="management-box">
+                    <strong>Dosage:</strong> Typically 1g IV over 10 minutes (pre-hospital) followed by 1g infusion over 8 hours.
+                </div>
+            </section>
+
+            <!-- Pelvic Binders -->
+            <section id="pelvic" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Pelvic Binders (T-POD)</h2>
+                <div class="disorder-box">
+                    <h3>Pelvic Ring Injuries</h3>
+                    <p>High mortality (28-50%) due to massive venous plexus bleeding or arterial injury. "Open book" fractures increase pelvic volume, allowing exsanguination.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Application</h3>
+                    <ul>
+                        <li><strong>Indication:</strong> Significant mechanism of injury + pain/tenderness OR hemodynamic instability.</li>
+                        <li><strong>Placement:</strong> The binder must be centered over the <strong>Greater Trochanters</strong> of the femur (not the iliac crests).</li>
+                        <li><strong>Action:</strong> Reduces pelvic volume, tamponades bleeding, stabilizes fractures, reduces pain.</li>
+                        <li><strong>Caution:</strong> Do not log-roll if possible (use scoop stretcher) to avoid dislodging clots.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">Based on Leech et al. (Shock in Trauma), Dawkins (Trauma Diamond), and current ANZCOR/QAS guidelines.</p>
+        </footer>
+    </div>
+</body>
+</html>
