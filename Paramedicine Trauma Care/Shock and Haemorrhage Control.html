@@ -111,19 +111,19 @@
     <div class="container mx-auto p-4 md:p-8">
         <header class="text-center mb-10">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Shock and Haemorrhage Control</h1>
-            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+            <p class="text-xl text-gray-600 mt-2">Advanced Paramedic Study Guide</p>
         </header>
 
         <!-- Navigation -->
         <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
             <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <a href="#pathophysiology" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Pathophysiology of Shock</a>
-                <a href="#diamond" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">The Trauma Diamond</a>
-                <a href="#assessment" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Assessment (Hateful 8)</a>
-                <a href="#fluids" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Fluid Resuscitation</a>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#pathophysiology" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Cellular Pathophysiology</a>
+                <a href="#diamond" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Trauma Diamond</a>
+                <a href="#assessment" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Assessment (COAST/Hateful 8)</a>
+                <a href="#resus" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Fluid & Hypotension</a>
+                <a href="#txa" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Tranexamic Acid (TXA)</a>
                 <a href="#packing" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Wound Packing</a>
-                <a href="#txa" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">TXA & Coagulopathy</a>
                 <a href="#pelvic" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Pelvic Binders</a>
             </div>
         </nav>
@@ -132,132 +132,123 @@
 
             <!-- Pathophysiology of Shock -->
             <section id="pathophysiology" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Pathophysiology of Shock</h2>
+                <h2 class="text-3xl font-bold text-gray-800">The Pathophysiology of Shock: A Cellular Crisis</h2>
                 <div class="physiology-box">
-                    <h3>Cellular Metabolism and Acidosis</h3>
-                    <p>Shock is fundamentally a failure of the cardiovascular system to perfuse tissues adequately, leading to widespread impairment of cellular metabolism.</p>
-                    <ul class="list-disc list-inside mt-2">
-                        <li><strong>Aerobic vs. Anaerobic:</strong> Without adequate oxygen delivery ($DO_2$), cells shift from aerobic to anaerobic metabolism. This depletes ATP stores and produces <strong>lactic acid</strong> as a byproduct.</li>
-                        <li><strong>Ion Pump Failure:</strong> Lack of ATP causes the Na⁺/K⁺ pump to fail. Sodium and water enter the cell (causing swelling), while potassium exits.</li>
-                        <li><strong>Acidosis:</strong> Lactic acid accumulation lowers blood pH (metabolic acidosis). Enzymes necessary for cellular function dissociate in acidic conditions, halting cell repair and division. Acidosis also reduces the oxygen-carrying capacity of hemoglobin.</li>
-                        <li><strong>Lysosomal Release:</strong> Acidosis disrupts lysosomal membranes, releasing enzymes that digest the cell and surrounding tissues, extending injury.</li>
-                    </ul>
-                </div>
-                
-                <div class="disorder-box">
-                    <h3>Types of Shock in Trauma</h3>
-                    <p>While hypovolemia is the leading cause of preventable death, trauma patients often present with mixed shock states:</p>
-                    <ul>
-                        <li><strong>Hypovolemic:</strong> Loss of circulating volume (hemorrhage, burns).</li>
-                        <li><strong>Obstructive:</strong> Physical obstruction to blood flow (Tension Pneumothorax, Cardiac Tamponade).</li>
-                        <li><strong>Distributive:</strong> Vasodilation/Vasoplegia (Neurogenic shock from spinal cord injury).</li>
-                        <li><strong>Cardiogenic:</strong> Myocardial dysfunction (Myocardial contusion, or "Takotsubo" cardiomyopathy following TBI due to catecholamine surge).</li>
-                    </ul>
+                    <h3>Beyond Hypotension: The Cellular Cascade</h3>
+                    <p>Shock is not merely low blood pressure; it is a failure of oxygen delivery ($DO_2$) to meet cellular metabolic demand ($VO_2$). When perfusion fails, the following cascade occurs:</p>
+                    <ol class="list-decimal list-inside mt-2 space-y-2">
+                        <li><strong>Anaerobic Shift:</strong> Cells switch from aerobic to anaerobic metabolism. This produces only 2 ATP (energy) molecules compared to 36 ATP in aerobic metabolism, creating an energy deficit.</li>
+                        <li><strong>Lactic Acidosis:</strong> The byproduct of anaerobic metabolism is lactate. As lactate accumulates, the blood pH drops (metabolic acidosis). Acidosis inhibits enzymatic reactions necessary for clotting and myocardial contraction.</li>
+                        <li><strong>Ion Pump Failure:</strong> The Na⁺/K⁺ pump requires ATP. As ATP fails, Sodium (Na⁺) and Water influx into the cell, while Potassium (K⁺) leaks out.
+                            <ul class="ml-6 list-disc text-sm text-gray-600">
+                                <li><strong>Result:</strong> Cellular swelling (intracellular oedema) and intravascular volume loss.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Lysosomal Rupture:</strong> As intracellular acidosis worsens, lysosomal membranes rupture, releasing digestive enzymes that autodigest the cell and damage surrounding tissue. This triggers the systemic inflammatory response (SIRS).</li>
+                    </ol>
                 </div>
             </section>
 
             <!-- Trauma Diamond -->
             <section id="diamond" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">The "Trauma Diamond" of Death</h2>
-                <p>The traditional "Lethal Triad" (Hypothermia, Acidosis, Coagulopathy) has been updated to the "Lethal Diamond" with the recognition of <strong>Hypocalcemia</strong> as a critical fourth component.</p>
+                <h2 class="text-3xl font-bold text-gray-800">The "Trauma Diamond of Death"</h2>
+                <p>The traditional "Lethal Triad" has evolved. Recent literature (Dawkins) identifies <strong>Hypocalcemia</strong> as a critical fourth pillar that exacerbates mortality.</p>
                 
                 <table>
                     <thead>
                         <tr>
                             <th>Component</th>
                             <th>Pathophysiology</th>
-                            <th>Paramedic Impact (Positive/Negative)</th>
+                            <th>Paramedic Intervention (Impact)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>Hypothermia</strong><br>(<35°C)</td>
-                            <td>Reduces enzymatic activity required for clotting. Causes platelet dysfunction. Shifts oxyhemoglobin curve left (holding onto O2).</td>
-                            <td><strong>(+)</strong> Active warming, removal of wet clothes.<br><strong>(-)</strong> Exposure to environment, cold fluids.</td>
+                            <td><strong>1. Hypothermia</strong><br>(<35°C)</td>
+                            <td>Enzymes required for the clotting cascade are temperature-dependent. Platelet function is inhibited. Shifts oxyhemoglobin curve to the left (O₂ trapped on RBC).</td>
+                            <td><strong>(+)</strong> Early exposure control, warm blankets, warm fluids (if given), cabin heat.<br><strong>(-)</strong> Cutting clothes off without covering, cold IV fluids.</td>
                         </tr>
                         <tr>
-                            <td><strong>Acidosis</strong><br>(pH <7.35)</td>
-                            <td>Metabolic acidosis from lactate (anaerobic metabolism). Reduces coagulation factor activity and clot strength.</td>
-                            <td><strong>(+)</strong> Optimise perfusion/oxygenation, judicious fluids.<br><strong>(-)</strong> Excessive crystalloids (0.9% NaCl is acidic), hyperventilation (causes compensatory vasoconstriction).</td>
+                            <td><strong>2. Acidosis</strong><br>(pH <7.35)</td>
+                            <td>Result of anaerobic metabolism (lactate) and excessive crystalloids (NaCl is acidic). Acidosis reduces clot strength and myocardial contractility.</td>
+                            <td><strong>(+)</strong> Optimise oxygenation/perfusion. Limit crystalloids.<br><strong>(-)</strong> Excessive saline resuscitation (hyperchloremic acidosis).</td>
                         </tr>
                         <tr>
-                            <td><strong>Coagulopathy</strong><br>(TIC)</td>
-                            <td><strong>Trauma Induced Coagulopathy (TIC):</strong> Early onset (minutes). Consumption of factors, hemodilution, and fibrinolysis.</td>
-                            <td><strong>(+)</strong> Hemorrhage control, TXA administration, permissive hypotension (prevents "popping the clot").<br><strong>(-)</strong> Hemodilution with large volume crystalloids.</td>
+                            <td><strong>3. Coagulopathy</strong><br>(TIC)</td>
+                            <td><strong>Trauma Induced Coagulopathy (TIC):</strong> Occurs within minutes. Driven by protein C activation, consumption of factors, and hemodilution.</td>
+                            <td><strong>(+)</strong> Mechanical haemorrhage control, TXA, permissive hypotension (prevents clot blowout).<br><strong>(-)</strong> Hemodilution with fluids.</td>
                         </tr>
                         <tr>
-                            <td><strong>Hypocalcemia</strong><br>(iCa <1.0 mmol/L)</td>
-                            <td>Calcium is Factor IV; it is required for the clotting cascade, platelet adhesion, and myocardial contractility. Citrate in blood transfusions chelates calcium.</td>
-                            <td><strong>(+)</strong> Early recognition, Calcium administration (if in scope).<br><strong>(-)</strong> Ignoring calcium during massive transfusion protocols.</td>
+                            <td><strong>4. Hypocalcemia</strong><br>(iCa <1.0 mmol/L)</td>
+                            <td>Calcium is <strong>Factor IV</strong>. It is essential for the clotting cascade, platelet adhesion, and heart contractility. Citrate in blood products binds calcium.</td>
+                            <td><strong>(+)</strong> Identification of risk. Administration of Calcium Gluconate/Chloride (if in scope/consult).<br><strong>(-)</strong> Massive transfusion without calcium replacement.</td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="assessment-box mt-4">
+                    <strong>Reflective Practice:</strong> You cannot "fix" the Diamond of Death once established; you can only prevent it. Early warmth, restrictive fluids, and hemorrhage control are the only pre-hospital tools to break this cycle.
+                </div>
             </section>
 
             <!-- Assessment -->
             <section id="assessment" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Assessment: The "Hateful Eight"</h2>
+                <h2 class="text-3xl font-bold text-gray-800">Assessment: Recognizing Decompensation</h2>
+                
                 <div class="assessment-box">
-                    <h3>Recognizing Decompensated Shock</h3>
-                    <p>Traditional vital signs (BP, HR) can be misleading. Young healthy patients compensate well; older patients on beta-blockers may not mount a tachycardia. The "Hateful Eight" are clinical signs of hypovolemia:</p>
-                    <ol class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
-                        <li><strong>1. Air Hunger</strong> (Acidosis driven tachypnea)</li>
-                        <li><strong>2. Low End-Tidal CO₂</strong> (Poor perfusion/return)</li>
-                        <li><strong>3. Sweaty/Clammy</strong> (Sympathetic drive)</li>
-                        <li><strong>4. Pallor</strong> (Peripheral vasoconstriction)</li>
-                        <li><strong>5. Venous Collapse</strong> (Low JVP/peripheral veins)</li>
-                        <li><strong>6. Abnormal Pulse</strong> (Thready/Weak)</li>
-                        <li><strong>7. Hypotension</strong> (Late sign)</li>
-                        <li><strong>8. Altered Mental Status</strong> (Agitation/Confusion)</li>
-                    </ol>
-                    <p class="mt-4"><strong>Clinical Pitfall:</strong> A "Biphasic Response" may occur in severe hemorrhage where vagal reflexes cause a paradoxical <strong>bradycardia</strong> instead of tachycardia.</p>
+                    <h3>The "Hateful Eight" Signs of Shock</h3>
+                    <p>Reliance on BP alone is dangerous. Young patients compensate until collapse. Look for these 8 signs (Leech et al.):</p>
+                    <div class="grid grid-cols-2 gap-4 mt-2">
+                        <ul class="list-disc list-inside">
+                            <li>1. Air Hunger (Tachypnoea fighting acidosis)</li>
+                            <li>2. Low EtCO₂ (Poor perfusion)</li>
+                            <li>3. Sweaty/Clammy (Sympathetic drive)</li>
+                            <li>4. Pallor (Vasoconstriction)</li>
+                        </ul>
+                        <ul class="list-disc list-inside">
+                            <li>5. Venous Collapse (Flat EJVs)</li>
+                            <li>6. Abnormal Pulse (Weak/Thready)</li>
+                            <li>7. Hypotension (Late sign)</li>
+                            <li>8. Altered Mental Status (Agitation/Confusion)</li>
+                        </ul>
+                    </div>
+                    <p class="mt-2 text-sm"><strong>Note:</strong> Severe haemorrhage can cause a "Biphasic Response" where vagal tone leads to paradoxical <strong>bradycardia</strong> rather than tachycardia.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>The COAST Score</h3>
+                    <p>A predictive tool for <strong>Trauma Induced Coagulopathy (TIC)</strong>. If score ≥3, aggressive coagulopathy management is indicated.</p>
+                    <ul class="list-none pl-4">
+                        <li><strong>C</strong> - <strong>C</strong>hest or Abdominal Injury (Open/Trapped)</li>
+                        <li><strong>O</strong> - <strong>O</strong>pen fracture or Pelvic fracture</li>
+                        <li><strong>A</strong> - <strong>A</strong>ge < 35 years (Young patients mount stronger inflammatory response)</li>
+                        <li><strong>S</strong> - <strong>S</strong>ystolic BP < 100 mmHg</li>
+                        <li><strong>T</strong> - <strong>T</strong>emperature < 35°C (or poor exposure)</li>
+                    </ul>
                 </div>
             </section>
 
             <!-- Fluid Resuscitation -->
-            <section id="fluids" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Fluid Resuscitation Strategies</h2>
+            <section id="resus" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Fluid Resuscitation & Permissive Hypotension</h2>
                 
                 <div class="management-box">
-                    <h3>Permissive Hypotension vs. TBI Targets</h3>
-                    <p><strong>Permissive Hypotension:</strong> In active hemorrhage (without TBI), raising BP too high can dislodge clots ("pop the clot") and dilute clotting factors.
-                    <br><strong>Target:</strong> Palpable radial pulse OR Systolic BP <strong>80-90 mmHg</strong>.</p>
-                    
-                    <p class="mt-2 border-t border-green-200 pt-2"><strong>Traumatic Brain Injury (TBI) Exception:</strong> Hypotension doubles mortality in TBI. The brain requires higher pressure to overcome intracranial pressure (ICP).
-                    <br><strong>Target:</strong> Systolic BP <strong>>110 mmHg</strong> (or MAP >80 mmHg).</p>
+                    <h3>Permissive Hypotension Strategy</h3>
+                    <p><strong>Goal:</strong> Maintain perfusion to vital organs without "popping the clot" or diluting clotting factors.</p>
+                    <p><strong>Target:</strong> Palpable radial pulse OR Systolic BP <strong>70-90 mmHg</strong> (depending on local guidelines).</p>
+                    <p><strong>Fluid Choice:</strong> Blood is ideal. If unavailable, use small boluses (e.g., 250ml) of warmed crystalloids only to maintain the target. <strong>Avoiding excessive fluid is more important than the type of crystalloid.</strong></p>
                 </div>
 
                 <div class="disorder-box">
-                    <h3>Fluid Choice: Crystalloids vs. Blood</h3>
-                    <ul>
-                        <li><strong>Crystalloids (Saline/Hartmann's):</strong> Poor oxygen carriers. Dilute clotting factors. Acidic (Normal Saline pH ~5.5). Can worsen the "Lethal Diamond". Use sparingly.</li>
-                        <li><strong>Blood Products:</strong> Restore volume, oxygen capacity, and clotting factors. Risk of hypocalcemia (citrate) and hypothermia (if cold).</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Wound Packing -->
-            <section id="packing" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Haemostatic Wound Packing</h2>
-                <p>Indicated for life-threatening hemorrhage not controlled by tourniquets (e.g., junctional wounds: groin, axilla, neck).</p>
-                
-                <div class="management-box">
-                    <h3>Haemostatic Agents</h3>
-                    <ul>
-                        <li><strong>Kaolin (e.g., QuikClot):</strong> Inert mineral. Activates Factor XII (intrinsic pathway). Requires at least <strong>3 minutes</strong> of direct pressure.</li>
-                        <li><strong>Chitosan (e.g., Celox-A):</strong> Derived from shellfish (but safe for allergic patients). Forms a gel-like clot on contact with blood. Independent of the body's clotting cascade (works in hypothermic/heparinized patients). Requires <strong>5 minutes</strong> of pressure.</li>
-                    </ul>
+                    <h3>CRITICAL CONTRAINDICATION: Traumatic Brain Injury (TBI)</h3>
+                    <p><strong>Why?</strong> The injured brain loses autoregulation. Perfusion becomes entirely dependent on Mean Arterial Pressure (MAP). Hypotension in TBI doubles mortality.</p>
+                    <p><strong>TBI Target:</strong> Systolic BP <strong>>110-120 mmHg</strong>. In these patients, you must resuscitate to a higher pressure to ensure Cerebral Perfusion Pressure (CPP).</p>
                 </div>
 
                 <div class="assessment-box">
-                    <h3>Procedure</h3>
-                    <ol class="list-decimal list-inside space-y-1">
-                        <li>Expose the wound completely. Identify the precise point of bleeding.</li>
-                        <li>Pack gauze directly onto the bleeding vessel (bone/source). <strong>Pack tight.</strong></li>
-                        <li>For narrow tracks (e.g., stab/bullet), use an applicator (Celox-A).</li>
-                        <li>Apply continuous, firm manual pressure for the required time (3-5 mins).</li>
-                        <li>Apply a pressure dressing over the top. <strong>Do not release pressure to check.</strong></li>
-                    </ol>
+                    <h3>Clinical Decision Making</h3>
+                    <p><strong>Scenario:</strong> Patient with a stab wound (shock) AND a head strike (TBI).</p>
+                    <p><strong>Dilemma:</strong> Permissive hypotension vs. TBI targets?</p>
+                    <p><strong>Resolution:</strong> The brain takes priority. Hypotension causes secondary brain injury. Aim for SBP >110 mmHg, but prioritize rapid transport and hemorrhage control to minimize fluid volume needed.</p>
                 </div>
             </section>
 
@@ -265,30 +256,66 @@
             <section id="txa" class="section-box">
                 <h2 class="text-3xl font-bold text-gray-800">Tranexamic Acid (TXA)</h2>
                 <div class="physiology-box">
-                    <h3>Mechanism & Evidence</h3>
-                    <p><strong>Mechanism:</strong> TXA is an <strong>antifibrinolytic</strong>. It inhibits the breakdown of fibrin clots by blocking the binding of plasminogen to fibrin.</p>
-                    <p><strong>CRASH-2 Trial:</strong> Showed a significant reduction in all-cause mortality if TXA is given within <strong>3 hours</strong> of injury. No benefit (and potential harm) if given after 3 hours.</p>
-                    <p><strong>PATCH-Trauma Trial:</strong> Recent evidence suggests TXA improves survival but may not improve "favorable functional outcome" (disability-free survival) at 6 months in advanced trauma systems. However, it is still recommended for survival benefit.</p>
+                    <h3>Mechanism of Action</h3>
+                    <p>TXA is a synthetic derivative of the amino acid lysine. It acts as an <strong>antifibrinolytic</strong> by blocking the lysine binding sites on plasminogen. This prevents plasminogen from converting to plasmin, thereby inhibiting the breakdown of fibrin clots (fibrinolysis).</p>
                 </div>
+
                 <div class="management-box">
-                    <strong>Dosage:</strong> Typically 1g IV over 10 minutes (pre-hospital) followed by 1g infusion over 8 hours.
+                    <h3>Evidence & Administration (CRASH-2 & PATCH)</h3>
+                    <ul>
+                        <li><strong>Indication:</strong> Suspected significant internal or external haemorrhage (HR >110, SBP <90).</li>
+                        <li><strong>Timing is Critical:</strong> Must be given within <strong>3 hours</strong> of injury.
+                            <br><em>Risk:</em> Administration >3 hours after injury is associated with increased mortality due to disseminated intravascular coagulation (DIC) phases.</li>
+                        <li><strong>Dose:</strong> 1g IV slowly over 10 minutes (Rapid push causes hypotension and seizures). Followed by 1g infusion over 8 hours.</li>
+                        <li><strong>PATCH-Trauma Trial (2023):</strong> Confirmed survival benefit in severe trauma but noted no significant improvement in "good functional outcome" at 6 months. It remains standard of care for survival.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Wound Packing -->
+            <section id="packing" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Haemostatic Wound Packing</h2>
+                <p>Indicated for life-threatening haemorrhage in <strong>junctional areas</strong> (groin, axilla, neck) where tourniquets cannot be applied.</p>
+                
+                <div class="physiology-box">
+                    <h3>Haemostatic Agents</h3>
+                    <ul>
+                        <li><strong>Kaolin (e.g., QuikClot):</strong> Inert mineral. Activates <strong>Factor XII</strong> (Intrinsic pathway). Promotes rapid clotting.</li>
+                        <li><strong>Chitosan (e.g., Celox-A):</strong> Derived from shellfish. Bonds with red blood cells to form a gel-like plug. <strong>Independent</strong> of the body's clotting cascade (works in hypothermic/heparinized patients).</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Procedure</h3>
+                    <ol class="list-decimal list-inside">
+                        <li><strong>Expose:</strong> Fully expose the wound. Wipe away pooled blood.</li>
+                        <li><strong>Identify:</strong> Locate the <em>exact</em> source of bleeding (artery/bone).</li>
+                        <li><strong>Pack:</strong> Feed gauze directly onto the vessel. Pack tightly towards the bone. Fills the cavity.</li>
+                        <li><strong>Pressure (CRITICAL):</strong> Apply firm manual pressure for <strong>3-5 minutes</strong> (agent dependent). Do not release to "check".</li>
+                        <li><strong>Bandage:</strong> Apply pressure dressing. If bleeding continues, remove and repack <em>once</em>, or apply second dressing on top (check local protocol).</li>
+                    </ol>
                 </div>
             </section>
 
             <!-- Pelvic Binders -->
             <section id="pelvic" class="section-box">
                 <h2 class="text-3xl font-bold text-gray-800">Pelvic Binders (T-POD)</h2>
+                
                 <div class="disorder-box">
-                    <h3>Pelvic Ring Injuries</h3>
-                    <p>High mortality (28-50%) due to massive venous plexus bleeding or arterial injury. "Open book" fractures increase pelvic volume, allowing exsanguination.</p>
+                    <h3>Pathophysiology of Pelvic Ring Injuries</h3>
+                    <p>"Open book" fractures increase the volume of the pelvic cavity. Venous plexuses and arteries shear, causing massive retroperitoneal haemorrhage. A pelvic binder reduces this volume, providing a tamponade effect.</p>
                 </div>
+
                 <div class="management-box">
-                    <h3>Application</h3>
+                    <h3>Application & Logistics</h3>
                     <ul>
-                        <li><strong>Indication:</strong> Significant mechanism of injury + pain/tenderness OR hemodynamic instability.</li>
-                        <li><strong>Placement:</strong> The binder must be centered over the <strong>Greater Trochanters</strong> of the femur (not the iliac crests).</li>
-                        <li><strong>Action:</strong> Reduces pelvic volume, tamponades bleeding, stabilizes fractures, reduces pain.</li>
-                        <li><strong>Caution:</strong> Do not log-roll if possible (use scoop stretcher) to avoid dislodging clots.</li>
+                        <li><strong>Placement:</strong> Centred over the <strong>Greater Trochanters</strong> (Not the iliac crests!).</li>
+                        <li><strong>Priorities (Polytrauma):</strong>
+                            <br>1. Pelvic Binder (Highest bleeding risk, reduces volume).
+                            <br>2. Femoral Splinting (Anatomical splinting preferred).
+                            <br><em>Note:</em> Traction splints are <strong>contraindicated</strong> in suspected pelvic fractures as the counter-pressure transmits force to the pelvic ring.</li>
+                        <li><strong>Risks of Log-Rolling:</strong> Rolling can dislodge clots and exacerbate "open book" fractures.
+                            <br><em>Alternative:</em> Use a <strong>Scoop Stretcher</strong> to lift the patient and slide the binder under, or slide sheets. Minimize movement.</li>
                     </ul>
                 </div>
             </section>
@@ -296,7 +323,7 @@
         </main>
 
         <footer class="text-center mt-12 mb-4">
-            <p class="text-gray-500">Based on Leech et al. (Shock in Trauma), Dawkins (Trauma Diamond), and current ANZCOR/QAS guidelines.</p>
+            <p class="text-gray-500">Based on Leech et al., Dawkins, CRASH-2, and ANZCOR guidelines. Remember: Time lost on scene is blood lost from the patient.</p>
         </footer>
     </div>
 </body>
