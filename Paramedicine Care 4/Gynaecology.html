@@ -111,18 +111,18 @@
     <div class="container mx-auto p-4 md:p-8">
         <header class="text-center mb-10">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Gynaecology</h1>
-            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+            <p class="text-xl text-gray-600 mt-2">Paramedicine Care 4 Study Guide</p>
         </header>
 
         <!-- Navigation -->
         <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
             <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <a href="#physiol" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Physiology</a>
+                <a href="#epidemiology" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Epidemiology & Physiology</a>
                 <a href="#assessment" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">History & Assessment</a>
                 <a href="#ovarian" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Ovarian Disorders</a>
                 <a href="#uterine" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Uterine Disorders</a>
-                <a href="#infections" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Infections</a>
+                <a href="#infections" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Infections (PID)</a>
                 <a href="#pregnancy" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Early Pregnancy</a>
                 <a href="#assault" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Sexual Assault</a>
             </div>
@@ -130,75 +130,73 @@
 
         <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
 
-            <!-- Physiology -->
-            <section id="physiol" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Gynaecological Physiology</h2>
+            <!-- Epidemiology & Physiology -->
+            <section id="epidemiology" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Epidemiology & Physiology</h2>
                 <div class="physiology-box">
-                    <h3>The Female Reproductive Cycles</h3>
-                    <p>The female reproductive system is regulated by the hypothalamic-pituitary-gonadal (HPG) axis. This involves the rhythmic fluctuation of hormones to control the Ovarian Cycle (maturation of the egg) and the Uterine Cycle (preparation of the endometrium).</p>
-                    <ul class="list-disc list-inside mt-2">
-                        <li><strong>Gonadotropin-Releasing Hormone (GnRH):</strong> Released by the hypothalamus, stimulates the anterior pituitary.</li>
-                        <li><strong>FSH (Follicle Stimulating Hormone):</strong> Stimulates ovarian follicles to grow and secrete estrogens.</li>
-                        <li><strong>LH (Luteinizing Hormone):</strong> Surge triggers ovulation and formation of the corpus luteum.</li>
-                        <li><strong>Estrogens:</strong> Promote follicle growth and endometrial proliferation.</li>
-                        <li><strong>Progesterone:</strong> Secreted by the corpus luteum; maintains the endometrium for potential pregnancy.</li>
+                    <h3>Epidemiology of Common Conditions</h3>
+                    <ul class="list-disc list-inside mb-4">
+                        <li><strong>Endometriosis:</strong> Affects ~1 in 7 females. 11.4% of females diagnosed by age 44. Significant burden on the ED (>3600 presentations in 2021-2022).</li>
+                        <li><strong>Adenomyosis:</strong> Affects ~1 in 5 females. Often co-exists with endometriosis.</li>
+                        <li><strong>PCOS:</strong> Affects 8-13% of women of reproductive age.</li>
+                        <li><strong>Ovarian Cysts:</strong> 6.6% of pre-menopausal and 14% of post-menopausal women.</li>
                     </ul>
+
+                    <h3>The Hypothalamic-Pituitary-Gonadal (HPG) Axis</h3>
+                    <p>The female reproductive cycle is driven by the HPG axis regulating two simultaneous cycles:</p>
+                    <ol class="list-decimal list-inside mt-2">
+                        <li><strong>Ovarian Cycle:</strong> Maturation of the egg.
+                            <ul class="ml-4 list-disc text-sm">
+                                <li><strong>Follicular Phase:</strong> FSH stimulates follicle growth. Estrogen rises.</li>
+                                <li><strong>Ovulation:</strong> LH surge triggers egg release.</li>
+                                <li><strong>Luteal Phase:</strong> Corpus luteum secretes Progesterone to maintain lining.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Uterine Cycle:</strong> Preparation of the endometrium.
+                            <ul class="ml-4 list-disc text-sm">
+                                <li><strong>Menstrual:</strong> Shedding of functional layer.</li>
+                                <li><strong>Proliferative:</strong> Rebuilding (Estrogen driven).</li>
+                                <li><strong>Secretory:</strong> Enrichment/thickening (Progesterone driven).</li>
+                            </ul>
+                        </li>
+                    </ol>
                 </div>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Phase</th>
-                            <th>Ovarian Event</th>
-                            <th>Uterine Event</th>
-                            <th>Key Hormones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Follicular / Proliferative</strong><br>(Days 1-14)</td>
-                            <td>Follicle maturation.</td>
-                            <td>Menstruation (shedding) followed by rebuilding of the functional layer (proliferation).</td>
-                            <td>Rising Estrogen.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ovulation</strong><br>(Day 14)</td>
-                            <td>Release of secondary oocyte.</td>
-                            <td>Endometrium thickens. Cervical mucus thins.</td>
-                            <td>LH Surge.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Luteal / Secretory</strong><br>(Days 15-28)</td>
-                            <td>Corpus luteum forms.</td>
-                            <td>Endometrium becomes secretory (nutrient-rich) to welcome embryo.</td>
-                            <td>High Progesterone.</td>
-                        </tr>
-                    </tbody>
-                </table>
             </section>
 
-            <!-- Assessment -->
+            <!-- History & Assessment -->
             <section id="assessment" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">History Taking and Assessment</h2>
+                <h2 class="text-3xl font-bold text-gray-800">History Taking & Assessment</h2>
                 <div class="assessment-box">
                     <h3>Gynaecological History Framework</h3>
-                    <p>In addition to a standard CHAMPSS history, gynaecological presentations require specific questioning. Ensure privacy and dignity are maintained.</p>
-                    <p><strong>Key History Components:</strong></p>
-                    <ul class="list-disc list-inside">
-                        <li><strong>Menstrual History:</strong> Last Menstrual Period (LMP)? Regularity? Flow (pads/tampons per day, clots)? Pain (dysmenorrhoea)?</li>
-                        <li><strong>Obstetric History:</strong> Gravidity (total pregnancies) and Parity (births >20 weeks). Complications?</li>
-                        <li><strong>Sexual History:</strong> Sexually active? Pain (dyspareunia)? Recent partners? Protection/Contraception? Recent screening?</li>
-                        <li><strong>Symptoms:</strong> Vaginal discharge (colour, odour), bleeding (intermenstrual, post-coital), urinary symptoms (frequency, dysuria).</li>
-                        <li><strong>Red Flags:</strong> Post-menopausal bleeding (cancer risk), severe unilateral pain (ectopic/torsion), hemodynamic instability.</li>
+                    <p>In addition to standard history (CHAMPSS/SOCRATES), specific areas must be covered:</p>
+                    
+                    <h4>1. Menstrual History</h4>
+                    <p><strong>LMP:</strong> Last Menstrual Period (Start date? Normal flow?).</p>
+                    <p><strong>Cycle:</strong> Regularity? Length?</p>
+                    <p><strong>Terminology:</strong></p>
+                    <ul class="list-disc list-inside ml-4 text-sm">
+                        <li><strong>Menorrhagia:</strong> Heavy/prolonged periods (>80mL or >7 days).</li>
+                        <li><strong>Amenorrhoea:</strong> Absence of menstruation (Primary = never started; Secondary = cessation >6 months).</li>
+                        <li><strong>Dysmenorrhoea:</strong> Painful menstruation.</li>
+                        <li><strong>Oligomenorrhoea:</strong> Infrequent periods (<5 per year).</li>
                     </ul>
+
+                    <h4>2. Obstetric History</h4>
+                    <p><strong>Gravidity:</strong> Total number of pregnancies (regardless of outcome).</p>
+                    <p><strong>Parity:</strong> Number of births >20 weeks.</p>
+
+                    <h4>3. Sexual & Contraceptive History</h4>
+                    <p>Active? Partners (gender)? Dyspareunia (pain during sex)?</p>
+                    <p>Contraception used? (IUD, pill, implant). Recent STI screening?</p>
                 </div>
+
                 <div class="management-box">
-                    <h3>Physical Examination Limitations</h3>
-                    <p><strong>Pre-hospital Rule:</strong> Do NOT perform internal pelvic examinations (digital or speculum). Do not look, touch, or examine the genitals unless there is uncontrollable haemorrhage requiring direct pressure or imminent birth.</p>
+                    <h3>Physical Examination Principles</h3>
+                    <p><strong>Paramedic Rule:</strong> Do <strong>NOT</strong> perform internal pelvic examinations (digital or speculum) in the pre-hospital setting.</p>
                     <p><strong>Abdominal Exam:</strong></p>
                     <ul>
-                        <li><strong>Inspect:</strong> Distension, surgical scars (laparoscopy/pfannenstiel).</li>
-                        <li><strong>Palpate:</strong> Masses, tenderness (localized or generalized), peritonism (guarding/rigidity). Palpate from the umbilicus down to the pubic symphysis.</li>
+                        <li><strong>Inspect:</strong> Distension, surgical scars (Laparoscopy/Pfannenstiel).</li>
+                        <li><strong>Palpate:</strong> From umbilicus down to pubic symphysis. Check for masses, peritonism (guarding/rigidity), and localized tenderness.</li>
                     </ul>
                 </div>
             </section>
@@ -209,27 +207,35 @@
                 
                 <div class="disorder-box">
                     <h3>Ovarian Cysts</h3>
-                    <p>Fluid-filled sacs in or on the ovary. Most are functional and resolve spontaneously.</p>
-                    <ul class="list-disc list-inside">
-                        <li><strong>Functional Cysts:</strong> Follicle cysts (follicle doesn't release egg) or Corpus Luteum cysts.</li>
-                        <li><strong>Benign Cysts:</strong> Dermoid (teratomas containing hair/teeth), Cystadenomas (mucous fluid), Endometriomas ("chocolate cysts" from endometriosis).</li>
-                    </ul>
-                    <p><strong>Ruptured Cyst:</strong> Can cause sudden sharp pain. If hemorrhagic, can lead to hypovolemia.
-                    <br><em>Differentials:</em> Appendicitis, Ectopic Pregnancy.</p>
+                    <p><strong>Pathophysiology:</strong> Fluid-filled sacs.
+                        <br><em>Functional:</em> Follicle fails to rupture (Follicular) or Corpus Luteum fails to shrink.
+                        <br><em>Pathologic:</em> Dermoid (teratomas with hair/teeth), Cystadenomas (mucous), Endometriomas ("chocolate cysts").</p>
+                    <p><strong>Ruptured Cyst:</strong> Fluid/blood released into peritoneal cavity -> Peritoneal irritation.</p>
+                    <p><strong>Symptoms:</strong> Sudden sharp pain (unilateral), bloating. Can mimic appendicitis or ectopic pregnancy.</p>
+                    <p><strong>Management:</strong> Analgesia, anti-emetics, transport (for ultrasound/diagnosis).</p>
                 </div>
 
                 <div class="disorder-box">
-                    <h3>Ovarian Torsion</h3>
-                    <p><strong>Definition:</strong> The ovary twists around its supporting ligaments, cutting off blood supply. This is a surgical emergency (time is tissue).</p>
-                    <p><strong>Risk Factors:</strong> Ovarian mass/cyst (>5cm), pregnancy, IVF.</p>
-                    <p><strong>Presentation:</strong> Sudden onset severe, unilateral pelvic pain. Nausea and vomiting are very common (70%).</p>
-                    <p><strong>Management:</strong> Analgesia, anti-emetics, transport.</p>
+                    <h3>Ovarian Torsion (Emergency)</h3>
+                    <p><strong>Pathophysiology:</strong> The ovary twists around the infundibulopelvic ligament (suspensory ligament). This initially compresses lymphatic/venous outflow causing massive ovarian edema. Eventually, arterial inflow is compromised leading to <strong>ischemia and necrosis</strong>. Time is tissue.</p>
+                    <p><strong>Risk Factors:</strong> Ovarian mass >5cm (cyst/tumour), pregnancy, IVF.</p>
+                    <p><strong>Presentation:</strong> Sudden onset <strong>severe</strong> unilateral pain. Nausea/Vomiting is very common (reflexive).</p>
+                    <div class="management-box mt-2">
+                        <strong>Paramedic Management:</strong>
+                        <ul class="list-disc list-inside">
+                            <li><strong>Analgesia:</strong> Aggressive pain management (e.g., Fentanyl/Morphine).</li>
+                            <li><strong>Anti-emetics:</strong> Ondansetron for N/V.</li>
+                            <li><strong>Fluids:</strong> If signs of shock/dehydration.</li>
+                            <li><strong>Transport:</strong> Urgent transport to a facility with surgical capability.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="disorder-box">
                     <h3>Polycystic Ovarian Syndrome (PCOS)</h3>
-                    <p>A metabolic and endocrine disorder affecting 8-13% of women. Diagnosed by Rotterdam criteria (2 of 3): Oligo/anovulation, Hyperandrogenism (hirsutism, acne), Polycystic ovaries on ultrasound.</p>
-                    <p><strong>Implications:</strong> Increased risk of Type 2 Diabetes, hypertension, and endometrial cancer. In pregnancy: higher risk of pre-eclampsia and gestational diabetes.</p>
+                    <p><strong>Pathophysiology:</strong> Metabolic/Endocrine disorder. Insulin resistance leads to hyperinsulinemia, which stimulates androgen production. High androgens prevent ovulation (anovulation), leading to multiple immature follicles ("cysts").</p>
+                    <p><strong>Features:</strong> Irregular periods, Hirsutism, Obesity, Infertility.</p>
+                    <p><strong>Paramedic Relevance:</strong> Patients have higher risks of metabolic syndrome, T2DM, hypertension, and endometrial cancer.</p>
                 </div>
             </section>
 
@@ -241,22 +247,30 @@
                         <tr>
                             <th>Condition</th>
                             <th>Pathophysiology</th>
-                            <th>Key Symptoms</th>
+                            <th>Clinical Features</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td><strong>Endometriosis</strong></td>
-                            <td>Endometrial-like tissue grows <strong>outside</strong> the uterus (ovaries, fallopian tubes, pelvis). This tissue bleeds during menstruation, causing inflammation and scarring (adhesions).</td>
-                            <td>Chronic cyclical pelvic pain, dysmenorrhoea, dyspareunia, infertility, fatigue.</td>
+                            <td>Endometrial-like tissue grows <strong>outside</strong> the uterus (ovaries, tubes, pelvis). This tissue responds to hormones and bleeds cyclically. Blood is trapped -> inflammation -> fibrosis/adhesions.</td>
+                            <td>Chronic cyclical pain, dysmenorrhoea, dyspareunia, infertility, "endo belly" (bloating).</td>
                         </tr>
                         <tr>
                             <td><strong>Adenomyosis</strong></td>
-                            <td>Endometrial tissue grows <strong>into the muscle wall</strong> (myometrium) of the uterus.</td>
-                            <td>Heavy menstrual bleeding (menorrhagia), severe cramping, enlarged "boggy" tender uterus.</td>
+                            <td>Endometrial tissue grows <strong>into the myometrium</strong> (muscle wall) of the uterus. The uterus becomes enlarged, tender, and "boggy".</td>
+                            <td><strong>Heavy</strong> menstrual bleeding (menorrhagia), severe cramping, chronic pelvic pain.</td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="management-box mt-4">
+                    <strong>Paramedic Management:</strong>
+                    <ul>
+                        <li>Manage acute exacerbations of chronic pain.</li>
+                        <li>Recognize that "chronic" pain can still be severe (10/10).</li>
+                        <li>Consider ruptured endometrioma (chocolate cyst) as a cause for acute deterioration.</li>
+                    </ul>
+                </div>
             </section>
 
             <!-- Infections -->
@@ -265,68 +279,72 @@
                 
                 <div class="disorder-box">
                     <h3>Pelvic Inflammatory Disease (PID)</h3>
-                    <p>Infection of the upper reproductive tract (uterus, tubes, ovaries). Usually caused by STIs (Chlamydia, Gonorrhoea) ascending from the vagina/cervix.</p>
-                    <p><strong>Symptoms:</strong> Bilateral lower abdominal pain, fever, abnormal discharge, deep dyspareunia, cervical motion tenderness.</p>
-                    <p><strong>Complications:</strong> Sepsis (tubo-ovarian abscess), infertility, chronic pain, ectopic pregnancy risk.</p>
+                    <p><strong>Pathophysiology:</strong> Ascending infection from the lower genital tract (vagina/cervix) to the sterile upper tract (uterus, tubes, ovaries).
+                    <br><em>Causes:</em> STIs (Chlamydia/Gonorrhoea) or Non-STI (post-surgical, IUD insertion).</p>
+                    <p><strong>Sequelae:</strong> Inflammation -> Scarring -> Infertility / Ectopic Risk / Tubo-ovarian Abscess -> Sepsis.</p>
+                    <p><strong>Presentation:</strong> Bilateral lower abdo pain, fever, abnormal discharge (foul), deep dyspareunia, cervical motion tenderness ("chandelier sign").</p>
+                    <div class="management-box mt-2">
+                        <strong>Paramedic Management:</strong>
+                        <ul class="list-disc list-inside">
+                            <li><strong>Sepsis Screen:</strong> Check Temp, HR, BP, RR.</li>
+                            <li><strong>Analgesia:</strong> Paracetamol/NSAIDs/Opioids.</li>
+                            <li><strong>Transport:</strong> Required if pregnant, septic, or severe pain.</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="assessment-box">
-                    <h3>Common Vaginal Infections</h3>
+                    <h3>Other Infections</h3>
                     <ul>
-                        <li><strong>Thrush (Candidiasis):</strong> Fungal. Thick white "cottage cheese" discharge, severe itching. Risk factors: Antibiotics, diabetes.</li>
-                        <li><strong>Bacterial Vaginosis (BV):</strong> Bacterial imbalance (loss of lactobacilli). Thin grey/white discharge with "fishy" odour.</li>
-                        <li><strong>Bartholin's Cyst/Abscess:</strong> Blockage of the Bartholin's glands at the vaginal entrance. Can become infected (abscess) causing severe unilateral pain and swelling at the introitus.</li>
+                        <li><strong>Bartholin's Cyst/Abscess:</strong> Blockage of gland at vaginal entrance. If infected (abscess), causes severe unilateral pain/swelling preventing walking/sitting. Requires drainage.</li>
+                        <li><strong>Bacterial Vaginosis (BV):</strong> Bacterial imbalance (loss of lactobacilli). Fishy odour. Risk factor for PID.</li>
+                        <li><strong>Thrush (Candida):</strong> Fungal. Thick white discharge, itching. Associated with diabetes/antibiotic use.</li>
                     </ul>
                 </div>
             </section>
 
-            <!-- Early Pregnancy Complications -->
+            <!-- Early Pregnancy -->
             <section id="pregnancy" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Early Pregnancy Complications</h2>
+                <h2 class="text-3xl font-bold text-gray-800">Early Pregnancy Complications (<20 Weeks)</h2>
                 
                 <div class="disorder-box">
-                    <h3>Ectopic Pregnancy</h3>
-                    <p><strong>Pathophysiology:</strong> Implantation of the blastocyst outside the uterine cavity (98% in fallopian tubes). <strong>Life-threatening</strong> if ruptured.</p>
-                    <p><strong>Risk Factors:</strong> Previous ectopic, PID, tubal surgery, IVF, smoking.</p>
-                    <p><strong>Presentation:</strong>
+                    <h3>Ectopic Pregnancy (Life Threat)</h3>
+                    <p><strong>Pathophysiology:</strong> Implantation of blastocyst outside the uterine cavity (98% tubal). As the embryo grows, it stretches the tube causing pain. <strong>Rupture</strong> causes massive hemorrhage into the peritoneal cavity.</p>
+                    <p><strong>Risk Factors:</strong> Previous ectopic, PID, tubal surgery, IVF, IUD, Smoking.</p>
+                    <p><strong>Clinical Triad:</strong> 1. Amenorrhoea (missed period) 2. Vaginal Bleeding 3. Abdominal Pain.</p>
+                    <p><strong>Signs of Rupture:</strong> Shoulder tip pain (hemoperitoneum irritating diaphragm), peritonism, hypovolemic shock.</p>
+                    <div class="management-box mt-2">
+                        <strong>Paramedic Management:</strong>
                         <ul class="list-disc list-inside">
-                            <li>Unilateral abdominal/pelvic pain.</li>
-                            <li>Vaginal bleeding/spotting (often dark).</li>
-                            <li><strong>Shoulder Tip Pain:</strong> Indicates diaphragmatic irritation from free blood (hemoperitoneum).</li>
-                            <li>Hypovolemic shock (rupture).</li>
+                            <li><strong>Assume Ectopic:</strong> In any female of reproductive age with abdo pain until proven otherwise.</li>
+                            <li><strong>Resuscitation:</strong> Large bore IV access. Fluid resuscitation (permissive hypotension considerations if ruptured).</li>
+                            <li><strong>Transport:</strong> Rapid transport to hospital with surgical capability.</li>
                         </ul>
-                    </p>
+                    </div>
                 </div>
 
                 <div class="disorder-box">
                     <h3>Miscarriage (Spontaneous Abortion)</h3>
-                    <p>Loss of pregnancy before 20 weeks. Most common in first trimester (genetic abnormalities).</p>
+                    <p><strong>Definition:</strong> Pregnancy loss before 20 weeks.
+                    <br><strong>Causes:</strong> Chromosomal (50-60%), maternal health, infection.</p>
                     <table>
-                        <thead><tr><th>Type</th><th>Clinical Picture</th></tr></thead>
+                        <thead><tr><th>Type</th><th>Cervix</th><th>Bleeding/Pain</th></tr></thead>
                         <tbody>
-                            <tr><td><strong>Threatened</strong></td><td>Bleeding, cervix <strong>closed</strong>. Pregnancy may continue.</td></tr>
-                            <tr><td><strong>Inevitable</strong></td><td>Bleeding, cramping, cervix <strong>open</strong>. Loss will occur.</td></tr>
-                            <tr><td><strong>Incomplete</strong></td><td>Some tissue passed, some retained. Bleeding persists.</td></tr>
-                            <tr><td><strong>Complete</strong></td><td>All tissue passed. Bleeding/pain subside. Cervix closes.</td></tr>
-                            <tr><td><strong>Missed</strong></td><td>Fetus non-viable but retained. No symptoms.</td></tr>
+                            <tr><td><strong>Threatened</strong></td><td>Closed</td><td>Mild bleeding. Pregnancy may continue.</td></tr>
+                            <tr><td><strong>Inevitable</strong></td><td>Open</td><td>Heavy bleeding/cramping. Loss unavoidable.</td></tr>
+                            <tr><td><strong>Incomplete</strong></td><td>Open</td><td>Products partially passed. Ongoing bleeding.</td></tr>
+                            <tr><td><strong>Complete</strong></td><td>Closed</td><td>Products passed. Symptoms subside.</td></tr>
                         </tbody>
                     </table>
-                </div>
-
-                <div class="management-box">
-                    <h3>Management of Bleeding in Early Pregnancy</h3>
-                    <ol>
-                        <li><strong>Hemodynamic Stability:</strong> Assess for shock. Large bore IV access. Fluid resuscitation only if signs of poor perfusion (permissive hypotension considerations).</li>
-                        <li><strong>Pain Management:</strong> Analgesia is safe and indicated.</li>
-                        <li><strong>Rhesus Status:</strong> Transport is required for Anti-D immunoglobulin if the mother is Rh Negative.</li>
-                        <li><strong>Emotional Support:</strong> Compassionate care is essential. Acknowledge the loss.</li>
-                    </ol>
-                </div>
-                
-                <div class="assessment-box">
-                    <h3>Abortion (Termination of Pregnancy)</h3>
-                    <p><strong>Medical:</strong> Mifepristone + Misoprostol (up to 9 weeks). Expect cramps/bleeding.</p>
-                    <p><strong>Surgical:</strong> D&C or Suction (up to 22+ weeks). Complications: Hemorrhage, infection, perforation, retained products.</p>
+                    <div class="management-box mt-2">
+                        <strong>Paramedic Management:</strong>
+                        <ul class="list-disc list-inside">
+                            <li><strong>Hemodynamics:</strong> Assess for shock. Fluid resuscitation if indicated.</li>
+                            <li><strong>Analgesia:</strong> Safe to administer.</li>
+                            <li><strong>Rhesus Status:</strong> Transport required for Anti-D if mother is Rh Negative.</li>
+                            <li><strong>Empathy:</strong> Acknowledge the loss. Allow patient to stay home if stable and preferred (check local guidelines).</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
@@ -336,11 +354,12 @@
                 <div class="management-box">
                     <h3>Paramedic Considerations</h3>
                     <ul>
-                        <li><strong>Safety:</strong> Ensure scene safety for yourself and the patient. If the perpetrator is near, involve police.</li>
-                        <li><strong>Consent & Control:</strong> Restore control to the patient. Explain every move. Obtain informed consent for all assessments.</li>
-                        <li><strong>Evidence Preservation:</strong> Discourage showering, changing clothes, or eating/drinking if forensic examination is likely. Do not clean wounds unless necessary for bleeding control.</li>
-                        <li><strong>Forensic Sensitivity:</strong> Do <strong>not</strong> examine genital injuries unless life-threatening hemorrhage is present.</li>
-                        <li><strong>Reporting:</strong> Mandatory reporting applies for minors. For adults, respect their choice regarding police involvement.</li>
+                        <li><strong>Safety:</strong> Is the perpetrator still on scene? Do not enter until police secure if dangerous.</li>
+                        <li><strong>Control:</strong> Restore control to the patient. Explain every move. Ask permission before touching.</li>
+                        <li><strong>Evidence Preservation:</strong> Discourage showering, changing clothes, eating, or drinking (preserves DNA). Do not clean wounds unless necessary for bleeding control. Place clothing in paper bags (not plastic).</li>
+                        <li><strong>Forensic Sensitivity:</strong> Do <strong>NOT</strong> examine genitals unless there is life-threatening hemorrhage.</li>
+                        <li><strong>Reporting:</strong> Mandatory reporting for minors. For adults with capacity, respect their choice regarding police involvement.</li>
+                        <li><strong>Disposition:</strong> Transport to a facility with forensic/sexual assault services or Sexual Assault Referral Centre (SARC).</li>
                     </ul>
                 </div>
             </section>
@@ -348,7 +367,7 @@
         </main>
 
         <footer class="text-center mt-12 mb-4">
-            <p class="text-gray-500">This guide summarizes key gynaecological emergencies. Remember that pelvic pain in females of reproductive age is an ectopic pregnancy until proven otherwise.</p>
+            <p class="text-gray-500">This guide covers key gynaecological emergencies. Always maintain a high index of suspicion for ectopic pregnancy in females of reproductive age presenting with abdominal pain or collapse.</p>
         </footer>
     </div>
 </body>
