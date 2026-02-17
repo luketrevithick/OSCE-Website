@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoracic Trauma: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        .reflection-box {
+            background-color: #f0fdfa; /* Teal */
+            border-left: 4px solid #0d9488;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .reflection-box strong {
+            color: #0f766e;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Thoracic Trauma</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#chest-wall" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Chest Wall Injuries</a>
+                <a href="#pleural" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Pleural Space</a>
+                <a href="#tension" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Tension Pneumothorax</a>
+                <a href="#decompression" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Needle Decompression</a>
+                <a href="#cardiac" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Cardiac Trauma</a>
+                <a href="#penetrating" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Penetrating Trauma</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Chest Wall Injuries -->
+            <section id="chest-wall" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Chest Wall Injuries</h2>
+                
+                <div class="disorder-box">
+                    <h3>Fractured Ribs & Flail Chest</h3>
+                    <p><strong>Pathophysiology:</strong> Simple rib fractures compromise ventilation primarily through <strong>pain</strong>. Pain limits chest excursion, reducing tidal volume and preventing coughing, which leads to atelectasis (alveolar collapse) and subsequent pneumonia.</p>
+                    <p><strong>Flail Chest:</strong> Occurs when $\ge$3 adjacent ribs are fractured in $\ge$2 places, creating a floating segment.
+                    <br><em>Mechanism:</em> The segment moves paradoxically (in during inspiration, out during expiration).
+                    <br><em>Clinical Reality:</em> The paradoxical movement itself is rarely the cause of hypoxia. The underlying <strong>Pulmonary Contusion</strong> (bruising of the lung parenchyma) causes alveolar haemorrhage and oedema, creating a severe Ventilation/Perfusion (V/Q) mismatch and hypoxia.</p>
+                </div>
+
+                <div class="reflection-box">
+                    <h3>Cognitive Bias in Minor Injuries</h3>
+                    <p><strong>Scenario:</strong> A stoic patient with "minor" chest injuries underplays their symptoms.</p>
+                    <p><strong>Risk:</strong> <em>Anchoring Bias</em> (locking onto the patient's self-assessment) or <em>Affective Bias</em> (respecting their stoicism) may lead to undertriage.</p>
+                    <p><strong>Strategy:</strong> Rely on objective physiological markers. Even if the patient smiles, a Respiratory Rate >24, SpO2 <94%, or inability to cough effectively are "hard signs" of respiratory compromise. Palpate the chest wall for crepitus regardless of patient complaints.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Management Priorities</h3>
+                    <ol class="list-decimal list-inside">
+                        <li><strong>Analgesia:</strong> This is a resuscitation intervention. Without pain relief, the patient cannot ventilate. Use multimodal analgesia (Paracetamol + Opioids +/- Ketamine).</li>
+                        <li><strong>Respiratory Support:</strong> Titrate Oxygen to SpO2 94-98%. If flail segment/contusion is causing failure, consider CPAP (cautiously, watching for pneumothorax) or positive pressure ventilation (BVM).</li>
+                        <li><strong>Splinting:</strong> Do <strong>not</strong> tape/sandbag flail segments (restricts expansion). Use a bulky dressing or patient's arm for comfort only.</li>
+                    </ol>
+                </div>
+
+                <div class="reflection-box">
+                    <h3>Mass Casualty Consideration</h3>
+                    <p><strong>Scenario:</strong> MCI, patient with flail chest, SpO2 92%, RR 32. Limited resources.</p>
+                    <p><strong>Adaptation:</strong>
+                    <br>1. <strong>Positioning:</strong> Sit upright (maximises FRC).
+                    <br>2. <strong>Analgesia Conservation:</strong> Prioritise IV/IM opiates for this patient to reduce work of breathing (WOB).
+                    <br>3. <strong>Oxygen:</strong> If limited, target SpO2 >90%.
+                    <br>4. <strong>Triage:</strong> This is a "Red/Immediate" patient due to RR >30 and potential for rapid decompensation (tension/contusion).</p>
+                </div>
+            </section>
+
+            <!-- Pleural Space -->
+            <section id="pleural" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Pleural Space Pathology</h2>
+                <div class="physiology-box">
+                    <h3>The Vacuum Seal</h3>
+                    <p>The parietal and visceral pleura are held together by negative intrapleural pressure. Breaching this seal allows air or blood to enter, collapsing the lung.</p>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Condition</th>
+                            <th>Pathophysiology</th>
+                            <th>Clinical Signs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Simple Pneumothorax</strong></td>
+                            <td>Air enters pleural space. Lung collapses. Ventilation reduced but haemodynamics stable.</td>
+                            <td>Reduced breath sounds (unilateral), Hyper-resonant percussion.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Haemothorax</strong></td>
+                            <td>Blood enters pleural space (intercostal vessels/lung parenchyma). Causes <strong>Hypovolemia</strong> (blood loss) + <strong>Hypoxia</strong> (lung compression).</td>
+                            <td>Reduced breath sounds, <strong>Dullness</strong> to percussion, Signs of Shock (Pale, Tachycardic).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Open Pneumothorax</strong></td>
+                            <td>"Sucking Chest Wound". Chest wall defect >2/3 diameter of trachea allows air to preferentially enter wound vs trachea.</td>
+                            <td>Visible bubbling wound, severe distress.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="reflection-box">
+                    <h3>Differentiation: Haemothorax vs. Pneumothorax</h3>
+                    <p><strong>Scenario:</strong> High-speed collision, hypotensive, reduced sounds right side.</p>
+                    <p><strong>Differentiation:</strong>
+                    <br>1. <strong>Percussion:</strong> <em>Pneumothorax</em> is Hyper-resonant (hollow drum). <em>Haemothorax</em> is Dull (thud).
+                    <br>2. <strong>History:</strong> Deceleration trauma often tears vessels (Haemothorax).
+                    <br>3. <strong>Neck Veins:</strong> Flat in Haemothorax (hypovolemia). Distended in Tension Pneumothorax (obstructive).</p>
+                    <p><strong>Treatment Impact:</strong>
+                    <br><strong>Haemothorax:</strong> Needs volume replacement (Blood > Fluids) and rapid transport for tube thoracostomy/surgery. Needle decompression is useless (needles can't drain thick blood).
+                    <br><strong>Pneumothorax:</strong> Observe. If hypotensive, treat as Tension (see below).</p>
+                </div>
+            </section>
+
+            <!-- Tension Pneumothorax -->
+            <section id="tension" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Tension Pneumothorax (Obstructive Shock)</h2>
+                
+                <div class="disorder-box">
+                    <h3>Pathophysiology</h3>
+                    <p>A "one-way valve" defect allows air into the pleural space during inspiration but prevents escape during expiration.
+                    <br><strong>Sequence of Death:</strong>
+                    <br>1. Intrapleural pressure rises > atmospheric pressure.
+                    <br>2. Ipsilateral lung collapses completely.
+                    <br>3. Mediastinum shifts to the <strong>opposite</strong> side.
+                    <br>4. <strong>Superior and Inferior Vena Cava are kinked/compressed.</strong>
+                    <br>5. Preload drops to zero -> Cardiac Output fails -> Obstructive Shock -> PEA Arrest.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Sentinel Signs (Indications for Decompression)</h3>
+                    <p>Tension pneumothorax is a <strong>Clinical Diagnosis</strong>. Do not wait for X-rays. You need:</p>
+                    <ol class="list-decimal list-inside font-bold">
+                        <li>Progressive Respiratory Distress (Air Hunger).</li>
+                        <li>Unilateral decreased/absent breath sounds.</li>
+                        <li>Signs of Haemodynamic Compromise (Hypotension, SBP <90mmHg, losing radial pulse).</li>
+                    </ol>
+                    <p class="mt-2 font-normal text-sm"><em>Note:</em> Tracheal deviation is a very late sign (often post-mortem). JVD may be absent if the patient is hypovolemic (concomitant bleeding).</p>
+                </div>
+
+                <div class="reflection-box">
+                    <h3>Assessment in Difficult Environments</h3>
+                    <p><strong>Scenario:</strong> Noisy scene (helicopter/traffic), patient won't lie flat. Auscultation impossible.</p>
+                    <p><strong>Decision Tools:</strong>
+                    <br>1. <strong>Look:</strong> Asymmetrical chest rise? Surgical emphysema (swelling neck/chest)?
+                    <br>2. <strong>Monitor:</strong> Improving SpO2? Rising EtCO2 (good) or falling EtCO2 (poor perfusion)?
+                    <br>3. <strong>Palpate:</strong> Tracheal position (suprasternal notch).
+                    <br>4. <strong>Decision:</strong> If SBP is crashing and mechanism fits, decompress. "Life over Limb".</p>
+                </div>
+            </section>
+
+            <!-- Needle Decompression -->
+            <section id="decompression" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Needle Thoracocentesis (Decompression)</h2>
+                <div class="management-box">
+                    <h3>The Procedure & The Evidence</h3>
+                    <p><strong>Goal:</strong> Convert a Tension Pneumothorax into a Simple/Open Pneumothorax to restore venous return.</p>
+                    <p><strong>Device Selection (Pros/Cons):</strong>
+                    <br>1. <strong>Standard 14G IV Cannula (4.5-5cm):</strong> <em>Pros:</em> Ubiquitous, cheap. <em>Cons:</em> <strong>High Failure Rate (42-50%)</strong> at 2nd ICS MCL due to chest wall thickness (Lesperance et al., 2018). Kinks easily.
+                    <br>2. <strong>Long Catheters (8cm+):</strong> <em>Pros:</em> Reaches pleural space in >90% of patients. <em>Cons:</em> Risk of deep injury (lung/heart) if placed incorrectly.
+                    <br>3. <strong>Commercial Devices (e.g., ARS, Spear):</strong> <em>Pros:</em> Reinforced (won't kink), open tip. <em>Cons:</em> Cost.</p>
+                    
+                    <p class="mt-4 border-t border-green-200 pt-2"><strong>Site Selection Debate (Inaba et al., 2012):</strong>
+                    <br><strong>2nd ICS Mid-Clavicular Line (MCL):</strong> Traditional. <em>Risk:</em> Often too thick (pectoralis muscle). High failure rate.
+                    <br><strong>5th ICS Anterior Axillary Line (AAL):</strong> Modern Alternative. <em>Benefit:</em> Thinner chest wall. <em>Risk:</em> Closer to heart (left side) and liver/spleen if landmarks missed.</p>
+                </div>
+
+                <div class="reflection-box">
+                    <h3>Risk vs. Benefit Analysis</h3>
+                    <p><strong>Complications:</strong> Iatrogenic pneumothorax (creating one where none existed), vascular injury (intercostal artery), cardiac tamponade (if too medial), infection.</p>
+                    <p><strong>Weighing the Risk:</strong> Untreated tension pneumothorax is fatal. If the patient is hypotensive and hypoxic due to chest trauma, the risk of a needle is acceptable compared to the certainty of cardiac arrest. If the patient is normotensive, <strong>WAIT</strong> and monitor.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Communicating the Intervention</h3>
+                    <p><strong>Closed Loop Communication:</strong>
+                    <br>"I suspect Tension Pneumothorax on the LEFT. Signs are absent air entry and SBP 80."
+                    <br>"I am preparing to decompress the LEFT chest."
+                    <br>"Decompression complete. Rush of air heard. Reassessing vitals now."</p>
+                </div>
+            </section>
+
+            <!-- Cardiac Trauma -->
+            <section id="cardiac" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Cardiac & Great Vessel Trauma</h2>
+                
+                <div class="disorder-box">
+                    <h3>Pericardial Tamponade</h3>
+                    <p><strong>Pathophysiology:</strong> Blood fills the pericardial sac (tough, fibrous, non-stretchy). As little as 100-200mL acutely can compress the ventricles.
+                    <br><strong>Result:</strong> Ventricles cannot fill (diastolic failure) -> Cardiac Output drops -> Obstructive Shock.</p>
+                    <p><strong>Beck's Triad (Classic but Rare):</strong>
+                    <br>1. Hypotension (Narrow pulse pressure).
+                    <br>2. Distended Neck Veins (JVD).
+                    <br>3. Muffled Heart Sounds.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Management: "Fill the Tank"</h3>
+                    <p>If pericardiocentesis (needle drainage) is outside scope:</p>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Fluid Bolus:</strong> Administer fluids to increase venous pressure (Preload). You are trying to use hydrostatic pressure to force blood into the compressed heart.</li>
+                        <li><strong>Rapid Transport:</strong> This is a surgical emergency (Thoracotomy). Scoop and Run.</li>
+                        <li><strong>Advocacy:</strong> Pre-alert the hospital specifically: "Suspected Tamponade. Penetrating chest trauma. Hypotensive and Tachycardic. Requires immediate surgical review."</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Sternal Fracture & Cardiac Contusion</h3>
+                    <p><strong>Mechanism:</strong> Blunt force (steering wheel/seatbelt).
+                    <br><strong>Risk:</strong> Myocardial Contusion (bruising of heart muscle). Can lead to arrhythmias (PVCs, VT, VF) or pump failure (cardiogenic shock).</p>
+                    <p><strong>Management:</strong> 12-Lead ECG monitoring is mandatory for all sternal fractures.</p>
+                </div>
+            </section>
+
+            <!-- Penetrating Trauma -->
+            <section id="penetrating" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Penetrating Trauma</h2>
+                <div class="management-box">
+                    <h3>Impaled Objects</h3>
+                    <p><strong>Rule:</strong> Do NOT remove unless it obstructs CPR or the airway.
+                    <br><strong>Action:</strong> Stabilise with bulky dressings (donut ring). Vibration/movement of the object can lacerate the aorta or lung.</p>
+                    
+                    <h3>Open Pneumothorax</h3>
+                    <p><strong>Action:</strong> Apply an occlusive dressing (Chest Seal). Prefer vented seals (allows air out, not in). If using 3-sided dressing, monitor closely for development of Tension Pneumothorax (if the valve clogs).</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">Based on Lesperance et al. (Failure Rates), Lubin et al. (Paramedic Accuracy), and current trauma guidelines. Remember: In thoracic trauma, Airway and Breathing problems usually kill before Circulation problems.</p>
+        </footer>
+    </div>
+</body>
+</html>
