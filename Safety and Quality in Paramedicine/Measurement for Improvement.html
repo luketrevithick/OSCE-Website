@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measurement for Improvement: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .concept-box {
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .concept-box strong {
+            color: #1d4ed8;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .risk-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .risk-box strong {
+            color: #b91c1c;
+        }
+        .framework-box {
+            background-color: #fff7ed;
+            border-left: 4px solid #f97316;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .framework-box strong {
+            color: #c2410c;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .chart-box {
+            background-color: #fdf2f8;
+            border-left: 4px solid #db2777;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .chart-box strong {
+            color: #be185d;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Measurement for Improvement</h1>
+            <p class="text-xl text-gray-600 mt-2">HLTH 3024 Safety and Quality in Paramedicine</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#mfi" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Model for Improvement</a>
+                <a href="#definitions" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Key Definitions</a>
+                <a href="#donabedian" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Donabedian's Model</a>
+                <a href="#attributes" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Attributes of Indicators</a>
+                <a href="#charts" class="bg-pink-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-pink-600">Run & SPC Charts</a>
+                <a href="#variation" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Understanding Variation</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Model for Improvement -->
+            <section id="mfi" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">The Model for Improvement (MFI)</h2>
+                <div class="concept-box">
+                    <h3>Framework Overview</h3>
+                    <p>Developed by Associates for Process Improvement, the MFI provides a structured approach to improvement activities. It consists of three fundamental questions followed by the Plan-Do-Study-Act (PDSA) cycle.</p>
+                    <ol class="list-decimal list-inside mt-4 font-medium">
+                        <li>What are we trying to accomplish? (Aim)</li>
+                        <li>How will we know that a change is an improvement? (Measurement)</li>
+                        <li>What change can we make that will result in improvement? (Change Ideas)</li>
+                    </ol>
+                    <div class="mt-4 p-4 bg-white rounded border border-blue-200">
+                        <strong>PDSA Cycle:</strong>
+                        <ul class="list-disc list-inside ml-4 text-gray-600">
+                            <li><strong>Plan:</strong> Objective, predictions, plan for data collection.</li>
+                            <li><strong>Do:</strong> Carry out the plan, document observations.</li>
+                            <li><strong>Study:</strong> Analyse data, compare to predictions.</li>
+                            <li><strong>Act:</strong> Adapt, Adopt, or Abandon the change.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Definitions -->
+            <section id="definitions" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Measurement Terminology</h2>
+                <p class="mb-4">Understanding the distinction between these terms is critical for accurate quality measurement.</p>
+                
+                <table class="w-full">
+                    <thead>
+                        <tr>
+                            <th>Term</th>
+                            <th>Definition</th>
+                            <th>Example (Paramedicine)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Quality Indicator (QI)</strong></td>
+                            <td>A measurable element for which there is evidence/consensus that it can assess quality. It <em>indicates</em> quality but is not a direct measure of it.</td>
+                            <td>Patients with suspected STEMI receive 12-lead ECG.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Review Criterion</strong></td>
+                            <td>A systematically developed statement used to determine retrospectively if a specific act of care occurred.</td>
+                            <td>Was a 12-lead ECG performed within 10 minutes of arrival?</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Measure</strong></td>
+                            <td>The expression of an indicator as a number (rate, ratio, percentage, mean).</td>
+                            <td>The <em>percentage</em> of STEMI patients who received a 12-lead ECG within 10 minutes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Standard</strong></td>
+                            <td>The level of compliance required.
+                                <br><strong>Target Standard:</strong> Prospective goal (e.g., 95%).
+                                <br><strong>Achieved Standard:</strong> Retrospective result (e.g., 88%).
+                            </td>
+                            <td>90% of eligible patients should receive aspirin.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Donabedian's Model -->
+            <section id="donabedian" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Donabedian's Model: Categorising Indicators</h2>
+                <div class="framework-box">
+                    <h3>The Triad of Quality Assessment</h3>
+                    <p>Avedis Donabedian proposed that quality can be assessed by measuring three categories. Valid process and structure indicators must have a proven link to outcomes.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="font-bold text-orange-600 border-b border-orange-200 pb-2">1. Structure</h4>
+                            <p class="text-sm mt-2"><strong>"The capacity to provide care."</strong></p>
+                            <p class="text-sm text-gray-600">Attributes of the setting (staff, equipment, policies).</p>
+                            <p class="text-sm mt-2"><em>Example:</em> Number of ambulances equipped with 12-lead ECG machines.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="font-bold text-orange-600 border-b border-orange-200 pb-2">2. Process</h4>
+                            <p class="text-sm mt-2"><strong>"What is actually done."</strong></p>
+                            <p class="text-sm text-gray-600">Interactions between patients and providers (diagnosis, treatment).</p>
+                            <p class="text-sm mt-2"><em>Example:</em> Proportion of STEMI patients receiving aspirin.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded shadow-sm">
+                            <h4 class="font-bold text-orange-600 border-b border-orange-200 pb-2">3. Outcome</h4>
+                            <p class="text-sm mt-2"><strong>"The effect on health status."</strong></p>
+                            <p class="text-sm text-gray-600">The consequences of care (mortality, recovery, satisfaction).</p>
+                            <p class="text-sm mt-2"><em>Example:</em> 30-day survival rate after cardiac arrest.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Attributes of a Good Indicator -->
+            <section id="attributes" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Attributes of a Good Indicator</h2>
+                <p>Not all data constitutes a good indicator. High-quality indicators must possess specific characteristics (Mainz, 2003):</p>
+                <ul class="list-disc list-inside mt-4 space-y-2">
+                    <li><strong>Validity:</strong> Does it actually measure what it is intended to measure? Does it reflect the quality of care?</li>
+                    <li><strong>Reliability:</strong> Does it produce consistent results when measured repeatedly in the same circumstances?</li>
+                    <li><strong>Sensitivity:</strong> Can it detect changes in the quality of care?</li>
+                    <li><strong>Feasibility:</strong> Is the data available and affordable to collect?</li>
+                    <li><strong>Acceptability:</strong> Is it accepted by the clinicians and stakeholders as a fair measure?</li>
+                    <li><strong>Evidence-based:</strong> Is there scientific evidence linking the indicator to better health outcomes?</li>
+                </ul>
+            </section>
+
+            <!-- Run Charts & SPC Charts -->
+            <section id="charts" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Run Charts vs. SPC Charts</h2>
+                <div class="chart-box">
+                    <h3>1. Run Charts</h3>
+                    <p>A simple graph of data plotted over time with a <strong>median</strong> (middle value) line.</p>
+                    <p><strong>Use:</strong> Good for identifying trends or shifts in data over time. Simple to create and interpret.</p>
+                </div>
+                <div class="chart-box">
+                    <h3>2. Statistical Process Control (SPC) Charts</h3>
+                    <p>Also known as Shewhart Charts. Similar to run charts but use a <strong>mean</strong> (average) line and include <strong>Upper and Lower Control Limits</strong> (UCL/LCL).</p>
+                    <p><strong>Control Limits (Sigma Limits):</strong> Usually set at ±3 standard deviations (sigma) from the mean. They define the borders of <strong>common cause variation</strong> (expected random variation).</p>
+                    <p><strong>Use:</strong> To determine if a process is <em>stable</em> (predictable) or <em>unstable</em> (unpredictable), and to differentiate between common and special cause variation.</p>
+                </div>
+
+                <div class="management-box mt-4">
+                    <h3>Interpreting Charts: Rules for Signals</h3>
+                    <p>These rules indicate non-random signals (Special Cause Variation) in SPC charts:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Shift:</strong> ≥8 consecutive points on one side of the centre line.</li>
+                        <li><strong>Trend:</strong> ≥6 consecutive points steadily increasing or decreasing.</li>
+                        <li><strong>Astronomical Point:</strong> A single data point clearly outside the control limits (UCL/LCL).</li>
+                        <li><strong>Too Many/Too Few Runs:</strong> A run is a series of points on one side of the median. Statistical tables define if the number of crossings is non-random.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Variation -->
+            <section id="variation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Understanding Variation</h2>
+                <p>Variation is present in all systems. Understanding the <em>type</em> of variation is crucial for appropriate management action.</p>
+                
+                <table class="w-full mt-4">
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Description</th>
+                            <th>Chart Characteristic</th>
+                            <th>Management Strategy</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Common Cause Variation</strong></td>
+                            <td>Inherent, natural fluctuation in a stable system. Predictable within limits. "Noise".</td>
+                            <td>Points fluctuate randomly but stay <strong>inside</strong> the control limits. No shifts/trends.</td>
+                            <td><strong>Do NOT react to individual points.</strong> To improve, you must fundamentally redesign the <strong>system</strong> (e.g., new equipment, new policy).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Special Cause Variation</strong></td>
+                            <td>Variation due to a specific, identifiable external factor. Unpredictable. "Signal".</td>
+                            <td>Points outside control limits (Astronomical), Shifts, or Trends.</td>
+                            <td><strong>Investigate immediately.</strong> Identify the specific cause (e.g., broken machine, new staff member) and eliminate or replicate it.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="risk-box mt-4">
+                    <strong>The Error of Tampering:</strong> Treating common cause variation as special cause (e.g., reacting to every monthly dip in performance as a crisis) increases variation and instability in the system.
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">Based on the Model for Improvement, Donabedian (1988), Mainz (2003), and HLTH 3024 Curriculum.</p>
+        </footer>
+    </div>
+</body>
+</html>
