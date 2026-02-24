@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trauma Resuscitation: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Trauma Resuscitation</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+                <a href="#systems" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Trauma Systems & Triage</a>
+                <a href="#kinematics" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Kinematics of Trauma</a>
+                <a href="#philosophy" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">C-ABCDE Philosophy</a>
+                <a href="#management" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Traumatic Cardiac Arrest</a>
+                <a href="#decisions" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Withholding & Ceasing</a>
+                <a href="#crm" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Crew Resource Management</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Trauma Systems & Triage -->
+            <section id="systems" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Trauma Systems & Triage</h2>
+                
+                <div class="assessment-box">
+                    <h3>The Australian Trauma System</h3>
+                    <p>Paramedic care does not exist in a vacuum; it is the critical first step in a highly integrated network. The goal of the trauma system is to get <strong>"the right patient, to the right hospital, in the right time."</strong></p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Bypass Protocols:</strong> Paramedics are empowered to bypass closer, smaller hospitals in favour of Major Trauma Centres (MTCs) if the patient meets specific major trauma criteria, as definitive surgical care is the ultimate lifesaver.</li>
+                        <li><strong>Prehospital Notification:</strong> Providing an early warning to the receiving facility allows them to activate the trauma team, prepare the massive transfusion protocol (blood bank), and clear the CT scanner/operating theatre before the patient arrives.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>MIST Handover & Triage</h3>
+                    <p>Pre-hospital triage decisions are driven by the MIST criteria. This format is also universally used for trauma notifications via radio.</p>
+                    <table class="mt-2">
+                        <tbody>
+                            <tr>
+                                <td><strong>M - Mechanism of Injury</strong></td>
+                                <td>What happened? (e.g., High-speed MBA >60km/h, fall >3 metres, penetrating trauma to torso). Helps predict hidden injuries.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>I - Injuries Sustained/Suspected</strong></td>
+                                <td>Found on primary/secondary survey (e.g., flail chest, suspected open book pelvic fracture, amputations).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>S - Signs and Symptoms</strong></td>
+                                <td>Vital signs indicating physiological derangement (e.g., GCS < 13, SBP < 90 mmHg, RR < 10 or > 29).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>T - Treatment & Trends</strong></td>
+                                <td>Interventions performed and patient response (e.g., Pelvic binder applied, bilateral chest decompression, current ETCO2, improving or deteriorating?).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Kinematics of Trauma -->
+            <section id="kinematics" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Kinematics of Trauma</h2>
+                
+                <div class="physiology-box">
+                    <h3>Newton's Laws & Energy Transfer</h3>
+                    <p>Understanding the physics of a crash helps paramedics become anatomical detectives, predicting injury patterns before they are even visible.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Newton's First Law (Inertia):</strong> A body in motion stays in motion until acted upon by an outside force. <em>(e.g., A car hits a tree and stops. The patient's body continues moving at 100km/h until it hits the steering wheel. The internal organs continue moving until they tear against their anatomical attachments.)</em></li>
+                        <li><strong>Newton's Second Law (Force = Mass x Acceleration):</strong> The heavier the object and the faster it stops/accelerates, the greater the force generated.</li>
+                        <li><strong>Law of Conservation of Energy (KE = ½mv²):</strong> Energy cannot be destroyed, only transferred. In a sudden deceleration, massive kinetic energy is transferred into the tissues of the human body, causing shearing, tearing, and cavitation. Notice that <strong>velocity (v) is squared</strong>—speed causes significantly more tissue damage than the mass of the object.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Predicting Patterns of Injury</h3>
+                    <p>Applying kinematics to clinical assessment:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Frontal Impact (Bent steering wheel):</strong> Suspect traumatic aortic rupture, myocardial contusion, pulmonary contusion, and posterior hip dislocations (dashboard impact).</li>
+                        <li><strong>Lateral Impact (T-bone):</strong> Suspect lateral rib fractures, splenic rupture (left side), liver laceration (right side), and clavicle/pelvic fractures.</li>
+                        <li><strong>Penetrating Trauma:</strong> Low energy (stabbings) cause localized damage. High energy (firearms) cause massive temporary and permanent cavitation far beyond the path of the bullet.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- C-ABCDE Philosophy -->
+            <section id="philosophy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">C-ABCDE Trauma Philosophy</h2>
+                <div class="management-box">
+                    <h3>A Paradigm Shift in Trauma</h3>
+                    <p>In standard medical resuscitation, we follow standard ABC. However, in trauma, a patient can exsanguinate from a catastrophic arterial bleed before an airway can even be established. Therefore, the paradigm shifts to <strong>C-ABCDE</strong>.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong><span class="text-red-600 font-bold">C</span> - Catastrophic Hemorrhage:</strong> Immediate application of arterial tourniquets and haemostatic dressings. Stop the massive bleeding FIRST.</li>
+                        <li><strong><span class="text-blue-600 font-bold">A</span> - Airway (with C-spine control):</strong> Open the airway using jaw thrust. Insert basic/advanced adjuncts as required while maintaining neutral spinal alignment.</li>
+                        <li><strong><span class="text-green-600 font-bold">B</span> - Breathing:</strong> Assess for and immediately treat life-threatening thoracic trauma (e.g., finger/needle thoracostomy for tension pneumothorax). Provide high-flow oxygen.</li>
+                        <li><strong><span class="text-purple-600 font-bold">C</span> - Circulation:</strong> Apply pelvic binder, establish IV/IO access, commence fluid resuscitation (e.g., Sodium Chloride or Compound Sodium Lactate depending on state protocol) focusing on permissive hypotension.</li>
+                        <li><strong><span class="text-yellow-600 font-bold">D</span> - Disability:</strong> Assess GCS, pupillary response, and suspect traumatic brain injury.</li>
+                        <li><strong><span class="text-gray-600 font-bold">E</span> - Exposure & Environment:</strong> Fully expose to find hidden injuries, but immediately aggressively warm the patient to prevent the lethal triad (hypothermia, coagulopathy, acidosis).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Traumatic Cardiac Arrest Management -->
+            <section id="management" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Traumatic Cardiac Arrest (TCA) Priorities</h2>
+                
+                <div class="disorder-box">
+                    <h3>Medical vs. Traumatic Arrest</h3>
+                    <p>The pathophysiology of TCA is fundamentally different from a medical (arrhythmogenic) cardiac arrest. Standard ACLS (rhythmic chest compressions and adrenaline) is largely futile in TCA because the heart is usually empty (hypovolemia) or restricted (tension pneumothorax/tamponade).</p>
+                    <p class="mt-2 text-lg font-bold">Priority: Reversible causes MUST take precedence over chest compressions.</p>
+                    <p>If resources are limited, you must fix the hole, fill the tank, and relieve the pressure before assigning a clinician to do compressions. Compressions may occur simultaneously <strong>ONLY</strong> if they do not interfere with treating reversible causes and sufficient resources are available.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Fixing the Reversible Causes (HOT or MARCHE)</h3>
+                    <p>State guidelines (NSW T20, QLD CPG) prioritize rapid identification and correction of these specific etiologies:</p>
+                    <table class="mt-2">
+                        <thead>
+                            <tr>
+                                <th>Etiology</th>
+                                <th>Paramedic Intervention</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Hypovolemia / Massive Haemorrhage</strong></td>
+                                <td>Tourniquets, pelvic binder, IV/IO access, fluid bolus (e.g., 20mL/kg NaCl 0.9% or CSL) to restore circulating volume.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hypoxia / Airway</strong></td>
+                                <td>Basic airway manoeuvres, IPPV with 100% O2, Supraglottic Airway (SGA) or Endotracheal Tube (ETT).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tension Pneumothorax / Respirations</strong></td>
+                                <td><strong>Bilateral chest decompression</strong> (Needle decompression or finger thoracostomy) is a mandatory routine intervention in TCA.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tamponade (Cardiac)</strong></td>
+                                <td>Early conveyance. Patients with penetrating chest trauma in TCA require minimal scene time and rapid transport for resuscitative thoracotomy.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Decision Making -->
+            <section id="decisions" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Commencing & Withholding Resuscitation</h2>
+                
+                <div class="assessment-box">
+                    <h3>When to WITHHOLD Resuscitation</h3>
+                    <p>Paramedics may consider withholding resuscitation in blunt traumatic cardiac arrest when the patient meets specific criteria (aligning with QLD and NSW guidelines):</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Injuries clearly incompatible with life (e.g., decapitation, massive cranial destruction, hemicorporectomy).</li>
+                        <li>Dependent lividity, rigor mortis, or decomposition.</li>
+                        <li><strong>Blunt Trauma Criteria:</strong> Unwitnessed cardiac arrest, apnoeic, pulseless, monitored in asystole, and no pupillary light reflexes (unless exceptional circumstances exist, such as hypothermia or drowning).</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>When to CEASE Resuscitation</h3>
+                    <p>If resuscitation has been commenced, the decision to cease is generally based on the lack of response to aggressive treatment of reversible causes.</p>
+                    <p class="mt-2"><strong>The 20-Minute Rule:</strong> If likely reversible causes (Airway secured, bilateral chest decompressed, massive haemorrhage controlled, fluids administered) have been treated with <strong>no Return of Spontaneous Circulation (ROSC) after 20 minutes</strong>, resuscitation should generally be ceased.</p>
+                    <p class="mt-2 text-sm italic">Note: Sensitivity should be shown to environmental/human factors (e.g., family on scene, public spaces), and consultation with a clinician/medical officer may be required depending on jurisdiction.</p>
+                </div>
+            </section>
+
+            <!-- Crew Resource Management -->
+            <section id="crm" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Crew Resource Management (CRM) in TCA</h2>
+                
+                <div class="management-box">
+                    <h3>Managing the Chaos</h3>
+                    <p>A Traumatic Cardiac Arrest is one of the most cognitively and physically demanding situations a paramedic will face. Effective CRM is just as vital as clinical knowledge.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Designated Leadership:</strong> One paramedic must step back, take the "helicopter view," and coordinate the scene. The leader should ideally be "hands-off" to maintain situational awareness.</li>
+                        <li><strong>Task Allocation:</strong> Assign specific, parallel tasks based on C-ABCDE priorities (e.g., "Paramedic 1, manage the airway; Paramedic 2, perform bilateral chest decompressions; Fire/Rescue, apply the pelvic binder").</li>
+                        <li><strong>Closed-Loop Communication:</strong> Eliminate ambiguity. <br><em>Leader:</em> "John, please administer a 20mL/kg fluid bolus." <br><em>John:</em> "Copy, administering 20mL/kg fluid bolus." <br><em>John (later):</em> "Fluid bolus is complete."</li>
+                        <li><strong>Cognitive Unloading:</strong> Use physical checklists, action cards, and the structured MIST or HOT protocols to prevent task fixation and ensure no reversible cause is missed.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">Based on Australian Paramedic Clinical Practice Guidelines (including NSW T20 and QLD CPG_RE_RT_0722). Always adhere to your specific service's protocols and scope of practice.</p>
+        </footer>
+    </div>
+</body>
+</html>
