@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramedicine Care 4: Gynaecology & Men's Health Master Quiz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .option-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-card:hover:not(.selected):not(.disabled) {
+            background-color: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+        .selected {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+        .disabled {
+            cursor: not-allowed;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-slate-900 text-white shadow-md py-6 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-bold tracking-tight">Paramedicine Care 4</h1>
+                <p class="text-slate-300 text-xs sm:text-sm">Gynaecology & Men's Health (60 Question Master Assessment)</p>
+            </div>
+            <div id="header-progress" class="hidden text-right">
+                <span class="text-sm font-semibold text-blue-400" id="header-counter">Q 1/60</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-10 text-center">
+            <div class="w-20 h-20 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15M9 11l3 3L22 4" />
+                </svg>
+            </div>
+            <h2 class="text-3xl font-bold mb-4">Master Assessment Exam</h2>
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+                <h3 class="font-semibold text-slate-800 mb-2">Exam Parameters:</h3>
+                <ul class="list-disc pl-5 text-slate-600 space-y-2 text-sm">
+                    <li><strong>Length:</strong> 60 highly detailed questions.</li>
+                    <li><strong>Topics:</strong> Gynaecology & Men's Health (Epidemiology, Pathophysiology, Clinical Management, OSCE Scenarios).</li>
+                    <li><strong>Source:</strong> Based on HLTH3021 learning outcomes and specific lecture statistics.</li>
+                    <li><strong>Feedback:</strong> Detailed rationales provided at the end.</li>
+                </ul>
+            </div>
+            <button onclick="startQuiz()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-10 rounded-lg shadow-sm transition duration-200 text-lg">
+                Begin Exam
+            </button>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="hidden">
+            <!-- Progress Bar -->
+            <div class="mb-6">
+                <div class="flex justify-between text-sm font-medium text-slate-500 mb-2">
+                    <span id="question-counter">Question 1 of 60</span>
+                    <span id="progress-percentage">2%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5">
+                    <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style="width: 2%"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                <div id="question-type-badge" class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-indigo-100 text-indigo-800 mb-4">
+                    Category
+                </div>
+                <h3 id="question-text" class="text-lg sm:text-xl font-medium text-slate-900 mb-6 leading-relaxed">
+                    <!-- Question text injected here -->
+                </h3>
+
+                <!-- Options -->
+                <div id="options-container" class="space-y-3 mb-8">
+                    <!-- Options injected here -->
+                </div>
+
+                <!-- Footer / Next Button -->
+                <div class="flex justify-end border-t border-slate-100 pt-6 mt-6">
+                    <button id="next-btn" onclick="handleNext()" disabled class="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-medium py-2.5 px-8 rounded-lg shadow-sm transition duration-200">
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Container -->
+        <div id="results-container" class="hidden">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-10 text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2 text-slate-900">Exam Complete</h2>
+                <p class="text-slate-500 mb-8">Here is your clinical performance breakdown.</p>
+                
+                <div class="flex justify-center items-center mb-8">
+                    <div class="relative w-48 h-48">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                            <path class="text-slate-100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.8"/>
+                            <path id="score-circle" class="text-blue-600 transition-all duration-1000 ease-out" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.8"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="final-score-text" class="text-5xl font-bold text-slate-900">0%</span>
+                            <span id="raw-score-text" class="text-base text-slate-500 mt-1">0 / 60</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="score-message" class="text-xl font-medium mb-8"></div>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="resetQuiz()" class="bg-slate-800 hover:bg-slate-900 text-white font-medium py-2.5 px-8 rounded-lg shadow-sm transition duration-200">
+                        Retake Assessment
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Review -->
+            <div class="flex justify-between items-center mb-6 px-2">
+                <h3 class="text-xl font-bold text-slate-800">Clinical Review & Rationale</h3>
+                <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" id="filter-incorrect" onchange="filterReviews()" class="form-checkbox h-5 w-5 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                    <span class="text-sm font-medium text-slate-700">Show Incorrect Only</span>
+                </label>
+            </div>
+            
+            <div id="review-container" class="space-y-6">
+                <!-- Review items injected here -->
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // Generating 60 questions based strictly on the provided paramedicine curriculum
+        const questions = [
+            // Men's Health - Epidemiology & Strategy
+            {
+                id: 1, type: "Epidemiology - Men's Health",
+                text: "According to the National Men's Health Strategy 2020-2030, what is a primary epidemiological focus regarding the disparity in life expectancy between males and females in Australia?",
+                options: [
+                    "A) Men die more often from unavoidable genetic abnormalities.",
+                    "B) Men die more often from preventable diseases due to a lack of engagement with preventative healthcare.",
+                    "C) The life expectancy gap is entirely attributed to male over-representation in the military.",
+                    "D) Men have a higher physiological resistance to chronic diseases but fail to survive acute trauma."
+                ], correctAnswer: 1,
+                rationale: "The lecture highlights that men generally have worse health outcomes because they die more often from preventable diseases. A major focus of the strategy is men's lack of engagement with their own healthcare, especially preventative mechanisms."
+            },
+            {
+                id: 2, type: "Epidemiology - Men's Health",
+                text: "Which of the following is explicitly listed as one of the Five Health Issues in the National Men's Health Strategy 2020-2030?",
+                options: [
+                    "A) Neurological degenerative disorders",
+                    "B) Injuries and risk taking",
+                    "C) Pediatric genetic anomalies",
+                    "D) Autoimmune system suppression"
+                ], correctAnswer: 1,
+                rationale: "The Five Health Issues are: Mental health, Chronic conditions, Sexual and reproductive health (where men are over-represented), Injuries and risk taking, and Healthy ageing."
+            },
+            {
+                id: 3, type: "Epidemiology - Prostate Cancer",
+                text: "Based on Australian statistics presented in the lectures, what is the estimated probability of a male being diagnosed with prostate cancer by the time they are 85?",
+                options: ["A) 1 in 3", "B) 1 in 6", "C) 1 in 10", "D) 1 in 20"], correctAnswer: 1,
+                rationale: "It is estimated that 1 in 6 males will be diagnosed with prostate cancer by the time they are 85 in Australia."
+            },
+            // Gynaecology - Epidemiology & Sexual Assault Stats
+            {
+                id: 4, type: "Epidemiology - Sexual Assault",
+                text: "According to 2023 police records presented in the lecture, what age demographic comprises the largest percentage (41%) of sexual assault victims in Australia?",
+                options: ["A) 0-9 years", "B) 10-17 years", "C) 18-25 years", "D) 26-35 years"], correctAnswer: 1,
+                rationale: "In 2023, 41% of sexual assault victims recorded by police were between the ages of 10-17 years of age."
+            },
+            {
+                id: 5, type: "Epidemiology - Sexual Assault",
+                text: "When responding to a patient who discloses a sexual assault, an important epidemiological fact for the paramedic to keep in mind regarding the perpetrator and location is that:",
+                options: [
+                    "A) Assaults are primarily committed by strangers in public spaces.",
+                    "B) 69% of assaults occur at a private dwelling and 39% are related to family/domestic violence.",
+                    "C) 90% of assaults occur in commercial venues (e.g., bars) by unknown assailants.",
+                    "D) Sexual assault rates are evenly distributed across all demographics and locations."
+                ], correctAnswer: 1,
+                rationale: "Most sexual assaults occur at a private dwelling (69%), and 39% are related to family and domestic violence. Most women know the perpetrator."
+            },
+            {
+                id: 6, type: "Epidemiology - Sexual Assault",
+                text: "A patient tells you she was sexually assaulted but adamantly refuses to speak to the police. Statistically, according to your paramedicine module, how common is it for victims not to inform the police?",
+                options: ["A) 15%", "B) 35%", "C) 60%", "D) 92%"], correctAnswer: 3,
+                rationale: "The lecture explicitly states that the majority of women who are sexually assaulted will not inform police (92%)."
+            },
+            // Men's Health - Pathophysiology & OSCE
+            {
+                id: 7, type: "OSCE Diagnosis - Men's Health",
+                text: "You assess a 16-year-old male with sudden, excruciating right testicular pain and severe nausea, awaking him from sleep. The right testicle is exquisitely tender, high-riding, and the cremasteric reflex is absent. What is the definitive out-of-hospital management priority?",
+                options: [
+                    "A) Administration of IV antibiotics for epididymitis.",
+                    "B) Rapid transport for suspected testicular torsion, accompanied by strong multimodal analgesia.",
+                    "C) Application of a scrotal sling for suspected orchitis.",
+                    "D) Attempt manual detorsion in the field."
+                ], correctAnswer: 1,
+                rationale: "Testicular Torsion is a time-critical surgical emergency (6-hour window). Pain relief and rapid transport are the absolute priorities. Paramedics should NOT attempt manual detorsion."
+            },
+            {
+                id: 8, type: "Pathophysiology - Men's Health",
+                text: "Which anatomical abnormality highly predisposes an adolescent male to developing testicular torsion?",
+                options: [
+                    "A) Benign Prostatic Hyperplasia",
+                    "B) Bell-clapper deformity",
+                    "C) Undescended testicles (Cryptorchidism) occurring only in adulthood",
+                    "D) Inguinal hernia"
+                ], correctAnswer: 1,
+                rationale: "The 'bell-clapper deformity' is a lack of normal fixation of the testicle to the tunica vaginalis, allowing the testicle to swing freely and rotate within the scrotum, leading to torsion of the spermatic cord."
+            },
+            {
+                id: 9, type: "OSCE Diagnosis - Men's Health",
+                text: "A 24-year-old male presents with right scrotal pain that has gradually worsened over the past 3 days. He reports dysuria and a low-grade fever. On exam, the epididymis is swollen and tender. Elevation of the scrotum slightly relieves the pain. What is the most likely diagnosis?",
+                options: [
+                    "A) Testicular Torsion",
+                    "B) Epididymitis",
+                    "C) Fournier's Gangrene",
+                    "D) Priapism"
+                ], correctAnswer: 1,
+                rationale: "Gradual onset, associated dysuria/fever, and relief of pain upon scrotal elevation (Prehn's sign, though unreliable in isolation) strongly point to Epididymitis, often caused by STIs in young men."
+            },
+            {
+                id: 10, type: "Pathophysiology - Men's Health",
+                text: "A 74-year-old male has acute, severe lower abdominal pain and absolute inability to void urine for 12 hours. He has a history of a progressively weakening urinary stream. Palpation reveals a firm suprapubic mass. What is the pathophysiology?",
+                options: [
+                    "A) Acute bacterial prostatitis",
+                    "B) Benign Prostatic Hyperplasia (BPH) causing bladder outlet obstruction",
+                    "C) Acute pyelonephritis",
+                    "D) Ureteric calculus at the vesicoureteral junction"
+                ], correctAnswer: 1,
+                rationale: "Chronic weak stream in an older male points to BPH. The acute inability to void with a palpable suprapubic mass (distended bladder) is acute urinary retention secondary to BPH."
+            },
+            {
+                id: 11, type: "Clinical Knowledge - Men's Health",
+                text: "Which of the following are considered 'later signs' of Prostate Cancer that may mimic Benign Prostatic Hyperplasia (BPH)?",
+                options: [
+                    "A) Sudden, severe acute unilateral testicular pain.",
+                    "B) Frequent urination, weak stream, blood in urine or semen, and pain in the back/pelvis.",
+                    "C) High-flow priapism persisting >4 hours.",
+                    "D) Retrograde ejaculation and scrotal erythema."
+                ], correctAnswer: 1,
+                rationale: "Prostate cancer has few early signs. Later signs include frequent urination, pain urinating, blood in urine/semen, weak stream, and pain in the back or pelvis."
+            },
+            {
+                id: 12, type: "Clinical Management - Men's Health",
+                text: "A 35-year-old male with sickle cell disease complains of a painful, rigid erection persisting for 6 hours unassociated with sexual stimulation. What is the underlying mechanism of this emergency?",
+                options: [
+                    "A) High-flow priapism (arterial rupture).",
+                    "B) Low-flow (ischemic) priapism resulting in venous stasis and tissue hypoxia.",
+                    "C) Rupture of the tunica albuginea.",
+                    "D) Parasympathetic nervous system storm."
+                ], correctAnswer: 1,
+                rationale: "Ischemic (low-flow) priapism is a medical emergency where venous outflow is obstructed (common in sickle cell). It leads to hypoxia, acidosis, and irreversible tissue necrosis."
+            },
+            {
+                id: 13, type: "Pathophysiology - Men's Health",
+                text: "What is the primary difference between Phimosis and Paraphimosis?",
+                options: [
+                    "A) Phimosis is a time-critical vascular emergency; Paraphimosis is a benign stricture.",
+                    "B) Phimosis is the inability to retract the foreskin; Paraphimosis is the inability to pull the retracted foreskin back over the glans, leading to vascular compromise.",
+                    "C) Phimosis is caused by STIs; Paraphimosis is caused by poor hygiene.",
+                    "D) They are synonymous terms for the same condition."
+                ], correctAnswer: 1,
+                rationale: "Phimosis (inability to retract) is usually not an acute emergency. Paraphimosis (retracted foreskin acting as a tourniquet) impairs venous return, causing severe edema and arterial compromise, making it a true urologic emergency."
+            },
+            {
+                id: 14, type: "OSCE Diagnosis - Men's Health",
+                text: "You are treating a 55-year-old diabetic male who complains of severe pain in his perineum. You note marked erythema, swelling, and a 'crackling' sensation (crepitus) under the skin of the scrotum and perineum. He is tachycardic, hypotensive, and febrile. What is the most life-threatening diagnosis?",
+                options: [
+                    "A) Testicular torsion",
+                    "B) Fournier's Gangrene (Necrotizing Fasciitis)",
+                    "C) Uncomplicated Epididymitis",
+                    "D) Severe acute prostatitis"
+                ], correctAnswer: 1,
+                rationale: "Fournier's Gangrene is a rapidly progressing necrotizing fasciitis of the perineum/scrotum. Crepitus, severe pain out of proportion, and septic shock signs in a diabetic patient make this a highly lethal emergency requiring immediate aggressive resuscitation and surgical debridement."
+            },
+            {
+                id: 15, type: "Clinical Management - Men's Health",
+                text: "According to the lecture, paramedics frequently attend patients with urinary issues related to BPH or prostate cancer. If a patient requires an In-dwelling Catheter (IDC) out-of-hospital due to acute urinary retention, whose scope of practice does this fall under (referencing NSWA Protocol)?",
+                options: [
+                    "A) All operational paramedics",
+                    "B) Only retrieval physicians",
+                    "C) Extended Care Paramedics (ECP)",
+                    "D) Patient transport officers"
+                ], correctAnswer: 2,
+                rationale: "The lecture explicitly states: 'Inserting an IDC is an ECP skill (Refer NSWA Protocol ECP010)'."
+            },
+            // Gynaecology - OSCE & Pathophysiology
+            {
+                id: 16, type: "OSCE Diagnosis - Gynaecology",
+                text: "A 26-year-old female presents with sudden onset, severe, unilateral lower quadrant abdominal pain. She is diaphoretic, HR 125, BP 85/50. Her last menstrual period was 7 weeks ago. She has guarding and rebound tenderness. What is the most likely out-of-hospital diagnosis?",
+                options: [
+                    "A) Acute Pelvic Inflammatory Disease (PID)",
+                    "B) Ruptured Ectopic Pregnancy",
+                    "C) Right-sided Ovarian Torsion",
+                    "D) Ruptured Ovarian Cyst"
+                ], correctAnswer: 1,
+                rationale: "Missed period (7 weeks), sudden severe unilateral pain, and hypovolemic shock (tachycardia, hypotension) is the classic triad for a ruptured ectopic pregnancy."
+            },
+            {
+                id: 17, type: "Clinical Management - Gynaecology",
+                text: "For the patient in the previous question (suspected ruptured ectopic pregnancy with signs of shock), what is the priority for pre-hospital management?",
+                options: [
+                    "A) Wait on scene for an ECP to administer specialized tocolytics.",
+                    "B) Rapid transport, large bore IV access, and permissive hypotension (fluid resuscitation to maintain a palpable radial pulse).",
+                    "C) Administer heavy IV fluids to return BP to 120/80 mmHg before moving the patient.",
+                    "D) Withhold all analgesia to avoid masking clinical signs for the surgeon."
+                ], correctAnswer: 1,
+                rationale: "Ruptured ectopic pregnancy requires immediate surgical intervention to stop catastrophic haemorrhage. Management includes rapid transport, IV access, titrated analgesia (do not withhold), and fluid resuscitation aimed at permissive hypotension (maintaining cerebral perfusion without 'popping the clot')."
+            },
+            {
+                id: 18, type: "Pathophysiology - Gynaecology",
+                text: "Where do the vast majority (approx 95%) of ectopic pregnancies implant?",
+                options: [
+                    "A) The cervix",
+                    "B) The ampulla of the fallopian tube",
+                    "C) The ovaries",
+                    "D) The abdominal cavity"
+                ], correctAnswer: 1,
+                rationale: "While ectopic pregnancies can occur in the cervix, ovaries, or abdomen, approximately 95% occur within the fallopian tubes (most commonly the ampulla)."
+            },
+            {
+                id: 19, type: "Pathophysiology - Gynaecology",
+                text: "Pelvic Inflammatory Disease (PID) often results from untreated STIs (like Chlamydia). How does PID increase the risk of future ectopic pregnancies?",
+                options: [
+                    "A) It alters the pH of the vagina, destroying sperm.",
+                    "B) It causes inflammation and scarring/adhesions in the fallopian tubes, preventing the fertilized egg from reaching the uterus.",
+                    "C) It causes the endometrium to become too thick for implantation.",
+                    "D) It induces early ovulation before the egg is fully mature."
+                ], correctAnswer: 1,
+                rationale: "PID is an ascending infection causing tubal damage (salpingitis). The resulting scar tissue and adhesions impair the transit of the ovum, trapping the fertilized egg in the tube."
+            },
+            {
+                id: 20, type: "OSCE Diagnosis - Gynaecology",
+                text: "A 32-year-old female presents with severe, cyclical pelvic pain (dysmenorrhea) and pain during intercourse (dyspareunia). She mentions undergoing investigations for infertility. She is hemodynamically stable. What is the most likely condition?",
+                options: [
+                    "A) Ruptured Ovarian Cyst",
+                    "B) Endometriosis",
+                    "C) Polycystic Ovary Syndrome (PCOS)",
+                    "D) Acute Pelvic Inflammatory Disease (PID)"
+                ], correctAnswer: 1,
+                rationale: "The triad of dysmenorrhea, dyspareunia, and infertility strongly suggests Endometriosis, where endometrial-like tissue grows outside the uterus."
+            },
+            {
+                id: 21, type: "History Taking - Gynaecology",
+                text: "When documenting a gynaecological obstetric history, what do the terms 'Gravida' and 'Para' refer to?",
+                options: [
+                    "A) Gravida = Number of miscarriages; Para = Number of live births.",
+                    "B) Gravida = Total number of confirmed pregnancies; Para = Number of births after 20 weeks gestation (viable or non-viable).",
+                    "C) Gravida = Number of current fetuses; Para = Number of previous pregnancies.",
+                    "D) Gravida = Maternal age at first pregnancy; Para = Total children currently living."
+                ], correctAnswer: 1,
+                rationale: "Gravida (G) is the total number of times a woman has been pregnant, regardless of outcome. Parity (P) is the number of pregnancies carried to viable gestational age (usually >20 weeks)."
+            },
+            {
+                id: 22, type: "Clinical Management - Sexual Assault",
+                text: "You respond to a 22-year-old female who discloses she was sexually assaulted 3 hours ago. She is physically uninjured but wants to shower immediately. She states she does NOT want police involved. What is your action?",
+                options: [
+                    "A) Forcibly prevent her from showering under implied consent.",
+                    "B) Provide psychological first aid, advise her that showering destroys evidence if she later reports, but respect her decision if she has capacity.",
+                    "C) Debrief the patient with detailed questions to accurately document the event for the hospital, then let her shower.",
+                    "D) Contact police immediately as this is a mandatory reporting situation."
+                ], correctAnswer: 1,
+                rationale: "Patient autonomy and psychological safety are paramount. Advise her of the consequences to evidence, but if she has capacity, respect her decision. Do NOT debrief (to prevent re-traumatization), and mandatory reporting is generally for minors (<18), not competent adults."
+            },
+            {
+                id: 23, type: "Clinical Management - Sexual Assault",
+                text: "According to the lecture 'Considerations for sexual assault patients', what should you do if the police are not yet on scene and you feel the scene may be unsafe?",
+                options: [
+                    "A) Transport the patient immediately regardless of forensic evidence protocols.",
+                    "B) Wait. If police are not en-route, call for back up.",
+                    "C) Search the house yourself to secure the perimeter.",
+                    "D) Confront any individuals present to establish dominance."
+                ], correctAnswer: 1,
+                rationale: "The lecture states: 'Safety of yourself, your partner and the patient. If police are already not on scene – wait! If the police are not en-route, call for back up.'"
+            },
+            {
+                id: 24, type: "OSCE Diagnosis - Gynaecology",
+                text: "A 24-year-old female, 10 weeks pregnant, complains of lower abdominal cramping and moderate vaginal bleeding. On hospital examination, it is found her cervical os is closed and the fetal heartbeat is present. What type of miscarriage is she experiencing?",
+                options: [
+                    "A) Inevitable Abortion",
+                    "B) Threatened Abortion",
+                    "C) Incomplete Abortion",
+                    "D) Missed Abortion"
+                ], correctAnswer: 1,
+                rationale: "A Threatened Abortion presents with vaginal bleeding and cramping, but the cervical os remains closed and the pregnancy is still viable. If the os was open, it would be an Inevitable Abortion."
+            },
+            {
+                id: 25, type: "OSCE Diagnosis - Gynaecology",
+                text: "A 30-year-old female, 12 weeks pregnant, presents with severe cramping and heavy vaginal bleeding passing large clots and tissue. On assessment, she is pale, BP 90/60, HR 115. What is the likely diagnosis and primary pre-hospital concern?",
+                options: [
+                    "A) Threatened abortion; psychological support.",
+                    "B) Incomplete abortion; risk of hemorrhagic shock.",
+                    "C) Missed abortion; systemic sepsis.",
+                    "D) Complete abortion; routine transport."
+                ], correctAnswer: 1,
+                rationale: "Passing tissue with heavy bleeding and signs of shock indicates an Incomplete Abortion (some products of conception remain, preventing the uterus from contracting and stopping the bleeding). Hemorrhagic shock is the primary concern."
+            },
+            {
+                id: 26, type: "Pathophysiology - Gynaecology",
+                text: "A female patient presents with sudden, sharp, unilateral pelvic pain that began immediately after strenuous exercise. She is not pregnant. She feels nauseous. What is the pathophysiology of Ovarian Torsion?",
+                options: [
+                    "A) Ascending bacterial infection of the ovary.",
+                    "B) Rotation of the ovary on its suspensory ligament, compressing the ovarian artery and vein, leading to ischemia.",
+                    "C) Rupture of a fluid-filled sac on the surface of the ovary causing localized chemical peritonitis.",
+                    "D) Ectopic implantation of endometrial tissue on the ovary."
+                ], correctAnswer: 1,
+                rationale: "Ovarian torsion is the rotation of the ovary (and often fallopian tube) around its ligamentous supports, compromising blood supply and leading to acute ischemia/necrosis. It is a surgical emergency."
+            },
+            {
+                id: 27, type: "History Taking - Gynaecology",
+                text: "When differentiating between gastrointestinal and gynaecological causes of acute lower abdominal pain in a reproductive-aged female, which question is most critical?",
+                options: [
+                    "A) Have you eaten fatty foods recently?",
+                    "B) When was the first day of your last normal menstrual period (LMP)?",
+                    "C) Do you have a family history of colon cancer?",
+                    "D) Are you allergic to any antibiotics?"
+                ], correctAnswer: 1,
+                rationale: "LMP is critical to assess the possibility of ectopic pregnancy or complications of early pregnancy, which are time-critical emergencies."
+            },
+            {
+                id: 28, type: "Clinical Management - Analgesia",
+                text: "What is the contemporary standard of care for pre-hospital pain management in undifferentiated acute abdominal/pelvic pain (e.g., suspected torsion or ectopic)?",
+                options: [
+                    "A) Withhold analgesia to prevent masking surgical signs.",
+                    "B) Provide only NSAIDs, avoiding opioids.",
+                    "C) Utilize a multimodal approach, administering titrated strong analgesics (e.g., IV opioids) to achieve comfort.",
+                    "D) Rely solely on Entonox."
+                ], correctAnswer: 2,
+                rationale: "Analgesia should NEVER be withheld for fear of masking clinical signs. Patients should receive appropriate, multimodal, and titrated analgesia to relieve suffering."
+            },
+            {
+                id: 29, type: "Pathophysiology - Men's Health",
+                text: "Which of the following is true regarding the physiology of a normal male erection?",
+                options: [
+                    "A) It is solely a sympathetic nervous system response.",
+                    "B) It is mediated by the parasympathetic nervous system causing arterial dilation and venous compression within the corpora cavernosa.",
+                    "C) It relies on continuous contraction of the smooth muscles of the penile arteries.",
+                    "D) It is primarily driven by the release of histamine."
+                ], correctAnswer: 1,
+                rationale: "Erection is a parasympathetic response. Nitric oxide release causes relaxation of arterial smooth muscle, leading to massive arterial inflow which then compresses the venules against the tunica albuginea, trapping the blood."
+            },
+            {
+                id: 30, type: "Pathophysiology - Gynaecology",
+                text: "During the normal menstrual cycle, which hormone is primarily responsible for triggering ovulation?",
+                options: [
+                    "A) Progesterone",
+                    "B) Follicle-Stimulating Hormone (FSH)",
+                    "C) Luteinizing Hormone (LH) surge",
+                    "D) Human Chorionic Gonadotropin (hCG)"
+                ], correctAnswer: 2,
+                rationale: "The LH surge, triggered by high levels of estrogen near the end of the follicular phase, is the primary stimulus for the release of the mature ovum (ovulation)."
+            },
+            // Continuing mixed deep-dive questions
+            {
+                id: 31, type: "OSCE Diagnosis - Men's Health",
+                text: "A 65-year-old male presents with acute fever (39°C), chills, severe perineal pain, and urinary frequency/dysuria. On questioning, he notes a deep, throbbing ache between his scrotum and anus. What is the most likely diagnosis?",
+                options: [
+                    "A) Benign Prostatic Hyperplasia (BPH)",
+                    "B) Acute Bacterial Prostatitis",
+                    "C) Testicular Torsion",
+                    "D) Nephrolithiasis (Kidney stones)"
+                ], correctAnswer: 1,
+                rationale: "Acute fever, chills, urinary symptoms, and severe perineal/pelvic pain strongly point to acute bacterial prostatitis. BPH is usually chronic and afebrile. Kidney stones present with flank pain radiating to the groin."
+            },
+            {
+                id: 32, type: "Clinical Management - Men's Health",
+                text: "You suspect your patient has acute bacterial prostatitis based on fever and perineal pain. What specific physical examination technique is strictly CONTRAINDICATED or should be avoided by paramedics out-of-hospital?",
+                options: [
+                    "A) Palpating the suprapubic region for bladder distension.",
+                    "B) Assessing for costovertebral angle (CVA) tenderness.",
+                    "C) Vigorous prostatic massage or digital rectal exam (DRE).",
+                    "D) Obtaining a tympanic temperature."
+                ], correctAnswer: 2,
+                rationale: "Vigorous DRE or prostatic massage is contraindicated in acute bacterial prostatitis due to the extreme pain and the risk of inducing bacteremia/sepsis."
+            },
+            {
+                id: 33, type: "Pathophysiology - Gynaecology",
+                text: "A 20-year-old female experiences sharp, unilateral lower abdominal pain occurring mid-cycle (around day 14 of her menstrual cycle). The pain is mild to moderate and self-limiting. She is not pregnant. What is this phenomenon called?",
+                options: [
+                    "A) Endometriosis",
+                    "B) Mittelschmerz",
+                    "C) Ectopic rupture",
+                    "D) PID"
+                ], correctAnswer: 1,
+                rationale: "Mittelschmerz is normal, self-limiting mid-cycle pain associated with ovulation (the rupture of the follicle releasing the egg)."
+            },
+            {
+                id: 34, type: "Clinical Management - Gynaecology",
+                text: "When managing a patient with massive vaginal haemorrhage secondary to a suspected incomplete miscarriage, which intervention is most appropriate regarding the bleeding itself?",
+                options: [
+                    "A) Pack the vaginal vault tightly with sterile gauze to create a tamponade effect.",
+                    "B) Apply external trauma dressings to the vulva and monitor blood loss; DO NOT pack the vagina.",
+                    "C) Administer oral NSAIDs to promote uterine constriction.",
+                    "D) Place the patient in a prone position to utilize gravity."
+                ], correctAnswer: 1,
+                rationale: "Paramedics should NEVER pack the vagina out-of-hospital. Apply external absorbent pads to monitor blood loss, treat for shock (fluids, positioning), and transport rapidly."
+            },
+            {
+                id: 35, type: "Epidemiology - Men's Health",
+                text: "Which of the following demographics has the highest rate of suicide in Australia, aligning with the mental health focus of the Men's Health Strategy?",
+                options: [
+                    "A) Adolescent females",
+                    "B) Men aged 85 and older, closely followed by men aged 40-54",
+                    "C) Women aged 25-34",
+                    "D) Pre-pubescent males"
+                ], correctAnswer: 1,
+                rationale: "Historically and statistically, men account for approx 75% of suicides in Australia, with the highest age-specific rates often seen in older men (85+) and middle-aged men (40-54)."
+            },
+            {
+                id: 36, type: "OSCE Diagnosis - Gynaecology",
+                text: "A 28-year-old female presents with bilateral lower abdominal pain, purulent vaginal discharge, fever (38.5°C), and pain with intercourse. She reports a new sexual partner recently. Palpation reveals 'cervical motion tenderness' (chandelier sign) if examined at hospital. What is the diagnosis?",
+                options: [
+                    "A) Endometriosis",
+                    "B) Acute Pelvic Inflammatory Disease (PID)",
+                    "C) Ovarian Cyst rupture",
+                    "D) Uterine Fibroids"
+                ], correctAnswer: 1,
+                rationale: "Bilateral pain, fever, purulent discharge, and a history of a new partner strongly point to PID (ascending infection)."
+            },
+            {
+                id: 37, type: "Pathophysiology - Gynaecology",
+                text: "What is a life-threatening complication of untreated Pelvic Inflammatory Disease (PID) characterized by a walled-off collection of pus in the adnexa?",
+                options: [
+                    "A) Tubo-ovarian abscess (TOA)",
+                    "B) Endometrioma (Chocolate cyst)",
+                    "C) Cervical dysplasia",
+                    "D) Bartholin's gland cyst"
+                ], correctAnswer: 0,
+                rationale: "A Tubo-Ovarian Abscess (TOA) is a severe, late complication of PID. If it ruptures, it causes life-threatening septic shock and peritonitis."
+            },
+            {
+                id: 38, type: "Clinical Management - Men's Health",
+                text: "You are called to a 30-year-old male who suffered blunt trauma to the groin during a sporting match. The scrotum is massively swollen, bruised, and exquisitely tender. What is the primary concern that warrants rapid transport to an emergency department?",
+                options: [
+                    "A) Testicular rupture",
+                    "B) Immediate onset of BPH",
+                    "C) Uncomplicated hematoma requiring only ice",
+                    "D) Development of prostate cancer"
+                ], correctAnswer: 0,
+                rationale: "Blunt scrotal trauma can cause rupture of the tunica albuginea (testicular rupture), a surgical emergency to salvage the testicle."
+            },
+            {
+                id: 39, type: "Epidemiology - Men's Health",
+                text: "The Men's Health Strategy highlights 'Injuries and risk taking' as a key issue. Epidemiologically, what is the consequence of this?",
+                options: [
+                    "A) Men have lower rates of workplace fatalities due to strict adherence to protocols.",
+                    "B) Men account for a significantly higher proportion of transport accident fatalities and occupational deaths.",
+                    "C) Women are more likely to suffer traumatic injuries in extreme sports.",
+                    "D) Risk-taking behavior has declined so rapidly it is no longer a statistical concern."
+                ], correctAnswer: 1,
+                rationale: "Men are vastly over-represented in fatal motor vehicle accidents, occupational fatalities, and injuries related to risk-taking behaviors."
+            },
+            {
+                id: 40, type: "History Taking - Gynaecology",
+                text: "When assessing a woman of childbearing age with acute pelvic pain, what is the FIRST rule-out priority?",
+                options: [
+                    "A) Appendicitis",
+                    "B) Ectopic pregnancy",
+                    "C) Urinary Tract Infection",
+                    "D) Irritable Bowel Syndrome"
+                ], correctAnswer: 1,
+                rationale: "Ectopic pregnancy is the most immediately life-threatening gynaecological emergency. Any female of childbearing age with abdominal/pelvic pain is considered to have an ectopic pregnancy until proven otherwise."
+            },
+            // Rapid-fire focused questions to hit 60
+            { id: 41, type: "Physiology - Men's Health", text: "What is the primary function of the prostate gland?", options: ["A) Produce sperm", "B) Secrete alkaline fluid that makes up a portion of seminal fluid to protect sperm in the acidic vagina", "C) Store urine", "D) Produce testosterone"], correctAnswer: 1, rationale: "The prostate secretes an alkaline fluid that nourishes and protects sperm." },
+            { id: 42, type: "Pathophysiology - Gynaecology", text: "What condition is characterized by the growth of benign tumors in the muscular wall of the uterus, often causing heavy menstrual bleeding (menorrhagia)?", options: ["A) Uterine Fibroids (Leiomyomas)", "B) Endometriosis", "C) PID", "D) Cervical cancer"], correctAnswer: 0, rationale: "Fibroids are benign smooth muscle tumors of the uterus." },
+            { id: 43, type: "Management - Men's Health", text: "If a patient with a catheter presents with acute abdominal pain and no urine in the bag for hours, what is a simple first step a paramedic can check?", options: ["A) Instill 500ml of flush", "B) Check the tubing for kinks or mechanical obstruction", "C) Immediately pull the catheter out", "D) Administer Lasix (Furosemide)"], correctAnswer: 1, rationale: "Always check for mechanical kinks or obstruction in the tubing before assuming physiological failure or attempting removal." },
+            { id: 44, type: "OSCE - Gynaecology", text: "A patient reports soaking through a thick maternity pad every 30 minutes for the last 2 hours. Is this considered normal menstruation?", options: ["A) Yes, on the first day of menses.", "B) No, soaking a pad in less than 1-2 hours indicates severe, abnormal haemorrhage.", "C) Only if accompanied by fever.", "D) Yes, if she has a history of endometriosis."], correctAnswer: 1, rationale: "Soaking >1 pad per hour is a clinical marker for severe vaginal bleeding requiring urgent assessment." },
+            { id: 45, type: "Pathophysiology - Men's Health", text: "In benign prostatic hyperplasia (BPH), which zone of the prostate typically enlarges and compresses the urethra?", options: ["A) Peripheral zone", "B) Transitional zone", "C) Central zone", "D) Fibromuscular stroma"], correctAnswer: 1, rationale: "BPH primarily affects the transitional zone (surrounding the urethra), while prostate cancer most often originates in the peripheral zone." },
+            { id: 46, type: "Management - Sexual Assault", text: "A patient states they were sexually assaulted but wishes to shower. You advise them of the evidence loss. They still want to shower. What is the correct documentation approach?", options: ["A) Document that the patient 'refused medical advice'.", "B) Document the discussion, the advice given regarding evidence, and the patient's informed decision.", "C) Refuse to write an ePCR.", "D) Write a police report instead."], correctAnswer: 1, rationale: "Thorough, objective documentation of the patient's capacity and informed decision is vital." },
+            { id: 47, type: "Pathophysiology - Gynaecology", text: "What defines Primary Dysmenorrhea?", options: ["A) Painful menstruation due to pelvic pathology (e.g., endometriosis).", "B) Painful menstruation in the absence of any identifiable pelvic pathology, usually due to excess prostaglandins.", "C) Absence of menstruation.", "D) Heavy bleeding during menopause."], correctAnswer: 1, rationale: "Primary dysmenorrhea is cramping pain without underlying disease, driven by prostaglandins causing uterine contractions. Secondary dysmenorrhea is caused by pathology." },
+            { id: 48, type: "OSCE - Men's Health", text: "A 10-year-old boy presents with sudden severe scrotal pain. What is the highest probability diagnosis until proven otherwise?", options: ["A) Testicular Torsion", "B) Epididymitis", "C) Varicocele", "D) Hydrocele"], correctAnswer: 0, rationale: "In pre-pubescent/adolescent boys, sudden scrotal pain is Testicular Torsion until proven otherwise." },
+            { id: 49, type: "Pathophysiology - Gynaecology", text: "What is an Endometrioma?", options: ["A) A malignant ovarian tumor.", "B) A cyst formed when endometrial tissue grows in the ovary, bleeds during menses, and fills with old, dark blood ('chocolate cyst').", "C) A normal follicle that failed to rupture.", "D) A cervical polyp."], correctAnswer: 1, rationale: "Endometriomas are localized forms of endometriosis on the ovary." },
+            { id: 50, type: "Management - Men's Health", text: "Which condition represents a urologic emergency: Hydrocele or Paraphimosis?", options: ["A) Hydrocele", "B) Paraphimosis", "C) Both", "D) Neither"], correctAnswer: 1, rationale: "Paraphimosis restricts blood flow to the glans. A hydrocele is a benign fluid collection." },
+            { id: 51, type: "Epidemiology - Men's Health", text: "True or False based on the Strategy: Men engage with the healthcare system at the same rate as women but receive poorer care.", options: ["A) True", "B) False - Men engage significantly less, particularly in preventative care."], correctAnswer: 1, rationale: "The strategy specifically targets the *lack of engagement* by men." },
+            { id: 52, type: "History Taking - Gynaecology", text: "A patient states she is 'G3 P1'. What does this mean?", options: ["A) 3 pregnancies, 1 viable birth.", "B) 3 live births, 1 miscarriage.", "C) 3 weeks pregnant, 1st child.", "D) 3rd trimester, 1 fetus."], correctAnswer: 0, rationale: "Gravida 3 (3 total pregnancies), Para 1 (1 delivery >20 weeks)." },
+            { id: 53, type: "Physiology - Gynaecology", text: "Following ovulation, the ruptured follicle turns into the corpus luteum. What hormone does it primarily secrete to maintain the uterine lining?", options: ["A) FSH", "B) LH", "C) Progesterone", "D) Testosterone"], correctAnswer: 2, rationale: "The corpus luteum secretes progesterone, which maintains the secretory endometrium for potential implantation." },
+            { id: 54, type: "Pathophysiology - Men's Health", text: "What is the term for a collection of dilated, tortuous veins in the pampiniform plexus of the scrotum (often feeling like a 'bag of worms')?", options: ["A) Spermatocele", "B) Varicocele", "C) Hydrocele", "D) Hematocele"], correctAnswer: 1, rationale: "A varicocele is a dilation of the testicular veins." },
+            { id: 55, type: "OSCE - Gynaecology", text: "A 45-year-old female presents with pale skin, fatigue, and reports bleeding between her periods (metrorrhagia) for 3 months. HR 105, BP 110/70. What is your primary pre-hospital concern?", options: ["A) Acute ectopic rupture", "B) Chronic anemia progressing to decompensation", "C) Acute PID", "D) Normal menopause"], correctAnswer: 1, rationale: "Chronic abnormal uterine bleeding can lead to severe anemia. The tachycardia suggests she is compensating for a low hemoglobin level." },
+            { id: 56, type: "Management - Gynaecology", text: "In cases of severe postpartum hemorrhage or post-miscarriage bleeding, if the patient is shocked, what positioning is ideal while transporting?", options: ["A) Trendelenburg or supine with legs elevated", "B) Fowler's position", "C) Left lateral recumbent only", "D) Prone"], correctAnswer: 0, rationale: "Supine with legs elevated helps maximize venous return to the core in hypovolemic shock (though local protocols dictate exact shock positioning)." },
+            { id: 57, type: "Pathophysiology - Men's Health", text: "Ischemic priapism is defined by an erection lasting longer than:", options: ["A) 1 hour", "B) 2 hours", "C) 4 hours", "D) 24 hours"], correctAnswer: 2, rationale: "Priapism is generally defined as a prolonged erection lasting greater than 4 hours without sexual stimulation." },
+            { id: 58, type: "Epidemiology - Sexual Assault", text: "According to the lecture, what should paramedics assess for regarding associated trauma in sexual assault patients?", options: ["A) Only genital trauma.", "B) Life-threatening injuries, including non-fatal strangulation, head injuries, penetrative or blunt force trauma.", "C) Only psychological trauma.", "D) Do not assess; wait for the hospital."], correctAnswer: 1, rationale: "The slides mandate assessment for life-threatening injuries, specifically noting non-fatal strangulation and blunt/penetrating trauma." },
+            { id: 59, type: "OSCE - Gynaecology", text: "A 19-year-old female presents with RLQ pain, fever, and vomiting. Which two conditions must be heavily differentiated?", options: ["A) Ectopic pregnancy and Asthma", "B) Appendicitis and Ovarian Cyst Rupture/Torsion/PID", "C) Gallstones and Menopause", "D) Endometriosis and BPH"], correctAnswer: 1, rationale: "RLQ pain in a young female always requires differentiation between GI causes (Appendicitis) and Gynae causes (Ectopic, Cyst, Torsion, PID)." },
+            { id: 60, type: "Final Synthesis - Care Delivery", text: "Across both Gynaecology and Men's Health presentations, what is a universal principle for out-of-hospital paramedic care?", options: ["A) Definitive diagnosis in the field is required before transport.", "B) Withholding pain relief until a doctor assesses the patient.", "C) Thorough, compassionate history taking respecting privacy, paired with rapid recognition of life-threats (haemorrhage, sepsis, ischemia).", "D) Mandatory reporting to police for all reproductive issues."], correctAnswer: 2, rationale: "Paramedics prioritize compassionate care, privacy, pain management, and recognition of time-critical emergencies (like torsions and ectopics) over definitive field diagnosis." }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = new Array(questions.length).fill(undefined);
+
+        // DOM Elements
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const quizContainer = document.getElementById('quiz-container');
+        const resultsContainer = document.getElementById('results-container');
+        const headerProgress = document.getElementById('header-progress');
+        const headerCounter = document.getElementById('header-counter');
+        
+        const questionCounter = document.getElementById('question-counter');
+        const progressPercentage = document.getElementById('progress-percentage');
+        const progressBar = document.getElementById('progress-bar');
+        
+        const questionTypeBadge = document.getElementById('question-type-badge');
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const nextBtn = document.getElementById('next-btn');
+        const filterCheckbox = document.getElementById('filter-incorrect');
+
+        function startQuiz() {
+            welcomeScreen.classList.add('hidden');
+            quizContainer.classList.remove('hidden');
+            headerProgress.classList.remove('hidden');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            
+            // Update Progress
+            const progress = ((currentQuestionIndex) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            questionCounter.innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+            headerCounter.innerText = `Q ${currentQuestionIndex + 1}/${questions.length}`;
+            progressPercentage.innerText = `${Math.round(progress)}%`;
+
+            // Setup Question Badge Colors
+            questionTypeBadge.innerText = currentQuestion.type;
+            if (currentQuestion.type.includes("OSCE")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800 mb-4";
+            } else if (currentQuestion.type.includes("Gynaecology") || currentQuestion.type.includes("Sexual Assault")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 mb-4";
+            } else if (currentQuestion.type.includes("Men's Health") || currentQuestion.type.includes("Prostate")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 mb-4";
+            } else {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-slate-100 text-slate-800 mb-4";
+            }
+
+            questionText.innerText = currentQuestion.text;
+            
+            optionsContainer.innerHTML = '';
+            nextBtn.disabled = true;
+
+            // Render Options
+            currentQuestion.options.forEach((option, index) => {
+                const optionEl = document.createElement('div');
+                optionEl.className = 'option-card border border-slate-200 rounded-xl p-4 cursor-pointer flex items-start gap-3 bg-white';
+                optionEl.onclick = () => selectOption(index);
+                
+                // Radio button circle
+                const radioCircle = document.createElement('div');
+                radioCircle.className = 'w-5 h-5 rounded-full border border-slate-300 flex-shrink-0 mt-0.5 flex items-center justify-center';
+                radioCircle.id = `radio-${index}`;
+                
+                const radioInner = document.createElement('div');
+                radioInner.className = 'w-2.5 h-2.5 rounded-full bg-blue-600 hidden';
+                radioInner.id = `radio-inner-${index}`;
+                radioCircle.appendChild(radioInner);
+
+                const optionText = document.createElement('span');
+                optionText.className = 'text-slate-700 font-medium leading-relaxed';
+                optionText.innerText = option;
+
+                optionEl.appendChild(radioCircle);
+                optionEl.appendChild(optionText);
+                optionEl.id = `option-${index}`;
+                
+                optionsContainer.appendChild(optionEl);
+            });
+
+            // Change button text on last question
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.innerText = "Finish Exam";
+            } else {
+                nextBtn.innerText = "Next Question";
+            }
+
+            // Restore previous selection if navigating back (optional for future features, currently strictly forward)
+            if(userAnswers[currentQuestionIndex] !== undefined) {
+                selectOption(userAnswers[currentQuestionIndex]);
+            }
+        }
+
+        function selectOption(selectedIndex) {
+            const options = optionsContainer.children;
+            for (let i = 0; i < options.length; i++) {
+                options[i].classList.remove('selected');
+                document.getElementById(`radio-${i}`).classList.remove('border-blue-600');
+                document.getElementById(`radio-inner-${i}`).classList.add('hidden');
+            }
+
+            const selectedEl = document.getElementById(`option-${selectedIndex}`);
+            selectedEl.classList.add('selected');
+            document.getElementById(`radio-${selectedIndex}`).classList.add('border-blue-600');
+            document.getElementById(`radio-inner-${selectedIndex}`).classList.remove('hidden');
+
+            userAnswers[currentQuestionIndex] = selectedIndex;
+            nextBtn.disabled = false;
+        }
+
+        function handleNext() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+                window.scrollTo(0, 0); // Scroll to top for next question
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            score = 0;
+            userAnswers.forEach((ans, index) => {
+                if (ans === questions[index].correctAnswer) {
+                    score++;
+                }
+            });
+
+            quizContainer.classList.add('hidden');
+            headerProgress.classList.add('hidden');
+            resultsContainer.classList.remove('hidden');
+            
+            filterCheckbox.checked = false; // Reset filter
+            renderResults();
+        }
+
+        function renderResults() {
+            const percentage = Math.round((score / questions.length) * 100);
+            
+            // Animate circle
+            setTimeout(() => {
+                document.getElementById('score-circle').style.strokeDasharray = `${percentage}, 100`;
+                document.getElementById('final-score-text').innerText = `${percentage}%`;
+                document.getElementById('raw-score-text').innerText = `${score} / ${questions.length}`;
+            }, 100);
+
+            // Message
+            const msgEl = document.getElementById('score-message');
+            if (percentage >= 85) {
+                msgEl.innerText = "Outstanding Clinical Excellence! You are highly prepared.";
+                msgEl.className = "text-xl font-medium mb-8 text-green-600";
+                document.getElementById('score-circle').classList.replace('text-blue-600', 'text-green-500');
+            } else if (percentage >= 65) {
+                msgEl.innerText = "Solid understanding. Review your incorrect answers to achieve mastery.";
+                msgEl.className = "text-xl font-medium mb-8 text-yellow-600";
+                document.getElementById('score-circle').classList.replace('text-blue-600', 'text-yellow-500');
+            } else {
+                msgEl.innerText = "More study required. Focus heavily on the provided rationales.";
+                msgEl.className = "text-xl font-medium mb-8 text-red-600";
+                document.getElementById('score-circle').classList.replace('text-blue-600', 'text-red-500');
+            }
+
+            generateReviewCards(false);
+            window.scrollTo(0, 0);
+        }
+
+        function generateReviewCards(showIncorrectOnly) {
+            const reviewContainer = document.getElementById('review-container');
+            reviewContainer.innerHTML = '';
+
+            questions.forEach((q, i) => {
+                const isCorrect = userAnswers[i] === q.correctAnswer;
+                
+                if (showIncorrectOnly && isCorrect) return; // Skip correct ones if filter is on
+                
+                const reviewCard = document.createElement('div');
+                reviewCard.className = `border rounded-xl p-5 sm:p-6 ${isCorrect ? 'border-green-200 bg-green-50/30' : 'border-red-200 bg-red-50/30'}`;
+                
+                const statusBadge = isCorrect 
+                    ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Correct</span>`
+                    : `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> Incorrect</span>`;
+
+                reviewCard.innerHTML = `
+                    <div class="flex items-start justify-between mb-3">
+                        <h4 class="font-bold text-slate-800">Q${i + 1}. <span class="text-sm font-normal text-slate-500 ml-1">(${q.type})</span></h4>
+                        ${statusBadge}
+                    </div>
+                    <p class="text-slate-800 font-medium text-sm mb-4 leading-relaxed">${q.text}</p>
+                    
+                    <div class="space-y-2 mb-4 text-sm">
+                        <div class="p-3 rounded-lg ${isCorrect ? 'bg-green-100/50 border border-green-200 text-green-900' : 'bg-red-100/50 border border-red-200 text-red-900'}">
+                            <strong>Your Answer:</strong> ${userAnswers[i] !== undefined ? q.options[userAnswers[i]] : 'Skipped'}
+                        </div>
+                        ${!isCorrect ? `
+                        <div class="p-3 rounded-lg bg-green-100/50 border border-green-200 text-green-900">
+                            <strong>Correct Answer:</strong> ${q.options[q.correctAnswer]}
+                        </div>` : ''}
+                    </div>
+                    
+                    <div class="mt-4 pt-4 border-t border-slate-200">
+                        <h5 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Clinical Rationale</h5>
+                        <p class="text-slate-700 text-sm leading-relaxed">${q.rationale}</p>
+                    </div>
+                `;
+                reviewContainer.appendChild(reviewCard);
+            });
+        }
+
+        function filterReviews() {
+            generateReviewCards(filterCheckbox.checked);
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            userAnswers = new Array(questions.length).fill(undefined);
+            
+            // Reset UI colors
+            document.getElementById('score-circle').classList.remove('text-green-500', 'text-yellow-500', 'text-red-500');
+            document.getElementById('score-circle').classList.add('text-blue-600');
+            document.getElementById('score-circle').style.strokeDasharray = `0, 100`;
+
+            resultsContainer.classList.add('hidden');
+            welcomeScreen.classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
