@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traumatic Brain Injury: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Traumatic Brain Injury (TBI)</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+                <a href="#pathophysiology" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Primary vs Secondary TBI</a>
+                <a href="#airway-facial" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Airway & Facial Trauma</a>
+                <a href="#resuscitation" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">ABC Management Goals</a>
+                <a href="#special-pops" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Special Populations</a>
+                <a href="#disposition" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Deterioration & Transport</a>
+                <a href="#minor-tbi" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Minor TBI & Non-Transport</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Primary vs Secondary TBI -->
+            <section id="pathophysiology" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Understanding Primary vs. Secondary TBI</h2>
+                
+                <div class="physiology-box">
+                    <h3>The Mechanics of Brain Injury</h3>
+                    <p>Paramedics cannot reverse the primary brain injury (the immediate mechanical damage to the brain parenchyma, axons, and blood vessels from the impact itself). The entire focus of prehospital TBI resuscitation is to <strong>prevent secondary brain injury</strong>.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Primary Injury:</strong> Contusions, lacerations, diffuse axonal injury (DAI). <em>Example: A 22-year-old cyclist striking a car without a helmet sustains direct contusions.</em></li>
+                        <li><strong>Secondary Injury:</strong> The cascade of cellular death, cerebral oedema, and rising Intracranial Pressure (ICP) occurring minutes to hours after the event. It is massively exacerbated by two "lethal" physiological insults: <strong>Hypoxia</strong> and <strong>Hypotension</strong>.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>The Hypoxia-Hypotension Cycle</h3>
+                    <p>If a severe TBI patient presents with both hypoxia and hypotension, their mortality risk increases exponentially. </p>
+                    <p class="mt-2"><strong>Physiological Consequence:</strong> The injured brain loses autoregulation. It requires adequate Cerebral Perfusion Pressure (CPP) to deliver oxygen. CPP = MAP - ICP. If blood pressure drops (hypotension) and ICP is rising, brain perfusion ceases. Adding systemic hypoxia to this poor perfusion starves surviving brain tissue of oxygen, rapidly worsening ischemia and expanding the zone of irreversible brain death.</p>
+                </div>
+            </section>
+
+            <!-- Airway & Facial Trauma -->
+            <section id="airway-facial" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Airway Management & Facial Trauma</h2>
+                
+                <div class="management-box">
+                    <h3>Prioritizing the Airway with C-Spine Risks</h3>
+                    <p>In severe facial trauma with suspected cervical spine injury, managing the airway is a delicate balance of speed, safety, and technique.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong>Modification:</strong> Use a jaw thrust while an assistant maintains manual in-line stabilization (MILS). Avoid the head-tilt/chin-lift.</li>
+                        <li><strong>Deteriorating Airway:</strong> If blood/vomitus threatens the airway, prioritize patency over strict C-spine immobility. A living patient with a spinal cord injury is better than a dead patient with a protected spine. Log roll to the lateral position aggressively for airway clearance.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Epistaxis & Maxillofacial Haemorrhage</h3>
+                    <p>Profuse oral and nasal bleeding can rapidly cause airway occlusion and secondary hypoxia.</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Kiesselbach's Plexus (Little's Area):</strong> Located in the anterior nasal septum. Bleeding here is common, usually venous/capillary, and controllable with direct compression (pinching the fleshy part of the nose).</li>
+                        <li><strong>Posterior Epistaxis:</strong> Usually arterial (e.g., sphenopalatine artery), harder to control pre-hospitally, causes significant blood swallowing (emetic risk), and poses a major airway threat.</li>
+                        <li><strong>Interventions:</strong> If basic suctioning fails during profuse haemorrhage, consider postural drainage (sit the conscious patient forward). Unconscious patients may require advanced airways (ETT) for tracheal protection, though inserting an SGA/ETT through massive bleeding is highly complex.</li>
+                    </ul>
+                </div>
+                
+                <div class="management-box">
+                    <h3>BVM Challenges in Midface Fractures</h3>
+                    <p>Achieving a seal during Bag-Valve-Mask ventilation on a patient with unstable midface (Le Fort) fractures is incredibly difficult due to lost structural integrity.</p>
+                    <p class="mt-2"><strong>Strategies:</strong></p>
+                    <ul class="list-disc list-inside mt-1">
+                        <li>Use a two-person BVM technique focusing on the mandibular angles rather than pressing down on the maxilla.</li>
+                        <li>If a seal is impossible, rapidly escalate to a Supraglottic Airway (SGA) or Endotracheal Intubation to bypass the facial trauma and secure ventilation.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ABC Management Goals -->
+            <section id="resuscitation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">ABC Goals (Based on BTF Guidelines)</h2>
+                
+                <div class="physiology-box">
+                    <h3>Applying the Guidelines</h3>
+                    <p>The Brain Trauma Foundation (BTF) Prehospital Guidelines specify strict targets to prevent secondary brain injury:</p>
+                    <table class="mt-2">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Prehospital Target / Goal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Airway/Breathing</strong></td>
+                                <td>Maintain liberal use of supplemental oxygen. Avoid hypoxia at all costs (SpO2 > 94%).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ventilation (ETCO2)</strong></td>
+                                <td>Avoid hyperventilation! Keep ETCO2 between 35-45 mmHg. Hyperventilation causes cerebral vasoconstriction, drastically reducing brain perfusion.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Circulation (BP)</strong></td>
+                                <td><strong>Maintain SBP > 110 mmHg.</strong> Aggressively treat hypotension with fluid boluses. A single drop in blood pressure doubles TBI mortality.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Temperature</strong></td>
+                                <td>Maintain euthermia. Prevent shivering and avoid hypothermia.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Special Populations -->
+            <section id="special-pops" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Special Populations: Paediatrics & Geriatrics</h2>
+                
+                <div class="assessment-box">
+                    <h3>Paediatric TBI</h3>
+                    <p><strong>Scenario:</strong> A child falls from a height. GCS is 15, but they are vomiting and irritable.</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Anatomy/Physiology:</strong> Children have larger heads proportionally, weaker neck muscles, and thinner cranial bones, increasing susceptibility to head injury.</li>
+                        <li><strong>Clinical Signs:</strong> A GCS of 15 does not rule out severe injury in children. Repeated vomiting and unexplained irritability are major red flags for rising Intracranial Pressure (ICP) and require rapid transport to a Paediatric Major Trauma Centre.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Geriatric TBI</h3>
+                    <p><strong>Scenario:</strong> Elderly patient falls down stairs, is alert, has an occipital hematoma, and is on anticoagulants.</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Pathophysiology:</strong> As the brain ages, it shrinks (cerebral atrophy), stretching the bridging veins. Even minor mechanisms (like a ground-level fall) can tear these veins, causing a slow-bleed Subdural Hematoma.</li>
+                        <li><strong>Anticoagulation:</strong> The presence of blood thinners (e.g., Warfarin, Apixaban) makes this a high-risk time-critical emergency. Despite being alert now, they are at massive risk for delayed catastrophic decline.</li>
+                        <li><strong>Disposition:</strong> Urgent transport to an ED with CT scanning capabilities (preferably a trauma centre with neurosurgical reversal capabilities) is mandatory.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Deterioration and Transport -->
+            <section id="disposition" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Deterioration & Transport Decisions</h2>
+                
+                <div class="management-box">
+                    <h3>Disposition Dilemmas</h3>
+                    <p><strong>Scenario:</strong> During transport, a TBI patient's GCS drops from 13 to 9, and they become combative. You are 30 mins from a Trauma Centre and 10 mins from a local ED.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Clinical Management:</strong> A dropping GCS indicates expanding intracranial pathology. Combativeness causes hypoxia and spikes ICP. You must ensure airway patency, provide high-flow oxygen, and prevent aspiration. (Check blood glucose to rule out hypoglycemia).</li>
+                        <li><strong>Transport Decision:</strong> The local ED cannot fix a surgical brain bleed; they will only intubate and transfer. The Major Trauma Centre (MTC) has neurosurgery. <strong>Rule of thumb:</strong> If you can safely manage the airway and the patient is not in cardiac arrest, bypass the local ED and proceed directly to the MTC. If the airway is completely lost and unmanageable, divert to the local ED for urgent securement (RSI/Intubation).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Minor TBI -->
+            <section id="minor-tbi" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Minor TBI, Concussion & Non-Transport</h2>
+                
+                <div class="assessment-box">
+                    <h3>Clinical Decision Rules (CCHR)</h3>
+                    <p>For patients with a minor head injury (GCS 13-15), the <strong>Canadian CT Head Rule (CCHR)</strong> helps determine the need for a CT scan. It focuses on high-risk factors (e.g., age > 65, > 2 episodes of vomiting, suspected open/depressed skull fracture) and medium-risk factors (retrograde amnesia > 30 mins, dangerous mechanism).</p>
+                    <p class="mt-2"><strong>Non-Clinical Factors for ED Care:</strong> Even if CCHR is negative, consider transport if the patient is intoxicated (masks neuro signs), lives alone (no competent observer), has poor health literacy, or lacks safe transport.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Concussion & Risk Mitigation</h3>
+                    <p>If a patient with a mild TBI (mTBI/concussion) is not transported (e.g., refusal or mutual agreement), robust safety netting is vital.</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>SCAT6 Principles:</strong> Advise that concussions are functional, not structural, injuries. Symptoms (headache, fog, nausea) may take days to appear.</li>
+                        <li><strong>Risk Mitigation / Recommendations:</strong>
+                            <ul class="list-circle list-inside ml-6 mt-1">
+                                <li><strong>Strict supervision:</strong> A competent adult must stay with them for 24 hours.</li>
+                                <li><strong>Warning Signs:</strong> Provide written instructions to call 000 if they develop severe worsening headaches, repeated vomiting, slurred speech, or extreme drowsiness.</li>
+                                <li><strong>Rest:</strong> Physical and cognitive rest for 24-48 hours, followed by a graduated return to work/sport. <em>Do not drive, drink alcohol, or take sleeping pills.</em></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">Based on Brain Trauma Foundation Prehospital Guidelines (3rd Ed.) and modern paramedic principles. Always adhere to your specific service's protocols and scope of practice.</p>
+        </footer>
+    </div>
+</body>
+</html>
