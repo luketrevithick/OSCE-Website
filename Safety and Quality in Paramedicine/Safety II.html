@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safety-II: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .concept-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .concept-box strong {
+            color: #b91c1c;
+        }
+        .tool-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .tool-box strong {
+            color: #3730a3;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="bg-slate-800 text-white p-6 sticky top-0 z-10 shadow-md">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-2xl font-bold mb-4 md:mb-0">Safety-II & Resilience</h1>
+            <nav>
+                <ul class="flex flex-wrap gap-4 text-sm font-medium">
+                    <li><a href="#principles" class="hover:text-slate-300 transition-colors">Safety-I vs II</a></li>
+                    <li><a href="#scenarios" class="hover:text-slate-300 transition-colors">Paramedic Scenarios</a></li>
+                    <li><a href="#fram" class="hover:text-slate-300 transition-colors">FRAM Method</a></li>
+                    <li><a href="#reflection" class="hover:text-slate-300 transition-colors">Reflection</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="p-6 max-w-5xl mx-auto space-y-12">
+
+        <!-- Principles Section -->
+        <section id="principles">
+            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4">Core Principles of Safety-II</h2>
+            <p class="mb-4">Safety-II represents a shift from "preventing errors" to "ensuring success." In paramedicine, where environments are dynamic and unpredictable, resilience is found in the ability of crews to adapt to varying conditions (Hollnagel et al., 2015).</p>
+            
+            <div class="section-box">
+                <table class="bg-white">
+                    <thead>
+                        <tr>
+                            <th>Safety-I (Traditional)</th>
+                            <th>Safety-II (Resilient Healthcare)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Focus:</strong> What goes wrong (errors, accidents).</td>
+                            <td><strong>Focus:</strong> What goes right (daily success, adaptations).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mechanism:</strong> Reactive; finds causes of failure.</td>
+                            <td><strong>Mechanism:</strong> Proactive; understands variability.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Human Role:</strong> A source of error/liability.</td>
+                            <td><strong>Human Role:</strong> A source of flexibility/resilience.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Management:</strong> Constraint and compliance.</td>
+                            <td><strong>Management:</strong> Support and enhancement.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="concept-box">
+                <h3 class="text-lg font-bold mb-2">Work-as-Imagined (WAI) vs. Work-as-Done (WAD)</h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><strong>WAI:</strong> The clinical protocol, the textbook procedure, or the "ideal" quiet scene.</li>
+                    <li><strong>WAD:</strong> Performing an RSI in a cramped, noisy ditch while a family member is yelling.</li>
+                </ul>
+                <p class="mt-2">Safety-II seeks to understand <strong>WAD</strong> to improve the system, rather than forcing <strong>WAD</strong> to perfectly match <strong>WAI</strong>.</p>
+            </div>
+        </section>
+
+        <!-- Scenario Analysis Section -->
+        <section id="scenarios">
+            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4">Real-World Resilience: The Four Cornerstones</h2>
+            <p class="mb-4">Paramedics ensure safety through four functional abilities. Consider a complex "Multicar MVA" scenario:</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="tool-box m-0">
+                    <h4 class="font-bold text-indigo-900 mb-1">1. Anticipate</h4>
+                    <p class="text-sm italic">"What is likely to happen?"</p>
+                    <p class="text-sm mt-1 text-slate-600">Identifying that a trapped patient will likely deteriorate during the 20-minute extrication and preparing IV access/analgesia beforehand.</p>
+                </div>
+                <div class="tool-box m-0">
+                    <h4 class="font-bold text-indigo-900 mb-1">2. Monitor</h4>
+                    <p class="text-sm italic">"What is happening now?"</p>
+                    <p class="text-sm mt-1 text-slate-600">Observing the firefighter's fatigue levels or checking if the patient's breathing pattern is changing as the car roof is cut.</p>
+                </div>
+                <div class="tool-box m-0">
+                    <h4 class="font-bold text-indigo-900 mb-1">3. Respond</h4>
+                    <p class="text-sm italic">"What do we do?"</p>
+                    <p class="text-sm mt-1 text-slate-600">Adapting the extrication plan immediately when the patient's blood pressure drops, switching from a "slow and controlled" to a "rapid" exit.</p>
+                </div>
+                <div class="tool-box m-0">
+                    <h4 class="font-bold text-indigo-900 mb-1">4. Learn</h4>
+                    <p class="text-sm italic">"What can we take away?"</p>
+                    <p class="text-sm mt-1 text-slate-600">Reviewing why the communication with the fire crew was so effective on this job and sharing that strategy during a "Coffee and Cases" session (Lloyd et al., 2024).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FRAM Section -->
+        <section id="fram">
+            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4">Functional Resonance Analysis Method (FRAM)</h2>
+            <p class="mb-4">FRAM models practice not as a linear chain, but as a set of functions with variability. It identifies how normal variations "resonate" to cause outcomes (FRAM-101).</p>
+
+            <div class="management-box">
+                <h3 class="text-xl font-bold mb-3 text-emerald-900 text-center">The Six Aspects of a Function</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
+                    <div class="bg-white p-2 border border-emerald-200 rounded"><strong>Input:</strong> Starts the function.</div>
+                    <div class="bg-white p-2 border border-emerald-200 rounded"><strong>Output:</strong> Result of the function.</div>
+                    <div class="bg-white p-2 border border-emerald-200 rounded"><strong>Precondition:</strong> Must be met before start.</div>
+                    <div class="bg-white p-2 border border-emerald-200 rounded"><strong>Resource:</strong> Needed to process input.</div>
+                    <div class="bg-white p-2 border border-emerald-200 rounded"><strong>Control:</strong> Guides the function.</div>
+                    <div class="bg-white p-2 border border-emerald-200 rounded"><strong>Time:</strong> Constraints or timing.</div>
+                </div>
+                <p class="mt-4 text-sm"><strong>Application:</strong> If the <em>Resource</em> (oxygen) is low, and <em>Time</em> is short, the <em>Output</em> of "Patient Stabilization" may vary. If multiple functions vary simultaneously, the system may "resonate" into failure—or into a resilient success through crew adaptation.</p>
+            </div>
+        </section>
+
+        <!-- Reflection Section -->
+        <section id="reflection">
+            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4">Fostering a Proactive Culture</h2>
+            <div class="section-box">
+                <p class="font-semibold mb-2">Reflective Questions for Paramedic Students:</p>
+                <ul class="list-decimal pl-5 space-y-3">
+                    <li>Think of a time when "following the protocol" was impossible due to the environment. How did you adapt, and what <em>Resources</em> or <em>Controls</em> (FRAM aspects) did you utilize to succeed?</li>
+                    <li>How can you use the "Safety-II" mindset to facilitate a debrief? Instead of asking "Who made the mistake?", how could you ask "How did we manage to get through that difficult scenario?"</li>
+                    <li>Referencing Okuyama et al. (2014), how does the <em>Monitoring</em> cornerstone of resilience rely on a culture where junior staff feel safe to speak up?</li>
+                    <li>In the context of the Lloyd et al. (2024) "Coffee and Cases" paper, how does organizational learning contribute to the <em>Anticipate</em> cornerstone for future crews?</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center mt-12 mb-8 border-t border-gray-200 pt-6 max-w-5xl mx-auto">
+        <p class="text-gray-500 text-sm">Dedicated Study Guide: Safety-II and Resilient Healthcare. (Contributes to SLOs 2, 3, 5).</p>
+    </footer>
+
+</body>
+</html>
