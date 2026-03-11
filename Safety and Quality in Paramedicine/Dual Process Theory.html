@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Process Theory & Clinical Reasoning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; color: #1f2937; line-height: 1.6; }
+        .section-box { background-color: #f9fafb; border-left: 5px solid #4b5563; padding: 1.5rem; margin: 2rem 0; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .system1-box { background-color: #fff7ed; border-left: 5px solid #f97316; padding: 1rem; margin: 1rem 0; border-radius: 0.25rem; }
+        .system2-box { background-color: #f0f9ff; border-left: 5px solid #0ea5e9; padding: 1rem; margin: 1rem 0; border-radius: 0.25rem; }
+        .bias-box { background-color: #fef2f2; border-left: 5px solid #ef4444; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .strategy-box { background-color: #f0fdf4; border-left: 5px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .ttm-step { border: 1px solid #e5e7eb; padding: 1rem; border-radius: 0.5rem; margin-bottom: 0.5rem; background: white; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; background-color: white; font-size: 0.9rem; }
+        th, td { padding: 0.75rem; border: 1px solid #d1d5db; text-align: left; }
+        th { background-color: #f3f4f6; font-weight: 600; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-indigo-900 text-white p-10 text-center shadow-lg">
+        <h1 class="text-3xl md:text-5xl font-bold mb-3">Dual Process Theory</h1>
+        <p class="text-lg md:text-2xl text-indigo-200">Clinical Reasoning & Cognitive Debiasing in Paramedicine</p>
+    </header>
+
+    <nav class="bg-white p-4 sticky top-0 shadow-md z-10 border-b border-gray-200">
+        <ul class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm font-semibold text-indigo-900">
+            <li><a href="#dual-process" class="hover:text-indigo-600 transition">Dual Process Model</a></li>
+            <li><a href="#bias-risks" class="hover:text-indigo-600 transition">Bias Risks</a></li>
+            <li><a href="#affective-bias" class="hover:text-indigo-600 transition">Affective Bias</a></li>
+            <li><a href="#debiasing" class="hover:text-indigo-600 transition">Debiasing Strategies</a></li>
+            <li><a href="#metacognition" class="hover:text-indigo-600 transition">Metacognition & TTM</a></li>
+        </ul>
+    </nav>
+
+    <main class="max-w-5xl mx-auto p-4 md:p-10">
+
+        <!-- 1. The Dual Process Model -->
+        <section id="dual-process" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-indigo-500 pb-2 mb-6">The Dual Process Model (Croskerry)</h2>
+            <p class="mb-4">Clinical reasoning is not a single function but a dance between two distinct cognitive systems. Most diagnostic errors occur when System 1 is used inappropriately without System 2 oversight.</p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="system1-box">
+                    <h3 class="text-xl font-bold text-orange-700 mb-2">System 1: Intuitive</h3>
+                    <ul class="list-disc pl-5 space-y-1 text-orange-900">
+                        <li><strong>Fast, automatic, effortless.</strong></li>
+                        <li>Relies on heuristics (mental shortcuts) and pattern recognition.</li>
+                        <li>High capacity; handles multi-tasking well.</li>
+                        <li>Highly prone to <strong>cognitive biases</strong>.</li>
+                        <li>Driven by "gut feeling" and affect.</li>
+                    </ul>
+                </div>
+                <div class="system2-box">
+                    <h3 class="text-xl font-bold text-blue-700 mb-2">System 2: Analytical</h3>
+                    <ul class="list-disc pl-5 space-y-1 text-blue-900">
+                        <li><strong>Slow, deliberate, effortful.</strong></li>
+                        <li>Relies on logic, evidence, and critical appraisal.</li>
+                        <li>Low capacity; easily fatigued (cognitive load).</li>
+                        <li>The "safety net" for System 1.</li>
+                        <li>Abstract and rule-based reasoning.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. High-Risk Situations for Bias -->
+        <section id="bias-risks" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-red-500 pb-2 mb-6">High-Risk Situations for Cognitive Bias</h2>
+            <div class="section-box">
+                <p class="mb-4">Paramedics often operate in "Cognitive Minefields." Bias risk increases exponentially under specific conditions:</p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <h4 class="font-bold text-red-700">Environmental Factors</h4>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li><strong>High Workload:</strong> Increased volume leads to "thin slicing."</li>
+                            <li><strong>Time Pressure:</strong> Forces reliance on fast System 1.</li>
+                            <li><strong>Distractions/Interruptions:</strong> Breaks System 2 concentration.</li>
+                            <li><strong>Noise/Chaos:</strong> Degrades cognitive bandwidth.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow-sm">
+                        <h4 class="font-bold text-red-700">Individual Factors</h4>
+                        <ul class="list-disc pl-5 text-sm">
+                            <li><strong>Sleep Deprivation:</strong> The "fatigue tax" on System 2.</li>
+                            <li><strong>Cognitive Overload:</strong> Too many data points to process.</li>
+                            <li><strong>Affective State:</strong> Stress, anger, or over-confidence.</li>
+                            <li><strong>Inexperience:</strong> Lack of recognized patterns.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Affective Bias in Practice -->
+        <section id="affective-bias" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-pink-500 pb-2 mb-6">Affective (Emotional) Bias</h2>
+            <p class="mb-4">Affective bias occurs when the clinician's emotional response to a patient influences their objective reasoning.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Bias Type</th>
+                        <th>Clinical Example</th>
+                        <th>Impact on Reasoning</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Counter-transference</strong></td>
+                        <td>Disliking a frequent caller with substance abuse issues.</td>
+                        <td>Dismissing physical symptoms as "behavioral."</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Outcome Bias</strong></td>
+                        <td>Judging a decision based on the result rather than the logic at the time.</td>
+                        <td>Reinforcing bad habits because the patient happened to survive.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visceral Bias</strong></td>
+                        <td>Strong positive or negative feelings toward a patient (e.g., child abuse).</td>
+                        <td>Over-testing or avoiding necessary physical exams.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Zebra Retreat</strong></td>
+                        <td>Shying away from a rare/scary diagnosis because of the effort involved.</td>
+                        <td>Defaulting to a "safe" but incorrect common diagnosis.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 4. Strategies for Clinical Safety -->
+        <section id="debiasing" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-green-500 pb-2 mb-6">Debiasing Strategies</h2>
+            <div class="strategy-box">
+                <h3 class="text-xl font-bold text-green-800 mb-2">Cognitive Forcing Functions</h3>
+                <p>Specific conscious steps to force the brain from System 1 into System 2:</p>
+                <ul class="list-decimal pl-8 mt-2 space-y-3">
+                    <li><strong>The "What Else?" Rule:</strong> Always ask "What else could this be?" before finishing an assessment (Differential Diagnosis).</li>
+                    <li><strong>Pre-Mortem Thinking:</strong> Imagine the patient has died in 2 hours; work backward to figure out what you missed.</li>
+                    <li><strong>Diagnostic Time-Out:</strong> Stop for 30 seconds at the back of the ambulance to review VSS and logic.</li>
+                    <li><strong>Checklists:</strong> Externalize System 2 to reduce cognitive load (e.g., Sepsis tools, STEMI checklists).</li>
+                    <li><strong>Decrease Reliance on Memory:</strong> Use apps, pocket guides, or drug cards instead of memorized doses under stress.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 5. Metacognition & TTM -->
+        <section id="metacognition" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-indigo-400 pb-2 mb-6">The Path to Debiasing</h2>
+            
+            <div class="mb-10">
+                <h3 class="text-xl font-semibold text-indigo-800 mb-2">Metacognition: "Thinking about Thinking"</h3>
+                <p class="bg-indigo-50 p-4 border rounded">Metacognition is the cornerstone of reflective practice. It involves standing outside your own decision-making process to monitor, evaluate, and adjust your reasoning in real-time. <em>"Am I being biased because this patient is shouting at me?"</em></p>
+            </div>
+
+            <h3 class="text-xl font-semibold text-indigo-800 mb-4">Applying the Transtheoretical Model (TTM) to Debiasing</h3>
+            <div class="space-y-2">
+                <div class="ttm-step">
+                    <span class="font-bold text-indigo-700">1. Pre-contemplation:</span> The clinician is unaware they have biases or believes they are immune to them. <em>"I'm a good paramedic; I don't let feelings get in the way."</em>
+                </div>
+                <div class="ttm-step">
+                    <span class="font-bold text-indigo-700">2. Contemplation:</span> Awareness grows. Recognizing that errors happen and biases are universal. <em>"Maybe I should look into why I missed that MI."</em>
+                </div>
+                <div class="ttm-step">
+                    <span class="font-bold text-indigo-700">3. Preparation:</span> Planning to change. Learning about heuristics and Dual Process Theory. <em>"I'm going to start using a 'What else' rule."</em>
+                </div>
+                <div class="ttm-step">
+                    <span class="font-bold text-indigo-700">4. Action:</span> Actively applying debiasing strategies on calls and using metacognitive prompts. <em>"Wait, I'm thin-slicing here because I'm tired. Let's do a full set of vitals."</em>
+                </div>
+                <div class="ttm-step">
+                    <span class="font-bold text-indigo-700">5. Maintenance:</span> Debiasing becomes a habit. Continuous reflective practice and peer-review of cases.
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12 mb-8 border-t pt-6">
+            <p class="text-gray-500 font-bold uppercase tracking-widest text-sm">Cognitive Safety = Patient Safety</p>
+            <p class="text-gray-400 text-xs mt-2">Based on the work of Pat Croskerry (Dalhousie University) on diagnostic failure and cognitive debiasing.</p>
+        </footer>
+    </main>
+</body>
+</html>
