@@ -7,185 +7,289 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .section-box { background-color: #f3f4f6; border-left: 4px solid #6b7280; padding: 1.5rem; margin: 2rem 0; border-radius: 0.5rem; }
-        .concept-box { background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
-        .concept-box strong { color: #b91c1c; }
-        .management-box { background-color: #ecfdf5; border-left: 4px solid #10b981; padding: 1.5rem; margin: 2rem 0; border-radius: 0.5rem; }
-        .evidence-box { background-color: #eef2ff; border-left: 4px solid #4f46e5; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
-        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background-color: white; }
-        th, td { border: 1px solid #d1d5db; padding: 0.75rem; text-align: left; }
-        th { background-color: #f9fafb; font-weight: 600; }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-100 text-gray-900">
 
-    <header class="bg-slate-800 text-white p-6 sticky top-0 z-10 shadow-md">
-        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center">
-            <h1 class="text-2xl font-bold mb-4 md:mb-0">Spinal Trauma & SCI</h1>
-            <nav>
-                <ul class="flex flex-wrap gap-4 text-sm font-medium">
-                    <li><a href="#mechanisms" class="hover:text-slate-300 transition-colors">Mechanisms</a></li>
-                    <li><a href="#assessment" class="hover:text-slate-300 transition-colors">Assessment</a></li>
-                    <li><a href="#clearance" class="hover:text-slate-300 transition-colors">Clearance Rules</a></li>
-                    <li><a href="#management" class="hover:text-slate-300 transition-colors">Extrication</a></li>
-                    <li><a href="#reflection" class="hover:text-slate-300 transition-colors">Reflection</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Spinal Trauma</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
 
-    <main class="p-6 max-w-5xl mx-auto space-y-12">
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#anatomy" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Anatomy & Mechanisms</a>
+                <a href="#assessment" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Assessment & Clearance</a>
+                <a href="#immobilisation" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Spinal Immobilisation</a>
+                <a href="#extrication" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Extrication Techniques</a>
+                <a href="#management" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Management of Suspected SCI</a>
+                <a href="#special" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Special Populations</a>
+            </div>
+        </nav>
 
-        <!-- Section 1: Mechanisms -->
-        <section id="mechanisms">
-            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4">Mechanisms of Spinal Cord Injury (SCI)</h2>
-            <p class="mb-4">Identifying high-risk mechanisms is the first step in the "index of suspicion."</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="section-box m-0">
-                    <h3 class="font-bold mb-2">High-Risk Mechanisms</h3>
-                    <ul class="list-disc pl-5 text-sm space-y-1">
-                        <li>Fall from height (>1m or 5 stairs)</li>
-                        <li>High-speed Motor Vehicle Collision (MVC) >100km/h</li>
-                        <li>Rollover or Ejection from vehicle</li>
-                        <li>Diving accidents (axial loading)</li>
-                        <li>Bicycle or Pedestrian vs. Car</li>
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Anatomy and Mechanisms -->
+            <section id="anatomy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Anatomy, Physiology & Mechanisms of Spinal Cord Injury (SCI)</h2>
+                <div class="physiology-box">
+                    <h3>High-Risk Mechanisms for SCI</h3>
+                    <p>Identify high-risk mechanisms early. The most common in pre-hospital practice include:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Motor vehicle collisions (MVCs) with entrapment (up to 40% of cases remain trapped)</li>
+                        <li>Falls from height (&gt;3 metres or equivalent)</li>
+                        <li>Diving injuries / axial loading</li>
+                        <li>High-speed pedestrian strikes or motorcycle collisions</li>
                     </ul>
                 </div>
-                <div class="section-box m-0 border-l-orange-500">
-                    <h3 class="font-bold mb-2">4 Common SCI Patterns</h3>
-                    <ul class="list-disc pl-5 text-sm space-y-1">
-                        <li><strong>Flexion:</strong> Forceful forward bending (e.g., MVC lap belt).</li>
-                        <li><strong>Extension:</strong> Forceful backward bending (e.g., fall onto chin).</li>
-                        <li><strong>Axial Loading:</strong> Vertical compression (e.g., diving into shallow water).</li>
-                        <li><strong>Rotation:</strong> Excessive twisting force (e.g., high-impact shearing).</li>
+                <div class="physiology-box">
+                    <h3>The 4 Common Mechanisms of SCI</h3>
+                    <table>
+                        <thead><tr><th>Mechanism</th><th>Typical Injury Pattern</th><th>Common Scenario</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Hyperflexion</strong></td><td>Anterior wedge fractures, anterior cord syndrome</td><td>MVC with head striking dashboard/windscreen</td></tr>
+                            <tr><td><strong>Hyperextension</strong></td><td>Posterior element fractures, central cord syndrome</td><td>Rear-end MVC or fall with chin strike</td></tr>
+                            <tr><td><strong>Axial Loading / Compression</strong></td><td>Burst fractures, Jefferson fracture</td><td>Diving into shallow water or vertical fall landing on head/feet</td></tr>
+                            <tr><td><strong>Rotation / Lateral Flexion</strong></td><td>Rotational or facet dislocations</td><td>MVC rollover or side-impact trauma</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Assessment & Clearance -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Assessment & Spinal Clearance Tools</h2>
+                <div class="assessment-box">
+                    <h3>Systematic Approach to Physical & Risk Assessment</h3>
+                    <p>Use a structured ABCDE approach with high index of suspicion for SCI in any trauma patient with neck/back pain, neurological deficit or high-risk mechanism.</p>
+                    <ul>
+                        <li><strong>History:</strong> Mechanism, neck/back pain, paraesthesia, weakness, loss of sensation</li>
+                        <li><strong>Examination:</strong> Midline cervical tenderness, neurological deficit, altered mental status, intoxication</li>
                     </ul>
                 </div>
-            </div>
-        </section>
+                <div class="assessment-box">
+                    <h3>Evidence-Based Clearance Tools: Canadian C-Spine Rule (CCR) vs NEXUS Low-Risk Criteria</h3>
+                    <p>Both rules have near-100% sensitivity, but the CCR is superior in direct comparison (Stiell et al., 2003).</p>
+                    <table>
+                        <thead><tr><th>Feature</th><th>Canadian C-Spine Rule (CCR)</th><th>NEXUS Low-Risk Criteria</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Sensitivity (for clinically important injury)</strong></td><td>99.4%</td><td>90.7%</td></tr>
+                            <tr><td><strong>Specificity</strong></td><td>45.1%</td><td>36.8%</td></tr>
+                            <tr><td><strong>Radiography rate if rule applied</strong></td><td>55.9%</td><td>66.6%</td></tr>
+                            <tr><td><strong>Patients missed in validation</strong></td><td>1</td><td>16</td></tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Key takeaway:</strong> CCR would reduce unnecessary imaging and is preferred when range-of-motion assessment is possible.</p>
+                </div>
+            </section>
 
-        <!-- Section 2: Clinical Presentation -->
-        <section id="assessment">
-            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4">Clinical Presentation & Physical Assessment</h2>
-            
-            <div class="concept-box">
-                <h3 class="font-bold mb-2">Red Flags for SCI</h3>
-                <p class="text-sm">Paralysis, paresthesia (tingling), midline spinal pain/tenderness, priapism, and "spinal shock" (hypotension with bradycardia).</p>
-            </div>
+            <!-- Spinal Immobilisation -->
+            <section id="immobilisation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Spinal Immobilisation – Evidence Update</h2>
+                <div class="disorder-box">
+                    <h3>Soft Collars vs Rigid Collars (Bruton et al., 2024)</h3>
+                    <p>NSW Ambulance cohort study (n=2,098 soft collars):</p>
+                    <ul>
+                        <li>Only 3.5% had cervical spine injury</li>
+                        <li>8 spinal cord injuries – <strong>none</strong> attributed to soft collar use</li>
+                        <li>Patients found soft collars comfortable and complied well with immobility</li>
+                        <li>Paramedics reported easy application and effective movement minimisation</li>
+                    </ul>
+                    <p><strong>Conclusion:</strong> Soft collars do not increase risk of neurological worsening and are better tolerated.</p>
+                </div>
+                <div class="management-box">
+                    <h3>NEANN Immobilisation & Extrication Jacket (NIEJ) – NSW Ambulance Procedure</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Apply manual in-line stabilisation + cervical collar</li>
+                        <li>Prepare NIEJ (check straps, pads, safe working load 130 kg)</li>
+                        <li>Insert NIEJ behind patient, add yellow lumbar pad</li>
+                        <li>Secure green shoulder straps, yellow/red chest straps, blue groin straps</li>
+                        <li>Position head pads + head/chin straps</li>
+                        <li>Extricate to scoop/extrication board then transfer to stretcher (remove board for transport)</li>
+                    </ol>
+                </div>
+            </section>
 
-            <div class="management-box">
-                <h3 class="font-bold mb-2">Systematic Physical Assessment</h3>
-                <ol class="list-decimal pl-5 text-sm space-y-2">
-                    <li><strong>Inspection:</strong> Check for bruising, deformity, or wounds over the spinal column.</li>
-                    <li><strong>Palpation:</strong> Gently palpate the midline for focal bony tenderness (Point Tenderness).</li>
-                    <li><strong>Neurological Exam:</strong> Assess sensory and motor function in all four limbs (Grip strength, pedal flexion/extension).</li>
-                    <li><strong>Pain Provocation:</strong> If the patient is alert and has no midline pain, can they actively rotate their head 45° left and right? (Canadian C-Spine Rule).</li>
-                </ol>
-            </div>
-        </section>
-
-        <!-- Section 3: Clearance Tools -->
-        <section id="clearance">
-            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4">Evidence-Based Spinal Clearance</h2>
-            <p class="mb-4">Using decision tools avoids unnecessary immobilization, which can cause pressure sores, airway compromise, and increased intracranial pressure.</p>
-
-            <div class="evidence-box">
-                <h3 class="font-bold mb-2">NEXUS vs. Canadian C-Spine Rule (Stiell et al., 2003)</h3>
-                <table class="text-sm">
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>NEXUS Criteria</th>
-                            <th>Canadian C-Spine Rule (CCR)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Requirement</strong></td>
-                            <td>Clearance if ALL 5 are met: No midline pain, no intoxication, normal GCS, no neuro deficits, no distracting injury.</td>
-                            <td>Process: 1. Any high-risk factor? 2. Any low-risk factor? 3. Can they rotate head?</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Sensitivity</strong></td>
-                            <td>High (~99%)</td>
-                            <td>Superior (~100%)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Key Takeaway</strong></td>
-                            <td>Simpler to memorize.</td>
-                            <td>More reliable at reducing unnecessary imaging.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Section 4: Management & Extrication -->
-        <section id="management">
-            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4">Management & Extrication Principles</h2>
-            
-            <div class="section-box">
-                <h3 class="font-bold mb-2">Self-Extrication (Nutbeam et al., 2025 Consensus)</h3>
-                <p class="text-sm">Current evidence suggests that if a patient is clinically stable and able, <strong>self-extrication</strong> (with or without a soft collar) results in significantly less spinal movement than manual long-board extrication.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="tool-box m-0">
-                    <h4 class="font-bold mb-1">Equipment Selection</h4>
-                    <ul class="list-disc pl-5 text-sm space-y-1">
-                        <li><strong>Soft Collars:</strong> Now preferred in many jurisdictions (e.g., NSW Ambulance) for comfort and compliance (Bruton et al., 2024).</li>
-                        <li><strong>NIEJ Device:</strong> Used for stable patients requiring vertical lift or complex extrication (NSW SC-03).</li>
-                        <li><strong>Vacuum Mattresses:</strong> Gold standard for long-distance transport and comfort.</li>
+            <!-- Extrication Techniques -->
+            <section id="extrication" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Extrication Techniques – Paradigm Shift (Nutbeam et al., 2025)</h2>
+                <div class="disorder-box">
+                    <h3>Key Consensus Recommendations (FPHC 2025)</h3>
+                    <p>Move away from “absolute movement minimisation” toward <strong>time-critical, patient-centred care</strong>.</p>
+                    <ul>
+                        <li><strong>Self-extrication is the preferred primary approach</strong> when clinically appropriate</li>
+                        <li>U-STEP OUT algorithm endorsed for decision-making (clinicians & FRS)</li>
+                        <li>Empower firefighters and lay persons (with appropriate training/tools)</li>
+                        <li>Reduce entrapment time – prolonged extrication increases mortality</li>
                     </ul>
                 </div>
-                <div class="tool-box m-0">
-                    <h4 class="font-bold mb-1">Vehicular Extrication Reasoning</h4>
-                    <p class="text-sm">When balancing speed vs. safety:</p>
-                    <ul class="list-disc pl-5 text-sm space-y-1">
-                        <li><strong>Urgent:</strong> Unstable airway, major hemorrhage, or cardiac arrest (Rapid extrication required).</li>
-                        <li><strong>Non-Urgent:</strong> Stable patient. Prioritize minimizing spinal deviation through self-extrication or controlled roof removal.</li>
-                    </ul>
+                <div class="assessment-box">
+                    <h3>Biomechanical Evidence – Spinal Movement (Nutbeam et al., 2022)</h3>
+                    <table>
+                        <thead><tr><th>Extrication Method</th><th>AP Max Movement (mm)</th><th>Total Travel (mm)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Self-extrication</strong></td><td>2.6</td><td>4.9</td></tr>
+                            <tr><td>Roof removal</td><td>~5.0</td><td>~12.0</td></tr>
+                            <tr><td>B-post rip</td><td>~5.5</td><td>~13.0</td></tr>
+                            <tr><td>Rapid removal</td><td>6.21</td><td>20.51</td></tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Conclusion:</strong> Self-extrication causes the least spinal movement and is fastest (mean 6.4 s).</p>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Section 5: Reflective Questions -->
-        <section id="reflection">
-            <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-4">Reflective Practice</h2>
-            
-            <div class="management-box">
-                <h3 class="font-bold mb-4">Scenario-Based Reflection</h3>
-                <div class="space-y-6 text-sm">
-                    <div>
-                        <p class="font-bold">1. Pediatrics (Age <2):</p>
-                        <p>How would you immobilize a 2-year-old given their disproportionately large head? (Consider padding under the shoulders to prevent flexion of the neck).</p>
-                    </div>
-                    <div>
-                        <p class="font-bold">2. Geriatrics & Kyphosis:</p>
-                        <p>What are the risks of forcing an elderly patient with a "stooped" spine into a flat, supine position? (Risk of fractures, airway compromise, and intense pain). How would you use padding to "fill the gaps"?</p>
-                    </div>
-                    <div>
-                        <p class="font-bold">3. Speed vs. Stability:</p>
-                        <p>In a high-pressure entrapment, how do you decide between a "Rapid" and "Controlled" extrication? (Nutbeam et al. suggest that "Rapid" should be reserved only for immediate life-threats).</p>
-                    </div>
-                    <div>
-                        <p class="font-bold">4. Barriers to Clearance:</p>
-                        <p>Why might a paramedic choose NOT to use a clearance rule even when it is indicated? (Fear of litigation, pressure from hospital staff, or lack of confidence in assessment skills).</p>
-                    </div>
-                    <div>
-                        <p class="font-bold">5. The 'Urgency' of SCI:</p>
-                        <p>When does a suspected SCI become a surgical emergency? (Progressive neurological deficit). What role does a retrieval team play in these time-critical transfers?</p>
-                    </div>
+            <!-- Management -->
+            <section id="management" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Quality Management of Suspected SCI</h2>
+                <div class="management-box">
+                    <h3>Step-by-Step Pre-Hospital Care</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Scene safety & PPE – consider high-risk mechanism</li>
+                        <li>ABCDE with manual in-line stabilisation (MILS) only if required</li>
+                        <li>Apply soft collar (preferred) or rigid if indicated</li>
+                        <li>Decision-making using U-STEP OUT algorithm for extrication</li>
+                        <li>Self-extrication or rapid gentle assisted extrication (do NOT delay for absolute minimisation)</li>
+                        <li>Package on scoop stretcher or vacuum mattress – remove extrication board for transport</li>
+                        <li>Neurovascular observations + SPEED tool monitoring</li>
+                        <li>Rapid transport with pre-notification (consider retrieval team for time-critical cases)</li>
+                    </ol>
                 </div>
-            </div>
-        </section>
+            </section>
 
-    </main>
+            <!-- Special Populations -->
+            <section id="special" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Special Populations</h2>
+                <div class="disorder-box">
+                    <h3>Paediatric Patients (≤2 years)</h3>
+                    <p><strong>Challenges:</strong> Large head-to-body ratio, non-verbal, difficult to assess.</p>
+                    <p><strong>Approach:</strong> Use age-appropriate padding under shoulders, soft collar or manual stabilisation, avoid over-immobilisation. Consider carer-assisted self-extrication where possible.</p>
+                </div>
+                <div class="disorder-box">
+                    <h3>Elderly Patients with Kyphosis</h3>
+                    <p><strong>Harms of forced supine positioning:</strong> Increased pain, respiratory compromise, pressure injuries, worsened spinal alignment.</p>
+                    <p><strong>Appropriate approach:</strong> Position of comfort (slight head elevation or vacuum mattress contouring), soft collar, minimal movement, rapid transport.</p>
+                </div>
+            </section>
 
-    <footer class="text-center mt-12 mb-8 border-t border-gray-200 pt-6 max-w-5xl mx-auto">
-        <p class="text-gray-500 text-sm italic">This study guide is for educational purposes and aligns with the 2024-2025 consensus on pre-hospital spinal care.</p>
-    </footer>
+            <!-- Reflections -->
+            <section class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Reflective Practice</h2>
+                <div class="assessment-box">
+                    <p><strong>Consider these clinical scenarios:</strong></p>
+                    <ol class="list-decimal list-inside space-y-3 text-sm">
+                        <li>A 2-year-old with suspected SCI – how would you immobilise and what challenges arise?</li>
+                        <li>A 75-year-old with kyphosis – what harms could forced supine positioning cause and how do you adapt?</li>
+                        <li>Balancing rapid extrication vs movement minimisation in a time-critical MVC.</li>
+                        <li>Barriers to using clearance rules in the field and risks of unnecessary immobilisation.</li>
+                    </ol>
+                </div>
+            </section>
 
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide is based on current evidence (Bruton 2024, Nutbeam 2025, Stiell 2003, biomechanical studies). Always follow local NSW Ambulance protocols and apply clinical judgment. Spinal trauma management continues to evolve toward patient-centred, time-sensitive care.</p>
+        </footer>
+    </div>
 </body>
 </html>
