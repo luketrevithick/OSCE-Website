@@ -7,245 +7,263 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-            color: #1f2937;
-        }
-        .section-box {
-            background-color: #f3f4f6;
-            border-left: 4px solid #6b7280;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0.5rem;
-        }
-        .emergency-box {
-            background-color: #fef2f2;
-            border-left: 4px solid #ef4444;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0.25rem;
-        }
-        .emergency-box h3 {
-            color: #b91c1c;
-            font-weight: 700;
-            font-size: 1.125rem;
-            margin-bottom: 0.5rem;
-        }
-        .management-box {
-            background-color: #ecfdf5;
-            border-left: 4px solid #10b981;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0.25rem;
-        }
-        .management-box strong {
-            color: #047857;
-        }
-        .concept-box {
-            background-color: #eef2ff;
-            border-left: 4px solid #4f46e5;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0.25rem;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1rem 0;
-            background-color: white;
-            font-size: 0.875rem;
-        }
-        th, td {
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            text-align: left;
-        }
-        th {
-            background-color: #f9fafb;
-            font-weight: 600;
-        }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .section-box { background-color: #f3f4f6; border-left: 4px solid #6b7280; padding: 1.5rem; margin: 2rem 0; border-radius: 0.5rem; }
+        .disorder-box { background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .disorder-box strong { color: #b91c1c; }
+        .management-box { background-color: #ecfdf5; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .management-box strong { color: #15803d; }
+        .assessment-box { background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .assessment-box strong { color: #b45309; }
+        h2 { border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-top: 2.5rem; font-size: 1.875rem; font-weight: 700; color: #111827; }
+        h3 { margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 600; color: #374151; }
+        table { width: 100%; margin-top: 1rem; border-collapse: collapse; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); border-radius: 0.5rem; overflow: hidden; }
+        th, td { border: 1px solid #d1d5db; padding: 0.75rem 1rem; text-align: left; font-size: 0.875rem; }
+        th { background-color: #f9fafb; font-weight: 600; }
+        td { background-color: #ffffff; }
+        tr:nth-child(even) td { background-color: #f9fafb; }
+        nav a { transition: all 0.2s ease-in-out; }
+        nav a:hover { transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .quote { font-style: italic; border-left: 4px solid #6b7280; padding-left: 1rem; margin: 1rem 0; color: #374151; }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-gray-100 text-gray-900">
 
-    <header class="bg-red-900 text-white p-8 text-center shadow-md">
-        <h1 class="text-3xl md:text-4xl font-bold mb-2">Obstetric & Birthing Emergencies</h1>
-        <p class="text-lg md:text-xl text-red-200">Critical Out-of-Hospital Management</p>
-    </header>
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Birthing Emergencies</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide (HLTH3021)</p>
+        </header>
 
-    <nav class="bg-gray-100 p-4 sticky top-0 shadow-sm z-10 border-b border-gray-200">
-        <ul class="flex flex-wrap justify-center gap-4 md:gap-6 text-xs md:text-sm font-medium">
-            <li><a href="#positional" class="text-blue-800 hover:text-blue-600">Positional/Medical</a></li>
-            <li><a href="#malpresentation" class="text-blue-800 hover:text-blue-600">Malpresentation</a></li>
-            <li><a href="#dystocia" class="text-blue-800 hover:text-blue-600">Dystocia/Cord</a></li>
-            <li><a href="#haemorrhage" class="text-blue-800 hover:text-blue-600">Haemorrhage (APH/PPH)</a></li>
-            <li><a href="#structural" class="text-blue-800 hover:text-blue-600">Structural/Multiple</a></li>
-        </ul>
-    </nav>
-
-    <div class="max-w-4xl mx-auto p-4 md:p-8">
-
-        <!-- Positional and Medical Emergencies -->
-        <section id="positional" class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-red-200 pb-2">Positional & Medical Emergencies</h2>
-            
-            <div class="section-box">
-                <div class="emergency-box">
-                    <h3>Supine Hypotension Syndrome (Aortocaval Compression)</h3>
-                    <p><strong>Pathophysiology:</strong> The heavy uterus compresses the inferior vena cava and aorta when the mother is supine, reducing venous return to the heart and decreasing cardiac output.</p>
-                    <p class="mt-2"><strong>Management:</strong> Position the patient in the <strong>Left Lateral Tilt (approx. 15-30°)</strong> or full left lateral position. Avoid supine positioning during transport at all costs.</p>
-                </div>
-
-                <div class="emergency-box">
-                    <h3>Pre-eclampsia & Eclampsia</h3>
-                    <p><strong>Pre-eclampsia:</strong> Hypertension (>140/90) plus multi-system involvement (proteinuria, oedema, headache, visual disturbances, RUQ pain).</p>
-                    <p><strong>Eclampsia:</strong> The onset of generalized tonic-clonic seizures in a patient with pre-eclampsia.</p>
-                    <div class="management-box mt-2">
-                        <strong>Management:</strong>
-                        <ul class="list-disc pl-5">
-                            <li>Minimize stimuli (lights/sirens).</li>
-                            <li><strong>Magnesium Sulphate:</strong> The drug of choice for seizure prophylaxis and treatment (as per CPGs).</li>
-                            <li>Support ABCs; position left lateral to maintain placental perfusion.</li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#supine" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Supine Hypotension</a>
+                <a href="#breech" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Breech Presentation</a>
+                <a href="#cord" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Cord Prolapse</a>
+                <a href="#shoulder" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Shoulder Dystocia</a>
+                <a href="#nuchal" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Nuchal Cord</a>
+                <a href="#pph" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Postpartum Haemorrhage</a>
+                <a href="#preeclamp" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Pre-eclampsia & Eclampsia</a>
+                <a href="#aph" class="bg-pink-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-pink-600">Antepartum Haemorrhage (Praevia / Abruptio)</a>
+                <a href="#inversion" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Uterine Inversion / Rupture</a>
+                <a href="#multiple" class="bg-cyan-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-cyan-600">Multiple Pregnancy</a>
             </div>
-        </section>
+        </nav>
 
-        <!-- Malpresentation -->
-        <section id="malpresentation" class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-red-200 pb-2">Malpresentation</h2>
-            <div class="section-box">
-                <div class="emergency-box">
-                    <h3>Breech Presentation</h3>
-                    <p>Delivery where the buttocks or feet are the presenting part. High risk of head entrapment and cord prolapse.</p>
-                    <div class="management-box mt-2">
-                        <strong>Management:</strong>
-                        <ul class="list-disc pl-5">
-                            <li><strong>Hands Off the Breech:</strong> Do not touch the baby until the level of the umbilicus to avoid triggering premature breathing or extension of the head.</li>
-                            <li><strong>Position:</strong> Mother in lithotomy or all-fours (Gaskin maneuver).</li>
-                            <li><strong>Lovset Manoeuvre:</strong> If arms are extended.</li>
-                            <li><strong>Mauriceau-Smellie-Veit (MSV) Manoeuvre:</strong> If the head is stuck; fingers on the malar bones to flex the head.</li>
-                        </ul>
-                    </div>
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Supine Hypotension -->
+            <section id="supine" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Supine Hypotension Syndrome (Aortocaval Compression)</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology & Risk Factors</h3>
+                    <p>The gravid uterus compresses the inferior vena cava and aorta when the patient is supine (especially >20 weeks). This reduces venous return, cardiac output and uterine perfusion.</p>
+                    <ul>
+                        <li><strong>Risks:</strong> Late pregnancy, supine/sitting position, varicose veins</li>
+                        <li><strong>Why a problem in ambulances?</strong> Stretchers and transport positions exacerbate compression.</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
-
-        <!-- Dystocia and Cord Issues -->
-        <section id="dystocia" class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-red-200 pb-2">Dystocia & Cord Issues</h2>
-            <div class="section-box">
-                <div class="emergency-box">
-                    <h3>Shoulder Dystocia</h3>
-                    <p><strong>Signs:</strong> "Turtle Sign" (head delivers then retracts against the perineum). A true obstetric emergency where the anterior shoulder is impacted against the symphysis pubis.</p>
-                    <div class="concept-box">
-                        <strong>HELPERR Mnemonic:</strong>
-                        <ul class="mt-1 space-y-1">
-                            <li><strong>H - Help:</strong> Call for backup/MICA.</li>
-                            <li><strong>E - Evaluate:</strong> Consider episiotomy (midwifery/clinical scope).</li>
-                            <li><strong>L - Legs:</strong> <strong>McRoberts Manoeuvre</strong> (knees to chest).</li>
-                            <li><strong>P - Pressure:</strong> Suprapubic pressure (Rubin I).</li>
-                            <li><strong>E - Enter:</strong> Internal manoeuvres (Rubin II / Woods Screw).</li>
-                            <li><strong>R - Remove:</strong> Remove the posterior arm.</li>
-                            <li><strong>R - Roll:</strong> Roll the patient to all-fours (Gaskin).</li>
-                        </ul>
-                    </div>
+                <div class="management-box">
+                    <h3>Pre-hospital Management</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Left lateral tilt (15–30°) or manual left uterine displacement (LUD)</li>
+                        <li>Exaggerated Sims position for transport if tilt not possible</li>
+                        <li>High-flow oxygen, IV fluids if hypotensive</li>
+                        <li>Rapid transport – monitor maternal BP and fetal movements</li>
+                    </ol>
+                    <p><strong>Note:</strong> Efficacy of left lateral displacement confirmed since 1972; avoid full supine position at all costs.</p>
                 </div>
+            </section>
 
-                <div class="emergency-box">
-                    <h3>Cord Prolapse</h3>
-                    <p>The umbilical cord drops through the cervix ahead of the baby, leading to compression and foetal hypoxia.</p>
-                    <div class="management-box mt-2">
-                        <strong>Management:</strong>
-                        <ul class="list-disc pl-5">
-                            <li><strong>Relieve Pressure:</strong> Manually push the presenting part (head) off the cord. <strong>Do not remove hand until at hospital.</strong></li>
-                            <li><strong>Position:</strong> Knee-chest position or exaggerated Sim's position.</li>
-                            <li><strong>Keep Cord Warm:</strong> If cord is external, wrap loosely in warm, saline-soaked gauze. Do not attempt to push it back in.</li>
-                        </ul>
-                    </div>
+            <!-- Breech Presentation -->
+            <section id="breech" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Breech Presentation</h2>
+                <div class="disorder-box">
+                    <h3>Types & Incidence</h3>
+                    <p>Foetus lies longitudinally with buttocks in the lower pole of the uterus. Occurs in 3% of births.</p>
+                    <table>
+                        <thead><tr><th>Type</th><th>Description</th><th>Incidence</th></tr></thead>
+                        <tbody>
+                            <tr><td>Frank (extended legs)</td><td>Buttocks first, legs extended</td><td>70%</td></tr>
+                            <tr><td>Complete</td><td>Buttocks + flexed knees</td><td>~10%</td></tr>
+                            <tr><td>Footling</td><td>Foot/leg first</td><td>~20%</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-
-                <div class="emergency-box">
-                    <h3>Nuchal Cord</h3>
-                    <p>Cord wrapped around the baby's neck. Common and often managed by slipping the cord over the head. If too tight, it may require clamping and cutting before the body is delivered.</p>
+                <div class="management-box">
+                    <h3>Pre-hospital Management – “Hands Off the Breech”</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Position mother sitting up or on back if imminent</li>
+                        <li>Allow spontaneous delivery of legs and torso</li>
+                        <li>Ensure back rotates uppermost</li>
+                        <li>Once axillae visible: Modified Mauriceau-Smellie-Veit (MSV) for head OR Lovset manoeuvre for arms (NSW Ambulance assisted shoulder protocol)</li>
+                        <li>Prepare for neonatal resuscitation</li>
+                    </ol>
+                    <p><strong>Never pull</strong> – hands-off unless arms/head need assistance.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Haemorrhage -->
-        <section id="haemorrhage" class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-red-200 pb-2">Haemorrhage (APH & PPH)</h2>
-            <div class="section-box">
-                <h3 class="text-xl font-semibold mb-4">Antepartum Haemorrhage (APH)</h3>
-                <p class="mb-2">Bleeding from the genital tract after 24 weeks gestation.</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Condition</th>
-                            <th>Pathophysiology</th>
-                            <th>Presentation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Placenta Praevia</strong></td>
-                            <td>Placenta is low-lying, covering or near the internal os of the cervix.</td>
-                            <td><strong>Painless</strong>, bright red vaginal bleeding. Uterus is soft.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Placental Abruption</strong></td>
-                            <td>Premature separation of a normally situated placenta.</td>
-                            <td><strong>Painful</strong>, dark red bleeding (may be concealed). "Woody," tender uterus.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="emergency-box">
-                    <h3>Postpartum Haemorrhage (PPH)</h3>
-                    <p>Loss of >500mL blood following delivery. Causes are the <strong>4 T's</strong>: Tone (Atony), Tissue (Retained placenta), Trauma (Tears), Thrombin (Clotting issues).</p>
-                    <div class="management-box mt-2">
-                        <strong>Management:</strong>
-                        <ul class="list-disc pl-5">
-                            <li><strong>Fundal Massage:</strong> Rub the uterus to encourage contraction.</li>
-                            <li><strong>Oxytocin/Syntometrine:</strong> Pharmacological uterine stimulants.</li>
-                            <li><strong>Bimanual Compression:</strong> External/Internal compression if massage fails.</li>
-                            <li><strong>Breastfeeding:</strong> Encourages natural oxytocin release.</li>
-                            <li>Fluid resuscitation for shock.</li>
-                        </ul>
-                    </div>
+                <div class="disorder-box">
+                    <h3>Complications</h3>
+                    <ul>
+                        <li>Fractures (humerus, clavicle), Erb’s palsy, intracranial haemorrhage, spinal damage, fetal hypoxia</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Structural and Multiple Pregnancy -->
-        <section id="structural" class="mb-12">
-            <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-red-200 pb-2">Structural & Multiple Pregnancy</h2>
-            <div class="section-box">
-                <div class="emergency-box">
-                    <h3>Uterine Inversion</h3>
-                    <p>The uterus turns inside out, often due to excessive cord traction in the 3rd stage. Can cause profound neurogenic shock and haemorrhage.</p>
-                    <p><strong>Management:</strong> Do not remove the placenta if still attached. Gently attempt to replace the uterus or cover with moist pads and transport immediately.</p>
+            <!-- Cord Prolapse -->
+            <section id="cord" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Cord Prolapse</h2>
+                <div class="disorder-box">
+                    <h3>Pathophysiology & Red Flags</h3>
+                    <p>Umbilical cord lies in front of or beside presenting part after membrane rupture → cord compression → fetal hypoxia. <strong>TIME CRITICAL – ~9% perinatal mortality.</strong></p>
+                    <p><strong>Indications:</strong> Sudden ROM + change in fetal movement or meconium.</p>
                 </div>
+                <div class="management-box">
+                    <h3>Pre-hospital Management (Time-Critical)</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Knee-chest position (or exaggerated Sims for transport)</li>
+                        <li>Minimal cord handling – cover with warm saline/dry pad</li>
+                        <li>If cord pulsation stops and delivery NOT imminent: Push presenting part off cord (two fingers or mother-assisted)</li>
+                        <li>Continue manual relief until handover to obstetric team</li>
+                        <li>Rapid transport + pre-alert for emergency caesarean</li>
+                        <li>Prepare neonatal resuscitation</li>
+                    </ol>
+                    <p><strong>Note:</strong> Not standard NSW Ambulance guideline – requires patient consent and service authorisation.</p>
+                </div>
+            </section>
 
-                <div class="emergency-box">
-                    <h3>Uterine Rupture</h3>
-                    <p>A tearing of the uterine wall. High mortality risk. Associated with previous C-section scars or trauma.</p>
-                    <p><strong>Signs:</strong> Sudden sharp abdominal pain, cessation of contractions, recession of the presenting part, and signs of shock.</p>
+            <!-- Shoulder Dystocia -->
+            <section id="shoulder" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Shoulder Dystocia</h2>
+                <div class="disorder-box">
+                    <h3>Recognition (“Turtle Sign”)</h3>
+                    <p>Head delivers but shoulders fail to follow. Anterior shoulder impacted behind pubic symphysis. <strong>EMERGENCY – fetal hypoxia develops rapidly.</strong></p>
                 </div>
+                <div class="management-box">
+                    <h3>HELPERR Mnemonic (NSW Ambulance aligned)</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>H</strong> – Call for Help + time the head-to-body interval</li>
+                        <li><strong>E</strong> – Episiotomy (if needed)</li>
+                        <li><strong>L</strong> – Legs (McRoberts position + suprapubic pressure)</li>
+                        <li><strong>P</strong> – Posterior arm delivery (Rubin or Woods screw)</li>
+                        <li><strong>E</strong> – Enter (rotate shoulders 180°)</li>
+                        <li><strong>R</strong> – Roll to all-fours (Gaskin manoeuvre)</li>
+                        <li><strong>R</strong> – Remove (last resort – symphysiotomy/clavicle fracture in extremis)</li>
+                    </ol>
+                </div>
+            </section>
 
-                <div class="emergency-box">
-                    <h3>Multiple Pregnancy (Twins/Triplets)</h3>
-                    <p>Increased risk for <strong>all</strong> of the above (PPH, malpresentation, cord prolapse, and pre-eclampsia).</p>
-                    <p><strong>Management:</strong> Prepare for multiple resuscitations. Clamp and cut the cord of the first twin immediately to prevent blood loss from the second twin via the placenta.</p>
+            <!-- Nuchal Cord -->
+            <section id="nuchal" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Nuchal Cord</h2>
+                <div class="management-box">
+                    <h3>Management</h3>
+                    <p>Common (up to 30% of births). Gently check for loose loop after head delivery.</p>
+                    <ul>
+                        <li>Loose: Slip over head or shoulders</li>
+                        <li>Tight: Clamp and cut (only if delivery obstructed)</li>
+                        <li>Do NOT pull head – allow spontaneous delivery</li>
+                    </ul>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <!-- Postpartum Haemorrhage (PPH) -->
+            <section id="pph" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Postpartum Haemorrhage (PPH)</h2>
+                <div class="disorder-box">
+                    <h3>4 T’s</h3>
+                    <ul>
+                        <li><strong>Tone</strong> (uterine atony – most common)</li>
+                        <li><strong>Trauma</strong> (lacerations)</li>
+                        <li><strong>Tissue</strong> (retained placenta)</li>
+                        <li><strong>Thrombin</strong> (coagulopathy)</li>
+                    </ul>
+                </div>
+                <div class="management-box">
+                    <h3>Pre-hospital Management</h3>
+                    <ol>
+                        <li>Fundal massage + bimanual compression</li>
+                        <li>Oxytocin 10 IU IM (if per local protocol)</li>
+                        <li>IV fluids, oxygen, rapid transport</li>
+                        <li>Inspect placenta for completeness</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Pre-eclampsia / Eclampsia -->
+            <section id="preeclamp" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Pre-eclampsia & Eclampsia</h2>
+                <div class="disorder-box">
+                    <h3>Classic Triad (after 20 weeks)</h3>
+                    <ul>
+                        <li>Hypertension (≥140/90)</li>
+                        <li>Proteinuria</li>
+                        <li>Oedema / headache / visual changes</li>
+                    </ul>
+                </div>
+                <div class="management-box">
+                    <h3>Management</h3>
+                    <ul>
+                        <li>Magnesium sulfate for seizures (per protocol)</li>
+                        <li>Left lateral position, oxygen, urgent transport</li>
+                        <li>Avoid bright lights / stimulation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Antepartum Haemorrhage -->
+            <section id="aph" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Antepartum Haemorrhage (Placenta Praevia / Abruptio)</h2>
+                <div class="disorder-box">
+                    <h3>Praevia vs Abruptio</h3>
+                    <table>
+                        <thead><tr><th></th><th>Praevia</th><th>Abruptio</th></tr></thead>
+                        <tbody>
+                            <tr><td>Pain</td><td>Painless</td><td>Severe abdominal pain</td></tr>
+                            <tr><td>Bleeding</td><td>Bright red, visible</td><td>Dark, may be concealed</td></tr>
+                            <tr><td>Uterus</td><td>Soft</td><td>Hard / woody</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="management-box">
+                    <h3>Management (Post 24 weeks)</h3>
+                    <p>Do NOT perform vaginal exam. Left lateral, oxygen, large-bore IV, rapid transport to obstetric unit.</p>
+                </div>
+            </section>
+
+            <!-- Uterine Inversion / Rupture -->
+            <section id="inversion" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Uterine Inversion / Rupture</h2>
+                <div class="management-box">
+                    <h3>Inversion</h3>
+                    <p>Fundus protrudes through cervix. Replace immediately (Johnson manoeuvre) + oxytocin after replacement.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Rupture</h3>
+                    <p>Sudden severe pain, cessation of contractions, shock. Immediate laparotomy required – rapid transport.</p>
+                </div>
+            </section>
+
+            <!-- Multiple Pregnancy -->
+            <section id="multiple" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Multiple Pregnancy</h2>
+                <div class="disorder-box">
+                    <h3>Key Risks</h3>
+                    <ul>
+                        <li>Preterm labour, cord prolapse, malpresentation, PPH</li>
+                    </ul>
+                </div>
+                <div class="management-box">
+                    <h3>Pre-hospital Care</h3>
+                    <p>Prepare for two (or more) resuscitations. Deliver each baby as normal, clamp cords separately, rapid transport for third-stage complications.</p>
+                </div>
+            </section>
+
+        </main>
 
         <footer class="text-center mt-12 mb-4">
-            <p class="text-gray-500 font-medium">EMERGENCY RECOGNITION IS KEY</p>
-            <p class="text-gray-400 text-sm">Follow local CPGs for drug dosages and specific manual handling techniques. Early notification to obstetric facilities is vital for all emergencies listed above.</p>
+            <p class="text-gray-500">Guide based on HLTH3021 Birthing Emergencies lectures and NSW Ambulance Maternal Emergencies protocols. Some manoeuvres (e.g., cord replacement) require specific authorisation. Always prioritise rapid transport and respectful care. Pre-hospital birth is high-risk – call for backup early.</p>
         </footer>
     </div>
 </body>
