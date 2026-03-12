@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safety-II in Paramedicine: A Study Guide</title>
+    <title>Safety-II in Paramedicine: A Paramedic Study Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .section-box { background-color: #f3f4f6; border-left: 4px solid #6b7280; padding: 1.5rem; margin: 2rem 0; border-radius: 0.5rem; }
-        .comparison-box { background-color: #fefce8; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
-        .resilience-box { background-color: #ecfdf5; border-left: 4px solid #10b981; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .disorder-box { background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .disorder-box strong { color: #b91c1c; }
+        .management-box { background-color: #ecfdf5; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .management-box strong { color: #15803d; }
+        .assessment-box { background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .assessment-box strong { color: #b45309; }
+        .physiology-box { background-color: #f3e8ff; border-left: 4px solid #a855f7; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .physiology-box strong { color: #7e22ce; }
         h2 { border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-top: 2.5rem; font-size: 1.875rem; font-weight: 700; color: #111827; }
+        table { width: 100%; margin-top: 1rem; border-collapse: collapse; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); border-radius: 0.5rem; overflow: hidden; }
+        th, td { border: 1px solid #d1d5db; padding: 0.75rem 1rem; text-align: left; font-size: 0.875rem; }
+        th { background-color: #f9fafb; font-weight: 600; }
+        td { background-color: #ffffff; }
+        tr:nth-child(even) td { background-color: #f9fafb; }
         nav a { transition: all 0.2s ease-in-out; }
         nav a:hover { transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .fram-hex { background: linear-gradient(135deg, #dbeafe, #bfdbfe); padding: 1.5rem; border-radius: 0.75rem; }
+        .quote { font-style: italic; border-left: 4px solid #6b7280; padding-left: 1rem; margin: 1rem 0; color: #374151; }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -22,19 +33,19 @@
     <div class="container mx-auto p-4 md:p-8">
         <header class="text-center mb-10">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Safety-II in Paramedicine</h1>
-            <p class="text-xl text-gray-600 mt-2">From “Find &amp; Fix” to “Succeed Under Varying Conditions”</p>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
         </header>
 
-        <!-- Navigation -->
+        <!-- Quick Navigation -->
         <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
             <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 <a href="#safety1vs2" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Safety-I vs Safety-II</a>
-                <a href="#fourabilities" class="bg-emerald-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-emerald-600">The 4 Resilience Abilities</a>
+                <a href="#fourabilities" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Four Resilience Abilities</a>
                 <a href="#scenarios" class="bg-amber-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-amber-600">Paramedic Scenarios</a>
-                <a href="#strategies" class="bg-rose-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-rose-600">Safety-II Strategies</a>
-                <a href="#reflection" class="bg-violet-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-violet-600">Personal Reflection</a>
-                <a href="#fram" class="bg-cyan-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-cyan-600">FRAM in Paramedicine</a>
+                <a href="#strategies" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Safety-II Strategies</a>
+                <a href="#reflection" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Personal Reflection</a>
+                <a href="#fram" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">FRAM in Paramedicine</a>
             </div>
         </nav>
 
@@ -42,138 +53,141 @@
 
             <!-- Safety-I vs Safety-II -->
             <section id="safety1vs2" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Safety-I vs Safety-II in Paramedicine</h2>
-                <div class="comparison-box grid md:grid-cols-2 gap-6">
-                    <div>
-                        <h3 class="font-semibold text-red-700 mb-2">Safety-I (Traditional)</h3>
-                        <ul class="text-sm space-y-2">
-                            <li>Focus: Things that go wrong</li>
-                            <li>Humans: Liability / source of error</li>
-                            <li>Goal: Prevent failures</li>
-                            <li>Methods: Find &amp; fix, root cause analysis</li>
-                            <li>Paramedic example: “Why did we miss that tension pneumothorax?”</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-emerald-700 mb-2">Safety-II (Resilient)</h3>
-                        <ul class="text-sm space-y-2">
-                            <li>Focus: Things that go right</li>
-                            <li>Humans: Resource for flexibility &amp; adaptation</li>
-                            <li>Goal: Ensure success under varying conditions</li>
-                            <li>Methods: Understand variability &amp; resilience</li>
-                            <li>Paramedic example: “How did our team adapt when the monitor failed en route?”</li>
-                        </ul>
-                    </div>
+                <h2 class="text-3xl font-bold text-gray-800">Safety-I vs Safety-II</h2>
+                <div class="disorder-box">
+                    <h3>Safety-I (Traditional Approach)</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Focus: Things that go wrong (accidents, errors)</li>
+                        <li>Humans: Seen as a liability / source of error</li>
+                        <li>Goal: Prevent failures through barriers and rules</li>
+                        <li>Methods: Root cause analysis, find-and-fix</li>
+                    </ul>
                 </div>
-                <p class="mt-6 text-xs text-gray-500">From Hollnagel, Wears &amp; Braithwaite (2015) – the world has changed. Paramedicine is dynamic, unpredictable, and tightly coupled. Safety-I alone is insufficient.</p>
+                <div class="management-box">
+                    <h3>Safety-II (Resilient Approach)</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Focus: Things that go right every day</li>
+                        <li>Humans: Resource for flexibility and adaptation</li>
+                        <li>Goal: Ensure success under varying conditions</li>
+                        <li>Methods: Understand performance variability and resilience</li>
+                    </ul>
+                </div>
+                <div class="quote">
+                    “Safety is the ability to succeed under varying conditions.” — Hollnagel, Wears &amp; Braithwaite (2015)
+                </div>
             </section>
 
-            <!-- The Four Abilities -->
+            <!-- Four Resilience Abilities -->
             <section id="fourabilities" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">The Four Resilience Abilities (Safety-II Core)</h2>
-                <div class="resilience-box grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2">🔭</div>
-                        <strong class="block">Anticipate</strong>
-                        <p class="text-xs">What might happen next?</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2">📍</div>
-                        <strong class="block">Monitor</strong>
-                        <p class="text-xs">What is happening now?</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2">⚡</div>
-                        <strong class="block">Respond</strong>
-                        <p class="text-xs">What should we do right now?</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-2">📚</div>
-                        <strong class="block">Learn</strong>
-                        <p class="text-xs">What can we take forward?</p>
-                    </div>
-                </div>
-                <div class="mt-6 text-sm bg-white border border-emerald-200 p-4 rounded">
-                    <strong>Paramedic example (C&amp;C debriefs):</strong> Crew anticipates deterioration (anticipate), monitors ETCO₂ drop (monitor), switches to BVM + PEEP (respond), then shares the adaptation in Coffee &amp; Cases (learn).
+                <h2 class="text-3xl font-bold text-gray-800">The Four Resilience Abilities</h2>
+                <div class="physiology-box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ability</th>
+                                <th>Definition</th>
+                                <th>Paramedic Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Anticipate</strong></td>
+                                <td>What might happen next?</td>
+                                <td>Anticipating deterioration during transport</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Monitor</strong></td>
+                                <td>What is happening now?</td>
+                                <td>Continuous ETCO₂ and SpO₂ monitoring</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Respond</strong></td>
+                                <td>What should we do right now?</td>
+                                <td>Switching to BVM + PEEP when monitor fails</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Learn</strong></td>
+                                <td>What can we take forward?</td>
+                                <td>Sharing adaptations in Coffee &amp; Cases debrief</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
-            <!-- Real-World Scenarios -->
+            <!-- Paramedic Scenarios -->
             <section id="scenarios" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Paramedic Scenarios – Safety-II in Action</h2>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="case-box">
-                        <h3 class="font-semibold">Scenario 1: Difficult Airway in the Field</h3>
-                        <p class="text-sm">Monitor fails mid-intubation. Paramedic adapts by using BOUGIE + video laryngoscope backup plan. Outcome: FPS achieved.</p>
-                        <p class="text-xs text-emerald-700 mt-2">Safety-II lens: How did anticipation, monitoring &amp; response succeed?</p>
-                    </div>
-                    <div class="case-box">
-                        <h3 class="font-semibold">Scenario 2: Multi-Casualty MVA</h3>
-                        <p class="text-sm">Resource overload. Team re-prioritises using triage adaptations learned from previous incidents.</p>
-                        <p class="text-xs text-emerald-700 mt-2">Safety-II lens: Learning from what went right last time enabled success today.</p>
-                    </div>
+                <h2 class="text-3xl font-bold text-gray-800">Real-World Paramedic Scenarios</h2>
+                <div class="assessment-box">
+                    <h3>Scenario: Difficult Airway in the Field</h3>
+                    <p>Monitor fails mid-intubation. Crew adapts using manual checks and backup plan. Outcome: First-pass success achieved.</p>
+                    <p><strong>Safety-II lens:</strong> How anticipation, monitoring and response turned potential failure into success.</p>
+                </div>
+                <div class="assessment-box">
+                    <h3>Scenario: Multi-Casualty MVA</h3>
+                    <p>Resource overload. Team re-prioritises using triage adaptations learned from previous incidents.</p>
+                    <p><strong>Safety-II lens:</strong> Learning from what went right last time enabled safe care today.</p>
                 </div>
             </section>
 
             <!-- Strategies -->
             <section id="strategies" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Applying Safety-II Strategies in Paramedicine</h2>
-                <div class="grid md:grid-cols-3 gap-4">
-                    <div class="tool-box">
-                        <strong>1. Daily debriefs (C&amp;C style)</strong>
-                        <p class="text-xs">Capture what went right + adaptations.</p>
-                    </div>
-                    <div class="tool-box">
-                        <strong>2. FRAM modelling of high-risk procedures</strong>
-                        <p class="text-xs">Visualise variability in RSI or trauma handover.</p>
-                    </div>
-                    <div class="tool-box">
-                        <strong>3. Build resilience margins</strong>
-                        <p class="text-xs">Extra oxygen, backup comms, flexible protocols.</p>
-                    </div>
+                <h2 class="text-3xl font-bold text-gray-800">Safety-II Strategies for Paramedicine</h2>
+                <div class="management-box">
+                    <h3>Practical Strategies</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Use daily clinical debriefs (Coffee &amp; Cases) to capture what went right</li>
+                        <li>Build resilience margins (extra oxygen, backup comms, flexible protocols)</li>
+                        <li>Model high-risk procedures with FRAM to visualise variability</li>
+                        <li>Celebrate adaptations in team handover and education sessions</li>
+                    </ul>
                 </div>
             </section>
 
             <!-- Reflection -->
             <section id="reflection" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Personal &amp; Team Reflection Prompts</h2>
-                <ul class="list-disc list-inside space-y-3 text-sm">
-                    <li>Think of your last difficult job: What adaptations did you or the crew make?</li>
-                    <li>How often do we celebrate “what went right” in shift handover?</li>
-                    <li>What small change could your team make this week to increase adaptability?</li>
-                </ul>
+                <h2 class="text-3xl font-bold text-gray-800">Personal &amp; Team Reflection</h2>
+                <div class="assessment-box">
+                    <ul class="list-disc list-inside space-y-3">
+                        <li>Think of your last difficult job: What adaptations did the crew make?</li>
+                        <li>How often do we celebrate “what went right” in shift handover?</li>
+                        <li>What small change could your team make this week to increase adaptability?</li>
+                    </ul>
+                </div>
             </section>
 
-            <!-- FRAM Section -->
+            <!-- FRAM -->
             <section id="fram" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Functional Resonance Analysis Method (FRAM) in Paramedicine</h2>
-                <div class="fram-hex">
-                    <h3 class="font-semibold mb-4">6 Aspects of Every Function</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-xs">
-                        <div><strong>Input</strong> – What starts it?</div>
-                        <div><strong>Output</strong> – What does it produce?</div>
-                        <div><strong>Time</strong> – Timing constraints?</div>
-                        <div><strong>Control</strong> – Rules/procedures?</div>
-                        <div><strong>Preconditions</strong> – Must be true first?</div>
-                        <div><strong>Resources</strong> – What is consumed?</div>
-                    </div>
+                <h2 class="text-3xl font-bold text-gray-800">Functional Resonance Analysis Method (FRAM)</h2>
+                <div class="physiology-box">
+                    <h3>The 6 Aspects of Every Function</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Aspect</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Input</strong></td><td>What starts the function?</td></tr>
+                            <tr><td><strong>Output</strong></td><td>What does it produce?</td></tr>
+                            <tr><td><strong>Time</strong></td><td>Timing constraints?</td></tr>
+                            <tr><td><strong>Control</strong></td><td>Rules, procedures, guidelines</td></tr>
+                            <tr><td><strong>Preconditions</strong></td><td>Must be true first</td></tr>
+                            <tr><td><strong>Resources</strong></td><td>What is consumed?</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="mt-8">
-                    <h3 class="font-semibold">Paramedic Example: RSI Function</h3>
-                    <div class="bg-gray-50 p-4 rounded text-xs space-y-2">
-                        <p><strong>Function:</strong> Perform Rapid Sequence Intubation</p>
-                        <p><strong>Input:</strong> Patient in respiratory failure</p>
-                        <p><strong>Variability:</strong> Monitor fails (resource variability) → crew adapts using manual checks (resonance = success)</p>
-                    </div>
+                <div class="assessment-box">
+                    <h3>Paramedic Example: RSI Function</h3>
+                    <p><strong>Variability:</strong> Monitor fails (resource variability) → crew adapts using manual checks (resonance = successful outcome).</p>
                 </div>
-                <p class="text-xs text-gray-500 mt-6">FRAM helps visualise how everyday performance variability produces both success and risk – the essence of Safety-II.</p>
             </section>
 
         </main>
 
-        <footer class="text-center mt-12 mb-4 text-xs text-gray-500">
-            Based on Hollnagel, Wears &amp; Braithwaite (2015) Safety-II White Paper + FRAM Guide. 
-            Use these ideas in every C&amp;C debrief and high-risk procedure review.
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">Based on Hollnagel, Wears &amp; Braithwaite (2015) and FRAM Guide. Ongoing Safety-II thinking is the hallmark of the expert paramedic. Apply these concepts in every C&amp;C debrief and high-risk procedure review.</p>
         </footer>
     </div>
 </body>
