@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Normal Delivery and Labour: A Paramedic Study Guide</title>
+    <title>Normal Delivery: A Paramedic Study Guide</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
-            color: #1f2937;
         }
         .section-box {
             background-color: #f3f4f6;
@@ -19,239 +18,270 @@
             margin: 2rem 0;
             border-radius: 0.5rem;
         }
-        .concept-box {
-            background-color: #eef2ff;
-            border-left: 4px solid #4f46e5;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border-radius: 0.25rem;
-        }
-        .concept-box strong {
-            color: #3730a3;
-        }
-        .warning-box {
+        .disorder-box {
             background-color: #fef2f2;
             border-left: 4px solid #ef4444;
             padding: 1rem;
             margin: 1.5rem 0;
             border-radius: 0.25rem;
         }
-        .warning-box strong {
+        .disorder-box strong {
             color: #b91c1c;
         }
         .management-box {
             background-color: #ecfdf5;
-            border-left: 4px solid #10b981;
+            border-left: 4px solid #22c55e;
             padding: 1rem;
             margin: 1.5rem 0;
             border-radius: 0.25rem;
         }
         .management-box strong {
-            color: #047857;
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
         }
         table {
             width: 100%;
-            border-collapse: collapse;
             margin-top: 1rem;
-            margin-bottom: 1rem;
-            background-color: white;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
         }
         th, td {
-            padding: 0.75rem;
             border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
             text-align: left;
+            font-size: 0.875rem;
         }
         th {
             background-color: #f9fafb;
             font-weight: 600;
         }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #6b7280;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-gray-100 text-gray-900">
 
-    <header class="bg-blue-900 text-white p-8 text-center shadow-md">
-        <h1 class="text-3xl md:text-4xl font-bold mb-2">Parturition and Labour (Normal Delivery)</h1>
-        <p class="text-lg md:text-xl text-blue-200">A Paramedic Study Guide</p>
-    </header>
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Normal Delivery</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
 
-    <nav class="bg-gray-100 p-4 sticky top-0 shadow-sm z-10 border-b border-gray-200">
-        <ul class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base font-medium">
-            <li><a href="#principles" class="text-blue-800 hover:text-blue-600 transition">Patient-Centred Care</a></li>
-            <li><a href="#assessment" class="text-blue-800 hover:text-blue-600 transition">Assessment (CCLUE)</a></li>
-            <li><a href="#stages" class="text-blue-800 hover:text-blue-600 transition">Stages of Labour</a></li>
-            <li><a href="#delivery" class="text-blue-800 hover:text-blue-600 transition">Delivery Management</a></li>
-            <li><a href="#postpartum" class="text-blue-800 hover:text-blue-600 transition">Third Stage & Handover</a></li>
-        </ul>
-    </nav>
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#why" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Why This Matters</a>
+                <a href="#assessment" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Assessment & History</a>
+                <a href="#physiology" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Physiology & Stages</a>
+                <a href="#firststage" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">First Stage Labour</a>
+                <a href="#secondstage" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Second Stage & Delivery</a>
+                <a href="#thirdstage" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Third Stage & Placenta</a>
+                <a href="#apgar" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Newborn Care & APGAR</a>
+            </div>
+        </nav>
 
-    <div class="max-w-4xl mx-auto p-4 md:p-8">
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
 
-        <main>
-            <!-- Core Principles Section -->
-            <section id="principles" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2">Patient-Centred Care & Ethics</h2>
-                <div class="section-box">
-                    <p class="mb-4">Historically, out-of-hospital obstetric care has sometimes resulted in poor experiences for mothers due to paramedics not listening to their wishes or applying unnecessary clinical interventions. A key foundation of normal delivery management is <strong>respecting the birthing woman's autonomy</strong>.</p>
-                    
-                    <div class="warning-box">
-                        <h3 class="text-lg font-semibold mb-2">Avoiding Routine Interventions</h3>
-                        <p>Refrain from routine interventions (like inserting IV cannulas or mandating a specific birthing position) unless clinically indicated. Honour birth plans where safe to do so. Remember the patient quote from the literature: <em>"I felt very violated... I didn't understand why I had a drip because all my births had been natural."</em></p>
-                    </div>
+            <!-- Why This Matters -->
+            <section id="why" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Why Are You Learning This?</h2>
+                <div class="disorder-box">
+                    <h3>Patient Voices – Obstetric Violence in Pre-Hospital Care</h3>
+                    <p class="quote">"I felt very violated... I thought his job was to just get me to the hospital. I don’t know why I had a drip because all my births had been natural."</p>
+                    <p class="quote">"Look, I need to push... And I put my hand down and her head had already started to come out."</p>
+                    <p class="quote">"If I’d only had that birth [in the ambulance] I wouldn’t have wanted to have another baby ever again."</p>
+                    <p><strong>Key fact:</strong> 1 in 10 Australian women experience obstetric violence (Keedle et al. 2022). NSW Parliament Select Committee on Birth Trauma (2024) highlights the need for respectful, patient-centred care.</p>
+                    <p>Paramedics must listen to birth plans, respect autonomy, and avoid unnecessary interventions.</p>
                 </div>
             </section>
 
-            <!-- Assessment Section -->
-            <section id="assessment" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2">Obstetric History & Assessment</h2>
-                <div class="section-box">
-                    <h3 class="text-xl font-semibold mb-3">Gravidity and Parity</h3>
-                    <p class="mb-4">A standard way to communicate reproductive history:</p>
-                    <ul class="list-disc pl-6 mb-4 space-y-1">
-                        <li><strong>Gravidity (G):</strong> The number of times a woman has been pregnant, regardless of the outcome.</li>
-                        <li><strong>Parity (P):</strong> The number of pregnancies carried to a viable gestational age (typically 20-24 weeks), regardless of whether the child was born alive or stillborn.</li>
+            <!-- Assessment & History -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Assessment & History Taking of the Pregnant Patient</h2>
+                <div class="assessment-box">
+                    <h3>Key History Questions (Learning Outcome 1)</h3>
+                    <ul>
+                        <li>Gestational age / due date</li>
+                        <li>Parity (G/P), previous births, complications</li>
+                        <li>Contractions: timing, duration, intensity, progression?</li>
+                        <li>Show / rupture of membranes (colour, odour, amount)</li>
+                        <li>Fetal movements</li>
+                        <li>Birth plan / preferences (e.g., delayed cord clamping, skin-to-skin, perineal massage)</li>
+                        <li>Cultural / support needs</li>
                     </ul>
-
-                    <h3 class="text-xl font-semibold mt-6 mb-3">The "CCLUE" Assessment</h3>
-                    <p class="mb-2">Use this mnemonic to thoroughly assess a patient presenting in labour:</p>
-                    <div class="concept-box">
-                        <ul class="space-y-2">
-                            <li><strong>C - Contractions:</strong> Presence, frequency (start of one to start of the next), and duration (how long one lasts).</li>
-                            <li><strong>C - Complications:</strong> History of pre-term deliveries, previous Caesarean sections, placenta praevia, gestational diabetes, or hypertension.</li>
-                            <li><strong>L - Leaking:</strong> Rupture of membranes (colour of fluid?), "show" (mucus plug), or vaginal bleeding.</li>
-                            <li><strong>U - Urge:</strong> Does she have the urge to push, urinate, or use her bowels? (Strong indicator of imminent birth).</li>
-                            <li><strong>E - Expected Delivery Date (EDD):</strong> Determines gestation and potential need for premature neonatal resuscitation.</li>
-                        </ul>
-                    </div>
                 </div>
             </section>
 
-            <!-- Stages of Labour -->
-            <section id="stages" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2">The Stages of Labour</h2>
-                <div class="section-box">
-                    <div class="concept-box">
-                        <h3 class="text-lg font-semibold">First Stage: Cervical Dilation</h3>
-                        <p class="text-sm mt-1">From the onset of regular, painful contractions to full cervical dilation (10cm). This is often the longest stage. The cervix effaces (thins) and dilates.</p>
-                    </div>
-                    
-                    <div class="concept-box border-indigo-500">
-                        <h3 class="text-lg font-semibold">Second Stage: Expulsion of the Foetus</h3>
-                        <p class="text-sm mt-1">From full cervical dilation to the complete birth of the baby. Contractions are strong and expulsive. The mother will typically experience an uncontrollable urge to push.</p>
-                    </div>
-
-                    <div class="concept-box border-indigo-700">
-                        <h3 class="text-lg font-semibold">Third Stage: Placental Delivery</h3>
-                        <p class="text-sm mt-1">From the birth of the baby until the complete expulsion of the placenta and membranes, and control of bleeding.</p>
-                    </div>
+            <!-- Physiology & Stages -->
+            <section id="physiology" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Physiology of Labour & The 5 P’s</h2>
+                <div class="physiology-box">
+                    <h3>Initiation of Labour</h3>
+                    <p>Foetal hypothalamic-pituitary-adrenal (HPA) axis → placental CRH → positive feedback loop → placental oxytocin + Prostaglandin E₂ (cervical ripening).</p>
                 </div>
-            </section>
-
-            <!-- Delivery Management -->
-            <section id="delivery" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2">Managing an Imminent Delivery</h2>
-                <div class="section-box">
-                    <div class="warning-box">
-                        <h3 class="text-lg font-semibold mb-2">Signs of Imminent Birth (Stay & Prepare)</h3>
-                        <ul class="list-disc pl-6">
-                            <li>Contractions < 2 minutes apart and lasting > 60 seconds.</li>
-                            <li>Uncontrollable urge to push or use bowels.</li>
-                            <li>Crowning or bulging perineum.</li>
-                            <li>Anal pouting.</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="text-xl font-semibold mt-6 mb-3">Second Stage Management</h3>
-                    <div class="management-box">
-                        <ol class="list-decimal pl-6 space-y-2">
-                            <li><strong>Positioning:</strong> Encourage a position of comfort for the mother (semi-recumbent, all-fours, side-lying). Avoid flat supine.</li>
-                            <li><strong>Environment:</strong> Ensure privacy, a warm environment (to prevent neonatal hypothermia), and prepare the maternity kit.</li>
-                            <li><strong>Crowning & Head Delivery:</strong> Encourage gentle, controlled pushing ("pant-pant-blow") as the head crowns to minimize perineal tearing. Support the perineum as per local guidelines (hands on vs. hands poised).</li>
-                            <li><strong>Restitution:</strong> Once the head delivers, it will naturally rotate (restitution) to align with the shoulders. Do not pull.</li>
-                            <li><strong>Shoulders & Body:</strong> With the next contraction, guide the head gently downwards to deliver the anterior shoulder, then gently upwards to deliver the posterior shoulder. The rest of the body will follow easily.</li>
-                            <li><strong>Immediate Care:</strong> Note the time of birth. Place the baby immediately on the mother's bare chest for <strong>skin-to-skin contact</strong> and cover them both with a warm, dry blanket.</li>
-                        </ol>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Postpartum / Third Stage -->
-            <section id="postpartum" class="mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 border-b-2 border-gray-200 pb-2">Third Stage & Neonatal Assessment</h2>
-                <div class="section-box">
-                    <h3 class="text-xl font-semibold mb-3">Neonatal Assessment (APGAR)</h3>
-                    <p class="mb-2">Assess the neonate at <strong>1 minute</strong> and <strong>5 minutes</strong> post-delivery. Do not delay resuscitation to calculate an APGAR score if the baby is non-vigorous.</p>
-                    
-                    <div class="overflow-x-auto">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Indicator</th>
-                                    <th>0 Points</th>
-                                    <th>1 Point</th>
-                                    <th>2 Points</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><strong>A</strong>ppearance (Colour)</td>
-                                    <td>Blue, pale all over</td>
-                                    <td>Pink body, blue extremities (Acrocyanosis)</td>
-                                    <td>Pink all over</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>P</strong>ulse (Heart Rate)</td>
-                                    <td>Absent</td>
-                                    <td>&lt; 100 bpm</td>
-                                    <td>&gt; 100 bpm</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>G</strong>rimace (Reflex Irritability)</td>
-                                    <td>No response</td>
-                                    <td>Grimace / weak cry</td>
-                                    <td>Strong cry, active avoidance</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>A</strong>ctivity (Muscle Tone)</td>
-                                    <td>Limp / flaccid</td>
-                                    <td>Some flexion of arms/legs</td>
-                                    <td>Active motion, well flexed</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>R</strong>espiration</td>
-                                    <td>Absent</td>
-                                    <td>Slow, irregular, weak cry</td>
-                                    <td>Good, strong cry</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <h3 class="text-xl font-semibold mt-6 mb-3">Third Stage Management</h3>
-                    <div class="management-box">
-                        <ul class="list-disc pl-6 space-y-2">
-                            <li><strong>Cord Clamping:</strong> Delay clamping for 1-3 minutes (or until cord stops pulsating) to allow placental transfusion, unless the baby requires active resuscitation away from the mother.</li>
-                            <li><strong>Placental Delivery:</strong> Wait for signs of placental separation (lengthening of cord, gush of blood, firming of fundus). Ask the mother to push when she feels a contraction. Keep the placenta in a bag for hospital inspection.</li>
-                            <li><strong>Post-Partum Haemorrhage (PPH) Check:</strong> Monitor blood loss carefully. A normal loss is usually under 500mL. Palpate the fundus to ensure it is firm and contracted.</li>
-                        </ul>
-                    </div>
-
-                    <h3 class="text-xl font-semibold mt-6 mb-3">Obstetric Handover</h3>
-                    <p class="mb-2">Ensure your handover includes maternity-specific details:</p>
-                    <ul class="list-disc pl-6 bg-white p-4 border border-gray-200 rounded-md">
-                        <li>Patient Name, Age, Gravidity (G), and Parity (P)</li>
-                        <li>Estimated Date of Delivery (EDD) or Gestation weeks</li>
-                        <li>Time of birth, Baby's Gender, and 1 & 5 minute APGAR scores</li>
-                        <li>Completion of the 3rd stage (Placenta delivered? Intact?)</li>
-                        <li>Estimated maternal blood loss (EBL)</li>
-                        <li>Vital signs and paramedic management provided</li>
+                <div class="physiology-box">
+                    <h3>Normal Labour Definition</h3>
+                    <ul>
+                        <li>Foetus at term (37–41 weeks)</li>
+                        <li>Cephalic presentation</li>
+                        <li>Spontaneous completion in &lt;18 hours</li>
+                        <li>Placenta delivered</li>
+                        <li>No complications</li>
                     </ul>
+                    <p><strong>The 5 P’s:</strong> Passage (pelvis), Passenger (foetus), Powers (contractions), Psych(ology), Position (maternal).</p>
+                </div>
+                <div class="physiology-box">
+                    <h3>False vs True Labour</h3>
+                    <table>
+                        <thead><tr><th>Feature</th><th>False Labour</th><th>True Labour</th></tr></thead>
+                        <tbody>
+                            <tr><td>Contractions</td><td>Irregular, decrease with rest/sleep</td><td>Regular, progressive, increase with activity</td></tr>
+                            <tr><td>Cervix</td><td>No change</td><td>Progressive effacement & dilation</td></tr>
+                            <tr><td>Show</td><td>Usually absent</td><td>Usually present</td></tr>
+                            <tr><td>Pain location</td><td>Lower abdomen/groin</td><td>Back to abdomen</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- First Stage -->
+            <section id="firststage" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">First Stage of Labour</h2>
+                <div class="management-box">
+                    <h3>Signs & Paramedic Role (Learning Outcome 2)</h3>
+                    <p>Onset of regular, strong contractions → cervical dilation to 10 cm.</p>
+                    <p><strong>DO:</strong> Support, calm, listen to birth plan, offer analgesia, consider cultural needs.</p>
+                    <p><strong>DO NOT:</strong></p>
+                    <ul>
+                        <li>Palpate abdomen unnecessarily</li>
+                        <li>Perform vaginal examination</li>
+                        <li>Auscultate fetal heart (out-of-hospital limitations)</li>
+                        <li>Force positions</li>
+                    </ul>
+                    <p class="quote">"Remember the earlier quotes from mothers – trust and listening matter."</p>
+                </div>
+            </section>
+
+            <!-- Second Stage -->
+            <section id="secondstage" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Imminent Labour & Safe Second Stage Delivery (Learning Outcome 3)</h2>
+                <div class="disorder-box">
+                    <h3>Signs of Imminent Delivery</h3>
+                    <ul>
+                        <li>Urge to push / bearing down</li>
+                        <li>Visible crowning / bulging perineum</li>
+                        <li>Rectal pressure / grunting</li>
+                    </ul>
+                </div>
+                <div class="management-box">
+                    <h3>Safe Hands-Off Delivery Steps</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Position of comfort (mother-led)</li>
+                        <li>Support perineum gently if needed (no forced control)</li>
+                        <li>Hands-off head delivery unless indicated</li>
+                        <li>Check for nuchal cord – manage gently</li>
+                        <li>Deliver shoulders & body</li>
+                        <li>Immediate skin-to-skin, delayed cord clamping (unless compromised)</li>
+                        <li>Dry & stimulate baby</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Third Stage -->
+            <section id="thirdstage" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Third Stage & Placenta Delivery (Learning Outcome 4)</h2>
+                <div class="management-box">
+                    <h3>Safe Management</h3>
+                    <ol>
+                        <li>Allow physiological delivery (no routine traction)</li>
+                        <li>Observe for signs of separation (gush of blood, cord lengthening, uterine rise)</li>
+                        <li>Support placenta delivery into sterile bag</li>
+                        <li>Inspect for completeness</li>
+                        <li>Monitor for PPH (fundal massage if needed)</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- APGAR -->
+            <section id="apgar" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Newborn Care & Illustrated APGAR Scoring</h2>
+                <div class="physiology-box">
+                    <h3>APGAR Score (at 1 & 5 minutes)</h3>
+                    <p><strong>Illustrated APGAR</strong> – source: National Institute of Child Health and Human Development (NICHD)</p>
+                    <table>
+                        <thead>
+                            <tr><th>Sign</th><th>0</th><th>1</th><th>2</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Appearance (colour)</strong></td><td>Blue/pale</td><td>Body pink, extremities blue</td><td>Completely pink</td></tr>
+                            <tr><td><strong>Pulse (heart rate)</strong></td><td>Absent</td><td>&lt;100 bpm</td><td>&gt;100 bpm</td></tr>
+                            <tr><td><strong>Grimace (reflex)</strong></td><td>No response</td><td>Grimace</td><td>Cry/pull away</td></tr>
+                            <tr><td><strong>Activity (tone)</strong></td><td>Limp</td><td>Some flexion</td><td>Active movement</td></tr>
+                            <tr><td><strong>Respiration</strong></td><td>Absent</td><td>Slow/irregular</td><td>Strong cry</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Total score: 7–10 = normal; 4–6 = moderate depression; 0–3 = severe depression requiring resuscitation.</p>
                 </div>
             </section>
 
         </main>
 
         <footer class="text-center mt-12 mb-4">
-            <p class="text-gray-500">Based on HLTH3021 Parturition and Labour Curriculum. Always prioritize patient dignity, informed consent, and adherence to your local Clinical Practice Guidelines.</p>
+            <p class="text-gray-500">This guide aligns with HLTH3021 learning outcomes and current evidence (Flanagan 2018, Keedle et al. 2022). Always follow NSW Ambulance Maternal Emergencies protocols. Respect birth plans – patient experience matters.</p>
         </footer>
     </div>
 </body>
