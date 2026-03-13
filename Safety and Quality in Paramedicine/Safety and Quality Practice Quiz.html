@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramedicine: Safety & Quality Master Assessment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .option-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-card:hover:not(.selected):not(.disabled) {
+            background-color: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+        .selected {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+        .disabled {
+            cursor: not-allowed;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-slate-900 text-white shadow-md py-6 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-bold tracking-tight">Paramedicine Theory</h1>
+                <p class="text-slate-300 text-xs sm:text-sm">Safety & Quality: 60 Question Master Assessment</p>
+            </div>
+            <div id="header-progress" class="hidden text-right">
+                <span class="text-sm font-semibold text-blue-400" id="header-counter">Q 1/60</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-10 text-center">
+            <div class="w-20 h-20 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+            </div>
+            <h2 class="text-3xl font-bold mb-4">Safety & Quality Master Exam</h2>
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+                <h3 class="font-semibold text-slate-800 mb-2">Exam Parameters:</h3>
+                <ul class="list-disc pl-5 text-slate-600 space-y-2 text-sm">
+                    <li><strong>Length:</strong> 60 highly detailed questions.</li>
+                    <li><strong>Topics:</strong> Quality Frameworks, Measurement (SPC/Run charts), Human Factors (SEIPS), Cognitive Bias, Safety-II & FRAM, and QI Tools.</li>
+                    <li><strong>Design:</strong> Formatted for deep analytical thinking and scenario application.</li>
+                    <li><strong>Review:</strong> Detailed rationales provided to identify knowledge gaps.</li>
+                </ul>
+            </div>
+            <button onclick="startQuiz()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-10 rounded-lg shadow-sm transition duration-200 text-lg">
+                Begin Exam
+            </button>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="hidden">
+            <!-- Progress Bar -->
+            <div class="mb-6">
+                <div class="flex justify-between text-sm font-medium text-slate-500 mb-2">
+                    <span id="question-counter">Question 1 of 60</span>
+                    <span id="progress-percentage">2%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5">
+                    <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style="width: 2%"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                <div id="question-type-badge" class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-indigo-100 text-indigo-800 mb-4">
+                    Category
+                </div>
+                <h3 id="question-text" class="text-lg sm:text-xl font-medium text-slate-900 mb-6 leading-relaxed">
+                    <!-- Question text injected here -->
+                </h3>
+
+                <!-- Options -->
+                <div id="options-container" class="space-y-3 mb-8">
+                    <!-- Options injected here -->
+                </div>
+
+                <!-- Footer / Next Button -->
+                <div class="flex justify-end border-t border-slate-100 pt-6 mt-6">
+                    <button id="next-btn" onclick="handleNext()" disabled class="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-medium py-2.5 px-8 rounded-lg shadow-sm transition duration-200">
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Container -->
+        <div id="results-container" class="hidden">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-10 text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2 text-slate-900">Exam Complete</h2>
+                <p class="text-slate-500 mb-8">Here is your analytical performance breakdown.</p>
+                
+                <div class="flex justify-center items-center mb-8">
+                    <div class="relative w-48 h-48">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                            <path class="text-slate-100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.8"/>
+                            <path id="score-circle" class="text-blue-600 transition-all duration-1000 ease-out" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.8"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="final-score-text" class="text-5xl font-bold text-slate-900">0%</span>
+                            <span id="raw-score-text" class="text-base text-slate-500 mt-1">0 / 60</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="score-message" class="text-xl font-medium mb-8"></div>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="resetQuiz()" class="bg-slate-800 hover:bg-slate-900 text-white font-medium py-2.5 px-8 rounded-lg shadow-sm transition duration-200">
+                        Retake Assessment
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Review -->
+            <div class="flex justify-between items-center mb-6 px-2">
+                <h3 class="text-xl font-bold text-slate-800">Review & Conceptual Rationale</h3>
+                <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" id="filter-incorrect" onchange="filterReviews()" class="form-checkbox h-5 w-5 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                    <span class="text-sm font-medium text-slate-700">Show Incorrect Only</span>
+                </label>
+            </div>
+            
+            <div id="review-container" class="space-y-6">
+                <!-- Review items injected here -->
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const questions = [
+            // Donabedian & Quality Frameworks (1-6)
+            { id: 1, type: "Quality Frameworks", text: "In Donabedian’s Model of Quality Care, which category evaluates the physical facilities, equipment, human resources, and organizational characteristics of a paramedic service?", options: ["A) Process", "B) Outcome", "C) Structure", "D) Indicator"], correctAnswer: 2, rationale: "Donabedian's 'Structure' refers to the stable, underlying attributes of the setting where care is delivered: the buildings, equipment (ambulances, monitors), and staff qualifications." },
+            { id: 2, type: "Quality Frameworks", text: "A paramedic service implements a new protocol requiring paramedics to administer aspirin to all suspected ACS patients within 10 minutes of arrival. Measuring the percentage of times this successfully happens is an example of what type of measure in Donabedian’s model?", options: ["A) Structure", "B) Process", "C) Outcome", "D) Standard"], correctAnswer: 1, rationale: "Process measures evaluate what is actually done to or for the patient (the actions, treatments, and adherence to clinical guidelines)." },
+            { id: 3, type: "Quality Frameworks", text: "Which of the following represents an 'Outcome' measure in paramedicine under Donabedian's framework?", options: ["A) The ratio of intensive care paramedics to basic life support paramedics.", "B) 30-day survival rates for out-of-hospital cardiac arrest (OHCA).", "C) The time taken from 000 call to ambulance arrival.", "D) The use of a checklist prior to performing Rapid Sequence Intubation (RSI)."], correctAnswer: 1, rationale: "Outcome measures look at the final effect of healthcare on the health status of patients, such as mortality, morbidity, or symptom relief (e.g., survival rates)." },
+            { id: 4, type: "Foundations of Quality", text: "According to Deming's System of Profound Knowledge (SoPK), understanding that a paramedic service is an interdependent network where a change in dispatch affects hospital turnaround times is an example of:", options: ["A) Theory of Knowledge", "B) Appreciation for a System", "C) Understanding Variation", "D) Psychology"], correctAnswer: 1, rationale: "Appreciation for a system involves recognizing the organization as a dynamic, interconnected network where components interact to achieve an aim." },
+            { id: 5, type: "Measurement & Indicators", text: "What is the primary difference between a 'Measure' and an 'Indicator'?", options: ["A) An indicator is qualitative; a measure is always quantitative.", "B) A measure is a specific, quantifiable value (e.g., minutes), while an indicator uses that measure to point toward the quality of a broader system.", "C) They are synonymous and can be used interchangeably in QI.", "D) An indicator is used only for financial auditing, whereas a measure is for clinical care."], correctAnswer: 1, rationale: "A measure is the raw quantification. An indicator is a measure that has been given context to signal the quality or safety of a system." },
+            { id: 6, type: "Measurement & Indicators", text: "When evaluating the attributes of a 'good indicator' in a quality improvement framework, which characteristic ensures that the indicator actually measures what it is intended to measure?", options: ["A) Reliability", "B) Validity", "C) Sensitivity", "D) Feasibility"], correctAnswer: 1, rationale: "Validity means the indicator accurately measures the true concept it is intended to capture, without systematic bias." },
+
+            // Model for Improvement (7-11)
+            { id: 7, type: "Model for Improvement", text: "The Model for Improvement (MFI) begins with three fundamental questions. Which of the following is NOT one of those three questions?", options: ["A) What are we trying to accomplish?", "B) How will we know that a change is an improvement?", "C) Who is directly responsible for the previous failure?", "D) What change can we make that will result in improvement?"], correctAnswer: 2, rationale: "The MFI focuses on forward-looking, systems-based improvement rather than individual blame. The three questions establish the Aim, the Measure, and the Changes." },
+            { id: 8, type: "Model for Improvement", text: "In the Plan-Do-Study-Act (PDSA) cycle, during which phase would a paramedic team review the data collected from a new checklist trial to compare it against their predictions?", options: ["A) Plan", "B) Do", "C) Study", "D) Act"], correctAnswer: 2, rationale: "The 'Study' phase involves analyzing the data, comparing results to the original predictions or hypotheses, and summarizing what was learned." },
+            { id: 9, type: "Model for Improvement", text: "A paramedic team decides to test a new stroke assessment tool on just one patient, during one shift, with one crew. Why is this small-scale test preferred in QI?", options: ["A) It saves money for the organization.", "B) It allows for rapid learning with minimal risk to the broader system and patients.", "C) Large-scale data is statistically irrelevant in paramedicine.", "D) It avoids the need for ethics committee approval."], correctAnswer: 1, rationale: "PDSA cycles emphasize small, rapid tests of change. If the change fails, the impact is minimal. If it succeeds, it can be scaled up iteratively." },
+            { id: 10, type: "Definitions", text: "A defined, agreed-upon level of performance that must be achieved (e.g., '100% of paramedics must maintain annual CPR certification') is best described as a:", options: ["A) Review Criterion", "B) Standard", "C) Indicator", "D) Control Limit"], correctAnswer: 1, rationale: "A standard is an established, mandatory level of excellence or rule. A review criterion is a systematically developed statement to assess appropriateness, but a standard is the rigid threshold." },
+            { id: 11, type: "Foundations of Quality", text: "According to Perla's Seven Propositions of the science of improvement, why is 'Contextual Knowledge' critical?", options: ["A) It proves that an intervention that works in one ambulance station will automatically work in all others.", "B) It highlights that improvement is highly dependent on the local environment, social factors, and culture.", "C) It suggests we should only rely on randomized controlled trials (RCTs).", "D) It eliminates the need for statistical process control."], correctAnswer: 1, rationale: "Context matters. An intervention successful in an urban setting may fail in a rural setting due to different resources, culture, and logistics." },
+
+            // Data, Variation, and Charts (12-21)
+            { id: 12, type: "Measurement Data", text: "What is the primary difference between a Run Chart and a Statistical Process Control (SPC) or Shewhart Chart?", options: ["A) Run charts plot data over time; SPC charts plot data alphabetically.", "B) SPC charts include calculated upper and lower control limits (sigma limits); run charts typically only use a median line.", "C) Run charts are used for special cause variation; SPC charts are used for common cause variation.", "D) There is no difference; they are different names for the same chart."], correctAnswer: 1, rationale: "SPC/Shewhart charts use statistical formulas to create control limits (usually 3 sigma), allowing for precise identification of common vs. special cause variation. Run charts are simpler." },
+            { id: 13, type: "Measurement Data", text: "In an SPC chart monitoring ambulance response times, you notice the data points are fluctuating randomly, but all remain completely inside the upper and lower control limits. There are no patterns. This indicates:", options: ["A) Special Cause Variation", "B) Common Cause Variation", "C) An astronomical data point", "D) System failure requiring immediate disciplinary action"], correctAnswer: 1, rationale: "Random fluctuation within the control limits indicates a stable system experiencing Common Cause Variation (inherent to the system's design)." },
+            { id: 14, type: "Measurement Data", text: "Which type of variation requires you to fundamentally redesign the 'Work System' if you want to see improvement, rather than reacting to individual data points?", options: ["A) Common Cause Variation", "B) Special Cause Variation", "C) Astronomical Variation", "D) Heuristic Variation"], correctAnswer: 0, rationale: "Because common cause variation is built into the system, the only way to improve the baseline is to change the system itself (new equipment, new policies)." },
+            { id: 15, type: "Measurement Data", text: "On a run chart, what defines a 'Shift'?", options: ["A) 5 or more consecutive points all going up or all going down.", "B) A single point that is wildly outside historical norms.", "C) 6 or more consecutive data points falling on the same side of the median line.", "D) Data points alternating up and down rapidly."], correctAnswer: 2, rationale: "A shift is defined statistically as 6 (or sometimes 8, depending on the strictness of the rule used) consecutive points on one side of the median." },
+            { id: 16, type: "Measurement Data", text: "On a run chart, what defines a 'Trend'?", options: ["A) 6 or more consecutive points on one side of the median.", "B) 5 or more consecutive data points all continuously going up or continuously going down.", "C) A sudden spike that breaches an upper control limit.", "D) Random scatter across the median."], correctAnswer: 1, rationale: "A trend represents continuous movement in a single direction (up or down) for at least 5 consecutive points." },
+            { id: 17, type: "Measurement Data", text: "A paramedic manager notices response times dipped slightly last Tuesday. They immediately issue a memo reprimanding the staff, assuming staff were lazy. However, the dip was just standard, daily statistical noise. This error is known as:", options: ["A) The Hawthorne Effect", "B) Tampering (Treating common cause variation as special cause)", "C) Normalizing deviance", "D) Systems engineering"], correctAnswer: 1, rationale: "Tampering occurs when managers react to normal, common cause variation as if it were a special cause. This over-correction actually increases instability in the system." },
+            { id: 18, type: "Measurement Data", text: "You implement a new dispatch algorithm. The SPC chart immediately shows a single data point that sits completely above the Upper Control Limit (UCL). What is this called, and what does it indicate?", options: ["A) A Shift; the system is stable.", "B) An Astronomical Point; it indicates Special Cause Variation that must be investigated.", "C) Common Cause; ignore it as statistical noise.", "D) A Trend; wait for 4 more points."], correctAnswer: 1, rationale: "A point outside the control limits is an 'Astronomical' point and is a definitive signal of Special Cause Variation. It requires immediate investigation to identify the root cause." },
+            { id: 19, type: "Measurement Data", text: "What do the Upper and Lower Control Limits on a Shewhart (SPC) chart represent mathematically?", options: ["A) The absolute highest and lowest scores ever achieved by the service.", "B) The target goals set by management.", "C) The boundaries of expected common cause variation, typically calculated at +/- 3 standard deviations (sigma) from the mean.", "D) The 50th and 75th percentiles."], correctAnswer: 2, rationale: "Control limits define the natural boundaries of the system's variation, mathematically calculated (usually +/- 3 sigma), not arbitrary goals." },
+            { id: 20, type: "Measurement Data", text: "If a system is exhibiting 'Special Cause Variation', the system is considered to be:", options: ["A) Stable and predictable", "B) Unstable and unpredictable", "C) Highly reliable", "D) Ready for large-scale PDSA expansion"], correctAnswer: 1, rationale: "Special cause variation means an external, non-routine factor has acted upon the system, making it unstable and unpredictable until that factor is addressed." },
+            { id: 21, type: "Quality Frameworks", text: "A key challenge in developing indicators is 'gaming' or 'tunnel vision'. What does this refer to?", options: ["A) When paramedics use video games to reduce cognitive load.", "B) When a system focuses so heavily on improving one specific metric (e.g., response times) that other unmeasured areas of patient care suffer.", "C) Using only retrospective data.", "D) Failing to use Shewhart charts."], correctAnswer: 1, rationale: "If an indicator is tied to targets/funding, people may 'game' the system or develop 'tunnel vision', focusing solely on that number at the expense of holistic quality." },
+
+            // Safety Culture, Just Culture (22-26)
+            { id: 22, type: "Safety Culture", text: "What is a major characteristic of a 'Just Culture' in a paramedicine organization?", options: ["A) A zero-tolerance policy where all errors result in immediate termination.", "B) Total amnesty, where individuals are never held accountable for any actions.", "C) A culture that balances system-wide learning with individual accountability, distinguishing between human error, at-risk behavior, and reckless behavior.", "D) Reporting errors only to external legal bodies rather than internal management."], correctAnswer: 2, rationale: "A Just Culture moves away from purely punitive models. It recognizes human error is often a symptom of bad systems, but still holds individuals accountable for deliberately reckless behavior." },
+            { id: 23, type: "Safety Culture", text: "Which of the following is historically the most significant barrier to error reporting among paramedics?", options: ["A) Lack of computer access", "B) Fear of blame, litigation, and punitive action by management", "C) Over-education on quality frameworks", "D) Apathy towards patient outcomes"], correctAnswer: 1, rationale: "The fear of retribution, shame, or legal action is the primary reason healthcare professionals fail to report errors or near-misses." },
+            { id: 24, type: "Safety Culture", text: "In a punitive (blame-oriented) culture, what happens to the organization's ability to learn from errors?", options: ["A) It increases, as fear motivates better performance.", "B) It decreases drastically, as errors are hidden ('swept under the rug') and root systemic causes are never addressed.", "C) It remains unchanged.", "D) It shifts to a Safety-II model automatically."], correctAnswer: 1, rationale: "When people are afraid to report, the system loses the vital data it needs to identify latent safety threats and improve processes." },
+            { id: 25, type: "Safety Culture", text: "A paramedic makes a medication error due to identically packaged vials of adrenaline and amiodarone placed in the same pouch. In a 'Just Culture', how is this viewed?", options: ["A) Pure reckless behavior requiring individual suspension.", "B) A human error driven by a systemic flaw (poor packaging/organization), prompting a redesign of the drug bag.", "C) Sabotage.", "D) An acceptable, unpreventable cost of doing business."], correctAnswer: 1, rationale: "A Just Culture recognizes that identically packaged drugs set the clinician up to fail (a systemic Latent Safety Threat), and focuses on fixing the system." },
+            { id: 26, type: "Safety Culture", text: "What is a 'near-miss' in patient safety?", options: ["A) An event that resulted in patient death.", "B) An error that reached the patient but caused no harm.", "C) An error or event that had the potential to cause harm but was intercepted or corrected before reaching the patient.", "D) An expected side effect of a drug."], correctAnswer: 2, rationale: "Near-misses are critical learning opportunities. They show where the system is failing, but luckily, a forcing function or human intervention caught it before harm occurred." },
+
+            // Human Factors, SEIPS & Cognitive Load (27-36)
+            { id: 27, type: "Human Factors & SEIPS", text: "What does the SEIPS (Systems Engineering Initiative for Patient Safety) framework primarily model?", options: ["A) The financial cost of paramedicine.", "B) The interactions within a 'Work System' that lead to clinical processes and patient/staff outcomes.", "C) Only the psychological traits of individual paramedics.", "D) The pharmacological half-life of emergency drugs."], correctAnswer: 1, rationale: "SEIPS models how components of the Work System interact to shape care processes, which then lead to outcomes (safety, quality, staff well-being)." },
+            { id: 28, type: "Human Factors & SEIPS", text: "According to the SEIPS framework, an ambulance with poor interior lighting and excessive engine noise is a failure in which Work System component?", options: ["A) Person", "B) Organization", "C) Tools and Technology", "D) Internal Environment"], correctAnswer: 3, rationale: "Lighting, noise, space, and temperature fall under the physical 'Internal Environment' where the work is performed." },
+            { id: 29, type: "Human Factors & SEIPS", text: "During a simulation, you notice the drug dosages are written in tiny font on the ampoules, requiring the paramedic to squint under pressure. This is an example of a:", options: ["A) Cognitive bias", "B) Latent Safety Threat (LST)", "C) Active failure", "D) Special cause variation"], correctAnswer: 1, rationale: "Latent Safety Threats are hidden systemic flaws (poor design, bad policies) that lie dormant until the right set of circumstances align to cause an accident." },
+            { id: 30, type: "Human Factors & SEIPS", text: "Which component of the SEIPS Work System involves analyzing shift schedules, protocols, and the service's safety culture?", options: ["A) Tools & Technology", "B) Organization", "C) Tasks", "D) External Environment"], correctAnswer: 1, rationale: "The 'Organization' component deals with how work is structured, rules, culture, scheduling, and team dynamics." },
+            { id: 31, type: "Cognitive Load Theory", text: "In Cognitive Load Theory, the mental effort required simply to understand the inherent complexity of a clinical task (e.g., calculating a complex pediatric drug dose) is called:", options: ["A) Extraneous Load", "B) Germane Load", "C) Intrinsic Load", "D) Working Memory Capacity"], correctAnswer: 2, rationale: "Intrinsic load is the inherent difficulty of the material or task itself. It cannot be eliminated, only managed through training/schema formation." },
+            { id: 32, type: "Cognitive Load Theory", text: "You are attempting an intubation, but a bystander is screaming, the monitor is alarming loudly for a detached SpO2 probe, and the light is flickering. These distractions contribute to:", options: ["A) Intrinsic Load", "B) Extraneous Load", "C) Germane Load", "D) Type 1 Thinking"], correctAnswer: 1, rationale: "Extraneous load is generated by how information is presented or by environmental distractions. It does not aid learning or task completion and should be minimized." },
+            { id: 33, type: "Cognitive Load Theory", text: "What is 'Germane Load'?", options: ["A) The mental capacity directed towards integrating new information into long-term memory schemas (deep learning).", "B) The cognitive overload caused by fatigue.", "C) The physical effort of lifting a stretcher.", "D) The bias of relying on the first piece of information."], correctAnswer: 0, rationale: "Germane load is the 'good' cognitive load—the mental work of taking what you are experiencing and turning it into permanent, organized knowledge (schemas)." },
+            { id: 34, type: "Cognitive Load Theory", text: "Why do expert paramedics appear to handle complex, chaotic scenes with lower cognitive load than novices?", options: ["A) They have physically larger brains.", "B) They have developed complex 'schemas' in long-term memory that allow them to process multiple pieces of information as a single chunk.", "C) They completely ignore the patient.", "D) They only use Type 2 analytical thinking."], correctAnswer: 1, rationale: "Experts use schemas. By grouping information into established patterns (chunks), they bypass the severe limitations of working memory, freeing up capacity to manage the scene." },
+            { id: 35, type: "Clinical Application", text: "What is the primary purpose of the 'Zero-Point Survey' approach in paramedicine?", options: ["A) To bill the patient before transport.", "B) To rapidly prepare the self, the team, and the environment BEFORE making physical contact with the patient, optimizing cognitive bandwidth.", "C) To bypass the primary survey and go straight to secondary assessment.", "D) To declare a patient deceased on scene."], correctAnswer: 1, rationale: "The zero-point survey occurs as you approach the scene (Self, Team, Environment). It aims to regulate stress, allocate roles, and mitigate extraneous cognitive load before the clinical encounter begins." },
+            { id: 36, type: "Clinical Application", text: "Applying Cognitive Load Theory, what is the best strategy for a paramedic to manage a highly complex pediatric cardiac arrest?", options: ["A) Rely entirely on memory to prove competence.", "B) Attempt to perform all clinical interventions alone.", "C) Utilize cognitive aids (like a pediatric reference tape/app) to offload intrinsic load, and assign a clear team leader to manage extraneous load.", "D) Ignore the environment and focus only on the airway."], correctAnswer: 2, rationale: "Cognitive aids (like reference cards) externalize memory demands, freeing up working memory. Strong leadership minimizes chaotic distractions (extraneous load)." },
+
+            // Cognitive Bias & Dual Process Theory (37-47)
+            { id: 37, type: "Cognitive Psychology", text: "According to Dual Process Theory, which system of thinking is fast, intuitive, automatic, and highly reliant on pattern recognition (heuristics)?", options: ["A) Type 1", "B) Type 2", "C) Germane Processing", "D) Metacognition"], correctAnswer: 0, rationale: "Type 1 thinking is our rapid, automatic 'autopilot'. It is highly efficient for experts but prone to cognitive biases." },
+            { id: 38, type: "Cognitive Psychology", text: "When a paramedic encounters a vague, complex, or contradictory clinical presentation, which type of thinking MUST they deliberately engage to ensure safety?", options: ["A) Type 1 (Intuitive)", "B) Type 2 (Analytical, slow, and effortful)", "C) Affective reasoning", "D) Confirmation bias"], correctAnswer: 1, rationale: "Type 2 thinking is analytical, slow, and deliberate. It is required when pattern recognition fails or when dealing with high-risk, ambiguous presentations to avoid diagnostic errors." },
+            { id: 39, type: "Cognitive Psychology", text: "A paramedic attends a patient who is intoxicated, aggressive, and unhygienic. The paramedic feels strong negative emotions and consequently performs a rapid, superficial assessment, missing a subdural hematoma. This is an example of:", options: ["A) Anchoring Bias", "B) Affective Bias", "C) Availability Heuristic", "D) Framing Effect"], correctAnswer: 1, rationale: "Affective bias occurs when a clinician's emotional state or feelings toward a patient (positive or negative) influence their clinical judgment and assessment." },
+            { id: 40, type: "Cognitive Psychology", text: "You get a handover from nursing home staff stating the patient has 'just a simple UTI'. You unconsciously accept this diagnosis and look only for evidence supporting it, ignoring signs of sepsis. This represents:", options: ["A) Anchoring and Confirmation Bias", "B) Commission Bias", "C) Gambler's Fallacy", "D) Hindsight Bias"], correctAnswer: 0, rationale: "Anchoring is locking onto the first piece of information (the handover). Confirmation bias is seeking out data that supports that anchor while ignoring contradictory evidence." },
+            { id: 41, type: "Cognitive Psychology", text: "Which cognitive debiasing strategy involves asking yourself, 'What is the most dangerous thing this could be, and have I ruled it out?'", options: ["A) Affective distancing", "B) Consider-the-opposite (or 'Rule out worst-case scenario')", "C) Simulation training", "D) Relying on Type 1 heuristics"], correctAnswer: 1, rationale: "Considering the opposite or actively searching for reasons why your initial intuitive diagnosis might be wrong forces the brain from Type 1 into Type 2 analytical thinking." },
+            { id: 42, type: "Cognitive Psychology", text: "A 'forcing function' is a strategy to increase patient safety. Which of the following is an example of a forcing function in paramedicine?", options: ["A) Encouraging staff to 'try harder'.", "B) A physical design change, such as oxygen and medical air wall-outlets having different shaped connectors so they cannot be accidentally swapped.", "C) Reading a textbook on biases.", "D) Having a punitive safety culture."], correctAnswer: 1, rationale: "A forcing function is a hard stop. It is a system design that makes it impossible (or very difficult) to perform a specific error, regardless of cognitive load." },
+            { id: 43, type: "Cognitive Psychology", text: "What is 'Metacognition'?", options: ["A) The physical assessment of the neurological system.", "B) Thinking about your own thinking; the ability to self-monitor and regulate your cognitive processes.", "C) The inability to remember medical terminology.", "D) A rare form of dementia."], correctAnswer: 1, rationale: "Metacognition involves stepping back and observing your own thought processes in real-time ('Am I anchoring right now? Am I too tired to make this call?')." },
+            { id: 44, type: "Cognitive Psychology", text: "In the Transtheoretical Model of Change applied to cognitive debiasing, a paramedic who actively uses cognitive aids and routinely reflects on their biases after every shift is in the:", options: ["A) Precontemplation Phase", "B) Contemplation Phase", "C) Maintenance Phase", "D) Relapse Phase"], correctAnswer: 2, rationale: "Maintenance involves sustaining the new behavior over time so that debiasing techniques become a routine part of professional practice." },
+            { id: 45, type: "Cognitive Psychology", text: "A clinician is completely unaware that cognitive biases exist or that they affect their practice. According to the Transtheoretical Model, they are in:", options: ["A) Precontemplation", "B) Preparation", "C) Action", "D) Maintenance"], correctAnswer: 0, rationale: "Precontemplation is the stage where there is no intention to change behavior, often due to a lack of awareness of the problem." },
+            { id: 46, type: "Cognitive Psychology", text: "Why are shift work, sleep deprivation, and high-stress environments considered 'high-risk' for cognitive bias?", options: ["A) Because they increase working memory capacity.", "B) Because fatigue depletes the cognitive energy required for Type 2 thinking, causing clinicians to default to rapid, error-prone Type 1 heuristics.", "C) Because they eliminate affective bias.", "D) Because sleep deprivation improves pattern recognition."], correctAnswer: 1, rationale: "Type 2 analytical thinking requires significant cognitive energy. Fatigue strips this energy, forcing reliance on fast, less accurate heuristics." },
+            { id: 47, type: "Safety Culture", text: "A key component of post-incident reflective practice is:", options: ["A) Finding out who to blame so they can be fired.", "B) Engaging in metacognition to understand how the system, environment, and personal biases contributed to clinical decisions.", "C) Writing a social media post about the patient.", "D) Falsifying documentation to avoid scrutiny."], correctAnswer: 1, rationale: "Professional reflective practice requires deep metacognition and systems thinking to uncover LSTs and cognitive errors to improve future performance." },
+
+            // QI Tools & Methods (48-53)
+            { id: 48, type: "QI Tools & Methods", text: "Which analytical tool visually maps out the potential root causes of a specific problem into categories like People, Methods, Equipment, and Environment?", options: ["A) Trigger Tool", "B) Cause and Effect Diagram (Fishbone / Ishikawa)", "C) Driver Diagram", "D) Run Chart"], correctAnswer: 1, rationale: "The Fishbone diagram helps teams brainstorm and categorize all potential root causes contributing to an effect or problem." },
+            { id: 49, type: "QI Tools & Methods", text: "A 'Driver Diagram' is primarily used to:", options: ["A) Analyze historical mortality rates.", "B) Visually translate a high-level aim into logical primary and secondary drivers, and link them to specific change ideas (interventions).", "C) Track an ambulance's GPS location.", "D) Map out the anatomy of the heart."], correctAnswer: 1, rationale: "Driver diagrams act as a roadmap for QI projects, showing the theory of what drives the system and how specific changes connect to the overall goal." },
+            { id: 50, type: "QI Tools & Methods", text: "Failure Modes and Effects Analysis (FMEA) is a powerful safety tool because it is:", options: ["A) Exclusively retrospective, used only after a patient dies.", "B) Prospective; it systematically evaluates a new process BEFORE implementation to identify where and how it might fail, and assess the severity of those failures.", "C) A method of disciplining staff.", "D) Used only for financial auditing."], correctAnswer: 1, rationale: "Unlike root cause analysis (RCA), which looks backward after harm, FMEA looks forward to anticipate and mitigate failures before they occur." },
+            { id: 51, type: "QI Tools & Methods", text: "Which quality improvement tool involves scanning patient records for specific clinical clues (e.g., Naloxone administration, return calls within 24 hours) to efficiently identify adverse events?", options: ["A) Trigger Tool", "B) Flowchart", "C) Pareto Chart", "D) Checklists"], correctAnswer: 0, rationale: "Trigger tools use specific clinical flags (triggers) to rapidly review charts, proving much more sensitive and efficient at finding harm than random sampling." },
+            { id: 52, type: "QI Tools & Methods", text: "What is the primary psychological benefit of using a standardized Checklist prior to a high-acuity procedure like Rapid Sequence Intubation (RSI)?", options: ["A) It proves to management that the paramedic was awake.", "B) It offloads working memory, mitigates extraneous load, and ensures critical steps are not missed due to stress or cognitive tunneling.", "C) It replaces the need for clinical training.", "D) It ensures the procedure takes longer to perform."], correctAnswer: 1, rationale: "Checklists externalize knowledge. In high-stress situations, Type 1 thinking takes over and memory fails. Checklists force cognitive pauses and ensure safety steps are verified." },
+            { id: 53, type: "QI Tools & Methods", text: "If a paramedic service wants to map the exact, step-by-step physical and informational journey of a patient from a 000 call to hospital handover, the best tool is a:", options: ["A) Flowchart (Process Map)", "B) SPC Chart", "C) Fishbone Diagram", "D) Trigger Tool"], correctAnswer: 0, rationale: "Flowcharts visually document the sequence of steps, decisions, and handoffs in a process, making it easy to spot bottlenecks and redundancies." },
+
+            // Safety-II & FRAM (54-60)
+            { id: 54, type: "Safety-II & FRAM", text: "Traditional patient safety (Safety-I) focuses on ensuring 'as few things as possible go wrong'. What is the primary focus of Safety-II?", options: ["A) Ensuring zero variation in paramedic practice.", "B) Ensuring 'as many things as possible go right', focusing on how everyday clinical work succeeds through human adaptability.", "C) Ignoring errors entirely.", "D) Punishing people faster."], correctAnswer: 1, rationale: "Safety-II looks at the 99% of time things go well. It recognizes that safety is not just the absence of accidents, but the presence of resilience and adaptability." },
+            { id: 55, type: "Safety-II & FRAM", text: "In the context of Safety-II, why is human variation and adaptability viewed positively rather than negatively?", options: ["A) Because paramedics like to break the rules.", "B) Because clinical environments are unpredictable and complex; protocols cannot cover every scenario, so humans must adapt to create safety.", "C) Because variation is always a Special Cause.", "D) It isn't; Safety-II strictly forbids variation."], correctAnswer: 1, rationale: "Safety-I tries to constrain variation. Safety-II recognizes that in complex, dynamic systems, humans adjusting to unexpected conditions is the source of safety." },
+            { id: 56, type: "Safety-II & FRAM", text: "The Functional Resonance Analysis Method (FRAM) models system variability. Which of the following is NOT one of the six aspects of a FRAM hexagon?", options: ["A) Input", "B) Output", "C) Blame", "D) Preconditions"], correctAnswer: 2, rationale: "The 6 aspects of a FRAM function are: Input, Output, Preconditions, Resources, Control, and Time. It maps functions, not individual blame." },
+            { id: 57, type: "Safety-II & FRAM", text: "In a FRAM model, what does the 'Resource' aspect of a function refer to?", options: ["A) What starts the function.", "B) What is produced by the function.", "C) What is consumed or needed by the function to process the input (e.g., energy, equipment, staff).", "D) The clinical guidelines governing the function."], correctAnswer: 2, rationale: "Resources are the things consumed or utilized during the function (e.g., medications, battery power, physical effort). Guidelines are considered 'Control'." },
+            { id: 58, type: "Safety-II & FRAM", text: "A key concept in studying work systems is the gap between 'Work-as-Imagined' (WAI) and 'Work-as-Done' (WAD). What does this mean?", options: ["A) WAI is what paramedics do; WAD is what doctors do.", "B) WAI is how management writes the protocol assuming ideal conditions; WAD is how the work actually happens in messy, real-world conditions.", "C) WAI is always safer than WAD.", "D) WAD applies only to simulation environments."], correctAnswer: 1, rationale: "WAI is the idealized blueprint (protocols, policies). WAD is the reality of adapting to broken equipment, difficult environments, and incomplete information." },
+            { id: 59, type: "Safety-II & FRAM", text: "According to Safety-II, a highly resilient paramedic team demonstrates four key capabilities. They are: Anticipate, Monitor, Respond, and...", options: ["A) Learn", "B) Report", "C) Punish", "D) Document"], correctAnswer: 0, rationale: "A resilient system must be able to Anticipate (look forward), Monitor (what is happening now), Respond (adapt to changes), and Learn (from what went right and wrong)." },
+            { id: 60, type: "Synthesis", text: "A crew attends a complex extrication. The stretcher breaks, but they adapt by using a scoop and webbing to safely move the patient. Safety-I would investigate the broken stretcher as a failure. How would Safety-II view this event?", options: ["A) As a catastrophic system collapse requiring immediate suspension.", "B) It would ignore the stretcher entirely.", "C) As an opportunity to study how the crew successfully adapted to a resource failure, learning from their 'everyday resilience' to train others.", "D) By creating a Fishbone diagram to blame the manufacturer."], correctAnswer: 2, rationale: "Safety-II actively studies the adaptation. While fixing the stretcher is important, studying HOW the crew managed to succeed despite the failure provides vital insights into system resilience." }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = new Array(questions.length).fill(undefined);
+
+        // DOM Elements
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const quizContainer = document.getElementById('quiz-container');
+        const resultsContainer = document.getElementById('results-container');
+        const headerProgress = document.getElementById('header-progress');
+        const headerCounter = document.getElementById('header-counter');
+        
+        const questionCounter = document.getElementById('question-counter');
+        const progressPercentage = document.getElementById('progress-percentage');
+        const progressBar = document.getElementById('progress-bar');
+        
+        const questionTypeBadge = document.getElementById('question-type-badge');
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const nextBtn = document.getElementById('next-btn');
+        const filterCheckbox = document.getElementById('filter-incorrect');
+
+        function startQuiz() {
+            welcomeScreen.classList.add('hidden');
+            quizContainer.classList.remove('hidden');
+            headerProgress.classList.remove('hidden');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            
+            // Update Progress
+            const progress = ((currentQuestionIndex) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            questionCounter.innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+            headerCounter.innerText = `Q ${currentQuestionIndex + 1}/${questions.length}`;
+            progressPercentage.innerText = `${Math.round(progress)}%`;
+
+            // Setup Question Badge Colors based on topic
+            questionTypeBadge.innerText = currentQuestion.type;
+            const typeLower = currentQuestion.type.toLowerCase();
+            if (typeLower.includes("data") || typeLower.includes("measurement")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 mb-4";
+            } else if (typeLower.includes("human factors") || typeLower.includes("culture")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 mb-4";
+            } else if (typeLower.includes("cognitive")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800 mb-4";
+            } else if (typeLower.includes("safety-ii") || typeLower.includes("synthesis")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800 mb-4";
+            } else if (typeLower.includes("qi tools") || typeLower.includes("improvement")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800 mb-4";
+            } else {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-slate-100 text-slate-800 mb-4";
+            }
+
+            questionText.innerText = currentQuestion.text;
+            
+            optionsContainer.innerHTML = '';
+            nextBtn.disabled = true;
+
+            // Render Options
+            currentQuestion.options.forEach((option, index) => {
+                const optionEl = document.createElement('div');
+                optionEl.className = 'option-card border border-slate-200 rounded-xl p-4 cursor-pointer flex items-start gap-3 bg-white';
+                optionEl.onclick = () => selectOption(index);
+                
+                // Radio button circle
+                const radioCircle = document.createElement('div');
+                radioCircle.className = 'w-5 h-5 rounded-full border border-slate-300 flex-shrink-0 mt-0.5 flex items-center justify-center';
+                radioCircle.id = `radio-${index}`;
+                
+                const radioInner = document.createElement('div');
+                radioInner.className = 'w-2.5 h-2.5 rounded-full bg-blue-600 hidden';
+                radioInner.id = `radio-inner-${index}`;
+                radioCircle.appendChild(radioInner);
+
+                const optionText = document.createElement('span');
+                optionText.className = 'text-slate-700 font-medium leading-relaxed';
+                optionText.innerText = option;
+
+                optionEl.appendChild(radioCircle);
+                optionEl.appendChild(optionText);
+                optionEl.id = `option-${index}`;
+                
+                optionsContainer.appendChild(optionEl);
+            });
+
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.innerText = "Finish Exam";
+            } else {
+                nextBtn.innerText = "Next Question";
+            }
+
+            if(userAnswers[currentQuestionIndex] !== undefined) {
+                selectOption(userAnswers[currentQuestionIndex]);
+            }
+        }
+
+        function selectOption(selectedIndex) {
+            const options = optionsContainer.children;
+            for (let i = 0; i < options.length; i++) {
+                options[i].classList.remove('selected');
+                document.getElementById(`radio-${i}`).classList.remove('border-blue-600');
+                document.getElementById(`radio-inner-${i}`).classList.add('hidden');
+            }
+
+            const selectedEl = document.getElementById(`option-${selectedIndex}`);
+            selectedEl.classList.add('selected');
+            document.getElementById(`radio-${selectedIndex}`).classList.add('border-blue-600');
+            document.getElementById(`radio-inner-${selectedIndex}`).classList.remove('hidden');
+
+            userAnswers[currentQuestionIndex] = selectedIndex;
+            nextBtn.disabled = false;
+        }
+
+        function handleNext() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+                window.scrollTo(0, 0); 
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            score = 0;
+            userAnswers.forEach((ans, index) => {
+                if (ans === questions[index].correctAnswer) {
+                    score++;
+                }
+            });
+
+            quizContainer.classList.add('hidden');
+            headerProgress.classList.add('hidden');
+            resultsContainer.classList.remove('hidden');
+            
+            filterCheckbox.checked = false; 
+            renderResults();
+        }
+
+        function renderResults() {
+            const percentage = Math.round((score / questions.length) * 100);
+            
+            setTimeout(() => {
+                document.getElementById('score-circle').style.strokeDasharray = `${percentage}, 100`;
+                document.getElementById('final-score-text').innerText = `${percentage}%`;
+                document.getElementById('raw-score-text').innerText = `${score} / ${questions.length}`;
+            }, 100);
+
+            const msgEl = document.getElementById('score-message');
+            if (percentage >= 85) {
+                msgEl.innerText = "Exceptional Systems Thinking! You have mastered the theory.";
+                msgEl.className = "text-xl font-medium mb-8 text-green-600";
+                document.getElementById('score-circle').classList.replace('text-blue-600', 'text-green-500');
+            } else if (percentage >= 65) {
+                msgEl.innerText = "Solid theoretical foundation. Review the rationales to sharpen your concepts.";
+                msgEl.className = "text-xl font-medium mb-8 text-yellow-600";
+                document.getElementById('score-circle').classList.replace('text-blue-600', 'text-yellow-500');
+            } else {
+                msgEl.innerText = "Further study recommended. Focus heavily on frameworks and charts.";
+                msgEl.className = "text-xl font-medium mb-8 text-red-600";
+                document.getElementById('score-circle').classList.replace('text-blue-600', 'text-red-500');
+            }
+
+            generateReviewCards(false);
+            window.scrollTo(0, 0);
+        }
+
+        function generateReviewCards(showIncorrectOnly) {
+            const reviewContainer = document.getElementById('review-container');
+            reviewContainer.innerHTML = '';
+
+            questions.forEach((q, i) => {
+                const isCorrect = userAnswers[i] === q.correctAnswer;
+                
+                if (showIncorrectOnly && isCorrect) return; 
+                
+                const reviewCard = document.createElement('div');
+                reviewCard.className = `border rounded-xl p-5 sm:p-6 ${isCorrect ? 'border-green-200 bg-green-50/30' : 'border-red-200 bg-red-50/30'}`;
+                
+                const statusBadge = isCorrect 
+                    ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Correct</span>`
+                    : `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> Incorrect</span>`;
+
+                reviewCard.innerHTML = `
+                    <div class="flex items-start justify-between mb-3">
+                        <h4 class="font-bold text-slate-800">Q${i + 1}. <span class="text-sm font-normal text-slate-500 ml-1">(${q.type})</span></h4>
+                        ${statusBadge}
+                    </div>
+                    <p class="text-slate-800 font-medium text-sm mb-4 leading-relaxed">${q.text}</p>
+                    
+                    <div class="space-y-2 mb-4 text-sm">
+                        <div class="p-3 rounded-lg ${isCorrect ? 'bg-green-100/50 border border-green-200 text-green-900' : 'bg-red-100/50 border border-red-200 text-red-900'}">
+                            <strong>Your Answer:</strong> ${userAnswers[i] !== undefined ? q.options[userAnswers[i]] : 'Skipped'}
+                        </div>
+                        ${!isCorrect ? `
+                        <div class="p-3 rounded-lg bg-green-100/50 border border-green-200 text-green-900">
+                            <strong>Correct Answer:</strong> ${q.options[q.correctAnswer]}
+                        </div>` : ''}
+                    </div>
+                    
+                    <div class="mt-4 pt-4 border-t border-slate-200">
+                        <h5 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Conceptual Rationale</h5>
+                        <p class="text-slate-700 text-sm leading-relaxed">${q.rationale}</p>
+                    </div>
+                `;
+                reviewContainer.appendChild(reviewCard);
+            });
+        }
+
+        function filterReviews() {
+            generateReviewCards(filterCheckbox.checked);
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            userAnswers = new Array(questions.length).fill(undefined);
+            
+            document.getElementById('score-circle').classList.remove('text-green-500', 'text-yellow-500', 'text-red-500');
+            document.getElementById('score-circle').classList.add('text-blue-600');
+            document.getElementById('score-circle').style.strokeDasharray = `0, 100`;
+
+            resultsContainer.classList.add('hidden');
+            welcomeScreen.classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
