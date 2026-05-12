@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramedicine: Trauma Care Master Assessment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .option-card {
+            transition: all 0.2s ease-in-out;
+        }
+        .option-card:hover:not(.selected):not(.disabled) {
+            background-color: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+        .selected {
+            border-color: #3b82f6;
+            background-color: #eff6ff;
+            box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+        .disabled {
+            cursor: not-allowed;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-slate-900 text-white shadow-md py-6 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-bold tracking-tight">Paramedicine Theory</h1>
+                <p class="text-slate-300 text-xs sm:text-sm">Trauma Care: 60 Question Master Assessment</p>
+            </div>
+            <div id="header-progress" class="hidden text-right">
+                <span class="text-sm font-semibold text-blue-400" id="header-counter">Q 1/60</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full">
+        
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-10 text-center">
+            <div class="w-20 h-20 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+            </div>
+            <h2 class="text-3xl font-bold mb-4">Trauma Care Master Exam</h2>
+            <div class="bg-slate-50 border border-slate-200 rounded-lg p-6 mb-8 text-left max-w-2xl mx-auto">
+                <h3 class="font-semibold text-slate-800 mb-2">Exam Parameters:</h3>
+                <ul class="list-disc pl-5 text-slate-600 space-y-2 text-sm">
+                    <li><strong>Length:</strong> 60 highly detailed questions.</li>
+                    <li><strong>Topics:</strong> Shock, Extremity/Crush, Thoracic Trauma, TBI/Spinal, Traumatic Cardiac Arrest, Burns, Tox, & Environmental.</li>
+                    <li><strong>Design:</strong> OSCE-style scenarios, pathophysiology, and advanced clinical reasoning.</li>
+                    <li><strong>Review:</strong> Detailed rationales provided to target knowledge gaps.</li>
+                </ul>
+            </div>
+            <button onclick="startQuiz()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-10 rounded-lg shadow-sm transition duration-200 text-lg">
+                Begin Exam
+            </button>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="quiz-container" class="hidden">
+            <!-- Progress Bar -->
+            <div class="mb-6">
+                <div class="flex justify-between text-sm font-medium text-slate-500 mb-2">
+                    <span id="question-counter">Question 1 of 60</span>
+                    <span id="progress-percentage">2%</span>
+                </div>
+                <div class="w-full bg-slate-200 rounded-full h-2.5">
+                    <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style="width: 2%"></div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+                <div id="question-type-badge" class="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-indigo-100 text-indigo-800 mb-4">
+                    Category
+                </div>
+                <h3 id="question-text" class="text-lg sm:text-xl font-medium text-slate-900 mb-6 leading-relaxed">
+                    <!-- Question text injected here -->
+                </h3>
+
+                <!-- Options -->
+                <div id="options-container" class="space-y-3 mb-8">
+                    <!-- Options injected here -->
+                </div>
+
+                <!-- Footer / Next Button -->
+                <div class="flex justify-end border-t border-slate-100 pt-6 mt-6">
+                    <button id="next-btn" onclick="handleNext()" disabled class="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-medium py-2.5 px-8 rounded-lg shadow-sm transition duration-200">
+                        Next Question
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Container -->
+        <div id="results-container" class="hidden">
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-10 text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2 text-slate-900">Exam Complete</h2>
+                <p class="text-slate-500 mb-8">Here is your clinical performance breakdown.</p>
+                
+                <div class="flex justify-center items-center mb-8">
+                    <div class="relative w-48 h-48">
+                        <svg class="w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                            <path class="text-slate-100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.8"/>
+                            <path id="score-circle" class="text-blue-600 transition-all duration-1000 ease-out" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.8"/>
+                        </svg>
+                        <div class="absolute inset-0 flex flex-col items-center justify-center">
+                            <span id="final-score-text" class="text-5xl font-bold text-slate-900">0%</span>
+                            <span id="raw-score-text" class="text-base text-slate-500 mt-1">0 / 60</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="score-message" class="text-xl font-medium mb-8"></div>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="resetQuiz()" class="bg-slate-800 hover:bg-slate-900 text-white font-medium py-2.5 px-8 rounded-lg shadow-sm transition duration-200">
+                        Retake Assessment
+                    </button>
+                </div>
+            </div>
+
+            <!-- Detailed Review -->
+            <div class="flex justify-between items-center mb-6 px-2">
+                <h3 class="text-xl font-bold text-slate-800">Review & Clinical Rationale</h3>
+                <label class="flex items-center space-x-2 cursor-pointer">
+                    <input type="checkbox" id="filter-incorrect" onchange="filterReviews()" class="form-checkbox h-5 w-5 text-blue-600 rounded border-slate-300 focus:ring-blue-500">
+                    <span class="text-sm font-medium text-slate-700">Show Incorrect Only</span>
+                </label>
+            </div>
+            
+            <div id="review-container" class="space-y-6">
+                <!-- Review items injected here -->
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const questions = [
+            // Extremity, Crush, Pelvis (1-8)
+            { id: 1, type: "Extremity Trauma", text: "Which of the following patients is the MOST appropriate candidate for the application of a traction splint?", options: ["A) A patient with a suspected fractured neck of femur (NOF).", "B) A patient with an isolated closed mid-shaft femur fracture.", "C) A patient with a fractured femur accompanied by an ipsilateral fractured tibia/fibula.", "D) A patient with a fractured pelvis and suspected femur fracture."], correctAnswer: 1, rationale: "Traction splints are specifically indicated for isolated mid-shaft femur fractures. Contraindications include suspected pelvic fractures, knee/tibia/fibula injuries on the same leg, and neck of femur (NOF) fractures." },
+            { id: 2, type: "Extremity Trauma", text: "You are treating a 78-year-old female who fell from standing. She complains of severe left hip pain. The left leg is shortened and externally rotated. How should you immobilise this suspected fractured neck of femur (NOF)?", options: ["A) Apply a traction splint immediately to restore leg length.", "B) Immobilise in the position of comfort using pillows and blankets, avoiding unnecessary movement.", "C) Apply a pelvic binder tightly over the greater trochanters.", "D) Straighten the leg forcefully to restore anatomical alignment."], correctAnswer: 1, rationale: "Suspected NOF fractures should be managed with analgesia and immobilisation in the position of comfort. Traction splints and pelvic binders are not indicated for NOF fractures." },
+            { id: 3, type: "Extremity Trauma", text: "You arrive at an industrial site where a worker's hand has been completely amputated by a saw. To maximise the likelihood of reattachment, how should you manage the amputated part?", options: ["A) Place it directly on ice to freeze the tissue and halt necrosis.", "B) Wash it heavily with betadine, wrap it in dry gauze, and keep it warm.", "C) Rinse with normal saline, wrap in saline-moistened gauze, place in a sealed plastic bag, and float the bag in an ice-water slurry.", "D) Submerge the part directly into a bucket of normal saline."], correctAnswer: 2, rationale: "The part should be kept moist and cool, but never directly touching ice (which causes frostbite/tissue death) and never submerged in fluid (which causes maceration)." },
+            { id: 4, type: "Crush Injury", text: "A worker has had his legs pinned under a 2-ton concrete slab for 3 hours. He is conscious and alert. As the rescue team prepares to lift the slab, you prepare for 'Crush Syndrome'. What is the primary pathophysiological concern immediately upon release?", options: ["A) Massive release of myoglobin and potassium into systemic circulation, leading to lethal arrhythmias and acute kidney injury.", "B) Sudden systemic hypertension due to the release of adrenaline.", "C) Immediate development of a tension pneumothorax.", "D) Severe hypercalcemia and hypokalemia."], correctAnswer: 0, rationale: "Prolonged compression causes muscle necrosis (rhabdomyolysis). Upon release, toxic metabolites (potassium, myoglobin, lactic acid) flood the system, causing reperfusion injury, cardiac arrest (due to hyperkalemia), and renal failure." },
+            { id: 5, type: "Crush Injury", text: "What is the appropriate prehospital management priority BEFORE releasing the compressive force in a prolonged crush injury?", options: ["A) Withhold IV fluids to prevent fluid overload.", "B) Apply arterial tourniquets strictly proximal to the crush site and initiate aggressive IV fluid therapy.", "C) Administer massive doses of potassium.", "D) Perform rapid sequence intubation (RSI) immediately."], correctAnswer: 1, rationale: "Applying tourniquets prior to release prevents the sudden systemic influx of toxic metabolites. Aggressive fluid resuscitation protects the kidneys from myoglobin precipitation." },
+            { id: 6, type: "Extremity Trauma", text: "What is the defining pathophysiology of Compartment Syndrome?", options: ["A) Bone marrow escaping into the venous system causing a fat embolism.", "B) Increased pressure within an unyielding fascial compartment exceeding capillary perfusion pressure, leading to muscle/nerve ischemia.", "C) Systemic inflammatory response causing vasodilation.", "D) Arterial severing leading to external exsanguination."], correctAnswer: 1, rationale: "Fascia does not stretch. Edema or bleeding inside the compartment increases pressure until it collapses capillaries, causing profound ischemia. Pain out of proportion to injury is a hallmark sign." },
+            { id: 7, type: "Pelvic Trauma", text: "When applying a pelvic binder to a patient with a suspected open-book pelvic fracture, over which specific anatomical landmarks must the binder be centered to be effective?", options: ["A) The iliac crests", "B) The greater trochanters", "C) The umbilicus", "D) The symphysis pubis only"], correctAnswer: 1, rationale: "The binder must be centered over the greater trochanters (the bony prominences of the upper lateral femur) to effectively close the pelvic ring and tamponade internal bleeding. Placing it too high (iliac crests) is ineffective." },
+            { id: 8, type: "Pelvic Trauma", text: "A patient involved in a high-speed MVC is hypotensive, tachycardic, and has a painful pelvis. You intend to apply a pelvic binder. Should you 'spring' or 'rock' the pelvis to confirm instability?", options: ["A) Yes, pressing down firmly on the iliac crests confirms the diagnosis.", "B) No, pelvic springing can dislodge clots and worsen catastrophic haemorrhage.", "C) Only if the patient is unconscious.", "D) Yes, but only once."], correctAnswer: 1, rationale: "Never spring or rock the pelvis. If the mechanism suggests pelvic trauma and the patient has pain or is unconscious/hypotensive, apply a binder. Springing destroys early clotting." },
+
+            // Shock, Fluids, TXA, Haemorrhage (9-16)
+            { id: 9, type: "Trauma Shock", text: "The 'Trauma Lethal Triad' refers to a vicious cycle of three interconnected pathophysiological states that significantly increase mortality. What are they?", options: ["A) Hypothermia, Acidosis, and Coagulopathy", "B) Hypovolemia, Hypoxia, and Hyperthermia", "C) Tachycardia, Hypotension, and Tachypnea", "D) Acidosis, Alkalosis, and Anemia"], correctAnswer: 0, rationale: "Hypothermia halts enzyme function. Acidosis impairs myocardial contractility and coagulation. Coagulopathy prevents clotting. They fuel each other in a downward spiral." },
+            { id: 10, type: "Trauma Shock", text: "The 'Trauma Diamond' adds a fourth component to the lethal triad. What is this fourth component, often exacerbated by massive blood transfusions?", options: ["A) Hyperglycemia", "B) Hypocalcemia", "C) Hyperkalemia", "D) Hypomagnesemia"], correctAnswer: 1, rationale: "Hypocalcemia (low calcium) is the fourth point. Calcium is critical for the coagulation cascade. Massive transfusions contain citrate (which binds calcium), and shock itself depletes calcium." },
+            { id: 11, type: "Fluid Resuscitation", text: "What is the rationale behind 'Permissive Hypotension' in the prehospital management of a trauma patient with non-compressible torso haemorrhage?", options: ["A) To prevent the patient from experiencing pain.", "B) To titrate IV fluids to a lower-than-normal blood pressure (e.g., palpable radial pulse or SBP ~80-90) to maintain vital organ perfusion without 'popping' early fragile clots.", "C) To deliberately dehydrate the patient to reduce intracranial pressure.", "D) To elevate blood pressure to >140 mmHg to guarantee brain oxygenation."], correctAnswer: 1, rationale: "Aggressive fluid resuscitation dilutes clotting factors and raises pressure enough to blow off fragile clots, restarting the bleeding. Permissive hypotension balances minimal perfusion with clot preservation." },
+            { id: 12, type: "Trauma Shock", text: "You are managing a trauma patient with hemorrhagic shock. How does prehospital IV Normal Saline administration negatively impact the 'Trauma Lethal Triad'?", options: ["A) It aggressively warms the patient.", "B) It improves coagulation by providing concentrated platelets.", "C) Large volumes dilute existing clotting factors (worsening coagulopathy) and its acidic nature (pH ~5.5) exacerbates acidosis.", "D) It cures hypocalcemia."], correctAnswer: 2, rationale: "Normal Saline is crystalloid; it carries no oxygen and no clotting factors. Giving large volumes dilutes the patient's blood (coagulopathy) and contributes to hyperchloremic metabolic acidosis." },
+            { id: 13, type: "Haemorrhage Control", text: "You arrive at a stabbing. The patient has a deep, spurting laceration to the groin (junctional area) where a tourniquet cannot be applied. What is the most effective prehospital intervention?", options: ["A) Elevation of the legs.", "B) Wound packing with a haemostatic dressing, followed by 3-5 minutes of firm, direct manual pressure.", "C) Application of a pelvic binder.", "D) Pouring normal saline into the wound."], correctAnswer: 1, rationale: "Junctional haemorrhage (groin, axilla, neck) requires wound packing. Haemostatic dressings contain agents that accelerate the coagulation cascade, but they require direct, continuous pressure to work." },
+            { id: 14, type: "Pharmacology (TXA)", text: "What is the mechanism of action of Tranexamic Acid (TXA) in severe trauma?", options: ["A) It creates new platelets.", "B) It is an antifibrinolytic; it prevents the breakdown (lysis) of existing blood clots.", "C) It causes profound vasoconstriction.", "D) It reverses acidosis."], correctAnswer: 1, rationale: "TXA does not form new clots; it competitively inhibits plasminogen activation, preventing the breakdown of the fibrin matrix in clots that have already formed." },
+            { id: 15, type: "Pharmacology (TXA)", text: "Based on the CRASH-2 and CRASH-3 trials, within what timeframe from the time of injury must TXA be administered to be beneficial?", options: ["A) Within 3 hours.", "B) Within 12 hours.", "C) Within 24 hours.", "D) Anytime during the hospital stay."], correctAnswer: 0, rationale: "TXA must be given within 3 hours of the injury. Evidence shows that administering it after 3 hours can actually increase mortality by causing pathological clotting." },
+            { id: 16, type: "Haemorrhage Control", text: "When applying an arterial tourniquet to a severe limb haemorrhage, how tight should the tourniquet be secured?", options: ["A) Until the venous bleeding stops, but arterial pulse remains.", "B) Until the bleeding completely stops and the distal pulse is absent.", "C) Loosely, to allow for tissue oxygenation.", "D) Until the patient complains of pain."], correctAnswer: 1, rationale: "A tourniquet is designed to occlude arterial flow. It must be tightened until life-threatening bleeding stops entirely and the distal pulse cannot be felt." },
+
+            // Thoracic Trauma (17-23)
+            { id: 17, type: "Thoracic Trauma", text: "What is the defining pathophysiology of a Tension Pneumothorax?", options: ["A) Fluid accumulates in the pleural space, collapsing the alveoli.", "B) A 'one-way valve' defect allows air to enter the pleural space during inspiration but not exit. The accumulating pressure shifts the mediastinum, kinking the vena cava and severely dropping cardiac output.", "C) Multiple ribs fracture in multiple places, causing a segment of the chest wall to detach.", "D) Blood fills the pericardial sac."], correctAnswer: 1, rationale: "Tension PTX is a pressure problem. Trapped air pushes the heart and great vessels to the opposite side, stopping venous return to the heart, leading to rapid cardiovascular collapse." },
+            { id: 18, type: "Thoracic Trauma", text: "Which set of 'sentinel signs' strongly indicates a developing Tension Pneumothorax requiring immediate needle thoracocentesis?", options: ["A) Hypertension, bradycardia, and irregular respirations (Cushing's triad).", "B) Severe respiratory distress, hypoxia, hypotension, tachycardia, jugular venous distension (JVD), and absent unilateral breath sounds.", "C) Localized chest pain, normal BP, and a productive cough.", "D) Muffled heart sounds, JVD, and narrowed pulse pressure."], correctAnswer: 1, rationale: "Hypotension + Hypoxia + Absent breath sounds in a trauma patient is a Tension PTX until proven otherwise. JVD may be present but is often absent if the patient is hypovolemic." },
+            { id: 19, type: "Thoracic Trauma", text: "What are the preferred anatomical landmarks for performing a needle thoracocentesis (decompression) in an adult?", options: ["A) The 2nd intercostal space mid-clavicular line, OR the 4th/5th intercostal space anterior axillary line.", "B) The 6th intercostal space mid-axillary line.", "C) Directly over the sternum.", "D) The 1st intercostal space parasternal."], correctAnswer: 0, rationale: "Contemporary guidelines support both the 2nd ICS (mid-clavicular) and the 4th/5th ICS (anterior/mid-axillary line). The lateral approach often has a thinner chest wall." },
+            { id: 20, type: "Thoracic Trauma", text: "A patient has suffered blunt chest trauma. You observe a section of their left chest wall moving inward during inspiration and outward during expiration. What is this presentation, and what is the underlying injury?", options: ["A) Tension pneumothorax; ruptured alveoli.", "B) Paradoxical movement indicating a Flail Chest; caused by two or more consecutive ribs fractured in two or more places.", "C) Commotio cordis; cardiac contusion.", "D) Simple pneumothorax; single rib fracture."], correctAnswer: 1, rationale: "A flail segment becomes detached from the bony mechanics of the rib cage, moving paradoxically with intrapleural pressure changes. The real danger is the underlying severe pulmonary contusion." },
+            { id: 21, type: "Thoracic Trauma", text: "You attend a patient with a stab wound to the left chest. You hear a 'sucking' sound with each breath. What is the immediate prehospital management?", options: ["A) Intubate the patient immediately.", "B) Apply a vented chest seal (or a 3-sided occlusive dressing) over the wound to prevent air from entering while allowing trapped air to escape.", "C) Pack the chest wound with haemostatic gauze.", "D) Pour saline over the wound."], correctAnswer: 1, rationale: "An open pneumothorax allows air to enter the pleural space through the chest wall. A vented seal acts as a one-way valve, restoring normal mechanics and preventing a tension PTX." },
+            { id: 22, type: "Thoracic Trauma", text: "Beck's Triad is the classic presentation for Cardiac Tamponade. What are the three components of Beck's Triad?", options: ["A) Hypertension, bradycardia, irregular breathing.", "B) Hypotension, muffled heart sounds, jugular venous distension (JVD).", "C) Hypoxia, absent breath sounds, tracheal deviation.", "D) Tachycardia, fever, chest pain."], correctAnswer: 1, rationale: "Blood filling the rigid pericardial sac compresses the heart. This causes hypotension (decreased stroke volume), muffled heart tones (fluid insulating the sound), and JVD (blood backing up)." },
+            { id: 23, type: "Thoracic Trauma", text: "How can a paramedic clinically differentiate between a massive haemothorax and a tension pneumothorax in the field?", options: ["A) Tension PTX presents with hypertension; Haemothorax presents with hypotension.", "B) Tension PTX will be hyperresonant (drum-like) on percussion; Haemothorax will be dull on percussion. Haemothorax rarely causes JVD or tracheal deviation.", "C) They are identical; there is no way to differentiate them without an X-ray.", "D) Haemothorax presents with paradoxical chest movement."], correctAnswer: 1, rationale: "Both cause decreased breath sounds and hypotension. However, trapped air (Tension PTX) sounds hollow/hyperresonant. Trapped blood (Haemothorax) sounds dull and flat." },
+
+            // Trauma Systems, Kinematics, MIST (24-28)
+            { id: 24, type: "Trauma Systems", text: "In the context of major trauma triage, what does the acronym 'MIST' stand for?", options: ["A) Major Injuries, Secondary Treatments", "B) Mechanism of injury, Injuries sustained, Signs and symptoms, Treatments given.", "C) Medical Interventions, Surgical Trauma", "D) Move, Immobilise, Stabilise, Transport"], correctAnswer: 1, rationale: "MIST is the standard handover format for trauma. It concisely conveys the kinetic forces (Mechanism), identified anatomical damage (Injuries), physiological status (Signs/Symptoms), and interventions (Treatments)." },
+            { id: 25, type: "Kinematics", text: "According to the kinetic energy equation (KE = 1/2 mv^2), which factor has the most profound impact on the severity of injury in a motor vehicle collision?", options: ["A) The mass (weight) of the vehicle.", "B) The velocity (speed) of the vehicle.", "C) The direction of impact.", "D) The deployment of airbags."], correctAnswer: 1, rationale: "Because velocity is squared in the equation, doubling the speed quadruples the kinetic energy involved, vastly increasing tissue destruction." },
+            { id: 26, type: "Trauma Systems", text: "What is the primary purpose of a 'Prehospital Trauma Notification' (Code Trauma) to the receiving hospital?", options: ["A) To reserve a bed in the waiting room.", "B) To activate the multidisciplinary trauma team, ensuring surgeons, blood bank, and imaging are waiting for the patient upon arrival, drastically reducing time to definitive care.", "C) To complain about the patient's behavior.", "D) To request medical advice on bandaging."], correctAnswer: 1, rationale: "Systems activation is crucial. A trauma notification bypasses normal ED triage and brings the necessary surgical and resuscitation resources directly to the trauma bay." },
+            { id: 27, type: "Kinematics", text: "Newton's First Law of Motion states that an object in motion remains in motion until acted upon by an outside force. In a head-on collision, how many distinct 'collisions' occur based on this law?", options: ["A) One (vehicle hits tree).", "B) Two (vehicle hits tree, patient hits seatbelt).", "C) Three (vehicle hits tree, patient hits interior, internal organs hit inside of body cavities).", "D) Four."], correctAnswer: 2, rationale: "The three collisions are: 1) Machine collision. 2) Body collision (occupant against steering wheel/belt). 3) Organ collision (brain against skull, aorta tearing from ligamentum arteriosum)." },
+            { id: 28, type: "Trauma Systems", text: "A patient meets the mechanism of injury criteria for 'Major Trauma' but has completely normal vital signs. According to Australian trauma systems, what is the disposition decision?", options: ["A) Transport to the closest local clinic.", "B) Transport directly to a designated Major Trauma Centre, bypassing closer, less-equipped hospitals, because mechanism alone predicts high risk of occult injury.", "C) Leave the patient at home.", "D) Wait on scene until vital signs deteriorate."], correctAnswer: 1, rationale: "Trauma triage guidelines mandate that high-risk mechanisms (e.g., fall >3m, rollover MVC) warrant transport to a Major Trauma Centre regardless of initial physiology, due to the high risk of hidden, evolving injuries." },
+
+            // Traumatic Cardiac Arrest (29-33)
+            { id: 29, type: "Traumatic Cardiac Arrest", text: "How does the resuscitation philosophy for a Traumatic Cardiac Arrest (TCA) fundamentally differ from a medical cardiac arrest?", options: ["A) TCA requires immediate administration of Amiodarone.", "B) Medical arrest focuses on CPR and defibrillation; TCA focuses on the simultaneous rapid reversal of structural/hypovolemic causes (C-ABCDE) before prioritizing chest compressions.", "C) TCA requires more rescue breaths.", "D) There is no difference; protocols are identical."], correctAnswer: 1, rationale: "TCA is usually caused by exsanguination, tension PTX, or airway obstruction. Compressing an empty heart (hypovolemia) or a compressed heart (tension PTX) is futile. You must fix the underlying cause (C-ABC) first." },
+            { id: 30, type: "Traumatic Cardiac Arrest", text: "What does the first 'C' stand for in the C-ABCDE approach to major trauma and TCA?", options: ["A) Circulation (checking a pulse).", "B) Catastrophic Haemorrhage control.", "C) Cervical Spine immobilization.", "D) Cardiac compressions."], correctAnswer: 1, rationale: "Catastrophic haemorrhage (C) must be controlled immediately, even before airway management, because a patient without blood cannot transport oxygen regardless of airway patency." },
+            { id: 31, type: "Traumatic Cardiac Arrest", text: "In a traumatic cardiac arrest, what are the four primary reversible causes paramedics must aggressively treat (the 'HOT' interventions)?", options: ["A) Hypovolemia, Oxygenation (Airway), Tension pneumothorax (bilateral decompression), and Tamponade (if within scope/proximity).", "B) Hypoglycemia, Opioid overdose, Toxins, Thrombosis.", "C) Head injury, Open fractures, Tachycardia.", "D) Hypothermia, Hyperkalemia, Hypocalcemia."], correctAnswer: 0, rationale: "The primary interventions in TCA involve securing the airway/oxygenating, controlling massive bleeding/giving fluids (hypovolemia), and decompressing the chest (tension PTX)." },
+            { id: 32, type: "Traumatic Cardiac Arrest", text: "When is it appropriate to withhold or terminate resuscitation in a traumatic cardiac arrest out-of-hospital?", options: ["A) Only when a doctor arrives on scene.", "B) When there are injuries incompatible with life (e.g., decapitation, massive cranial destruction) or prolonged arrest >15 mins with no reversible causes found.", "C) Never; all trauma patients must be resuscitated to the hospital.", "D) If the patient is older than 65."], correctAnswer: 1, rationale: "Resuscitation should be withheld in cases of obvious death, injuries incompatible with life, or when the patient has been in arrest for an extended period without response to interventions, making survival impossible." },
+            { id: 33, type: "Traumatic Cardiac Arrest", text: "You are treating a peri-arrest trauma patient (BP 60/palpable, fading consciousness) with severe pelvic bleeding and a closed head injury. What is the CRM (Crew Resource Management) priority?", options: ["A) One paramedic focuses on documentation while the other waits for backup.", "B) Simultaneous parallel processing: Paramedic 1 manages airway/oxygenation while Paramedic 2 applies a pelvic binder and establishes IV access.", "C) Perform a detailed secondary survey.", "D) Start chest compressions immediately."], correctAnswer: 1, rationale: "Peri-arrest trauma requires rapid, simultaneous interventions. Good CRM dictates clear role allocation so that airway and haemorrhage control occur concurrently, not sequentially." },
+
+            // TBI and Spinal Cord Injury (34-43)
+            { id: 34, type: "Traumatic Brain Injury", text: "What is the most critical prehospital strategy to prevent 'Secondary Brain Injury' in a patient with a severe TBI?", options: ["A) Deliberately hyperventilate the patient to constrict cerebral blood vessels.", "B) Avoid and aggressively treat a single episode of Hypoxia (SpO2 < 90%) and Hypotension (SBP < 90).", "C) Administer IV glucose to fuel the brain.", "D) Elevate the legs to increase intracranial pressure."], correctAnswer: 1, rationale: "Primary brain injury happens at impact. Secondary injury happens due to lack of oxygen/perfusion. Even brief periods of hypoxia or hypotension exponentially increase mortality in TBI." },
+            { id: 35, type: "Traumatic Brain Injury", text: "Why is prophylactic hyperventilation (EtCO2 < 30 mmHg) strictly CONTRAINDICATED in routine TBI management?", options: ["A) It causes the lungs to rupture.", "B) Low CO2 (hypocapnia) causes severe cerebral vasoconstriction, reducing blood flow to the injured brain and worsening cerebral ischemia.", "C) It causes the brain to swell rapidly.", "D) It triggers asthma attacks."], correctAnswer: 1, rationale: "CO2 is a potent vasodilator. Blowing off too much CO2 constricts cerebral arteries, starving the injured brain of oxygen. EtCO2 should be maintained at a normal level (35-40 mmHg)." },
+            { id: 36, type: "Traumatic Brain Injury", text: "Which set of findings suggests an uncal herniation (severely raised Intracranial Pressure) requiring immediate intervention?", options: ["A) Hypotension, tachycardia, and pinpoint pupils.", "B) Hypertension, bradycardia, irregular respirations (Cushing's Triad), and a unilateral dilated, sluggish pupil.", "C) Normal vital signs with retrograde amnesia.", "D) Bilateral constricted pupils and fever."], correctAnswer: 1, rationale: "Cushing's triad is the brain's last-ditch effort to push blood against extreme ICP. The dilated pupil indicates compression of the 3rd cranial nerve as the brain herniates." },
+            { id: 37, type: "Spinal Cord Injury", text: "Which of the following describes the 'Axial Loading' mechanism of spinal cord injury?", options: ["A) A sudden, violent backward whipping of the head (whiplash).", "B) Direct compressive force transmitted vertically through the spine, such as diving headfirst into a shallow pool.", "C) Extreme twisting of the torso.", "D) Penetrating trauma slicing the cord."], correctAnswer: 1, rationale: "Axial loading compresses the vertebrae (e.g., burst fractures) when force is applied straight down the spinal column." },
+            { id: 38, type: "Spinal Cord Injury", text: "You are assessing a patient after an MVC. What defines a 'high-risk' mechanism for SCI requiring full spinal precautions?", options: ["A) A slow-speed rear-end collision in a parking lot.", "B) A rollover MVC, ejection from vehicle, or a fall from >3 meters.", "C) Tripping on a rug at home.", "D) A seatbelt abrasion on the chest."], correctAnswer: 1, rationale: "High-risk mechanisms involve massive kinetic energy transfer capable of fracturing vertebrae and compromising the spinal cord." },
+            { id: 39, type: "Spinal Cord Injury", text: "What is the classic presentation of Neurogenic Shock following a high cervical spinal cord injury?", options: ["A) Tachycardia, pale/clammy skin, hypotension.", "B) Hypotension, relative bradycardia (or absence of tachycardia), and warm, dry, flushed skin below the lesion.", "C) Hypertension and severe shivering.", "D) Pulseless electrical activity (PEA)."], correctAnswer: 1, rationale: "Neurogenic shock severs sympathetic pathways. Vascular tone is lost (vasodilation = warm/dry skin, hypotension), and the heart cannot mount a tachycardic response to the low BP." },
+            { id: 40, type: "Spinal Cord Injury", text: "When utilizing evidence-based spinal clearance tools (e.g., NEXUS or Canadian C-Spine Rule), which of the following is a criterion that PREVENTS clinical clearance in the field?", options: ["A) The patient is completely asymptomatic.", "B) The patient is intoxicated, has an altered level of consciousness, or has a distracting painful injury.", "C) The patient walked at the scene.", "D) The patient was in a minor rear-end MVC."], correctAnswer: 1, rationale: "You cannot clinically clear a spine if the patient is unreliable. Intoxication, altered LOC, or a distracting injury (e.g., fractured femur) masks spinal pain." },
+            { id: 41, type: "Spinal Cord Injury", text: "You are called to an MVC. The driver has back pain and tingling in his legs. The vehicle is NOT on fire, and he is hemodynamically stable. What is the preferred method of vehicular extrication?", options: ["A) Rapid manual extrication (drag him out).", "B) Controlled, planned extrication maintaining in-line stabilization (e.g., using a KED or extrication board).", "C) Have him stand up and walk to the stretcher.", "D) Pull him out by his arms."], correctAnswer: 1, rationale: "If the scene is safe and the patient is stable, extrication should be meticulous and controlled to prevent secondary SCI. Rapid extrication is reserved for life threats (fire, cardiac arrest)." },
+            { id: 42, type: "Traumatic Brain Injury", text: "What defines a 'Minor' head injury in terms of patient disposition?", options: ["A) GCS 15 with a brief loss of consciousness, normal neuro exam, no vomiting, and no signs of skull fracture.", "B) GCS 13 with repeated vomiting.", "C) GCS 15 with clear fluid leaking from the ear.", "D) Any head injury involving blood thinners."], correctAnswer: 0, rationale: "A minor head injury generally features a return to GCS 15, no persistent amnesia/vomiting, and no focal neurological deficits. High risk features (blood thinners, basilar fracture signs) elevate the severity." },
+            { id: 43, type: "Spinal Cord Injury", text: "During a physical assessment of a suspected SCI, the patient has diaphragmatic breathing, can shrug their shoulders, but cannot move their arms or legs. Where is the likely level of the lesion?", options: ["A) C1 - C2", "B) C5 - C7", "C) T4 - T6", "D) L1 - L5"], correctAnswer: 1, rationale: "The phrenic nerve (C3, 4, 5) controls the diaphragm. If they are breathing but quadriplegic, the lesion is likely lower cervical (C5-C7). High cervical (C1-C2) lesions cause respiratory arrest." },
+
+            // Environmental: Temp, Diving, Altitude, Drowning (44-49)
+            { id: 44, type: "Environmental Trauma", text: "A hiker is rescued after a night in freezing rain. He is lethargic, confused (GCS 11), and has stopped shivering. Heart rate is 45 bpm. What is his level of hypothermia, and what is the primary management risk?", options: ["A) Mild; rapidly rewarm with hot baths.", "B) Moderate/Severe; the cold myocardium is extremely irritable. Rough handling can precipitate Ventricular Fibrillation (VF).", "C) Mild; encourage him to run to generate heat.", "D) Severe; administer high-dose adrenaline immediately."], correctAnswer: 1, rationale: "Cessation of shivering and altered LOC indicate moderate/severe hypothermia. The cold heart is highly prone to arrhythmias; gentle handling is paramount." },
+            { id: 45, type: "Environmental Trauma", text: "What role does the Hypothalamus play in temperature regulation during hyperthermia (Heat Stroke)?", options: ["A) It induces shivering to generate heat.", "B) It triggers vasodilation and sweating to dissipate heat, but in heat stroke, this mechanism fails, leading to uncontrolled hyperpyrexia and CNS dysfunction.", "C) It stops the heart to conserve energy.", "D) It produces thyroid hormone."], correctAnswer: 1, rationale: "The hypothalamus is the body's thermostat. Heat stroke occurs when the body's heat-dissipating mechanisms (sweating, vasodilation) are overwhelmed, leading to cellular damage and altered mental status." },
+            { id: 46, type: "Environmental Trauma", text: "According to Boyle's Law, how does Dysbarism (barotrauma) affect a SCUBA diver ascending too rapidly?", options: ["A) The pressure of gas decreases, causing the volume of gas trapped in the lungs/ears to expand, leading to pulmonary barotrauma (burst lung).", "B) Gas volume shrinks, crushing the lungs.", "C) Nitrogen is absorbed into the bones.", "D) Oxygen becomes toxic to the brain."], correctAnswer: 0, rationale: "Boyle's Law states volume is inversely proportional to pressure. As the diver ascends (pressure decreases), trapped gas expands. If not exhaled, it ruptures tissues." },
+            { id: 47, type: "Environmental Trauma", text: "What is the primary pathophysiology of Drowning that paramedics must reverse?", options: ["A) Water diluting the stomach acid.", "B) Profound hypoxemia caused by aspirated fluid washing out surfactant, leading to alveolar collapse (atelectasis) and intrapulmonary shunting.", "C) Cardiac arrest caused by hypovolemia.", "D) Hyperventilation syndrome."], correctAnswer: 1, rationale: "Drowning is an asphyxial process. Aspirated water destroys surfactant, collapsing alveoli. The priority is aggressive oxygenation and positive pressure ventilation (PEEP)." },
+            { id: 48, type: "Environmental Trauma", text: "A climber at 4,000m develops a severe, dry cough, pink frothy sputum, and shortness of breath at rest. What is the most likely altitude emergency?", options: ["A) High Altitude Cerebral Edema (HACE)", "B) High Altitude Pulmonary Edema (HAPE)", "C) Acute Mountain Sickness (AMS)", "D) Decompression Sickness"], correctAnswer: 1, rationale: "HAPE is non-cardiogenic pulmonary edema triggered by hypoxic pulmonary vasoconstriction at altitude. Treatment is immediate descent and oxygen." },
+            { id: 49, type: "Environmental Trauma", text: "What is the prehospital treatment for a diver presenting with joint pain, mottled skin, and neurological deficits 2 hours after a deep dive (Decompression Sickness)?", options: ["A) Administer 100% high-flow oxygen, maintain hydration, keep supine, and transport to a hyperbaric chamber.", "B) Have the diver return to depth to recompress.", "C) Administer IV adrenaline.", "D) Massage the joints vigorously."], correctAnswer: 0, rationale: "DCS is caused by nitrogen bubbles in tissues/blood. 100% O2 creates a diffusion gradient to wash out nitrogen. Hyperbaric therapy is the definitive treatment." },
+
+            // Tox, Envenomation, Anaphylaxis (50-55)
+            { id: 50, type: "Envenomation", text: "What is the physiological rationale for applying the Pressure Immobilisation Technique (PIT) for Australian elapid snakebites?", options: ["A) It acts as an arterial tourniquet to stop blood flow to the limb.", "B) Venom primarily travels via the superficial lymphatic system. The PIT compresses these lymphatic vessels and immobilizes the muscle pump, dramatically slowing systemic venom absorption.", "C) It squeezes the venom back out of the puncture wound.", "D) It denatures the venom proteins via heat."], correctAnswer: 1, rationale: "Snake venom is large-molecule and absorbed via the lymphatics, not veins. Firm pressure and splinting halt lymphatic flow." },
+            { id: 51, type: "Envenomation", text: "You are treating a patient stung by a Box Jellyfish (Chironex fleckeri) presenting with severe pain and welts. What is the immediate first aid priority?", options: ["A) Apply fresh water to wash away tentacles.", "B) Douse the area liberally with vinegar for at least 30 seconds to permanently deactivate undischarged nematocysts, then transport/resuscitate.", "C) Apply a pressure immobilisation bandage immediately.", "D) Scrape the tentacles off with a credit card."], correctAnswer: 1, rationale: "Vinegar halts further envenomation from box jellyfish. Fresh water causes them to fire. (Note: Vinegar is NOT used for Bluebottle stings)." },
+            { id: 52, type: "Anaphylaxis", text: "Explain the pharmacology of Adrenaline (Epinephrine) in the treatment of anaphylaxis.", options: ["A) It is an antihistamine that blocks H1 receptors.", "B) It is a steroid that reduces inflammation over 12 hours.", "C) It stimulates Alpha-1 receptors (causing vasoconstriction to reverse hypotension) and Beta-2 receptors (causing bronchodilation to relieve bronchospasm).", "D) It paralyzes the immune system."], correctAnswer: 2, rationale: "Adrenaline acts immediately on the sympathetic nervous system to reverse the life-threatening vasodilation and bronchoconstriction caused by histamine." },
+            { id: 53, type: "Toxicology", text: "A patient is found unconscious with pinpoint pupils, a respiratory rate of 4/min, and cyanosis. Which toxidrome is this, and what is the BLS priority?", options: ["A) Sympathomimetic; perform CPR.", "B) Opiate/Narcotic; prioritize airway management and BVM ventilations before administering Naloxone.", "C) Anticholinergic; administer Atropine.", "D) Cholinergic; administer Adrenaline."], correctAnswer: 1, rationale: "This is the classic opiate toxidrome. Death occurs from hypoxia due to respiratory depression. BLS airway and ventilation must be established before looking for an antidote." },
+            { id: 54, type: "Toxicology", text: "A farmer was sprayed with an organophosphate pesticide. He presents with salivation, lacrimation, urination, diarrhea, GI upset, and emesis (SLUDGE). Which toxidrome is this?", options: ["A) Anticholinergic", "B) Cholinergic", "C) Sympathomimetic", "D) Sedative-Hypnotic"], correctAnswer: 1, rationale: "Organophosphates inhibit acetylcholinesterase, causing a massive overstimulation of the parasympathetic nervous system (Cholinergic crisis). Secretions pour from everywhere." },
+            { id: 55, type: "Toxicology", text: "When managing a poisoned patient, what is a specific consideration for paediatric ingestions compared to adults?", options: ["A) Children have a higher tolerance for toxins.", "B) A single pill of some adult medications (e.g., calcium channel blockers, tricyclics) can be lethal to a toddler.", "C) Children never require antidotes.", "D) Activated charcoal is standard BLS for all pediatric poisonings."], correctAnswer: 1, rationale: "The 'one pill can kill' concept is vital in pediatrics. Due to their small body mass, toxicity thresholds are incredibly low." },
+
+            // Burns (56-60)
+            { id: 56, type: "Burns Trauma", text: "Explain the systemic pathophysiology of a severe burn (>20% Total Body Surface Area).", options: ["A) The damage is strictly localized to the skin surface.", "B) Massive inflammatory response causes a systemic loss of capillary seal. Plasma leaks into the interstitial space, causing severe hypovolemic (burn) shock and massive edema.", "C) The blood instantly coagulates systemically.", "D) The body completely stops producing urine permanently."], correctAnswer: 1, rationale: "Severe burns cause systemic capillary leak syndrome. The patient weeps fluid internally and externally, leading to profound hypovolemia requiring precise IV fluid resuscitation." },
+            { id: 57, type: "Burns Trauma", text: "You assess a patient rescued from a house fire. They have soot in their sputum, singed nasal hairs, and a hoarse voice. What is the immediate risk?", options: ["A) Carbon monoxide poisoning only.", "B) Impending airway obstruction due to supraglottic edema (Airway Burns). Early intubation/airway management must be considered before it closes completely.", "C) Lung collapse.", "D) Blindness."], correctAnswer: 1, rationale: "Thermal burns to the airway cause rapid, massive swelling. Once it swells, intubation becomes impossible. These are classic signs of airway burns requiring urgent expert airway management." },
+            { id: 58, type: "Burns Trauma", text: "Why is Intravenous (IV) access the preferred route for analgesia (e.g., Fentanyl/Morphine) in a severe burn patient?", options: ["A) Because intramuscular (IM) injections hurt.", "B) Intramuscular and subcutaneous absorption is highly unpredictable due to massive fluid shifts and compromised tissue perfusion; IV ensures rapid, predictable delivery.", "C) IV medications last longer.", "D) Burns patients are immune to IM medications."], correctAnswer: 1, rationale: "In burn shock, blood is shunted away from the skin and muscle. IM drugs will pool and not absorb, then suddenly absorb en masse once fluids are given, causing an overdose." },
+            { id: 59, type: "Burns Trauma", text: "A patient has full-thickness burns to their entire anterior chest and abdomen, and the entire anterior surface of both legs. Using the Rule of Nines, what is the estimated TBSA?", options: ["A) 18%", "B) 27%", "C) 36%", "D) 45%"], correctAnswer: 2, rationale: "Anterior trunk = 18%. Anterior right leg = 9%. Anterior left leg = 9%. Total = 36%." },
+            { id: 60, type: "Burns Trauma", text: "How should a paramedic cool a thermal burn in the prehospital setting?", options: ["A) Apply ice directly to the burn to numb the pain.", "B) Use cool running water (approx 15°C) for 20 minutes to halt the burning process, taking extreme care to prevent systemic hypothermia.", "C) Wrap the patient in freezing wet blankets.", "D) Do not cool the burn; transport immediately."], correctAnswer: 1, rationale: "Cool running water stops tissue damage. Ice causes frostbite and worsens necrosis. Paramedics must balance cooling the burn with keeping the patient warm to prevent the lethal triad." }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = new Array(questions.length).fill(undefined);
+
+        // DOM Elements
+        const welcomeScreen = document.getElementById('welcome-screen');
+        const quizContainer = document.getElementById('quiz-container');
+        const resultsContainer = document.getElementById('results-container');
+        const headerProgress = document.getElementById('header-progress');
+        const headerCounter = document.getElementById('header-counter');
+        
+        const questionCounter = document.getElementById('question-counter');
+        const progressPercentage = document.getElementById('progress-percentage');
+        const progressBar = document.getElementById('progress-bar');
+        
+        const questionTypeBadge = document.getElementById('question-type-badge');
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const nextBtn = document.getElementById('next-btn');
+        const filterCheckbox = document.getElementById('filter-incorrect');
+
+        function startQuiz() {
+            welcomeScreen.classList.add('hidden');
+            quizContainer.classList.remove('hidden');
+            headerProgress.classList.remove('hidden');
+            renderQuestion();
+        }
+
+        function renderQuestion() {
+            const currentQuestion = questions[currentQuestionIndex];
+            
+            // Update Progress
+            const progress = ((currentQuestionIndex) / questions.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            questionCounter.innerText = `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+            headerCounter.innerText = `Q ${currentQuestionIndex + 1}/${questions.length}`;
+            progressPercentage.innerText = `${Math.round(progress)}%`;
+
+            // Setup Question Badge Colors based on topic
+            questionTypeBadge.innerText = currentQuestion.type;
+            const typeLower = currentQuestion.type.toLowerCase();
+            if (typeLower.includes("shock") || typeLower.includes("fluid") || typeLower.includes("haemorrhage")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-red-100 text-red-800 mb-4";
+            } else if (typeLower.includes("thoracic") || typeLower.includes("cardiac")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-pink-100 text-pink-800 mb-4";
+            } else if (typeLower.includes("brain") || typeLower.includes("spinal")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 mb-4";
+            } else if (typeLower.includes("environment") || typeLower.includes("burns")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-orange-100 text-orange-800 mb-4";
+            } else if (typeLower.includes("envenomation") || typeLower.includes("toxicology") || typeLower.includes("anaphylaxis")) {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800 mb-4";
+            } else {
+                questionTypeBadge.className = "inline-block px-3 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 mb-4";
+            }
+
+            questionText.innerText = currentQuestion.text;
+            
+            optionsContainer.innerHTML = '';
+            nextBtn.disabled = true;
+
+            // Render Options
+            currentQuestion.options.forEach((option, index) => {
+                const optionEl = document.createElement('div');
+                optionEl.className = 'option-card border border-slate-200 rounded-xl p-4 cursor-pointer flex items-start gap-3 bg-white';
+                optionEl.onclick = () => selectOption(index);
+                
+                // Radio button circle
+                const radioCircle = document.createElement('div');
+                radioCircle.className = 'w-5 h-5 rounded-full border border-slate-300 flex-shrink-0 mt-0.5 flex items-center justify-center';
+                radioCircle.id = `radio-${index}`;
+                
+                const radioInner = document.createElement('div');
+                radioInner.className = 'w-2.5 h-2.5 rounded-full bg-blue-600 hidden';
+                radioInner.id = `radio-inner-${index}`;
+                radioCircle.appendChild(radioInner);
+
+                const optionText = document.createElement('span');
+                optionText.className = 'text-slate-700 font-medium leading-relaxed';
+                optionText.innerText = option;
+
+                optionEl.appendChild(radioCircle);
+                optionEl.appendChild(optionText);
+                optionEl.id = `option-${index}`;
+                
+                optionsContainer.appendChild(optionEl);
+            });
+
+            if (currentQuestionIndex === questions.length - 1) {
+                nextBtn.innerText = "Finish Exam";
+            } else {
+                nextBtn.innerText = "Next Question";
+            }
+
+            if(userAnswers[currentQuestionIndex] !== undefined) {
+                selectOption(userAnswers[currentQuestionIndex]);
+            }
+        }
+
+        function selectOption(selectedIndex) {
+            const options = optionsContainer.children;
+            for (let i = 0; i < options.length; i++) {
+                options[i].classList.remove('selected');
+                document.getElementById(`radio-${i}`).classList.remove('border-blue-600');
+                document.getElementById(`radio-inner-${i}`).classList.add('hidden');
+            }
+
+            const selectedEl = document.getElementById(`option-${selectedIndex}`);
+            selectedEl.classList.add('selected');
+            document.getElementById(`radio-${selectedIndex}`).classList.add('border-blue-600');
+            document.getElementById(`radio-inner-${selectedIndex}`).classList.remove('hidden');
+
+            userAnswers[currentQuestionIndex] = selectedIndex;
+            nextBtn.disabled = false;
+        }
+
+        function handleNext() {
+            if (currentQuestionIndex < questions.length - 1) {
+                currentQuestionIndex++;
+                renderQuestion();
+                window.scrollTo(0, 0); 
+            } else {
+                finishQuiz();
+            }
+        }
+
+        function finishQuiz() {
+            score = 0;
+            userAnswers.forEach((ans, index) => {
+                if (ans === questions[index].correctAnswer) {
+                    score++;
+                }
+            });
+
+            quizContainer.classList.add('hidden');
+            headerProgress.classList.add('hidden');
+            resultsContainer.classList.remove('hidden');
+            
+            filterCheckbox.checked = false; 
+            renderResults();
+        }
+
+        function renderResults() {
+            const percentage = Math.round((score / questions.length) * 100);
+            
+            setTimeout(() => {
+                document.getElementById('score-circle').style.strokeDasharray = `${percentage}, 100`;
+                document.getElementById('final-score-text').innerText = `${percentage}%`;
+                document.getElementById('raw-score-text').innerText = `${score} / ${questions.length}`;
+            }, 100);
+
+            const msgEl = document.getElementById('score-message');
+            if (percentage >= 85) {
+                msgEl.innerText = "Outstanding Clinical Acumen! You are ready for the field.";
+                msgEl.className = "text-xl font-medium mb-8 text-green-600";
+                document.getElementById('score-circle').classList.replace('text-blue-600', 'text-green-500');
+            } else if (percentage >= 65) {
+                msgEl.innerText = "Strong trauma foundation. Review the rationales to master the pathophysiology.";
+                msgEl.className = "text-xl font-medium mb-8 text-yellow-600";
+                document.getElementById('score-circle').classList.replace('text-blue-600', 'text-yellow-500');
+            } else {
+                msgEl.innerText = "Further review required. Focus deeply on the lethal triad and life-threat interventions.";
+                msgEl.className = "text-xl font-medium mb-8 text-red-600";
+                document.getElementById('score-circle').classList.replace('text-blue-600', 'text-red-500');
+            }
+
+            generateReviewCards(false);
+            window.scrollTo(0, 0);
+        }
+
+        function generateReviewCards(showIncorrectOnly) {
+            const reviewContainer = document.getElementById('review-container');
+            reviewContainer.innerHTML = '';
+
+            questions.forEach((q, i) => {
+                const isCorrect = userAnswers[i] === q.correctAnswer;
+                
+                if (showIncorrectOnly && isCorrect) return; 
+                
+                const reviewCard = document.createElement('div');
+                reviewCard.className = `border rounded-xl p-5 sm:p-6 ${isCorrect ? 'border-green-200 bg-green-50/30' : 'border-red-200 bg-red-50/30'}`;
+                
+                const statusBadge = isCorrect 
+                    ? `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg> Correct</span>`
+                    : `<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg> Incorrect</span>`;
+
+                reviewCard.innerHTML = `
+                    <div class="flex items-start justify-between mb-3">
+                        <h4 class="font-bold text-slate-800">Q${i + 1}. <span class="text-sm font-normal text-slate-500 ml-1">(${q.type})</span></h4>
+                        ${statusBadge}
+                    </div>
+                    <p class="text-slate-800 font-medium text-sm mb-4 leading-relaxed">${q.text}</p>
+                    
+                    <div class="space-y-2 mb-4 text-sm">
+                        <div class="p-3 rounded-lg ${isCorrect ? 'bg-green-100/50 border border-green-200 text-green-900' : 'bg-red-100/50 border border-red-200 text-red-900'}">
+                            <strong>Your Answer:</strong> ${userAnswers[i] !== undefined ? q.options[userAnswers[i]] : 'Skipped'}
+                        </div>
+                        ${!isCorrect ? `
+                        <div class="p-3 rounded-lg bg-green-100/50 border border-green-200 text-green-900">
+                            <strong>Correct Answer:</strong> ${q.options[q.correctAnswer]}
+                        </div>` : ''}
+                    </div>
+                    
+                    <div class="mt-4 pt-4 border-t border-slate-200">
+                        <h5 class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Clinical Rationale</h5>
+                        <p class="text-slate-700 text-sm leading-relaxed">${q.rationale}</p>
+                    </div>
+                `;
+                reviewContainer.appendChild(reviewCard);
+            });
+        }
+
+        function filterReviews() {
+            generateReviewCards(filterCheckbox.checked);
+        }
+
+        function resetQuiz() {
+            currentQuestionIndex = 0;
+            score = 0;
+            userAnswers = new Array(questions.length).fill(undefined);
+            
+            document.getElementById('score-circle').classList.remove('text-green-500', 'text-yellow-500', 'text-red-500');
+            document.getElementById('score-circle').classList.add('text-blue-600');
+            document.getElementById('score-circle').style.strokeDasharray = `0, 100`;
+
+            resultsContainer.classList.add('hidden');
+            welcomeScreen.classList.remove('hidden');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
