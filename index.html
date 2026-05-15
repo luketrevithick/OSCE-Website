@@ -478,20 +478,8 @@
                 
                 throw new Error('API Response not OK');
             } catch (error) {
-                // FALLBACK: If blocked by sandbox/CORS/Adblocker, use LocalStorage 
-                // so the UI remains fully functional and doesn't spam console errors.
-                let localCount = parseInt(localStorage.getItem(`local_mock_${key}`) || '0', 10);
-                
-                // Add a small randomized baseline so it doesn't look empty for demo purposes
-                if (localCount === 0) {
-                     localCount = Math.floor(Math.random() * 50) + 10; 
-                }
-
-                if (shouldIncrement) {
-                    localCount++;
-                    localStorage.setItem(`local_mock_${key}`, localCount);
-                }
-                return localCount;
+                // FALLBACK: If blocked by sandbox/CORS/Adblocker, simply return a dash.
+                return '-';
             }
         }
 
@@ -507,7 +495,7 @@
                 const count = await fetchMetric(key, shouldIncrement);
                 const el = document.getElementById(elementId);
                 if (el) {
-                    el.innerText = count.toLocaleString();
+                    el.innerText = count === '-' ? '-' : count.toLocaleString();
                     el.classList.add('animate-pulse');
                     setTimeout(() => el.classList.remove('animate-pulse'), 500);
                 }
