@@ -7,30 +7,108 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .section-box { background-color: #f3f4f6; border-left: 4px solid #6b7280; padding: 1.5rem; margin: 2rem 0; border-radius: 0.5rem; }
-        .physiology-box { background-color: #f3e8ff; border-left: 4px solid #a855f7; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
-        .physiology-box strong { color: #7e22ce; }
-        .disorder-box { background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
-        .disorder-box strong { color: #b91c1c; }
-        .management-box { background-color: #ecfdf5; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
-        .management-box strong { color: #15803d; }
-        .assessment-box { background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
-        .assessment-box strong { color: #b45309; }
-        h2 { border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-top: 2.5rem; font-size: 1.875rem; font-weight: 700; color: #111827; }
-        table { width: 100%; margin-top: 1rem; border-collapse: collapse; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); border-radius: 0.5rem; overflow: hidden; }
-        th, td { border: 1px solid #d1d5db; padding: 0.75rem 1rem; text-align: left; font-size: 0.875rem; }
-        th { background-color: #f9fafb; font-weight: 600; }
-        td { background-color: #ffffff; }
-        tr:nth-child(even) td { background-color: #f9fafb; }
-        nav a { transition: all 0.2s ease-in-out; }
-        nav a:hover { transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
-        .quote { font-style: italic; border-left: 4px solid #6b7280; padding-left: 1rem; margin: 1rem 0; color: #374151; }
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-    <div class="container mx-auto p-4 md:p-8">
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
         <header class="text-center mb-10">
             <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Complex Obstetrics Patients</h1>
             <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
@@ -39,144 +117,195 @@
         <!-- Navigation -->
         <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
             <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <a href="#maternaldeath" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Maternal Death Overview</a>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 <a href="#trauma" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Trauma in Pregnancy</a>
-                <a href="#pe" class="bg-amber-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-amber-600">Pulmonary Embolism</a>
-                <a href="#sepsis" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Sepsis in Pregnancy</a>
-                <a href="#drugs" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Drug Use in Pregnancy</a>
-                <a href="#pnd" class="bg-emerald-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-emerald-600">Post Natal Depression</a>
+                <a href="#sepsis" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Maternal Sepsis</a>
+                <a href="#pe" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Pulmonary Embolism</a>
+                <a href="#drugs" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Drug & Substance Use</a>
+                <a href="#pnd" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Post Natal Depression</a>
             </div>
         </nav>
 
         <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
 
-            <!-- Maternal Death -->
-            <section id="maternaldeath" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Maternal Death in Australia</h2>
-                <div class="disorder-box">
-                    <p><strong>2018–2020:</strong> 50 maternal deaths (31 direct, 19 indirect).</p>
-                    <p>Leading causes: Cardiovascular conditions, thromboembolism, and sepsis (8 deaths each).</p>
-                </div>
-                <div class="quote">
-                    “Injury to the pregnant woman… constitutes a multitrauma… there are two patients.” — Sugrue & Kolkman, 1999
-                </div>
-            </section>
-
             <!-- Trauma in Pregnancy -->
             <section id="trauma" class="section-box">
                 <h2 class="text-3xl font-bold text-gray-800">Trauma in Pregnancy</h2>
+                
                 <div class="physiology-box">
-                    <h3>Key Physiological Considerations</h3>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li>↑ blood volume (up to 50%) → can mask hypovolaemia</li>
-                        <li>Uterus displaces organs → altered injury patterns</li>
-                        <li>Aortocaval compression in supine position (>20 weeks)</li>
-                        <li>High risk of placental abruption, uterine rupture, fetomaternal haemorrhage</li>
+                    <h3>The "Two Patients" Paradigm</h3>
+                    <p>Trauma affects ~8% of pregnancies. While 90% is classified as "minor trauma," it can still result in catastrophic complications such as <strong>uterine rupture, foeto-maternal haemorrhage, placental abruption, pre-term labour, and foetal loss</strong>.</p>
+                    <p class="mt-2 italic">"One of these patients must be resuscitated aggressively to save the other and, very occasionally, the baby has to be delivered to save the mother." (Sugrue & Kolkman)</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Common Mechanisms & Specific Injuries</h3>
+                    <p>Motor Vehicle Accidents (MVAs) account for 54% of all injuries and <strong>70% of major, life-threatening injuries</strong>. Other causes include domestic violence, assaults, and accidental falls.</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li><strong>Uterine Rupture:</strong> Risk increased due to large circulating blood volume.</li>
+                        <li><strong>Placental Abruption:</strong> Anatomical changes make the placenta prone to shearing forces during sudden deceleration.</li>
                     </ul>
                 </div>
+
                 <div class="management-box">
-                    <h3>Paramedic Management (Protocol T23)</h3>
+                    <h3>Paramedic Management Priorities</h3>
                     <ul class="list-disc list-inside space-y-2">
-                        <li>High suspicion for occult injury</li>
-                        <li>Left lateral tilt or manual uterine displacement</li>
-                        <li>High-flow oxygen (titrate SpO₂ 95–98%)</li>
-                        <li>Early IV access + aggressive fluid resuscitation (mother first)</li>
-                        <li>Minimise scene time → rapid transport</li>
-                        <li>Do not withhold necessary interventions</li>
+                        <li><strong>Maintain a high degree of suspicion:</strong> Do not underestimate "minor" mechanisms.</li>
+                        <li><strong>Aggressive Maternal Resuscitation:</strong> Oxygenate the mother routinely (titrate SpO2 95-98%). Fetal hypoxia occurs rapidly if the mother is compromised.</li>
+                        <li><strong>Positioning:</strong> If >20 weeks gestation, position in a <strong>left lateral tilt</strong> to prevent aortocaval compression (supine hypotensive syndrome).</li>
+                        <li><strong>Interventions:</strong> Obtain early IV access. <strong>Do not withhold</strong> treatments or investigations if they are in the best interest of the mother.</li>
+                        <li><strong>Expedite Transport:</strong> Minimise scene time.</li>
                     </ul>
                 </div>
-                <div class="assessment-box">
-                    <p><strong>MVA Note:</strong> 54% of trauma in pregnancy; 70% of major injuries from MVAs.</p>
+            </section>
+
+            <!-- Maternal Sepsis -->
+            <section id="sepsis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Maternal Sepsis</h2>
+                
+                <div class="disorder-box">
+                    <h3>A Leading Cause of Maternal Death</h3>
+                    <p>Infection and sepsis remain leading causes of maternal mortality in Australia. Pregnancy naturally induces an impaired immune state to prevent rejection of the fetus, making patients highly susceptible to rapid deterioration.</p>
+                    <p><strong>Key Risk Factors:</strong></p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2">
+                        <ul class="list-disc list-inside">
+                            <li>Prolonged rupture of membranes</li>
+                            <li>Pelvic infections / Invasive procedures</li>
+                            <li>Prolonged labour / Multiple vaginal exams</li>
+                            <li>Caesarean delivery</li>
+                        </ul>
+                        <ul class="list-disc list-inside">
+                            <li>Obesity and Anaemia</li>
+                            <li>Impaired glucose tolerance</li>
+                            <li>Postpartum Haemorrhage (PPH)</li>
+                            <li>Delivery in unhygienic conditions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="management-box">
+                    <h3>Paramedic Management</h3>
+                    <p>The pregnant or post-natal woman with sepsis requires a hyper-vigilant approach as physiological adaptations of pregnancy (like baseline tachycardia and vasodilation) can mask early signs of septic shock.</p>
+                    <ul class="list-decimal list-inside mt-2 space-y-1">
+                        <li><strong>Early Identification:</strong> Have a high index of suspicion based on history (e.g., recent birth, prolonged rupture of membranes).</li>
+                        <li><strong>Early Oxygenation:</strong> Support increased metabolic demand.</li>
+                        <li><strong>Early Haemodynamic Resuscitation:</strong> Aggressive fluid management per protocol.</li>
+                        <li><strong>Immediate Transport:</strong> Initiate treatment en route. Pre-notify the receiving hospital.</li>
+                    </ul>
                 </div>
             </section>
 
             <!-- Pulmonary Embolism -->
             <section id="pe" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Thromboembolism & Pulmonary Embolism</h2>
-                <div class="disorder-box">
-                    <h3>Why High Risk in Pregnancy?</h3>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li>Hypercoagulable state (Virchow’s triad exacerbated)</li>
-                        <li>Risk persists throughout pregnancy + puerperium</li>
-                        <li>PE is a leading cause of maternal death</li>
-                    </ul>
-                </div>
-                <div class="assessment-box">
-                    <h3>Additional Risk Factors</h3>
-                    <ul class="list-disc list-inside space-y-1 text-sm">
-                        <li>Obesity, smoking, age &gt;35, multiparity, immobility, previous VTE, varicose veins, prolonged labour</li>
-                    </ul>
-                </div>
-                <div class="management-box">
-                    <h3>Paramedic Approach</h3>
-                    <p>High index of suspicion • Oxygen • Supportive care • Rapid transport • Consider differentials (e.g., aortocaval compression).</p>
-                </div>
-            </section>
-
-            <!-- Sepsis -->
-            <section id="sepsis" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Sepsis in Pregnancy</h2>
-                <div class="disorder-box">
-                    <p>Infection is a leading cause of maternal death in Australia.</p>
-                    <p>Risk factors: Prolonged rupture of membranes, caesarean, invasive procedures, obesity, diabetes, anaemia.</p>
-                </div>
-                <div class="management-box">
-                    <h3>Paramedic Management</h3>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li><strong>Early identification</strong> using qSOFA / SIRS + pregnancy-specific signs</li>
-                        <li>High-flow oxygen</li>
-                        <li>Aggressive fluid resuscitation</li>
-                        <li>Immediate transport with ongoing treatment en route</li>
-                        <li>Early hospital notification</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Drug Use -->
-            <section id="drugs" class="section-box">
-                <h2 class="text-3xl font-bold text-gray-800">Drug Use in Pregnancy</h2>
+                <h2 class="text-3xl font-bold text-gray-800">Thromboembolism and Pulmonary Embolism (PE)</h2>
+                
                 <div class="physiology-box">
-                    <h3>Effects on Mother & Fetus</h3>
-                    <table>
-                        <thead>
-                            <tr><th>Substance</th><th>Maternal Risks</th><th>Fetal Risks</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Smoking</td><td>Preterm ROM, abruption</td><td>Low birth weight, SIDS, stillbirth</td></tr>
-                            <tr><td>Alcohol</td><td>—</td><td>FASD, brain damage, developmental delay</td></tr>
-                            <tr><td>Illicit Drugs</td><td>Infection, overdose</td><td>Withdrawal, low birth weight, miscarriage</td></tr>
-                        </tbody>
-                    </table>
+                    <h3>The Hypercoagulable State</h3>
+                    <p>Pregnancy induces a physiological <strong>hypercoagulable state</strong> to protect the mother from fatal haemorrhage during childbirth. However, this dramatically increases the risk of clot formation. Pregnant women are at high risk for thromboembolism for the <strong>entire duration</strong> of the pregnancy and the post-partum period.</p>
+                    <p class="mt-2 text-sm"><em>PE is the most common type of thromboembolism in pregnancy and a leading cause of maternal death.</em></p>
                 </div>
-                <div class="disorder-box">
-                    <h3>Heroin / Opioids – Special Note</h3>
-                    <p><strong>Naloxone contraindicated</strong> in neonate if mother opioid-dependent (risk of severe withdrawal, seizures, pulmonary oedema).</p>
+
+                <div class="assessment-box">
+                    <h3>Risk Factors & Identification</h3>
+                    <p>Always consider PE in a pregnant/post-partum patient presenting with sudden onset dyspnoea, pleuritic chest pain, unexplained tachycardia, or hypoxia.</p>
+                    <p><strong>Cumulative Risk Factors:</strong></p>
+                    <ul class="list-disc list-inside mt-2 grid grid-cols-1 md:grid-cols-2 gap-1">
+                        <li>Age (particularly >35 years)</li>
+                        <li>Obesity</li>
+                        <li>Smoking</li>
+                        <li>Parity of 4 or more</li>
+                        <li>Previous PE or DVT</li>
+                        <li>Prolonged immobility (>4 days bed rest)</li>
+                        <li>Prolonged labour (>12 hours)</li>
+                        <li>Extensive pelvic surgery (Caesarean)</li>
+                        <li>Gross varicose veins</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Drug & Substance Use -->
+            <section id="drugs" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drug and Substance Use in Pregnancy</h2>
+                
+                <p class="mb-4">Substance use during pregnancy introduces significant risks to both maternal and fetal physiology, often resulting in complex presentations.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Substance</th>
+                            <th>Maternal / Fetal Risks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Smoking</strong></td>
+                            <td>Malnourishment, low birth weight, premature birth, preterm ROM, placental abruption, increased risk of SIDS, miscarriage, stillbirth.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alcohol</strong></td>
+                            <td>Foetal Alcohol Syndrome (FAS), birth defects, brain damage, cognitive impairment, behavioural problems, developmental delay.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Illicit Drugs</strong></td>
+                            <td>Low birth weight, miscarriage, birth defects, <strong>withdrawal syndrome</strong>, increased risk of SIDS.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="disorder-box mt-6">
+                    <h3>CRITICAL ALERT: Heroin/Opioid Use & Neonatal Resuscitation</h3>
+                    <p>While heroin use is no more common than other illicit drugs, it carries a highly specific risk regarding paramedic interventions during neonatal resuscitation.</p>
+                    <p class="mt-3 font-bold text-lg text-red-700">Narcan (Naloxone) is CONTRAINDICATED in neonates born to opioid-addicted mothers.</p>
+                    <ul class="list-disc list-inside mt-2 text-red-900">
+                        <li>It induces immediate, severe, and potentially life-threatening <strong>withdrawal</strong> in the neonate.</li>
+                        <li>Hypoventilating neonates will be hypercapneic. Administering Narcan in this state can precipitate <strong>dysrhythmias, seizures, and pulmonary oedema</strong>.</li>
+                        <li><strong>Management:</strong> Focus entirely on airway management and positive pressure ventilation (BVM) to treat neonatal respiratory depression.</li>
+                    </ul>
                 </div>
             </section>
 
             <!-- Post Natal Depression -->
             <section id="pnd" class="section-box">
                 <h2 class="text-3xl font-bold text-gray-800">Post Natal Depression (PND)</h2>
-                <div class="assessment-box">
-                    <p>Affects up to 20% of women. Onset 1 month to 1 year post birth. Distinct from “baby blues”.</p>
-                </div>
+                
                 <div class="physiology-box">
-                    <h3>Common Symptoms</h3>
-                    <ul class="list-disc list-inside space-y-1 text-sm">
-                        <li>Persistent sadness, tearfulness, guilt, hopelessness</li>
-                        <li>Irritability, anxiety, panic attacks</li>
-                        <li>Changes in sleep/appetite, difficulty bonding</li>
-                        <li>Thoughts of harm to self or baby</li>
-                    </ul>
+                    <h3>Definition</h3>
+                    <p>Onset of depression typically occurring from one month up to one year post-birth. It affects up to <strong>20% of postnatal women</strong> in Australia. This is a severe clinical condition and is <strong>not</strong> the transient "baby blues." It is driven by a combination of physical, emotional, and social factors.</p>
                 </div>
+
+                <div class="assessment-box">
+                    <h3>Symptom Recognition</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-2 text-sm">
+                        <ul class="list-disc list-inside">
+                            <li>Depressed, sad mood, tearfulness</li>
+                            <li>Low self-esteem, feelings of inadequacy/guilt</li>
+                            <li>Feeling that life is meaningless / unable to cope</li>
+                            <li>Loss of interest in usual activities / low sex drive</li>
+                        </ul>
+                        <ul class="list-disc list-inside">
+                            <li>Anxiety, panic attacks, heart palpitations</li>
+                            <li>Insomnia or extreme changes in sleeping patterns</li>
+                            <li>Difficulty concentrating / memory loss</li>
+                            <li><strong>Red Flag:</strong> Thoughts about harming themselves or the baby to escape.</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <div class="management-box">
-                    <h3>Paramedic Role</h3>
-                    <ul class="list-disc list-inside space-y-2">
-                        <li>Build rapport and show empathy</li>
-                        <li>Perform mental health risk assessment</li>
-                        <li>Assess capacity and safety of mother & baby</li>
-                        <li>Transport to appropriate facility if high risk</li>
+                    <h3>Paramedic Management & Assessment</h3>
+                    <p>Management focuses on de-escalation, empathy, and thorough risk assessment.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Communication:</strong> Gain rapport and trust. Show empathy, understanding, and provide reassurance.</li>
+                        <li><strong>Competency Check:</strong> Does the patient show competency and capacity to make their own health care decisions?</li>
+                        <li><strong>Mental Health Risk Assessment:</strong> Evaluate the following key domains:
+                            <ul class="ml-6 mt-1 space-y-1 list-circle text-sm text-green-900">
+                                <li><strong>Signs & Symptoms:</strong> Note abnormal state of mind or agitated behaviour.</li>
+                                <li><strong>Thoughts:</strong> Assess for delusions, hallucinations, or illogical thinking.</li>
+                                <li><strong>Appearance:</strong> Visually assess grooming, posture, and expressions.</li>
+                                <li><strong>Threats:</strong> Ask directly about acts harmful to self or others (including the baby).</li>
+                                <li><strong>Emotions:</strong> Gauge levels of sadness, hopelessness, anger, or extreme distress.</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -184,7 +313,7 @@
         </main>
 
         <footer class="text-center mt-12 mb-4">
-            <p class="text-gray-500">Always remember: In obstetric emergencies there are two patients. Prioritise maternal stabilisation to optimise fetal outcome. Based on current Australian guidelines and clinical best practice.</p>
+            <p class="text-gray-500 text-sm">Based on HLTH3021 Complicated Obstetrics Patient curriculum (Prof. Liz Thyer). Always combine this knowledge with your local clinical practice guidelines and prioritize maternal resuscitation in the setting of trauma.</p>
         </footer>
     </div>
 </body>
