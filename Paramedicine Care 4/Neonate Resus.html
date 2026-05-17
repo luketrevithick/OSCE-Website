@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neonate Resuscitation: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .section-box { background-color: #f3f4f6; border-left: 4px solid #6b7280; padding: 1.5rem; margin: 2rem 0; border-radius: 0.5rem; }
+        .physiology-box { background-color: #f3e8ff; border-left: 4px solid #a855f7; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .physiology-box strong { color: #7e22ce; }
+        .disorder-box { background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .disorder-box strong { color: #b91c1c; }
+        .management-box { background-color: #ecfdf5; border-left: 4px solid #22c55e; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .management-box strong { color: #15803d; }
+        .assessment-box { background-color: #fffbeb; border-left: 4px solid #f59e0b; padding: 1rem; margin: 1.5rem 0; border-radius: 0.25rem; }
+        .assessment-box strong { color: #b45309; }
+        h2 { border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; margin-top: 2.5rem; font-size: 1.875rem; font-weight: 700; color: #111827; }
+        table { width: 100%; margin-top: 1rem; border-collapse: collapse; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1); border-radius: 0.5rem; overflow: hidden; }
+        th, td { border: 1px solid #d1d5db; padding: 0.75rem 1rem; text-align: left; font-size: 0.875rem; }
+        th { background-color: #f9fafb; font-weight: 600; }
+        td { background-color: #ffffff; }
+        tr:nth-child(even) td { background-color: #f9fafb; }
+        nav a { transition: all 0.2s ease-in-out; }
+        nav a:hover { transform: translateY(-2px); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        .quote { font-style: italic; border-left: 4px solid #6b7280; padding-left: 1rem; margin: 1rem 0; color: #374151; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Neonate Resuscitation</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#transition" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Transition to Extrauterine Life</a>
+                <a href="#definitions" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Definitions &amp; Risks</a>
+                <a href="#apgar" class="bg-amber-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-amber-600">APGAR Scoring</a>
+                <a href="#algorithm" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Resuscitation Algorithm</a>
+                <a href="#ventilation" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Ventilation &amp; Airway</a>
+                <a href="#circulation" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Circulation &amp; Drugs</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Transition to Extrauterine Life -->
+            <section id="transition" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Physiological Transition to Extrauterine Life</h2>
+                <div class="physiology-box">
+                    <h3>Key Cardiopulmonary Changes at Birth</h3>
+                    <ul class="list-disc list-inside space-y-3">
+                        <li><strong>First Breath:</strong> CO₂ accumulation → central acidosis → stimulation of respiratory centre → first inspiration. Lung aeration dramatically reduces pulmonary vascular resistance (PVR) and increases pulmonary blood flow (5–6× increase).</li>
+                        <li><strong>Surfactant Role:</strong> Reduces surface tension in alveoli, preventing collapse and supporting functional residual capacity (FRC).</li>
+                        <li><strong>Circulatory Changes:</strong> 
+                            <ul class="list-disc list-inside ml-6 mt-2">
+                                <li>Closure of foramen ovale, ductus arteriosus, and ductus venosus</li>
+                                <li>Systemic vascular resistance rises (loss of low-resistance placenta)</li>
+                                <li>Pulmonary blood flow increases dramatically</li>
+                            </ul>
+                        </li>
+                        <li><strong>Oxygenation:</strong> Pre-ductal SpO₂ rises gradually: ~60% at birth → >90% by 10 minutes.</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Failure of Transition</h3>
+                    <p>If PVR remains high → Persistent Pulmonary Hypertension of the Newborn (PPHN) → right-to-left shunting → hypoxaemia and acidosis.</p>
+                </div>
+            </section>
+
+            <!-- Definitions & Risks -->
+            <section id="definitions" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Definitions &amp; Risks of Prematurity</h2>
+                <div class="physiology-box">
+                    <table>
+                        <thead>
+                            <tr><th>Term</th><th>Definition</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Newborn</td><td>First minutes to hours after birth</td></tr>
+                            <tr><td>Preterm</td><td>24–<37 weeks gestation</td></tr>
+                            <tr><td>Neonate</td><td>First 28 days of life</td></tr>
+                            <tr><td>Infant</td><td>Neonatal period to 12 months</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="disorder-box">
+                    <h3>Risks in Preterm Infants</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Surfactant deficiency → reduced lung compliance</li>
+                        <li>Weak respiratory muscles &amp; immature airway reflexes</li>
+                        <li>Compliant chest wall that deforms easily</li>
+                        <li>Hypothermia (increased O₂ consumption)</li>
+                        <li>Higher risk of intraventricular haemorrhage, NEC, ROP</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- APGAR -->
+            <section id="apgar" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">APGAR Scoring</h2>
+                <div class="assessment-box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sign</th>
+                                <th>Score 2</th>
+                                <th>Score 1</th>
+                                <th>Score 0</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Appearance</td><td>Pink</td><td>Extremities blue</td><td>Pale/blue</td></tr>
+                            <tr><td>Pulse</td><td>&gt;100 bpm</td><td>&lt;100 bpm</td><td>Absent</td></tr>
+                            <tr><td>Grimace</td><td>Cries/pulls away</td><td>Grimace/weak cry</td><td>No response</td></tr>
+                            <tr><td>Activity</td><td>Active movement</td><td>Flexed limbs</td><td>Limp</td></tr>
+                            <tr><td>Respiration</td><td>Strong cry</td><td>Slow/irregular</td><td>Absent</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-4"><strong>Interpretation:</strong> 7–10 normal • 4–6 moderate depression • 0–3 severe depression requiring resuscitation.</p>
+                </div>
+            </section>
+
+            <!-- Resuscitation Algorithm -->
+            <section id="algorithm" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Neonatal Resuscitation Algorithm</h2>
+                <div class="management-box">
+                    <h3>Core Principles (ANZCOR 13.1–13.7)</h3>
+                    <ul class="list-disc list-inside space-y-3">
+                        <li><strong>85%</strong> of term babies breathe spontaneously within 10–30 seconds</li>
+                        <li><strong>10%</strong> respond to drying/stimulation</li>
+                        <li><strong>3%</strong> need PPV</li>
+                        <li><strong>2%</strong> need intubation</li>
+                        <li><strong>0.1%</strong> need CPR ± adrenaline</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Stepwise Approach</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Warm, dry, stimulate (30 seconds)</li>
+                        <li>Assess tone, colour, HR, RR</li>
+                        <li>PPV if HR &lt;100 or gasping/apnoea</li>
+                        <li>CPR (3:1 ratio) if HR &lt;60 after effective ventilation</li>
+                        <li>Adrenaline if persistent bradycardia</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Ventilation -->
+            <section id="ventilation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Airway &amp; Ventilation</h2>
+                <div class="physiology-box">
+                    <p><strong>Goals of ventilation:</strong> Clear lung liquid • Establish FRC • Enable gas exchange.</p>
+                    <p>Start with room air. Target pre-ductal SpO₂: 60–70% at 1 min → &gt;90% by 10 min.</p>
+                </div>
+                <div class="management-box">
+                    <h3>Devices Comparison</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Device</th><th>Advantages</th><th>Limitations</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>T-piece</td><td>Consistent PIP/PEEP</td><td>Requires gas source</td></tr>
+                            <tr><td>Self-inflating bag</td><td>No gas source needed</td><td>Inconsistent pressures</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Circulation & Drugs -->
+            <section id="circulation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Circulation &amp; Pharmacological Interventions</h2>
+                <div class="disorder-box">
+                    <h3>CPR Technique</h3>
+                    <ul>
+                        <li>3:1 compression:ventilation ratio</li>
+                        <li>90 compressions/min (120 if intubated)</li>
+                        <li>Two-thumb encircling technique</li>
+                    </ul>
+                </div>
+                <div class="management-box">
+                    <h3>Medications (Rarely Needed)</h3>
+                    <table>
+                        <thead>
+                            <tr><th>Drug</th><th>Dose</th><th>Indication</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Adrenaline 1:10,000</td><td>10 mcg/kg IV/IO</td><td>HR &lt;60 despite CPR</td></tr>
+                            <tr><td>Compound Sodium Lactate</td><td>10 mL/kg bolus</td><td>Volume expansion</td></tr>
+                            <tr><td>Glucose 10%</td><td>2 mL/kg</td><td>BGL &lt;2.6 mmol/L</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">Based on ANZCOR Guidelines 13.x (2026) and neonatal transition physiology. Mastery of neonatal resuscitation requires deep understanding of the rapid physiological transition at birth and the ability to support it effectively in the field.</p>
+        </footer>
+    </div>
+</body>
+</html>
