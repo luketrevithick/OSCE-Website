@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toxicology: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Toxicology & Poisoning</h1>
+            <p class="text-xl text-gray-600 mt-2">A Comprehensive Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#bls-management" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">BLS & Structured Approach</a>
+                <a href="#toxidromes" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">The 4 Common Toxidromes</a>
+                <a href="#paediatric-clinical" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Paediatric Clinical Care</a>
+                <a href="#professional-ethics" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Professional Responsibilities</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- BLS & Structured Approach -->
+            <section id="bls-management" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Structured Management of the Poisoned Patient</h2>
+                
+                <div class="management-box">
+                    <h3>Safe & Effective Basic Life Support (BLS)</h3>
+                    <p>Poisoning incidents require a heightened awareness of scene safety and specific modifications to standard BLS to protect both the patient and the practitioner.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Danger & Decontamination:</strong> Always assume the toxin is still present. Ensure adequate ventilation in confined spaces (e.g., carbon monoxide, chemical fumes). If cutaneous exposure is suspected, perform gross decontamination (remove clothing, dry brush powders, irrigate liquids) prior to transport to prevent secondary contamination of the ambulance.</li>
+                        <li><strong>Airway Protection:</strong> Poisoned patients have a high risk of vomiting and reduced GCS. Prioritize lateral positioning (recovery position) early if the patient is unconscious to prevent aspiration of toxic gastric contents.</li>
+                        <li><strong>Breathing:</strong> Monitor for hypoventilation (opioids/sedatives) or hyperventilation (salicylates attempting to blow off acid). Provide positive pressure ventilation via BVM if respiratory drive fails.</li>
+                        <li><strong>Circulation:</strong> Initiate chest compressions if required, but <strong>avoid mouth-to-mouth resuscitation</strong> (use a BVM with a viral filter) to prevent provider exposure to the toxin.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>The Structured Assessment Approach</h3>
+                    <p>While the exact toxin may be unknown, a systematic approach ensures life threats are caught early. We treat the patient, not just the poison.</p>
+                    <ol class="list-decimal list-inside mt-2 space-y-1">
+                        <li><strong>Resuscitation (ABCDE):</strong> Address immediate life threats. Support airway, ventilation, and perfusion.</li>
+                        <li><strong>Risk Assessment:</strong> Gather history. <em>What was taken? How much? When? Route? Intentional or accidental?</em> Co-ingestions? Bring containers/pill bottles to the hospital.</li>
+                        <li><strong>Supportive Care & Monitoring:</strong> Continuous ECG, SpO2, EtCO2, Blood Glucose (crucial to rule out hypoglycemia as a cause of AMS), and temperature monitoring.</li>
+                        <li><strong>Specific Antidotes / Investigations:</strong> e.g., Naloxone for opioids, Midazolam for toxin-induced seizures. Contact the Poisons Information Centre (13 11 26) early for expert toxicologist advice.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Toxidromes -->
+            <section id="toxidromes" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">The 4 Common Toxidromes</h2>
+                
+                <p class="mb-4">A toxidrome (toxic syndrome) is a constellation of clinical signs and symptoms that suggest a specific class of poisoning. Recognizing these patterns guides empiric treatment when the exact agent is unknown.</p>
+
+                <div class="disorder-box">
+                    <h3>Table: Recognition of Toxidromes</h3>
+                    <p class="text-sm italic mb-2">Based on Cameron et al., 'Textbook of Paediatric Emergency Medicine'</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Toxidrome</th>
+                                <th style="width: 35%;">Agents Associated</th>
+                                <th>Clinical Features</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Anticholinergic</strong><br><span class="text-xs text-gray-600 font-normal">"Blind as a bat, mad as a hatter, red as a beet, hot as a hare, dry as a bone, bowel and bladder lose their tone."</span></td>
+                                <td>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Antihistamines</li>
+                                        <li>Tricyclic antidepressants (TCAs)</li>
+                                        <li>Antipsychotics</li>
+                                        <li>Atropine</li>
+                                        <li>Carbamazepine</li>
+                                        <li>Anticholinergic plants (e.g., Datura)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Agitated delirium / Sedation</li>
+                                        <li>Mydriasis (dilated pupils)</li>
+                                        <li>Tachycardia</li>
+                                        <li>Dry mouth and skin</li>
+                                        <li>Hyperthermia</li>
+                                        <li>Ileus (reduced bowel sounds)</li>
+                                        <li>Urinary retention</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cholinergic</strong><br><span class="text-xs text-gray-600 font-normal">SLUDGE / DUMBELS mnemonic.</span></td>
+                                <td>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Organophosphate pesticides</li>
+                                        <li>Carbamate insecticides</li>
+                                        <li>Chemical warfare nerve agents</li>
+                                        <li>Dementia drugs (e.g., donepezil)</li>
+                                        <li>Myasthenia drugs (e.g., neostigmine)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Agitation, coma, seizures</li>
+                                        <li>Muscle fasciculation, weakness, paralysis</li>
+                                        <li>Salivation, lacrimation, diaphoresis</li>
+                                        <li><strong>Bronchorrhoea</strong> (excessive airway secretions - usually the cause of death), vomiting, diarrhoea</li>
+                                        <li>Miosis (pinpoint pupils)</li>
+                                        <li>Bradycardia or tachycardia</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Serotonin Syndrome</strong></td>
+                                <td>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>SSRIs / SNRIs</li>
+                                        <li>MAOIs</li>
+                                        <li>St John's wort</li>
+                                        <li>Tramadol</li>
+                                        <li>TCAs</li>
+                                        <li>Amphetamines</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li><strong>Mental status changes:</strong> anxiety, agitation, confusion</li>
+                                        <li><strong>Autonomic stimulation:</strong> hyperthermia, tachycardia, hypertension, mydriasis</li>
+                                        <li><strong>Neuromuscular excitation:</strong> increased tone (lower limbs &gt; upper limbs), hyperreflexia, clonus, tremor, rigidity</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sympathomimetic</strong></td>
+                                <td>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Catecholamines</li>
+                                        <li>Amphetamines</li>
+                                        <li>Cocaine</li>
+                                        <li>Xanthines (e.g., theophylline, caffeine)</li>
+                                        <li>MAOIs</li>
+                                        <li>Noradrenaline reuptake inhibitors (e.g., venlafaxine)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Tachycardia / Hypertension</li>
+                                        <li>Hypotension (in severe, late cases)</li>
+                                        <li>Hyperthermia</li>
+                                        <li>Agitation, delirium, seizures, coma</li>
+                                        <li>Mydriasis (dilated pupils)</li>
+                                        <li>Metabolic acidosis</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Paediatric Clinical Care -->
+            <section id="paediatric-clinical" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Paediatric Considerations in Poisoning</h2>
+                
+                <div class="physiology-box">
+                    <h3>How Does Paediatric Management Differ?</h3>
+                    <p>While the fundamental requirement to save a life remains the same, the execution differs dramatically in paediatrics due to anatomy, physiology, and pharmacology.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Pharmacokinetics & Susceptibility:</strong> Children have a larger surface-area-to-mass ratio, faster metabolisms, and immature hepatic/renal clearance pathways. A dose that is harmless to an adult (e.g., "One pill can kill" concept with calcium channel blockers or sulfonylureas) can be lethal to a toddler.</li>
+                        <li><strong>Weight-Based Management:</strong> All fluid resuscitation, antidote dosing (e.g., Naloxone, Midazolam), and equipment sizes (BVM, airways) must be strictly calculated based on the child's weight, requiring cognitive offloading tools like Broselow tapes or pediatric reference cards.</li>
+                        <li><strong>Baseline Vital Signs:</strong> Normal physiological parameters vary drastically by age. Recognizing tachycardia or hypotension requires age-specific knowledge. Children compensate well but decompensate rapidly.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Does the Systematic Approach Apply?</h3>
+                    <p><strong>Yes.</strong> The systematic approach (Danger, Response, ABCDE) applies universally. However, the <em>threshold for intervention</em> is lower in paediatrics. For example, aggressive airway management and oxygenation are prioritized because the primary cause of cardiac arrest in children is hypoxia (which can rapidly develop from central nervous system depression caused by a toxin), rather than a primary cardiac event.</p>
+                </div>
+            </section>
+
+            <!-- Professional Responsibilities -->
+            <section id="professional-ethics" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Beyond Clinical Care: Professional Responsibilities</h2>
+                
+                <div class="management-box">
+                    <h3>Epidemiology & Context of Paediatric Poisoning</h3>
+                    <p>Understanding <em>why</em> the poisoning happened dictates the broader approach to care. Paediatric poisonings generally fall into distinct epidemiological categories:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-sm">
+                        <li><strong>Toddlers (1-4 years):</strong> Usually accidental, exploratory ingestions. Driven by curiosity and inadequate safe-storage of household chemicals or grandparents' medications.</li>
+                        <li><strong>Adolescents (12-18 years):</strong> More likely to be intentional overdoses related to self-harm, mental health crises, or recreational substance abuse.</li>
+                        <li><strong>Infants/All Ages:</strong> Highly rarely, but critically, can be due to deliberate harm by a caregiver (e.g., Munchausen syndrome by proxy or malicious intent).</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Other Domains of Care: The Psychosocial Element</h3>
+                    <p>When presented with a poisoned paediatric patient, clinical treatment is only one facet. Another critical domain of care is the <strong>Psychosocial and Environmental</strong> domain.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Family Support:</strong> Parents will likely be in extreme distress, experiencing profound guilt (if accidental) or shock (if intentional self-harm). Effective, empathetic communication and family-centered care are essential to calm the scene and gather an accurate history.</li>
+                        <li><strong>Environmental Safety Assessment:</strong> Observing the living conditions. Are medications left out? Is the home environment safe? This informs future prevention.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Professional & Legal Responsibilities</h3>
+                    <p>As a registered health practitioner, you possess significant responsibilities outside of pure medical intervention:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Mandatory Reporting:</strong> If the poisoning appears to be the result of severe neglect, inadequate supervision, or intentional harm/abuse, paramedics have a legal and ethical duty to report these concerns to child protection services (e.g., FACS/DCJ) and police.</li>
+                        <li><strong>Mental Health Act / Risk Assessment:</strong> For adolescents who have intentionally overdosed, paramedics must conduct a mental health risk assessment. You have a duty of care to ensure they are transported for psychiatric evaluation, even if they refuse, utilizing relevant mental health legislation if they lack capacity.</li>
+                        <li><strong>Education & Prevention:</strong> Taking the opportunity (when appropriate) to educate parents gently on safe storage, the use of child-resistant containers, and providing the Poisons Information Centre contact details.</li>
+                        <li><strong>Thorough Documentation:</strong> In cases of suspected abuse or neglect, clinical records become vital legal documents. Documentation must be objective, factual, and detailed regarding the scene, the history provided, and the presentation of the child.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Based on Cameron et al. 'Textbook of Paediatric Emergency Medicine' and Paramedic Toxicology Guidelines. Always consult the Poisons Information Centre (13 11 26) early in the management of poisoned patients.</p>
+        </footer>
+    </div>
+</body>
+</html>
