@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Trauma: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Environmental Trauma & Emergencies</h1>
+            <p class="text-xl text-gray-600 mt-2">A Comprehensive Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <a href="#temp-regulation" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Thermoregulation</a>
+                <a href="#hyperthermia" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Hyperthermia</a>
+                <a href="#hypothermia" class="bg-sky-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-sky-600">Hypothermia</a>
+                <a href="#aquatic-diving" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Drowning & Diving</a>
+                <a href="#altitude" class="bg-slate-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-slate-600">Altitude</a>
+                <a href="#envenomation" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Envenomation & Bites</a>
+                <a href="#anaphylaxis" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Allergy & Anaphylaxis</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Temperature Regulation Physiology -->
+            <section id="temp-regulation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Physiology of Temperature Regulation</h2>
+                
+                <div class="physiology-box">
+                    <h3>The Hypothalamic Thermostat</h3>
+                    <p>The human core temperature is tightly regulated within a narrow physiological range of 36.5&deg;C to 37.5&deg;C by the <strong>preoptic area of the anterior hypothalamus</strong>. It acts as the body's thermostat, receiving afferent input from peripheral (cutaneous) and central (core) thermoreceptors, and initiating autonomic and behavioural responses via the posterior hypothalamus.</p>
+                    
+                    <h3 class="mt-4">Mechanisms of Heat Transfer</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong>Radiation (60% of heat loss at rest):</strong> Emission of infrared electromagnetic energy. Does not require contact.</li>
+                        <li><strong>Conduction (3%):</strong> Direct transfer of heat between objects in physical contact. (Water conducts heat &approx; 25 times faster than air).</li>
+                        <li><strong>Convection (15%):</strong> Transfer of heat to air or water currents moving across the skin.</li>
+                        <li><strong>Evaporative cooling (22%):</strong> Conversion of liquid water on skin/mucosa to gas. Main defense against hyperthermia; ceases when relative humidity reaches &approx; 75%.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Vulnerable Populations: The Very Young and Very Old</h3>
+                    <p>The extreme cohorts of life are at highly elevated risk of temperature-related emergencies due to distinct physiological factors:</p>
+                    <table class="mt-2 text-sm">
+                        <thead>
+                            <tr>
+                                <th>Paediatric Vulnerabilities (The Very Young)</th>
+                                <th>Geriatric Vulnerabilities (The Very Old)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>High BSA to Mass Ratio:</strong> Accelerates heat loss in cold environments and heat absorption in hot environments.</td>
+                                <td><strong>Blunted Thermosensation:</strong> Reduced ability of central and peripheral receptors to perceive ambient changes.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Inability to Shiver:</strong> Infants rely on non-shivering thermogenesis (brown fat metabolism), which is metabolic-intensive and easily exhausted.</td>
+                                <td><strong>Autonomic Degeneration:</strong> Diminished vasoconstrictive ability (decreased subcutaneous fat/arterial stiffness) and poor sweat gland response.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Behavioural Dependence:</strong> Cannot independently modify dress, hydration, or environment.</td>
+                                <td><strong>Polypharmacy:</strong> Beta-blockers blunt tachycardia; diuretics promote dehydration; anticholinergics inhibit sweating.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>The Oxygen-Haemoglobin Dissociation Curve & Temperature</h3>
+                    <p>The affinity of haemoglobin for oxygen (O<sub>2</sub>) is highly sensitive to temperature changes, affecting systemic oxygen delivery (DO<sub>2</sub>):</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Leftward Shift (Hypothermia / Decreased Temp):</strong> 
+                            At lower temperatures, the curve shifts left. This indicates an <strong>increased affinity</strong> of haemoglobin for O<sub>2</sub>. 
+                            <br><em>Physiological Implication:</em> Haemoglobin binds O<sub>2</sub> tightly in the pulmonary capillaries, but fails to release it at the tissue level, causing cellular hypoxia despite normal O<sub>2</sub> saturation (SpO<sub>2</sub>) readings.
+                        </li>
+                        <li><strong>Rightward Shift (Hyperthermia / Increased Temp):</strong> 
+                            At higher temperatures (or in acidotic/hypercapneic states), the curve shifts right. This indicates a <strong>decreased affinity</strong> of haemoglobin for O<sub>2</sub>. 
+                            <br><em>Physiological Implication:</em> Haemoglobin releases O<sub>2</sub> more readily to metabolically active, heated tissues, facilitating cellular respiration.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Hyperthermia -->
+            <section id="hyperthermia" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Hyperthermia & Heat Emergencies</h2>
+
+                <div class="disorder-box">
+                    <h3>Heat Exhaustion vs. Heat Stroke</h3>
+                    <p>Differentiating these presentations is critical, as Heat Stroke represents a true life-threatening emergency with a mortality rate exceeding 50% if untreated.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Clinical Feature</th>
+                                <th>Heat Exhaustion</th>
+                                <th>Heat Stroke (Urologic / Medical Emergency)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Core Temperature</strong></td>
+                                <td>Elevated (37&deg;C to 40&deg;C)</td>
+                                <td><strong>Critically elevated (&gt;40&deg;C)</strong></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mental State</strong></td>
+                                <td>Intact. Normal cognition, may have mild headache.</td>
+                                <td><strong>Altered Mental Status (AMS):</strong> Confusion, delirium, seizures, coma. (Indicates encephalopathy).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Skin Presentation</strong></td>
+                                <td>Profuse sweating, cool, pale, clammy skin.</td>
+                                <td>Often hot, red, dry (classic/anhydrotic) or wet/diaphoretic (exertional).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pathophysiology</strong></td>
+                                <td>Dehydration-induced cardiovascular strain; thermoregulation intact.</td>
+                                <td><strong>Thermoregulatory failure:</strong> Severe systemic inflammatory response (SIRS), multi-organ dysfunction syndrome (MODS).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Assessment Challenges in Extreme Heat</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Environmental interference:</strong> Standard tympanic or temporal thermometers are highly inaccurate in extreme ambient temperatures. Real-time core tracking requires rectal temperature, which is often logistically and culturally difficult in the pre-hospital setting.</li>
+                        <li><strong>Anchoring & Confirmation Bias:</strong> Assuming a patient's altered mental status is secondary to alcohol/drug intoxication rather than environmental heat exposure.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Evidenced-Based Pre-Hospital Cooling Strategies</h3>
+                    <p>The therapeutic goal is rapidly lowering core temperature below 39&deg;C within 30 minutes of onset.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Cold-Water Immersion (CWI):</strong> Gold standard for exertional heat stroke. Ice-water bath immersion delivers the fastest cooling rate (&approx; 0.2&deg;C/min).</li>
+                        <li><strong>Evaporative & Convective Cooling:</strong> In resource-limited settings or when CWI is contraindicated/unavailable, strip the patient, mist continuously with lukewarm water, and blow high-velocity fans over the body.</li>
+                        <li><strong>Conduction Alternatives:</strong> Apply crushed ice packs or cold chemical packs to high-perfusion areas (axillae, groin, neck). *Avoid placing ice packs directly over the chest/heart as this can trigger arrhythmias.*</li>
+                        <li><strong>Pharmacology Alert:</strong> Antipyretics (e.g., Paracetamol, Aspirin) are <strong>completely ineffective</strong> and contraindicated, as the underlying pathology of hyperthermia is not hypothalamic set-point elevation (fever), and these drugs can exacerbate hepatic/renal injury.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Paediatric Vascular Access Decision-Making</h3>
+                    <p>In a heat-stroked paediatric patient with altered consciousness, aggressive rehydration is a priority. 
+                        <br><strong>Deciding Route:</strong> If peripheral IV access cannot be established within 2 attempts or 90 seconds, transition immediately to an **Intraosseous (IO)** line.
+                        <br><strong>IV Site Selection Order in Paediatrics:</strong>
+                        <ol class="list-decimal list-inside ml-4 mt-2 text-sm">
+                            <li><strong>Antecubital Fossa (ACF) or Dorsum of Hand:</strong> Standard baseline. Large, accessible veins, but difficult to secure if the child is combative or seizing.</li>
+                            <li><strong>Saphenous Vein (at the Medial Malleolus):</strong> Highly reliable in infants; constant anatomical pathway.</li>
+                            <li><strong>Scalp Veins (Infants <12 months):</strong> Useful fallback as they lack valves and do not easily collapse, though requiring specific training and clinical reassurance.</li>
+                        </ol>
+                    </p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Community Education & Prevention Role</h3>
+                    <p>Prevention is the ultimate tool. Community education programs should focus on:
+                        <br>1. *Wet-Bulb Globe Temperature (WBGT)* tracking rather than dry ambient temperature, as humidity impairs evaporation.
+                        <br>2. Gradual acclimatization (typically 7–14 days for outdoor workers).
+                        <br>3. Encouraging pre-hydration and structured rest-to-work ratios during extreme heat events.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Hypothermia -->
+            <section id="hypothermia" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Hypothermia & Accidental Cold Exposure</h2>
+                
+                <div class="physiology-box">
+                    <h3>Pathophysiology of Hypothermia</h3>
+                    <p>Defined as a core body temperature &lt;35&deg;C. As temperature drops, enzymatic reactions and metabolic pathways slow dramatically, leading to reduced cerebral metabolic rate of oxygen (CMRO<sub>2</sub>), decreased cardiac output, and cold-induced diuresis (due to peripheral vasoconstriction increasing central blood volume and blunting ADH).</p>
+                    <p><strong>Leftward Curve Shift:</strong> Hypothermia shifts the oxygen-haemoglobin curve left, trapping oxygen on haemoglobin and starving ischemic tissues. Cellular cellular hypoxia worsens rapidly.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Hypothermic Cardiac Conductive System & ECG Progression</h3>
+                    <p>Cold temperatures depress the pacemaker cells of the SA node and slow conduction through the bundle of His and Purkinje system.
+                    <br><strong>Typical ECG Waveform Progression as Core Temp Falls:</strong></p>
+                    <ol class="list-decimal list-inside mt-2 space-y-1 text-sm">
+                        <li><strong>Mild (32&deg;C - 35&deg;C):</strong> Sinus tachycardia (shivering) transitioning to sinus bradycardia.</li>
+                        <li><strong>Moderate (28&deg;C - 32&deg;C):</strong> Atrial Fibrillation with slow ventricular response. Broadening of PR, QRS, and QT intervals.</li>
+                        <li><strong>Osborn (J) Waves:</strong> A pathognomonic positive deflection at the junction of the QRS complex and ST segment (the J-point). Its height is directly proportional to the severity of hypothermia.</li>
+                        <li><strong>Severe (&lt;28&deg;C):</strong> Ventricular Fibrillation (frequently triggered by rough handling of the patient).</li>
+                        <li><strong>Deep (&lt;24&deg;C):</strong> Flatline Asystole.</li>
+                    </ol>
+                </div>
+
+                <div class="management-box">
+                    <h3>Hypothermic Cardiac Arrest Management (ANZCOR Alignment)</h3>
+                    <p>The cold myocardium is highly irritable and resistant to pharmacological and electrical interventions. 
+                    <br><strong>Key Procedural Modifications:</strong></p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Gentle Handling:</strong> Move the patient with extreme care. Rough movement can precipitate Ventricular Fibrillation.</li>
+                        <li><strong>Defibrillation Limits:</strong> If core temp is &lt;30&deg;C, limit defibrillation to a maximum of <strong>3 shocks</strong>. If unsuccessful, withhold further shocks until core temperature is warmed to &gt;30&deg;C.</li>
+                        <li><strong>Drug Spacing:</strong> Withhold Adrenaline and antiarrhythmics if core temp is &lt;30&deg;C. If temp is 30&deg;C - 35&deg;C, double the dosing intervals (e.g., Adrenaline every 6-10 minutes instead of 3-5 minutes), as drug metabolism is severely delayed and can lead to toxic systemic surges upon reperfusion/rewarming.</li>
+                        <li><strong>Prognostic Axiom:</strong> "No one is dead until they are warm and dead." Resuscitative efforts must continue until the patient has been actively rewarmed to at least 32&deg;C - 35&deg;C without return of circulation.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Aquatic & Diving Emergencies -->
+            <section id="aquatic-diving" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Drowning & Diving (Dysbarism) Emergencies</h2>
+                
+                <div class="disorder-box">
+                    <h3>Drowning Pathophysiology: The Pulmonary Cascade</h3>
+                    <p>Drowning begins with a period of voluntary breath-holding, followed by involuntary laryngospasm triggered by liquid contacting the larynx. As hypoxia worsens, the airway relaxes, and liquid is aspirated.
+                    <br><strong>Surfactant Washout:</strong> Aspirated water destroys and washes out pulmonary surfactant.
+                    <br><strong>Alveolar Collapse:</strong> Loss of surfactant causes widespread atelectasis, severe Ventilation/Perfusion (V/Q) mismatch, shunting, and pulmonary oedema.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Resuscitation Decision-Making: Ventilation vs. Compressions</h3>
+                    <p>Drowning is primarily a <strong>hypoxic arrest</strong> rather than a primary cardiac event. Therefore, the standard CAB (Compressions-Airway-Breathing) sequence is modified:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Prioritize Ventilation First:</strong> Resuscitation must begin with <strong>5 rescue breaths</strong> immediately upon reaching safety. This reverses hypoxia and can recruit collapsed alveoli.</li>
+                        <li><strong>Aspiration or Foam:</strong> Do not waste time trying to clear foam from the airway with suction; the foam is a mixture of aspirated water and surfactant. Vent with positive pressure (BVM) directly through it.</li>
+                        <li><strong>Circulation:</strong> If no response to the initial 5 rescue breaths and no palpable pulse is detected, initiate standard 30:2 CPR.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Environmental and Scene Variations in Drowning</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Saltwater vs. Freshwater:</strong> Historically, osmotic differences were highlighted. Classically, hypertonic saltwater draws fluid <em>into</em> the alveoli from pulmonary capillaries, while hypotonic freshwater is rapidly absorbed <em>into</em> the circulation causing haemodilution. Practically, <strong>the clinical presentation is identical</strong> (hypoxia, pulmonary oedema, compliance loss). Treatment priorities remain unchanged.</li>
+                        <li><strong>Cold Water Submersion:</strong> Cold water (&lt;15&deg;C) triggers the <em>mammalian dive reflex</em> (bradycardia, vasoconstriction, shunting), which reduces cerebral oxygen demand. This provides significant neurological protection during prolonged submersions.</li>
+                        <li><strong>Termination of Resuscitation:</strong> Do not terminate resuscitation in cold-water drowning until the patient is rewarmed. In warm-water submersions, submersion times &gt;30 minutes carry an extremely poor prognosis and support early termination.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Laws of Physics in Diving (Dysbarism)</h3>
+                    <p>Understanding dysbarism requires applying three gas laws:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Boyle's Law (P<sub>1</sub>V<sub>1</sub> = P<sub>2</sub>V<sub>2</sub>):</strong> At a constant temperature, the volume of a gas is inversely proportional to its pressure. 
+                            <br><em>Clinical Application:</em> Explains barotrauma. During rapid ascent, external pressure decreases, causing gases trapped in the lungs or middle ear to expand rapidly, potentially causing alveolar rupture or tympanic membrane perforation.
+                        </li>
+                        <li><strong>Henry's Law (C = kP):</strong> The amount of gas dissolved in a liquid is directly proportional to the partial pressure of that gas.
+                            <br><em>Clinical Application:</em> Explains Decompression Sickness (DCS). At high pressures at depth, nitrogen dissolves into fatty tissues and blood. If ascent is too rapid, the dissolved nitrogen comes out of solution and forms bubbles, mimicking a "shaken soda bottle."
+                        </li>
+                        <li><strong>Dalton's Law (P<sub>total</sub> = &Sigma; P<sub>i</sub>):</strong> The total pressure of a gas mixture is the sum of the partial pressures of each individual gas.
+                            <br><em>Clinical Application:</em> Explains nitrogen narcosis and oxygen toxicity at depth.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Differentiating DCS vs. Arterial Gas Embolism (AGE)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Clinical Feature</th>
+                                <th>Decompression Sickness (DCS)</th>
+                                <th>Arterial Gas Embolism (AGE)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Onset of Symptoms</strong></td>
+                                <td>Gradual. Typically <strong>&gt;15 minutes up to 24 hours</strong> post-dive.</td>
+                                <td><strong>Sudden/Immediate.</strong> Typically occurs within <strong>&lt;10 minutes</strong> of surfacing.</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Onset of Symptoms</strong></td>
+                                <td>Gradual. Typically **$>15$ minutes up to 24 hours** post-dive.</td>
+                                <td>**Sudden/Immediate.** Typically occurs within **$<10$ minutes** of surfacing.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pathophysiology</strong></td>
+                                <td>Nitrogen bubbles form in microvasculature and tissues, causing mechanical obstruction and inflammation.</td>
+                                <td>Alveolar rupture (barotrauma) forces air bubbles into pulmonary veins, travelling to the left heart and embolizing cerebral/coronary arteries.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Classic Symptoms</strong></td>
+                                <td>Joint/muscle pain ("the bends"), pruritus ("itch"), lymphatic swelling, neurologic deficits (lower extremities/spinal cord).</td>
+                                <td>Stroke-like neurological deficits (hemiplegia, seizures, blindness), chest pain, sudden cardiac arrest.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Pre-Hospital Management of Diving Injuries</h3>
+                    <p>In remote settings away from hyperbaric facilities, prioritize these interventions:</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>High-Flow Oxygen (100%):</strong> Rationale is vital. It creates a steep partial pressure gradient for nitrogen, speeding up the washout and reabsorption of nitrogen bubbles from the blood.</li>
+                        <li><strong>Horizontal Positioning:</strong> Keep the patient flat (supine). <em>Avoid placing the patient head-down (Trendelenburg), which was historically taught but is now known to increase cerebral oedema.</em></li>
+                        <li><strong>Aggressive Hydration:</strong> Dehydration hemoconcentrates the blood, worsening microvascular sludging and bubble formation. Administer IV Normal Saline if hemodynamics allow.</li>
+                        <li><strong>Rapid Coordination:</strong> Contact Divers Alert Network (DAN) immediately for hyperbaric chamber placement and specialized transport coordination.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Altitude Emergencies -->
+            <section id="altitude" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Altitude Emergencies</h2>
+                
+                <div class="physiology-box">
+                    <h3>Pathophysiology: Hypobaric Hypoxia</h3>
+                    <p>At high altitudes, the barometric pressure drops, which decreases the partial pressure of oxygen (PiO<sub>2</sub>). Although the fractional concentration of O<sub>2</sub> remains constant at 21%, the pressure driving oxygen across the alveolar-capillary membrane is severely reduced, leading to profound systemic hypoxia.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>The Altitude Spectrum</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>Pathophysiology</th>
+                                <th>Key Signs & Symptoms</th>
+                                <th>Management Priorities</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Acute Mountain Sickness (AMS)</strong></td>
+                                <td>Mild cerebral hypoxia and altered fluid balance.</td>
+                                <td>Headache, nausea, fatigue, dizziness, insomnia.</td>
+                                <td>Halt ascent. Acclimatize. Simple analgesics, <strong>Acetazolamide</strong> (carbonic anhydrase inhibitor).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>High Altitude Pulmonary Oedema (HAPE)</strong></td>
+                                <td>Hypoxic pulmonary vasoconstriction (HPV) leading to severe pulmonary hypertension, capillary shear stress, and non-cardiogenic pulmonary oedema.</td>
+                                <td>Progressive dyspnoea at rest, dry cough transitioning to pink frothy sputum, cyanosis, tachycardia.</td>
+                                <td><strong>Immediate descent (&gt;1000m).</strong> High-flow O<sub>2</sub>, CPAP, Nifedipine (pulmonary vasodilator), Portable Hyperbaric Chamber (Gamow bag).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>High Altitude Cerebral Oedema (HACE)</strong></td>
+                                <td>Hypoxia-induced cerebral vasodilation, breakdown of the blood-brain barrier, and vasogenic cerebral oedema.</td>
+                                <td><strong>Ataxia</strong> (earliest sign), altered mental status, slurred speech, hallucinations, coma.</td>
+                                <td><strong>Immediate descent (&gt;1000m)</strong>. High-flow O<sub>2</sub>, <strong>Dexamethasone</strong> (reduces blood-brain barrier permeability), Gamow bag.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Envenomation & Bites -->
+            <section id="envenomation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Envenomation, Bites, and Stings</h2>
+                
+                <div class="disorder-box">
+                    <h3>Australian Snakebites: Critical Warnings</h3>
+                    <p>Australian elapids (e.g., Brown snake, Tiger snake) possess highly potent venoms consisting of pre-synaptic neurotoxins, procoagulants (causing Venom-Induced Consumption Coagulopathy or VICC), and myotoxins.</p>
+                    <p class="mt-2 font-bold text-red-700 text-lg">What NOT to do in Australian Snakebites:</p>
+                    <ul class="list-disc list-inside text-red-900 space-y-1">
+                        <li><strong>DO NOT wash the bite site:</strong> Residual venom on the skin is essential for the laboratory Venom Detection Kit (VDK) to identify the correct antivenom.</li>
+                        <li><strong>DO NOT cut, incise, or suck the wound:</strong> This exacerbates local tissue damage, increases infection rates, and is pharmacologically useless.</li>
+                        <li><strong>DO NOT apply tight arterial tourniquets:</strong> Cutting off arterial blood supply causes severe localized ischemia, lactic acidosis, and tissue necrosis, without safely slowing systemic absorption.</li>
+                        <li><strong>DO NOT allow the patient to walk, elevate the limb, or exercise:</strong> Muscular activity acts as a pump, accelerating lymphatic flow and systemic venom uptake.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>The Rationale for the Pressure Immobilisation Technique (PIT)</h3>
+                    <p>The PIT is the gold-standard treatment for Australian snakebites, funnel-web spider bites, and blue-ringed octopus envenomations.
+                    <br><strong>Anatomical & Physiological Rationale:</strong></p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Lymphatic Containment:</strong> Snake venom molecules are large proteins (typically &gt;20,000 Daltons). These cannot directly penetrate capillary walls and instead travel exclusively via the low-pressure lymphatic system.</li>
+                        <li><strong>The Muscle Pump:</strong> Lymphatic flow is driven by skeletal muscle contraction and tissue pressure. PIT applies a firm, broad pressure elastic bandage (100 - 150 mmHg) to collapse the lymphatic vessels while maintaining arterial and deep venous circulation.</li>
+                        <li><strong>Correct Application Technique:</strong>
+                            <ol class="list-decimal list-inside ml-4 mt-1 text-sm">
+                                <li>Apply a firm pressure bandage directly over the bite site immediately.</li>
+                                <li>Bandage the entire limb starting from the digits (fingers/toes) and wrapping up towards the torso. It should be as tight as a sprained ankle bandage (distal pulse must remain palpable).</li>
+                                <li>Splint the limb completely to eliminate all muscle movement. Keep the patient completely still.</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Funnel-Web Spider Bites: The Atropine Controversy</h3>
+                    <p>Funnel-web venom contains <em>Delta-atracotoxin</em>, which causes massive, uncontrolled neurotransmitter release (acetylcholine and catecholamines), leading to a severe cholinergic and autonomic storm.</p>
+                    <p><strong>The Atropine Debate:</strong>
+                        <br><em>Pros:</em> Atropine acts as a competitive muscarinic antagonist, effectively blocking severe cholinergic symptoms like profuse salivation, lacrimation, bronchorrhea (secretions blocking the airway), and severe bradycardia.
+                        <br><em>Cons:</em> Atropine can worsen the sympathetic phase, causing severe tachycardia, arrhythmias, and malignant hypertension.
+                        <br><strong>Recommended Dosing if Indicated (e.g., severe secretions/bradycardia):</strong>
+                        <ul class="list-disc list-inside ml-4 mt-2 text-sm">
+                            <li><strong>Adult:</strong> 0.6 mg to 1.2 mg IV, repeated as clinically indicated.</li>
+                            <li><strong>Paediatric:</strong> 20 &mu;g/kg IV (minimum dose 100 &mu;g).</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Tick Removal and Alpha-Gal Allergy Risks</h3>
+                    <p>Tick bites carry a unique risk of inducing a severe delayed allergy to red meat, known as <strong>Alpha-Gal Syndrome (Mammalian Meat Allergy)</strong>. Tick saliva contains alpha-gal molecules; when introduced into the human bloodstream, it sensitizes the immune system, causing IgE-mediated anaphylaxis upon subsequent red meat consumption.</p>
+                    <p><strong>Safe Tick Removal Strategies:</strong></p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>CRITICAL WARNING: Never squeeze, scratch, or compress the tick's body.</strong> Squeezing forces its highly allergenic and toxin-loaded salivary glands directly into the host's bloodstream, triggering systemic anaphylaxis.</li>
+                        <li><strong>For Visible Ticks:</strong> Use an ether-containing freeze spray (e.g., Wart-Off freeze) to freeze the tick instantly. This kills it in situ and prevents it from injecting its salivary contents. Allow it to fall off, or pull straight up with fine-tipped forceps once dead.</li>
+                        <li><strong>For Invisible/Larval Ticks (e.g., "grass ticks"):</strong> Apply permethrin cream (5%, Lyclear) to the affected area to kill the microscopic ticks safely without mechanical stimulation.</li>
+                        <li><strong>Adult vs. Paediatric Guidelines:</strong> Paediatric patients are at much higher risk for tick paralysis (caused by neurotoxins in tick saliva). Carefully inspect the scalp and behind ears in any child presenting with ascending weakness. Use permethrin with extreme caution around the eyes/face in infants.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Marine Envenomations: Hot Water vs. Cold Water</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Examples</th>
+                                <th>Pathophysiology</th>
+                                <th>Key Pre-Hospital Intervention</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Nematocysts (Stingers)</strong></td>
+                                <td>Box Jellyfish, Irukandji</td>
+                                <td>Venom is delivered via microscopic firing capsules. Capsular firing is triggered by physical contact or fresh water.</td>
+                                <td>**Vinegar (4% acetic acid)**. Pour liberally over the tentacles to deactivate undischarged nematocysts. **Do not use fresh water** (triggers firing). Use ice packs for pain relief once deactivated. For Irukandji syndrome, anticipate hypertensive crises and severe pain.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Heat-Labile Toxins</strong></td>
+                                <td>Stonefish, Bullrout, Stingray</td>
+                                <td>Venom consists of complex proteins that are physically unstable at high temperatures.</td>
+                                <td><strong>Hot Water Immersion (45&deg;C)</strong> for 30–90 minutes. The high heat denatures the proteins, neutralizing the toxin and relieving pain instantly.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Allergy & Anaphylaxis -->
+            <section id="anaphylaxis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Allergy & Anaphylaxis</h2>
+                
+                <div class="physiology-box">
+                    <h3>Pathophysiology of Allergic Sensitization</h3>
+                    <p>An allergy is not born; it is developed. It requires a two-step immunological pathway:</p>
+                    <ol class="list-decimal list-inside mt-2 space-y-2">
+                        <li><strong>Sensitization Phase (First Exposure):</strong> An antigen (e.g., peanut protein, bee venom) enters the body. B-lymphocytes process the antigen and produce antigen-specific **Immunoglobulin E (IgE)** antibodies. These IgE antibodies bind to the surface of **mast cells and basophils**. The patient is now sensitized but remains asymptomatic.</li>
+                        <li><strong>Degranulation Phase (Subsequent Exposure):</strong> Upon re-exposure, the allergen binds directly to the IgE antibodies on the mast cells, causing them to **cross-link**. This triggers an immediate influx of calcium ions, resulting in massive **degranulation** and the systemic release of pre-formed inflammatory mediators (histamine, leukotrienes, prostaglandins, and tryptase).</li>
+                    </ol>
+                    <p class="mt-2 text-sm"><strong>Allergic Reaction vs. Anaphylaxis:</strong> Not all allergic reactions progress to anaphylaxis. A simple allergic reaction is limited to localized cutaneous manifestations (e.g., isolated hives). **Anaphylaxis** is defined as a severe, life-threatening, generalized or systemic hypersensitivity reaction characterized by **airway, breathing, or circulatory compromise** (usually accompanied by skin changes).</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Pharmacology of Allergy & Anaphylaxis Medications</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Medication</th>
+                                <th>Primary Receptor & Action</th>
+                                <th>Pathophysiological Rationale & Connection</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Adrenaline (Epinephrine)</strong><br><em>Gold Standard</em></td>
+                                <td>* &alpha;<sub>1</sub>: Intense vasoconstriction.<br>* &beta;<sub>1</sub>: Positive inotropy/chronotropy.<br>* &beta;<sub>2</sub>: Bronchodilation & mast-cell stabilization.</td>
+                                <td><strong>First-line for Anaphylaxis.</strong> Reverses vasodilatory shock (&alpha;<sub>1</sub>), reduces upper airway laryngeal oedema (&alpha;<sub>1</sub>), relieves severe bronchospasm (&beta;<sub>2</sub>), and stops further release of histamine (&beta;<sub>2</sub> mast cell stabilization).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Antihistamines</strong><br>(e.g., Loratadine, Cetirizine)</td>
+                                <td>* Selective H<sub>1</sub> receptor antagonist.</td>
+                                <td><strong>Symptomatic relief only.</strong> Competitively blocks H<sub>1</sub> receptors to reduce capillary permeability, flare, itch, and urticaria. <strong>Has no effect on airway oedema or bronchospasm.</strong> Never use as a primary treatment for anaphylaxis.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Corticosteroids</strong><br>(e.g., Hydrocortisone)</td>
+                                <td>* Glucocorticoid receptor agonist. Modulates gene transcription.</td>
+                                <td><strong>Prevents late-phase biphasic reactions.</strong> Suppresses the synthesis of pro-inflammatory cytokines and decreases capillary permeability over hours. Has no role in acute, immediate resuscitation due to its delayed onset of action.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Beta-2 Agonists</strong><br>(e.g., Salbutamol)</td>
+                                <td>* Selective &beta;<sub>2</sub> adrenergic receptor agonist.</td>
+                                <td><strong>Relieves bronchospasm.</strong> Directly relaxes bronchial smooth muscle. Used as an adjunct when bronchospasm/wheeze is refractory to intramuscular Adrenaline.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Clinical Case Scenario & Disposition Decision-Making</h3>
+                    <p><strong>Scenario:</strong> A 28-year-old female presents with widespread, highly pruritic urticaria (hives) over her chest, back, and arms after exposure to an unknown allergen. Her primary assessment is completely unremarkable: airway is clear, respiratory effort is normal with clear lung fields, and haemodynamics are stable. You administer an oral antihistamine.</p>
+                    <p class="mt-2 font-bold">Determining Safe Care Priorities & Disposition (Transport vs. Non-Transport):</p>
+                    <p>Before leaving this patient at home, a rigorous risk assessment must be conducted. The following key factors dictate whether she can be safely discharged on scene:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1 text-sm">
+                        <li><strong>Onset of Symptoms & Exposure Time:</strong> If the reaction occurred within minutes of exposure, there is a higher risk of rapid progression compared to a reaction that has remained stable for several hours.</li>
+                        <li><strong>History of Biphasic Reactions or Anaphylaxis:</strong> A prior history of severe anaphylaxis is a strong indicator for transport and extended observation.</li>
+                        <li><strong>Access to Autoinjector (Epipen):</strong> Does the patient have an Epipen on hand, and does she (and her family) know how and when to use it?</li>
+                        <li><strong>Presence of a Competent Adult:</strong> The patient cannot be left alone. A reliable adult must remain with her to monitor for delayed deterioration.</li>
+                        <li><strong>Geographical and Logistic Safety:</strong> Proximity to the nearest emergency department, access to reliable transport, and weather/environmental conditions that could delay ambulance response.</li>
+                        <li><strong>Route of Allergen:</strong> Ingested allergens can have delayed, biphasic absorption profiles compared to inhaled or cutaneous allergens.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Based on Australian Resuscitation Council (ANZCOR) Guidelines, Wilderness Medical Society (WMS) Guidelines, and clinical paramedicine curricula (2026). Always prioritize basic life support principles (Oxygenation and Ventilation) in aquatic and environmental trauma cases.</p>
+        </footer>
+    </div>
+</body>
+</html>
