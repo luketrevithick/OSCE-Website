@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burns: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Burns & Thermal Injuries</h1>
+            <p class="text-xl text-gray-600 mt-2">Advanced Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#pathophysiology" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Aetiology & Patho</a>
+                <a href="#assessment-tbsa" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Airway & TBSA</a>
+                <a href="#management" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Clinical Care</a>
+                <a href="#fluids-disposition" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Fluids, Pain & Hosp</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Pathophysiology and Aetiology of Burns -->
+            <section id="pathophysiology" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">1. Aetiology & Systemic Pathophysiology</h2>
+                
+                <div class="disorder-box">
+                    <h3>Classification by Aetiology</h3>
+                    <p>The cellular mechanism and depth of tissue damage vary profoundly based on the burn source:</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">Burn Type</th>
+                                <th>Aetiology & Cellular Impact</th>
+                                <th>Pathophysiological Effects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Thermal</strong></td>
+                                <td>Flame, scald, steam, or contact with hot objects.</td>
+                                <td>Direct transfer of kinetic thermal energy denatures structural proteins, causing coagulative necrosis. Scalds often cause deep partial-thickness injuries (nerve endings exposed), while flame contact quickly leads to full-thickness devastation.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Chemical</strong></td>
+                                <td>Acids, alkalis, or organic compounds.</td>
+                                <td>
+                                    <strong>Acids:</strong> Induce <em>coagulation necrosis</em>. Coagulated proteins form a leathery, protective eschar that physically restricts deeper acid penetration.<br>
+                                    <strong>Alkalis:</strong> Induce <em>liquefaction necrosis</em>. They saponify membrane lipids, dissolving the protective barriers and allowing the chemical to burrow deep into skeletal structures continuously.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>Electrical</strong></td>
+                                <td>Alternating (AC) or Direct (DC) current exposure.</td>
+                                <td>Current follows paths of least resistance (nerves, vessels). Massive internal, deep-tissue thermal necrosis (rhabdomyolysis) occurs with minimal external markers. High risk of immediate <strong>VF/cardiac arrhythmias</strong> and acute kidney injury from myoglobinuria.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Radiation</strong></td>
+                                <td>Ultraviolet light (sunburn), industrial sources, or medical radiation.</td>
+                                <td>Ionising electromagnetic radiation damages DNA directly. Symptoms (erythema, localized edema, cell death) are typically delayed as cellular replication cycles fail over hours to days.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Jackson's Local Burn Zones</h3>
+                    <p>A local burn wound consists of three distinct physiological zones:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong>Zone of Coagulation:</strong> The central, non-viable, necrotic tissue. Irreversible cellular damage.</li>
+                        <li><strong>Zone of Stasis:</strong> The surrounding ring of compromised perfusion. Tissues are highly fragile; if uncorrected (due to hypoperfusion, infection, or poor cooling), this zone progresses to complete necrosis, extending the burn.</li>
+                        <li><strong>Zone of Hyperaemia:</strong> The outermost ring. Marked by vasodilation due to local inflammatory mediators. Tissues remain viable and heal rapidly.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Systemic Pathophysiological Response (Severe Burns &gt; 20% TBSA)</h3>
+                    <p>When TBSA exceeds 20%, local inflammatory mediators spill into systemic circulation, provoking a devastating cascade across multiple organ systems:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-3">
+                        <li><strong>Cardiovascular ("Burn Shock"):</strong> Widespread, massive capillary leak occurs due to endothelial cell retraction. Plasma proteins leak into the interstitial space, raising interstitial oncotic pressure and drawing fluid out of vessels. This causes severe hypovolaemic shock, dramatic haemoconcentration, and extreme generalised edema ("third-spacing").</li>
+                        <li><strong>Respiratory:</strong> Circulating inflammatory cytokines trigger systemic bronchospasm. Loss of plasma proteins decreases oncotic pressure, increasing susceptibility to Acute Respiratory Distress Syndrome (ARDS) and pulmonary edema.</li>
+                        <li><strong>Immune & Endocrine:</strong> The skin's protective immune barrier is lost. Concurrently, a massive hypermetabolic state is triggered, doubling baseline energy demands. Bone marrow and immune functions are suppressed, predisposing the patient to rapid sepsis.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Burn Depth & Expected Physiological Response</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Depth</th>
+                                <th>Anatomy Involved</th>
+                                <th>Clinical Presentation</th>
+                                <th>Pre-Hospital treatment Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Superficial (Epidermal)</strong></td>
+                                <td>Epidermis only.</td>
+                                <td>Erythema, painful, dry, no blisters. Healing in 3–6 days.</td>
+                                <td>Symptomatic relief, standard cooling, simple oral analgesics.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Partial-Thickness (Dermal)</strong></td>
+                                <td>Epidermis + varying layers of dermis.</td>
+                                <td>Blistered, pink/red, weeping, <strong>extremely painful</strong> due to exposed, intact nerve endings.</td>
+                                <td>Aggressive pain management, protect blisters, maintain normothermia, prevent stasis extension.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Full-Thickness</strong></td>
+                                <td>Epidermis, dermis, and subcutaneous structures.</td>
+                                <td>Leathery, white, waxy, or charred appearance. <strong>Painless centrally</strong> due to total nerve destruction. No capillary refill.</td>
+                                <td>Airway assessment, early IV fluid resuscitation, eschar monitoring, bypass to specialist care.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Airway Assessment & TBSA Estimation -->
+            <section id="assessment-tbsa" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">2. Airway Risk Assessment & TBSA Estimation</h2>
+                
+                <div class="assessment-box">
+                    <h3>Airway Burn Risk Assessment Matrix</h3>
+                    <p>Upper airway tissue is highly vascular and prone to explosive, rapid occlusion. Paramedics must execute a proactive, low-threshold airway risk assessment.</p>
+                    <p class="mt-2 font-semibold">Red Flag Indicators for Impending Airway Obstruction:</p>
+                    <ul class="list-disc list-inside mt-1 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <li>History of fire/explosion in an enclosed space</li>
+                        <li>Facial or perioral burns</li>
+                        <li>Soot in the oral cavity, saliva, or sputum</li>
+                        <li>Singed nasal, facial, or eyebrow hair</li>
+                        <li>Hoarse voice, painful swallowing, or coughing</li>
+                        <li><strong>Late Signs:</strong> Inspiratory stridor, tachypnoea, accessory muscle use</li>
+                    </ul>
+                    <p class="mt-2 text-sm text-amber-900 font-medium"><em>Clinical Reasoning:</em> If any red flags are present accompanied by altered conscious state or clinical deterioration, request immediate critical care/advanced airway support. Airway edema can progress to total occlusion within minutes of rescue.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>The Clinical Impact of TBSA Estimation Errors</h3>
+                    <p>Total Body Surface Area (TBSA) calculation directly dictates initial pre-hospital fluid volume protocols. Errors here have severe physiological consequences:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Consequences of Underestimation:</strong> Leads to inadequate fluid resuscitation, failing to offset systemic capillary leaks. This causes uncorrected hypovolaemic shock, metabolic acidosis, acute kidney injury (renal tubular necrosis), and tissue ischemia that converts the salvageable *Zone of Stasis* into necrotic tissue.</li>
+                        <li><strong>Consequences of Overestimation:</strong> Causes "fluid creep" (iatrogenic volume overload). This worsens systemic tissue swelling, increases upper airway edema, worsens pulmonary compliance (ARDS/pulmonary edema), and can trigger abdominal compartment syndrome or limb compartment syndrome under circumferential eschars.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>TBSA Estimation Methodologies across Populations</h3>
+                    <p>Standard estimations (such as the standard adult 'Rule of Nines') fail in specific patient groups due to differing anatomical proportions:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-3">
+                        <li><strong>Paediatric Patients:</strong> Children possess disproportionately larger heads and smaller limbs. Using the adult Rule of Nines under-resuscitates their trunks/limbs and over-resuscitates head injuries.
+                            <br><strong>Best Practice:</strong> Utilize the **Lund and Browder Chart**, which scales head and limb percentages based on the child's precise age, or the **Rule of Palms** (the patient's closed palm, excluding fingers, represents &approx; 0.5% to 1% TBSA) for scattered, irregular burns.
+                        </li>
+                        <li><strong>Obese Patients:</strong> Adipose distribution causes disproportionate torso-to-limb ratios.
+                            <br><strong>Best Practice:</strong> The Rule of Palms is the safest tool to estimate irregular areas, alongside conservative application of the Parkland formula (basing calculations on *ideal* body weight rather than actual weight to prevent massive fluid overload).
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Contemporary Digital TBSA Tools</h3>
+                    <p>Mobile applications and digital 3D body mapping tools allow paramedics to "paint" burns onto age-matched 3D models, calculating precise TBSA instantly.</p>
+                    <p class="mt-2"><strong>Pros:</strong> Drastically reduces cognitive overload, eliminates mathematical errors under stress, and provides standardized calculations for transfer handovers.</p>
+                    <p class="mt-2"><strong>Cons & Challenges:</strong> Paramedics encounter severe ambient screen glare on scenes, strict biohazard/cross-contamination concerns (handling personal devices with soot-covered or bodily-fluid-laden gloves), lack of cellular network connectivity in remote sites, and time-on-scene delays during initial emergency phases.</p>
+                </div>
+            </section>
+
+            <!-- Clinical Management -->
+            <section id="management" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">3. On-Scene & En-Route Clinical Management</h2>
+                
+                <div class="management-box">
+                    <h3>Evidence-Based Cooling Workflows</h3>
+                    <p>Cooling halts progressive thermal injury and stabilizes the Zone of Stasis, but must be balanced against systemic thermal compromise.</p>
+                    <ol class="list-decimal list-inside space-y-2 mt-2">
+                        <li><strong>Immediate Cool Running Water:</strong> Apply cool, clean, running water directly to the burn site for exactly <strong>20 minutes</strong>. Do this as early as possible (viable up to 3 hours post-injury).</li>
+                        <li><strong>Cool the Burn, Warm the Patient:</strong> Cease active cooling after 20 minutes to prevent profound hypothermia. Turn on the ambulance cabin heater to high. Warm the patient's unburned areas with dry blankets.</li>
+                        <li><strong>Continuous Cooling En-Route:</strong> If transport is prolonged, maintain localized cooling by applying clean, wet towels or flannels over the burn site, refreshing them with ambient-temperature water. <strong>Never use ice or ice-water</strong>; this induces severe vasoconstriction, accelerates local tissue ischemia, and quickly triggers hypothermic coagulopathy.</li>
+                    </ol>
+                </div>
+
+                <div class="management-box">
+                    <h3>Dressings: Cling Wrap vs. Hydrogels ('Burn Aid')</h3>
+                    <p>Pre-hospital dressings have specific indications, sequences, and hazards:</p>
+                    <ul class="list-disc list-inside space-y-3 mt-2">
+                        <li><strong>Cling Wrap (The Gold Standard):</strong> Apply **after** the full 20-minute cooling period is complete. It must be applied **longitudinally** (laid flat in sheets along limbs), never wrapped circumferentially, to prevent tourniquet effects during tissue swelling.
+                            <br><em>Rationale:</em> It excludes air currents (which immediately reduces agonizing nerve pain), keeps the wound sterile, does not adhere to tissues (pain-free removal at the burns unit), and allows clinicians to continuously inspect the burn wound.
+                        </li>
+                        <li><strong>Hydrogel/Burn Aid Dressings:</strong> These consist of open-cell foam saturated with water-soluble gel.
+                            <br><em>Appropriate Use:</em> Small, isolated superficial or partial-thickness burns (<strong>&lt; 10% TBSA</strong>) when running water is completely unavailable, to provide localized cooling and analgesic relief.
+                            <br><em>Contraindications:</em> **Never use on burns &gt; 10% TBSA**. Hydrogels act as a massive, uncontrollable thermal heat sink. On large TBSA burns, they continuously extract systemic core body heat, rapidly causing severe hypothermia.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Circumferential Burns & Limb Salvage</h3>
+                    <p><strong>Pathophysiology:</strong> Full-thickness circumferential burns to limbs or the chest create a rigid, non-expanding ring of leathery eschar. As plasma fluid shifts into the tissues beneath the burn, pressure inside the limb climbs rapidly. When tissue pressure exceeds venous/capillary perfusion pressure, arterial blood flow ceases (eschar-induced compartment syndrome), causing irreversible limb ischemia.</p>
+                    <p><strong>Immediate Paramedic Mitigation Actions:</strong></p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li>Remove all rings, watches, bracelets, or constrictive clothing immediately from affected limbs.</li>
+                        <li>Elevate the burned limb above the level of the heart to encourage venous return and decrease edema.</li>
+                        <li>Frequently assess and document distal pulses (capillary refill, sensation, and motor function).</li>
+                        <li>Pre-notify the receiving hospital early. The patient will require urgent surgical **escharotomy** upon arrival to restore perfusion.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Complications: Hypothermia & Hypoglycaemia</h3>
+                    <p>Severe burns compromise systemic homeostasis, predisposing patients to the "Lethal Triad" of trauma.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Hypothermia:</strong> Loss of the epidermis destroys the body's primary thermoregulatory barrier. Hypothermia impairs the coagulation cascade, worsening bleeding, and increases mortality.
+                            <br><em>Mitigation:</em> Cease active wet-cooling at 20 minutes, dry all unburned areas, wrap in thermal blankets, and use warmed IV fluids.
+                        </li>
+                        <li><strong>Hypoglycaemia:</strong> Severe burns trigger an immense, catecholamine-driven hypermetabolic state. Paediatric patients have minimal glycogen reserves and deplete their blood glucose rapidly.
+                            <br><em>Mitigation:</em> Perform regular blood glucose level (BGL) checks on all pediatric and severe burn patients. Correct hypoglycaemia early via IV Dextrose or Glucagon per local service protocols.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Fluids, Analgesia & Disposition -->
+            <section id="fluids-disposition" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">4. Fluids, Analgesia & Transport Destination</h2>
+
+                <div class="physiology-box">
+                    <h3>Pre-Hospital Fluid Resuscitation</h3>
+                    <p>Systemic vascular permeability results in massive fluid shifts. Correcting this deficit requires structured fluid therapy.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-3">
+                        <li><strong>Fluid of Choice:</strong> Isotonic crystalloid, specifically <strong>Hartmann's Solution (Lactated Ringer's)</strong>. It closely mimics physiological plasma electrolytes and contains sodium lactate, which buffers the metabolic acidosis generated by burn shock and poor tissue perfusion. Standard 0.9% Normal Saline should be avoided in large volumes as it can cause hyperchloraemic metabolic acidosis.</li>
+                        <li><strong>Rationale for Administration:</strong> Replacement of intravascular volume lost to third-spacing capillary leak. The goal is to maintain organ perfusion (specifically renal and cerebral perfusion) and prevent the progression of the *Zone of Stasis* to complete necrosis.</li>
+                        <li><strong>Under-resuscitation Risks:</strong> Hypovolaemic shock, multi-organ dysfunction syndrome (MODS), renal failure, and extension of the burn wound depth.</li>
+                        <li><strong>Over-resuscitation Risks:</strong> Exacerbation of tissue edema, pulmonary edema (ARDS), airway swelling, and abdominal/extremity compartment syndrome.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Vascular Access Problem-Solving</h3>
+                    <p>Gaining IV access in severe burns is challenging as veins are collapsed from shock and overlying skin is charred or blistered.</p>
+                    <p class="mt-2"><strong>Clinical Workflows:</strong></p>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li><strong>IV through Burned Skin:</strong> Yes, this is clinically acceptable. If no unburned areas are available, place the IV cannula directly through burned skin. Secure it with a suture or wrap with gauze (standard tape will not stick to charred/weeping skin).</li>
+                        <li><strong>Alternative Sites:</strong> Look for the saphenous vein at the medial ankle or the external jugular (EJ) vein.</li>
+                        <li><strong>Intraosseous (IO) Access:</strong> If peripheral IV access cannot be obtained within 2 attempts or 90 seconds in a severely shocked patient, transition immediately to IO insertion (proximal humerus or tibia).</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Analgesic Care Decision-Making</h3>
+                    <p>Burn pain is multifaceted. Analgesia must be tailored, reasoning-based, and patient-specific rather than a generic protocol:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Superficial & Minor Partial-Thickness Burns (&lt; 5% TBSA):</strong> Best managed with 20 minutes of cooling, paracetamol, and NSAIDs.</li>
+                        <li><strong>Moderate to Severe Dermal/Mixed-Depth Burns:</strong> Extremely painful due to exposed nerve endings. Titrate **IV/intranasal Fentanyl** or **IV Morphine** in small, frequent increments. </li>
+                        <li><strong>Full-Thickness Burns:</strong> Though centrally anesthetic due to nerve destruction, the margins contain agonizing partial-thickness burns. Additionally, the patient experiences severe background anxiety and shivering. Manage with titrated opioids or low-dose **Ketamine** (highly effective for burn dressing pain and preserving airway reflexes).</li>
+                        <li><em>Clinical Indicator:</em> Always cross-reference the Emergency Care Institute (ECI) burn severity indicators to match analgesia to the burn's physiological strain.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Disposition & Specialist Hospital Referral Criteria</h3>
+                    <p>Severe burns require immediate, highly specialized multidisciplinary care. Bypassing local emergency departments directly to a **Specialist Burns Hospital** (e.g., Concord Hospital or Royal North Shore Hospital in NSW) is essential if the patient meets specific criteria:</p>
+                    <p class="mt-2 font-semibold">Specialist Burns Center Referral Criteria:</p>
+                    <ul class="list-disc list-inside mt-1 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                        <li>TBSA &gt; 10% in an adult patient</li>
+                        <li>TBSA &gt; 5% in a paediatric patient</li>
+                        <li>Any full-thickness burn &gt; 5%</li>
+                        <li>Burns involving special areas: face, hands, feet, genitalia, perineum, or major joints</li>
+                        <li>Suspected inhalation or airway injury</li>
+                        <li>Significant chemical or high-voltage electrical burns</li>
+                        <li>Burns in patients with significant pre-existing medical comorbidities</li>
+                    </ul>
+                    <p class="mt-2 text-sm text-amber-900 font-medium"><em>Reasoning:</em> Specialist burn units house specialized surgical teams capable of performing immediate escharotomies, early tangential excision, and biological skin grafting, alongside intensive care units specifically geared to combat burn-induced immunosuppression and wound sepsis.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Based on current clinical guidelines (ACI/ECI Adult and Paediatric Burns, ANZCOR guidelines). Always prioritize airway patency, ensure exact 20-minute cooling workflows, prevent hypothermia, and consult the specialist burns team early.</p>
+        </footer>
+    </div>
+</body>
+</html>
