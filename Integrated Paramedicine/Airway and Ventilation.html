@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airway and Ventilation: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Airway and Ventilation</h1>
+            <p class="text-xl text-gray-600 mt-2">Comprehensive Assessment, Pathophysiology, and Intervention</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#assessment" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Respiratory Assessment</a>
+                <a href="#clinical-presentations" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Clinical Presentations</a>
+                <a href="#investigations" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Investigations</a>
+                <a href="#ventilation" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Ventilation Strategies</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Respiratory Assessment -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">1. Comprehensive Respiratory Assessment</h2>
+                
+                <div class="assessment-box">
+                    <h3>IPPA Framework & Physical Examination</h3>
+                    <p>A systematic respiratory assessment utilizes the IPPA framework: <strong>Inspection, Palpation, Percussion, and Auscultation</strong>.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2 text-sm">
+                        <li><strong>Inspection:</strong> Observe for cyanosis, diaphoresis, accessory muscle use (tripoding, tracheal tug), chest wall symmetry, and frothy sputum (e.g., in drowning/APO).</li>
+                        <li><strong>Palpation:</strong> Feel for tracheal deviation (late sign of tension pneumothorax), subcutaneous emphysema, and tactile fremitus.</li>
+                        <li><strong>Percussion:</strong> Dullness suggests fluid (haemothorax, pneumonia consolidation), while hyper-resonance suggests trapped air (asthma, pneumothorax).</li>
+                        <li><strong>Auscultation:</strong> Listen methodically to anterior and posterior lung fields. Note the presence of wheeze (bronchospasm), crackles (fluid/oedema), stridor (upper airway obstruction), or a 'silent chest' (life-threatening lack of air movement).</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>QAS Respiratory Status Matrix</h3>
+                    <p class="text-sm mb-2">Utilise this matrix to rapidly differentiate normal physiology from respiratory distress or failure.</p>
+                    <table class="text-sm">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Component</th>
+                                <th style="width: 40%;">Normal</th>
+                                <th>Respiratory Distress / Altered</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Conscious State</strong></td>
+                                <td>Alert, calm, and quiet.</td>
+                                <td>Altered, anxious, struggling to breathe, exhausted.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Speech</strong></td>
+                                <td>Clear, fluent, and steady.</td>
+                                <td>Difficult, short sentences or phrases, unable to verbalise.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ventilatory Rate</strong></td>
+                                <td>12-18 breaths/min (Adult).</td>
+                                <td>Greater than 18 (Tachypnoea) or abnormally slow (Bradypnoea).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ventilatory Rhythm</strong></td>
+                                <td>Regular, even cycles.</td>
+                                <td>No respiratory pause, prolonged expiratory phase (Asthma/COPD).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ventilatory Effort</strong></td>
+                                <td>Minimal chest/abdominal movement.</td>
+                                <td>Marked chest movement, intense accessory muscle use.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Skin</strong></td>
+                                <td>Pink and warm.</td>
+                                <td>Pale and sweaty; <strong>cyanosis is a late and serious sign</strong>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Clinical Presentations & Simulation Scenarios -->
+            <section id="clinical-presentations" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">2. Differentiating Respiratory Compromise</h2>
+                <p class="mb-4 text-sm text-gray-700">Integrating clinical presentations with real-world simulation cases.</p>
+
+                <div class="disorder-box">
+                    <h3>Asthma Exacerbation (Special Context: Pregnancy)</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-2 text-sm">
+                        <li><strong>Pathophysiology:</strong> Reversible airway obstruction due to bronchospasm, mucosal oedema, and mucus plugging. Results in prolonged expiratory phase and polyphonic wheezing.</li>
+                        <li><strong>Pregnancy Physiology (Sim Case):</strong> Normal PCO<sub>2</sub> in pregnancy is <strong>32 mmHg</strong> (due to progesterone-driven baseline hyperventilation). A PCO<sub>2</sub> of 40 mmHg in a pregnant asthmatic is a sign of impending respiratory failure and exhaustion. Decreased diaphragmatic excursion due to the gravid uterus limits reserve.</li>
+                        <li><strong>Management:</strong> Stepwise approach: 1. Salbutamol (Bronchodilator), 2. Ipratropium, 3. Systemic Corticosteroids (Methylprednisolone), 4. Adjuncts (IV Magnesium Sulfate). <em>Note: Avoid Epinephrine if possible due to concerns for uterine vasoconstriction and fetal hypoxia.</em></li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Acute Pulmonary Oedema (APO)</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-2 text-sm">
+                        <li><strong>Pathophysiology:</strong> Left ventricular failure leads to increased pulmonary capillary hydrostatic pressure, forcing fluid into the alveoli. This creates a severe V/Q mismatch and hypoxemia.</li>
+                        <li><strong>Clinical Presentation (Sim Case):</strong> A 68yo male with a fractured hip, kept NPO with withheld cardiac meds (Furosemide), given IV fluids overnight. Presents with severe dyspnoea, diffuse bilateral crackles, hypertension (180/100), and peripheral oedema.</li>
+                        <li><strong>Differentiation:</strong> Differentiated from COPD by the presence of crackles, elevated JVP, orthopnoea, and history of heart failure (e.g., low Ejection Fraction).</li>
+                        <li><strong>Management:</strong> Reduce preload and afterload aggressively. Nitroglycerin (SL spray/IV), BiPAP/CPAP, and eventual diuresis (Furosemide).</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Submersion Injury (Drowning) & ARDS</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-2 text-sm">
+                        <li><strong>Pathophysiology (Sim Case):</strong> When water enters the airway, it causes <strong>surfactant washout</strong> (even with just 3-4 cc/kg of water), leading to profound atelectasis, intrapulmonary shunting, and direct cellular injury causing pulmonary oedema.</li>
+                        <li><strong>Clinical Presentation:</strong> Frothy foam in the airway, unconsciousness, bilateral crackles/wheeze, severe hypoxemia. May lead to hypoxia-induced bradycardia (a terminal rhythm in pediatrics).</li>
+                        <li><strong>Management:</strong> Prioritize ventilation. Do NOT persistently suction the "surfactant foam" (it is not physically obstructing); instead, ventilate with Positive Pressure Ventilation (PPV) directly through it.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>COPD, Pneumonia, and Pulmonary Embolism (PE)</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-2 text-sm">
+                        <li><strong>COPD:</strong> Chronic hypercapnia, pursed-lip breathing, barrel chest. Wheeze or diminished breath sounds. Hypoxic drive relies on carefully titrated O<sub>2</sub> (target 88-92%).</li>
+                        <li><strong>Pneumonia:</strong> Febrile, productive cough, unilateral focal crackles or bronchial breath sounds, pleuritic chest pain.</li>
+                        <li><strong>Pulmonary Embolism (PE):</strong> Sudden onset dyspnoea, clear lung sounds, pleuritic chest pain, tachycardia. High suspicion in immobilized patients (e.g., orthopedic injuries), deep vein thrombosis, or hypercoagulable states (like pregnancy).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Investigations -->
+            <section id="investigations" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">3. Relevant Investigations & Interpretations</h2>
+
+                <div class="physiology-box">
+                    <h3>Pulse Oximetry (SpO<sub>2</sub>) & Capnography (EtCO<sub>2</sub>)</h3>
+                    <p class="text-sm mt-2">Essential continuous monitoring tools:</p>
+                    <ul class="list-disc list-inside mt-1 space-y-2 text-sm">
+                        <li><strong>SpO<sub>2</sub>:</strong> Measures oxygen saturation of haemoglobin. Can be falsely elevated in carbon monoxide poisoning or falsely low in poor peripheral perfusion.</li>
+                        <li><strong>EtCO<sub>2</sub>:</strong> Measures the partial pressure of carbon dioxide at the end of an exhaled breath. Normal is 35-45 mmHg. 
+                            <br><em>Waveform Interpretation:</em> A "shark fin" waveform indicates bronchospasm (Asthma/COPD) due to uneven alveolar emptying. A sudden drop to zero indicates cardiac arrest, tube dislodgement, or massive PE.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Blood Gases (ABG / VBG)</h3>
+                    <p class="text-sm mt-2">Used to assess acid-base balance and adequacy of ventilation.</p>
+                    <table class="mt-2 text-sm">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Normal Range</th>
+                                <th>Interpretation Example (Asthma Sim Case)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>pH</strong></td>
+                                <td>7.35 - 7.45</td>
+                                <td>pH 7.32 (Acidaemia)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PCO<sub>2</sub></strong></td>
+                                <td>35 - 45 mmHg</td>
+                                <td>PCO<sub>2</sub> 40 mmHg (Normally this is fine, but in a <em>pregnant</em> patient whose baseline is 32 mmHg, 40 mmHg indicates respiratory fatigue and impending failure).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>HCO<sub>3</sub></strong></td>
+                                <td>22 - 26 mEq/L</td>
+                                <td>HCO<sub>3</sub> 19 (Metabolic compensation attempt or concurrent lactic acidosis).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Radiography (CXR) & Peak Flows</h3>
+                    <ul class="list-disc list-inside mt-2 space-y-2 text-sm">
+                        <li><strong>CXR:</strong> Differentiates APO (bilateral fluffy infiltrates, cardiomegaly, Kerley B lines) from Asthma (hyperinflation, clear fields). <em>Note: Prominent vascular markings are normal in pregnancy.</em></li>
+                        <li><strong>Peak Expiratory Flow (PEF) / FEV1:</strong> Measures the maximum speed of expiration. Useful for grading asthma severity (e.g., PEF &lt; 50% predicted indicates a severe exacerbation).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Ventilation Strategies -->
+            <section id="ventilation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">4. Optimising Gas Exchange: Ventilation Strategies</h2>
+
+                <div class="management-box">
+                    <h3>Non-Invasive Ventilation (NIV): CPAP & BiPAP</h3>
+                    <p class="text-sm mt-2">Used to prevent the need for intubation in conscious, cooperative patients failing standard oxygen therapy.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2 text-sm">
+                        <li><strong>CPAP (Continuous Positive Airway Pressure):</strong> Provides a constant pressure throughout the respiratory cycle. Splints alveoli open (increasing functional residual capacity), pushes fluid out of the alveoli in <strong>APO</strong>, and reduces the work of breathing.</li>
+                        <li><strong>BiPAP (Bilevel Positive Airway Pressure):</strong> Provides a higher Inspiratory Positive Airway Pressure (IPAP) to assist ventilation/clear CO<sub>2</sub>, and a lower Expiratory Positive Airway Pressure (EPAP/PEEP) to maintain oxygenation. <em>Indicated in severe Asthma/COPD exacerbations where ventilatory failure (hypercapnia) is occurring.</em></li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Invasive Ventilation & Post-Intubation Hypoxemia (DOPES)</h3>
+                    <p class="text-sm mt-2">When a patient is intubated (e.g., the 3yo Submersion case), sudden hypoxemia is a life-threatening crisis. Use the <strong>DOPES</strong> mnemonic to systematically troubleshoot:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2 text-sm">
+                        <li><strong>D - Displacement:</strong> The endotracheal tube (ETT) has slipped into the right main bronchus or out into the esophagus. Check depth and confirm with EtCO<sub>2</sub> / Direct laryngoscopy.</li>
+                        <li><strong>O - Obstruction:</strong> The tube is blocked by secretions, blood, or kinking. Pass a suction catheter to clear.</li>
+                        <li><strong>P - Pneumothorax:</strong> Positive pressure ventilation can pop a bleb, causing a tension pneumothorax. Assess for absent lung sounds and hyper-resonance.</li>
+                        <li><strong>E - Equipment Failure:</strong> Ventilator malfunction, empty oxygen tank, or circuit disconnect. Immediately disconnect the vent and manually bag the patient with 100% O<sub>2</sub>.</li>
+                        <li><strong>S - Stacking (Breath Stacking/Auto-PEEP):</strong> In asthma/bronchospasm, incomplete exhalation leads to trapped air, increasing intrathoracic pressure and crushing venous return (hypotension). <em>Action: Disconnect the circuit and push firmly on the chest to expel trapped air.</em></li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Lung-Protective Ventilation Strategy</h3>
+                    <p class="text-sm mt-2">For patients with ARDS/Submersion injuries where lungs are non-compliant and vulnerable to barotrauma (volutrauma):</p>
+                    <ul class="list-disc list-inside mt-1 space-y-1 text-sm">
+                        <li>Use low tidal volumes: <strong>6 - 8 cc/kg</strong> of ideal body weight.</li>
+                        <li>Apply adequate PEEP (Positive End-Expiratory Pressure) to overcome surfactant loss and recruit collapsed alveoli.</li>
+                        <li>Titrate FiO<sub>2</sub> to maintain a PaO<sub>2</sub> of 55-80 mmHg or SpO<sub>2</sub> 88-95%, avoiding oxygen toxicity.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Prepared for Airway and Ventilation. Remember: Early recognition of impending respiratory failure and appropriate escalation of ventilatory support (NIV or intubation) is critical to preventing hypoxic cardiac arrest.</p>
+        </footer>
+    </div>
+</body>
+</html>
