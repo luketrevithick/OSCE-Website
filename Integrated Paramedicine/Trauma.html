@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trauma: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Trauma</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#outcomes" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Learning Outcomes</a>
+                <a href="#moi" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Mechanism & History</a>
+                <a href="#triage" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Predictive Factors & Triage</a>
+                <a href="#triad" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">The Trauma Triad</a>
+                <a href="#bluntpen" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Blunt vs Penetrating</a>
+                <a href="#management" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Time-Critical Management</a>
+                <a href="#special" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Special Populations</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Learning Outcomes -->
+            <section id="outcomes" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Why Are You Learning This?</h2>
+                <div class="assessment-box">
+                    <h3>Learning Outcomes</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Demonstrate that mechanism of injury and patient history are fundamental information to anticipate the care required for potential/associated injuries and their severity.</li>
+                        <li>Recognise the need to prioritise treatment toward reversing hypothermia, hypotension (including internal and external haemorrhage) and acidosis (respiratory or metabolic).</li>
+                        <li>Provide time-critical and judicious treatments for blunt and penetrating trauma whilst enabling efficient use of resources, relevant referral and early assistance pathways.</li>
+                    </ul>
+                    <p class="mt-3 text-sm text-gray-600">Contributes to SLO1–6.</p>
+                </div>
+            </section>
+
+            <!-- Mechanism of Injury & History -->
+            <section id="moi" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Mechanism of Injury & Patient History (Learning Outcome 1)</h2>
+                <div class="physiology-box">
+                    <h3>Why Mechanism of Injury (MOI) Matters</h3>
+                    <p>MOI describes how energy was transferred to the body. The amount, direction and rate of energy transfer predicts the pattern and severity of underlying injury, often before it is clinically obvious. A high index of suspicion built from the MOI and history allows the paramedic to anticipate injuries that have not yet declared themselves — rather than waiting for signs of decompensation.</p>
+                </div>
+                <div class="physiology-box">
+                    <h3>Kinematics – Common Patterns</h3>
+                    <table>
+                        <thead><tr><th>Mechanism</th><th>Energy Transfer</th><th>Injuries to Anticipate</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Frontal impact (MVC)</strong></td><td>Rapid deceleration</td><td>Chest (sternum, aorta), abdominal solid organ, femur/patella, cervical spine</td></tr>
+                            <tr><td><strong>Lateral / T-bone impact</strong></td><td>Compression & shear</td><td>Ipsilateral chest, pelvis, spleen (left)/liver (right), lateral cervical spine</td></tr>
+                            <tr><td><strong>Fall from height</strong></td><td>Axial load / deceleration</td><td>Spinal fracture, pelvic fracture, calcaneal fracture, internal haemorrhage</td></tr>
+                            <tr><td><strong>Diving / axial load</strong></td><td>Vertical compression</td><td>Cervical spine (burst/compression fracture), spinal cord injury</td></tr>
+                            <tr><td><strong>Penetrating (stab/GSW)</strong></td><td>Direct tissue disruption ± cavitation</td><td>Injury along the wound tract — assume every structure in that path is injured</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="assessment-box">
+                    <h3>History as a Force Multiplier</h3>
+                    <p>Bystander, patient, and scene information (speed, restraint use, fall height, weapon type, position found) should shape the primary survey before the patient is even reached. Vehicle telemetry data (crash pulse, delta-V) is increasingly used to refine this picture. History does not replace hands-on assessment, but it tells you where to look hardest.</p>
+                </div>
+            </section>
+
+            <!-- Predictive Factors & Field Triage -->
+            <section id="triage" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Predictive Factors for Serious Injury & Field Triage</h2>
+                <div class="disorder-box">
+                    <h3>Mechanism-Based Predictors of Serious Injury</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Death of another occupant in the same vehicle</li>
+                        <li>Ejection from the vehicle</li>
+                        <li>Entrapment requiring extrication</li>
+                        <li>Lack of seat belt use</li>
+                        <li>High speed impact (&gt;88.5 km/hr)</li>
+                        <li>Falls from height</li>
+                        <li>Axial load or diving injuries</li>
+                        <li>Adverse vehicle telemetry crash variables (e.g. high delta-V)</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Special Considerations Affecting Triage</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Older age:</strong> reduced physiological reserve — normal vital signs can mask serious injury.</li>
+                        <li><strong>Cardiopulmonary or neurologic co-morbidities:</strong> blunt the compensatory response to shock and complicate assessment.</li>
+                        <li><strong>Anticoagulant use:</strong> markedly increases bleeding risk from mechanisms that would otherwise be considered minor.</li>
+                    </ul>
+                </div>
+                <div class="physiology-box">
+                    <h3>Limitations of the Evidence</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Heterogeneity in study designs, definitions of predictive measures, and outcomes across the trauma literature.</li>
+                        <li>Most supporting studies are retrospective and rely on large trauma registries, introducing selection and reporting bias.</li>
+                        <li>Variability between studies in age cutoffs and in what counts as "serious injury" makes direct comparison difficult.</li>
+                    </ul>
+                </div>
+                <div class="management-box">
+                    <h3>Conclusions for Practice</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Certain mechanism and special-consideration criteria are genuinely useful for field triage — high-speed collisions, falls from height, and axial load injuries in particular.</li>
+                        <li>EMS provider clinical judgment improves under-triage rates but can increase over-triage — a trade-off, not a flaw, of the "if in doubt, triage up" principle.</li>
+                        <li>Future Field Triage Guideline (FTG) revisions should consider adding high speed (&gt;88.5 km/hr), extrication, and specific comorbidities as explicit criteria, alongside standardising age cutoffs and injury definitions.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Trauma Triad of Death -->
+            <section id="triad" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">The Lethal Triad: Hypothermia, Hypotension & Acidosis (Learning Outcome 2)</h2>
+                <div class="physiology-box">
+                    <h3>A Self-Perpetuating Cycle</h3>
+                    <p>Haemorrhage (internal or external) causes hypotension and tissue hypoperfusion. Poorly perfused tissue shifts to anaerobic metabolism, producing lactate and driving metabolic acidosis; inadequate ventilation adds a respiratory component. Heat loss — from exposed skin, cold fluids, and a cold environment — causes hypothermia, which impairs clotting enzyme function. Acidosis further impairs clot formation. The resulting coagulopathy worsens haemorrhage, deepening hypotension — closing a vicious, self-perpetuating cycle that becomes progressively harder to break the longer it runs.</p>
+                </div>
+                <div class="physiology-box">
+                    <h3>The Cycle at a Glance</h3>
+                    <table>
+                        <thead><tr><th>Element</th><th>Prehospital Cause</th><th>Consequence</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Hypotension / Haemorrhage</strong></td><td>External bleeding, internal bleeding (chest, abdomen, pelvis, long bones)</td><td>Tissue hypoperfusion, anaerobic metabolism</td></tr>
+                            <tr><td><strong>Acidosis</strong></td><td>Anaerobic metabolism (metabolic) ± hypoventilation (respiratory)</td><td>Impaired clotting enzyme function</td></tr>
+                            <tr><td><strong>Hypothermia</strong></td><td>Exposure, cold IV fluids, immobility, wet clothing</td><td>Impaired platelet function & clotting cascade</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="management-box">
+                    <h3>Priorities: Break the Cycle Early</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Control haemorrhage first:</strong> direct pressure, wound packing, tourniquets for compressible external bleeding, pelvic binder for suspected pelvic fracture.</li>
+                        <li><strong>Haemostatic / permissive hypotension resuscitation:</strong> titrate fluids to a palpable radial pulse rather than a "normal" blood pressure in uncontrolled haemorrhage, to avoid dislodging early clot.</li>
+                        <li><strong>Prevent and treat hypothermia:</strong> remove wet clothing, cover the patient, use warmed IV fluids where available, minimise on-scene exposure time.</li>
+                        <li><strong>Correct acidosis indirectly:</strong> optimise oxygenation and ventilation, control haemorrhage promptly, and minimise scene time to expedite definitive haemorrhage control.</li>
+                        <li>Treat all three elements together — reversing only one while ignoring the others allows the cycle to continue.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Blunt vs Penetrating -->
+            <section id="bluntpen" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Blunt vs Penetrating Trauma (Learning Outcome 3)</h2>
+                <div class="assessment-box">
+                    <table>
+                        <thead><tr><th>Feature</th><th>Blunt Trauma</th><th>Penetrating Trauma</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Mechanism</strong></td><td>Compression, shear, deceleration forces</td><td>Direct tissue disruption along a wound tract ± temporary cavitation (high-velocity)</td></tr>
+                            <tr><td><strong>Injury visibility</strong></td><td>Often hidden — significant internal injury with minimal external signs</td><td>Entry (and possible exit) wound visible, but internal extent often underestimated</td></tr>
+                            <tr><td><strong>Typical injuries</strong></td><td>Solid organ injury, closed fractures, diffuse axonal injury, aortic injury</td><td>Vascular injury, pneumothorax/haemothorax, hollow viscus injury, injury to any structure in the wound path</td></tr>
+                            <tr><td><strong>Field priority</strong></td><td>High index of suspicion from MOI; careful serial assessment</td><td>Rapid haemorrhage control; assume the worst along the tract</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="management-box">
+                    <h3>Time-Critical, Judicious Treatment Principles</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Minimise scene time</strong> for time-critical patients — perform only interventions that change outcome before transport (haemorrhage control, airway, decompression of tension pneumothorax); package and go.</li>
+                        <li><strong>Chest seal / needle decompression</strong> for penetrating chest trauma with respiratory distress or suspected tension pneumothorax.</li>
+                        <li><strong>Judicious analgesia and spinal care</strong> guided by mechanism and clinical findings rather than mechanism alone (see Spinal Trauma guide for clearance tools).</li>
+                        <li><strong>Match the intervention to the threat:</strong> not every patient needs every procedure — resources and scene time are finite and should be spent where they change outcome.</li>
+                        <li>Penetrating trauma with uncontrolled haemorrhage and blunt trauma with the lethal triad both benefit from the same underlying principle: stop the bleeding, keep the patient warm, and get to definitive care fast.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Time-Critical Management & Resources -->
+            <section id="management" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Time-Critical Management, Resources & Referral Pathways</h2>
+                <div class="management-box">
+                    <h3>Primary Survey Priorities (&lt;C&gt;ABCDE)</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>&lt;C&gt; Catastrophic haemorrhage:</strong> control immediately (tourniquet/direct pressure) before anything else.</li>
+                        <li><strong>A – Airway</strong> with cervical spine consideration where indicated by mechanism/findings.</li>
+                        <li><strong>B – Breathing:</strong> identify and treat immediately life-threatening chest injuries.</li>
+                        <li><strong>C – Circulation:</strong> ongoing haemorrhage control, judicious fluid resuscitation, pelvic binder if indicated.</li>
+                        <li><strong>D – Disability:</strong> rapid neurological assessment (GCS, pupils, limb movement).</li>
+                        <li><strong>E – Exposure:</strong> full assessment balanced against active prevention of hypothermia.</li>
+                    </ol>
+                </div>
+                <div class="assessment-box">
+                    <h3>Efficient Use of Resources & Early Referral</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Early pre-notification / trauma call:</strong> allows the receiving facility to mobilise the trauma team before arrival.</li>
+                        <li><strong>Right patient, right hospital:</strong> transport time-critical trauma to a facility with appropriate surgical/trauma capability, bypassing closer but lower-capability facilities where protocols support this.</li>
+                        <li><strong>Retrieval / aeromedical support:</strong> escalate early for rural, entrapped, or physiologically unstable patients where road transport time is prolonged.</li>
+                        <li><strong>Calibrate resource intensity to injury severity:</strong> avoid over-triage of minor mechanisms and under-triage of high-risk mechanisms — both carry system and patient costs.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Special Populations -->
+            <section id="special" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Special Populations</h2>
+                <div class="disorder-box">
+                    <h3>Older Patients</h3>
+                    <p>Reduced physiological reserve means normal or near-normal vital signs can be present despite significant injury or shock. Maintain a high index of suspicion from mechanism alone, and triage up rather than reassure down.</p>
+                </div>
+                <div class="disorder-box">
+                    <h3>Patients on Anticoagulants</h3>
+                    <p>Even apparently minor trauma (e.g. a ground-level fall with head strike) carries significant risk of serious haemorrhage, particularly intracranial. A low threshold for transport and early disclosure of anticoagulant use to the receiving team is essential.</p>
+                </div>
+                <div class="disorder-box">
+                    <h3>Cardiopulmonary or Neurologic Co-morbidities</h3>
+                    <p>Pre-existing disease can blunt the normal compensatory response to hypovolaemia (e.g. beta-blockers preventing a tachycardic response) or mask neurological deterioration. Interpret vital signs and GCS in the context of the patient's baseline where known.</p>
+                </div>
+            </section>
+
+            <!-- Reflective Practice -->
+            <section class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Reflective Practice</h2>
+                <div class="assessment-box">
+                    <p><strong>Consider these clinical scenarios:</strong></p>
+                    <ol class="list-decimal list-inside space-y-3 text-sm">
+                        <li>An unrestrained driver involved in a high-speed frontal collision with a fatality in the same vehicle, but who appears well on your arrival — how does MOI change your management even with reassuring vital signs?</li>
+                        <li>An older patient on anticoagulants after a low-speed fall — how does this change your threshold for transport and destination?</li>
+                        <li>A patient with a penetrating chest wound and uncontrolled external haemorrhage — how do you sequence catastrophic haemorrhage control, chest management, and scene time?</li>
+                        <li>A trapped, hypothermic patient with prolonged extrication time — how would you address all three arms of the lethal triad simultaneously rather than sequentially?</li>
+                    </ol>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500">This guide draws on prehospital trauma triage evidence regarding predictive factors for serious injury, and on current understanding of the lethal triad of trauma (hypothermia, hypotension/haemorrhage, and acidosis). Always follow local NSW Ambulance trauma protocols and apply clinical judgment — mechanism and history anticipate injury; hands-on assessment confirms it.</p>
+        </footer>
+    </div>
+</body>
+</html>
