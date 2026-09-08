@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paediatric Oro-facial Trauma: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .key-flag {
+            background-color: #fee2e2;
+            color: #991b1b;
+            font-weight: 700;
+        }
+        .ok-flag {
+            background-color: #dcfce7;
+            color: #166534;
+            font-weight: 700;
+        }
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #6b7280;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Paediatric Oro-facial Trauma</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#why" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Why This Matters</a>
+                <a href="#anatomy" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Anatomy & Dentition</a>
+                <a href="#assessment" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Assessment</a>
+                <a href="#classification" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Injury Recognition</a>
+                <a href="#timecritical" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Time-Critical Injuries</a>
+                <a href="#management" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Emergency Care</a>
+                <a href="#escalation" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Escalation & NAI</a>
+                <a href="#handover" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Handover</a>
+                <a href="#cases" class="bg-pink-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-pink-600">Clinical Cases</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Learning Outcomes -->
+            <section class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Learning Outcomes</h2>
+                <div class="physiology-box">
+                    <ol class="list-decimal list-inside space-y-1">
+                        <li>Recognise common paediatric orofacial injuries.</li>
+                        <li>Perform a focused and generalised patient assessment of the child with dental injuries.</li>
+                        <li>Identify dental injuries that may likely require time-critical management.</li>
+                        <li>Provide appropriate emergency care that improves long-term outcomes.</li>
+                        <li>Recognise injuries requiring escalation of care or referral.</li>
+                        <li>Communicate relevant information regarding orofacial injuries during handover to promote continuity of care.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Why This Matters -->
+            <section id="why" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Why This Matters: Epidemiology & Aetiology</h2>
+                <div class="physiology-box">
+                    <h3>The Scale of the Problem</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>More than <strong>50% of children under five</strong> will experience a traumatic dental injury.</li>
+                        <li>Injuries to primary teeth are not "just baby teeth" — they can compromise a child's self-esteem, quality of life, and set up their <strong>first experience of dental intervention</strong>, shaping future healthcare behaviour.</li>
+                        <li>Injuries involving primary teeth have the unique potential to damage the developing permanent successor tooth sitting beneath it.</li>
+                        <li>The reported prevalence of sequelae to permanent successor teeth following primary tooth trauma is as high as <strong>74%</strong> — most commonly enamel defects.</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Aetiology by Age Group</h3>
+                    <table>
+                        <thead><tr><th>Age Group</th><th>Peak Mechanism</th><th>Notes</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>0–2 years</strong></td>
+                                <td>Falls, collisions, being struck by an object</td>
+                                <td>Peak incidence of dental injury overall — coincides with learning to walk/run. Intrusive luxation is the most frequent injury type in this age group.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Preschool / school-aged</strong></td>
+                                <td>Falls and collisions around the home and neighbourhood (playgrounds, bikes)</td>
+                                <td>Mixed dentition begins ~6 years — both primary and permanent teeth may be present and injured simultaneously.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Adolescents</strong></td>
+                                <td>Contact/field sport, violent crime, traffic and e-mobility (bike/e-bike) collisions</td>
+                                <td>Higher-energy mechanisms — greater likelihood of associated facial fracture, TBI, and polytrauma.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-3"><strong>Predisposing factor — increased overjet:</strong> a large protrusion of the maxillary incisors relative to the mandibular incisors leaves the upper front teeth unprotected by the lips on impact. The maxillary incisors are the most commonly injured teeth in both primary and permanent dentitions.</p>
+                </div>
+            </section>
+
+            <!-- Anatomy & Dentition -->
+            <section id="anatomy" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Anatomy & Dental Development</h2>
+
+                <div class="physiology-box">
+                    <h3>Tooth Anatomy</h3>
+                    <p>Each tooth has a <strong>crown</strong> (visible above the gumline, covered by enamel) and a <strong>root</strong> (anchored below, covered by cementum). They meet at the <strong>cementoenamel junction (cervix)</strong> — the point where healthy gingival tissue should attach.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong>Enamel:</strong> hard outer layer of the crown. Not innervated — not sensitive to temperature or touch.</li>
+                        <li><strong>Dentine:</strong> bone-like layer beneath the enamel. Sensitive once exposed.</li>
+                        <li><strong>Pulp (dental "marrow"):</strong> the innermost living core — nerve and blood supply of the tooth. Exposure means the tooth's blood supply is compromised.</li>
+                        <li><strong>Periodontal ligament (PDL):</strong> the fine fibrous "hammock" of living cells that suspends the root in its socket. <strong>PDL cell viability is the single most important factor in whether an avulsed permanent tooth can be saved</strong> — it is why storage medium and speed of replantation matter so much.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Primary vs Permanent Dentition — Why It Changes Everything</h3>
+                    <table>
+                        <thead><tr><th>Feature</th><th>Primary ("baby") Teeth</th><th>Permanent Teeth</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Total number</strong></td><td>20</td><td>32</td></tr>
+                            <tr><td><strong>Eruption</strong></td><td>Begins ~6 months; all 20 usually present by ~2.5–3 years</td><td>Begins ~6 years (first molars, lower central incisors)</td></tr>
+                            <tr><td><strong>Appearance</strong></td><td>Smaller, whiter/more opaque, shorter roots</td><td>Larger, slightly more yellow/translucent</td></tr>
+                            <tr><td><strong>If avulsed (knocked out)</strong></td><td class="key-flag">DO NOT REPLANT</td><td class="ok-flag">REPLANT IMMEDIATELY (or store correctly)</td></tr>
+                            <tr><td><strong>Why the difference?</strong></td><td>Root apex of a primary tooth sits directly against the developing permanent tooth germ. Forcing a primary tooth back in risks driving infection or mechanical damage into the developing permanent successor.</td><td>No underlying successor to damage — the priority shifts to preserving the tooth itself and its PDL viability.</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-3"><strong>Mixed dentition (roughly ages 6–12):</strong> children may have both primary and permanent teeth erupted at once. If a paramedic cannot confidently identify whether an avulsed tooth is primary or permanent, the safe default is to <strong>place it in milk and transport for assessment</strong> — never guess-replant.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Approximate Primary Tooth Eruption/Shedding</h3>
+                    <table class="text-sm">
+                        <thead><tr><th>Tooth</th><th>Erupts</th><th>Sheds</th></tr></thead>
+                        <tbody>
+                            <tr><td>Central incisor</td><td>6–10 mos</td><td>6–7 yrs</td></tr>
+                            <tr><td>Lateral incisor</td><td>9–13 mos</td><td>7–8 yrs</td></tr>
+                            <tr><td>Canine (cuspid)</td><td>16–23 mos</td><td>9–12 yrs</td></tr>
+                            <tr><td>First molar</td><td>13–19 mos</td><td>9–11 yrs</td></tr>
+                            <tr><td>Second molar</td><td>23–33 mos</td><td>10–12 yrs</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2 text-sm">Variations in timing/order of eruption are common and are not by themselves concerning.</p>
+                </div>
+            </section>
+
+            <!-- Assessment -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Assessment (LO2)</h2>
+
+                <div class="assessment-box">
+                    <h3>Focused History</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Mechanism:</strong> what, when, where, who, how — and was there any loss of consciousness? A clear, systematic account of the accident is paramount.</li>
+                        <li><strong>Time since injury:</strong> critical if a permanent tooth has been avulsed — PDL cell viability falls rapidly with dry time.</li>
+                        <li><strong>What happened to the tooth/fragment(s)?</strong> Found at scene? Wrapped in tissue/bag? Placed in milk? Unaccounted for?</li>
+                        <li><strong>Associated symptoms:</strong> vomiting, drowsiness, headache, neck pain, visual disturbance (TBI/C-spine screen).</li>
+                        <li><strong>Immunisation/tetanus status.</strong></li>
+                        <li><strong>Past dental history</strong> and any known bleeding disorders — persistent bleeding from a seemingly minor injury can unmask an undiagnosed clotting disorder (see Case Study, right).</li>
+                        <li><strong>Consistency of the history</strong> with the injury pattern and the child's developmental stage.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Bidirectional Screening — The Golden Rule</h3>
+                    <p><strong>Check every child with an orofacial injury for a head injury — and check every child with a head injury for an orofacial injury.</strong> The forces required to injure the face and mouth are frequently sufficient to injure the brain and cervical spine, and vice versa. Apply a high-risk-mechanism C-spine screen (see the <em>Spinal Trauma</em> and <em>Traumatic Brain Injury</em> guides) whenever the mechanism warrants it.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Extraoral Examination</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Jaw fracture, facial asymmetry, lacerations, bruising.</li>
+                        <li><strong>Mouth opening:</strong> trismus (difficulty opening) suggests mandibular fracture or TMJ injury.</li>
+                        <li><strong>Sublingual haematoma:</strong> bruising/swelling under the tongue is a classic sign of a <strong>parasymphyseal mandibular fracture</strong>, often occurring alongside a condylar neck fracture.</li>
+                        <li>Look specifically for <strong>through-and-through lacerations of the lip</strong> — a small extraoral wound can hide a matching intraoral laceration.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Intraoral Examination (where possible/tolerated)</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Soft tissues: lips, gingivae, tongue (including the <strong>ventral surface</strong> — an easily missed site), buccal mucosa, soft palate.</li>
+                        <li>Teeth: mobility, fracture, displacement, colour, bleeding gingival margin.</li>
+                        <li><strong>Occlusion:</strong> ask "do your teeth still fit together the way they used to?" — a child reporting their bite feels wrong is a strong indicator of a mandibular fracture or significant tooth/alveolar displacement.</li>
+                        <li>Count visible teeth against what should be present for the child's age where feasible.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Accounting for Every Missing Tooth and Fragment</h3>
+                    <p>A missing tooth or fragment is <strong>never assumed lost at the scene</strong> until other explanations are excluded. Possible fates include:</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Inhalation</strong> (uncommon but serious — airway/lung foreign body).</li>
+                        <li><strong>Ingestion</strong> (swallowed).</li>
+                        <li><strong>Intrusive luxation</strong> — the tooth has been driven up/back into the socket and only appears "missing."</li>
+                        <li><strong>Embedded in soft tissue</strong> — fragments can lodge in a lip or tongue laceration.</li>
+                        <li>Genuinely lost at the scene.</li>
+                    </ul>
+                    <p class="mt-2">A hospital may need an intraoral X-ray (to check for intrusion), a chest X-ray (to exclude inhalation), or to rely on the family searching the scene (to exclude ingestion). <strong>Your job is to document clearly and flag any unaccounted-for tooth at handover</strong> — see the Handover section.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Photographic Documentation</h3>
+                    <p>Where service policy and consent allow, photographs are invaluable — both for informing definitive dental care and, particularly where non-accidental injury is suspected, for the clinical and legal record.</p>
+                </div>
+            </section>
+
+            <!-- Injury Classification -->
+            <section id="classification" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Recognising Common Orofacial Injuries (LO1)</h2>
+                <p>Orofacial trauma rarely occurs in isolation — most children present with a <strong>combination</strong> of soft-tissue, hard-tissue (tooth), and sometimes bony injury. For clarity these are considered separately below.</p>
+
+                <div class="disorder-box">
+                    <h3>1. Soft-Tissue Injuries</h3>
+                    <table>
+                        <thead><tr><th>Injury</th><th>Key Feature</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Laceration / abrasion / contusion</strong></td><td>Lips, gingivae, tongue, buccal mucosa, soft palate.</td></tr>
+                            <tr><td><strong>Through-and-through lip laceration</strong></td><td>A visible extraoral wound with a corresponding intraoral wound — always check inside the mouth when you see a lip laceration.</td></tr>
+                            <tr><td><strong>Frenum laceration</strong></td><td>Tear of the labial frenum (the tissue fold connecting lip to gum). Usually minor, but can bleed persistently and — rarely — unmask a bleeding disorder.</td></tr>
+                            <tr><td><strong>Tongue laceration (ventral surface)</strong></td><td>Easily missed; atypical or unexplained tongue injuries warrant consideration of a neurological cause (e.g. seizure) or non-accidental injury.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>2. Hard-Tissue (Tooth) Injuries</h3>
+                    <table>
+                        <thead><tr><th>Injury</th><th>Description</th><th>Significance</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Enamel infraction / fracture</strong></td>
+                                <td>A crack or chip confined to enamel only. Often leaves a sharp edge.</td>
+                                <td>Enamel is not innervated — not painful to temperature/touch. Lowest acuity. (Don't confuse with early childhood <em>caries</em>, which parents sometimes mistake for a fresh fracture.)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Uncomplicated crown fracture</strong></td>
+                                <td>Fracture through enamel <em>and</em> dentine, pulp not exposed.</td>
+                                <td>Dentine is sensitive — usually painful. Needs dental review to protect the exposed dentine.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Complicated crown fracture</strong></td>
+                                <td>Fracture extends through enamel, dentine, and into the pulp — a visible pink/red or bleeding spot on the fracture surface.</td>
+                                <td>Almost always results in pulp necrosis. Higher priority for dental/ED referral.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Root fracture</strong></td>
+                                <td>Fracture of the root, often below the gumline — may occur with or without an obvious crown injury.</td>
+                                <td>Frequently only detectable on X-ray; may coexist with a luxation injury.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2 text-sm">You may hear this hard-tissue spectrum referred to by the <strong>Ellis classification</strong> (Ellis I = enamel only, Ellis II = enamel + dentine, Ellis III = pulp exposed) — the same clinical spectrum described above.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>3. Periodontal / Luxation Injuries — The Most Common Dental Injury in Young Children</h3>
+                    <p>A luxation injury is any displacement of the tooth, in any direction, from its socket. These are the most common dental injuries seen in primary teeth and are frequently accompanied by gingival/soft-tissue damage.</p>
+                    <table>
+                        <thead><tr><th>Injury</th><th>Displacement?</th><th>Mobility?</th><th>Notes</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Concussion</strong></td><td>No</td><td>No (tender to touch/percussion only)</td><td>Mildest injury on the spectrum.</td></tr>
+                            <tr><td><strong>Subluxation</strong></td><td>No</td><td>Yes</td><td>Classic sign: bleeding gingival margin around the tooth, with no interference to the bite.</td></tr>
+                            <tr><td><strong>Lateral luxation</strong></td><td>Yes — sideways</td><td>Usually firm (locked in bone)</td><td>Tooth often displaced palatally/lingually with an audible "click" on tapping.</td></tr>
+                            <tr><td><strong>Extrusive luxation</strong></td><td>Yes — partially out of socket</td><td>Yes, very mobile</td><td>Tooth looks elongated compared to its neighbours.</td></tr>
+                            <tr><td><strong>Intrusive luxation</strong></td><td>Yes — driven further <em>into</em> the socket</td><td>No (firmly wedged)</td><td>The most frequent injury pattern in toddlers learning to walk. Tooth may look "missing" or short — always suspect intrusion before assuming a tooth is lost.</td></tr>
+                            <tr><td><strong>Avulsion</strong></td><td>Complete — entirely out of the socket</td><td>N/A</td><td>See the dedicated management pathway below — <strong>the single most time-critical dental injury.</strong></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>4. Dentoalveolar & Facial Bone Injuries</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Alveolar (socket/bone) fracture:</strong> a segment of the jawbone holding several teeth moves as one block — teeth in the segment move together and the bite may be disrupted.</li>
+                        <li><strong>Mandibular fracture:</strong> suspect with a chin-first mechanism (e.g. fall onto handlebars). Red flags: malocclusion ("teeth don't fit together"), trismus, sublingual haematoma, loose/displaced lower incisors, bleeding gingivae, laceration to the chin, lower lip numbness.</li>
+                        <li><strong>Midface / Le Fort fractures:</strong> higher-energy mechanism; associated with airway and BVM-seal challenges — see the <em>Traumatic Brain Injury</em> guide for airway management specifics.</li>
+                    </ul>
+                    <p class="mt-2">Fractures of the facial bones are relatively uncommon in young children compared with dental and soft-tissue injury, but rise in incidence with higher-energy adolescent mechanisms.</p>
+                </div>
+            </section>
+
+            <!-- Time Critical -->
+            <section id="timecritical" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Identifying Time-Critical Injuries (LO3)</h2>
+
+                <div class="disorder-box">
+                    <h3>Avulsed Permanent Tooth = A True Dental Time-Critical Emergency</h3>
+                    <p>Unlike almost every other injury in this guide, an avulsed <strong>permanent</strong> tooth has a genuine, narrow window for a good outcome. The periodontal ligament cells clinging to the root surface begin to die from the moment the tooth leaves the mouth. Survival of these cells is what determines whether the tooth can be saved long-term, and it is directly related to:</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Extra-oral dry time</strong> — the longer the tooth sits dry (on the ground, wrapped in a dry tissue), the worse the prognosis.</li>
+                        <li><strong>Storage medium</strong> — an appropriate medium (milk, the patient's own saliva/buccal vestibule, saline) preserves PDL viability; a poor medium (tap water, dry tissue/paper) accelerates cell death through osmotic and desiccation injury.</li>
+                    </ul>
+                    <p class="mt-2"><strong>This is why immediate, correct on-scene action — not "wait until we get to hospital" — genuinely changes this child's long-term dental outcome.</strong></p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Other Time-Critical Presentations</h3>
+                    <table>
+                        <thead><tr><th>Presentation</th><th>Why It's Time-Critical</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Uncontrolled or unexplained persistent bleeding</strong></td>
+                                <td>Most oral bleeding settles with simple pressure. Bleeding that persists or recurs after a seemingly minor injury may signal an undiagnosed bleeding disorder (e.g. haemophilia) and needs escalation, not reassurance.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Unaccounted-for tooth/fragment</strong></td>
+                                <td>Treat as a possible airway/aspiration foreign body until excluded. This escalates airway monitoring priority, especially in a drowsy or reduced-GCS child.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Significant tooth displacement into a compromised airway</strong></td>
+                                <td>Loose or displaced teeth in a patient with reduced consciousness are an aspiration risk requiring active airway protection (suction, positioning, possible advanced airway).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Any TBI red flag</strong> (dropping GCS, repeated vomiting, unexplained irritability, focal neurology)</td>
+                                <td>See the <em>Traumatic Brain Injury</em> guide — orofacial trauma mechanisms frequently coexist with head injury.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mandibular fracture with airway compromise</strong></td>
+                                <td>Bilateral mandible fractures can cause the tongue to fall back and obstruct the airway, especially supine — sublingual haematoma is a key warning sign.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Suspected non-accidental injury (NAI)</strong></td>
+                                <td>A safeguarding time-critical issue — the child's ongoing safety, not just the wound, needs immediate action (see Escalation section).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Management -->
+            <section id="management" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Emergency Care (LO4)</h2>
+
+                <div class="management-box">
+                    <h3>General Principles</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>A calm approach is a clinical intervention.</strong> A calm clinician and a calm family/child enables a more accurate assessment and better cooperation with ongoing care.</li>
+                        <li>Decide whether any active intervention is required and arrange appropriate dental/ED follow-up.</li>
+                        <li>Provide analgesia proportionate to distress and injury.</li>
+                        <li>Check immunisation/tetanus status.</li>
+                        <li>Advise soft diet and gentle mouth hygiene once immediate bleeding is controlled.</li>
+                        <li>Antibiotics are <em>not</em> routinely required — generally reserved (in hospital) for significant soft-tissue injury or a replanted avulsed permanent tooth.</li>
+                        <li>Explain the injury and expected course clearly to the family — anxious parents often ask "should we put the tooth back?" You should be ready to answer confidently.</li>
+                        <li>Keep photographic and written documentation, particularly of soft-tissue injuries and anything of concern.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Managing an Avulsed Tooth — The Decision Pathway</h3>
+                    <ol class="list-decimal list-inside space-y-3">
+                        <li><strong>Step 1 — Identify the tooth.</strong> Is it a primary (baby) tooth or a permanent tooth? Consider the child's age, tooth size/colour, and whether other permanent teeth have already erupted nearby.</li>
+                        <li>
+                            <strong>Step 2a — If PRIMARY:</strong>
+                            <div class="disorder-box mt-2"><strong>DO NOT REPLANT.</strong> Reinserting a primary tooth risks driving infection or mechanical damage into the developing permanent successor sitting directly beneath it, and the treatment burden of subsequent repeated dental procedures under general anaesthesia is not justified. If uncertain whether the tooth is primary or has instead been intruded, place it in milk, control bleeding, and transport for assessment/imaging.</div>
+                        </li>
+                        <li>
+                            <strong>Step 2b — If PERMANENT:</strong>
+                            <div class="management-box mt-2">
+                                <strong>This is a true emergency — act immediately:</strong>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li><strong>Handle by the crown only</strong> — never touch or scrub the root surface (this is where the living PDL cells are).</li>
+                                    <li>If visibly contaminated, give it a brief, gentle rinse in milk or saline (or have the patient rinse their own mouth) — do not scrub or use antiseptic.</li>
+                                    <li><strong>Replant immediately</strong> into the socket if the child is conscious, cooperative, and you are able to — cross-check orientation against the neighbouring tooth.</li>
+                                    <li>Ask the child to gently bite down on a face washer/gauze to hold the tooth in place, then arrange urgent dental review to splint it.</li>
+                                    <li><strong>If replantation is not possible</strong> (uncooperative child, tooth not found immediately, clinician not confident): store the tooth in <strong>milk</strong> — the best practical prehospital medium — or the patient's own saliva/buccal vestibule if they are conscious and reliably able to keep it there without aspiration risk. <strong>Never store dry, and never use tap water</strong> (both accelerate PDL cell death).</li>
+                                    <li>Transport promptly — every extra minute of dry/poor-medium time worsens the prognosis.</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="management-box">
+                    <h3>Managing Luxation Injuries (Tooth Still in Socket, but Displaced/Mobile)</h3>
+                    <p>Do <strong>not</strong> attempt to reposition or push a displaced tooth back into alignment in the prehospital setting — repositioning of luxated primary teeth in particular is almost never recommended and is a decision for the treating dentist. Your role is to control bleeding, protect the airway from loose/mobile teeth, manage pain, and transport.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Bleeding Control</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Firm, direct pressure with gauze over the bleeding site (gingival margin, socket, or soft-tissue wound).</li>
+                        <li>Sit the child upright and leaning slightly forward if tolerated, to prevent swallowing blood (reduces nausea/vomiting risk and helps you monitor ongoing loss).</li>
+                        <li>If bleeding is persistent despite pressure, consider tranexamic-acid-soaked gauze applied topically if within your scope of practice — persistent bleeding from minor trauma should also prompt consideration of an underlying bleeding disorder rather than simply "more pressure."</li>
+                        <li>Nil per os (NPO) if significant intervention (e.g. general anaesthetic for dental repair) is anticipated.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Communicating With the Anxious Child and Family</h3>
+                    <p>Explain every step before you do it. Involve the caregiver. Use simple, non-frightening language. Obtain informed consent appropriate to the intervention and the family's understanding. A frightened, uncooperative child is both a safety and an assessment challenge — the calmer the environment, the more reliable your examination.</p>
+                </div>
+            </section>
+
+            <!-- Escalation & NAI -->
+            <section id="escalation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Escalation, Referral & Non-Accidental Injury (LO5)</h2>
+
+                <div class="disorder-box">
+                    <h3>Indications for Immediate ED Referral / Transport</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Uncontrolled or persistent bleeding.</li>
+                        <li>Significant soft-tissue injuries (through-and-through lacerations, large wounds needing repair).</li>
+                        <li>Significant tooth displacement presenting an aspiration risk.</li>
+                        <li>Unwillingness or inability to eat or drink, with risk of dehydration.</li>
+                        <li><strong>Any avulsed permanent tooth</strong> (always — time-critical replantation/splinting window).</li>
+                        <li>Any red flag for TBI, C-spine injury, or mandibular/facial fracture.</li>
+                        <li>Suspected non-accidental injury.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>When Non-Transport / Community Follow-Up May Be Appropriate</h3>
+                    <p>Isolated minor enamel fracture, no soft-tissue injury requiring repair, no TBI or C-spine red flags, a reliable and competent caregiver present, and clear follow-up with a dentist/GP arranged — always according to your local clinical practice guidelines and non-transport pathway.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Recognising Possible Non-Accidental Injury (NAI)</h3>
+                    <p>Orofacial injuries are among the most common presenting sites in child abuse — the face and mouth are frequent targets. Maintain a considered index of suspicion without assuming guilt.</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Discrepant or inconsistent histories</strong> between caregivers, or a history that doesn't match the injury pattern or the child's developmental stage (e.g. an injury requiring mobility the child hasn't yet developed).</li>
+                        <li><strong>Delayed presentation</strong> for a significant injury.</li>
+                        <li><strong>Old and new injuries together</strong> — bruising of different ages, or a pattern inconsistent with a single accidental event.</li>
+                        <li>A frightened or withdrawn child, or a child unusually difficult to examine.</li>
+                        <li>Injury pattern localised in a way not typical of accidental trauma (e.g. bruising to the cheek/ear with a lip injury, rather than the forehead/chin typical of a forward fall).</li>
+                    </ul>
+                    <div class="management-box mt-3">
+                        <strong>If NAI is suspected:</strong>
+                        <ul class="list-disc list-inside mt-1 space-y-1">
+                            <li>Manage the clinical injury as you would any child (e.g. an avulsed primary tooth is still not replanted, regardless of cause).</li>
+                            <li>Document objectively and factually — what you saw and were told, not your conclusions.</li>
+                            <li>Photograph where policy/consent allows.</li>
+                            <li>Escalate via your service's <strong>mandatory reporting</strong> pathway and communicate relevant, factual concerns to police/child protection services as required by your jurisdiction.</li>
+                            <li>Arrange dental and medical follow-up, as sequelae (including to permanent successor teeth) still need monitoring regardless of cause.</li>
+                            <li>This is itself a time-critical escalation — the child's safety after you leave the scene is as important as the wound in front of you.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Handover -->
+            <section id="handover" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Handover & Communication (LO6)</h2>
+                <div class="management-box">
+                    <h3>What to Explicitly Include for Dental/Orofacial Trauma</h3>
+                    <p>Use your service's standard structured handover framework (e.g. IMIST-AMBO/ISBAR), but make sure it explicitly captures the details that are unique to dental injury and easy to lose in a general trauma handover:</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Mechanism and time since injury</strong> — especially critical if a permanent tooth was avulsed (dry/storage time so far).</li>
+                        <li><strong>Which tooth/teeth are affected</strong>, and whether primary or permanent, if identifiable.</li>
+                        <li><strong>What happened to any avulsed tooth</strong> — replanted on scene? Stored in milk/saliva? Not found?</li>
+                        <li><strong>Any unaccounted-for tooth or fragment</strong> — explicitly flag this as a possible aspiration/ingestion risk so the receiving team knows to investigate (chest X-ray, intraoral imaging).</li>
+                        <li><strong>Associated injuries</strong> — head injury findings, C-spine status, other trauma (chest/abdo/pelvic, limb).</li>
+                        <li><strong>Airway status</strong>, especially with loose teeth, active bleeding, or reduced GCS.</li>
+                        <li><strong>Treatment already given</strong> — bleeding control measures, analgesia, splinting/positioning.</li>
+                        <li><strong>Tetanus/immunisation status</strong> if known.</li>
+                        <li><strong>Any safeguarding concerns</strong> raised, and what has already been communicated to police/child protection, so information isn't duplicated or lost in transition of care.</li>
+                    </ul>
+                </div>
+                <div class="assessment-box">
+                    <h3>Why This Matters for Continuity of Care</h3>
+                    <p>Definitive dental management is time-sensitive and often happens after handover, by a different clinical team. A receiving clinician who doesn't know a permanent tooth is sitting in milk in your kit, or that a tooth remains unaccounted for, cannot act on that information. Explicit, structured communication is what turns your prehospital actions into a genuinely improved long-term outcome for the child.</p>
+                </div>
+            </section>
+
+            <!-- Clinical Cases -->
+            <section id="cases" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Clinical Case Analysis</h2>
+
+                <div class="assessment-box">
+                    <h3>Case 1: Saturday Morning Soccer</h3>
+                    <p><strong>Presentation:</strong> An 8-year-old boy was struck in the face by another player's head during a game 15 minutes ago. Significant bleeding from the mouth, a front tooth has fallen out. He is crying but alert, no LOC or vomiting, no neck pain. There is a laceration to the upper lip and an empty upper right front socket. The coach wrapped the tooth in a tissue and placed it in a plastic bag. The parent asks if the tooth should go back in.</p>
+                    <p><strong>Key Reasoning Points:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Head injury screen:</strong> despite no reported LOC/vomiting, this is a facial impact mechanism — screen thoroughly and reassess en route.</li>
+                        <li><strong>Age 8 = mixed dentition.</strong> Central incisors are typically among the first permanent teeth to erupt (from ~6 years) — this tooth is very likely to be permanent, but confirm rather than assume.</li>
+                        <li><strong>Storage problem:</strong> a dry tissue in a plastic bag is a poor storage medium — the clock has been running for 15 minutes in a suboptimal environment.</li>
+                    </ul>
+                    <div class="management-box mt-2">
+                        <strong>Management:</strong>
+                        <ul class="list-disc list-inside">
+                            <li>If confirmed/likely permanent: rinse briefly with saline/milk, replant if the child will tolerate it, bite on gauze, and arrange urgent dental splinting. If unable to replant, transfer immediately into milk.</li>
+                            <li>If genuinely uncertain: remove from the dry tissue, place in milk, and transport to dentist/ED for assessment.</li>
+                            <li>Manage the lip laceration; monitor for TBI signs en route; nil per os pending review; manage pain.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Case 2: Skate Park BMX Fall</h3>
+                    <p><strong>Presentation:</strong> A 14-year-old male fell forward over the handlebars of a BMX (non-electric) onto concrete, chin-first. Helmeted. Mobilised immediately, no LOC, remembers events, no vomiting. Full painless C-spine range of motion. No visual disturbance. Splinters/abrasions to both palms. Reports his teeth "don't fit together," pain in the left lower jaw and around the lower front teeth. Chin laceration, loose lower incisors, bleeding gingivae, difficulty fully opening the mouth, abnormal occlusion.</p>
+                    <p><strong>Key Reasoning Points:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Chin-first mechanism + malocclusion + trismus = classic mandibular fracture triad.</strong> A direct blow to the chin often causes fractures at a distance (e.g. bilateral condylar/parasymphyseal), not only at the point of impact.</li>
+                        <li>Even with a clinically clear C-spine on exam, document the screening process explicitly given the mechanism.</li>
+                        <li>Loose lower incisors and bleeding gingivae are the dental component of the same jaw injury, not a separate problem.</li>
+                    </ul>
+                    <div class="management-box mt-2">
+                        <strong>Management:</strong>
+                        <ul class="list-disc list-inside">
+                            <li>Screen for head and neck injury; manage bleeding, prevent aspiration of loose teeth/blood, provide analgesia.</li>
+                            <li>Suspect mandibular fracture — handle gently, avoid further manipulation of the jaw.</li>
+                            <li>Exclude associated wrist and clavicle fractures from the fall onto outstretched/weight-bearing hands.</li>
+                            <li>Consider tetanus toxoid; consider topical tranexamic-acid-soaked gauze if gingival bleeding persists.</li>
+                            <li>Refer for urgent maxillofacial and dental assessment.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Case 3: Playground Fall</h3>
+                    <p><strong>Presentation:</strong> A 4-year-old girl fell face-first onto a step while climbing playground equipment, then onto rubber flooring. Witnessed by her mother — cried immediately, no LOC. Large amount of blood from the mouth prompted the call. She is crying, inconsolable, sitting on her mother's lap. Blood around the mouth and clothing, swollen upper lip with a possible cut. Mother has placed the avulsed tooth in a zip-lock bag and asks if it should go back in.</p>
+                    <p><strong>Key Reasoning Points:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Age 4 = primary dentition</strong> almost certainly (permanent teeth don't typically erupt until ~6 years) — this tooth should <strong>not</strong> be replanted.</li>
+                        <li>Fall height and facial impact both warrant a head/neck/clavicle screen.</li>
+                        <li>An inconsolable, frightened preschooler is a communication and consent challenge as much as a clinical one.</li>
+                    </ul>
+                    <div class="management-box mt-2">
+                        <strong>Management:</strong>
+                        <ul class="list-disc list-inside">
+                            <li>Screen for head/neck/clavicular injury given the fall.</li>
+                            <li><strong>Do not replant</strong> — this is a primary tooth. Reassure the mother and explain why simply and calmly.</li>
+                            <li>Control bleeding from the lip; manage pain; gain informed consent for any intervention appropriate to the situation.</li>
+                            <li>Communicate gently and directly with both the child and parent throughout.</li>
+                            <li>Move the tooth into milk (better medium than the zip-lock bag) and transport for dental/ED review.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Case 4: Domestic Violence Callout</h3>
+                    <p><strong>Presentation:</strong> Attending with police following reports of a domestic dispute. Officers notice a 5-year-old girl with dried blood around her mouth, a swollen upper right lip, and bruising to the right cheek. The father reports she fell during the commotion; the mother separately reports she ran into a door and "can be clumsy." Older bruises are visible on the child's arms and neck. She is frightened and difficult to examine, but you can see a missing upper left incisor, which the mother has wrapped in a kitchen towel — reportedly from about an hour ago. Bruising and swelling also noted to the top lip.</p>
+                    <p><strong>Key Reasoning Points:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Discrepant histories</strong> between caregivers, <strong>bruising of different ages</strong>, and an injury pattern (cheek + lip, not forehead/chin) atypical for a simple accidental forward fall are all recognised NAI red flags.</li>
+                        <li>Age 5 sits right at the edge of mixed dentition — the missing tooth is most likely primary, but should still be assessed by a dentist rather than assumed.</li>
+                        <li>A kitchen towel is a poor, dry storage medium — but the management principle (do not replant a primary tooth) doesn't change regardless of storage.</li>
+                    </ul>
+                    <div class="management-box mt-2">
+                        <strong>Management:</strong>
+                        <ul class="list-disc list-inside">
+                            <li>Suspect DV/NAI on history and examination — approach the child and family calmly and non-confrontationally; your job is safe clinical care, not investigation.</li>
+                            <li>Do not re-insert the tooth if primary; transport the tooth in milk.</li>
+                            <li>Refer to dentist/ED for full assessment of dental and soft-tissue injury.</li>
+                            <li>Follow your service's <strong>mandatory reporting</strong> obligations — communicate factual, objective observations (not conclusions) to police and child protection services as required.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Case 5: High-Speed E-Bike Collision</h3>
+                    <p><strong>Presentation:</strong> A 10-year-old male on an e-bike collided at speed with a vehicle at a busy intersection and was thrown several metres. Helmet lying nearby. Abrasions to both arms/legs, visible blood around the head/face. Attempts to roll with little success; briefly opens eyes to voice but confused/disoriented. Airway open; suctioning reveals blood and loose tooth fragments — one upper incisor completely missing, several teeth fractured, and no one at scene has found the missing tooth. Breathing 8 bpm (regular), SpO₂ 92% on room air. HR 70 bpm, warm extremities; BP 90/50 initially, falling to 85/45. Reduced GCS with loss of sensation/motor function in arms and legs.</p>
+                    <p><strong>Key Reasoning Points:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>This is <strong>polytrauma</strong> — the dental injury is real but is not the priority. Airway, breathing, and a probable spinal cord injury (loss of sensation/motor in all four limbs) dominate the primary survey.</li>
+                        <li><strong>Unaccounted-for missing incisor</strong> in a patient with a reduced GCS and blood in the airway is a significant aspiration/inhalation risk — this changes airway management priority (aggressive suctioning, consideration of supraglottic airway).</li>
+                        <li>Bradypnoea + hypoxia + a falling BP with a normal-for-now heart rate in a child is concerning — children compensate for shock for a long time before decompensating; the trend (falling BP) matters more than a single reading.</li>
+                    </ul>
+                    <div class="management-box mt-2">
+                        <strong>Management:</strong>
+                        <ul class="list-disc list-inside">
+                            <li><strong>Call for backup</strong> — this patient is likely to deteriorate and has polytrauma.</li>
+                            <li><strong>Airway:</strong> consider aspiration/ingestion of teeth and blood; protect the upper airway with suction ± supraglottic device as indicated.</li>
+                            <li>Manage suspected C-spine injury with full precautions.</li>
+                            <li>Suspect TBI; exclude chest/pelvic trauma.</li>
+                            <li>Urgent transport to a neurosurgical/major trauma facility.</li>
+                            <li>Explicitly document and hand over the <strong>unaccounted-for tooth</strong> as a suspected inhalation risk.</li>
+                            <li>Suspect early/low-resistance shock given the trending vital signs — treat and reassess accordingly.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reflective Practice -->
+            <section class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Reflective Practice</h2>
+                <div class="physiology-box">
+                    <p><strong>As you consolidate this guide, work through these questions:</strong></p>
+                    <ol class="list-decimal list-inside space-y-2 mt-2">
+                        <li>What is the clinical significance of injuries to primary teeth?</li>
+                        <li>What are the principles of acute management of dental trauma?</li>
+                        <li>What is the aetiology of dental trauma in paediatrics?</li>
+                        <li>What is the clinical presentation for orofacial trauma among paediatrics?</li>
+                        <li>What are the principles of management?</li>
+                    </ol>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Based on "Orofacial Trauma to the Primary Dentition" (How to Treat, Australian Doctor Group, 29 October 2021; Widmer, Wan & Warren), Integrated Paramedicine Simulation cases, and International Association of Dental Traumatology (IADT) principles for the management of traumatic dental injuries. Always integrate this knowledge with a thorough patient assessment, follow your local clinical practice guidelines, and maintain a high index of suspicion for associated head, neck, and non-accidental injury in the child with orofacial trauma.</p>
+        </footer>
+    </div>
+</body>
+</html>
