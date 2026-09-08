@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiac Arrest: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #6b7280;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+        .algo-col {
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Cardiac Arrest</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700" style="border:none;margin-top:0;">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#prevention" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Prevention & Chain of Survival</a>
+                <a href="#cpr-quality" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">High-Quality CPR</a>
+                <a href="#algorithm" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Rhythm & ALS Algorithm</a>
+                <a href="#medications" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Medications & ROSC</a>
+                <a href="#reversible" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Reversible Causes</a>
+                <a href="#traumatic" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Traumatic Cardiac Arrest</a>
+                <a href="#ethics" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Ethics & Termination of CPR</a>
+                <a href="#communication" class="bg-pink-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-pink-600">Breaking Bad News</a>
+                <a href="#cases" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Clinical Case Analysis</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Prevention & Chain of Survival -->
+            <section id="prevention" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">1. Health Promotion, Prevention & The Context of Resuscitation</h2>
+
+                <div class="physiology-box">
+                    <h3>Three Levels of Prevention Applied to Sudden Cardiac Arrest</h3>
+                    <p>Most adult out-of-hospital cardiac arrests (OHCA) arise from an underlying cardiac cause, most commonly coronary artery disease. Thinking about resuscitation only as "what happens after the heart stops" misses the paramedic's broader role in the chain of events leading up to — and following — that moment.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Primary Prevention:</strong> Preventing the underlying disease ever developing — smoking cessation, blood pressure and lipid control, diabetes management, physical activity, and healthy weight. Paramedics contribute opportunistically through community education and referral.</li>
+                        <li><strong>Secondary Prevention:</strong> Early detection of those at risk before an arrest occurs — cardiac screening in young athletes for inherited channelopathies/cardiomyopathies, family screening after a sudden unexplained death in a young relative, secondary prevention medications (statins, antiplatelets) and ICD implantation after a first cardiac event.</li>
+                        <li><strong>Tertiary Prevention ("The Chain of Survival"):</strong> Once an arrest has occurred, minimising death and disability through a well-rehearsed system of care (below).</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>The Chain of Survival (Out-of-Hospital)</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Recognition & Activation:</strong> Early recognition of cardiac arrest and immediate activation of the emergency response system (000/111).</li>
+                        <li><strong>Immediate High-Quality Bystander CPR:</strong> Minimises the "no-flow" time before help arrives — the single biggest determinant of neurologically intact survival.</li>
+                        <li><strong>Rapid Defibrillation:</strong> Public access defibrillator (PAD) programs and dispatcher-assisted CPR reduce the time to first shock in shockable rhythms.</li>
+                        <li><strong>Basic and Advanced EMS Care:</strong> Paramedic-delivered ALS — airway, drugs, and treatment of reversible causes.</li>
+                        <li><strong>Post-Cardiac Arrest Care & Rehabilitation:</strong> Targeted temperature management, urgent coronary angiography where indicated, and structured rehabilitation for survivors.</li>
+                    </ol>
+                    <p class="mt-2 text-sm">Health promotion is embedded throughout this chain — community CPR training, workplace and public AED programs, and school-based education all shift outcomes long before a paramedic arrives.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Futility and Irreversible Outcomes — Setting the Scene</h3>
+                    <p>Not every cardiac arrest is preventable or reversible. Some arrests represent the terminal event of an already irreversible disease process (e.g. end-stage malignancy or heart failure), or occur after such a prolonged period of untreated "no-flow" that meaningful neurological recovery is no longer physiologically possible.</p>
+                    <p class="mt-2">Distinguishing a <strong>preventable or reversible</strong> arrest (where early CPR, defibrillation, or timely correction of a reversible cause could change the outcome) from an <strong>expected or irreversible</strong> one is central to the ethical decision-making covered later in this guide (see <em>Medical Ethics</em>). Prevention and ethics are two ends of the same continuum: one asks "how do we stop this happening?", the other asks "when has resuscitation stopped serving this patient?"</p>
+                </div>
+            </section>
+
+            <!-- CPR Quality -->
+            <section id="cpr-quality" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">2. High-Quality CPR: Overcoming Common Pitfalls</h2>
+
+                <div class="assessment-box">
+                    <h3>Why CPR Quality Is the Single Biggest Modifiable Factor</h3>
+                    <p>Even optimally performed chest compressions generate only around a quarter to a third of normal cardiac output. There is very little margin for error — small, avoidable deficiencies in technique compound rapidly over a resuscitation to significantly reduce coronary and cerebral perfusion pressure, the two variables most closely linked to ROSC and survival.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Common Pitfalls, Their Consequences, and Corrective Actions</h3>
+                    <table class="text-sm">
+                        <thead>
+                            <tr>
+                                <th style="width:20%;">Pitfall</th>
+                                <th>Physiological Consequence</th>
+                                <th>Corrective Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Inadequate compression depth</strong> (&lt;5cm)</td>
+                                <td>Fails to generate adequate intrathoracic pressure and coronary perfusion pressure (CPP); forward flow is insufficient to sustain myocardial and cerebral perfusion.</td>
+                                <td>Push hard — at least 5cm (avoid &gt;6cm) in adults. Use real-time feedback devices or a metronome. Rotate the compressor every 2 minutes, before fatigue causes depth to drift downward.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Over-ventilation</strong> (rate or volume)</td>
+                                <td>Raised intrathoracic pressure impedes venous return between compressions, dropping coronary perfusion pressure. Also risks gastric insufflation, vomiting/aspiration, and lung injury.</td>
+                                <td>Ventilate only to visible chest rise. 30:2 without an advanced airway. Once an advanced airway is placed: 1 breath every 6 seconds (10/min), asynchronous with continuous compressions. Use a timer — under stress, rescuers reliably over-ventilate without realising it.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Excessive interruptions</strong> (low compression fraction)</td>
+                                <td>CPP falls rapidly the moment compressions stop and takes roughly a further minute of compressions to rebuild. Every pause effectively "resets the clock" on perfusion.</td>
+                                <td>Target a compression fraction &gt;80%. Pre-charge the defibrillator during ongoing compressions. Limit rhythm/pulse checks to under 10 seconds. Choreograph roles before touching the patient ("pit-crew" CPR) so airway, IV/IO access and pad placement don't interrupt compressions.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Incomplete chest recoil</strong></td>
+                                <td>Residual pressure on the chest wall prevents venous return between compressions, reducing preload for the next compression.</td>
+                                <td>Consciously lift hands fully off the chest between compressions without losing hand position or leaning.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Compressor fatigue</strong></td>
+                                <td>Depth and rate deteriorate measurably after around 2 minutes, even in fit rescuers — often without the rescuer noticing.</td>
+                                <td>Rotate the compressor every 2 minutes (aligned with rhythm checks), regardless of how they feel.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Objective Measures of CPR Quality</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Waveform Capnography:</strong> Continuous ETCO2 monitoring reflects both ventilation and pulmonary blood flow generated by compressions. A persistently low or falling ETCO2 during CPR suggests inadequate compressions and should immediately prompt a technique check — depth, rate, recoil, and hand position. An abrupt, sustained rise in ETCO2 (often ≥40mmHg) is a key early sign of ROSC.</li>
+                        <li><strong>CPR Feedback / Mechanical Devices:</strong> Accelerometer-based feedback devices standardise depth and rate; mechanical compression devices free up hands during prolonged resuscitation, extrication, or transport.</li>
+                        <li><strong>Post-Event Debrief:</strong> Reviewing defibrillator CPR-quality data after every arrest closes the quality-improvement loop — the systems-level extension of the prevention principle from Section 1.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ALS Algorithm -->
+            <section id="algorithm" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">3. Recognising the Rhythm & The Adult ALS Algorithm</h2>
+
+                <div class="physiology-box">
+                    <h3>Two Pathways, One Foundation</h3>
+                    <p>Every adult cardiac arrest algorithm splits into two pathways from the very first rhythm check. Shockable rhythms (VF/pulseless VT) account for roughly 30% of OHCA in Australia and New Zealand; the remainder present as non-shockable rhythms (PEA/asystole). Both pathways share the same foundation: immediate high-quality CPR, early oxygenation, and a relentless search for reversible causes — they differ only in whether defibrillation and antiarrhythmic drugs are added to that foundation.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>The Adult Cardiac Arrest Algorithm (Aligned with AHA/ANZCOR 2020–2025)</h3>
+                    <table class="text-sm">
+                        <thead>
+                            <tr>
+                                <th style="width:18%;">Step</th>
+                                <th>VF / Pulseless VT (Shockable)</th>
+                                <th>PEA / Asystole (Non-Shockable)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Immediate</strong></td>
+                                <td colspan="2">Start CPR — give oxygen, attach monitor/defibrillator as soon as available.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Rhythm confirmed</strong></td>
+                                <td>Deliver 1 shock (120–200J biphasic, manufacturer recommendation; 360J monophasic; use maximum available if unknown). Resume CPR immediately — do not pause for a pulse check after shocking.</td>
+                                <td>No shock. Continue CPR immediately.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>First vasopressor</strong></td>
+                                <td>Adrenaline 1mg IV/IO once the rhythm remains shockable after the 2nd shock, then every 2nd loop (~3–5 min).</td>
+                                <td>Adrenaline 1mg IV/IO as soon as feasible, then every 2nd loop (~3–5 min).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Antiarrhythmic</strong></td>
+                                <td>For shock-refractory VF/pVT: Amiodarone 300mg after the 3rd shock (repeat 150mg after the 5th) <em>or</em> Lidocaine 1mg/kg (repeat 0.5mg/kg after the 5th) as an alternative.</td>
+                                <td>Not applicable — there is no shockable rhythm to treat.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Airway</strong></td>
+                                <td colspan="2">Consider an advanced airway (SGA or ETT) with waveform capnography once personnel allow — insertion should not interrupt compressions.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Throughout</strong></td>
+                                <td colspan="2">Identify and treat reversible causes (H's and T's); 2-minute CPR cycles between rhythm checks; minimise every pause.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Between cycles</strong></td>
+                                <td>If the rhythm becomes non-shockable, move to the PEA/Asystole arm.</td>
+                                <td>If the rhythm becomes shockable, move to the VF/pVT arm and shock.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>No ROSC</strong></td>
+                                <td colspan="2">Continue looping between rhythm check, CPR, and drug administration while reversible causes are addressed — see <em>Medical Ethics</em> for guidance on when to consider termination.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Checking the Rhythm & Pulse</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Limit rhythm/pulse checks to under 10 seconds.</li>
+                        <li>If the monitor shows an organised rhythm, palpate for a pulse simultaneously rather than sequentially.</li>
+                        <li>VF and pulseless VT are managed identically — both are shockable.</li>
+                        <li><strong>PEA</strong> describes an organised electrical rhythm on the monitor with no palpable pulse — electrical activity is present but is not producing effective mechanical contraction.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Medications -->
+            <section id="medications" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">4. Medications in Adult Cardiac Arrest — Promoting ROSC</h2>
+                <p class="text-sm text-gray-600 mt-1">Based on ANZCOR Guideline 11.5 — Medications in Adult Cardiac Arrest.</p>
+
+                <div class="physiology-box">
+                    <h3>Access: IV vs IO</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>IV access is the preferred route; if it cannot be rapidly achieved within <strong>two attempts</strong>, IO access is a reasonable alternative — doses and effect are equivalent.</li>
+                        <li>Avoid lower-limb veins — venous return below the diaphragm is impaired during arrest.</li>
+                        <li>Every IV/IO drug must be followed by a <strong>20–30mL fluid flush</strong> plus continued compressions, to carry the drug centrally.</li>
+                        <li><strong>Endotracheal route</strong> is a last resort if IV/IO cannot be obtained and an ETT is in place. Only adrenaline, lidocaine, and atropine may be given this way — the dose must be increased at least 3-fold and diluted in water rather than saline. Not usable if a supraglottic airway is in place.</li>
+                        <li>Intracardiac injection is <strong>not recommended</strong> — limited benefit, high complication risk.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Vasopressors</h3>
+                    <p><strong>Adrenaline (Epinephrine):</strong> An alpha/beta-agonist catecholamine. Its alpha-adrenergic effect causes peripheral vasoconstriction, redirecting available cardiac output to the myocardium and brain, and may improve myocardial blood flow enough to facilitate defibrillation.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li><strong>Dose:</strong> 1mg IV/IO, repeated every 3–5 minutes (approximately every 2nd loop of the algorithm).</li>
+                        <li><strong>Timing differs by rhythm:</strong> non-shockable — as soon as feasible; shockable — after the 2nd shock is unsuccessful.</li>
+                        <li><strong>Evidence:</strong> The UK PARAMEDIC2 trial (n=8000) and the Australian PACA trial (n=500) found no significant improvement in favourable neurological outcome at discharge, but did show improved ROSC, survival to admission, and survival to hospital discharge — with the clearest benefit for survival to discharge in <em>non-shockable</em> rhythms and for ROSC in <em>shockable</em> rhythms.</li>
+                        <li><strong>Adverse effects:</strong> tachyarrhythmia, severe post-ROSC hypertension, tissue necrosis with extravasation.</li>
+                    </ul>
+                    <p class="mt-2"><strong>Vasopressin:</strong> Not recommended in place of, or in addition to, adrenaline — combined evidence from multiple RCTs shows no benefit over adrenaline alone. The combination of vasopressin with corticosteroids is also not recommended for routine use.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Antiarrhythmics for Shock-Refractory VF/pVT</h3>
+                    <table class="text-sm mt-2">
+                        <thead><tr><th>Drug</th><th>Mechanism</th><th>Dosing</th><th>Key Adverse Effects</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Amiodarone</strong></td>
+                                <td>Complex effects on sodium, potassium and calcium channels plus alpha/beta-blocking properties.</td>
+                                <td>300mg IV/IO bolus after the 3rd unsuccessful shock; may repeat 150mg after the 5th. Consider an infusion (15mg/kg over 24h) for recurrent VF/pVT. <strong>Avoid in Torsades de Pointes</strong> — it prolongs the QT interval and can worsen the arrhythmia.</td>
+                                <td>Hypotension, bradycardia, heart block.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lidocaine (Lignocaine)</strong></td>
+                                <td>Sodium channel blocker — an alternative to amiodarone.</td>
+                                <td>1mg/kg initial bolus; may repeat 0.5mg/kg after the 5th shock. Infusion 1–4mg/min for recurrent VF/pVT.</td>
+                                <td>Slurred speech, altered consciousness, muscle twitching/seizures, hypotension, bradycardia, heart block.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Magnesium</strong></td>
+                                <td>Essential for membrane stability; not routine for shock-refractory VF/pVT.</td>
+                                <td>5mmol IV/IO bolus; may repeat once; infusion 20mmol over 2–4h. Reserved for Torsades de Pointes, digoxin toxicity, or documented hypokalaemia/hypomagnesaemia.</td>
+                                <td>Excessive use can cause muscle weakness and respiratory failure.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2 text-sm">Evidence (ROC-ALPS, ARREST, ALIVE trials): no significant difference between amiodarone, lidocaine, and placebo for survival to discharge with good neurological outcome, though active drug modestly improved ROSC compared with placebo in shock-refractory arrest.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Drugs That Are NOT Routine — Reserved for Specific Circumstances</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Calcium:</strong> Routine administration is <strong>not recommended</strong> in OHCA — a large RCT found a signal of harm (lower survival and quality of life at later time points) with no benefit for ROSC. Reserve for hyperkalaemia, hypocalcaemia, or calcium-channel blocker overdose. Dose: 10mL 10% calcium chloride (or 30mL 10% calcium gluconate) IV bolus, repeated if the arrest is prolonged/refractory and hyperkalaemia is the cause.</li>
+                        <li><strong>Sodium Bicarbonate:</strong> Not routine — efficient CPR and ventilation usually negate the need. Reserve for hyperkalaemia, documented metabolic acidosis, tricyclic antidepressant overdose, or protracted arrest (&gt;15 minutes). Dose: 1mmol/kg IV/IO over 2–3 minutes, then guided by blood gases. <strong>Caution:</strong> can precipitate and inactivate adrenaline or calcium if mixed in the same line.</li>
+                        <li><strong>Potassium:</strong> Only for persistent VF/pVT due to documented or suspected hypokalaemia — 5mmol IV bolus. Excess risks iatrogenic hyperkalaemia, bradycardia, and asystole.</li>
+                        <li><strong>Fibrinolytics:</strong> Not routine, but may be considered (e.g. alteplase 100mg) when pulmonary embolism is the suspected or confirmed cause of arrest. If given, consider continuing CPR for 60–90 minutes before terminating resuscitation.</li>
+                        <li><strong>Steroids:</strong> Not recommended routinely during CPR or after ROSC.</li>
+                        <li><strong>Fluids:</strong> No proven routine benefit during CPR in a normovolaemic patient, but fluids <strong>should</strong> be given (at least 20mL/kg crystalloid) whenever hypovolaemia is suspected — directly relevant to traumatic cardiac arrest (see Section 6).</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Quick Reference: Drug Doses</h3>
+                    <table class="text-sm">
+                        <thead><tr><th>Drug</th><th>Indication</th><th>Initial Dose</th><th>Repeat</th></tr></thead>
+                        <tbody>
+                            <tr><td>Adrenaline</td><td>All arrest rhythms</td><td>1mg IV/IO</td><td>Every 3–5 min (every 2nd loop)</td></tr>
+                            <tr><td>Amiodarone</td><td>Shock-refractory VF/pVT (after 3rd shock)</td><td>300mg IV/IO</td><td>150mg after 5th shock</td></tr>
+                            <tr><td>Lidocaine</td><td>Alternative to amiodarone</td><td>1mg/kg IV/IO</td><td>0.5mg/kg after 5th shock</td></tr>
+                            <tr><td>Magnesium</td><td>Torsades, hypomagnesaemia, digoxin toxicity</td><td>5mmol IV/IO</td><td>May repeat once; infusion 20mmol/2–4h</td></tr>
+                            <tr><td>Calcium chloride 10%</td><td>Hyperkalaemia, hypocalcaemia, CCB overdose</td><td>10mL IV/IO</td><td>Repeat if refractory hyperkalaemic arrest</td></tr>
+                            <tr><td>Sodium bicarbonate</td><td>Hyperkalaemia, TCA overdose, documented acidosis, protracted arrest</td><td>1mmol/kg IV/IO over 2–3 min</td><td>Guided by ABG</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Reversible Causes -->
+            <section id="reversible" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">5. Identifying & Treating Reversible Causes — The H's and T's</h2>
+                <div class="disorder-box">
+                    <table class="text-sm">
+                        <thead><tr><th style="width:16%;">Cause</th><th>Recognition / Clues</th><th>Treatment</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Hypoxia</strong></td><td>Airway obstruction, poor pre-arrest ventilation, respiratory arrest history</td><td>High-flow oxygen, secure the airway, ensure effective ventilation</td></tr>
+                            <tr><td><strong>Hypovolaemia</strong></td><td>Trauma, haemorrhage, dehydration, sepsis</td><td>IV/IO fluids ± blood if available; control any haemorrhage</td></tr>
+                            <tr><td><strong>Hydrogen ion (acidosis)</strong></td><td>Prolonged arrest, renal failure, DKA</td><td>Effective ventilation and CPR; consider sodium bicarbonate if severe/protracted</td></tr>
+                            <tr><td><strong>Hypo-/Hyperkalaemia</strong></td><td>Renal failure, dialysis patient, crush injury; ECG: peaked T waves, widened QRS</td><td>Hyperkalaemia — calcium chloride, insulin/glucose, salbutamol. Hypokalaemia — potassium replacement</td></tr>
+                            <tr><td><strong>Hypothermia</strong></td><td>Cold-water immersion, environmental exposure</td><td>Active rewarming; prolonged resuscitation may be warranted ("not dead until warm and dead")</td></tr>
+                            <tr><td><strong>Tension Pneumothorax</strong></td><td>Trauma, unilateral absent breath sounds, tracheal deviation, rising BVM resistance</td><td>Immediate needle or finger thoracostomy</td></tr>
+                            <tr><td><strong>Tamponade (Cardiac)</strong></td><td>Penetrating chest trauma; muffled heart sounds, JVD (Beck's triad)</td><td>Rapid transport for pericardiocentesis / thoracotomy</td></tr>
+                            <tr><td><strong>Toxins</strong></td><td>Overdose history, drug paraphernalia at scene</td><td>Specific antidotes where available (e.g. naloxone), supportive care</td></tr>
+                            <tr><td><strong>Thrombosis (Pulmonary)</strong></td><td>Sudden collapse, DVT risk factors (immobility, recent surgery, cancer)</td><td>Consider fibrinolysis if PE strongly suspected/confirmed; consider prolonged CPR (60–90 min) after fibrinolytic given</td></tr>
+                            <tr><td><strong>Thrombosis (Coronary)</strong></td><td>Preceding chest pain/discomfort, cardiac history, risk factors</td><td>Achieve ROSC and transport rapidly for reperfusion (PCI)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Traumatic Cardiac Arrest -->
+            <section id="traumatic" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">6. Special Circumstance: Traumatic Cardiac Arrest</h2>
+
+                <div class="disorder-box">
+                    <h3>Why Traumatic Arrest Is Different</h3>
+                    <p>Unlike a primary medical (cardiac) arrest, traumatic cardiac arrest is usually the direct consequence of a mechanical problem — catastrophic haemorrhage, tension pneumothorax, or cardiac tamponade — rather than a primary electrical or ischaemic event. Standard ALS drug therapy has limited efficacy when the underlying problem is an empty, compressed, or obstructed heart: correcting the reversible cause takes priority over, and often happens simultaneously with, chest compressions and drug administration.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Priority Sequence in Traumatic Cardiac Arrest</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Control catastrophic external haemorrhage first</strong> — direct pressure, haemostatic dressings, or a tourniquet — even ahead of airway in a &lt;C&gt;ABC approach.</li>
+                        <li><strong>Address the H's and T's aggressively and specifically:</strong>
+                            <ul class="list-disc list-inside ml-4 mt-1">
+                                <li><strong>Hypovolaemia:</strong> Unlike a medical arrest, fluid/blood resuscitation is strongly indicated here — internal haemorrhage from abdominal or pelvic trauma is a leading cause of traumatic PEA/asystole.</li>
+                                <li><strong>Tension pneumothorax:</strong> Bilateral finger thoracostomy or needle decompression.</li>
+                                <li><strong>Tamponade:</strong> Rapid transport for surgical/ED intervention — pre-hospital treatment options are limited.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Apply a pelvic binder</strong> for suspected pelvic fracture to reduce ongoing venous haemorrhage into the retroperitoneal space (see the <em>Pelvic & Abdominal Trauma</em> guide for full technique).</li>
+                        <li><strong>Manage the airway</strong> and ensure effective oxygenation.</li>
+                        <li>Chest compressions and standard ALS drugs remain part of management but are secondary to reversing the mechanical cause — asystole or PEA following major trauma may only respond once the underlying cause is corrected.</li>
+                        <li><strong>Minimise scene time and transport rapidly</strong> — definitive treatment is surgical, not pharmacological.</li>
+                    </ol>
+                </div>
+
+                <div class="assessment-box">
+                    <p class="text-sm">See <strong>Case 2</strong> in the Clinical Case Analysis section for a worked example of a witnessed traumatic arrest presenting in asystole with suspected pelvic and abdominal haemorrhage.</p>
+                </div>
+            </section>
+
+            <!-- Ethics -->
+            <section id="ethics" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">7. Medical Ethics: Starting, Continuing & Stopping CPR</h2>
+
+                <div class="physiology-box">
+                    <h3>The Four Principles Applied to Resuscitation</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Autonomy:</strong> Respecting a patient's known wishes — an Advance Care Directive, a Not-For-Resuscitation (NFR) order, or wishes credibly relayed by family. CPR should not be commenced against a patient's documented or reliably reported wishes.</li>
+                        <li><strong>Beneficence:</strong> Acting in the patient's best interest — is resuscitation likely to restore a quality of life the patient would consider acceptable?</li>
+                        <li><strong>Non-maleficence:</strong> Avoiding harm — prolonged, ultimately futile resuscitation can cause harm (rib fractures, prolonged suffering, false hope for family) without corresponding benefit.</li>
+                        <li><strong>Justice:</strong> Fair, consistent decision-making and appropriate stewardship of limited emergency resources.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Recognising Futility</h3>
+                    <p>No single factor is used in isolation, but the following are widely recognised as associated with a very low likelihood of a good outcome:</p>
+                    <ul class="list-disc list-inside mt-2 space-y-1">
+                        <li>Arrest not witnessed by EMS or bystanders, with no bystander CPR performed</li>
+                        <li>No shockable rhythm identified at any point during the resuscitation (persistent asystole/PEA)</li>
+                        <li>No ROSC despite an adequate trial of ALS (effective airway, appropriate drugs, and active management of reversible causes)</li>
+                        <li>Declining or persistently very low end-tidal CO<sub>2</sub> despite objectively good-quality CPR</li>
+                        <li>Prolonged "down time," particularly in a normothermic patient without early bystander intervention</li>
+                        <li>Known terminal illness or a valid NFR order/Advance Care Directive</li>
+                    </ul>
+                    <p class="mt-2 text-sm">Termination-of-resuscitation decisions should always reflect the overall clinical picture, team consensus, and local clinical practice guidelines — not any single criterion in isolation.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>A Structured Approach to the Decision</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li>Confirm effective CPR has been delivered for an adequate period — don't stop prematurely on the strength of a single non-shockable rhythm check.</li>
+                        <li>Actively search for and treat reversible causes (H's and T's) before considering termination.</li>
+                        <li>Establish code status — ask family about advance directives, NFR orders, or previously expressed wishes.</li>
+                        <li>Discuss as a team — the team leader should explicitly seek consensus before ceasing resuscitation ("does anyone have concerns about stopping?").</li>
+                        <li>Where feasible, offer family the option to be present for ongoing resuscitation and/or pronouncement; some services designate a team member to remain with, update, and support the family throughout.</li>
+                        <li>Document the decision, the time, and the rationale clearly.</li>
+                    </ol>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Withholding vs Withdrawing CPR</h3>
+                    <p>Ethically, withholding CPR (never starting) and withdrawing CPR (stopping after starting) are considered equivalent — the deciding question is always whether continued resuscitation serves the patient's interests, not how far the resuscitation has already progressed. Paramedics may be justified in withholding CPR where there are obvious signs of death (rigor mortis, decomposition, injuries incompatible with life), a valid NFR order/Advance Care Directive is presented at scene, or in traumatic arrests where injuries are clearly unsurvivable — always in accordance with local clinical practice guidelines.</p>
+                </div>
+            </section>
+
+            <!-- Communication -->
+            <section id="communication" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">8. Communicating Death: Breaking Bad News to Family</h2>
+
+                <div class="assessment-box">
+                    <h3>The SPIKES Protocol</h3>
+                    <table class="text-sm">
+                        <tbody>
+                            <tr><td style="width:8%;"><strong>S</strong></td><td><strong>Setting:</strong> Find a private, quiet space where possible; sit down; minimise interruptions; make sure the right people are present.</td></tr>
+                            <tr><td><strong>P</strong></td><td><strong>Perception:</strong> Ask what the family already understands about the situation ("What have you been told so far?").</td></tr>
+                            <tr><td><strong>I</strong></td><td><strong>Invitation:</strong> Gauge how much detail they want and their readiness to hear it.</td></tr>
+                            <tr><td><strong>K</strong></td><td><strong>Knowledge:</strong> Give a brief warning ("I'm afraid I have some very serious news"), then deliver the news clearly using the words <em>"death"</em> or <em>"dead"</em> — avoid euphemisms such as "passed away" and avoid medical jargon.</td></tr>
+                            <tr><td><strong>E</strong></td><td><strong>Emotions:</strong> Respond to the family's emotional reaction with empathy before moving on — acknowledge, validate, and allow silence.</td></tr>
+                            <tr><td><strong>S</strong></td><td><strong>Strategy/Summary:</strong> Explain next steps — police/coroner involvement where relevant, viewing the body, support services, and who to contact.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Practical Tips for Paramedics</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Use clear, simple, direct language — clarity is kindness; euphemisms create confusion and prolong distress.</li>
+                        <li>Allow time to process; expect the same question to be asked more than once.</li>
+                        <li>Sit at eye level where possible; maintain appropriate eye contact and a calm tone of voice.</li>
+                        <li>Offer the option to see the patient or attend the resuscitation, and respect their choice either way.</li>
+                        <li>Involve a social worker, chaplain, or dedicated support person early where available.</li>
+                        <li>Designate one team member to remain with and update family members throughout, if they arrive on scene during ongoing resuscitation.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Family Presence During Resuscitation</h3>
+                    <p>Whether to invite family to witness ongoing CPR is an evolving area of practice. Potential benefits include helping families see that everything possible was done and supporting a clearer transition to acceptance. Potential drawbacks include family distress interfering with team performance, or witnessing distressing interventions. Best practice is to offer the choice, briefly prepare the family for what they will see, and assign a dedicated team member to remain with them throughout — the decision belongs to the family, not the team.</p>
+                </div>
+            </section>
+
+            <!-- Clinical Case Analysis -->
+            <section id="cases" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">9. Clinical Case Analysis & Critical Reasoning</h2>
+
+                <!-- Case 1 -->
+                <div class="assessment-box">
+                    <h3>Case 1: Pulseless Ventricular Tachycardia — Collapse After "Heartburn"</h3>
+                    <p><strong>Presentation:</strong> A 40-year-old male collapses at work after complaining of heartburn-like discomfort all morning. The arrest is unwitnessed.</p>
+                    <p><strong>Clinical Reasoning:</strong></p>
+                    <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                        <li><strong>Mechanism Analysis:</strong> Morning-long "heartburn" in a 40-year-old man is a classic atypical presentation of an evolving acute coronary syndrome. This is very likely an ischaemic cardiac arrest secondary to coronary thrombosis.</li>
+                        <li><strong>On Arrival:</strong> Confirm cardiac arrest, commence immediate high-quality CPR, and attach the defibrillator without delay — an arrest of likely cardiac origin carries a meaningfully higher chance of a shockable rhythm than a non-cardiac arrest.</li>
+                        <li><strong>Management Priorities:</strong>
+                            <br>1. Rapid rhythm identification — confirmed VF/pVT — and immediate defibrillation.
+                            <br>2. Minimise pre-shock and post-shock pauses; resume compressions immediately after shocking.
+                            <br>3. Adrenaline 1mg once the rhythm remains shockable after the 2nd shock, then every 2nd loop.
+                            <br>4. Amiodarone 300mg after the 3rd unsuccessful shock for shock-refractory VF/pVT.
+                            <br>5. Search for reversible causes, but keep the primary focus on excellent CPR and rapid defibrillation — definitive treatment for the underlying coronary thrombosis is reperfusion (PCI) after ROSC, not a pre-hospital drug.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="assessment-box">
+                    <h3>Case 2: Traumatic Cardiac Arrest with Suspected Pelvic Fracture</h3>
+                    <p><strong>Presentation:</strong> A witnessed collapse with immediate bystander CPR. On paramedic arrival the patient is in asystole, with clinical suspicion of internal haemorrhage (abdomen) and a pelvic fracture.</p>
+                    <p><strong>Clinical Reasoning:</strong></p>
+                    <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                        <li><strong>Likely Cause:</strong> Exsanguinating haemorrhage from pelvic and/or abdominal trauma, producing hypovolaemic cardiac arrest — typically presenting first as PEA and progressing to asystole once compensatory mechanisms are exhausted.</li>
+                        <li><strong>Priorities:</strong>
+                            <br>1. Apply a pelvic binder centred on the greater trochanters.
+                            <br>2. Control any external haemorrhage; secure IV/IO access (×2 where possible) and give fluid boluses — fluids are strongly indicated here, unlike in a primary medical arrest.
+                            <br>3. Manage the airway and continue high-quality CPR while systematically working through the H's and T's.
+                            <br>4. Minimise scene time; transport rapidly to a trauma centre — the definitive treatment is surgical control of haemorrhage.
+                        </li>
+                        <li><strong>Prognostic Note:</strong> An asystolic traumatic arrest following a prolonged period of untreated hypovolaemia carries an extremely poor prognosis. This scenario sits directly at the intersection of aggressive resuscitation and the ethical considerations discussed in Section 7 — the team must remain alert to the point at which continued resuscitation is no longer likely to benefit the patient.</li>
+                    </ul>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="assessment-box">
+                    <h3>Case 3: Refractory PEA Arrest → Asystole — Termination & Breaking Bad News</h3>
+                    <p><strong>Presentation:</strong> A 70-year-old man collapses at a tennis club; the arrest is unwitnessed and the down time before bystander CPR is unclear. On paramedic arrival he is in wide-complex PEA (HR 45, no palpable pulse, GCS 3 with fixed pupils). Despite high-quality CPR, adrenaline every 3–5 minutes, a definitive airway, and assessment for reversible causes, there is no ROSC. ETCO2 remains persistently low (9–20mmHg) and eventually the rhythm deteriorates to asystole with ETCO2 falling to 6mmHg. His wife arrives partway through the resuscitation.</p>
+                    <p><strong>Clinical Reasoning:</strong></p>
+                    <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                        <li><strong>Recognising Refractory Arrest:</strong> An unwitnessed arrest, unclear down time, persistently low and then falling ETCO2 despite objectively good CPR, and progression from PEA to asystole despite full ALS management are all recognised markers of a very low likelihood of ROSC (see Section 7).</li>
+                        <li><strong>Reversible Cause Screen:</strong> A full H's and T's assessment (with no reversible cause identified) should be completed and clearly verbalised by the team leader before termination is considered — laboratory values drawn during such an arrest (severe acidosis, markedly elevated potassium and lactate) typically reflect prolonged, profound tissue hypoperfusion rather than a single correctable cause.</li>
+                        <li><strong>Team Process:</strong> The team leader assigns roles early, uses closed-loop communication throughout, and — once resuscitation appears futile — explicitly seeks team consensus before ceasing efforts, rather than making a unilateral call.</li>
+                        <li><strong>Family Communication:</strong> A team member is assigned to update the wife on arrival, ask what she knows and whether an advance directive exists, and — once the decision to stop is made — deliver the news using the SPIKES framework: a private setting, checking her understanding, a clear warning, then stating plainly that her husband has died (not "passed" or "gone"), followed by space for her emotional response and a clear explanation of next steps. She is offered, but does not have to accept, the option to attend the resuscitation.</li>
+                        <li><strong>Key Teaching Point:</strong> Terminating resuscitation is not a failure of care — recognising futility, treating the patient with dignity throughout, and communicating the outcome to family with clarity and compassion are all core components of high-quality end-of-life practice in paramedicine.</li>
+                    </ul>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Based on AHA/ANZCOR Adult Cardiac Arrest Algorithm principles and ANZCOR Guideline 11.5 (Medications in Adult Cardiac Arrest). Always follow your service's current clinical practice guidelines — medication doses, timing, and termination-of-resuscitation criteria vary by jurisdiction.</p>
+        </footer>
+    </div>
+</body>
+</html>
