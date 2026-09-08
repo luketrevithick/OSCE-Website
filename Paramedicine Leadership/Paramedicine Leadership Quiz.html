@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paramedicine Leadership — Revision Quiz</title>
+<style>
+  :root{
+    --navy-deep:#0B1522;
+    --navy:#142238;
+    --navy-mid:#1E3350;
+    --paper:#F3F1E6;
+    --paper-dim:#E9E5D4;
+    --ink:#1C2331;
+    --ink-muted:#5B6472;
+    --brass:#B8872E;
+    --brass-dark:#8C6A24;
+    --green:#3F7A5A;
+    --green-bg:#E4EFE7;
+    --clay:#A8453A;
+    --clay-bg:#F5E7E4;
+    --hairline:#D9D4C2;
+    --hairline-dark:#33475F;
+    --font-serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Times New Roman", serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-sans);
+    line-height:1.5;
+    min-height:100vh;
+  }
+  h1,h2{font-family:var(--font-serif); font-weight:600; margin:0 0 .4em 0;}
+  p{margin:0 0 .9em 0;}
+  button{font-family:var(--font-sans);}
+  a{color:inherit;}
+
+  /* ---------- header / chrome ---------- */
+  .header-bar{
+    background:var(--navy-deep);
+    color:#EDEAD9;
+    position:sticky;
+    top:0;
+    z-index:5;
+  }
+  .header-inner{
+    max-width:720px;
+    margin:0 auto;
+    padding:14px 20px 10px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:8px 16px;
+  }
+  .brand-title{
+    font-family:var(--font-serif);
+    font-size:1.05rem;
+    letter-spacing:.2px;
+  }
+  .header-meta{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    font-size:.85rem;
+    color:#C9C4AE;
+  }
+  .link-btn{
+    background:none;
+    border:none;
+    color:#D8B565;
+    cursor:pointer;
+    font-size:.85rem;
+    padding:2px 0;
+    text-decoration:underline;
+    text-underline-offset:3px;
+  }
+  .link-btn:hover{color:#EFCB86;}
+  .progress-track{
+    height:3px;
+    background:var(--navy-mid);
+    max-width:720px;
+    margin:0 auto;
+  }
+  .progress-fill{
+    height:100%;
+    background:var(--brass);
+    width:0%;
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .progress-fill{transition:width .3s ease;}
+  }
+
+  /* ---------- layout ---------- */
+  .main{
+    max-width:720px;
+    margin:0 auto;
+    padding:28px 20px 60px 20px;
+  }
+
+  /* ---------- start screen ---------- */
+  .start-card h1{font-size:1.9rem; margin-bottom:.3em;}
+  .start-card .lede{color:var(--ink-muted); font-size:1.02rem;}
+  .coverage{
+    margin:18px 0 22px 0;
+    padding:16px 18px;
+    background:#fff;
+    border:1px solid var(--hairline);
+  }
+  .coverage p{margin:0 0 8px 0; font-size:.85rem; color:var(--ink-muted);}
+  .coverage ul{margin:0; padding-left:20px; columns:2; column-gap:24px; font-size:.92rem;}
+  .coverage li{margin-bottom:6px; break-inside:avoid;}
+  @media (max-width:520px){.coverage ul{columns:1;}}
+  .toggle-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:.95rem;
+    margin:18px 0 24px 0;
+    cursor:pointer;
+  }
+  .toggle-row input{width:17px; height:17px;}
+
+  /* ---------- card / question ---------- */
+  .card{
+    background:#fff;
+    border:1px solid var(--hairline);
+    border-top:3px solid var(--navy);
+    padding:24px 24px 22px 24px;
+  }
+  .tag-row{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-bottom:16px;
+  }
+  .tag{
+    font-size:.72rem;
+    padding:3px 9px;
+    border:1px solid var(--hairline);
+    color:var(--ink-muted);
+    white-space:nowrap;
+  }
+  .tag-section{color:var(--navy); border-color:var(--navy-mid);}
+  .tag-type{color:var(--brass-dark); border-color:var(--brass);}
+
+  .case-block{
+    background:var(--paper-dim);
+    border-left:3px solid var(--brass);
+    padding:12px 16px;
+    margin-bottom:16px;
+  }
+  .case-label{
+    display:block;
+    font-size:.72rem;
+    color:var(--ink-muted);
+    margin-bottom:4px;
+  }
+  .case-block p{margin:0; font-size:.96rem;}
+
+  .prompt{
+    font-size:1.22rem;
+    line-height:1.4;
+    margin-bottom:18px;
+  }
+  .prompt-small{
+    font-family:var(--font-serif);
+    font-size:1.05rem;
+    margin:6px 0 10px 0;
+  }
+
+  .hint{font-size:.85rem; color:var(--ink-muted); margin-bottom:10px;}
+
+  .opt-row{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:11px 4px;
+    border-bottom:1px solid var(--hairline);
+    cursor:pointer;
+    font-size:.98rem;
+  }
+  .opt-row:last-child{border-bottom:none;}
+  .opt-row:hover{background:#FAF9F3;}
+  .opt-row input{margin-top:3px; width:16px; height:16px; flex-shrink:0;}
+  .opt-row.correct{background:var(--green-bg); border-left:3px solid var(--green); padding-left:9px;}
+  .opt-row.incorrect{background:var(--clay-bg); border-left:3px solid var(--clay); padding-left:9px;}
+
+  .match-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:10px 4px;
+    border-bottom:1px solid var(--hairline);
+    flex-wrap:wrap;
+  }
+  .match-row:last-child{border-bottom:none;}
+  .match-left{font-size:.96rem; flex:1 1 220px;}
+  .match-select{
+    flex:1 1 220px;
+    padding:7px 8px;
+    border:1px solid var(--hairline-dark);
+    background:#fff;
+    font-family:var(--font-sans);
+    font-size:.92rem;
+  }
+  .match-row.correct{background:var(--green-bg);}
+  .match-row.incorrect{background:var(--clay-bg);}
+  .correct-note{
+    width:100%;
+    font-size:.82rem;
+    color:var(--green);
+    margin-top:4px;
+  }
+
+  .feedback{
+    margin-top:18px;
+    padding:14px 16px;
+    background:var(--paper-dim);
+    border-left:3px solid var(--navy);
+  }
+  .feedback .verdict{
+    font-weight:700;
+    margin-bottom:6px;
+  }
+  .verdict.is-correct{color:var(--green);}
+  .verdict.is-incorrect{color:var(--clay);}
+  .feedback p:last-child{margin-bottom:0;}
+
+  .actions{
+    margin-top:20px;
+    display:flex;
+    gap:12px;
+  }
+  .btn{
+    font-size:.95rem;
+    padding:11px 22px;
+    border:1px solid var(--navy);
+    background:var(--navy);
+    color:#fff;
+    cursor:pointer;
+  }
+  .btn:hover{background:var(--navy-mid);}
+  .btn:disabled{opacity:.5; cursor:not-allowed;}
+
+  input:focus-visible,
+  select:focus-visible,
+  button:focus-visible,
+  .opt-row:focus-within{
+    outline:2px solid var(--brass);
+    outline-offset:2px;
+  }
+
+  /* ---------- results ---------- */
+  .results-card h1{font-size:1.8rem;}
+  .score-big{
+    font-family:var(--font-serif);
+    font-size:3rem;
+    color:var(--navy);
+    margin:6px 0 0 0;
+  }
+  .score-pct{color:var(--ink-muted); margin-top:0;}
+  .section-table{
+    width:100%;
+    border-collapse:collapse;
+    margin:14px 0 26px 0;
+    font-size:.92rem;
+  }
+  .section-table td{
+    padding:8px 6px;
+    border-bottom:1px solid var(--hairline);
+    vertical-align:middle;
+  }
+  .section-table td.num{white-space:nowrap; color:var(--ink-muted); width:60px;}
+  .bar-cell{width:40%;}
+  .bar-track{
+    background:var(--hairline);
+    height:8px;
+    width:100%;
+  }
+  .bar-fill{
+    background:var(--brass);
+    height:100%;
+  }
+  .all-correct{color:var(--green); font-weight:600;}
+  .review-list{display:flex; flex-direction:column; gap:18px;}
+  .review-item{
+    border:1px solid var(--hairline);
+    border-left:3px solid var(--clay);
+    padding:16px 18px;
+    background:#fff;
+  }
+  .your-answer{color:var(--clay); font-size:.92rem;}
+  .correct-answer{color:var(--green); font-size:.92rem;}
+  .explanation-text{color:var(--ink-muted); font-size:.92rem; margin-top:6px;}
+
+  .site-footer{
+    max-width:720px;
+    margin:0 auto;
+    padding:0 20px 40px 20px;
+    color:var(--ink-muted);
+    font-size:.8rem;
+  }
+</style>
+</head>
+<body>
+
+<header id="headerBar" class="header-bar" style="display:none;">
+  <div class="header-inner">
+    <div class="brand"><span class="brand-title">Paramedicine Leadership</span></div>
+    <div class="header-meta">
+      <span id="qCounter">Question 1 of 100</span>
+      <span id="scoreCounter">Score 0/0</span>
+      <button id="restartHeaderBtn" class="link-btn" type="button">Start over</button>
+    </div>
+  </div>
+  <div class="progress-track"><div id="progressFill" class="progress-fill" style="width:0%"></div></div>
+</header>
+
+<main id="app" class="main"></main>
+
+<footer class="site-footer">
+  <p>Self-test tool for revision. Check any uncertain answers against your unit materials and set readings.</p>
+</footer>
+
+<script>
+const SECTION_ORDER = [
+  "Clinical Leadership Foundations",
+  "Leadership Styles",
+  "Organisational Behaviour & Culture",
+  "Clinical Supervision",
+  "Health Promotion & Health Education",
+  "Community Engagement & Participatory Research",
+  "Major Incident & Mass Casualty Management",
+  "Learning, Debriefing & Feedback",
+  "Followership",
+  "Feedback Skills & Team Development"
+];
+
+const TYPE_LABEL = {
+  mcq: "Multiple choice",
+  multi: "Select all that apply",
+  tf: "True or false",
+  match: "Match the pairs"
+};
+
+const QUESTIONS = [
+{id:1, section:"Clinical Leadership Foundations", type:"mcq",
+ prompt:"Which of the following best captures the key distinction between clinical leadership and management discussed in the clinical leadership literature (McSherry & Pearce, 2016)?",
+ options:[
+   "Leadership is concerned with maintaining existing systems and processes, while management is about inspiring change and setting direction.",
+   "Leadership is about influencing, inspiring and setting direction for others, while management focuses on planning, organising and controlling resources to maintain stability.",
+   "Leadership and management are interchangeable terms describing the same clinical function.",
+   "Leadership only occurs at executive level, while management occurs at the point of care."
+ ], answer:1,
+ explanation:"The literature draws a classic distinction: leadership is oriented towards vision, influence and change, whereas management is oriented towards planning, organising and maintaining stable systems. The two are complementary, not identical, and neither is restricted to a single organisational level."},
+
+{id:2, section:"Clinical Leadership Foundations", type:"tf",
+ prompt:"True or false: in the clinical leadership literature, a person must hold a formal management title or supervisory rank before they can be considered a clinical leader.",
+ options:["True","False"], answer:1,
+ explanation:"Clinical leadership is described as emergent rather than appointed — it arises from expertise, peer respect and influence at the point of care, meaning any clinician, including a student, can demonstrate it regardless of title."},
+
+{id:3, section:"Clinical Leadership Foundations", type:"mcq",
+ prompt:"A newly graduated paramedic on their first solo shift confidently coordinates a chaotic scene, and a senior partner defers to their judgement on scene management. This is best described as an example of:",
+ options:["Positional authority","Management by exception","Emergent clinical leadership","Transactional exchange"], answer:2,
+ explanation:"The graduate has no formal rank or title, yet is exercising influence through demonstrated competence and peer respect at the point of care — the hallmark of emergent clinical leadership."},
+
+{id:4, section:"Clinical Leadership Foundations", type:"multi",
+ prompt:"Which of the following are features that distinguish clinical leadership as described in the paramedicine literature? (Select all that apply)",
+ options:[
+   "It can be exercised by a student paramedic",
+   "It is fixed to a single formally appointed individual per shift",
+   "It depends on expertise and peer respect rather than title",
+   "It is only relevant in resuscitation scenarios",
+   "It can be exercised by an extended care paramedic"
+ ], answer:[0,2,4],
+ explanation:"Clinical leadership is not restricted to one appointed person, a single role, or high-acuity scenarios — it can be shown by anyone from a student to an extended care paramedic, wherever expertise and peer respect give them influence."},
+
+{id:5, section:"Clinical Leadership Foundations", type:"mcq",
+ scenario:"During a routine non-emergency transfer, a graduate paramedic notices their more experienced partner is about to administer a medication at the wrong dose. The graduate calmly and respectfully raises the concern, and the error is corrected before it reaches the patient.",
+ prompt:"This exchange is best understood as:",
+ options:[
+   "An example of management, because the graduate is directing a task",
+   "An example of clinical leadership, because expertise and patient safety concerns are exercised regardless of seniority",
+   "Not leadership, because the graduate has less experience than their partner",
+   "A breach of professional boundaries"
+ ], answer:1,
+ explanation:"Clinical leadership is not about seniority — it is exercised whenever a clinician uses expertise and judgement, regardless of hierarchy, to protect patient safety."},
+
+{id:6, section:"Clinical Leadership Foundations", type:"mcq",
+ prompt:"Which out-of-hospital feature makes clinical leadership particularly important in paramedicine, compared with many in-hospital clinical settings?",
+ options:[
+   "Paramedics always work within large, hierarchical teams",
+   "Paramedics frequently work with limited resources, small teams and high environmental unpredictability, often without direct senior support",
+   "Paramedics never need to make independent decisions",
+   "Clinical leadership is less relevant outside of hospital because protocols remove the need for judgement"
+ ], answer:1,
+ explanation:"The prehospital environment is variable and often under-resourced, with small crews operating with a high degree of autonomy — conditions that place a premium on clinical leadership at every level of experience."},
+
+{id:7, section:"Clinical Leadership Foundations", type:"tf",
+ prompt:"True or false: the absence of clinical leadership in a team has been linked in the literature only to worse patient outcomes, with no meaningful effect on staff wellbeing.",
+ options:["True","False"], answer:1,
+ explanation:"Poor or absent clinical leadership is associated with harm to both patient safety and quality of care, and to clinician wellbeing (for example, burnout and poor team culture) — the consequences extend beyond the patient alone."},
+
+{id:8, section:"Clinical Leadership Foundations", type:"multi",
+ prompt:"Which of the following are outcomes that clinical leadership has been connected to in the literature? (Select all that apply)",
+ options:["Patient safety","Team culture","Clinician wellbeing","Ambulance station architecture","Quality of care"], answer:[0,1,2,4],
+ explanation:"Clinical leadership is consistently linked to patient safety, quality of care, team culture and clinician wellbeing; it has no established link to physical station design."},
+
+{id:9, section:"Clinical Leadership Foundations", type:"mcq",
+ prompt:"Two clinicians disagree about where clinical leadership should sit within a team: one argues it should always rest with the most senior officer present, the other argues it should shift fluidly to whoever has the relevant expertise in the moment. Which statement best reflects a balanced appraisal of these positions?",
+ options:[
+   "The senior-officer view is correct in all circumstances because it removes ambiguity",
+   "The fluid-expertise view is correct in all circumstances because hierarchy is never useful",
+   "Both positions have strengths and limits — clear seniority can aid decisiveness in time-critical events, while fluid, expertise-based leadership can better use specialist knowledge, but each can also create risk if applied rigidly",
+   "Neither position has any support in the literature"
+ ], answer:2,
+ explanation:"The learning outcome asks students to weigh strengths and limitations rather than pick a single correct model — clear command can aid speed and clarity, while distributed, expertise-based leadership can better draw on specialist skill, and over-relying on either has drawbacks."},
+
+{id:10, section:"Clinical Leadership Foundations", type:"mcq",
+ scenario:"On a cardiac arrest job, the most senior paramedic present has less recent resuscitation experience than a junior colleague who has just completed additional resuscitation training.",
+ prompt:"According to a strengths-and-limitations view of where leadership should sit, what is the most defensible approach?",
+ options:[
+   "The senior paramedic must retain all leadership regardless of currency of skill, because rank should never be questioned",
+   "Leadership of the technical resuscitation task could reasonably be shared or shifted toward the more current, skilled clinician, while overall scene accountability may still sit with the senior officer",
+   "The junior colleague should take over the entire job including all scene and family communication",
+   "Leadership is irrelevant during cardiac arrest because protocols dictate every action"
+ ], answer:1,
+ explanation:"A balanced view recognises leadership can be distributed by task and expertise, such as technical resuscitation leadership, while broader accountability may still track with seniority — an either/or framing misses this nuance."},
+
+{id:11, section:"Clinical Leadership Foundations", type:"mcq",
+ prompt:"A final-year paramedicine student is asked to identify where, in their current scope of practice, they could demonstrate clinical leadership right now, before graduation. Which of the following is the most appropriate example?",
+ options:[
+   "Waiting until they are employed as a paramedic before showing any leadership behaviour",
+   "Speaking up respectfully when they notice a possible safety issue on placement, or supporting a peer's learning during a tutoring session",
+   "Assuming command of a multi-casualty incident unsupervised",
+   "Refusing to take instruction from qualified paramedics until they graduate"
+ ], answer:1,
+ explanation:"Emergent clinical leadership is available at every stage of training — small, appropriate actions such as raising safety concerns or supporting peers' learning are legitimate ways for a student to demonstrate it now, well short of taking unsupervised command."},
+
+{id:12, section:"Clinical Leadership Foundations", type:"tf",
+ prompt:"True or false: reflecting on your own developing leadership is considered a core part of building clinical leadership capability, rather than a separate, unrelated skill.",
+ options:["True","False"], answer:0,
+ explanation:"Reflective practice on one's own leadership — recognising strengths, gaps and opportunities from placement or practice — is treated in the literature as integral to developing as a clinical leader, not an optional add-on."},
+
+{id:13, section:"Leadership Styles", type:"match",
+ prompt:"Match each leadership style to its associated foundational theorist.",
+ pairs:[
+   {left:"Transformational leadership", right:"James MacGregor Burns (later extended by Bernard Bass)"},
+   {left:"Servant leadership", right:"Robert Greenleaf"},
+   {left:"Congruent leadership", right:"David Stanley"},
+   {left:"Autocratic, democratic and laissez-faire leadership", right:"Kurt Lewin"}
+ ],
+ explanation:"These pairings reflect commonly cited origins in the leadership literature: Burns introduced transformational leadership, later extended by Bass; Greenleaf coined servant leadership; Stanley developed the congruent leadership model in nursing; and Lewin's classic 1939 studies identified the autocratic, democratic and laissez-faire styles."},
+
+{id:14, section:"Leadership Styles", type:"mcq",
+ prompt:"Which leadership style is defined primarily by leaders influencing followers through an exchange of rewards, recognition or correction based on performance against clear expectations?",
+ options:["Servant leadership","Transactional leadership","Authentic leadership","Congruent leadership"], answer:1,
+ explanation:"Transactional leadership operates on a system of exchange — contingent reward and management by exception — rather than on inspiring shared vision or values congruence."},
+
+{id:15, section:"Leadership Styles", type:"mcq",
+ prompt:"Which of the following best describes congruent leadership?",
+ options:[
+   "A leader who prioritises the needs of followers above their own",
+   "A leader whose personal values are visibly aligned with their actions and clinical practice, giving them credibility with the team",
+   "A leader who avoids making decisions and lets the team self-direct entirely",
+   "A leader who relies solely on formal rewards to motivate staff"
+ ], answer:1,
+ explanation:"Congruent leadership, as described by Stanley, centres on the alignment, or congruence, between what a leader believes and how they actually behave in clinical practice, which builds trust and credibility."},
+
+{id:16, section:"Leadership Styles", type:"multi",
+ prompt:"Which of the following styles are grouped as people-centred approaches in the clinical leadership literature? (Select all that apply)",
+ options:["Transformational","Servant","Authentic","Transactional","Congruent"], answer:[0,1,2],
+ explanation:"Transformational, servant and authentic leadership are grouped as people-centred approaches, focused on relationships, growth and inspiration, in contrast to the exchange- and values-based approaches of transactional and congruent leadership."},
+
+{id:17, section:"Leadership Styles", type:"mcq",
+ prompt:"Which pairing correctly reflects the exchange- and values-based grouping of leadership styles, as distinguished from the people-centred group?",
+ options:["Transformational and servant","Authentic and congruent","Transactional and congruent","Autocratic and democratic"], answer:2,
+ explanation:"The literature contrasts people-centred approaches (transformational, servant, authentic) with exchange- and values-based approaches, made up of transactional and congruent leadership."},
+
+{id:18, section:"Leadership Styles", type:"tf",
+ prompt:"True or false: transformational leadership has consistently shown the weakest evidence base of any leadership style for improving clinician job satisfaction.",
+ options:["True","False"], answer:1,
+ explanation:"Transformational leadership is repeatedly associated in the literature with strong, often the strongest, links to positive outcomes such as job satisfaction and team culture, rather than the weakest evidence base."},
+
+{id:19, section:"Leadership Styles", type:"mcq",
+ prompt:"A leader who is highly focused on continually inspiring and energising their team toward an ambitious shared vision, but who provides little structured support, is most at risk of which limitation associated with transformational leadership?",
+ options:[
+   "Excessive rigidity and inability to adapt",
+   "Leader burnout from the high emotional energy the style demands",
+   "Complete absence of team direction",
+   "Reduced patient safety due to excessive rule-following"
+ ], answer:1,
+ explanation:"A recognised limitation of transformational leadership is the high emotional investment it demands of the leader, which can lead to burnout if not balanced with adequate support."},
+
+{id:20, section:"Leadership Styles", type:"mcq",
+ scenario:"A time-critical traumatic cardiac arrest is in progress and rapid, unambiguous direction is required to coordinate simultaneous interventions.",
+ prompt:"Which leadership style is generally best suited to this specific moment?",
+ options:["Laissez-faire","Autocratic (directive)","Servant","Congruent"], answer:1,
+ explanation:"In time-critical, high-acuity events, an autocratic or directive style — clear, rapid, unilateral decision-making — is generally best suited to coordinating simultaneous actions, even though it would be less appropriate for slower-paced, complex care."},
+
+{id:21, section:"Leadership Styles", type:"mcq",
+ scenario:"A paramedic is managing a complex, low-acuity welfare case involving a patient with several social and health needs, where there is time to explore options collaboratively with the patient, family and other services.",
+ prompt:"Which style is generally best suited here?",
+ options:[
+   "Autocratic",
+   "A more people-centred, collaborative style such as servant or transformational leadership",
+   "Laissez-faire, with no clinician input",
+   "Congruent leadership is never appropriate in low-acuity cases"
+ ], answer:1,
+ explanation:"In complex, non-time-critical cases, collaborative, people-centred styles that draw in multiple perspectives are generally better suited than a directive approach reserved for time-critical emergencies."},
+
+{id:22, section:"Leadership Styles", type:"multi",
+ prompt:"Which of the following are recognised limitations of servant leadership? (Select all that apply)",
+ options:[
+   "The leader may neglect their own wellbeing while prioritising the team",
+   "It can be slower to apply in time-critical emergencies requiring immediate direction",
+   "It has no supporting evidence in healthcare literature",
+   "It can be perceived as a lack of authority in some organisational cultures"
+ ], answer:[0,1,3],
+ explanation:"Servant leadership's strengths, such as trust and psychological safety, come with trade-offs: risk of the leader neglecting their own needs, being too slow for emergencies, and sometimes being misread as weak authority; it does have supporting evidence in healthcare."},
+
+{id:23, section:"Leadership Styles", type:"tf",
+ prompt:"True or false: autocratic leadership used continuously, even outside time-critical situations, has been linked to poorer team culture and reduced job satisfaction over time.",
+ options:["True","False"], answer:0,
+ explanation:"While useful in short bursts during emergencies, a continuously autocratic style outside those situations is linked to poorer team culture, reduced input from staff, and lower job satisfaction."},
+
+{id:24, section:"Leadership Styles", type:"mcq",
+ prompt:"Which leadership style involves a leader providing minimal direction and largely allowing the team to make their own decisions?",
+ options:["Transactional","Laissez-faire","Authentic","Congruent"], answer:1,
+ explanation:"Laissez-faire leadership is characterised by a hands-off approach, offering little direction — appropriate with highly autonomous, expert teams but risky where guidance or accountability is needed."},
+
+{id:25, section:"Leadership Styles", type:"mcq",
+ prompt:"As paramedics move into extended and more autonomous scopes of practice, such as an extended care paramedic role, which shift in leadership style demand is most likely?",
+ options:[
+   "A reduced need for any leadership style, since autonomy removes the need to influence others",
+   "An increased need to draw on people-centred and values-based styles to lead across multidisciplinary teams and community contexts, alongside directive skills for emergencies",
+   "A permanent shift to laissez-faire leadership in all situations",
+   "Leadership demands remain identical regardless of scope of practice"
+ ], answer:1,
+ explanation:"Extended scope roles require paramedics to work across broader, often multidisciplinary and community contexts, increasing the need for people-centred and values-based leadership alongside the directive skills still needed in emergencies."},
+
+{id:26, section:"Leadership Styles", type:"mcq",
+ scenario:"A paramedic reflects that they currently default to a highly directive style in almost every situation, including low-acuity, collaborative cases where it is not well suited, and they want to become more adaptable.",
+ prompt:"Which concrete step would best help them move toward their intended leadership style?",
+ options:[
+   "Avoid all future non-emergency taskings",
+   "Deliberately practise collaborative, people-centred approaches, such as involving the patient and team more in decision-making, in lower-stakes, non-time-critical cases, and reflect on the outcome",
+   "Ask to only be assigned high-acuity emergency cases from now on",
+   "Leadership style cannot be changed once established"
+ ], answer:1,
+ explanation:"A concrete, reflective development step involves deliberately practising an underused style in appropriate, lower-stakes situations and reflecting on what happens — consistent with developing a more adaptable leadership repertoire."},
+
+{id:27, section:"Leadership Styles", type:"tf",
+ prompt:"True or false: a clinician can draw on more than one leadership style depending on the situation, rather than being limited to a single fixed style.",
+ options:["True","False"], answer:0,
+ explanation:"The application of leadership styles is situational — clinicians are encouraged to judge which approach best fits a given context rather than rely on one style universally."},
+
+{id:28, section:"Leadership Styles", type:"mcq",
+ prompt:"Authentic leadership is most closely associated with which of the following defining features?",
+ options:[
+   "Reward and punishment based on performance metrics",
+   "Self-awareness, transparency and consistency between the leader's stated values and behaviour",
+   "Complete avoidance of team involvement in decisions",
+   "Strict adherence to organisational hierarchy above all else"
+ ], answer:1,
+ explanation:"Authentic leadership centres on self-awareness, transparency, and genuine, values-consistent behaviour, building trust through openness rather than exchange or hierarchy."},
+
+{id:29, section:"Organisational Behaviour & Culture", type:"mcq",
+ prompt:"Organisational behaviour, as a field, is best defined as the study of:",
+ options:[
+   "Financial performance of healthcare organisations only",
+   "How individuals, groups and structures within an organisation affect and are affected by behaviour, with the aim of improving organisational effectiveness",
+   "The physical layout of ambulance stations",
+   "Government legislation governing paramedic registration"
+ ], answer:1,
+ explanation:"Organisational behaviour examines the interaction between individuals, groups and organisational structures, and how this shapes behaviour and effectiveness — not finance, architecture, or legislation specifically."},
+
+{id:30, section:"Organisational Behaviour & Culture", type:"mcq",
+ scenario:"A paramedic notices that on one shift, staff are quick to report near-misses and openly discuss mistakes, while on another roster, staff hide errors for fear of blame.",
+ prompt:"This difference is best explained by which organisational behaviour concept?",
+ options:[
+   "Individual personality differences alone",
+   "Organisational or team culture, which shapes norms around openness, psychological safety and reporting behaviour",
+   "Random variation with no underlying cause",
+   "Differences in ambulance vehicle equipment"
+ ], answer:1,
+ explanation:"This is a classic illustration of how organisational or team culture — shared norms, values and psychological safety — shapes employee behaviour, in this case whether staff feel safe disclosing errors."},
+
+{id:31, section:"Organisational Behaviour & Culture", type:"multi",
+ prompt:"Which of the following are recognised strategies for effective team leadership and management in a clinical setting? (Select all that apply)",
+ options:[
+   "Setting clear expectations and roles",
+   "Providing regular, constructive feedback",
+   "Withholding information to maintain authority",
+   "Actively involving the team in problem-solving where appropriate",
+   "Ignoring interpersonal conflict in the hope it resolves itself"
+ ], answer:[0,1,3],
+ explanation:"Clear expectations, regular constructive feedback and appropriate team involvement in problem-solving are recognised effective strategies; withholding information and ignoring conflict undermine trust and team functioning."},
+
+{id:32, section:"Organisational Behaviour & Culture", type:"tf",
+ prompt:"True or false: a strong organisational culture only affects how staff feel at work, with no measurable effect on patient care or performance.",
+ options:["True","False"], answer:1,
+ explanation:"Organisational culture has documented links to staff performance and patient care quality — for example, a culture of psychological safety supports error reporting and improvement, directly affecting care."},
+
+{id:33, section:"Organisational Behaviour & Culture", type:"mcq",
+ prompt:"When managing workplace change, such as the rollout of a new clinical protocol, which approach is most consistent with effective change management principles?",
+ options:[
+   "Implementing the change abruptly with no explanation, to avoid dissent",
+   "Communicating the reasons for change clearly, involving staff where possible, and providing support during the transition",
+   "Delaying communication until after the change has already occurred",
+   "Assuming staff will adapt without any support or communication"
+ ], answer:1,
+ explanation:"Effective change management relies on clear communication of rationale, meaningful staff involvement, and support through the transition — reducing resistance and improving uptake."},
+
+{id:34, section:"Organisational Behaviour & Culture", type:"mcq",
+ scenario:"Two crew members disagree strongly about how to manage a patient, and the disagreement is starting to affect communication on scene.",
+ prompt:"Which conflict resolution approach best reflects good practice in this moment?",
+ options:[
+   "One clinician should raise their voice over the other until they back down",
+   "Pause briefly if safe to do so, acknowledge the disagreement, refocus on the shared goal of patient care, and resolve or escalate the clinical question calmly",
+   "Ignore the disagreement completely and continue working separately",
+   "Wait until after the job to raise it, even if patient care is currently affected"
+ ], answer:1,
+ explanation:"Constructive conflict resolution in the moment involves briefly acknowledging the disagreement, refocusing on the shared goal of patient care, and resolving or appropriately escalating the clinical disagreement — rather than escalation, avoidance, or complete deferral."},
+
+{id:35, section:"Organisational Behaviour & Culture", type:"mcq",
+ prompt:"Emotional quotient, or emotional intelligence, most commonly refers to a person's capacity to:",
+ options:[
+   "Score highly on cognitive intelligence (IQ) tests",
+   "Recognise, understand and manage their own emotions, and recognise and influence the emotions of others",
+   "Avoid ever expressing emotion in the workplace",
+   "Memorise clinical protocols quickly"
+ ], answer:1,
+ explanation:"Emotional intelligence, or EQ, refers to the capacity to perceive, understand and regulate one's own emotions, and to recognise and appropriately respond to the emotions of others — distinct from cognitive intelligence."},
+
+{id:36, section:"Organisational Behaviour & Culture", type:"multi",
+ prompt:"Which of the following are commonly cited components of emotional intelligence in the workplace? (Select all that apply)",
+ options:["Self-awareness","Self-regulation","Empathy","Social skill","Rigid rule-following"], answer:[0,1,2,3],
+ explanation:"Self-awareness, self-regulation, empathy and social skill, along with motivation, are widely cited components of emotional intelligence; rigid rule-following is not a component of EQ."},
+
+{id:37, section:"Organisational Behaviour & Culture", type:"tf",
+ prompt:"True or false: a leader with high emotional intelligence is likely to have a more positive influence on team culture and behaviour than a leader who is unaware of or dismissive of others' emotional states.",
+ options:["True","False"], answer:0,
+ explanation:"Higher EQ in leaders is associated with more positive team culture, communication and behaviour, since these leaders are better able to read and respond constructively to team dynamics."},
+
+{id:38, section:"Organisational Behaviour & Culture", type:"mcq",
+ prompt:"A paramedic who feels their efforts go unrecognised despite good performance may become disengaged. Which organisational behaviour concept best explains this?",
+ options:[
+   "The relationship between perceived fairness or recognition and motivation, an equity-based view of motivation",
+   "Classical conditioning",
+   "The bystander effect",
+   "Cognitive dissonance about clinical protocols"
+ ], answer:0,
+ explanation:"This scenario reflects an equity-based view of motivation, where perceived fairness in recognition relative to effort strongly influences engagement and motivation at work."},
+
+{id:39, section:"Organisational Behaviour & Culture", type:"mcq",
+ scenario:"A station is undergoing a significant restructure, and morale is dropping as rumours spread ahead of any official communication.",
+ prompt:"From an organisational behaviour perspective, what is the most effective leadership response?",
+ options:[
+   "Say nothing until the restructure is finalised, regardless of staff distress",
+   "Communicate openly and as early as reasonably possible with the facts that are known, acknowledge uncertainty honestly, and create channels for staff questions",
+   "Deny that any restructure is occurring",
+   "Blame individual staff members for spreading rumours"
+ ], answer:1,
+ explanation:"Managing organisational change effectively relies on timely, honest communication and creating space for staff questions — this reduces uncertainty-driven anxiety and rumour, compared with silence, denial or blame."},
+
+{id:40, section:"Clinical Supervision", type:"mcq",
+ prompt:"Clinical supervision, as a formal practice, originally developed most strongly within which professional tradition before being adopted more broadly across health professions?",
+ options:["Engineering","Psychotherapy and counselling, including psychoanalytic practice","Aviation","Law"], answer:1,
+ explanation:"Clinical supervision has its roots in psychotherapy and psychoanalytic traditions, later being adapted and adopted across nursing, midwifery, paramedicine and other health professions."},
+
+{id:41, section:"Clinical Supervision", type:"tf",
+ prompt:"True or false: clinical supervision is fundamentally a reflective practice, intended to support practitioners in examining their own professional experience rather than simply checking technical competence.",
+ options:["True","False"], answer:0,
+ explanation:"Clinical supervision is centred on reflection — supporting practitioners to examine and learn from their own practice and experience — rather than functioning purely as a technical competency check."},
+
+{id:42, section:"Clinical Supervision", type:"mcq",
+ prompt:"The Role Development Model of clinical supervision, developed by Michael Consedine, draws its underlying framework primarily from which fields?",
+ options:["Behaviourist psychology and operant conditioning","Psychodrama and sociometry","Financial management theory","Biomechanics"], answer:1,
+ explanation:"Consedine developed the Role Development Model from the tenets of psychodrama and sociometry, producing a reflective, restorative and enabling approach to clinical supervision."},
+
+{id:43, section:"Clinical Supervision", type:"mcq",
+ prompt:"In the Role Development Model of clinical supervision, the supervisor's role is best described as:",
+ options:[
+   "An expert in the supervisee's clinical field who solves the supervisee's problems for them",
+   "A facilitator who explores the supervisee's question with them, without needing expertise in their specific clinical field",
+   "An assessor whose main job is to grade the supervisee's performance",
+   "A manager who directs the supervisee's caseload"
+ ], answer:1,
+ explanation:"A key feature of the Role Development Model is that the supervisor does not need to be an expert in the supervisee's field — their role is to facilitate the supervisee exploring their own question, rather than solving it for them."},
+
+{id:44, section:"Clinical Supervision", type:"multi",
+ prompt:"Which of the following are recognised benefits of direct clinical supervision, where the supervisor observes practice in real time? (Select all that apply)",
+ options:[
+   "Immediate feedback on performance",
+   "The ability to intervene quickly if patient safety is at risk",
+   "Complete elimination of the need for reflection",
+   "Reduced practical logistics compared with indirect supervision"
+ ], answer:[0,1],
+ explanation:"Direct supervision allows immediate feedback and rapid intervention if needed; it does not eliminate the need for reflection, and it is generally more resource- and logistics-intensive than indirect supervision, not less."},
+
+{id:45, section:"Clinical Supervision", type:"multi",
+ prompt:"Which of the following are recognised limitations of indirect clinical supervision, such as case discussion after the event rather than real-time observation? (Select all that apply)",
+ options:[
+   "The supervisor cannot directly observe or correct in-the-moment performance",
+   "It relies on the supervisee's own account of events, which may be incomplete",
+   "It is always more expensive to run than direct supervision",
+   "It can still support valuable reflection and professional growth"
+ ], answer:[0,1,3],
+ explanation:"Indirect supervision cannot capture real-time performance and relies on self-report, but it remains valuable for reflection and development; it is not inherently more expensive than direct supervision — generally the reverse, due to lower logistical demands."},
+
+{id:46, section:"Clinical Supervision", type:"mcq",
+ scenario:"A paramedicine team consistently uses regular, structured clinical supervision sessions, and over time the team reports improved confidence in raising concerns and taking initiative in ambiguous situations.",
+ prompt:"This outcome best illustrates which link identified in the unit's learning outcomes?",
+ options:[
+   "Clinical supervision has no connection to leadership development",
+   "Clinical supervision can be used to build effective clinical leadership capability within a team",
+   "Clinical supervision only affects documentation quality",
+   "Clinical supervision replaces the need for any leadership at all"
+ ], answer:1,
+ explanation:"This scenario demonstrates how structured clinical supervision can be deliberately used to build confidence, initiative and voice — core components of effective clinical leadership — within a team."},
+
+{id:47, section:"Clinical Supervision", type:"match",
+ prompt:"Match each of Proctor's three functions of clinical supervision to its description.",
+ pairs:[
+   {left:"Formative function", right:"Developing skills and professional learning through supervision"},
+   {left:"Restorative function", right:"Providing emotional support and helping process the impact of clinical work"},
+   {left:"Normative function", right:"Maintaining professional standards and quality of practice"}
+ ],
+ explanation:"Proctor's widely referenced model describes three functions of clinical supervision: formative, focused on learning and skill development; restorative, focused on emotional support; and normative, focused on maintaining standards and quality."},
+
+{id:48, section:"Health Promotion & Health Education", type:"mcq",
+ prompt:"According to the WHO Ottawa Charter framework commonly used to define health promotion, health promotion is best described as:",
+ options:[
+   "The direct treatment of disease in a clinical setting",
+   "The process of enabling people to increase control over, and to improve, their health",
+   "A synonym for health education with no meaningful distinction",
+   "A purely government policy function with no role for individual clinicians"
+ ], answer:1,
+ explanation:"The Ottawa Charter defines health promotion broadly as enabling people to increase control over and improve their health — a broader concept than direct treatment or education alone."},
+
+{id:49, section:"Health Promotion & Health Education", type:"mcq",
+ prompt:"Health education is best understood, in relation to health promotion, as:",
+ options:[
+   "A completely separate, unrelated field",
+   "One method or tool within the broader process of health promotion, focused on building knowledge, skills and health literacy",
+   "The only legitimate form of health promotion",
+   "Something only doctors are qualified to deliver"
+ ], answer:1,
+ explanation:"Health education is a specific method within the broader, multi-strategy process of health promotion, which also includes policy, environment and community action, focused on building knowledge and skills."},
+
+{id:50, section:"Health Promotion & Health Education", type:"multi",
+ prompt:"Which of the following are recognised action areas of health promotion, beyond health education alone? (Select all that apply)",
+ options:[
+   "Building healthy public policy",
+   "Creating supportive environments",
+   "Strengthening community action",
+   "Reorienting health services",
+   "Prescribing medication for every presenting complaint"
+ ], answer:[0,1,2,3],
+ explanation:"The Ottawa Charter identifies building healthy public policy, creating supportive environments, strengthening community action, developing personal skills, and reorienting health services as action areas of health promotion — prescribing medication is a clinical treatment activity, not a health promotion action area."},
+
+{id:51, section:"Health Promotion & Health Education", type:"mcq",
+ prompt:"Improving a patient's health literacy — their ability to find, understand and use health information — has been most strongly linked in the literature to:",
+ options:[
+   "Worse health outcomes, because patients become anxious",
+   "Improved health outcomes, through better self-management and more informed decision-making",
+   "No measurable difference in health outcomes",
+   "Increased healthcare costs with no offsetting benefit"
+ ], answer:1,
+ explanation:"Higher health literacy is associated with improved health outcomes, as people are better able to understand, act on and self-manage health information and decisions."},
+
+{id:52, section:"Health Promotion & Health Education", type:"mcq",
+ scenario:"A paramedic attends an elderly patient for a fall and, after treating the immediate injury, takes a few minutes to explain simple, practical steps the patient could take to reduce fall risk at home.",
+ prompt:"This action is best described as an example of:",
+ options:[
+   "Overstepping the paramedic's clinical scope",
+   "Paramedic-delivered health education, contributing to the broader goal of health promotion",
+   "A purely administrative task",
+   "Clinical negligence, since paramedics should only treat the presenting injury"
+ ], answer:1,
+ explanation:"Brief, opportunistic education delivered by a paramedic at the point of care is a recognised example of the profession's expanding role in health education, which contributes to broader community health promotion outcomes."},
+
+{id:53, section:"Health Promotion & Health Education", type:"tf",
+ prompt:"True or false: paramedics have no meaningful role in health education, because their scope of practice is limited strictly to acute emergency treatment.",
+ options:["True","False"], answer:1,
+ explanation:"The literature recognises an expanding role for paramedics in health education — for example, opportunistic advice, injury prevention, and community health initiatives — beyond acute treatment alone."},
+
+{id:54, section:"Health Promotion & Health Education", type:"mcq",
+ prompt:"Which statement best captures how health promotion and health education intersect?",
+ options:[
+   "They are entirely unrelated activities carried out by different professions",
+   "Health education can be one of the practical tools used within the broader, multi-level strategy of health promotion",
+   "Health promotion is a subset of health education",
+   "Only health promotion, and never health education, can improve health literacy"
+ ], answer:1,
+ explanation:"Health education operates as one tool within health promotion's broader strategy; health promotion also uses policy, environmental and community-level strategies beyond education alone."},
+
+{id:55, section:"Health Promotion & Health Education", type:"tf",
+ prompt:"True or false: health literacy and health education are identical concepts with no meaningful distinction.",
+ options:["True","False"], answer:1,
+ explanation:"Health education is the process or activity of teaching, while health literacy is an individual's resulting capacity to find, understand and use health information — related but distinct concepts."},
+
+{id:56, section:"Community Engagement & Participatory Research", type:"mcq",
+ prompt:"Participatory action research (PAR) is best distinguished from traditional research approaches by:",
+ options:[
+   "Researchers making all decisions independently of the community being studied",
+   "Active collaboration with community members as co-participants throughout the research process, rather than as passive subjects",
+   "A sole focus on quantitative statistical analysis",
+   "Exclusion of community members from any part of the research process"
+ ], answer:1,
+ explanation:"PAR is defined by genuine collaboration with community members as active participants, not just subjects, throughout the research cycle — a key difference from more traditional, researcher-led approaches."},
+
+{id:57, section:"Community Engagement & Participatory Research", type:"mcq",
+ prompt:"Community-based risk assessment is particularly valuable in paramedicine because it:",
+ options:[
+   "Removes the need for any clinical assessment of individual patients",
+   "Draws on local community knowledge to identify risks and needs that may not be visible through clinical data alone",
+   "Is always faster and cheaper than any other method",
+   "Only applies to overseas health systems, not local Australian ambulance services"
+ ], answer:1,
+ explanation:"Community-based risk assessment draws on local, lived knowledge to surface risks and priorities that might be missed by clinical data or outside assessment alone — it is relevant locally, not only overseas."},
+
+{id:58, section:"Community Engagement & Participatory Research", type:"multi",
+ prompt:"Which of the following are participatory methods used in participatory action research and community-based risk assessment, as named in the unit outcomes? (Select all that apply)",
+ options:["Focus groups","Transect walks","Randomised controlled trials","Village mapping","Photovoice"], answer:[0,1,3,4],
+ explanation:"Interviews, focus groups, participant observation, transect walks, village mapping and photovoice are named participatory methods; randomised controlled trials are a quantitative experimental design, not a participatory community engagement method."},
+
+{id:59, section:"Community Engagement & Participatory Research", type:"mcq",
+ prompt:"A transect walk, as a participatory method, involves:",
+ options:[
+   "Reviewing a community's financial records",
+   "Walking systematically through a community with local participants to observe and discuss conditions, resources and risks along the route",
+   "A purely desk-based statistical analysis",
+   "An anonymous online survey"
+ ], answer:1,
+ explanation:"A transect walk is a participatory field method where researchers and community members walk together through an area, observing and discussing what they see — generating rich, situated local knowledge."},
+
+{id:60, section:"Community Engagement & Participatory Research", type:"mcq",
+ prompt:"Photovoice, as a participatory research method, primarily involves:",
+ options:[
+   "Participants taking and discussing photographs to represent and communicate their own experiences and concerns",
+   "Researchers photographing participants without their knowledge",
+   "Statistical modelling of photographic data",
+   "A purely clinical imaging technique"
+ ], answer:0,
+ explanation:"Photovoice is a participatory method in which community members take photographs representing their own experiences or concerns, then discuss and interpret them, giving them a direct voice in the research process."},
+
+{id:61, section:"Community Engagement & Participatory Research", type:"mcq",
+ prompt:"Village mapping, as a participatory method, is most useful for:",
+ options:[
+   "Diagnosing individual patients",
+   "Visually representing community-identified resources, hazards and features from the perspective of local residents",
+   "Calculating national health statistics",
+   "Replacing the need for any community consultation"
+ ], answer:1,
+ explanation:"Village mapping involves community members visually mapping their own environment, resources and hazards — capturing local perspectives rather than external statistical or clinical data."},
+
+{id:62, section:"Community Engagement & Participatory Research", type:"tf",
+ prompt:"True or false: participant observation, as a participatory method, involves the researcher immersing themselves in the community setting to observe and understand everyday life and context first-hand.",
+ options:["True","False"], answer:0,
+ explanation:"Participant observation involves the researcher spending time within the community or setting, observing and often participating in everyday activities to build contextual understanding."},
+
+{id:63, section:"Community Engagement & Participatory Research", type:"mcq",
+ prompt:"What is a key value of participatory methods, such as interviews, focus groups and photovoice, for paramedicine research and community engagement?",
+ options:[
+   "They eliminate the need for any ethical approval",
+   "They centre community voice and lived experience, which can surface locally relevant risks and priorities that top-down approaches might miss",
+   "They are only useful for data with no real-world application",
+   "They guarantee statistically representative samples every time"
+ ], answer:1,
+ explanation:"The core value of participatory methods lies in centring community voice and lived experience, helping identify locally relevant risks, needs and priorities that purely top-down or clinical-data-driven approaches might overlook."},
+
+{id:64, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"A major incident is generally defined as an event that:",
+ options:[
+   "Can be managed entirely using an ambulance service's normal day-to-day resources and procedures",
+   "Overwhelms or threatens to overwhelm normal resources and requires special arrangements to be implemented by one or more emergency services",
+   "Only ever involves a single patient",
+   "Excludes any event involving multiple emergency services"
+ ], answer:1,
+ explanation:"A major incident is defined by its demand exceeding normal operational capacity, requiring special multi-agency arrangements — not by patient count alone or single-service involvement."},
+
+{id:65, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"A mass casualty incident specifically refers to an event where:",
+ options:[
+   "The number and severity of casualties overwhelms the immediately available medical resources, requiring prioritisation of care",
+   "There are exactly two patients",
+   "No emergency services are required",
+   "Only hospitals, and not ambulance services, are involved"
+ ], answer:0,
+ explanation:"A mass casualty incident is defined by casualty numbers and severity outstripping available medical resources, necessitating triage and prioritisation of care rather than normal one-to-one treatment."},
+
+{id:66, section:"Major Incident & Mass Casualty Management", type:"tf",
+ prompt:"True or false: the terms major incident and disaster are always perfectly interchangeable, with identical scope and meaning, in emergency management literature.",
+ options:["True","False"], answer:1,
+ explanation:"While related and overlapping, these terms are often distinguished by scale and impact — a disaster typically implies broader community, infrastructure or societal disruption beyond what a major incident designation alone captures."},
+
+{id:67, section:"Major Incident & Mass Casualty Management", type:"multi",
+ prompt:"Which of the following are typical ambulance service roles or responsibilities in a mass casualty incident? (Select all that apply)",
+ options:[
+   "Triage of casualties",
+   "Coordinating patient distribution to appropriate hospitals",
+   "Sole responsibility for scene security",
+   "Providing a health or medical commander to liaise with other agencies",
+   "On-scene clinical treatment and stabilisation"
+ ], answer:[0,1,3,4],
+ explanation:"Ambulance services are responsible for triage, treatment, coordinating hospital distribution, and providing medical command and liaison; scene security is a police responsibility, not solely the ambulance service's."},
+
+{id:68, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"Which mnemonic is commonly used for the initial situation report from the first crew arriving at a major incident, covering exact location, type of incident, hazards, access, number of casualties, and emergency services present or required?",
+ options:["SAMPLE","METHANE","DRSABCD","AVPU"], answer:1,
+ explanation:"METHANE — major incident declared, exact location, type of incident, hazards, access, number of casualties, emergency services present or required — is the standard mnemonic for an initial major incident situation report."},
+
+{id:69, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"Effective communication during mass casualty incident management is best supported by which of the following principles?",
+ options:[
+   "Multiple agencies using their own unstructured, informal communication styles",
+   "A shared, structured framework and common terminology across agencies, such as standardised situation reports, to reduce ambiguity",
+   "Minimising all communication until the incident is fully resolved",
+   "Restricting information sharing between emergency services to protect operational security"
+ ], answer:1,
+ explanation:"Effective multi-agency communication in a mass casualty incident depends on shared, structured frameworks and common terminology, reducing the ambiguity and delay that come from inconsistent, informal, or restricted communication."},
+
+{id:70, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"Which structured framework, using command roles such as command, safety, communication, assessment, triage, treatment and transport, is commonly taught for major incident medical management?",
+ options:["CSCATTT","SOAP","SBAR","GCS"], answer:0,
+ explanation:"CSCATTT — command, safety, communication, assessment, triage, treatment, transport — is a widely taught structured framework for organising the medical response to a major incident."},
+
+{id:71, section:"Major Incident & Mass Casualty Management", type:"multi",
+ prompt:"Which of the following are recognised risks that require mitigation in mass casualty incident response? (Select all that apply)",
+ options:[
+   "Responder safety hazards at the scene",
+   "Secondary devices or ongoing hazards",
+   "Communication failure between agencies",
+   "Resource and equipment shortfalls",
+   "None — mass casualty incidents carry no additional risk beyond normal jobs"
+ ], answer:[0,1,2,3],
+ explanation:"Responder safety, secondary hazards, communication breakdowns, and resource shortfalls are all recognised risks requiring specific mitigation strategies in mass casualty response; such incidents carry substantially elevated, not equivalent, risk compared with routine jobs."},
+
+{id:72, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"In primary triage at a mass casualty scene, often known as triage sieve, casualties are typically assessed rapidly using which broad approach?",
+ options:[
+   "A detailed secondary survey and full set of vital signs for every patient before moving to the next",
+   "A rapid physiological assessment, such as mobility, breathing, and circulation indicators, to quickly sort casualties into priority categories",
+   "Random allocation of priority categories",
+   "Triage based solely on the casualty's stated pain score"
+ ], answer:1,
+ explanation:"Primary triage, or sieve, is designed to be extremely rapid, using simple physiological indicators such as ability to walk, respiratory rate, and capillary refill or pulse, to quickly categorise large numbers of casualties, rather than detailed assessment of each patient."},
+
+{id:73, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"Secondary triage at a casualty clearing station, often known as triage sort, typically differs from primary triage by:",
+ options:[
+   "Being faster and less detailed than primary triage",
+   "Using a more detailed physiological scoring system, such as a Triage Revised Trauma Score, to refine priority categories",
+   "Occurring before any primary triage has taken place",
+   "Ignoring vital signs entirely"
+ ], answer:1,
+ explanation:"Secondary triage, or sort, is more detailed than the rapid primary sieve, typically applying a scoring system based on physiological parameters to refine casualty prioritisation once patients reach a casualty clearing station."},
+
+{id:74, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ scenario:"At a mass casualty incident, a casualty is walking and talking but has a rapid respiratory rate and delayed capillary refill on rapid primary assessment.",
+ prompt:"Under a standard primary triage sieve approach, this casualty would most likely be categorised as:",
+ options:[
+   "Immediate, or priority 1, needing urgent intervention",
+   "Deceased",
+   "Delayed, or priority 3, because they can walk",
+   "Not requiring any triage category"
+ ], answer:0,
+ explanation:"Even though the casualty is ambulant, an abnormal respiratory rate and delayed capillary refill indicate physiological compromise, which under a standard primary triage sieve overrides mobility alone and results in an immediate, priority 1, category."},
+
+{id:75, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"The fundamental principle guiding mass casualty incident response, balancing limited resources against casualty needs, is best described as:",
+ options:[
+   "Treating patients strictly in the order they are found",
+   "Doing the greatest good for the greatest number of casualties through structured triage and prioritisation",
+   "Treating only the least injured patients first",
+   "Withholding all treatment until every casualty has been counted"
+ ], answer:1,
+ explanation:"Mass casualty incident response is guided by the principle of achieving the greatest good for the greatest number, which triage and structured prioritisation are designed to operationalise given limited resources."},
+
+{id:76, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"In a HAZMAT or CBRN, chemical, biological, radiological or nuclear, incident, the first priority for responding paramedics, before approaching or treating casualties, is generally:",
+ options:[
+   "Immediate hands-on treatment of the nearest casualty",
+   "Identifying the hazard, maintaining safe distance, and establishing hot, warm and cold zones before any uncontrolled approach",
+   "Removing all personal protective equipment to move more quickly",
+   "Transporting casualties without any decontamination"
+ ], answer:1,
+ explanation:"HAZMAT and CBRN response prioritises scene safety first — identifying the hazard and establishing zoned control across hot, warm and cold zones — because uncontrolled approach risks responder contamination and expands the incident, before any treatment occurs."},
+
+{id:77, section:"Major Incident & Mass Casualty Management", type:"tf",
+ prompt:"True or false: in a CBRN incident, decontamination of casualties is generally required before definitive clinical treatment can safely begin, except for immediately life-threatening interventions.",
+ options:["True","False"], answer:0,
+ explanation:"Decontamination is generally required before definitive treatment to prevent ongoing contamination of casualties, responders and receiving facilities, with only immediately life-saving interventions taking priority in the contaminated zone."},
+
+{id:78, section:"Major Incident & Mass Casualty Management", type:"multi",
+ prompt:"Which of the following are core principles of safe HAZMAT or CBRN incident response? (Select all that apply)",
+ options:[
+   "Time, distance and shielding to limit exposure",
+   "Use of appropriate personal protective equipment",
+   "Establishing hot, warm and cold zones",
+   "Approaching directly into the hazard area before hazard identification",
+   "Early identification and notification of the hazard type"
+ ], answer:[0,1,2,4],
+ explanation:"Time, distance and shielding, appropriate PPE, zoned scene control, and early hazard identification and notification are all core safety principles; approaching directly into an unidentified hazard area is precisely what these principles are designed to prevent."},
+
+{id:79, section:"Major Incident & Mass Casualty Management", type:"mcq",
+ prompt:"The Australasian Inter-Service Incident Management System, AIIMS, organises incident management responsibility into which broad tiers?",
+ options:[
+   "Strategic, tactical and operational, or task, levels",
+   "Only a single, undivided command level",
+   "Purely financial and purely clinical divisions",
+   "Hospital-only and community-only divisions"
+ ], answer:0,
+ explanation:"AIIMS structures incident management across strategic, tactical and operational, or task, tiers, allowing coordinated command across multiple agencies and scales — comparable to the gold, silver and bronze tiers used in some other jurisdictions' frameworks."},
+
+{id:80, section:"Learning, Debriefing & Feedback", type:"match",
+ prompt:"Match each stage of Kolb's Experiential Learning Cycle to its correct description.",
+ pairs:[
+   {left:"Concrete Experience", right:"Actively having or engaging in an experience"},
+   {left:"Reflective Observation", right:"Reviewing and reflecting on the experience from multiple perspectives"},
+   {left:"Abstract Conceptualisation", right:"Drawing conclusions and forming general theories or concepts from the reflection"},
+   {left:"Active Experimentation", right:"Testing the new concepts or theories in practice"}
+ ],
+ explanation:"Kolb's cycle moves through four stages: concrete experience, reflective observation, abstract conceptualisation, and active experimentation, before returning to a new concrete experience."},
+
+{id:81, section:"Learning, Debriefing & Feedback", type:"mcq",
+ prompt:"Kolb's Experiential Learning Theory is particularly applicable to paramedicine because it:",
+ options:[
+   "Suggests learning happens only through formal lectures",
+   "Frames learning as a continuous cycle built on real clinical experience, reflection, conceptualisation and testing new approaches in future practice",
+   "Argues that reflection is unnecessary once a skill is learned",
+   "Applies only to classroom-based simulation, not real clinical jobs"
+ ], answer:1,
+ explanation:"Kolb's cycle fits paramedicine's experience-rich, high-stakes environment well, framing every clinical job as a potential learning opportunity that moves through experience, reflection, conceptualisation and testing new practice."},
+
+{id:82, section:"Learning, Debriefing & Feedback", type:"mcq",
+ prompt:"Which statement best captures a key difference between debriefing and feedback?",
+ options:[
+   "They are identical processes with no meaningful difference",
+   "Debriefing typically reviews a broader event or team performance retrospectively, while feedback is often more targeted to an individual's specific behaviour or performance",
+   "Feedback is always given by a supervisor to a subordinate, while debriefing never involves a supervisor",
+   "Debriefing only occurs in classroom settings"
+ ], answer:1,
+ explanation:"While related, debriefing is generally broader and event or team focused, reviewing what happened and why, whereas feedback tends to be more specific and individually targeted to particular behaviours or performance."},
+
+{id:83, section:"Learning, Debriefing & Feedback", type:"tf",
+ prompt:"True or false: debriefing and feedback share the common underlying goal of supporting learning and improvement from an experience.",
+ options:["True","False"], answer:0,
+ explanation:"Despite their differences in scope and focus, both debriefing and feedback share the overarching aim of promoting reflection, learning and improved future performance."},
+
+{id:84, section:"Learning, Debriefing & Feedback", type:"mcq",
+ prompt:"A hot debrief, conducted immediately after an event at or near the scene, is generally used to:",
+ options:[
+   "Provide a comprehensive, formal written report weeks later",
+   "Quickly address immediate safety, welfare and factual concerns while the event is fresh, in a brief and informal format",
+   "Replace the need for any later, more structured debrief",
+   "Assign formal blame for any errors made"
+ ], answer:1,
+ explanation:"A hot debrief is a brief, informal process conducted soon after an event, focused on immediate safety and welfare checks and fresh factual recall — not on formal reporting or blame, and it does not replace later structured debriefing where needed."},
+
+{id:85, section:"Learning, Debriefing & Feedback", type:"mcq",
+ prompt:"Pendleton's Rules, a well-known feedback model, are distinguished by which sequencing feature?",
+ options:[
+   "The observer criticises the learner first, before any self-assessment",
+   "The learner is invited to identify what went well first, before the observer adds further positive comments, followed by discussion of what could be improved",
+   "Only negative feedback is given, with no positive comments",
+   "Feedback is given anonymously in writing only"
+ ], answer:1,
+ explanation:"Pendleton's Rules follow a structured sequence: the learner identifies strengths first, the observer adds further positive points, then areas for improvement are discussed collaboratively — designed to build a receptive, less defensive response to feedback."},
+
+{id:86, section:"Learning, Debriefing & Feedback", type:"match",
+ prompt:"Match each debriefing or feedback concept to its defining feature.",
+ pairs:[
+   {left:"Hot debrief", right:"Brief, informal check conducted immediately after the event"},
+   {left:"Cold, or formal, debrief", right:"Structured, retrospective review conducted after the event, often away from the scene"},
+   {left:"Pendleton's Rules", right:"The learner identifies strengths first, before areas for improvement are discussed"},
+   {left:"Situation-Behaviour-Impact model", right:"Structures feedback around the situation, the observed behaviour, and its impact"}
+ ],
+ explanation:"These are commonly referenced debriefing and feedback formats: hot debrief, immediate and informal; cold or formal debrief, structured and retrospective; Pendleton's Rules, learner-led and strengths-first in sequence; and the Situation-Behaviour-Impact model, structured around situation, behaviour and impact."},
+
+{id:87, section:"Learning, Debriefing & Feedback", type:"mcq",
+ scenario:"After a challenging job, a crew gathers briefly on scene to check everyone is physically and emotionally okay and to clarify any immediate factual questions, before returning to service.",
+ prompt:"This best describes:",
+ options:["A formal, structured feedback session","A hot debrief","Pendleton's Rules","A performance appraisal"], answer:1,
+ explanation:"This brief, immediate, informal check-in focused on welfare and factual clarity, rather than structured performance feedback, is the defining feature of a hot debrief."},
+
+{id:88, section:"Followership", type:"mcq",
+ prompt:"According to Robert Kelley's model of followership, the two key dimensions used to distinguish followership styles are:",
+ options:[
+   "Age and years of experience",
+   "Independent, critical thinking versus dependent, uncritical thinking; and active versus passive engagement",
+   "Physical fitness and technical skill",
+   "Formal qualifications and pay grade"
+ ], answer:1,
+ explanation:"Kelley's model plots followership styles along two axes: independent or critical versus dependent or uncritical thinking, and active versus passive engagement in the work of the team."},
+
+{id:89, section:"Followership", type:"match",
+ prompt:"Match each of Kelley's followership styles to its defining characteristic.",
+ pairs:[
+   {left:"Sheep (passive follower)", right:"Passive and uncritical; relies entirely on the leader for thinking and direction"},
+   {left:"Yes-people (conformist follower)", right:"Actively engaged but uncritical; agrees with the leader without independent judgement"},
+   {left:"Alienated follower", right:"An independent, critical thinker who is passively or cynically disengaged from contributing"},
+   {left:"Effective, or star, follower", right:"An independent, critical thinker who is also actively and constructively engaged"}
+ ],
+ explanation:"Kelley's typology spans from passive, uncritical sheep, through actively conformist yes-people and critical-but-disengaged alienated followers, to the actively engaged, independently critical effective or exemplary follower."},
+
+{id:90, section:"Followership", type:"mcq",
+ prompt:"Which of Kelley's followership styles is generally considered most valuable to a well-functioning clinical team?",
+ options:[
+   "Sheep, passive and uncritical",
+   "Yes-people, conformist and uncritical but active",
+   "Alienated, critical but disengaged",
+   "Effective, or exemplary, followers, who are independent critical thinkers actively and constructively engaged"
+ ], answer:3,
+ explanation:"Effective or exemplary followers combine independent critical thinking with active, constructive engagement — contributing ideas and raising concerns while still supporting team goals — making them generally the most valuable followership style."},
+
+{id:91, section:"Followership", type:"tf",
+ prompt:"True or false: followership and leadership are best understood as entirely separate skill sets with no meaningful overlap or interaction.",
+ options:["True","False"], answer:1,
+ explanation:"Followership and leadership are understood as interconnected — good leaders benefit from understanding followership dynamics, and the same person moves between leading and following roles depending on context, especially in clinical teams."},
+
+{id:92, section:"Followership", type:"mcq",
+ scenario:"A junior paramedic notices a senior colleague is about to make a clinical error but says nothing because they do not want to seem disrespectful, despite having real concerns.",
+ prompt:"According to Kelley's model, this behaviour is most consistent with which followership pattern?",
+ options:[
+   "Effective, or exemplary, follower",
+   "A conformist, yes-person, or alienated pattern — voicing no concern despite having one, out of deference or disengagement",
+   "This is not a recognised followership pattern",
+   "Autocratic follower — Kelley did not include this as a followership category"
+ ], answer:1,
+ explanation:"Withholding a genuine, independent concern to avoid seeming disrespectful reflects either an alienated pattern, critical thinking without voicing it, or conformist behaviour driven by conflict avoidance — neither reflects the actively engaged, constructively critical effective-follower style."},
+
+{id:93, section:"Followership", type:"mcq",
+ prompt:"Robert Kelley's followership model is relevant to clinical healthcare leadership because it highlights that:",
+ options:[
+   "Effective teams are built entirely by strong leaders, with followers playing no active role",
+   "Team effectiveness also depends on how followers think and engage, meaning developing good followership is as important as developing good leadership",
+   "Followership is only relevant outside of healthcare settings",
+   "Junior staff should never question senior staff under any model of followership"
+ ], answer:1,
+ explanation:"Kelley's model highlights that team outcomes depend on both leadership and followership — actively engaged, critically thinking followers contribute meaningfully to safe, effective clinical teams, which is why developing followership matters alongside leadership."},
+
+{id:94, section:"Feedback Skills & Team Development", type:"mcq",
+ prompt:"Which of the following best describes effective written or verbal feedback in a clinical education context?",
+ options:[
+   "Vague, general comments delivered long after the event",
+   "Specific, timely, behaviourally-focused feedback that is constructive and actionable",
+   "Feedback focused only on the person's character rather than their behaviour",
+   "Feedback given only in writing, never verbally"
+ ], answer:1,
+ explanation:"Effective feedback is specific, timely and focused on observable behaviour rather than character, and gives the recipient something concrete and actionable to work with."},
+
+{id:95, section:"Feedback Skills & Team Development", type:"multi",
+ prompt:"Which of the following are recognised principles of effective feedback? (Select all that apply)",
+ options:[
+   "Being specific about the behaviour observed",
+   "Delivering feedback promptly, close to the event",
+   "Focusing on the person's character rather than their actions",
+   "Making the feedback actionable, with a clear path to improvement",
+   "Balancing constructive points with genuine positives where relevant"
+ ], answer:[0,1,3,4],
+ explanation:"Specificity, timeliness, actionability, and appropriately balancing constructive and positive points are recognised principles of effective feedback; focusing on character rather than actions is a recognised pitfall to avoid, not a principle to follow."},
+
+{id:96, section:"Feedback Skills & Team Development", type:"mcq",
+ scenario:"A student is asked to give peer feedback to a classmate after a simulated clinical scenario, and wants to do so supportively and professionally.",
+ prompt:"Which approach best reflects supportive, professional peer feedback?",
+ options:[
+   "Publicly listing every mistake in front of the wider group without warning",
+   "Finding a private, appropriate moment, starting with genuine strengths, being specific about areas to improve, and framing comments around behaviour and next steps",
+   "Avoiding giving any feedback at all to prevent hurting feelings",
+   "Comparing the peer unfavourably to another classmate"
+ ], answer:1,
+ explanation:"Supportive, professional peer feedback uses an appropriate setting, acknowledges genuine strengths, is specific about behaviour rather than the person, and focuses on actionable next steps, rather than public criticism, comparison, or avoidance."},
+
+{id:97, section:"Feedback Skills & Team Development", type:"tf",
+ prompt:"True or false: avoiding giving any feedback at all, to spare a peer's feelings, is considered good practice in clinical education.",
+ options:["True","False"], answer:1,
+ explanation:"Withholding feedback entirely denies the learner the opportunity to improve and is not considered good practice; the goal is to deliver feedback constructively and respectfully, not to avoid it."},
+
+{id:98, section:"Feedback Skills & Team Development", type:"mcq",
+ prompt:"The Situation-Behaviour-Impact feedback model structures feedback by:",
+ options:[
+   "Describing the situation, the specific observed behaviour, and the impact that behaviour had",
+   "Describing only the person's general attitude",
+   "Listing every possible improvement at once, regardless of priority",
+   "Avoiding any reference to a specific situation"
+ ], answer:0,
+ explanation:"The Situation-Behaviour-Impact model structures feedback around three elements: the specific situation, the observable behaviour within it, and the impact that behaviour had, keeping feedback concrete and behaviourally anchored."},
+
+{id:99, section:"Feedback Skills & Team Development", type:"mcq",
+ prompt:"What role does feedback play in clinical leadership and team development, according to the unit's framing?",
+ options:[
+   "It has no meaningful role and is a purely administrative requirement",
+   "It supports individual and team learning, helping build the reflective capacity and trust that underpin effective clinical leadership",
+   "It is only relevant to formal performance appraisals, never day-to-day practice",
+   "It replaces the need for clinical supervision entirely"
+ ], answer:1,
+ explanation:"Feedback is framed as integral to building the reflective capacity, trust and continuous improvement that underpin effective clinical leadership and team development, not as a stand-alone administrative task."},
+
+{id:100, section:"Feedback Skills & Team Development", type:"mcq",
+ scenario:"Reflecting across the unit's content — clinical leadership, followership, supervision and feedback — a paramedicine student concludes that becoming an effective clinical leader is really about one ongoing process.",
+ prompt:"Which statement best synthesises this?",
+ options:[
+   "Effective clinical leadership is a fixed trait some people are simply born with, unrelated to reflection, feedback or supervision",
+   "Effective clinical leadership develops through an ongoing cycle of experience, reflection, feedback and supervision, applied flexibly across roles, situations and relationships",
+   "Effective clinical leadership only matters once a paramedic reaches a senior, formally appointed position",
+   "Effective clinical leadership is unrelated to followership or team culture"
+ ], answer:1,
+ explanation:"Drawing the unit's threads together, clinical leadership is best understood as a developmental, reflective process, built through experience, feedback and supervision, and exercised flexibly by anyone in a team, at any stage of their career."}
+];
+
+/* ---------- engine ---------- */
+const app = document.getElementById("app");
+const headerBar = document.getElementById("headerBar");
+let state = null;
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+function renderStart(){
+  headerBar.style.display = "none";
+  app.innerHTML = `
+    <section class="start-card">
+      <h1>Paramedicine Leadership</h1>
+      <p class="lede">A 100-question revision quiz for the Paramedicine Leadership unit, built from its stated learning outcomes.</p>
+      <div class="coverage">
+        <p>Covers:</p>
+        <ul>
+          <li>Clinical leadership foundations</li>
+          <li>Leadership styles</li>
+          <li>Organisational behaviour and culture</li>
+          <li>Clinical supervision</li>
+          <li>Health promotion and health education</li>
+          <li>Participatory research and community engagement</li>
+          <li>Major incident and mass casualty management</li>
+          <li>Debriefing and feedback frameworks</li>
+          <li>Followership</li>
+          <li>Feedback skills and team development</li>
+        </ul>
+      </div>
+      <p>Answer each question, check it, and read the explanation before moving on. Your results are broken down by topic at the end so you can see where to focus your revision.</p>
+      <label class="toggle-row"><input type="checkbox" id="shuffleToggle"> Shuffle question order</label>
+      <button id="startBtn" class="btn" type="button">Start quiz</button>
+    </section>
+  `;
+  document.getElementById("startBtn").addEventListener("click", ()=>{
+    const shuffleOn = document.getElementById("shuffleToggle").checked;
+    startQuiz(shuffleOn);
+  });
+}
+
+function startQuiz(shuffleOn){
+  let order = QUESTIONS.map((_,i)=>i);
+  if(shuffleOn) order = shuffle(order);
+  state = { order, pos:0, score:0, sectionStats:{}, results:[] };
+  SECTION_ORDER.forEach(s=>{ state.sectionStats[s] = {correct:0, total:0}; });
+  headerBar.style.display = "block";
+  renderQuestion();
+}
+
+function currentQuestion(){
+  return QUESTIONS[state.order[state.pos]];
+}
+
+function updateHeader(){
+  const total = state.order.length;
+  document.getElementById("qCounter").textContent = "Question " + (state.pos+1) + " of " + total;
+  document.getElementById("scoreCounter").textContent = "Score " + state.score + "/" + state.results.length;
+  const pct = Math.round((state.pos/total)*100);
+  document.getElementById("progressFill").style.width = pct+"%";
+}
+
+function renderAnswerWidget(q){
+  if(q.type==="mcq" || q.type==="tf"){
+    return q.options.map((opt,i)=>
+      '<label class="opt-row" data-idx="'+i+'"><input type="radio" name="opt" value="'+i+'"><span>'+opt+"</span></label>"
+    ).join("");
+  }
+  if(q.type==="multi"){
+    return '<p class="hint">Select all that apply.</p>' + q.options.map((opt,i)=>
+      '<label class="opt-row" data-idx="'+i+'"><input type="checkbox" name="opt" value="'+i+'"><span>'+opt+"</span></label>"
+    ).join("");
+  }
+  if(q.type==="match"){
+    const rights = shuffle(q.pairs.map(p=>p.right));
+    return q.pairs.map((p,i)=>{
+      const optionsHtml = rights.map(r=>'<option value="'+r.replace(/"/g,"&quot;")+'">'+r+"</option>").join("");
+      return '<div class="match-row" data-idx="'+i+'"><div class="match-left">'+p.left+
+        '</div><select class="match-select"><option value="">Select a match…</option>'+optionsHtml+"</select></div>";
+    }).join("");
+  }
+  return "";
+}
+
+function renderQuestion(){
+  const q = currentQuestion();
+  updateHeader();
+  const isLast = state.pos === state.order.length-1;
+  let html = '<article class="card">';
+  html += '<div class="tag-row"><span class="tag tag-section">'+q.section+'</span><span class="tag tag-type">'+TYPE_LABEL[q.type]+"</span></div>";
+  if(q.scenario){
+    html += '<div class="case-block"><span class="case-label">Scenario</span><p>'+q.scenario+"</p></div>";
+  }
+  html += '<h2 class="prompt">'+q.prompt+"</h2>";
+  html += '<div id="answerArea">'+renderAnswerWidget(q)+"</div>";
+  html += '<div id="feedback" class="feedback" hidden></div>';
+  html += '<div class="actions">';
+  html += '<button id="checkBtn" class="btn" type="button">Check answer</button>';
+  html += '<button id="nextBtn" class="btn" type="button" hidden>'+(isLast?"See results":"Next question")+"</button>";
+  html += "</div></article>";
+  app.innerHTML = html;
+  document.getElementById("checkBtn").addEventListener("click", onCheck);
+  document.getElementById("nextBtn").addEventListener("click", onNext);
+}
+
+function readUserAnswer(q){
+  if(q.type==="mcq" || q.type==="tf"){
+    const checked = document.querySelector('#answerArea input[name="opt"]:checked');
+    return checked ? parseInt(checked.value,10) : null;
+  }
+  if(q.type==="multi"){
+    return [...document.querySelectorAll('#answerArea input[name="opt"]:checked')]
+      .map(el=>parseInt(el.value,10)).sort((a,b)=>a-b);
+  }
+  if(q.type==="match"){
+    return [...document.querySelectorAll("#answerArea .match-select")].map(s=>s.value);
+  }
+}
+
+function isCorrect(q, userAnswer){
+  if(q.type==="mcq" || q.type==="tf") return userAnswer===q.answer;
+  if(q.type==="multi"){
+    const correct = q.answer.slice().sort((a,b)=>a-b);
+    return JSON.stringify(userAnswer)===JSON.stringify(correct);
+  }
+  if(q.type==="match"){
+    return q.pairs.every((p,i)=>userAnswer[i]===p.right);
+  }
+  return false;
+}
+
+function applyFeedbackStyles(q, userAnswer){
+  if(q.type==="mcq" || q.type==="tf"){
+    const rows = document.querySelectorAll("#answerArea .opt-row");
+    rows[q.answer].classList.add("correct");
+    if(userAnswer!==null && userAnswer!==q.answer) rows[userAnswer].classList.add("incorrect");
+  } else if(q.type==="multi"){
+    const rows = document.querySelectorAll("#answerArea .opt-row");
+    q.answer.forEach(i=>rows[i].classList.add("correct"));
+    userAnswer.forEach(i=>{ if(!q.answer.includes(i)) rows[i].classList.add("incorrect"); });
+  } else if(q.type==="match"){
+    const rows = document.querySelectorAll("#answerArea .match-row");
+    q.pairs.forEach((p,i)=>{
+      if(userAnswer[i]===p.right){
+        rows[i].classList.add("correct");
+      } else {
+        rows[i].classList.add("incorrect");
+        rows[i].insertAdjacentHTML("beforeend", '<div class="correct-note">Correct: '+p.right+"</div>");
+      }
+    });
+  }
+  document.querySelectorAll("#answerArea input, #answerArea select").forEach(el=>el.disabled=true);
+}
+
+function onCheck(){
+  const q = currentQuestion();
+  const userAnswer = readUserAnswer(q);
+  const correct = isCorrect(q, userAnswer);
+  applyFeedbackStyles(q, userAnswer);
+
+  const fb = document.getElementById("feedback");
+  fb.hidden = false;
+  fb.innerHTML = '<p class="verdict '+(correct?"is-correct":"is-incorrect")+'">'+(correct?"Correct.":"Not quite.")+"</p><p>"+q.explanation+"</p>";
+
+  state.sectionStats[q.section].total++;
+  if(correct){ state.sectionStats[q.section].correct++; state.score++; }
+  state.results.push({qIdx: state.order[state.pos], correct, userAnswer});
+
+  document.getElementById("checkBtn").hidden = true;
+  document.getElementById("nextBtn").hidden = false;
+  updateHeader();
+}
+
+function onNext(){
+  if(state.pos < state.order.length-1){
+    state.pos++;
+    renderQuestion();
+  } else {
+    renderResults();
+  }
+}
+
+function formatAnswer(q, ans){
+  if(q.type==="mcq" || q.type==="tf") return ans===null ? "(no answer selected)" : q.options[ans];
+  if(q.type==="multi") return ans.length ? ans.map(i=>q.options[i]).join("; ") : "(no answer selected)";
+  if(q.type==="match") return q.pairs.map((p,i)=>p.left+" \u2192 "+(ans[i]||"(none)")).join("; ");
+}
+function formatCorrectAnswer(q){
+  if(q.type==="mcq" || q.type==="tf") return q.options[q.answer];
+  if(q.type==="multi") return q.answer.map(i=>q.options[i]).join("; ");
+  if(q.type==="match") return q.pairs.map(p=>p.left+" \u2192 "+p.right).join("; ");
+}
+
+function renderResults(){
+  headerBar.style.display = "none";
+  const total = state.order.length;
+  const pct = Math.round((state.score/total)*100);
+
+  let html = '<section class="results-card">';
+  html += "<h1>Results</h1>";
+  html += '<p class="score-big">'+state.score+" / "+total+"</p>";
+  html += '<p class="score-pct">'+pct+"% correct</p>";
+  html += "<h2>By topic</h2>";
+  html += '<table class="section-table">';
+  SECTION_ORDER.forEach(s=>{
+    const st = state.sectionStats[s];
+    if(!st || st.total===0) return;
+    const barPct = Math.round((st.correct/st.total)*100);
+    html += "<tr><td>"+s+'</td><td class="num">'+st.correct+"/"+st.total+'</td><td class="bar-cell"><div class="bar-track"><div class="bar-fill" style="width:'+barPct+'%"></div></div></td></tr>';
+  });
+  html += "</table>";
+
+  const missed = state.results.filter(r=>!r.correct);
+  if(missed.length){
+    html += "<h2>Questions to revisit</h2><div class=\"review-list\">";
+    missed.forEach(r=>{
+      const q = QUESTIONS[r.qIdx];
+      html += '<div class="review-item">';
+      html += '<div class="tag-row"><span class="tag tag-section">'+q.section+"</span></div>";
+      if(q.scenario) html += '<div class="case-block"><span class="case-label">Scenario</span><p>'+q.scenario+"</p></div>";
+      html += '<p class="prompt-small">'+q.prompt+"</p>";
+      html += '<p class="your-answer">Your answer: '+formatAnswer(q, r.userAnswer)+"</p>";
+      html += '<p class="correct-answer">Correct answer: '+formatCorrectAnswer(q)+"</p>";
+      html += '<p class="explanation-text">'+q.explanation+"</p>";
+      html += "</div>";
+    });
+    html += "</div>";
+  } else {
+    html += '<p class="all-correct">Every question was answered correctly.</p>';
+  }
+
+  html += '<div class="actions"><button id="restartBtn" class="btn" type="button">Try again</button></div>';
+  html += "</section>";
+  app.innerHTML = html;
+  document.getElementById("restartBtn").addEventListener("click", renderStart);
+}
+
+document.getElementById("restartHeaderBtn").addEventListener("click", ()=>{
+  if(confirm("Start over? Your current progress will be lost.")) renderStart();
+});
+
+renderStart();
+</script>
+</body>
+</html>
