@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerging Topics: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        .updated-box {
+            background-color: #fdf4ff;
+            border: 2px dashed #a21caf;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0.375rem;
+        }
+        .updated-box strong {
+            color: #86198f;
+        }
+        .update-tag {
+            display: inline-block;
+            background-color: #a21caf;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.15rem 0.6rem;
+            border-radius: 9999px;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Emerging Topics</h1>
+            <p class="text-xl text-gray-600 mt-2">Sepsis, Shock & the Evolving Practice of Resuscitation</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#outcomes" class="bg-gray-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-gray-600">Learning Outcomes</a>
+                <a href="#sepsis" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Could It Be Sepsis?</a>
+                <a href="#shock" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Forms of Shock</a>
+                <a href="#septic-shock" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Septic Shock Management</a>
+                <a href="#acls-updates" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">ACLS Updates 2020–2025</a>
+                <a href="#special-circumstances" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Special Circumstances</a>
+                <a href="#affordances" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Affordances & Limitations</a>
+                <a href="#reflection" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Reflective Practice</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Learning Outcomes -->
+            <section id="outcomes" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Why This Topic Is "Emerging"</h2>
+                <div class="physiology-box">
+                    <p>Sepsis remains one of the most commonly missed time-critical presentations in prehospital and emergency care, precisely because it can look like almost anything else — a fall, a confused elderly patient, a vague "not coping at home" call. At the same time, the evidence base underpinning Advanced Cardiac Life Support (ACLS) continues to shift: drug doses change, airway strategies are refined, and old certainties (like the value of routine double sequential defibrillation) are quietly retired. This guide sits at the intersection of both — where you are asked to hold two things simultaneously: an evolving clinical knowledge base, and a realistic, reflective understanding of what your scope of practice can and cannot achieve at the roadside.</p>
+                </div>
+                <div class="assessment-box">
+                    <h3>Learning Outcomes</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>SLO1:</strong> Recognise sepsis and the various forms of shock, and consider the implications for your own developing clinical practice.</li>
+                        <li><strong>SLO4:</strong> Explore how the affordances and limitations of your treatment goals both produce and shape the practice of resuscitation and the lived experience of Advanced Cardiac Life Support.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Sepsis Recognition -->
+            <section id="sepsis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">1. "Could It Be Sepsis?" — Recognition & Screening</h2>
+
+                <div class="physiology-box">
+                    <h3>Defining Sepsis</h3>
+                    <p><strong>Sepsis</strong> is life-threatening organ dysfunction caused by a dysregulated host response to infection. It is not the infection itself that kills — it is the body's own inflammatory, coagulation, and vascular response spiralling out of proportion to the trigger. <strong>Septic shock</strong> is the subset of sepsis in which circulatory, cellular, and metabolic abnormalities are profound enough to substantially increase mortality — clinically, persistent hypotension requiring vasopressor support to maintain adequate perfusion, alongside a raised blood lactate, despite adequate fluid resuscitation.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Quality Statement 1 — "Could It Be Sepsis?" (National Sepsis Clinical Care Standard, 2022)</h3>
+                    <p>Australia's Sepsis Clinical Care Standard frames early recognition around a single, deceptively simple question clinicians should ask of any acutely unwell or deteriorating patient: <em>could this be sepsis?</em> A structured approach — vital signs plus a lactate where feasible — is recommended over relying on gestalt alone, although clinical judgement is never replaced by a tool.</p>
+                    <p class="mt-2"><strong>Observations that build the picture:</strong></p>
+                    <ul class="list-disc list-inside ml-4 text-sm space-y-1">
+                        <li>Respiratory rate and oxygen saturation</li>
+                        <li>Heart rate and systolic blood pressure</li>
+                        <li>Temperature (fever <em>or</em> hypothermia)</li>
+                        <li>Altered mentation, behaviour change, or delirium</li>
+                        <li>Poor peripheral perfusion — cool peripheries, delayed capillary refill, mottled skin</li>
+                        <li>Blood lactate, where point-of-care testing is available</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Red Flags & At-Risk Groups</h3>
+                    <p>Maintain a high index of suspicion for patients who are re-presenting with signs of infection, deteriorating despite treatment, recently post-surgical or burned, immunosuppressed (including cancer treatment), or who have an indwelling medical device. <strong>Family or carer concern is itself a red flag</strong> — a carer's sense that "something is wrong" with an elderly relative, an infant, or a child has repeatedly proven to be a reliable early warning sign and should never be dismissed.</p>
+                    <p class="mt-2">Groups at disproportionately higher risk include newborns and young children, older people, pregnant and postpartum women, people with chronic or complex health conditions, and Aboriginal and Torres Strait Islander peoples, who experience a substantially higher incidence of sepsis and sepsis-related critical illness than the non-Indigenous population. Recognising this disparity matters clinically — it should raise, not lower, your index of suspicion — and equity-informed, culturally safe assessment and communication are part of good sepsis care, not an optional extra.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Presentation Varies by Age</h3>
+                    <table>
+                        <thead><tr><th>Population</th><th>Atypical or Key Features</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Neonates & Infants</strong></td>
+                                <td>Poor feeding, temperature instability (fever <em>or</em> hypothermia), lethargy, irritability, apnoeic episodes, non-specific "just not right" presentation.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Children</strong></td>
+                                <td><strong>Hypotension is not required</strong> to diagnose paediatric septic shock — children compensate very effectively and blood pressure is a late sign. Look for tachycardia, prolonged capillary refill, mottled or blotchy skin, reduced urine output, and altered conscious state.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Older People</strong></td>
+                                <td>Classic markers (fever, raised inflammatory markers) are frequently absent due to relative immunosenescence. Hypothermia, new delirium/confusion, and unexplained falls may be the only clues to underlying sepsis.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Why Lactate Matters</h3>
+                    <p>An elevated blood lactate reflects tissue hypoperfusion and anaerobic metabolism. While a single lactate cannot diagnose sepsis on its own, it is a simple, fast test that materially improves recognition — and failing to check for it can delay life-saving treatment. Point-of-care lactate testing is especially valuable in rural, remote, and resource-limited settings where escalation to critical care is not immediately available, including for Aboriginal medical services.</p>
+                </div>
+            </section>
+
+            <!-- Forms of Shock -->
+            <section id="shock" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">2. Classifying the Forms of Shock</h2>
+                <div class="physiology-box">
+                    <h3>Shock as a Final Common Pathway</h3>
+                    <p>Shock is not a diagnosis in itself — it is a state of inadequate tissue perfusion relative to metabolic demand, regardless of cause. Cells switch to anaerobic metabolism, lactate accumulates, and if uncorrected, this progresses through compensated → decompensated → irreversible stages as compensatory mechanisms (tachycardia, vasoconstriction, increased contractility) are first recruited, then overwhelmed. Understanding the four broad categories helps target your assessment and management to the underlying mechanism rather than treating "shock" generically.</p>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Core Mechanism</th>
+                            <th>Typical Causes</th>
+                            <th>Haemodynamic Pattern</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Hypovolaemic</strong></td>
+                            <td>Inadequate circulating volume — the "tank" is empty.</td>
+                            <td>Haemorrhage (trauma, GI bleed, ruptured ectopic), severe dehydration, burns.</td>
+                            <td>↓ Preload, ↓ Cardiac Output, ↑ SVR (compensatory vasoconstriction).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cardiogenic</strong></td>
+                            <td>The heart fails as a pump despite adequate volume.</td>
+                            <td>Acute MI, severe arrhythmia, cardiomyopathy, valvular rupture.</td>
+                            <td>Normal/↑ Preload, ↓ Cardiac Output, ↑ SVR. Often pulmonary oedema.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Distributive</strong></td>
+                            <td>Pathological vasodilation — the "tank" is the right size but the "pipes" are too wide.</td>
+                            <td><strong>Septic</strong> (inflammatory mediators), <strong>Anaphylactic</strong> (histamine-driven), <strong>Neurogenic</strong> (loss of sympathetic tone post-SCI).</td>
+                            <td>↓ SVR, often ↑ or normal Cardiac Output early (warm shock), ↓ SVR dominates the picture.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Obstructive</strong></td>
+                            <td>A mechanical barrier prevents adequate cardiac filling or output.</td>
+                            <td>Tension pneumothorax, cardiac tamponade, massive pulmonary embolism.</td>
+                            <td>↓ Preload (obstruction to filling) or ↓ Cardiac Output (obstruction to outflow), ↑ SVR.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="assessment-box mt-4">
+                    <h3>The "Warm" vs "Cold" Shock Distinction</h3>
+                    <p>Distributive (particularly septic) shock is unusual in its early stage: peripheries may be warm, flushed, and well-perfused because of profound vasodilation, even as blood pressure falls — this is <strong>"warm shock."</strong> This is a trap for the unwary paramedic who associates shock exclusively with the classic cool, clammy, pale presentation of hypovolaemic or cardiogenic ("cold") shock. As septic shock progresses, myocardial depression and capillary leak can produce a mixed picture with cool peripheries later in the course.</p>
+                </div>
+            </section>
+
+            <!-- Septic Shock Management -->
+            <section id="septic-shock" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">3. Septic Shock — Pathophysiology & Paramedic Management</h2>
+
+                <div class="disorder-box">
+                    <h3>The Sepsis Cascade</h3>
+                    <p>Infection triggers release of pro-inflammatory cytokines (TNF-α, IL-1, IL-6), which activate widespread endothelial injury and excessive nitric-oxide-mediated vasodilation. Capillaries become "leaky," pushing fluid out of the vasculature and worsening effective hypovolaemia even without external fluid loss. The coagulation cascade is simultaneously activated, risking microvascular thrombosis and, in severe cases, disseminated intravascular coagulation (DIC). Direct cytokine-mediated myocardial depression further reduces cardiac output. The end result is a patient who is intravascularly "empty," vasodilated, and — often — has a heart that isn't pumping as well as it should, all at once.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Quality Statement 2 — Time-Critical Management</h3>
+                    <p>Sepsis is treated as a time-critical medical emergency, guided by the principle of <strong>recognise, resuscitate, refer, review</strong>. Any clinician — including paramedics — can and should activate an escalation pathway as soon as sepsis is suspected. Key elements relevant to the prehospital phase include starting resuscitation before transfer where appropriate, notifying the receiving facility of suspected sepsis in your handover so the hospital clock can start early, and considering the patient's goals of care and any advance care directives when making transport decisions.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Paramedic Priorities</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm">
+                        <li><strong>Recognise early:</strong> Use a structured approach (vitals + suspicion of infection + red flags) rather than waiting for overt hypotension.</li>
+                        <li><strong>Oxygen:</strong> Correct hypoxaemia; titrate to target saturation for the patient's context.</li>
+                        <li><strong>IV/IO Access & Fluids:</strong> Establish access early. Administer cautious crystalloid boluses, reassessing after each — particularly in patients with heart failure, CKD, or the elderly, where fluid overload is a real risk alongside the risk of under-resuscitation.</li>
+                        <li><strong>Analgesia & Antiemetics:</strong> Treat symptomatically as required; sepsis does not preclude good symptom control.</li>
+                        <li><strong>Pre-Notification:</strong> Flag "suspected sepsis" explicitly in your handover. Antimicrobial administration within 60 minutes of recognising organ dysfunction is a hospital-side target that your early, clear notification directly supports — the clock the ED is working against often starts with your call.</li>
+                        <li><strong>Transport Destination:</strong> Consider a facility capable of rapid antimicrobial administration, source control (e.g., surgical/interventional capability), and, where indicated, critical care.</li>
+                        <li><strong>Document & Communicate:</strong> A clear, structured handover — including vital sign trends, suspected source, and any red flags identified — supports the multidisciplinary, coordinated care sepsis patients require in hospital.</li>
+                    </ol>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Reflection Point (SLO1)</h3>
+                    <p>Antimicrobial therapy and vasopressor support sit outside the standard paramedic scope of practice in most Australian jurisdictions. Consider: what does your role in the sepsis pathway actually consist of, if you cannot deliver the two interventions that most directly treat septic shock? Where does the value of prehospital care lie in this presentation — and how might Extended Care Paramedic or critical care paramedic scopes change this picture as your career develops?</p>
+                </div>
+            </section>
+
+            <!-- ACLS Updates -->
+            <section id="acls-updates" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">4. ACLS Guideline Updates (2020–2025)</h2>
+                <p class="text-sm text-gray-600 mb-4">Resuscitation science is never static. The following reflects consolidated recommendation updates across recent ILCOR/AHA/ANZCOR guideline cycles. Cross-check against your current service Clinical Practice Guidelines, as local protocols may lag or diverge from international consensus.</p>
+
+                <div class="management-box">
+                    <h3>4.1 Cardiopulmonary Resuscitation (CPR)</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li>Dispatchers should provide <strong>chest-compression-only CPR</strong> instructions to callers for adults with suspected out-of-hospital cardiac arrest (OHCA).</li>
+                        <li>Bystanders should perform chest compressions for <strong>all</strong> adult patients in cardiac arrest; those trained, able, and willing should add rescue breaths.</li>
+                        <li>For infants and children (&lt;18 years), bystander CPR <strong>should include ventilation</strong> where possible — paediatric arrest is far more often a respiratory event. If rescue breaths cannot be provided, compressions alone are still far better than no CPR.</li>
+                        <li>EMS dispatchers should offer dispatcher-assisted CPR instructions for presumed paediatric cardiac arrest, particularly where no bystander CPR is already underway.</li>
+                        <li>For witnessed, shockable OHCA, minimally interrupted cardiac resuscitation is a reasonable EMS alternative to conventional CPR sequencing.</li>
+                        <li>Continuous arterial blood pressure and end-tidal CO₂ monitoring can be used to gauge and improve CPR quality during ACLS resuscitation.</li>
+                        <li>Extracorporeal CPR (ECPR) evidence remains insufficient to support routine use in adult OHCA or paediatric OHCA, though it may be considered for select in-hospital paediatric arrests as a rescue therapy where it can be delivered competently and efficiently.</li>
+                        <li><strong>Debriefing</strong> after a resuscitation attempt may benefit the mental health and wellbeing of lay rescuers, EMS providers, and hospital staff alike — this is now recognised as part of good resuscitation practice, not an optional extra.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>4.2 Airway Management During Arrest</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li>Before an advanced airway is placed, CPR should proceed in cycles of 30 compressions to 2 breaths.</li>
+                        <li>Once an advanced airway (SGA or ETT) is in place, continuous compressions with asynchronous positive pressure ventilation — without pausing compressions — is a reasonable strategy.</li>
+                        <li><strong>Device selection is likelihood-based, not fixed:</strong> where the probability of successful tracheal intubation is low, a supraglottic airway is preferred. Where intubation success is likely (e.g., an experienced operator, favourable conditions), either device is acceptable.</li>
+                        <li>Either bag-mask ventilation or an advanced airway strategy may be reasonable during adult cardiac arrest, depending on setting and provider skill.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>4.3 Resuscitation Medications & Vascular Access</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li><strong>IV access is preferred over IO</strong>, but IO is an appropriate alternative when IV cannot be readily obtained.</li>
+                        <li><strong>Epinephrine (Adrenaline) 1 mg every 3–5 minutes</strong> remains the mainstay drug of cardiac arrest. High-dose epinephrine is not recommended.
+                            <ul class="list-disc list-inside ml-4 mt-1">
+                                <li><strong>Non-shockable rhythm (PEA/Asystole):</strong> administer epinephrine as soon as feasible.</li>
+                                <li><strong>Shockable rhythm (VF/pVT):</strong> administer epinephrine after initial defibrillation attempts have failed.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Amiodarone or lidocaine</strong> may be considered for VF/pulseless VT refractory to defibrillation — potentially of most benefit in witnessed arrests, where time to drug administration is shorter.</li>
+                        <li><strong>Vasopressin</strong> may be considered but confers no clear advantage over epinephrine, alone or in combination.</li>
+                        <li><strong>Magnesium</strong> is not recommended for routine use in adult cardiac arrest.</li>
+                        <li>Evidence remains insufficient to support or refute routine lidocaine or beta-blocker use in the first hour after ROSC.</li>
+                    </ul>
+                    <div class="updated-box mt-4">
+                        <span class="update-tag">Updated Recommendation</span>
+                        <p><strong>Atropine dose for symptomatic bradycardia has increased to 1.0 mg IV</strong> (up from the previous 0.5 mg), given when indicated. Check this explicitly against your current service Clinical Practice Guidelines/Drug Formulary, as adoption timing can vary between jurisdictions.</p>
+                    </div>
+                </div>
+
+                <div class="management-box">
+                    <h3>4.4 Defibrillation</h3>
+                    <div class="updated-box">
+                        <span class="update-tag">Updated Recommendation</span>
+                        <p><strong>Double sequential defibrillation should not be performed routinely.</strong> Despite periods of enthusiasm for this technique in refractory VF, current evidence does not support it as a standard resuscitation strategy.</p>
+                    </div>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>4.5 Supplemental Oxygen — Context-Specific Targets</h3>
+                    <table>
+                        <thead><tr><th>Clinical Context</th><th>Target SpO₂</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Cardiac Arrest</strong></td><td>100% supplemental oxygen — saturation is not used to titrate down during active resuscitation.</td></tr>
+                            <tr><td><strong>Acute Coronary Syndrome</strong></td><td>≥ 90% (supplement only if below this threshold).</td></tr>
+                            <tr><td><strong>Stroke</strong></td><td>95%–98% (inclusive).</td></tr>
+                            <tr><td><strong>Post-ROSC / Post-Cardiac Arrest Care</strong></td><td>92%–98% (inclusive) — deliberately avoiding both hypoxia and hyperoxia.</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2 text-sm">Note the philosophical shift embedded here: "more oxygen is always better" has given way to context-specific titration, reflecting growing evidence that hyperoxia carries its own harms, particularly post-ROSC.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>4.6 Post-Cardiac Arrest Care</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li>Initial hospitalisation should include multidisciplinary assessment and rehabilitation as needed, prior to discharge.</li>
+                        <li>Recovery continues long after ROSC — physical, psychological, and social support needs should be anticipated, not treated as an afterthought.</li>
+                        <li>Multimodal neuro-prognostication should guide decision-making in adult patients after arrest (this occurs in the critical care setting, outside standard ACLS scope, but understanding it contextualises why early, high-quality CPR matters so much).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Special Circumstances -->
+            <section id="special-circumstances" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">5. Special Resuscitation Circumstances</h2>
+
+                <div class="disorder-box">
+                    <h3>Cardiac Arrest in Pregnancy</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li><strong>Resuscitate the mother.</strong> The most effective intervention for the fetus in maternal cardiac arrest is effective resuscitation of the mother.</li>
+                        <li><strong>Early perimortem caesarean delivery</strong> may be needed to improve the chances of successful maternal resuscitation (by relieving aortocaval compression) as well as to save the infant — this is a maternal resuscitation intervention, not solely a fetal one.</li>
+                        <li><strong>Fetal monitoring should not be used during cardiac arrest</strong> — it does not change immediate management and diverts attention from resuscitation.</li>
+                        <li>Alert and mobilise a specialised maternal cardiac arrest team where one is available.</li>
+                        <li>Pregnant patients are more prone to hypoxia (reduced functional residual capacity, increased oxygen demand) — prioritise oxygenation and airway management accordingly.</li>
+                        <li>If ROSC is achieved but the patient remains comatose, targeted temperature management with concurrent fetal heart rate monitoring and OB/GYN involvement is indicated.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Suspected Stroke</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li>Check fingerstick blood glucose in all suspected stroke patients — hypoglycaemia is a well-known stroke mimic and is immediately treatable.</li>
+                        <li>Hospital target: CT or MRI of the brain within 20 minutes of arrival — your pre-notification directly enables this target to be met.</li>
+                        <li>For ischaemic stroke patients ineligible for fibrinolysis, endovascular thrombectomy (EVT) should be considered. If the receiving facility cannot perform EVT on-site, eligible patients should be transferred to an EVT-capable centre within 3 hours of arrival at the original hospital — a strong argument for pre-hospital stroke severity screening and direct transport to an EVT-capable centre where feasible under local protocols.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Self-Study Prompt: Algorithm Updates</h3>
+                    <p>As part of your own developing practice, look up the current versions of the following algorithms and note what has changed since your last review:</p>
+                    <ol class="list-decimal list-inside mt-2">
+                        <li>ACLS Post-Cardiac Arrest Care Algorithm</li>
+                        <li>Suspected Opioid Poisoning Algorithm</li>
+                        <li>Cardiac Arrest in Pregnancy Algorithm</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- Affordances and Limitations -->
+            <section id="affordances" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">6. The Affordances & Limitations of Your Treatment Goals (SLO4)</h2>
+
+                <div class="physiology-box">
+                    <h3>The Full Spectrum of Arrhythmia Treatment</h3>
+                    <p>To understand what paramedic-delivered ACLS actually is, it helps to see the whole continuum of care that exists for cardiac rhythm disturbance — most of which sits well outside your scope and setting:</p>
+                    <ul class="list-disc list-inside ml-4 mt-2 space-y-1 text-sm">
+                        <li><strong>Medicines:</strong> A wide antiarrhythmic formulary exists — atropine and adenosine (both EMS/ED-administered), beta blockers, calcium channel blockers, digoxin, and potassium- or sodium-channel blocking agents — each with its own risk profile and often requiring days of monitored titration.</li>
+                        <li><strong>Scheduled (Elective) Cardioversion:</strong> Performed under light anaesthesia in a monitored hospital setting to restore sinus rhythm in conditions like atrial fibrillation — a planned, low-energy, deliberate procedure very different from emergency defibrillation.</li>
+                        <li><strong>Catheter Ablation:</strong> An invasive electrophysiology procedure using radiofrequency, cryotherapy, or laser energy delivered via intracardiac catheters to permanently scar the tissue generating an abnormal rhythm.</li>
+                        <li><strong>Implantable Cardioverter Defibrillators (ICDs) & Pacemakers:</strong> Surgically implanted devices providing ongoing, automated rhythm correction for patients at high risk of life-threatening arrhythmia or symptomatic bradycardia.</li>
+                        <li><strong>Vagal Manoeuvres:</strong> Simple relaxation techniques (Valsalva, coughing) that can be taught to patients themselves for certain fast rhythms.</li>
+                        <li><strong>Treating the underlying cause:</strong> correcting electrolyte disturbance, hypertension, sleep apnoea, or thyroid disease — a longitudinal, primary-care-driven process.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>What This Means for the Paramedic Treatment Goal</h3>
+                    <p>Set against that spectrum, your prehospital toolkit for a life-threatening rhythm — a defibrillator/cardioverter, a short drug list, transcutaneous pacing, and physical manoeuvres — is narrow and blunt by design. This is not a deficiency; it is a deliberate scope boundary shaped by the environment you work in: no continuous days-long monitoring, no fluoroscopy, no cardiology consult on scene, and often only minutes to act. Reflect on how this reshapes the <em>goal</em> of paramedic ACLS itself: it is not "fix the arrhythmia" in the way a cardiologist might define it, but rather <strong>restore or sustain a perfusing rhythm long enough to reach a service that can pursue definitive treatment.</strong> Every protocol decision — epinephrine timing, the choice between SGA and ETT, whether to attempt a second antiarrhythmic — is a single-shot, high-stakes action taken within that narrower goal, without the luxury of "let's try this and reassess in a few days" that hospital-based rhythm management affords.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>The Experience of Running an Arrest</h3>
+                    <p>These affordances and limitations don't just shape clinical decisions — they shape the lived experience of resuscitation for everyone involved:</p>
+                    <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                        <li><strong>For the crew:</strong> ACLS is often algorithm-driven and repetitive by necessity (the same compression rate, the same drug intervals, the same rhythm checks), yet occurs in an environment of maximum psychological intensity. The tension between following a protocol and reading the room — a family member present, a patient who "just doesn't look right" for the algorithm — is a recurring source of clinical and moral tension.</li>
+                        <li><strong>For the patient's family:</strong> Witnessing resuscitation (where family presence is supported) is a fundamentally different experience of "treatment" than the quiet, monitored, incremental nature of hospital arrhythmia management — loud, physical, uncertain, and often ending in a decision to cease efforts rather than a clear resolution.</li>
+                        <li><strong>For you as a developing clinician:</strong> Moral distress after resuscitation attempts — successful or not — is common and expected, not a sign of inadequate resilience. This is precisely why debriefing is now written into guideline recommendations rather than left as an informal afterthought.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>A Prompt for Your Reflective Journal</h3>
+                    <p>Consider a resuscitation attempt you have witnessed, simulated, or can imagine vividly. What did the <em>limitation</em> of your treatment goal (restore a perfusing rhythm, not "cure" the underlying cardiac disease) allow you to do decisively — and what did it prevent you from offering the patient or family? How might naming that limitation, out loud, to a family member change the experience of care for everyone in the room?</p>
+                </div>
+            </section>
+
+            <!-- Reflective Practice -->
+            <section id="reflection" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">7. Reflective Practice Scenarios</h2>
+                <div class="assessment-box">
+                    <p><strong>Consider these clinical scenarios in relation to the material above:</strong></p>
+                    <ol class="list-decimal list-inside space-y-4 text-sm mt-2">
+                        <li><strong>The Unremarkable Fall:</strong> An 82-year-old is found on the floor by a carer who "just knew something wasn't right." Observations are borderline-normal apart from a mild tachycardia and slightly low-normal temperature. There is no fever, no obvious wound, and the patient is mildly confused, which the carer says is new. Walk through why this presentation should raise your suspicion for sepsis, and what your handover to the receiving facility should explicitly flag.</li>
+                        <li><strong>Warm and Shocked:</strong> A 34-year-old with a two-day history of worsening cellulitis presents tachycardic, tachypnoeic, and hypotensive, but with warm, flushed, well-perfused peripheries. Explain why this patient is not in "textbook" shock, and what pathophysiological process explains the discrepancy.</li>
+                        <li><strong>Refractory VF:</strong> You are 15 minutes into a witnessed VF arrest with three defibrillation attempts and one dose of amiodarone already given, with no ROSC. Talk through the next therapeutic decisions available to you under current guidelines, and the reasoning process behind the decision of when to reconsider Double Sequential Defibrillation being inappropriate here versus other refractory VF strategies within your protocols.</li>
+                        <li><strong>Family in the Room:</strong> You are managing a cardiac arrest with the patient's adult child present and visibly distressed, asking "is he going to be okay?" while you are mid-cycle on compressions. Reflect on how the narrow, single-shot nature of your treatment goal (restore a perfusing rhythm) might be communicated honestly and compassionately in that moment, without false reassurance or unnecessary bluntness.</li>
+                    </ol>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Based on the Australian Commission on Safety and Quality in Health Care Sepsis Clinical Care Standard (2022), consolidated ACLS guideline updates (ILCOR/AHA/ANZCOR, 2020–2025), and NHLBI patient education resources on arrhythmia treatment. Always verify current drug doses and algorithms against your own service's Clinical Practice Guidelines before applying them in practice.</p>
+        </footer>
+    </div>
+</body>
+</html>
