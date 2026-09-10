@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuro and End of Life: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        .note-box {
+            background-color: #f5f3ff;
+            border: 2px dashed #a78bfa;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .note-box strong {
+            color: #6d28d9;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        h4 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .lo-badge {
+            display: inline-block;
+            background-color: #111827;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.15rem 0.6rem;
+            border-radius: 9999px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Neuro and End of Life</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide — Clinical Placement Edition</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#neuro-assessment" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Neurological Assessment</a>
+                <a href="#learning-contract" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Learning Contract</a>
+                <a href="#help-seeking" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Help-Seeking & Reporting</a>
+                <a href="#emims" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">eMIMS in Practice</a>
+                <a href="#storytelling" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Digital Storytelling</a>
+                <a href="#eol-law" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">End of Life Law</a>
+                <a href="#law-practice" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Law & Paramedic Practice</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Learning Outcomes Overview -->
+            <section class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">This Guide's Learning Outcomes</h2>
+                <div class="assessment-box">
+                    <p>This guide is unusual in that it bridges <strong>clinical content</strong> and <strong>professional placement practice</strong>. It maps to the following seven learning outcomes:</p>
+                    <ol class="list-decimal list-inside space-y-1 mt-2 text-sm">
+                        <li>Refresh neurological assessment knowledge.</li>
+                        <li>Develop a learning contract for clinical placement expectations.</li>
+                        <li>Understand the procedure for help-seeking during placement and preceptor reporting domains.</li>
+                        <li>Demonstrate eMIMS application in clinical cases.</li>
+                        <li>Appraise the Adobe Clinical Placement Digital Storytelling template.</li>
+                        <li>Learn about end of life law and think about the possibilities for your own developing practice. <em>(Contributes to SLO1)</em></li>
+                        <li>Explore how the affordances and limitations of the law produce and shape both the practice of paramedicine and the experience of palliative care. <em>(Contributes to SLO4)</em></li>
+                    </ol>
+                </div>
+                <div class="note-box">
+                    <p><strong>A note on the lecture recordings:</strong> Two lecture links were provided for this topic. I'm not able to open or transcribe YouTube videos directly, so their content isn't reflected below. If you paste in the slides, your notes, or a transcript excerpt, I can fold the lecturer's specific framing, local examples, and any assessment hints directly into this guide.</p>
+                    <ul class="list-disc list-inside text-sm mt-2">
+                        <li><code>https://www.youtube.com/watch?v=gfxvKrurC0M</code></li>
+                        <li><code>https://www.youtube.com/watch?v=OJYwsudBhBg</code></li>
+                    </ul>
+                </div>
+                <div class="note-box">
+                    <p><strong>A note on Learning Outcomes 2, 3 and 5:</strong> These relate to your specific university's placement paperwork (the learning contract template, the escalation/help-seeking procedure, and the Adobe Digital Storytelling template). I don't have those documents, so the sections below give you an accurate, evidence-informed <em>scaffold</em> built from the Paramedicine Board of Australia's accredited standards — but you should check the wording and fields against your own unit's placement handbook and templates. If you upload them, I can tailor these sections exactly to your course.</p>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 1: NEURO ASSESSMENT ================= -->
+            <section id="neuro-assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">1. Neurological Assessment Refresh <span class="lo-badge">LO1</span></h2>
+
+                <div class="physiology-box">
+                    <h3>Why a Systematic Approach Matters</h3>
+                    <p>Neurological emergencies — stroke, status epilepticus, raised intracranial pressure (ICP), spinal cord injury, and acute neuromuscular weakness — are time-critical and can deteriorate rapidly. Nonneurologist clinicians (including paramedics) are frequently the first to assess these patients, and prompt recognition directly changes outcomes because most definitive therapies (thrombolysis, aneurysm securing, escalating anti-seizure therapy) are only effective within defined time windows. Your job is not to diagnose the exact lesion — it's to recognise the pattern, protect the brain/cord from secondary injury, and get accurate timing and history to the receiving team.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>1.1 Level of Consciousness — Glasgow Coma Scale</h3>
+                    <table>
+                        <thead><tr><th>Component</th><th>Score</th><th>Response</th></tr></thead>
+                        <tbody>
+                            <tr><td rowspan="4"><strong>Eye Opening</strong></td><td>4</td><td>Spontaneous</td></tr>
+                            <tr><td>3</td><td>To voice</td></tr>
+                            <tr><td>2</td><td>To pain</td></tr>
+                            <tr><td>1</td><td>None</td></tr>
+                            <tr><td rowspan="5"><strong>Verbal Response</strong></td><td>5</td><td>Oriented</td></tr>
+                            <tr><td>4</td><td>Confused</td></tr>
+                            <tr><td>3</td><td>Inappropriate words</td></tr>
+                            <tr><td>2</td><td>Incomprehensible sounds</td></tr>
+                            <tr><td>1</td><td>None</td></tr>
+                            <tr><td rowspan="6"><strong>Motor Response</strong></td><td>6</td><td>Obeys commands</td></tr>
+                            <tr><td>5</td><td>Localises to pain</td></tr>
+                            <tr><td>4</td><td>Withdraws from pain</td></tr>
+                            <tr><td>3</td><td>Abnormal flexion (decorticate)</td></tr>
+                            <tr><td>2</td><td>Abnormal extension (decerebrate)</td></tr>
+                            <tr><td>1</td><td>None</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2 text-sm"><strong>Clinical pearl:</strong> A single-point drop in GCS is clinically significant and should always trigger reassessment of the whole primary survey (hypoxia? hypoglycaemia? expanding bleed?) rather than being logged and left.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>1.2 Pupils</h3>
+                    <p>Assess size, symmetry, and reactivity to light. As intracranial pressure rises, dysfunction of the ascending reticular activating system causes reduced alertness, and progressive cranial neuropathies — often starting with pupillary abnormalities — accompany brainstem compression as herniation develops.</p>
+                    <table>
+                        <thead><tr><th>Pattern</th><th>Consider</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Unilateral dilated ("blown") pupil</strong></td><td>Trauma; compression of cranial nerve III; uncal herniation; posterior communicating artery aneurysm; acute angle-closure glaucoma; local drug contamination (e.g. accidental contact with nebulised salbutamol or ipratropium — a classic mimic worth remembering); tonic (Adie) pupil; optic neuritis.</td></tr>
+                            <tr><td><strong>Bilateral dilated pupils</strong></td><td>Midbrain injury; systemic disease (e.g. botulism, Miller Fisher variant of Guillain-Barré); sympathomimetic or anticholinergic drugs/overdose.</td></tr>
+                            <tr><td><strong>Transient dilation</strong></td><td>Seizure (post-ictal); migraine; unilateral episodic mydriasis.</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="text-sm mt-2"><strong>Paramedic pearl:</strong> Before assuming a unilateral dilated pupil means herniation, ask whether the patient (or someone nearby) has recently used a nebuliser — ipratropium mist reaching the eye is a well-recognised, entirely benign cause of a fixed, dilated pupil.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>1.3 Rapid Stroke Screen — FAST / BE-FAST</h3>
+                    <p><strong>F</strong>ace (droop) · <strong>A</strong>rms (drift/weakness) · <strong>S</strong>peech (slurred, aphasia) · <strong>T</strong>ime (of onset — call it immediately). The extended <strong>BE-FAST</strong> adds <strong>B</strong>alance (sudden ataxia/vertigo) and <strong>E</strong>yes (sudden vision loss or gaze deviation), which improves detection of posterior circulation strokes that classic FAST can miss.</p>
+                    <p class="mt-2">The <strong>NIH Stroke Scale (NIHSS)</strong> is the standardised in-hospital severity score (0 = best, 42 = worst) used to quantify deficit and track evolution — you won't usually complete a full NIHSS on-road, but understanding that the receiving team will use it explains why a clear, structured description of the deficit in your handover (which side, which limbs, speech quality, gaze) is so valuable.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>1.4 Stroke Mimics — Always Check a BGL</h3>
+                    <p>Not every acute focal deficit is a stroke. Common metabolic derangements can unmask old ischaemic injury or trigger seizures that mimic stroke, so a fingerprick glucose is mandatory before you commit to a "stroke" impression.</p>
+                    <table class="text-sm">
+                        <thead><tr><th>Category</th><th>Common Mimics</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Neurologic</strong></td><td>Seizure with post-ictal (Todd's) paralysis, complicated migraine, Bell's palsy, brain tumour/abscess, encephalitis, spinal cord injury, intracerebral haemorrhage.</td></tr>
+                            <tr><td><strong>Metabolic</strong></td><td>Hypoglycaemia, systemic infection/sepsis, hyperglycaemia, hyponatraemia, hypernatraemia, uraemia.</td></tr>
+                            <tr><td><strong>Vascular</strong></td><td>Arteriovenous malformation, dural AV fistula, intracranial aneurysm.</td></tr>
+                            <tr><td><strong>Traumatic</strong></td><td>Subdural or extradural haematoma.</td></tr>
+                            <tr><td><strong>Toxic</strong></td><td>Medication or drug overdose/intoxication.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>1.5 Why Time and History Matter So Much</h3>
+                    <p>All hyperacute stroke therapies are only safe and effective within defined windows, so the single most valuable piece of information you can hand over is the confirmed <strong>time last seen well</strong> (not "time found"). This is why in-hospital eligibility for clot-busting therapy generally requires a clear onset within about 3 hours (extendable to 4.5 hours in selected patients), with hospital teams needing a fast non-contrast CT to exclude bleeding before anything is given. Endovascular clot retrieval can sometimes be considered out to 6 hours or beyond in selected cases.</p>
+                    <p class="mt-2">These treatment decisions happen in hospital — they are included here so you understand <em>why</em> the receiving team will ask you (repeatedly) about onset time, anticoagulant use, recent surgery/trauma, and bleeding history: these are the exclusion criteria that decide whether thrombolysis is even an option.</p>
+                    <p class="mt-2"><strong>What is squarely in your scope:</strong> accurate onset time, BGL, a structured deficit description, checking for anticoagulant/antiplatelet medications, minimising scene time, and — importantly — <em>not</em> aggressively lowering blood pressure in a suspected ischaemic stroke (permissive hypertension is generally the goal, in contrast to a haemorrhagic stroke where the hospital will actively lower blood pressure). If your service credentials paramedics to treat hypoglycaemia, correct it; otherwise treat the stroke presentation as your default and let the hospital sort out mimics.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>1.6 Distinguishing the Two Broad Stroke Types (Hospital Context)</h3>
+                    <table class="text-sm">
+                        <thead><tr><th>Feature</th><th>Ischaemic Stroke (~85%)</th><th>Haemorrhagic Stroke (~15%)</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Mechanism</strong></td><td>Vascular occlusion reduces blood supply to brain tissue.</td><td>Vessel rupture (often chronic hypertension damaging small vessels) bleeds directly into brain tissue.</td></tr>
+                            <tr><td><strong>Blood pressure approach (in-hospital)</strong></td><td>Permissive hypertension — only treated if severely elevated (>220/110 mmHg) to protect perfusion of at-risk tissue.</td><td>Early, active lowering (target systolic &lt;140 mmHg within the first hour) improves functional outcomes.</td></tr>
+                            <tr><td><strong>Key hospital intervention</strong></td><td>Thrombolysis (tPA) and/or endovascular clot retrieval within time windows.</td><td>Blood pressure control, reversal of any anticoagulation, occasional surgical evacuation.</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="text-sm mt-2">This contrast matters clinically because it explains why paramedics should not assume "lower the BP" is always correct in a neuro case — the right approach depends entirely on the (yet undiagnosed) stroke subtype, which is one more reason CT imaging on arrival drives everything.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>1.7 Subarachnoid Haemorrhage (SAH)</h3>
+                    <p>Suspect SAH with the sudden onset of a severe <strong>"thunderclap" headache</strong> — often described as the worst headache of the patient's life, reaching maximum intensity within seconds. Most non-traumatic SAH is caused by a ruptured intracranial (berry) aneurysm and carries a mortality approaching 50%. Unlike an intracerebral bleed, blood collects in the CSF spaces around the brain, which can impair CSF drainage and cause hydrocephalus.</p>
+                    <p class="mt-2 text-sm"><strong>Paramedic relevance:</strong> a sudden, severe, "worst ever" headache — especially with collapse, vomiting, neck stiffness, or a brief loss of consciousness — should be treated as a time-critical neurosurgical emergency regardless of a normal GCS. Minimise stimulation, treat pain and nausea per protocol, avoid unnecessary exertion/straining, and transport for urgent CT.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>1.8 Raised Intracranial Pressure & Herniation</h3>
+                    <p>As ICP rises, the brain's ability to autoregulate is lost. Cerebral Perfusion Pressure (CPP = MAP − ICP) falls, and if hypoxia is added on top of poor perfusion, the zone of irreversible injury expands rapidly. Watch for a deteriorating GCS, new pupillary asymmetry, and abnormal posturing (decorticate → decerebrate) as brainstem compression progresses.</p>
+                    <div class="management-box mt-2">
+                        <strong>Paramedic priorities:</strong>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>Avoid hypoxia at all costs — maintain SpO₂ above 94%.</li>
+                            <li>Avoid hyperventilation in routine care — it causes cerebral vasoconstriction and can worsen ischaemia. (Brief, controlled hyperventilation is only used in hospital as a temporising bridge when there are clear signs of active herniation.)</li>
+                            <li>Elevate the head of the bed/stretcher to around 30° where spinal precautions and haemodynamics allow, to promote venous drainage.</li>
+                            <li>Treat hypotension aggressively — a single drop in blood pressure has been shown to sharply increase TBI mortality; the in-hospital circulation target is a systolic above 110 mmHg.</li>
+                            <li>Prevent shivering and hyperthermia; maintain normal body temperature.</li>
+                            <li>Rapid, smooth transport with early notification — this patient may need urgent neurosurgical intervention or hyperosmolar therapy (mannitol/hypertonic saline) on arrival.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>1.9 Status Epilepticus</h3>
+                    <p><strong>Definition:</strong> a continuous, unremitting seizure lasting longer than 5 minutes, or recurrent seizures without the patient regaining consciousness in between. Every seizure carries a risk of progressing to status epilepticus, and the longer a seizure continues, the less responsive it becomes to anti-seizure medication — early, assertive treatment prevents neuronal damage and treatment resistance.</p>
+                    <div class="management-box mt-2">
+                        <strong>Paramedic priorities:</strong>
+                        <ul class="list-disc list-inside text-sm">
+                            <li><strong>ABCs first:</strong> positioning to protect the airway, high-flow oxygen, suction as needed. Do not restrain or force anything into the mouth.</li>
+                            <li><strong>Time the seizure</strong> accurately and note whether it is a first-ever seizure or a known epileptic's seizure that is unusually prolonged.</li>
+                            <li><strong>Check BGL</strong> — hypoglycaemia is a readily reversible seizure cause and a classic stroke/seizure mimic.</li>
+                            <li><strong>Benzodiazepine</strong> per your local clinical practice guideline (e.g. midazolam) — early administration is the single most important prehospital intervention.</li>
+                            <li>Protect from injury, prepare airway adjuncts, and be ready to support ventilation if post-ictal respiratory depression follows treatment.</li>
+                            <li>Transport with a clear handover of seizure duration, number of doses given, and baseline anti-epileptic history.</li>
+                        </ul>
+                    </div>
+                    <p class="text-sm mt-2"><strong>Hospital context:</strong> if benzodiazepines fail, escalation typically follows a staged pathway — a second-line anti-epileptic loading dose (e.g. phenytoin/fosphenytoin), and if seizures still continue or the patient doesn't return to baseline, intubation with continuous sedation and EEG monitoring for refractory status epilepticus. Understanding this staged approach helps you appreciate why your handover of "how many doses, over what time, and response" shapes the next clinical decision within minutes of arrival.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>1.10 Spinal Cord Injury — Localising the Level (Non-Traumatic Focus)</h3>
+                    <p>Traumatic spinal cord injury mechanisms, immobilisation, and extrication are covered in detail in the <em>Spinal Trauma</em> guide. Here, the focus is on <strong>recognising the pattern</strong> of cord injury from the history and exam — including non-traumatic causes, which are easy to miss.</p>
+                    <table class="text-sm">
+                        <thead><tr><th>Clinical Pattern</th><th>Suggests</th></tr></thead>
+                        <tbody>
+                            <tr><td>Motor deficit/weakness predominates (corticospinal tract)</td><td>Anterior cord involvement.</td></tr>
+                            <tr><td>Loss of vibration sense/proprioception predominates</td><td>Posterior cord (dorsal column) involvement.</td></tr>
+                            <tr><td>Quadriparesis, sensory loss, possible respiratory compromise</td><td>High cervical cord injury.</td></tr>
+                            <tr><td>Bilateral lower-limb weakness with a "band-like" sensory level around the chest/abdomen</td><td>Thoracic cord involvement.</td></tr>
+                            <tr><td>Weakness isolated to one/both legs, lower back pain, bowel/bladder involvement</td><td>Lumbosacral cord involvement.</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="disorder-box mt-3">
+                        <strong>Red flag — Epidural Abscess:</strong> in a patient with <em>no</em> trauma history, the combination of recent illness or IV drug use, fever, focal back pain, and worsening numbness/weakness or new bowel/bladder incontinence should raise urgent suspicion of a nontraumatic compressive myelopathy (e.g. epidural abscess or haematoma). This is a time-critical surgical emergency requiring urgent imaging — treat it with the same urgency as a traumatic cord injury.
+                    </div>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>1.11 Acute Neuromuscular Weakness — Is Ventilation at Risk?</h3>
+                    <p>Diseases affecting the peripheral nervous system, neuromuscular junction, or muscle share one dangerous common pathway: progressive weakness of the diaphragm, intercostal, and upper-airway muscles can cause ventilatory failure — sometimes before the patient looks distressed. Treat significant limb weakness of unclear cause as a neurological emergency until proven otherwise.</p>
+                    <table class="text-sm">
+                        <thead><tr><th>Feature</th><th>Guillain-Barré Syndrome (Acute Inflammatory Demyelinating Polyneuropathy)</th><th>Myasthenic Crisis</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Onset</strong></td><td>Progressive over days to weeks.</td><td>Can be abrupt, often triggered by infection, surgery, or certain medications.</td></tr>
+                            <tr><td><strong>Pattern</strong></td><td>Classically an ascending paralysis with areflexia, though variants exist (descending paralysis, ataxia, ophthalmoparesis in Miller Fisher syndrome).</td><td>Fluctuating, fatigable weakness — often proximal, with ptosis, double vision, nasal speech, and difficulty swallowing.</td></tr>
+                            <tr><td><strong>Trigger/history</strong></td><td>Often a preceding diarrhoeal or respiratory infection.</td><td>May be a known myasthenic having a crisis, or the first presentation of the disease.</td></tr>
+                            <tr><td><strong>Autonomic features</strong></td><td>Blood pressure instability and arrhythmia can occur due to autonomic nerve involvement.</td><td>Less prominent.</td></tr>
+                        </tbody>
+                    </table>
+                    <div class="management-box mt-2">
+                        <strong>Paramedic priorities:</strong>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>Ask the patient to count aloud in one breath, or assess whether they can speak in full sentences — a rough bedside proxy for deteriorating vital capacity.</li>
+                            <li>Watch closely for bulbar signs: nasal/quiet speech, pooling secretions, weak cough, difficulty swallowing.</li>
+                            <li>Keep a low threshold for having airway equipment ready; deterioration can be faster than it looks.</li>
+                            <li>Handle gently — autonomic instability in GBS means vital signs can swing unpredictably.</li>
+                            <li>Transport to a facility with neurology/ICU capability; these patients often need serial respiratory function measurement and may require IVIG, plasmapheresis, or ventilatory support.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 2: LEARNING CONTRACT ================= -->
+            <section id="learning-contract" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">2. Developing a Clinical Placement Learning Contract <span class="lo-badge">LO2</span></h2>
+
+                <div class="physiology-box">
+                    <h3>What a Learning Contract Is For</h3>
+                    <p>A learning contract is a negotiated, written agreement between you, your preceptor, and your university that translates broad unit/course learning outcomes into specific, observable goals for a particular placement block. It exists so that all three parties — student, preceptor, and university — share the same expectations from day one, and so there's a documented basis for feedback and review partway through and at the end of placement.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Generic Learning Contract Framework</h3>
+                    <p>Use this structure as a starting scaffold — replace it with your unit's actual template if one is issued, but the underlying logic (goal → link to outcome → strategy → evidence → timeframe → sign-off) is standard across health placement learning contracts.</p>
+                    <table class="text-sm">
+                        <thead><tr><th>Learning Goal</th><th>Linked Outcome / SLO</th><th>Strategy / Action</th><th>Evidence of Achievement</th><th>Timeframe & Review</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>Confidently identify and act on advance care planning documentation at a palliative care job.</td>
+                                <td>SLO1 (end of life law); SLO4 (law shaping practice)</td>
+                                <td>Proactively ask about Resuscitation Plans / Authorised Care Plans on relevant jobs; debrief with preceptor after each palliative case.</td>
+                                <td>Preceptor observation notes; reflective log entry; digital storytelling submission.</td>
+                                <td>Reviewed at midpoint and final sign-off.</td>
+                            </tr>
+                            <tr>
+                                <td>Perform a structured neurological assessment independently and hand over using structured language (FAST/BE-FAST, GCS breakdown, pupils).</td>
+                                <td>LO1 (neuro assessment)</td>
+                                <td>Lead the neuro component of assessment under supervision on at least 3 relevant jobs; request specific feedback on handover clarity.</td>
+                                <td>Preceptor sign-off against Domain 3 (evidence-based practitioner) and Domain 5 (paramedicine practitioner) capabilities.</td>
+                                <td>Ongoing; reviewed weekly.</td>
+                            </tr>
+                            <tr>
+                                <td><em>[Your own goal]</em></td>
+                                <td><em>[Link to a specific SLO/professional capability domain]</em></td>
+                                <td><em>[What you will actually do]</em></td>
+                                <td><em>[How this will be demonstrated/documented]</em></td>
+                                <td><em>[Dates]</em></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Writing Goals That Actually Work — SMART</h3>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li><strong>Specific:</strong> "Improve my cannulation" is weak. "Successfully cannulate on the first attempt in at least 3 of 5 attempts, with preceptor sign-off" is usable.</li>
+                        <li><strong>Measurable:</strong> tie the goal to something a preceptor can actually observe and comment on (a number of attempts, a documented conversation, a completed handover).</li>
+                        <li><strong>Achievable:</strong> scaled to your current stage — a first placement goal should look different from a final-year goal.</li>
+                        <li><strong>Relevant:</strong> explicitly linked back to a unit SLO or a Paramedicine Board professional capability domain (see Section 3 below) — this is what makes the contract defensible at review time.</li>
+                        <li><strong>Time-bound:</strong> a stated review point (midpoint, final day) so drift doesn't go unnoticed.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Suggested Process</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm">
+                        <li><strong>Before placement:</strong> self-assess honestly against the professional capability domains (Section 3) and this unit's specific learning outcomes. Identify 2–3 genuine growth areas — not just things you're already good at.</li>
+                        <li><strong>Day one:</strong> negotiate the contract with your preceptor. This is a two-way conversation — your preceptor may see gaps or opportunities you haven't considered.</li>
+                        <li><strong>Midpoint:</strong> formal check-in against each goal; adjust strategies if something isn't working rather than waiting until the end to discover it.</li>
+                        <li><strong>Final review:</strong> preceptor sign-off with specific evidence against each goal, feeding into your overall placement assessment.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 3: HELP-SEEKING & REPORTING ================= -->
+            <section id="help-seeking" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">3. Help-Seeking Procedure & Preceptor Reporting Domains <span class="lo-badge">LO3</span></h2>
+
+                <div class="assessment-box">
+                    <h3>A Generic Escalation Pathway</h3>
+                    <p>Every service and university has its own specific placement escalation policy — check your handbook for exact names and contact details — but almost all follow the same underlying tiered logic:</p>
+                    <table class="text-sm">
+                        <thead><tr><th>Tier</th><th>Who</th><th>When to Use</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>1</strong></td><td>Your on-road preceptor/supervising clinician</td><td>Immediate clinical questions, in-the-moment safety concerns, day-to-day feedback.</td></tr>
+                            <tr><td><strong>2</strong></td><td>Clinical placement facilitator / unit coordinator</td><td>Placement logistics, unresolved disagreements with a preceptor, concerns about the quality or pace of learning.</td></tr>
+                            <tr><td><strong>3</strong></td><td>Course coordinator / clinical education team / service clinical support line</td><td>Unresolved issues after Tier 2, patterns across multiple shifts, or a critical incident requiring formal review.</td></tr>
+                            <tr><td><strong>4</strong></td><td>University student support / counselling services</td><td>Personal wellbeing, stress, or mental health impacts arising from placement.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Escalate Immediately, Don't Wait, If...</h3>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>You are asked to do something outside your scope of practice or that you believe is unsafe for the patient.</li>
+                        <li>You experience a needlestick injury, exposure, or any workplace injury.</li>
+                        <li>You witness or are subject to harassment, discrimination, or bullying.</li>
+                        <li>A critical incident occurs (serious adverse patient outcome, major MVC, line-of-duty exposure).</li>
+                        <li>You feel your own physical or psychological safety is at risk.</li>
+                    </ul>
+                    <p class="mt-2 text-sm">Routine developmental feedback (skills practice, pacing of learning, timetable clashes) can generally go through Tier 1–2 in the normal course of placement rather than as an urgent escalation.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Preceptor Reporting Domains — Paramedicine Board of Australia</h3>
+                    <p>Whatever the exact wording of your university's preceptor report form, Australian paramedicine accreditation standards require every course to map its learning outcomes back to the <strong>Professional capabilities for registered paramedics</strong>, published by the Paramedicine Board of Australia. These are grouped into five domains — this is very likely the underlying framework your preceptor's report is assessing you against, even if the form uses its own headings:</p>
+                    <table class="text-sm">
+                        <thead><tr><th>Domain</th><th>Focus</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Domain 1 —</strong> The professional and ethical practitioner</td><td>Practising ethically and legally, managing your own fitness to practise, informed consent, cultural safety for Aboriginal and Torres Strait Islander Peoples, professional boundaries, exercising judgement within your scope.</td></tr>
+                            <tr><td><strong>Domain 2 —</strong> The communicator and the collaborator</td><td>Clear and sensitive communication with patients and colleagues, patient advocacy, effective teamwork, handover, referral, and delegation.</td></tr>
+                            <tr><td><strong>Domain 3 —</strong> The evidence-based practitioner</td><td>Informed, reasonable clinical decision-making; clinical reasoning and problem-solving; drawing on appropriate knowledge/resources (including tools like eMIMS); identifying your own ongoing learning needs.</td></tr>
+                            <tr><td><strong>Domain 4 —</strong> The safety and risk-management practitioner</td><td>Patient safety, self/team safety, effective operation in emergency environments, accurate record-keeping, audit and reflection, and mentoring/teaching others (including students).</td></tr>
+                            <tr><td><strong>Domain 5 —</strong> The paramedicine practitioner</td><td>Applying anatomy, physiology, and pathophysiology to practice, safe diagnostic/treatment actions, mass-casualty readiness, and tailoring care to the specific patient and context.</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="text-sm mt-2">Knowing these five domains in advance helps you understand <em>why</em> your preceptor might be watching for things beyond raw clinical skill — communication style, documentation habits, and how you respond to feedback all map directly onto this framework and onto your eventual registration standard.</p>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 4: eMIMS ================= -->
+            <section id="emims" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">4. Applying eMIMS in Clinical Cases <span class="lo-badge">LO4</span></h2>
+
+                <div class="physiology-box">
+                    <h3>What eMIMS Is</h3>
+                    <p>eMIMS (now published as eMIMSplus/eMIMSelite) is the electronic edition of MIMS — Australia's most widely used independent medicines reference, in continuous publication since 1963. It provides up-to-date Australian Product Information and Consumer Medicine Information for every TGA-registered medicine, is reviewed and updated monthly, and is recommended by professional bodies including the Pharmacy Board of Australia. It's used across Australian healthcare — including by paramedics and paramedicine students — as a point-of-care decision-support tool.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>What You Can Look Up</h3>
+                    <ul class="list-disc list-inside text-sm">
+                        <li><strong>Indications & dosing</strong> for a medicine the patient is already taking (or that you're considering administering).</li>
+                        <li><strong>Contraindications and precautions</strong> — including drug-disease contraindications relevant to the presenting complaint.</li>
+                        <li><strong>Drug interaction checker</strong> — flags potentially harmful combinations across a patient's whole medication list.</li>
+                        <li><strong>Allergy cross-checking.</strong></li>
+                        <li><strong>Pregnancy category</strong> — Australia uses an A/B1/B2/B3/C/D/X categorisation system for medicine safety in pregnancy.</li>
+                        <li><strong>Pill identifier</strong> — useful when a patient (or bystander) presents with unlabelled medication and you need to identify what's actually been taken.</li>
+                        <li><strong>PBS restrictions/pricing</strong> — less relevant prehospital, but useful context for understanding why a patient may not be taking a medicine as prescribed.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>A Worked Process for Applying eMIMS to a Case</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm">
+                        <li>Collect a complete medication list from the patient, their dosette box, or a bystander/carer — brand and generic names, doses, and timing.</li>
+                        <li>Search eMIMS for any medication you don't immediately recognise, to confirm class, indication, and typical dosing.</li>
+                        <li>Run the interaction checker across the patient's full medication list — not just the one drug you're focused on.</li>
+                        <li>Check for contraindications specific to what you are considering administering (e.g. a drug that prolongs the QT interval, in a patient already on another QT-prolonging medicine).</li>
+                        <li>If relevant, check pregnancy category for a person of reproductive age before administering anything beyond first-line, well-established prehospital drugs.</li>
+                        <li>Document what you found and relay it clearly in your handover — this is often the single most useful piece of medication-reconciliation information the receiving team gets.</li>
+                    </ol>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Worked Example 1 — Anticoagulated Head Strike</h3>
+                    <p>An 82-year-old on <strong>apixaban</strong> for atrial fibrillation has struck their head in a fall. A quick eMIMS check confirms apixaban is a direct factor Xa inhibitor, dosed twice daily, with no rapid at-home reversal available and a specific reversal agent (andexanet alfa) that exists but is a hospital-only, specialist-initiated therapy. This doesn't change your on-road treatment, but it sharpens why this "alert and talking" patient with a normal GCS is still a time-critical transport: any intracranial bleeding in an anticoagulated patient can expand rapidly, and the receiving team needs to know the specific agent and last dose time immediately on arrival to plan reversal and imaging.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Worked Example 2 — Analgesia in a Reproductive-Age Patient</h3>
+                    <p>A 28-year-old with severe renal colic-type pain is a candidate for an NSAID and/or opioid analgesia under your clinical practice guidelines. Before administering, a quick pregnancy-category check (and a direct question about the possibility of pregnancy) is good practice — some analgesics carry specific pregnancy-category cautions, particularly in later trimesters. eMIMS gives you the categorisation and rationale in seconds so you can make an informed, protocol-consistent decision and clearly document your reasoning.</p>
+                </div>
+
+                <div class="note-box">
+                    <p><strong>Scope reminder:</strong> eMIMS is a decision-support and verification tool — it does not replace, expand, or override your service's authorised clinical practice guidelines and drug protocols. Use it to check and cross-reference, not to justify administering something outside your credentialed scope.</p>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 5: DIGITAL STORYTELLING ================= -->
+            <section id="storytelling" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">5. Appraising the Clinical Placement Digital Storytelling Template <span class="lo-badge">LO5</span></h2>
+
+                <div class="physiology-box">
+                    <h3>What Digital Storytelling Is For in a Placement Context</h3>
+                    <p>Digital storytelling is a short, multimodal reflective piece — typically built in a tool like Adobe Express — that combines narration, text, and images (sometimes music) into a brief narrative about a real placement experience. In health education, it's used to consolidate tacit, in-the-moment learning that's hard to capture in a standard written reflection, and to build communication and self-presentation skills that transfer directly into patient and family communication.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>A Generic Appraisal Framework</h3>
+                    <p>When you sit down to appraise (or use) a digital storytelling template, run it against these criteria:</p>
+                    <table class="text-sm">
+                        <thead><tr><th>Criterion</th><th>What to Look For</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Narrative structure</strong></td><td>Does the template scaffold a clear beginning–middle–end, ideally anchored to a recognised reflective model (e.g. Gibbs' Reflective Cycle, or Driscoll's "What? So What? Now What?")?</td></tr>
+                            <tr><td><strong>Alignment to learning outcomes</strong></td><td>Does it explicitly prompt reflection tied to the unit's SLOs (here, SLO1 and SLO4 — end of life law and its effect on practice), rather than a generic "tell us about your day"?</td></tr>
+                            <tr><td><strong>Confidentiality & privacy</strong></td><td>Does the template build in prompts to de-identify patients, avoid any identifying images/audio, and comply with the Paramedicine Board's Code of Conduct on patient privacy? This is non-negotiable in a healthcare reflective assessment.</td></tr>
+                            <tr><td><strong>Multimodal literacy</strong></td><td>Is the blend of narration, text, and imagery purposeful rather than decorative? Are captions/accessibility features available?</td></tr>
+                            <tr><td><strong>Assessment alignment</strong></td><td>Is a marking rubric visible, and does the template's structure actually let you demonstrate each rubric criterion?</td></tr>
+                            <tr><td><strong>Technical usability</strong></td><td>Export format, length limits, and file size — does the template make it easy to produce something that actually submits cleanly within those constraints?</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Suggested Production Process</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm">
+                        <li><strong>Select a moment</strong> from placement with genuine learning value — often the cases that felt uncomfortable or uncertain (a palliative call where the law's presence or absence shaped what you could do is a strong candidate, given SLO4).</li>
+                        <li><strong>Storyboard</strong> using a reflective model before touching the software — what happened, what you felt, what you learned, what you'd do differently.</li>
+                        <li><strong>Gather or create fully de-identified visuals</strong> — stock imagery, illustrations, or your own non-identifying photos of equipment/environment, never patients.</li>
+                        <li><strong>Record narration</strong> in your own voice where the assessment calls for it — authenticity matters more than production polish.</li>
+                        <li><strong>Check against the rubric and confidentiality requirements</strong> before finalising.</li>
+                        <li><strong>Export and submit</strong> in the required format.</li>
+                    </ol>
+                </div>
+
+                <div class="note-box">
+                    <p><strong>To make this section precise:</strong> share the actual Adobe Clinical Placement Digital Storytelling template and its rubric, and I'll appraise it directly against your unit's specific criteria rather than this generic framework.</p>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 6: END OF LIFE LAW ================= -->
+            <section id="eol-law" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">6. End of Life Law <span class="lo-badge">LO6 · SLO1</span></h2>
+
+                <div class="physiology-box">
+                    <h3>About the ELLC Program</h3>
+                    <p>End of Life Law for Clinicians (ELLC) is a free, government-funded national training program administered by the Australian Centre for Health Law Research at Queensland University of Technology. It comprises 13 self-paced online modules covering the law relating to end of life decision-making across every Australian state and territory, and is CPD-accredited for multiple professional colleges. Its structure is a useful map of the whole field.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>The 13 ELLC Modules at a Glance</h3>
+                    <table class="text-sm">
+                        <thead><tr><th>#</th><th>Module</th><th>Core Learning Outcome</th></tr></thead>
+                        <tbody>
+                            <tr><td>1</td><td>The role of law in end of life care</td><td>Describe the role law plays in clinical/nursing practice at the end of life.</td></tr>
+                            <tr><td>2</td><td>Capacity and consent to medical treatment</td><td>Identify when consent is required and valid; define capacity and how it's determined.</td></tr>
+                            <tr><td>3</td><td>Withholding and withdrawing life-sustaining treatment</td><td>Identify when such a decision can be made and when it must be followed.</td></tr>
+                            <tr><td>4</td><td>Advance Care Planning & Advance Care Directives</td><td>Identify what an ACD can contain, and when it applies and must be followed.</td></tr>
+                            <tr><td>5</td><td>Substitute decision-making for medical treatment</td><td>Identify who the appropriate substitute decision-maker is, and when their decision must be followed.</td></tr>
+                            <tr><td>6</td><td>Legal protection for administering pain and symptom relief</td><td>Explain the doctrine of double effect and differentiate lawful symptom relief from voluntary assisted dying.</td></tr>
+                            <tr><td>7</td><td>Children and end of life decision-making</td><td>Identify who decides for children, when a competent child can consent/refuse, and emergency treatment rules for children.</td></tr>
+                            <tr><td>8</td><td>Futile or non-beneficial treatment</td><td>Explain who decides treatment is futile, and when it can be withheld/withdrawn.</td></tr>
+                            <tr><td>9</td><td>Urgent (emergency) treatment for adults</td><td>Identify when life-sustaining treatment can be given without consent, or withheld/withdrawn, in an emergency.</td></tr>
+                            <tr><td>10</td><td>Managing conflict</td><td>Identify processes for managing disputes and the role of guardianship bodies, courts, and tribunals.</td></tr>
+                            <tr><td>11</td><td>Voluntary assisted dying</td><td>Describe VAD's legal status, eligibility/process, and how it differs from symptom relief and withholding/withdrawing treatment.</td></tr>
+                            <tr><td>12</td><td>Aboriginal and/or Torres Strait Islander Peoples and end of life law</td><td>Understand legal considerations in caring for Aboriginal and/or Torres Strait Islander Peoples, families, and communities at end of life, and provide culturally safe care.</td></tr>
+                            <tr><td>13</td><td>Inclusive end of life decision-making with diverse populations</td><td>Understand legal considerations for LGBTIQ+ people, CALD/refugee backgrounds, people with disability, and people with frailty.</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="text-sm mt-2">Free registration for the full program: <code>ellc.edu.au</code></p>
+                </div>
+
+                <h3 class="text-2xl font-bold text-gray-700 mt-6">Deep Dive: The Concepts Most Relevant to Paramedics</h3>
+
+                <div class="disorder-box">
+                    <h3>Consent & Capacity (Module 2)</h3>
+                    <p>Valid consent must be voluntary, specific to the treatment proposed, and given by a person with capacity for that particular decision at that particular time. Capacity is <strong>decision-specific and time-specific</strong> — a person can lack capacity for one decision while retaining it for another, and capacity can fluctuate (e.g. with pain, intoxication, delirium, or fatigue). Adults are presumed to have capacity unless there's reason to doubt it.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Advance Care Directives (Module 4)</h3>
+                    <p>An Advance Care Directive (ACD) is a document made by a person with capacity, setting out their wishes or specific instructions about future medical treatment, for use once they lose capacity to decide for themselves. A valid, applicable ACD that clearly refuses a specific treatment generally must be followed — even in an emergency — because it operates as the person's own contemporaneous refusal of consent, made while they could still decide. In NSW this may take the form of a written NSW Health Advance Care Directive, or another document/verbal instruction that meets the legal requirements for validity.</p>
+                    <p class="mt-2 text-sm"><strong>Paramedic reality check:</strong> the challenge is rarely the law itself — it's whether a valid, applicable, and current ACD is actually available, legible, and clearly on-point for the specific situation at 3am on scene.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Substitute Decision-Makers (Module 5)</h3>
+                    <p>When a person lacks capacity and has no applicable ACD, someone else must be consulted. In NSW, the <strong>"person responsible"</strong> is identified through a hierarchy under guardianship legislation: first, any guardian (including an Enduring Guardian the person appointed while they had capacity) if the decision falls within that guardian's authorised functions; then a spouse or de facto partner with a close, continuing relationship; then an unpaid carer providing regular support; then a close friend or relative. This hierarchy exists precisely so paramedics and clinicians aren't left guessing who has authority to speak for the patient.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>The Doctrine of Double Effect (Module 6)</h3>
+                    <p>Providing appropriately titrated pain and symptom relief is lawful even if, as a foreseen but <strong>unintended</strong> side effect, it may hasten death — provided the primary intention is genuinely to relieve suffering and the dose is proportionate to that goal. This is the legal principle that distinguishes ordinary, appropriate palliative symptom management from voluntary assisted dying, where causing death is the intended outcome. Understanding this distinction matters because fear of legal liability (sometimes called "opiophobia") can otherwise lead clinicians to under-treat a dying patient's pain.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Urgent (Emergency) Treatment for Adults (Module 9)</h3>
+                    <p>This is the module most directly relevant to prehospital practice. The law generally permits necessary life-sustaining treatment to be given without consent in a genuine emergency, when the person lacks capacity and there's no reasonably available substitute decision-maker or applicable directive to consult in time. This permission is not, however, unlimited: if a valid, applicable ACD refusing that specific treatment is known to exist, it should still be respected even in an emergency, because the person has already exercised their right to refuse in advance.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Futile or Non-Beneficial Treatment (Module 8)</h3>
+                    <p>Treatment can lawfully be withheld or withdrawn where it would not provide any overall benefit to the patient — this determination sits with treating clinicians (usually in consultation with family/substitute decision-makers), not with the family alone. In the prehospital environment, paramedics rarely make this determination independently; this is precisely the situation an <strong>Authorised Palliative Care Plan or Resuscitation Plan</strong> (Section 7) is designed to pre-empt, by documenting the treating team's decision in advance for paramedics to act on.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Managing Conflict (Module 10)</h3>
+                    <p>When family members disagree with each other, with the patient's documented wishes, or with the treating team about end of life decisions, formal dispute-resolution pathways exist through guardianship tribunals (in NSW, the NSW Civil and Administrative Tribunal — NCAT) and courts. Paramedics are not expected to resolve these disputes on scene — the priority is safe, immediate patient care plus clear documentation and escalation, leaving formal resolution to the appropriate body.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Voluntary Assisted Dying (Module 11)</h3>
+                    <p>Voluntary assisted dying (VAD) is a lawful practice — separate from, and legally distinct from, appropriate symptom relief or withholding/withdrawing treatment — in which an eligible person with a terminal illness requests and receives medication to end their life, subject to strict eligibility criteria and process safeguards. As of September 2026, VAD is now law in <strong>every</strong> Australian state and territory: Victoria (since 2019), Western Australia (2021), Tasmania (2022), Queensland and South Australia (2023), New South Wales (2023), and the ACT (November 2025). The Northern Territory passed its own VAD legislation on 27 August 2026, but it will not be operational until early 2028 while implementation systems are built. Each jurisdiction has its own eligibility criteria (e.g. a prognosis of death within a defined timeframe in most states, with no such timeframe in the ACT) and residency requirements, and Commonwealth law currently restricts the use of telehealth to discuss or arrange VAD.</p>
+                    <div class="management-box mt-2">
+                        <strong>Scope note:</strong> Paramedics are not involved in the assessment, prescription, or administration of VAD medication — this sits entirely within the specific medical/nurse practitioner pathway set out in each state's Act. What <em>is</em> relevant to paramedic practice is recognising the difference between a person who has legally accessed VAD (where death was an intended, planned outcome under a specific legislative scheme) and any other end of life presentation, and following your service's specific policy if called to a scene involving VAD.
+                    </div>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Aboriginal and/or Torres Strait Islander Peoples & End of Life Law (Module 12)</h3>
+                    <p>Culturally safe end of life care requires understanding that decision-making at the end of life may involve extended family and community/kinship structures beyond the legal "person responsible" hierarchy, and that culturally appropriate practices around death, dying, and the body matter deeply. Cultural safety is determined by Aboriginal and Torres Strait Islander individuals, families, and communities themselves — it requires ongoing critical reflection by the practitioner on their own knowledge, biases, and the power differentials present in the clinical encounter, and care that is free from racism.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Inclusive Care for Diverse Populations (Module 13)</h3>
+                    <p>The same legal principles apply universally, but their practical application needs adjustment for different populations: recognising a same-sex partner or chosen family member's role as a substitute decision-maker for LGBTIQ+ patients; engaging professional interpreters (not family members) for people from culturally and linguistically diverse or refugee backgrounds; ensuring people with disability are supported (not bypassed) in expressing their own wishes wherever they have capacity to do so; and recognising that frailty alone does not equate to a loss of capacity or a reduced entitlement to full, respectful decision-making involvement.</p>
+                </div>
+            </section>
+
+            <!-- ================= SECTION 7: LAW & PARAMEDIC PRACTICE ================= -->
+            <section id="law-practice" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">7. Affordances & Limitations: How the Law Shapes Paramedic Practice and the Palliative Care Experience <span class="lo-badge">LO7 · SLO4</span></h2>
+
+                <div class="physiology-box">
+                    <h3>A Framework for Thinking About This</h3>
+                    <p>An <strong>affordance</strong> is something the law enables or makes possible — it gives paramedics a tool, a permission, or a clear answer. A <strong>limitation</strong> is where the same legal framework falls short in the messy reality of an out-of-hospital emergency — where it's silent, inaccessible, poorly matched to the situation, or creates a bias toward a default action that may not reflect what the dying person actually wanted. Almost every legal mechanism in end of life care has both faces at once.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Worked Examples: Affordance vs Limitation</h3>
+                    <table class="text-sm">
+                        <thead><tr><th>Legal Mechanism</th><th>Affordance</th><th>Limitation</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Advance Care Directives</strong></td>
+                                <td>Gives a patient a documented voice when they can no longer speak for themselves, and gives paramedics confidence to honour those wishes.</td>
+                                <td>Often not present, not accessible, out of date, or not specific enough to the exact situation unfolding — leaving paramedics to interpret intent under time pressure.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>NSW Ambulance Authorised Palliative Care Plans (APCP) & NSW Health Resuscitation Plans</strong></td>
+                                <td>Translate a treating doctor's decisions into an explicit, paramedic-specific set of instructions — resuscitation status, preferred place of care, symptom-control medication orders — reducing unwanted transport or resuscitation.</td>
+                                <td>Require prior completion and formal endorsement (historically taking weeks to process), aren't accessible for a patient who deteriorates suddenly before one is arranged, and are only valid Monday–Friday processing windows for new/updated plans — a real gap for weekend or after-hours crises.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Emergency treatment doctrine (Module 9)</strong></td>
+                                <td>Allows paramedics to act decisively to save life without consent when it's genuinely needed and no other guidance is available.</td>
+                                <td>Creates a structural bias toward resuscitating/transporting by default, which can work against a dying person's likely wishes when those wishes simply weren't captured in a legally recognised document on scene.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Doctrine of double effect</strong></td>
+                                <td>Gives clear legal protection for proportionate, well-intentioned symptom relief, even near the end of life.</td>
+                                <td>Some clinicians remain cautious about litigation risk and under-treat pain as a result ("opiophobia") — the legal protection exists, but confidence in using it doesn't always follow.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Substitute decision-maker hierarchy</strong></td>
+                                <td>Provides a clear default answer for who speaks for the patient when no ACD exists.</td>
+                                <td>Verifying relationship status and priority within the hierarchy at short notice on scene is genuinely difficult, and family members of equal standing can disagree with each other in the moment.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>State-based legal variation (including VAD)</strong></td>
+                                <td>Allows each jurisdiction to tailor its framework to local needs and community views.</td>
+                                <td>Creates real uncertainty for paramedics attending patients who have recently moved between states, or for services operating near state borders, since ACD formats, guardianship rules, and VAD eligibility all differ.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Practical Strategies for Developing Your Own Practice</h3>
+                    <ul class="list-disc list-inside text-sm space-y-1">
+                        <li>Ask early and directly on any palliative or clearly life-limiting-illness job whether a Resuscitation Plan, Authorised Care Plan, or Advance Care Directive exists — don't wait for the family to volunteer it.</li>
+                        <li>When documentation is absent or ambiguous, use your service's clinical support/medical advice line to get real-time guidance rather than guessing under pressure.</li>
+                        <li>Document your reasoning thoroughly, not just your actions — in end of life cases, <em>why</em> you did (or didn't do) something is often as clinically and legally important as what you did.</li>
+                        <li>Debrief after difficult end of life calls — both for your own wellbeing and to build a genuine, reflective understanding of how the law played out in that specific case.</li>
+                        <li>Stay current: this is one of the fastest-moving areas of Australian health law (VAD alone has changed in every jurisdiction within the last seven years) — what you learn this year should be treated as a snapshot, not a permanent reference.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Reflective Prompts (Useful for Your Digital Storytelling Piece)</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm">
+                        <li>Think of a placement case (real or hypothetical) where the presence — or absence — of legal documentation changed what you were able to do for a dying patient. What did that feel like, and what did it teach you?</li>
+                        <li>Where did you feel the law gave you confidence to act, and where did you feel it left a gap you had to fill with judgement, communication, or escalation?</li>
+                        <li>How might your future practice change based on what you now understand about capacity, ACDs, substitute decision-makers, and the doctrine of double effect?</li>
+                        <li>How does the law's treatment of Aboriginal and/or Torres Strait Islander decision-making structures, or of diverse family forms, change what "person-centred" palliative care actually looks like in practice?</li>
+                    </ol>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Neuro content draws on Kottapally & Josephson, "Common neurologic emergencies for nonneurologists" (Cleveland Clinic Journal of Medicine, 2016). End of life law content draws on the End of Life Law for Clinicians (ELLC) curriculum (QUT Australian Centre for Health Law Research) and NSW Health/NSW Ambulance policy on Resuscitation Plans and Authorised Care Plans. Professional capability domains are drawn from the Paramedicine Board of Australia's Professional Capabilities for Registered Paramedics. Placement-administration sections (learning contract, help-seeking, digital storytelling) are generic scaffolds — verify against your own university's current handbook and templates. VAD legal status current as of September 2026; always check for the latest position before relying on it clinically.</p>
+        </footer>
+    </div>
+</body>
+</html>
