@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .sat-high { background-color: #fee2e2; color: #991b1b; font-weight: bold; }
+        .sat-med { background-color: #fef3c7; color: #92400e; font-weight: bold; }
+        .sat-low { background-color: #dcfce7; color: #166534; font-weight: bold; }
+        .case-tag {
+            display: inline-block;
+            background-color: #0f766e;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.6rem;
+            border-radius: 9999px;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Mental Health</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#framework" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Epidemiology & the MSE</a>
+                <a href="#assessment" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Safety, History & Law</a>
+                <a href="#abd" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Acute Behavioural Disturbance</a>
+                <a href="#suicidality" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Suicidality & Self-Harm</a>
+                <a href="#substance" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Substance-Affected MH</a>
+                <a href="#psychosis" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Psychosis</a>
+                <a href="#anxiety" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Anxiety & Panic Attacks</a>
+                <a href="#cases" class="bg-teal-600 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-700">Clinical Case Analysis</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Epidemiology & MSE -->
+            <section id="framework" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Epidemiology & The Mental Status Examination</h2>
+
+                <div class="physiology-box">
+                    <h3>Scale of the Problem for EMS</h3>
+                    <p>Mental health is not a niche caseload — it is a substantial and growing share of everyday ambulance work. An analysis of Ambulance Victoria's 2015 data found that of 504,676 total attendances, <strong>9.5% (48,041)</strong> were coded as mental health-related, with a further 6.6% of the secondary telephone triage caseload also mental health-related (Andrew et al.). A widely cited earlier analysis of Victorian ambulance data (Turning Point, 2013) put the broader figure — including self-harm and substance-related calls — closer to <strong>1 in 5</strong> emergency calls.</p>
+                    <p class="mt-2">Patterns worth knowing:</p>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Mental health patients attended by EMS tend to be <strong>younger and more often female</strong> than the general EMS caseload.</li>
+                        <li>Paramedics provide active <em>treatment</em> far less often in this cohort (≈12% vs ≈50% for other patients) — the core paramedic skill set here is <strong>assessment, de-escalation, risk stratification and disposition</strong>, not procedural intervention.</li>
+                        <li>Most mental health patients (≈75%) have a <strong>documented mental health history</strong> — collateral information and past records are frequently available and valuable.</li>
+                        <li>Presentation type varies with age: social/emotional crises dominate in patients ≤15 years, while anxiety is the most common mental health presentation in patients ≥65 years.</li>
+                        <li>A small number of frequent service users (often with complex trauma histories or personality disorder features) account for a disproportionate share of mental health-related callouts — a pattern worth recognising without letting it produce compassion fatigue or assumptions about any individual patient.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>The Mental Status Examination (MSE)</h3>
+                    <p>The MSE is a structured, repeatable snapshot of a person's psychological functioning <em>at the point of contact</em> — distinct from a full psychiatric history, and something a paramedic can complete through observation and a few targeted questions, even in a short or difficult encounter. All four case scripts referenced in this guide are documented using this framework, and it is a useful mental checklist for structuring your own handover.</p>
+                    <table class="mt-2">
+                        <thead>
+                            <tr><th>Domain</th><th>What you're assessing</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Appearance</strong></td><td>Grooming, dress, hygiene, apparent age vs stated age, visible injuries.</td></tr>
+                            <tr><td><strong>Behaviour</strong></td><td>Psychomotor activity (agitated, retarded, pacing), eye contact, cooperation, unusual movements.</td></tr>
+                            <tr><td><strong>Speech</strong></td><td>Rate, volume, tone, coherence — pressured, slurred, slowed, or disorganised speech are all clinically significant.</td></tr>
+                            <tr><td><strong>Mood & Affect</strong></td><td>Mood is the patient's <em>reported</em> emotional state; affect is your <em>observed</em> emotional expression. Note whether affect matches mood and context (congruent) or not (flat, blunted, labile).</td></tr>
+                            <tr><td><strong>Thought — Content</strong></td><td><em>What</em> the person is thinking: delusions, suicidal or self-harm ideation, preoccupations, fears.</td></tr>
+                            <tr><td><strong>Thought — Form</strong></td><td><em>How</em> thoughts are organised and connected: coherent and goal-directed, versus disorganised or tangential.</td></tr>
+                            <tr><td><strong>Perception</strong></td><td>Presence of hallucinations (any sensory modality) or other perceptual disturbances.</td></tr>
+                            <tr><td><strong>Cognition</strong></td><td>Level of consciousness, orientation, attention, memory — and whether these are being affected by substances, a medical cause, or the mental health condition itself.</td></tr>
+                            <tr><td><strong>Insight & Judgement</strong></td><td>Does the patient recognise something is wrong, and can they reason safely about it? Poor insight/judgement raises the stakes on your risk assessment and transport decision.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Safety, History & Legal Framework -->
+            <section id="assessment" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Scene Safety, History Taking & the Legal Framework</h2>
+
+                <div class="assessment-box">
+                    <h3>Scene Safety Before Assessment</h3>
+                    <p>Safety for the clinician, bystanders and patient comes first, every time:</p>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Never approach a patient who is holding or has access to a weapon — request urgent police assistance instead.</li>
+                        <li>Identify a space with minimal distractions where possible, and remove unnecessary bystanders — while recognising family or carers present may hold important collateral information.</li>
+                        <li>Consider environmental hazards and the possibility of the patient absconding.</li>
+                        <li>Plan an exit route before you commit to the assessment.</li>
+                        <li>Approach calmly, avoid sudden or threatening gestures, and do not assess a patient with acute disturbance alone — have at least one other clinician or support person present.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>History Taking</h3>
+                    <p>When it is safe to do so, a full assessment includes:</p>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Collateral history from family, carers or bystanders present at the scene.</li>
+                        <li>Detailed clinical, social, and drug/alcohol history.</li>
+                        <li>Physical examination and a full vital signs survey — HR, BP, RR, temperature, SpO₂ and blood glucose level.</li>
+                        <li>A structured MSE (see above) and, where behavioural disturbance is present, a formal severity score (see the Sedation Assessment Tool, next section).</li>
+                    </ul>
+                    <p class="mt-2"><strong>Red flags for an underlying medical cause</strong> masquerading as a mental health presentation: first episode of behavioural disturbance in a person aged 45 or older, abnormal vital signs, focal neurological findings, decreased awareness of surroundings, difficulty maintaining attention, or the absence of any clear precipitant. A patient's clinical condition can change quickly — reassess frequently.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Legal Framework for Restrictive Interventions (NSW)</h3>
+                    <p>Restrictive interventions — physical restraint, involuntary transport, or emergency sedation — are only lawful within a defined framework. The general hierarchy of authority (mirrored, with local variations, across Australian jurisdictions):</p>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li><strong>Adult with decision-making capacity:</strong> proceed with the patient's informed consent.</li>
+                        <li><strong>Adult with impaired capacity:</strong> consent from a substitute decision-maker (guardian, attorney, or statutory health attorney) where practicable.</li>
+                        <li><strong>Imminent risk to life or health:</strong> treatment necessary to avert an imminent risk may proceed without consent.</li>
+                        <li><strong>Statutory emergency powers:</strong> each state/territory's mental health legislation provides a specific power to detain or transport a person for assessment without consent when defined criteria are met.</li>
+                    </ul>
+                    <p class="mt-3">In NSW, the key statutory power is the <em>Mental Health Act 2007 (NSW)</em>:</p>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li><strong>s 20</strong> — an ambulance officer may take a person to a declared mental health facility if they believe, on reasonable grounds, that the person appears to be mentally ill or mentally disturbed and that this would be beneficial to the person's welfare. The officer may request police assistance under s 20(2) where there are safety concerns.</li>
+                        <li><strong>s 81</strong> — where a person is being taken to (or from) a mental health facility under the Act's authority, this section authorises the use of reasonable force, physical restraint, and (for trained paramedics) sedation to facilitate that transport safely.</li>
+                        <li><strong>s 22</strong> — the parallel power exercised by police officers to apprehend a person believed to be mentally ill or disturbed.</li>
+                    </ul>
+                    <p class="mt-2 text-sm text-gray-700"><em>Note for study purposes:</em> legal commentators have debated exactly how far s 20 extends — particularly whether it authorises detaining a <em>competent</em> patient who withholds consent, as opposed to simply authorising transport once the belief threshold is met. This is a genuinely contested area of paramedic practice law, not settled trivia — treat this section as an orientation to the framework, not exhaustive legal advice, and follow your service's protocols and legal team guidance in practice.</p>
+                    <p class="mt-2">For adolescent patients, the concept of <strong>Gillick competence</strong> (a minor's demonstrated capacity to understand and consent to their own care) is also relevant — it appears explicitly in ANZCA's national sedation guidance and is a general principle worth knowing when a young person, like Keira in the case studies below, may want a say in decisions separate from a parent's wishes.</p>
+                </div>
+            </section>
+
+            <!-- Acute Behavioural Disturbance -->
+            <section id="abd" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Acute Behavioural Disturbance (ABD)</h2>
+
+                <div class="disorder-box">
+                    <h3>Definition & Presentations</h3>
+                    <p><strong>ABD</strong> is behaviour that puts the patient or others at immediate risk of serious harm — including threatening or aggressive behaviour, extreme distress, or serious self-harm that could cause major injury or death (QAS definition). It is a behavioural description, not a diagnosis, and can arise from many different underlying causes.</p>
+                    <p class="mt-2">Common presentations include agitation, panic, yelling, disorganised behaviour, threats toward self or others, and aggressive or violent behaviour.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Causes of ABD</h3>
+                    <p>The cause can be multifactorial, but is generally classified into five categories. Identifying the likely cause guides the most appropriate care:</p>
+                    <table class="mt-2 text-sm">
+                        <thead><tr><th>Category</th><th>Examples</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Substance toxicity</strong></td><td>Alcohol, hallucinogens, psychostimulants (amphetamines, cocaine), benzodiazepines, ketamine, LSD, cannabis, or other drug toxicity.</td></tr>
+                            <tr><td><strong>Medical / organic disorders</strong></td><td>Encephalitis, meningitis, hepatic or renal encephalopathy, post-ictal state, hypoglycaemia, electrolyte disturbance, hypoxia, head injury, acute delirium, dementia.</td></tr>
+                            <tr><td><strong>Acute mental health conditions</strong></td><td>Schizophrenia, bipolar disorder, other psychotic disorders, anxiety disorders, borderline and antisocial personality disorders.</td></tr>
+                            <tr><td><strong>Situational factors</strong></td><td>Overwhelming stress, pain, and an inability to communicate effectively.</td></tr>
+                            <tr><td><strong>Behavioural / neurodevelopmental</strong></td><td>Exacerbation of intellectual disability, impulse control disorders, autism, acquired brain injury.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>The Sedation Assessment Tool (SAT)</h3>
+                    <p>A rapid numerical score of anxiety/agitation that guides decision-making around the need for de-escalation, restraint or sedation, and tracks the patient's response over time.</p>
+                    <table class="text-center mt-2">
+                        <thead><tr><th class="text-left">Score</th><th>Responsiveness</th><th>Speech</th></tr></thead>
+                        <tbody>
+                            <tr><td class="sat-high text-left">+3</td><td class="sat-high">Combative, violent, out of control</td><td class="sat-high">Continual loud outbursts</td></tr>
+                            <tr><td class="sat-med text-left">+2</td><td class="sat-med">Very anxious and agitated</td><td class="sat-med">Loud outbursts</td></tr>
+                            <tr><td class="sat-med text-left">+1</td><td class="sat-med">Anxious / restless</td><td class="sat-med">Normal / talkative</td></tr>
+                            <tr><td class="sat-low text-left">0</td><td class="sat-low">Awake and calm / cooperative</td><td class="sat-low">Speaks normally</td></tr>
+                            <tr><td class="text-left">-1</td><td>Asleep but rouses if name is called</td><td>Slurring or prominent slowing</td></tr>
+                            <tr><td class="text-left">-2</td><td>Responds to physical stimulation</td><td>Few recognisable words</td></tr>
+                            <tr><td class="text-left">-3</td><td>No response to stimulation</td><td>Nil</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Ten Principles of Verbal De-escalation</h3>
+                    <p>Verbal de-escalation is always the <strong>first-line strategy</strong> for a patient exhibiting ABD, before escalating to physical restraint or sedation.</p>
+                    <ol class="list-decimal list-inside space-y-2 mt-2 text-sm">
+                        <li><strong>Respect personal space</strong> — keep a reactionary gap of roughly two arm's lengths; if the patient asks you to move away, do so.</li>
+                        <li><strong>Don't be provocative</strong> — open, relaxed body language; hands visible and unclenched; angled rather than square-on to the patient; avoid staring, pointing, or challenging comments.</li>
+                        <li><strong>Establish verbal contact</strong> — only one clinician should speak with the patient at a time, to avoid the confusion of multiple voices; introduce yourself, your role, and orient the patient.</li>
+                        <li><strong>Be concise</strong> — short sentences and simple language, with time to process before you add more information; repeat key points.</li>
+                        <li><strong>Identify wants and feelings</strong> — ask directly what the patient wants and how they feel, and respond empathically.</li>
+                        <li><strong>Listen actively</strong> — reflect back what the patient has told you so they know they've been heard.</li>
+                        <li><strong>Find common ground</strong> — agree with the truth of their situation, the underlying principle, or simply the odds ("anyone would find that frustrating").</li>
+                        <li><strong>Set clear limits</strong> — state plainly what behaviour is and isn't acceptable (e.g. harm to self or others), without being punitive about it.</li>
+                        <li><strong>Offer choices and realistic optimism</strong> — give the patient genuine options rather than corner them into one path, and never promise something you can't deliver.</li>
+                        <li><strong>Evaluate and adjust</strong> — continuously reassess whether de-escalation is working, and be ready to escalate management if it is not.</li>
+                    </ol>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Physical Restraint</h3>
+                    <p>Restraint is a restrictive intervention with three recognised modalities:</p>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li><strong>Physical restraint</strong> — using a clinician's own body to control the patient's movement.</li>
+                        <li><strong>Mechanical restraint</strong> — a device (belt, handcuffs) applied to control movement. <strong>Paramedics are not authorised to apply mechanical restraints.</strong> Where police apply them, police must remain present for the duration.</li>
+                        <li><strong>Pharmacological restraint</strong> — sedative medication to calm the patient and prevent harm.</li>
+                    </ul>
+                    <p class="mt-2"><strong>When to restrain:</strong> only in two circumstances — an urgent need to protect the patient, clinicians or others from imminent physical harm when there is no less restrictive option available, or to facilitate the safe administration of emergency sedation (brief, hands-on restraint of limbs and support of the head, released as soon as the medication has taken effect).</p>
+                    <p class="mt-2"><strong>How to restrain safely (summary of the process):</strong></p>
+                    <ol class="list-decimal list-inside space-y-1 text-sm mt-1">
+                        <li>Request urgent police attendance wherever a threat to clinicians or others is present.</li>
+                        <li>Request backup / senior clinical consultation before starting the process if available.</li>
+                        <li>Assemble a team — ideally four people, each controlling one limb, plus a clinical leader monitoring the head, neck, chest and airway.</li>
+                        <li>Communicate constantly with the patient throughout — explain what is happening and why.</li>
+                        <li>Preserve the patient's dignity — use no more force or restriction than necessary.</li>
+                        <li>Position the patient laterally, hands restrained in front of the body, each limb controlled; never restrain limbs behind the back, and avoid prone or supine positioning.</li>
+                        <li>Never restrict the airway or circulation, apply pressure to the chest/abdomen/neck/face, inflict pain, or obstruct the mouth, nose or ears.</li>
+                    </ol>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Monitoring a Restrained Patient</h3>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Continual visual monitoring for signs of distress, breathing difficulty, ongoing struggling, or facial grimacing.</li>
+                        <li>Vital signs (respiratory rate, SpO₂, HR, BP), GCS, and SAT score recorded at regular (five-minute) intervals; distal perfusion checked where restraint is applied; BGL once initially; temperature checked regularly.</li>
+                        <li><strong>Limit the duration of restraint</strong> to the shortest time possible — as a guide, no longer than around 10 minutes, or only as long as needed for sedation to take effect.</li>
+                        <li>Comprehensive documentation: reason for restraint, method used, start/end time, observations, and care provided. Pre-notify the receiving hospital.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Restraint Safety Risks</h3>
+                    <p>Physical restraint carries real risk of harm to both patient and clinician:</p>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li><strong>Positional risk:</strong> the prone position can impede breathing and cause positional asphyxia — avoid it, and if the patient ends up prone, reposition within two minutes. The supine position risks aspiration if the patient vomits.</li>
+                        <li><strong>Pressure-related risk:</strong> weight applied to the chest, back or abdomen restricts diaphragm movement and can cause hypoventilatory respiratory failure — worse still if combined with the prone position.</li>
+                        <li><strong>Exertional & health-status risk:</strong> sudden death can occur during extreme agitation ("excited delirium") combined with restraint, from forceful struggle, exertional hyperthermia and acidosis, psychostimulant toxicity, underlying heart disease, positional asphyxia, or obesity.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Where Procedural Sedation Guidance Doesn't Apply</h3>
+                    <p>National sedation guidance for elective/diagnostic procedures (e.g. ANZCA's <em>PG09(G) Guideline on procedural sedation</em>) explicitly <strong>excludes</strong> non-procedural sedation for acute behavioural disturbance from its scope. That guideline's principles — staged sedation depth, fasting, capnography, recovery in a controlled facility — are built around a planned, cooperative procedure and don't transfer directly to an unplanned, safety-critical scene. Emergency sedation for ABD is instead governed by service-specific clinical practice guidelines and legislative authority (see the legal framework above), reflecting a fundamentally different risk profile and decision-making context.</p>
+                </div>
+            </section>
+
+            <!-- Suicidality & Self-Harm -->
+            <section id="suicidality" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Suicidality, Self-Harm & Risk Assessment</h2>
+
+                <div class="disorder-box">
+                    <h3>Suicidal Ideation</h3>
+                    <p>Suicidal thoughts exist on a spectrum from passive ("I wish I wasn't here") to active, with intent and a specific plan. The clinical task is to establish where on that spectrum a patient sits, through direct, non-judgemental questioning:</p>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Is the person having thoughts of ending their life?</li>
+                        <li>Do they have a specific <strong>plan</strong>?</li>
+                        <li>Do they have <strong>access to means</strong> (e.g. medication, a weapon)?</li>
+                        <li>What is the intended <strong>timeframe</strong>?</li>
+                        <li>Is there a history of previous attempts?</li>
+                        <li>What protective factors exist — connectedness to others, reasons for living, willingness to engage with help?</li>
+                    </ul>
+                    <p class="mt-2"><strong>Directly asking about suicide does not increase risk</strong> — a persistent myth worth actively unlearning. Avoiding the question out of discomfort leaves risk unassessed, not reduced.</p>
+                    <p class="mt-2">Warning signs can include sudden withdrawal from friends and family, deteriorating sleep, increasing irritability, giving away possessions, or — counterintuitively — a sudden sense of calm after a period of visible distress, which can reflect a decision having been made.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Non-Suicidal Self-Injury (NSSI)</h3>
+                    <p>NSSI is deliberate self-harm (most commonly cutting) carried out <strong>without suicidal intent</strong>. It functions for many people as an emotion-regulation coping mechanism: intense internal distress builds to a point that feels unbearable, the act of self-harm interrupts that tension, and a sense of relief or calm follows — which is precisely why it can become a repeated coping strategy.</p>
+                    <p class="mt-2">NSSI is distinguished from suicidal behaviour by directly asking about intent — but the two are not mutually exclusive, and NSSI is itself a recognised risk factor for future suicidal behaviour. A history of NSSI, or a current NSSI presentation, should never shortcut a full risk assessment.</p>
+                    <p class="mt-2">Practical considerations: assess wound number, depth, and mechanism, but do so with sensitivity — many patients who self-harm are reluctant to show injuries and may actively conceal them (e.g. holding a sleeve down), particularly to family members present.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>A Practical Approach to Risk Assessment</h3>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Ask directly, calmly, and without judgement — rapport often has to be built <em>before</em> a patient will disclose suicidal ideation or self-harm, especially where they didn't make the emergency call themselves.</li>
+                        <li>Assess insight and judgement as part of the MSE — is the person able to reason safely about their own safety right now?</li>
+                        <li>Use collateral information carefully — a parent or partner's account is valuable, but delivering it loudly or in front of the patient can itself escalate distress and damage rapport (see Case 3, below).</li>
+                        <li>Weigh patient autonomy against acute risk — this tension sits at the heart of the legal framework covered above.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Paramedic Management</h3>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li><strong>Safety first:</strong> where safe and with appropriate consent, consider means restriction (e.g. removal of accessible medication).</li>
+                        <li><strong>Wound care</strong> for self-harm injuries, assessing for depth requiring further intervention.</li>
+                        <li>Apply de-escalation principles (see ABD section) if the patient becomes agitated or wants clinicians to leave.</li>
+                        <li><strong>Transport decision-making:</strong> weigh voluntary engagement against the statutory powers covered above where capacity or immediate risk requires it.</li>
+                        <li>Thorough documentation and handover of every identified risk factor, plan detail, and protective factor.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Substance-Affected Mental Health -->
+            <section id="substance" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Substance-Affected Mental Health Presentations</h2>
+
+                <div class="disorder-box">
+                    <h3>Why Substance Use Complicates Assessment</h3>
+                    <p>Alcohol and other drugs can <strong>mask, mimic, or precipitate</strong> psychiatric symptoms — intoxication can flatten or exaggerate affect, cloud thought form, and lower the threshold for disclosing distress; withdrawal states can themselves produce agitation or psychosis-like symptoms. A significantly intoxicated patient's capacity to make and communicate a safe decision is compromised — but a disclosed acute risk (e.g. a suicide plan) must still be acted on immediately, regardless of intoxication.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Assessing the Intoxicated Patient With Disclosed Risk</h3>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>The patient may not be aware paramedics were called, or by whom — this can produce confusion and, once the reason becomes clear, resentment or agitation.</li>
+                        <li>Building rapport with a reluctant, intoxicated patient often takes sustained, patient conversation before risk information surfaces.</li>
+                        <li>Watch for escalating agitation as the conversation progresses — alcohol lowers behavioural inhibition, and a patient who was initially friendly can become hostile once a sensitive topic (e.g. a relationship breakdown) is raised.</li>
+                        <li>Reassess the mental state repeatedly — the clinical picture can shift meaningfully within the course of a single job as intoxication and mood interact.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Paramedic Management</h3>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Once a genuine risk is disclosed, <strong>"they'll sleep it off" is not a safe disposition</strong> — alcohol is disinhibiting and can increase both the likelihood of acting on a plan and the lethality of the chosen means.</li>
+                        <li>Consider involuntary transport under mental health legislation where capacity is significantly compromised and risk is immediate (see legal framework, above).</li>
+                        <li>Prioritise clinician safety while maintaining a calm, non-confrontational approach if the patient becomes agitated and wants clinicians to leave.</li>
+                        <li>Document the intoxication level alongside the risk assessment, since it directly affects how the receiving service should interpret and reassess the presentation.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Psychosis -->
+            <section id="psychosis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Psychosis</h2>
+
+                <div class="physiology-box">
+                    <h3>What Is Psychosis?</h3>
+                    <p>Psychosis is a state in which a person's perception of reality is significantly impaired. Core features include hallucinations (perceiving something that isn't there — most often auditory), delusions (fixed, false beliefs held despite contrary evidence — commonly persecutory, i.e. a belief that others intend harm), disorganised thought and speech, and reduced insight into the unreality of the experience.</p>
+                    <p class="mt-2">Psychosis can arise from a primary psychiatric illness (schizophrenia, schizoaffective disorder, bipolar disorder with psychotic features), or be secondary to a medical or substance-related cause (see the ABD causes table above) — an important differential to hold in mind rather than assume.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Schizophrenia & Relapse</h3>
+                    <p>Schizophrenia is often managed long-term with depot (long-acting injectable) antipsychotic medication, allowing sustained symptom control between doses. Relapse risk rises sharply once a scheduled injection is missed — early signs can include social withdrawal, not responding to calls or messages, disorganisation, and a noticeable decline in day-to-day functioning, often over just a few days.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Assessing the Patient Experiencing Psychosis</h3>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Approach cautiously and recognise that fear or distrust of paramedics is the patient's <strong>genuine, subjectively real</strong> experience of threat — not deliberate defiance.</li>
+                        <li>Assess the environment for potential weapons, particularly in high-risk areas such as a kitchen.</li>
+                        <li>Do not argue about the reality of hallucinations or delusions — this rarely helps and can damage rapport. Validate the person's <em>distress</em> without confirming or denying the content of what they're experiencing.</li>
+                        <li>Use simple, calm, concrete language; disorganised speech and limited attention (easily distracted by internal stimuli such as auditory hallucinations) mean complex explanations are unlikely to land.</li>
+                        <li>Involve trusted collateral (e.g. a sibling) carefully — their presence can help build rapport, but the patient may still be distrustful of everyone present, including family.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Paramedic Management</h3>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Scene and personal safety assessment first, always.</li>
+                        <li>Apply the ten principles of de-escalation directly (see ABD section) — this is exactly the situation they are designed for.</li>
+                        <li>Minimise stimuli and avoid crowding the patient with multiple people speaking at once.</li>
+                        <li>Make the transport decision with the legal framework in mind where the patient is unwilling but assessed as unwell and at risk.</li>
+                        <li>Where known, liaise with the patient's existing mental health team or case worker for context and continuity of care.</li>
+                        <li>Document the specific content of hallucinations/delusions reported (verbatim where possible) — this level of detail is clinically valuable at handover.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Anxiety & Panic Attacks -->
+            <section id="anxiety" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Anxiety Disorders & Panic Attacks</h2>
+
+                <div class="physiology-box">
+                    <h3>The Physiology of a Panic Attack</h3>
+                    <p>A panic attack reflects a sudden, intense sympathetic nervous system surge — the "fight or flight" response firing in the absence of genuine physical danger. This produces tachycardia, tachypnoea (sometimes frank hyperventilation), diaphoresis, tremor, chest tightness, and dizziness or peripheral tingling (paraesthesia driven by hyperventilation-related hypocapnia). Symptoms typically build rapidly, peak within around 10 minutes, and resolve within 20–30 minutes as the sympathetic surge subsides — a time course that is itself a useful clinical clue once life threats have been excluded.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Panic Attack vs a Genuine Cardiac Emergency</h3>
+                    <p>The symptom overlap between a panic attack and acute coronary syndrome is real and significant — this is precisely why it cannot be diagnosed by symptom pattern alone in the field.</p>
+                    <table class="mt-2 text-sm">
+                        <thead><tr><th>Feature</th><th>More typical of panic attack</th><th>More typical of a cardiac cause</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Pain character</strong></td><td>Sharp, stabbing, or tight</td><td>Crushing, heavy pressure or squeezing</td></tr>
+                            <tr><td><strong>Onset</strong></td><td>Sudden, often with a stressful trigger</td><td>Can be sudden or gradual; classically worsens with exertion</td></tr>
+                            <tr><td><strong>Duration</strong></td><td>Peaks within ~10 minutes, resolves within ~20–30 minutes</td><td>Persists or worsens; does not fully resolve spontaneously</td></tr>
+                            <tr><td><strong>Associated features</strong></td><td>Fear, dread, trembling, tingling</td><td>Diaphoresis, nausea, radiation to arm/jaw, dyspnoea out of proportion to anxiety</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2"><strong>Critical caveat:</strong> this table is a pattern-recognition aid, not a rule-out tool. Every patient with chest pain or cardiac-type symptoms still requires a full objective assessment — history, vital signs, and a 12-lead ECG — before attributing the presentation to anxiety. A resolving symptom picture and normal objective findings support the diagnosis; they don't replace the need to look.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Paramedic Management</h3>
+                    <ul class="list-disc list-inside mt-1 space-y-1">
+                        <li>Complete the objective work-up first — this is both good clinical practice and often genuinely reassuring for a frightened patient.</li>
+                        <li>Once serious causes are excluded, provide calm, unhurried reassurance in a quiet environment, and coach slow, controlled breathing.</li>
+                        <li>Validate the symptoms as real and physiologically explicable, rather than minimising them ("it's just anxiety") — the physical sensations are genuine even though the trigger is not a cardiac event.</li>
+                        <li>Explain findings in plain language once life threats are excluded, and discuss follow-up (e.g. GP review) for ongoing anxiety management.</li>
+                        <li>A patient requesting repeated reassurance or re-checking of vital signs is a recognised feature of acute anxiety, not a sign the assessment was inadequate — though it's still worth one clear, complete explanation rather than an open-ended cycle of re-checks.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Clinical Case Analysis -->
+            <section id="cases" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Clinical Case Analysis</h2>
+                <p>The four scenarios below illustrate how the frameworks above apply in practice.</p>
+
+                <!-- Case 1 -->
+                <div class="assessment-box">
+                    <span class="case-tag">Case 1</span>
+                    <h3>Dave, 24M — Intoxication With Disclosed Suicidality</h3>
+                    <p><strong>Presentation:</strong> Highly intoxicated (15 standard drinks since 6pm), confused as to why paramedics were called — the call was made by his ex-girlfriend after a concerning drunk phone call, not by Dave himself. He has a history of depression and a recent relationship breakdown, with two weeks of irritability, social withdrawal, and alcohol-dependent sleep.</p>
+                    <p class="mt-2"><strong>Key clinical reasoning:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm mt-1">
+                        <li>Dave doesn't disclose suicidality until rapport is built through conversation — a clear demonstration that risk assessment often can't happen in the first minute, and disengaging early (e.g. because he "seems fine") would miss the clinical picture entirely.</li>
+                        <li>Once disclosed, the risk is unambiguous: a <strong>specific plan</strong> (overdose on non-prescription medication) — one of the clearest markers of acute, actionable risk in the framework above.</li>
+                        <li>Agitation escalates as the conversation progresses ("he will be fine," wanting paramedics to leave) — apply de-escalation principles (personal space, concise language, offering choices) while not allowing the disclosed plan to be minimised or dropped once he becomes less cooperative.</li>
+                        <li>Intoxication limits Dave's insight and judgement right now — this affects his ability to make a safe decision about his own care, and is directly relevant to whether the NSW Mental Health Act framework needs to be invoked if he continues to refuse transport.</li>
+                        <li><strong>Transport decision:</strong> a disclosed plan with means and clear intent, in a patient whose judgement is substance-impaired, strongly favours transport for further assessment — voluntarily if achievable through rapport, under statutory authority if not.</li>
+                    </ul>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="assessment-box">
+                    <span class="case-tag">Case 2</span>
+                    <h3>Sarah, 33F — Acute Psychotic Relapse</h3>
+                    <p><strong>Presentation:</strong> Persecutory delusions and threatening auditory hallucinations, in a patient with five years of stable, medicated schizophrenia who missed her last scheduled depot injection. Her sibling called after two days of unanswered calls and texts. Sarah is dishevelled, distrustful, and wants everyone to leave — including her sibling.</p>
+                    <p class="mt-2"><strong>Key clinical reasoning:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm mt-1">
+                        <li>The MSE is textbook for a psychotic relapse: disorganised speech seemingly responding to unseen stimuli, flat/diminished affect, persecutory thought content ("you will hurt me," "they will find me"), auditory hallucinations, and absent insight.</li>
+                        <li>Scene safety is a genuine, active consideration here — the setting is a kitchen (potential access to weapons), and Sarah is fearful and avoidant rather than calmly cooperative.</li>
+                        <li>Her fear of paramedics is not obstruction; it is the lived content of her persecutory delusion. De-escalation succeeds by working <em>with</em> that fear (calm, non-threatening presence, space, slow movements) rather than against it.</li>
+                        <li>The missed depot dose is the clinical hinge of the whole case — recognising medication non-adherence as the likely precipitant supports a clear, evidence-based explanation for the acute change, and is directly relevant information for the receiving mental health team.</li>
+                        <li><strong>Transport decision:</strong> impaired insight, active persecutory delusions, and reduced ability to keep herself safe support transport for psychiatric assessment, invoking statutory powers if Sarah does not consent once rapport-building has been attempted.</li>
+                    </ul>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="assessment-box">
+                    <span class="case-tag">Case 3</span>
+                    <h3>Keira, 15F — Non-Suicidal Self-Injury & Family Conflict</h3>
+                    <p><strong>Presentation:</strong> Found by her parent after cutting her forearms (five superficial-to-moderate horizontal cuts). History of depression and trauma, currently in weekly psychology care at headspace. No current suicidal ideation, though there is a past history. Keira is reserved and concealing her injuries; her parent is frantic and speaking loudly about Keira's history in front of her.</p>
+                    <p class="mt-2"><strong>Key clinical reasoning:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm mt-1">
+                        <li>This is a clear NSSI presentation, not a suicide attempt — Keira explicitly describes cutting as relieving inner tension, and directly denies suicidality once rapport is built. Distinguishing this from Case 1 matters clinically: the management priorities (wound care, distress tolerance, de-escalating the family conflict) differ from an acute suicide-plan scenario, even though both still require a genuine risk assessment.</li>
+                        <li>The parent's visible distress and loud disclosure of Keira's history <em>in front of her</em> is itself a secondary crisis in the scene — it increases Keira's agitation and actively works against disclosure. De-escalating the parent (calm, clear communication, moving the conversation to a lower-stimulus approach) is a prerequisite for engaging Keira at all.</li>
+                        <li>Keira's guardedness (holding her sleeve down, avoiding eye contact, minimal information) is a common and expected response, not evasiveness to push past — rapport has to be earned before she engages, mirroring Dave's case but for different reasons.</li>
+                        <li>As a minor, Gillick competence is relevant here: Keira's own view on disclosure and care should be sought and weighed, even as her parent's consent and involvement remain central given her age.</li>
+                        <li><strong>Transport decision:</strong> wound assessment (one deeper cut needs evaluation), ongoing psychological support needs, and the value of a calmer environment for further assessment support transport — ideally achieved through the rapport Keira ultimately offers once she reports feeling safe, rather than by force.</li>
+                    </ul>
+                </div>
+
+                <!-- Case 4 -->
+                <div class="assessment-box">
+                    <span class="case-tag">Case 4</span>
+                    <h3>Greg, 38M — Panic Attack Mimicking a Cardiac Emergency</h3>
+                    <p><strong>Presentation:</strong> Called 000 himself after a few minutes of racing heart, shortness of breath and dizziness, now resolved, with normal heart rate and no other cardiac findings. Healthy, physically active, no cardiac history, but under significant recent work stress and poor sleep. Similar episodes occurred sporadically in his early 20s.</p>
+                    <p class="mt-2"><strong>Key clinical reasoning:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm mt-1">
+                        <li>The symptom time-course (rapid onset, resolution within minutes) and the absence of cardiac risk factors both fit the panic attack pattern described above — but this conclusion is only safe to reach <em>after</em> a full objective assessment, not instead of one.</li>
+                        <li>Greg's own thought content ("I'm going to have a heart attack," "there must be something wrong with me") shows intact insight into having had a frightening experience, but genuine difficulty comprehending what actually happened — this is different from Sarah's absent insight in Case 2, and shapes a very different communication approach.</li>
+                        <li>His request for repeated re-checking is a recognisable anxiety feature, not an indication the initial assessment was incomplete — a clear, complete explanation of findings is more therapeutic than an open-ended cycle of reassurance.</li>
+                        <li>The clinical stakes of getting this wrong run in both directions: dismissing symptoms too quickly as "just anxiety" risks missing a genuine cardiac event; but failing to name anxiety as a real, common, and treatable explanation leaves Greg without a way to understand or reduce his risk of it recurring.</li>
+                        <li><strong>Transport decision:</strong> with normal objective findings and a resolved episode, transport for further assessment can reasonably be offered rather than mandated, alongside safety-netting advice and encouragement to follow up on the work stress driving these episodes.</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">This guide integrates the NSW Mental Health Act 2007 framework, the Queensland Ambulance Service Clinical Practice Guideline on Acute Behavioural Disturbance, and ANZCA's PG09(G) Guideline on Procedural Sedation (2023) alongside four simulation case scripts. Mental health presentations demand the same rigour as any other emergency: a structured assessment, an honest risk assessment, and a safety-first approach to both patient and clinician — always within your service's current protocols and the relevant state legislation.</p>
+        </footer>
+    </div>
+</body>
+</html>
