@@ -1,1 +1,875 @@
-Work  In Progress
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mass Casualty Incidents: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        h4 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .zone-hot { background-color: #fee2e2; border: 2px solid #dc2626; border-radius: 0.5rem; padding: 1rem; }
+        .zone-hot h4 { color: #991b1b; }
+        .zone-warm { background-color: #ffedd5; border: 2px solid #f97316; border-radius: 0.5rem; padding: 1rem; }
+        .zone-warm h4 { color: #9a3412; }
+        .zone-cold { background-color: #dbeafe; border: 2px solid #2563eb; border-radius: 0.5rem; padding: 1rem; }
+        .zone-cold h4 { color: #1e40af; }
+        .triage-red { background-color: #dc2626; color: white; font-weight: 700; }
+        .triage-yellow { background-color: #facc15; color: #713f12; font-weight: 700; }
+        .triage-green { background-color: #22c55e; color: white; font-weight: 700; }
+        .triage-black { background-color: #1f2937; color: white; font-weight: 700; }
+        .lo-list li { margin-bottom: 0.4rem; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Mass Casualty Incidents</h1>
+            <p class="text-xl text-gray-600 mt-2">Paramedicine Leadership — A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700" style="border:none; margin-top:0;">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#definitions" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Definitions & Concepts</a>
+                <a href="#overview" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Overview & History</a>
+                <a href="#preparation" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">State & Federal Preparation</a>
+                <a href="#ambulance-response" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Ambulance Operational Principles</a>
+                <a href="#operational-stages" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">The 4 Stages of Response</a>
+                <a href="#scene-stations" class="bg-cyan-600 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-cyan-700">Scene Stations</a>
+                <a href="#triage" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Triage: SIEVE & SORT</a>
+                <a href="#ils" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Immediate Life-Saving Interventions</a>
+                <a href="#cbrn" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">CBRN & HAZMAT</a>
+                <a href="#scene-mgmt" class="bg-pink-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-pink-600">Bystanders, Agencies & Terrain</a>
+                <a href="#destinations" class="bg-lime-600 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-lime-700">Treatment & Destinations</a>
+                <a href="#case-analysis" class="bg-slate-600 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-slate-700">Clinical Case Analysis</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Learning Outcomes -->
+            <section class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800" style="margin-top:0;">Learning Outcomes</h2>
+                <div class="physiology-box">
+                    <ul class="list-disc list-inside lo-list">
+                        <li>Define major incident, disaster, and mass casualty incident</li>
+                        <li>Describe ambulance service roles and responsibilities in a mass casualty incident</li>
+                        <li>Examine the principles of effective communication in mass casualty incident management</li>
+                        <li>Identify risk and risk mitigation strategies associated with mass casualty incidents</li>
+                        <li>Apply the principles of effective primary and secondary triage</li>
+                        <li>Apply the principles of mass casualty incident response</li>
+                        <li>Apply the principles of CBRN and HAZMAT in mass casualty response</li>
+                        <li>Effectively use the SMARTtag Triage system and Triage SORT / SIEVE</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Definitions -->
+            <section id="definitions" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Definitions & Core Concepts</h2>
+
+                <div class="physiology-box">
+                    <h3>Key Definitions</h3>
+                    <table>
+                        <thead><tr><th style="width:20%;">Term</th><th>Definition</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Mass Casualty Incident (MCI)</strong></td>
+                                <td>WHO definition: An incident which generates more patients at one time than locally available resources can manage using routine procedures. It requires exceptional emergency arrangements and additional or extraordinary assistance. In practical terms — the number of patients exceeds the resources available on scene.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Major Incident</strong></td>
+                                <td>An incident involving, or with the potential to involve, a large number of casualties which <strong>can</strong> be adequately managed by available resources, but requires a significant and coordinated response.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Disaster</strong></td>
+                                <td>An event impacting a community which causes serious disruption to the functions of that community and generates a large number of casualties, overwhelming the capacity of immediately available resources to manage the situation.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Combat Agency</strong></td>
+                                <td>The lead operational body designated by law or plan to manage a particular type of emergency or major incident (e.g. Police for terrorism, Fire & Rescue for HAZMAT).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Distinguishing the Terms — The Key Question</h3>
+                    <p>The distinguishing factor between these terms is not the number of casualties alone, but the <strong>relationship between demand and available resources</strong>:</p>
+                    <table>
+                        <thead><tr><th>Scenario</th><th>Can resources cope?</th><th>Classification</th></tr></thead>
+                        <tbody>
+                            <tr><td>Multi-vehicle crash, 8 patients, adequate crews and hospitals nearby</td><td>Yes, with coordination</td><td>Major Incident</td></tr>
+                            <tr><td>Bus rollover, 40 patients, resources on scene overwhelmed</td><td>No — exceeds routine capacity</td><td>Mass Casualty Incident</td></tr>
+                            <tr><td>Earthquake destroying community infrastructure and hospitals</td><td>No — capacity itself is destroyed</td><td>Disaster</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2">A Mass Casualty Incident can escalate into a Disaster if the surrounding health and emergency infrastructure is itself compromised.</p>
+                </div>
+            </section>
+
+            <!-- Overview & History -->
+            <section id="overview" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Overview & Historical Context</h2>
+
+                <div class="physiology-box">
+                    <h3>The Beginnings of Triage</h3>
+                    <p>Triage is the process of sorting casualties for treatment priority. Its origins are military:</p>
+                    <ul class="list-disc list-inside mt-2">
+                        <li>Formalised by the Surgeon General to Napoleon's Army of the Rhine, who prioritised treatment by clinical urgency rather than rank.</li>
+                        <li>Refined through the Korean War, which introduced a four-tiered triage system — the conceptual ancestor of the modern Red/Yellow/Green/Black categories.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Incidents of Note (Australian Context)</h3>
+                    <table>
+                        <thead><tr><th>Incident</th><th>Date</th><th>Casualties</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Granville Rail Disaster</strong></td><td>January 1977</td><td>89 dead, 213 injured</td></tr>
+                            <tr><td><strong>Kempsey Bus Crash</strong></td><td>December 1989</td><td>35 dead, 41 injured</td></tr>
+                            <tr><td><strong>Newcastle Earthquake</strong></td><td>December 1989</td><td>13 dead, 160 injured</td></tr>
+                            <tr><td><strong>Hunter Valley Bus Crash</strong></td><td>June 2023</td><td>10 dead, 25 injured</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2">These incidents drove significant reform of Australian mass casualty doctrine, command structures, and inter-agency planning arrangements.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Types of Major / Mass Casualty Incident</h3>
+                    <p>MCIs are not limited to transport crashes. Recognised categories include:</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2 text-sm">
+                        <span>• Biosecurity</span><span>• Criminal</span><span>• Cyclone</span>
+                        <span>• Earthquake</span><span>• Environmental</span><span>• Fire — Bushfire</span>
+                        <span>• Fire — Urban</span><span>• Flood</span><span>• Food safety</span>
+                        <span>• Hazardous substances</span><span>• Industrial</span><span>• Infrastructure failure</span>
+                        <span>• Landslide</span><span>• Maritime / Coastal</span><span>• Storm</span>
+                        <span>• Terrorism</span><span>• Transport</span><span>• Tsunami</span>
+                    </div>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Why Mass Casualty Incidents Are Challenging</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Dynamic:</strong> the situation, hazards, and casualty numbers evolve continuously.</li>
+                        <li><strong>Demanding:</strong> physically and cognitively taxing, often over extended periods.</li>
+                        <li><strong>Confronting:</strong> high casualty numbers, distressing injuries, and mortality.</li>
+                        <li><strong>Chaotic:</strong> the "fog" of an incident scene resists normal routine practice.</li>
+                        <li><strong>Communications:</strong> consistently cited as the most significant challenge to achieving optimal outcomes — spanning interpersonal communication, platforms of communication (radio, phone, face-to-face), and the forms and contents of communication (structured reporting).</li>
+                        <li><strong>Multiple agencies:</strong> coordinating Police, Fire & Rescue, SES, Ambulance, and others under one command philosophy.</li>
+                        <li><strong>Forensic crime scene:</strong> when the incident is also a crime scene (e.g. terrorism), evidence preservation constrains movement and intervention.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- State and Federal Preparation -->
+            <section id="preparation" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">State & Federal Preparation and Management</h2>
+
+                <div class="physiology-box">
+                    <h3>National Authorities and Agencies</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>National Emergency Management Agency (NEMA)</strong></li>
+                        <li><strong>Emergency Management Australia (EMA)</strong></li>
+                        <li><strong>Australian Institute for Disaster Resilience (AIDR)</strong></li>
+                        <li><strong>Australian Medical Assistance Teams (AUSMAT)</strong></li>
+                        <li><strong>National Critical Care and Trauma Response Centre (NCCTRC)</strong></li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>State Government Authorities and Combat Agency Roles (NSW)</h3>
+                    <table>
+                        <thead><tr><th>Agency</th><th>Core Role / Combat Agency For</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Police Force</strong></td><td>Scene control and coordination, rescue and bomb disposal, critical incident and forensic investigation, disaster victim identification, tactical operations. Combat agency for Search and Rescue, Terrorism, and Major Transport Incidents.</td></tr>
+                            <tr><td><strong>Fire and Rescue NSW</strong></td><td>HAZMAT, rescue, structural support. Combat agency for Fire, HAZMAT, and Structure Collapse.</td></tr>
+                            <tr><td><strong>Rural / Country Fire Service</strong></td><td>Combat agency for fire within rural fire districts.</td></tr>
+                            <tr><td><strong>State Emergency Service (SES)</strong></td><td>Search and rescue, support equipment, evacuation. Combat agency for floods, storms, and tsunamis.</td></tr>
+                            <tr><td><strong>NSW Ambulance</strong></td><td>Medical care and transport, rescue and special operations. Combat agency (State Health) for health-related emergencies and pandemics.</td></tr>
+                            <tr><td><strong>Australian Defence Force</strong></td><td>Supply delivery, security and control, medical support, infrastructure, logistical and engineering support.</td></tr>
+                            <tr><td><strong>EPA / Department of Primary Industries</strong></td><td>Environmental and agricultural hazard management.</td></tr>
+                            <tr><td><strong>EOCON</strong></td><td>Controls response to emergencies with no assigned combat agency (e.g. aviation, mine incidents).</td></tr>
+                        </tbody>
+                    </table>
+                    <h4>Non-Government Agencies</h4>
+                    <p>Australian Red Cross, Australian Medical Assistance Teams (AUSMAT), Disaster Relief Australia.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Legislation and Planning Framework</h3>
+                    <table>
+                        <thead><tr><th>Level</th><th>Plans / Legislation</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>National</strong></td><td>Australian Emergency Management Arrangements (AEMA); Australian Government Disaster Response Plan (COMDISPLAN); Australian Health Emergency Response Arrangements (NatHealth Arrangements); Australian Domestic Health Response Plan for All-Hazards Incidents of National Significance (AUSHEALTHRESPLAN)</td></tr>
+                            <tr><td><strong>State (NSW)</strong></td><td>Health Services Act 1997; State Emergency and Rescue Management Act 1989 (SERM Act); State Emergency Management Plan (EMPLAN); NSW Health Services Functional Area Supporting Plan (HEALTHPLAN); NSW Major Incident Medical Services Supporting Plan (MEDPLAN); NSW Ambulance Major Incident Response Plan (AMPLAN)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Principles of Preparation and Management</h3>
+                    <p><strong>PPRR (Australian Emergency Management Arrangements):</strong> Prevention → Preparedness → Response → Recovery.</p>
+                    <p class="mt-2"><strong>AIIMS (Australasian Inter-Service Incident Management System):</strong> management by objectives, functional management structures, and span of control.</p>
+                    <p class="mt-2"><strong>NSW AMPLAN's Comprehensive Approach:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>All-hazards approach</li>
+                        <li>Comprehensive approach (whole-of-organisation, applying PPRR)</li>
+                        <li>All-agencies approach</li>
+                        <li>Prepared community</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Ambulance Response Principles -->
+            <section id="ambulance-response" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Ambulance Service Operational Principles</h2>
+
+                <div class="disorder-box">
+                    <h3>General Priorities</h3>
+                    <ol class="list-decimal list-inside space-y-1">
+                        <li><strong>Do not become a casualty.</strong> Your safety, then your crew's, precedes patient care.</li>
+                        <li><strong>Report accurately.</strong> Everything downstream depends on the quality of your early information.</li>
+                        <li><strong>Do the greatest good for the greatest number.</strong> Resource-limited decision-making, not individual-patient medicine.</li>
+                        <li><strong>Bring order to chaos.</strong> Structure, command, and systematic process are the antidote to scene chaos.</li>
+                    </ol>
+                    <h4>Key Groups Present at an MCI Scene</h4>
+                    <ul class="list-disc list-inside">
+                        <li>Patients with physical injuries</li>
+                        <li>People with little or no physical injury, but psychologically affected</li>
+                        <li>People who initially leave the scene and later self-present to a health facility</li>
+                        <li>Spontaneous (untrained, unaffiliated) volunteers</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Safety</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Continuous assessment of risks and hazards</li>
+                        <li>Personal Protective Equipment appropriate to the zone and hazard</li>
+                        <li>Other safety strategies: scene lighting, traffic management, structural stability checks, situational awareness</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Communication</h3>
+                    <p>Communication is the single most cited barrier to successful MCI management. Principles include:</p>
+                    <ul class="list-disc list-inside">
+                        <li>Use of dedicated radio channels for the incident</li>
+                        <li>Efficient and effective radio use — concise and pertinent messaging</li>
+                        <li>Attention to interpersonal communication, not just technology</li>
+                        <li>Avoidance of alternative/unofficial communication methods (e.g. personal mobile phones) which fragment the common operating picture</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Navigation & Vehicles</h3>
+                    <p><strong>Navigation:</strong> latitude and longitude, alternative location methods (e.g. what3words), and standard map reading remain essential when street addressing fails (e.g. rural, off-road, or waterway incidents).</p>
+                    <p class="mt-2"><strong>Vehicles:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Emergency beacons activated for the first arriving vehicle only (to preserve scene approach for later vehicles and avoid confusing the overall picture)</li>
+                        <li>Keys remain with the vehicle</li>
+                        <li>Access and egress routes must be maintained at all times</li>
+                        <li>Vehicles arriving after the initial response report to the Staging Officer or Forward Commander and remain at the Staging Area until directed to the incident site or loading point</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Other Operational Principles</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Guide dogs and support dogs require specific management consideration</li>
+                        <li>Documentation: contemporaneous notes, use of a scribe at command posts, and Control Centre logging of all major decisions and timelines</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Operational Stages -->
+            <section id="operational-stages" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">The Operational Response — Four Stages</h2>
+
+                <div class="disorder-box">
+                    <h3>Stage 1: Recon and Report (First Ambulance on Scene)</h3>
+                    <h4>The Windscreen Report</h4>
+                    <p>On arrival, the first crew conducts a rapid 360° visual assessment <strong>from the safety of the vehicle</strong> — without committing to the scene or becoming a casualty themselves. This "windscreen survey" forms the basis of the very first, brief situation report passed to Control. It exists to trigger an early warning to the system (additional resourcing, other agency notification) before the fuller, more detailed METHANE report can be compiled.</p>
+                    <p class="mt-2"><strong>Immediate actions:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Designate an interim Forward Commander (Silver Command)</li>
+                        <li>Transmit the windscreen report</li>
+                        <li>Compile and transmit a full METHANE report</li>
+                    </ul>
+                    <h4>The METHANE Report</h4>
+                    <table>
+                        <thead><tr><th style="width:10%;">Letter</th><th>Stands For</th><th>Content</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>M</strong></td><td>Major Incident declared</td><td>Formal declaration that triggers activation of the major/mass casualty response plan</td></tr>
+                            <tr><td><strong>E</strong></td><td>Exact location</td><td>Precise location — the "onion" analogy: state the general area first, then narrow to the exact point, so listeners are not lost by excessive initial precision</td></tr>
+                            <tr><td><strong>T</strong></td><td>Type of incident</td><td>e.g. MVC, structure collapse, HAZMAT release</td></tr>
+                            <tr><td><strong>H</strong></td><td>Hazards</td><td>Present and potential hazards to responders</td></tr>
+                            <tr><td><strong>A</strong></td><td>Access and Egress</td><td>Routes in and out for emergency vehicles</td></tr>
+                            <tr><td><strong>N</strong></td><td>Number and severity of casualties</td><td>Best estimate at the time — will be refined</td></tr>
+                            <tr><td><strong>E</strong></td><td>Emergency services present and required</td><td>What is already on scene, and what else is needed</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="management-box">
+                    <h3>Stage 2: Triage SIEVE</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Perform primary Triage SIEVE across all casualties</li>
+                        <li>Deliver immediate life-saving interventions only (see dedicated section below)</li>
+                        <li>Move walking, ambulant patients away from danger toward the Survivor Reception Area</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Stage 3: Activate Posts, Supervisors, and Channel</h3>
+                    <p>A dedicated incident radio channel is designated. The Ambulance Commander attends the Emergency Operations Centre (EOC) as Bronze Command, while the on-scene Forward Commander operates as Silver Command. Six functional posts are then established (detailed in full in the Scene Stations section below):</p>
+                    <ol class="list-decimal list-inside">
+                        <li>Forward Command Post (FCP)</li>
+                        <li>Staging Area (SA)</li>
+                        <li>Incident Site (IS)</li>
+                        <li>Casualty Clearing Station (CCS)</li>
+                        <li>Loading Point (LP)</li>
+                        <li>Survivor Reception Area</li>
+                    </ol>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Stage 4: Hot Debrief and Equipment Rehabilitation</h3>
+                    <p>Crews complete a hot (immediate, on-scene) debrief and equipment/vehicle rehabilitation before being released from the incident. <strong>Release of crews can only occur after this phase</strong> — even where an individual crew feels their task is complete, structured stand-down protects both welfare and equipment/documentation integrity.</p>
+                </div>
+            </section>
+
+            <!-- Scene Stations -->
+            <section id="scene-stations" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">MCI Scene Stations — Quick Reference</h2>
+                <div class="physiology-box">
+                    <p>The diagram below (as taught) shows patient flow from the Incident Site through Triage, the Casualty Clearing Station, and out via the Loading Point to definitive care — with parallel structures for Staging, the Helicopter Landing Site, and the multi-agency Forward Command Post.</p>
+                    <p class="mt-2 text-sm text-gray-600">Incident Site → Triage (SIEVE) → Triage (SORT) → Casualty Clearing Station (Priority 1 / 2 / 3) → Ambulance Loading Point → Hospital / Trauma Centre (or Helicopter Landing Site → Trauma Centre). Ambulance Parking Point feeds the Loading Point. The Forward Command Post (QPS / QFES / QAS / QH) sits alongside the Casualty Clearing Station and Body Holding Area.</p>
+                </div>
+
+                <table>
+                    <thead><tr><th style="width:18%;">Post</th><th style="width:18%;">Supervisor</th><th>Function</th></tr></thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Post 1: Forward Command Post (FCP)</strong></td>
+                            <td>Forward Commander (Silver Command)</td>
+                            <td>Efficient management of resources on scene; alert to paramedic safety and welfare; records all decisions, directions and timelines (with a scribe for contemporaneous notes).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Post 2: Staging Area (SA)</strong></td>
+                            <td>Staging Area Supervisor</td>
+                            <td>Marshalling, security and access of vehicles; determines the helicopter landing zone in conjunction with Police; may send vehicles to the Loading Point for transport (in liaison with the FC). All arriving resources stage here first and report to the SAO before proceeding further.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Post 3: Incident Site (IS)</strong></td>
+                            <td>Incident Site Supervisor (most clinically qualified and operationally experienced crew member present) + a designated Safety Officer</td>
+                            <td>Coordinates completion of the Triage SIEVE; coordinates movement of casualties to the CCS; ongoing assessment of resource requirements. The Safety Officer is responsible for the health and safety of all personnel on site and has authority to remove staff for unsafe practice or inadequate PPE. Attending crews fulfil these tasks in the absence of dedicated specialists.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Post 4: Casualty Clearing Station (CCS)</strong></td>
+                            <td>Treatment Officer</td>
+                            <td>Purpose: re-triage using SORT, assessment and treatment, preparation for transport. Structured into a Triage Zone (patients re-triaged on arrival), Red Label Area, Yellow Label Area, Green Label Area, and a separate area for deaths occurring within the CCS (secured by Police).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Post 5: Loading Point (LP)</strong></td>
+                            <td>Loading Point Supervisor (LPS)</td>
+                            <td>Coordinates loading and transport destination; documents patient, vehicle, destination, and time; instructs crews on destination and ensures no deviation. Modes of transport include ambulance, bus, fixed-wing, and rotary-wing aircraft. Departing crews report the number, ages, and triage category of patients onboard, and their destination as instructed.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Post 6: Survivor Reception Area</strong></td>
+                            <td>—</td>
+                            <td>For uninjured or minimally affected survivors who do not require medical attention. Social workers and mental health workers are deployed here.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Body Holding Area</strong></td>
+                            <td>Police</td>
+                            <td>A separate, secured area distinct from the CCS deceased area, for deceased persons whose care has been formally ended — managed under Police/forensic control, particularly where the scene is also a crime scene.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Triage -->
+            <section id="triage" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Triage: SIEVE and SORT</h2>
+
+                <div class="physiology-box">
+                    <h3>Triage Fundamentals</h3>
+                    <p><strong>Definition:</strong> The sorting of patients according to the urgency of their need for care.</p>
+                    <p class="mt-2"><strong>Objective:</strong> Achieve the greatest good for the greatest number by rapidly determining clinical and transport priorities, and prioritising treatment and transport based on likelihood of survival.</p>
+                    <p class="mt-2"><strong>Indication:</strong> Whenever the number of patients exceeds the number of skilled personnel on scene.</p>
+                    <p class="mt-2"><strong>System used:</strong> SMART Triage, approved by the (then) Civil Aviation Authority-linked ambulance standards body in 2010, comprising two sequential tools — Triage <strong>SIEVE</strong> (primary, at the Incident Site) and Triage <strong>SORT</strong> (secondary, at the Casualty Clearing Station).</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>SMART Tag Kit — Equipment</h3>
+                    <ul class="list-disc list-inside grid grid-cols-1 md:grid-cols-2 gap-1">
+                        <li>20 interchangeable SMART triage tags</li>
+                        <li>10 Deceased SMART triage tags</li>
+                        <li>20 Contamination / CBRN tags</li>
+                        <li>1 paediatric SMART tape</li>
+                        <li>2 pencils</li>
+                        <li>5 light sticks (low-light patient identification)</li>
+                        <li>1 Triage SIEVE / casualty count reference card</li>
+                        <li>Barcode on the tag back for Loading Point tracking</li>
+                    </ul>
+                    <p class="mt-2">Each tag records vital information about treatments given, has a glowing light stick attachment for visibility in all conditions, clearly highlights infected/contaminated casualties, stays attached to the casualty throughout decontamination, and carries a detachable barcoded transport strip for enhanced tracking.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Method 1 — Triage SIEVE (Initial / Primary Triage)</h3>
+                    <p><strong>Description:</strong> Performed in the field, prior to moving patients. <strong>Objective:</strong> Determine urgency of intervention rapidly. Two versions exist — a flowchart card for adults, and a flowchart printed on tape for paediatrics (Paediatric SMART Tape).</p>
+
+                    <h4>Adult Triage SIEVE (patients &gt;140cm tall or &gt;32kg)</h4>
+                    <table class="text-sm">
+                        <thead><tr><th>Step</th><th>Question / Finding</th><th>Outcome</th></tr></thead>
+                        <tbody>
+                            <tr><td>1</td><td>Walking?</td><td>Yes + Injured → <span class="triage-green px-2 py-0.5 rounded">Priority 3</span>; Yes + Not injured → Survivor Reception Area</td></tr>
+                            <tr><td>2</td><td>Not walking — Breathing?</td><td>No → Open airway (simple manoeuvres) → still not breathing → <span class="triage-black px-2 py-0.5 rounded">Dead</span>; breathing achieved → <span class="triage-red px-2 py-0.5 rounded">Priority 1</span></td></tr>
+                            <tr><td>3</td><td>Breathing spontaneously — Respiratory Rate</td><td>≤9 or ≥30/min → <span class="triage-red px-2 py-0.5 rounded">Priority 1</span></td></tr>
+                            <tr><td>4</td><td>RR 10–29/min — assess Pulse Rate / Capillary Refill</td><td>Pulse ≥120/min or cap refill &gt;2 sec → <span class="triage-red px-2 py-0.5 rounded">Priority 1</span>; Pulse ≤119/min or cap refill ≤2 sec → <span class="triage-yellow px-2 py-0.5 rounded">Priority 2</span></td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Paediatric Triage SIEVE (using the Paediatric SMART Tape)</h4>
+                    <p class="text-sm">The paediatric flowchart uses three colour-coded size bands, each with its own vital sign thresholds:</p>
+                    <table class="text-sm">
+                        <thead><tr><th>Size Band</th><th>Approx. Size</th><th>Priority 1 Resp. Rate</th><th>Priority 1 Pulse Rate</th><th>Priority 2 Pulse Rate (after cap refill &gt;2 sec)</th></tr></thead>
+                        <tbody>
+                            <tr><td>Band 1 (black)</td><td>50–80cm or 3–10kg</td><td>&lt;20 or &gt;50/min</td><td>&lt;90 or &gt;180/min</td><td>90–180/min</td></tr>
+                            <tr><td>Band 2 (blue)</td><td>80–100cm or 11–18kg</td><td>&lt;15 or &gt;40/min</td><td>&lt;80 or &gt;160/min</td><td>80–160/min</td></tr>
+                            <tr><td>Band 3 (red)</td><td>100–140cm or 19–32kg</td><td>&lt;10 or &gt;30/min</td><td>&lt;70 or &gt;140/min</td><td>70–140/min</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2 text-sm">Logic mirrors the adult flow: alert and moving all limbs (or walking) → Priority 3. Not alert/moving → assess breathing (open airway if absent; no return of breathing → Dead). Breathing present → assess respiratory rate against the band threshold → Priority 1 if outside range. Within range → capillary refill (using the child's forehead) → if ≤2 sec for all bands → Priority 2; if &gt;2 sec → assess pulse rate against the band threshold → Priority 1 if outside range, Priority 2 if within range.</p>
+
+                    <h4>Triage SIEVE Category Meanings</h4>
+                    <table>
+                        <thead><tr><th>Category</th><th>Meaning</th></tr></thead>
+                        <tbody>
+                            <tr><td class="triage-red">Red — Priority 1</td><td>Requires immediate life-saving interventions. Includes the "Expectant" (blue-corner) concept for patients whose injuries are so severe that, in a genuine resource-limited mass casualty context, treatment is deprioritised in favour of salvageable patients — a confronting but essential part of major incident doctrine, always applied under command direction rather than individual crew discretion.</td></tr>
+                            <tr><td class="triage-yellow">Yellow — Priority 2</td><td>Requires surgical or other intervention within 2–4 hours.</td></tr>
+                            <tr><td class="triage-green">Green — Priority 3</td><td>Treatment may be safely delayed for more than 4 hours.</td></tr>
+                            <tr><td class="triage-black">Black — Deceased</td><td>Tag and leave in-situ for Police — do not move the body.</td></tr>
+                        </tbody>
+                    </table>
+
+                    <h4>Important Considerations</h4>
+                    <ul class="list-disc list-inside">
+                        <li>Triage often requires reversing normal clinical priorities — this can be very challenging psychologically for clinicians trained to treat the sickest patient first.</li>
+                        <li>Triage is a dynamic, continuous process — categories change as patients deteriorate, improve, or as further information becomes available. Re-triage at every stage of movement.</li>
+                        <li>Triage can be performed by any competent paramedic — there is no requirement for the highest clinical level on scene to perform triage.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Method 2 — Triage SORT (Secondary Triage, at the CCS)</h3>
+                    <p><strong>Description:</strong> A more robust, scored secondary triage algorithm. <strong>Objective:</strong> Refine clinical priorities established by the initial SIEVE.</p>
+                    <table>
+                        <thead><tr><th>Physiological Parameter</th><th>Value</th><th>Points</th></tr></thead>
+                        <tbody>
+                            <tr><td rowspan="5"><strong>GCS Score</strong></td><td>13–15</td><td>4</td></tr>
+                            <tr><td>9–12</td><td>3</td></tr>
+                            <tr><td>6–8</td><td>2</td></tr>
+                            <tr><td>4–5</td><td>1</td></tr>
+                            <tr><td>3</td><td>0</td></tr>
+                            <tr><td rowspan="5"><strong>Respiratory Rate</strong></td><td>10–29/min</td><td>4</td></tr>
+                            <tr><td>&gt;29/min</td><td>3</td></tr>
+                            <tr><td>6–9/min</td><td>2</td></tr>
+                            <tr><td>1–5/min</td><td>1</td></tr>
+                            <tr><td>0 (apnoeic)</td><td>0</td></tr>
+                            <tr><td rowspan="4"><strong>Systolic BP</strong></td><td>≥90 mmHg</td><td>4</td></tr>
+                            <tr><td>76–89 mmHg</td><td>3</td></tr>
+                            <tr><td>50–75 mmHg</td><td>2</td></tr>
+                            <tr><td>1–49 mmHg</td><td>1</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2"><strong>Total Score Key:</strong> 12 = Priority 3 &nbsp;|&nbsp; 11 = Priority 2 &nbsp;|&nbsp; ≤10 = Priority 1</p>
+                </div>
+            </section>
+
+            <!-- Immediate Life-Saving Interventions -->
+            <section id="ils" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Immediate Life-Saving Interventions (ILS) During Triage SIEVE</h2>
+
+                <div class="disorder-box">
+                    <h3>The Resource-Limited Mindset</h3>
+                    <p>At the Incident Site, the objective is <strong>rapid movement through every patient</strong> — "tag and move" — rather than definitive treatment of any single patient. Every minute spent on one patient is a minute not spent identifying and tagging others who may also be salvageable. Interventions during the SIEVE phase are therefore deliberately minimal, and confined to interventions that can be performed in seconds and that address an immediately reversible threat to life.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>What TO Do During Triage SIEVE</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Control catastrophic external haemorrhage</strong> — tourniquet application or wound packing/haemostatic dressing; this is the single highest-yield intervention at this stage.</li>
+                        <li><strong>Open and clear the airway</strong> — simple manoeuvres only (head tilt/chin lift or jaw thrust, finger sweep of visible obstruction, positioning), used specifically to determine breathing status per the SIEVE algorithm.</li>
+                        <li><strong>Position for breathing</strong> — recovery position where appropriate, to maintain a patent airway without further intervention.</li>
+                        <li><strong>Move ambulant, uninjured or minorly injured patients</strong> out of danger and toward the Survivor Reception Area, freeing the Incident Site Supervisor's attention for higher-acuity patients.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>What NOT to Do During Triage SIEVE</h3>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Do not</strong> perform full spinal immobilisation on every patient — this consumes disproportionate time and equipment relative to benefit at this phase.</li>
+                        <li><strong>Do not</strong> undertake detailed secondary surveys or full histories — the SIEVE is a rapid physiological snapshot only.</li>
+                        <li><strong>Do not</strong> perform extended wound care, splinting of non-life-threatening fractures, or cosmetic dressing.</li>
+                        <li><strong>Do not</strong> commit to prolonged single-patient resuscitation (e.g. extended CPR) at the expense of triaging other salvageable patients — this is the practical application of the Expectant/Black category and the "greatest good for the greatest number" principle.</li>
+                        <li><strong>Do not</strong> establish IV access, administer analgesia, or provide other treatments as a routine part of SIEVE — these belong at the Casualty Clearing Station once SORT re-triage and resourcing allow.</li>
+                        <li><strong>Do not</strong> allow triage to stall while awaiting a "complete" assessment — an incomplete SIEVE across many patients produces a better system-level outcome than a complete assessment of only a few.</li>
+                    </ul>
+                    <p class="mt-2">This deliberately austere approach is the aspect of MCI practice most in tension with routine paramedic training, and is precisely why triage command and discipline (rather than individual clinical instinct) governs decision-making on scene.</p>
+                </div>
+            </section>
+
+            <!-- CBRN and HAZMAT -->
+            <section id="cbrn" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Chemical, Biological, Radiological, or Nuclear (CBRN) and Hazardous Materials (HAZMAT)</h2>
+
+                <div class="physiology-box">
+                    <h3>Definitions</h3>
+                    <p><strong>HAZMAT:</strong> Accidental release of a toxic substance and/or ingestion (accidental or deliberate) of these substances.</p>
+                    <p class="mt-2"><strong>CBRN:</strong> The deliberate release of a toxic substance to produce mass casualties and panic.</p>
+                    <p class="mt-2 text-sm text-gray-600">This is the key operational distinction: HAZMAT incidents are (usually) accidental and industrial in origin; CBRN incidents are (by definition) deliberate acts, which carries implications for forensic evidence preservation, secondary device risk, and Police primacy.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Types of Agent</h3>
+                    <table>
+                        <thead><tr><th>Category</th><th>Sub-types / Examples</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Chemical Agents</strong></td><td>Nerve agents, blood agents, choking agents, blister agents</td></tr>
+                            <tr><td><strong>Biological Agents</strong></td><td>Bacterial (e.g. Anthrax), Viral (e.g. Smallpox), Toxin (e.g. Ricin or Botulinum)</td></tr>
+                            <tr><td><strong>Radiological Agents</strong></td><td>Ionising radiation sources / dispersal devices</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Governance</h3>
+                    <p>NSW Health Services Functional Area Supporting Plan (HEALTHPLAN); NSW Ambulance Major Incident Response Plan (AMPLAN); the HAZMAT/CBR Emergency Sub Plan (a sub-plan to the State Emergency Management Plan, EMPLAN).</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Recognising a CBRN Incident</h3>
+                    <p><strong>Primary indicators</strong> (recognised immediately by crew):</p>
+                    <ul class="list-disc list-inside">
+                        <li>Symptoms experienced by crew themselves on arrival</li>
+                        <li>Similar symptoms occurring across multiple patients simultaneously</li>
+                        <li>Suspicious items — dissemination devices, warnings left at scene, or claims of responsibility</li>
+                    </ul>
+                    <p class="mt-2"><strong>Secondary indicators</strong> (may only become apparent on closer/later inspection):</p>
+                    <ul class="list-disc list-inside">
+                        <li>Dead animals or birds in the area</li>
+                        <li>Statements made by victims</li>
+                        <li>Unusual observations — unexplained liquids, gases, or odours</li>
+                    </ul>
+                    <p class="mt-2 text-sm text-gray-600">Initial responders may not recognise or observe indicators of CBRN at all — maintaining a baseline index of suspicion, especially for unexplained multi-patient collapse, is essential.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Management — Key Objectives and "Do Nots"</h3>
+                    <p><strong>Key objectives:</strong> minimise/prevent exposure and agent injuries; prevent exacerbation through decontamination; control the speed of contamination spread; continue primary medical care objectives once safe to do so.</p>
+                    <p class="mt-2"><strong>Do NOT:</strong></p>
+                    <ul class="list-disc list-inside">
+                        <li>Do not become a victim</li>
+                        <li>Do not rush in</li>
+                        <li>Do not assume (the nature or extent of the agent)</li>
+                        <li>Do not test — never taste, touch, or smell an unknown substance</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>General CBRN / HAZMAT Approach</h3>
+                    <h4>Personal Safety</h4>
+                    <ul class="list-disc list-inside">
+                        <li>Immediately evacuate to a safe distance, ideally upwind</li>
+                        <li>Cover nose and mouth with a damp cloth if no respiratory protection is available</li>
+                        <li>Take frequent, shallow breaths</li>
+                        <li>Notify Control Centre of a suspected CBRN incident</li>
+                    </ul>
+                    <h4>Decontamination</h4>
+                    <ul class="list-disc list-inside">
+                        <li>Remove the outer layer of clothing</li>
+                        <li>Wash off contamination with water and soap — do NOT scrub, and do NOT use hot water (both can drive agent into the skin or increase absorption)</li>
+                        <li>Report to the Fire & Rescue decontamination station</li>
+                    </ul>
+                    <h4>Establishing the Incident Site</h4>
+                    <ul class="list-disc list-inside">
+                        <li>Remain in the cold zone unless specifically trained and equipped for hot/warm zone entry</li>
+                        <li>Report to the Forward Commander</li>
+                    </ul>
+                </div>
+
+                <div class="section-box" style="background:white; border:none; padding:0; margin:1.5rem 0;">
+                    <h3>Hot, Warm, and Cold Zones</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+                        <div class="zone-hot">
+                            <h4>Hot Zone</h4>
+                            <ul class="list-disc list-inside text-sm">
+                                <li>Area of known contamination</li>
+                                <li>Specialist PPE required (Special Operations Team / Fire & Rescue only)</li>
+                                <li>Controlled by Fire & Rescue HAZMAT; marked by HAZMAT tape</li>
+                                <li>Priority: patient rescue, rapid triage, rapid treatment and evacuation</li>
+                            </ul>
+                        </div>
+                        <div class="zone-warm">
+                            <h4>Warm Zone</h4>
+                            <ul class="list-disc list-inside text-sm">
+                                <li>Area immediately surrounding the hot zone</li>
+                                <li>The decontamination area / corridor</li>
+                                <li>Controlled by Fire & Rescue HAZMAT; specialist PPE required (SOT/FR only)</li>
+                                <li>Priority: patient decontamination, further treatment, post-decontamination triage</li>
+                                <li>Other functions: preparation area for hot-zone deployment; crime scene evidence collection point; emergency safe haven</li>
+                            </ul>
+                        </div>
+                        <div class="zone-cold">
+                            <h4>Cold Zone</h4>
+                            <ul class="list-disc list-inside text-sm">
+                                <li>Area cleared of contamination</li>
+                                <li>Non-specialist crews permitted</li>
+                                <li>Location of the Ambulance Forward Commander</li>
+                                <li>Controlled by Police</li>
+                                <li>Functions as the staging and treatment area</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="mt-3 text-sm text-gray-600">Surrounding the three zones sits the overall <strong>Area of Operations</strong>, including the Multi-Agency Incident Management Team and FRNSW Forward Command, with Staging, an Evacuation Assembly Point, an Assembly Area, and a Rehabilitation point positioned outside the cold zone boundary. Entry and exit to the hot zone both route through the decontamination corridor in the warm zone.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>CBRN and Triage</h3>
+                    <p>The SMART Tag kit includes 20 dedicated Contamination/CBRN tags, distinct from the standard triage tags, allowing contaminated casualties to be clearly identified and tracked through decontamination and subsequent care — the tag remains attached to the casualty throughout the decontamination process.</p>
+                </div>
+            </section>
+
+            <!-- Bystanders, Agencies, Terrain -->
+            <section id="scene-mgmt" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Managing Bystanders, Other Agencies, and Terrain</h2>
+
+                <div class="assessment-box">
+                    <h3>Bystanders and Spontaneous Volunteers</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Rapidly distinguish patients from uninjured bystanders, self-presenting "worried well," and spontaneous volunteers — each requires a different pathway.</li>
+                        <li>Direct ambulant, uninjured or minimally affected people to the Survivor Reception Area, where social and mental health workers can support them — this both provides appropriate care and keeps the Incident Site clear for triage and treatment.</li>
+                        <li>Spontaneous (untrained) volunteers should never be permitted into the hot or warm zone, or into any area requiring specialist PPE. Where safe and useful, they can be given simple, supervised tasks (e.g. crowd control assistance, guiding walking wounded) under the direction of a uniformed responder — otherwise, they should be excluded from the operational area entirely for their own safety and to avoid scene congestion.</li>
+                        <li>Be alert to secondary self-presentation — patients who leave the scene under their own power and later present to a health facility may not be captured in the initial casualty count, and hospitals should be alerted to expect this.</li>
+                        <li>Where the incident is also a crime scene (terrorism, criminal act), preserve evidence: avoid unnecessary disturbance of the environment, note (but do not necessarily act on) anything that appears to be evidence, and recognise that Police control of the Body Holding Area and broader scene forensic requirements may constrain otherwise-routine paramedic practice.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Working With Other Agencies</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Unified command under the AIIMS framework (management by objectives, functional structures, span of control) is what allows Police, Fire & Rescue, SES, Ambulance, and supporting agencies to operate on one incident without duplicating or contradicting each other.</li>
+                        <li>Respect designated combat agency primacy for the incident type (e.g. Police for terrorism and major transport incidents; Fire & Rescue for HAZMAT and structure collapse) — this determines who holds overall scene authority even while NSW Ambulance retains clinical authority over patient care.</li>
+                        <li>Use dedicated, agency-specific and joint liaison channels rather than informal cross-agency communication; report through your own Forward Commander rather than freelancing directly with another agency's personnel.</li>
+                        <li>Liaise closely at zone boundaries — the handover from Fire & Rescue-controlled hot/warm zones to the Ambulance/Police-influenced cold zone is a frequent point of confusion if not deliberately managed.</li>
+                        <li>Recognise the value of forward liaison officers from each agency co-located at (or near) the Forward Command Post to maintain a shared operating picture.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Working in Difficult Environments and Terrain</h3>
+                    <ul class="list-disc list-inside">
+                        <li>Rural, remote, or off-road incidents may significantly delay access, extend transport times, and require 4WD or specialist vehicle access, air transport, or extended extrication.</li>
+                        <li>Uneven, unstable, or confined terrain constrains where the Staging Area, CCS, and Loading Point can practically be established — flexibility in scene layout is often required.</li>
+                        <li>Extended operations expose responders to environmental extremes (heat, cold, weather exposure) over prolonged periods; this is a genuine risk to responder safety and performance, managed through the Rehabilitation function and planned crew rotation.</li>
+                        <li>Extended PPE wear (especially in HAZMAT SOT-level protection) causes fatigue, heat stress, and reduced dexterity — time-limited deployments with mandatory rehabilitation cycles are standard practice.</li>
+                        <li>Night operations require specific planning — lighting for the Incident Site and CCS, and the light sticks included in the SMART kit for low-light patient identification.</li>
+                        <li>Difficult terrain increases the risk of responders themselves becoming casualties (falls, entrapment, structural collapse) — reinforcing the "do not become a casualty" principle as an active, ongoing assessment rather than a one-off check on arrival.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Treatment and Destinations -->
+            <section id="destinations" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Appropriate Treatment & Destinations for Definitive Care</h2>
+
+                <div class="management-box">
+                    <h3>Appropriate Treatment by Phase</h3>
+                    <p>Treatment scope shifts deliberately as a patient moves through the system:</p>
+                    <ul class="list-disc list-inside">
+                        <li><strong>Incident Site (Triage SIEVE):</strong> immediate life-saving interventions only (see dedicated section above) — haemorrhage control and airway opening.</li>
+                        <li><strong>Casualty Clearing Station (Triage SORT):</strong> more complete assessment and treatment matched to the re-triaged priority category, preparation for transport, and ongoing reassessment as resources allow.</li>
+                        <li><strong>Loading Point / Transport:</strong> maintenance of treatment already established, with focus on safe packaging and handover documentation rather than initiating new interventions.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Destination by Triage Category</h3>
+                    <table>
+                        <thead><tr><th>Triage Label</th><th>Destination</th></tr></thead>
+                        <tbody>
+                            <tr><td class="triage-red">Red (Priority 1)</td><td>Major Trauma Centre</td></tr>
+                            <tr><td class="triage-yellow">Yellow (Priority 2)</td><td>Hospital appropriate to the patient's condition</td></tr>
+                            <tr><td class="triage-green">Green (Priority 3)</td><td>An Extended Care Paramedic pathway within the green zone, or a facility not receiving Red or Yellow patients (to preserve trauma centre and major hospital capacity)</td></tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-2">The Loading Point Supervisor allocates and documents each transport (patient, vehicle, destination, time) and ensures crews do not deviate from the assigned destination — uncoordinated hospital selection by individual crews can rapidly overwhelm a single facility while others remain under-utilised. Transport modes may include road ambulance, bus (for larger numbers of ambulant patients), fixed-wing, and rotary-wing aircraft, coordinated between the Staging Area and Loading Point.</p>
+                </div>
+            </section>
+
+            <!-- Case Analysis -->
+            <section id="case-analysis" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Clinical Case Analysis & Reflective Practice</h2>
+
+                <div class="assessment-box">
+                    <h3>Case 1: Rural School Bus Rollover, Entrapment, Poor Access</h3>
+                    <p><strong>Presentation:</strong> A school bus has rolled on an unsealed rural road, 45 minutes from the nearest base hospital. Multiple students trapped; mobile phone reception is poor; parents are already arriving at the scene.</p>
+                    <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                        <li><strong>Windscreen and METHANE:</strong> The first crew delivers a windscreen report noting the rollover, apparent multiple casualties, difficult terrain, and uncertain communications before committing further — this early warning allows Control to begin mobilising additional resources while the fuller METHANE report (including precise location via GPS coordinates or what3words, given the rural setting) is compiled.</li>
+                        <li><strong>Terrain challenges:</strong> Unsealed road access may delay heavier rescue and additional ambulance resources; a Helicopter Landing Site may need to be identified early given transport time to a Major Trauma Centre.</li>
+                        <li><strong>Bystander management:</strong> Arriving parents are a key group requiring active management — they are neither patients nor useful volunteers in a rescue context, and should be directed to a designated area away from the Incident Site (an early, informal Survivor/Family Reception point) to prevent scene congestion and secondary trauma from witnessing extrication.</li>
+                        <li><strong>Triage discipline:</strong> With likely multiple entrapped patients, SIEVE triage must proceed even where a single trapped child appears most distressing — the greatest-good principle requires identifying all patients' categories before committing extended resources to any one extrication.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Case 2: Suspected Chemical Release at a Shopping Centre</h3>
+                    <p><strong>Presentation:</strong> Multiple patients at a shopping centre food court present simultaneously with eye irritation, difficulty breathing, and nausea. No obvious trauma. Crew members also begin to feel mild throat irritation on arrival.</p>
+                    <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                        <li><strong>Recognition:</strong> Similar symptoms across multiple, otherwise unconnected patients, plus symptoms in crew themselves, are both primary indicators of a possible CBRN/HAZMAT event — this should immediately trigger the "do not rush in" principle.</li>
+                        <li><strong>Immediate action:</strong> Evacuate to a safe distance, ideally upwind; notify Control of a suspected CBRN/HAZMAT incident; do not attempt to identify the substance by taste, touch, or smell.</li>
+                        <li><strong>Zone establishment:</strong> Fire & Rescue HAZMAT will establish and control the hot and warm zones (decontamination corridor); Ambulance remains in the cold zone, with the Forward Commander positioned there and Police controlling overall cold zone access.</li>
+                        <li><strong>Triage adaptation:</strong> Decontaminated patients are triaged (and tagged with a CBRN/Contamination tag alongside their standard SMART tag) after passing through the warm zone decontamination corridor — treatment is deliberately sequenced after decontamination to avoid spreading contamination into the CCS or transporting vehicles.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Case 3: Reversing Clinical Priorities Under Resource Constraint</h3>
+                    <p><strong>Presentation:</strong> At a multi-vehicle crash with eight patients and only two crews on scene for the first fifteen minutes, one entrapped patient is in cardiac arrest, while three other patients are conscious with reversible airway obstruction and catastrophic limb haemorrhage.</p>
+                    <ul class="list-disc list-inside space-y-2 text-sm mt-2">
+                        <li><strong>Clinical reasoning:</strong> In routine single-patient practice, cardiac arrest commands full resuscitative effort. In a genuine resource-limited MCI, a patient in cardiac arrest — particularly if entrapped — may be triaged as Black/Expectant if extraction and resuscitation would consume disproportionate time relative to the number of other salvageable patients awaiting simple, rapid, life-saving interventions.</li>
+                        <li><strong>Application:</strong> The two crews instead prioritise catastrophic haemorrhage control (tourniquets) and airway-opening manoeuvres across the other patients, completing a SIEVE of the whole scene before committing to any single, resource-intensive intervention.</li>
+                        <li><strong>Command authority:</strong> This decision is made under the direction of the Incident Site Supervisor / Forward Commander as a system-level triage decision, not an individual crew's unilateral choice — reinforcing why triage command and documentation matter as much as the clinical skill itself.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Reflection Questions</h3>
+                    <ol class="list-decimal list-inside space-y-2 text-sm">
+                        <li>How would you personally manage the psychological difficulty of reversing normal clinical priorities during a Triage SIEVE?</li>
+                        <li>What specific communication failures have you seen (in simulation or in the literature) contribute to poor MCI outcomes, and how does the METHANE/windscreen structure address them?</li>
+                        <li>In a CBRN scenario, what specific behaviours would distinguish a well-disciplined first-arriving crew from one that inadvertently becomes a secondary casualty group?</li>
+                        <li>How would you adapt scene station layout (CCS, Loading Point, Staging Area) on genuinely difficult terrain — a steep embankment, a waterway, or a confined industrial site?</li>
+                        <li>What barriers might exist to using the SMART Tag / Triage SORT scoring tools accurately under scene pressure, and how might these be mitigated through training?</li>
+                    </ol>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Based on HLTH3022 Paramedicine Leadership curriculum (Modules 7–9), NSW Ambulance AMPLAN, the Australasian Inter-Service Incident Management System (AIIMS), the NSW Hazardous Materials/CBRN Emergency Sub Plan (2024), and the Australian Emergency Management Arrangements (AIDR, 3rd ed., 2023). Always follow your service's current protocols and scope of practice — mass casualty command structures and terminology can vary between jurisdictions.</p>
+        </footer>
+    </div>
+</body>
+</html>
