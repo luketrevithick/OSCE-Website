@@ -1,2 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debriefing, Feedback and Followership: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        .notes-box {
+            background-color: #faf5ff;
+            border-left: 4px solid #a855f7;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .notes-box strong {
+            color: #7e22ce;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        table {
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .quadrant-cell {
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
 
-Work  In Progress
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Debriefing, Feedback and Followership</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#kolb" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Kolb's Experiential Learning</a>
+                <a href="#debrief-vs-feedback" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Debriefing vs Feedback</a>
+                <a href="#debriefing-models" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Debriefing Models</a>
+                <a href="#feedback-models" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Feedback Models</a>
+                <a href="#effective-feedback" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">Principles of Effective Feedback</a>
+                <a href="#peer-feedback" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Delivering Peer Feedback</a>
+                <a href="#followership" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Followership & Kelley's Styles</a>
+                <a href="#followership-leadership" class="bg-pink-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-pink-600">Followership & Leadership</a>
+                <a href="#team-development" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Feedback & Team Development</a>
+                <a href="#reflective-practice" class="bg-gray-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-gray-600">Reflective Practice</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Introduction -->
+            <section id="introduction" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Why This Matters</h2>
+                <div class="notes-box">
+                    <p>Paramedics spend most of a career being <strong>followers</strong> long before they are ever the designated team leader, and every simulation, road case and clinical placement only produces learning if it is properly reflected on afterwards. Debriefing, feedback and followership are not "soft" adjuncts to clinical skill &mdash; they are the mechanisms by which individual experience becomes team-wide competence, and by which unsafe practice gets challenged before it reaches a patient. This guide integrates the learning theory underpinning simulation education (Kolb), the practical tools used to debrief and give feedback in paramedic and healthcare simulation, and the followership research that explains how good teams function when someone other than the loudest voice in the room is right.</p>
+                </div>
+            </section>
+
+            <!-- Kolb's Experiential Learning Theory -->
+            <section id="kolb" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Kolb's Experiential Learning Theory</h2>
+
+                <div class="physiology-box">
+                    <h3>The Experiential Learning Cycle</h3>
+                    <p>David Kolb (1984) defined learning as <strong>"the process whereby knowledge is created through the transformation of experience."</strong> Rather than treating learning as the passive absorption of facts, Kolb modelled it as a continuous four-stage cycle. A learner can enter the cycle at any point, but Kolb argued that effective learning only occurs once <strong>all four stages</strong> have been completed &mdash; no single stage is sufficient on its own.</p>
+                    <table class="mt-4">
+                        <thead>
+                            <tr>
+                                <th>Stage</th>
+                                <th>What Happens</th>
+                                <th>Paramedicine Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. Concrete Experience</strong><br>(feeling / doing)</td>
+                                <td>The learner has, or takes part in, a real or simulated experience.</td>
+                                <td>Running a simulated paediatric cardiac arrest, or attending a genuine complex overdose job.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. Reflective Observation</strong><br>(watching)</td>
+                                <td>The learner reviews the experience against their existing knowledge, noticing what surprised them or didn't fit.</td>
+                                <td>The immediate post-simulation debrief, where the team recalls what happened and how it felt.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. Abstract Conceptualisation</strong><br>(thinking)</td>
+                                <td>Reflection produces a new idea, rule, or a modification of an existing mental model.</td>
+                                <td>Concluding that "closed-loop communication during drug administration reduces dosing errors."</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. Active Experimentation</strong><br>(doing)</td>
+                                <td>The new or modified concept is tested out in the world, generating a fresh concrete experience and re-starting the cycle.</td>
+                                <td>Deliberately using closed-loop communication on the next simulation or the next road case.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Kolb's Learning Styles Matrix</h3>
+                    <p>Layered on top of the four-stage cycle, Kolb proposed that individuals have a preferred entry point into the cycle, producing four learning styles arranged on two crossing axes: a <strong>Processing</strong> axis (doing vs watching) and a <strong>Perception</strong> axis (feeling vs thinking).</p>
+                    <table class="mt-2 text-center">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Active Experimentation (Doing)</th>
+                                <th>Reflective Observation (Watching)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Concrete Experience (Feeling)</strong></td>
+                                <td class="quadrant-cell"><strong>Accommodating</strong><br>Hands-on, intuitive, thrives on new challenges, learns from other people's analysis rather than their own.</td>
+                                <td class="quadrant-cell"><strong>Diverging</strong><br>Views situations from many angles, imaginative, prefers group discussion and open-minded personal feedback.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Abstract Conceptualisation (Thinking)</strong></td>
+                                <td class="quadrant-cell"><strong>Converging</strong><br>Practical problem-solver, prefers technical tasks over interpersonal ones, likes to test ideas experimentally.</td>
+                                <td class="quadrant-cell"><strong>Assimilating</strong><br>Logical and concise, prioritises a coherent theoretical framework over hands-on tasks or people.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-3 text-sm">Everyone draws on all four styles to some degree; the "style" is simply a preference, not a fixed box. A team of paramedics with different preferences (the reflective diverger, the theorising assimilator, the action-oriented accommodator) can complement one another well in a debrief if the facilitator deliberately makes room for each mode &mdash; time to watch and reflect, a clear theoretical takeaway, and a concrete next action.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Critical Evaluation &mdash; Handle the "Styles" Label with Care</h3>
+                    <p>Kolb's four-stage <strong>cycle</strong> is well supported as a framework for structuring learning from experience, and it underpins virtually every simulation debriefing model used in paramedic education. However, the <strong>learning styles</strong> typology built on top of it has much weaker evidence. Systematic reviews (Coffield et al. 2004; Pashler et al. 2008) found no good evidence that matching teaching methods to a learner's diagnosed "style" improves outcomes &mdash; a finding often called the learning-styles "neuromyth." The practical lesson for paramedic education is to design debriefs and teaching activities that move learners through <em>all</em> four stages of the cycle, rather than trying to sort students into style boxes and teach to them differently.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Application to Paramedicine: Why Simulation Needs a Debrief</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Simulation-based training is grounded in constructivist and experiential learning theory: learners construct and reconstruct knowledge through a reflective process centred on real or simulated experience.</li>
+                        <li>The <strong>concrete experience</strong> is the simulation or road case itself. Without a structured debrief, the cycle stalls at stage one &mdash; the experience happens, but no reflection, conceptualisation or deliberate re-application follows, and the learning opportunity is largely wasted.</li>
+                        <li>This is precisely why "quality debriefing is widely acknowledged as being the most important component of simulation training" (Wilson & Asbury 2019) &mdash; the debrief <em>is</em> the reflective observation and abstract conceptualisation stages of Kolb's cycle, deliberately engineered by a facilitator.</li>
+                        <li>Reflective practice, built on this same cyclical logic, now underpins both undergraduate paramedic curricula and post-registration revalidation requirements.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Debriefing vs Feedback -->
+            <section id="debrief-vs-feedback" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Debriefing vs Feedback</h2>
+
+                <div class="assessment-box">
+                    <h3>Working Definitions</h3>
+                    <p><strong>Feedback</strong> is information provided by an agent &mdash; a facilitator, peer, patient outcome, or the learner themselves &mdash; about how an action was performed, usually compared against a standard or expected outcome (Hattie & Timperley 2007). It can be as short as a single sentence.</p>
+                    <p class="mt-2"><strong>Debriefing</strong> is a structured, facilitated conversation that takes place after a real or simulated clinical event, deliberately guiding participants through phases of reaction, description, analysis and application in order to construct and reconstruct learning (Wilson & Asbury 2019; Fanning & Gaba 2007). Debriefing has been described as "a specialised form of feedback" with its own substantial evidence base, particularly in healthcare simulation (Bearman, Eppich & Nestel 2019).</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Similarities</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Both are <strong>formative</strong> &mdash; the goal is to close the gap between current performance and a desired standard, not to grade or punish.</li>
+                        <li>Both depend on <strong>psychological safety and trust</strong>; without it, participants disengage, become defensive, or simply tell the facilitator what they think will be well received.</li>
+                        <li>Both are learnable, practisable <strong>skills</strong> for the person delivering them, not innate talents.</li>
+                        <li>Both can be delivered by a facilitator/educator <em>or</em> by peers, and both can be self-directed (self-assessment, self-debrief).</li>
+                        <li>Both ultimately serve the same purpose in paramedic education: turning a single clinical experience into transferable competence.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Differences</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Feedback</th>
+                                <th>Debriefing</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Scope</strong></td>
+                                <td>Usually a specific skill, behaviour or decision.</td>
+                                <td>The whole event &mdash; technical performance, teamwork, decision-making, and the emotional reaction to it.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Structure</strong></td>
+                                <td>Can be a single, informal exchange.</td>
+                                <td>Follows a defined, sequential model with distinct phases (e.g. reaction &rarr; analysis &rarr; application).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Duration</strong></td>
+                                <td>"Micro-feedback" &mdash; often 1&ndash;5 minutes, given in the moment.</td>
+                                <td>"Macro" activity &mdash; typically 10&ndash;45 minutes, scheduled deliberately after the event.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Who is involved</strong></td>
+                                <td>Can be one-to-one (educator&ndash;learner or peer&ndash;peer).</td>
+                                <td>Usually the whole team that took part in the event, facilitated by an educator or senior clinician.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Facilitator role</strong></td>
+                                <td>Often more directive &mdash; information is given.</td>
+                                <td>Primarily guides reflection through open questions; information-giving is only one component (see Debriefing with Good Judgment, below).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Emotional processing</strong></td>
+                                <td>Not usually a primary focus.</td>
+                                <td>Explicitly built in as an early phase (e.g. "reaction," "defusing") before analysis begins.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-3 text-sm">In practice the two overlap constantly: every debrief contains multiple feedback exchanges, and a well-run debrief is really a structured container for delivering feedback safely and effectively to a whole team at once.</p>
+                </div>
+            </section>
+
+            <!-- Debriefing Models -->
+            <section id="debriefing-models" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Debriefing Methods</h2>
+
+                <div class="management-box">
+                    <h3>The Paramedic Debrief Model (PDM)</h3>
+                    <p>Developed specifically for paramedic simulation education (Wilson & Asbury 2019), the PDM synthesises the common structure found across healthcare debriefing models into four sequential phases, with the patient/experience placed deliberately at the centre of the model as a constant reminder of person-centred care:</p>
+                    <ol class="list-decimal list-inside space-y-2 mt-2">
+                        <li><strong>Reaction &amp; Recollection</strong> &mdash; participants vent initial emotional reactions and recall <em>what</em> happened, in order, with no attempt yet to analyse or judge.</li>
+                        <li><strong>Reflection</strong> &mdash; participants reflect on their own performance and the team's, often structured using Pendleton's Rules (what went well, what could improve).</li>
+                        <li><strong>Analysis</strong> &mdash; the facilitator helps learners surface the mental models and decision-making frames that drove their actions (this is where techniques like advocacy-inquiry or guided self-correction are used).</li>
+                        <li><strong>Application</strong> &mdash; participants explicitly connect the reconstructed learning to future clinical practice, ideally testing it out via a repeat simulation.</li>
+                    </ol>
+                    <p class="mt-2">The PDM also wraps around eight paramedic competency domains (adapted from Tavares et al.'s Global Rating Scale): <em>situational awareness, history gathering, patient assessment, decision-making, resource utilisation, communication, procedural skills,</em> and <em>ethics</em>. A single simulation and its debrief are typically aligned to only one or two of these domains at a time, rather than trying to cover all eight at once.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Comparing Debriefing Models</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Structure</th>
+                                <th>Best Suited For</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>PEARLS</strong><br>(Promoting Excellence And Reflective Learning in Simulation)</td>
+                                <td>Reactions &rarr; Description &rarr; Analysis (blending learner self-assessment, focused facilitation, and directive feedback as needed) &rarr; Summary.</td>
+                                <td>Mixed-experience groups, where some content needs to be actively taught rather than only discovered.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Diamond Debrief</strong></td>
+                                <td>Widens out with open, descriptive questions ("what happened?") before deliberately narrowing to one or two focused learning points, mirroring a diamond shape.</td>
+                                <td>Time-limited debriefs where a small number of high-value teaching points must be reached efficiently.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3D Model</strong><br>(Defusing, Discovering, Deepening)</td>
+                                <td>Defusing (emotional venting) &rarr; Discovering (why things happened) &rarr; Deepening (linking to future practice).</td>
+                                <td>Highly stressful or emotionally charged simulations (e.g. paediatric arrest, death of a simulated patient).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>TeamGAINS</strong></td>
+                                <td>Gather (recall) &rarr; Analyse (using genuine inquiry techniques) &rarr; Summarise. Built specifically for team-based, not individual, performance.</td>
+                                <td>Multi-disciplinary or multi-crew simulations where teamwork and coordination are the primary learning target.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Debriefing with Good Judgment</strong><br>(Advocacy-Inquiry)</td>
+                                <td>The facilitator states a direct observation plus their own genuine reaction or concern ("advocacy"), then asks the learner to explain their reasoning ("inquiry") &mdash; e.g. "I noticed you didn't reassess after the fluid bolus, and I'm wondering what was going through your mind at that point."</td>
+                                <td>Surfacing <em>why</em> a competent learner made a puzzling decision, rather than just labelling the decision right or wrong.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Plus-Delta</strong></td>
+                                <td>A simple two-column self-assessment: <strong>+</strong> (what worked, keep doing) and <strong>&Delta;</strong> (what to change next time).</td>
+                                <td>Rapid, low-resource debriefs where time or facilitator experience is limited, or as a quick close to a longer debrief.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gibbs' Reflective Cycle</strong></td>
+                                <td>Description &rarr; Feelings &rarr; Evaluation &rarr; Analysis &rarr; Conclusion &rarr; Action Plan.</td>
+                                <td>Individual written reflection after a placement or incident, rather than a live, facilitated group debrief.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="notes-box">
+                    <p><strong>Note:</strong> Rudolph, Simon, Dufresne and Raemer (2006) argued there is "no such thing as nonjudgmental debriefing" &mdash; every facilitator brings their own frame and judgment to what they observed. The advocacy-inquiry approach doesn't pretend otherwise; instead it makes the facilitator's judgment explicit and transparent, then genuinely invites the learner's perspective, rather than hiding behind falsely neutral questions.</p>
+                </div>
+            </section>
+
+            <!-- Feedback Models -->
+            <section id="feedback-models" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Feedback Models</h2>
+                <p>Orsini, Rodrigues, Tricio and Rosel (2022) identified six of the most common feedback models used in clinical education. Each suits a different encounter &mdash; a 90-second roadside teaching moment calls for a different tool than a 20-minute end-of-placement review.</p>
+
+                <table class="mt-4">
+                    <thead>
+                        <tr>
+                            <th>Model</th>
+                            <th>Structure</th>
+                            <th>Typical Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pendleton's Rules</strong></td>
+                            <td>Learner states what went well &rarr; educator adds what went well &rarr; learner states what could improve &rarr; educator adds what could improve &rarr; agree an action plan.</td>
+                            <td>Structured individual feedback where a positive-first order is helpful; can feel formulaic with repeated use.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Feedback Sandwich</strong></td>
+                            <td>Positive &rarr; corrective &rarr; positive.</td>
+                            <td>Simple and widely known, but frequently criticised: learners can start listening only for the "but," and the surrounding praise can feel like padding rather than genuine feedback.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>One-Minute Preceptor</strong><br>(Five Microskills)</td>
+                            <td>Get a commitment &rarr; probe for supporting evidence &rarr; teach a general rule &rarr; reinforce what was done right &rarr; correct mistakes.</td>
+                            <td>Brief, time-pressured clinical teaching moments &mdash; e.g. after a student presents their assessment findings on scene.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SET-GO</strong></td>
+                            <td>What I <strong>S</strong>aw &rarr; what <strong>E</strong>lse did you see &rarr; what do I <strong>T</strong>hink &rarr; what <strong>G</strong>oal are we working toward &rarr; <strong>O</strong>ffers on how to get there.</td>
+                            <td>Descriptive, non-judgmental, outcome-based feedback, often used with video review of a communication or skills task.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>R2C2</strong></td>
+                            <td><strong>R</strong>apport (build the relationship) &rarr; <strong>R</strong>eaction (explore the learner's emotional response) &rarr; <strong>C</strong>ontent (clarify understanding of the feedback/data) &rarr; <strong>C</strong>oach for change (collaborative action planning).</td>
+                            <td>Feedback that may be difficult to hear &mdash; e.g. formal performance data, a poor assessment result, or a significant clinical error.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ALOBA</strong><br>(Agenda-Led, Outcome-Based Analysis)</td>
+                            <td>The learner sets their own agenda/concerns first; the group then works collaboratively toward an agreed, observable improvement.</td>
+                            <td>Group feedback on communication skills, often paired with video review.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="assessment-box mt-4">
+                    <h3>Timing: Micro- vs Macro-Feedback</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Micro-feedback</strong> &mdash; brief, informal, in-the-moment (1&ndash;5 minutes). Well suited to the One-Minute Preceptor or a quick Plus-Delta exchange.</li>
+                        <li><strong>Macro-feedback</strong> &mdash; formal, planned, and more detailed (5&ndash;20 minutes+). Typically occurs mid- or end-of-placement, or after a significant event, and suits Pendleton's Rules, R2C2 or a full debrief.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Principles of Effective Feedback -->
+            <section id="effective-feedback" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Applying Principles of Effective Feedback</h2>
+
+                <div class="physiology-box">
+                    <h3>Hattie & Timperley's Three Feedback Questions</h3>
+                    <p>Influential feedback research (Hattie & Timperley 2007) frames all effective feedback as answering three questions, at one of four levels (task, process, self-regulation, or self):</p>
+                    <ul class="list-disc list-inside space-y-1 mt-2">
+                        <li><strong>Feed up</strong> &mdash; Where am I going? (What is the goal or standard?)</li>
+                        <li><strong>Feed back</strong> &mdash; How am I going? (What is my current performance relative to that goal?)</li>
+                        <li><strong>Feed forward</strong> &mdash; Where to next? (What specific action closes the gap?)</li>
+                    </ul>
+                    <p class="mt-2 text-sm">Feedback pitched purely at the <strong>self</strong> level ("good job," "well done") carries almost no information about the task itself and is generally the least effective form &mdash; it is praise, not feedback.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>Characteristics of Effective Feedback (Verbal or Written)</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Specific and behaviour-focused:</strong> describes an observed action, not a personality trait ("you paused compressions for 40 seconds while locating the drug box," not "you were disorganised").</li>
+                        <li><strong>Timely:</strong> given as close to the event as practical, once acute stress has settled enough to allow reflection.</li>
+                        <li><strong>Balanced:</strong> acknowledges genuine strengths without insincere padding, and names areas for improvement without being purely deficit-focused.</li>
+                        <li><strong>Actionable:</strong> ends with a concrete next step (feed forward), not just a verdict on the past.</li>
+                        <li><strong>Two-way:</strong> invites the learner's own perspective (ask-tell-ask; advocacy-inquiry) rather than being delivered as a monologue.</li>
+                        <li><strong>Grounded in evidence:</strong> based on what was actually observed, not assumption about intent or ability.</li>
+                        <li><strong>Appropriately private:</strong> corrective feedback is generally given away from the patient, bystanders, and (where possible) the wider crew.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Written Feedback &mdash; Extra Considerations</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Written comments (e.g. OSCE feedback sheets, placement reports) usually have to stand alone with no chance for immediate clarifying dialogue &mdash; so ambiguity is far costlier than in a verbal exchange.</li>
+                        <li>Anchor comments to an explicit standard: a clinical practice guideline, a marking rubric, or (in the PDM) a named paramedic competency domain.</li>
+                        <li>Avoid vague adjectives with no supporting detail ("good," "needs work") &mdash; every comment should be reconstructable into a concrete action by the reader alone.</li>
+                        <li>Date the feedback and reference the specific case or station so it can be tracked over a portfolio or across a semester.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Verbal Feedback &mdash; Extra Considerations</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Check psychological safety and consent before starting, especially peer-to-peer ("Is now an okay time to talk through the sim?").</li>
+                        <li>Use open questions before directive input &mdash; ask what the learner noticed themselves before telling them what you noticed (ask-tell-ask).</li>
+                        <li>Watch for nonverbal cues of distress or defensiveness and adjust pace accordingly; a debrief that pushes past a genuinely overwhelmed learner will not produce learning.</li>
+                        <li>Never deliver corrective feedback in front of the patient.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Delivering Peer Feedback -->
+            <section id="peer-feedback" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Practising Peer Feedback</h2>
+                <div class="management-box">
+                    <h3>A Practical Sequence for Peer-to-Peer Feedback</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>Set the frame.</strong> Confirm it's an okay time, and agree the scope and confidentiality of what's about to be discussed.</li>
+                        <li><strong>Start with self-assessment.</strong> Ask the learner what they thought went well and what they'd do differently &mdash; this primes their own reflective observation before you add yours (Pendleton/Plus-Delta opening).</li>
+                        <li><strong>Describe specific, observed behaviour.</strong> Use a Situation&ndash;Behaviour&ndash;Impact structure: what was the situation, what specifically did they do, and what was the effect &mdash; rather than a character judgement.</li>
+                        <li><strong>Balance strength and improvement.</strong> Name a genuine strength and a genuine growth area; don't manufacture praise purely to soften a criticism (avoid the sandwich pitfall).</li>
+                        <li><strong>Agree a concrete next step.</strong> Close with one specific, actionable change the person can try next time, and offer to follow up.</li>
+                    </ol>
+                </div>
+                <div class="notes-box">
+                    <p><strong>Tone matters as much as structure.</strong> Peer feedback in a study group or simulation cohort works best when it stays professional, respectful and focused on patient care and competency standards rather than personal criticism &mdash; the same courtesy you would want extended to you when the roles are reversed.</p>
+                </div>
+            </section>
+
+            <!-- Followership -->
+            <section id="followership" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Followership</h2>
+
+                <div class="physiology-box">
+                    <h3>What Is Followership?</h3>
+                    <p>Followership is the behaviours, skills and attitudes that enable a team member to contribute effectively to team performance <em>when they are not the positional leader</em> (LITFL 2024). It is not passive obedience &mdash; effective followership is active, engaged and, at times, assertive. Because every clinician spends the overwhelming majority of their working life as a follower rather than a leader, followership skill is arguably at least as important to patient safety as leadership skill.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Robert Kelley's Five Followership Styles</h3>
+                    <p>Kelley (1992) mapped followers along two independent dimensions: <strong>engagement</strong> (passive &harr; active) and <strong>independent critical thinking</strong> (dependent/uncritical &harr; independent/critical). Plotting a person on both axes produces five styles:</p>
+                    <table class="mt-2">
+                        <thead>
+                            <tr>
+                                <th>Style</th>
+                                <th>Critical Thinking</th>
+                                <th>Engagement</th>
+                                <th>Characteristics</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Exemplary / Star Follower</strong></td>
+                                <td>High, independent</td>
+                                <td>High, active</td>
+                                <td>Takes initiative, offers constructive criticism upward, takes ownership of outcomes, champions the team's goals.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Conformist</strong><br><span class="text-xs">("Yes-person")</span></td>
+                                <td>Low, dependent</td>
+                                <td>High, active</td>
+                                <td>A hard-working "doer" and reliable team player, but trusting of leaders to the point of executing instructions without questioning them.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Passive</strong><br><span class="text-xs">("Sheep")</span></td>
+                                <td>Low, dependent</td>
+                                <td>Low, passive</td>
+                                <td>Needs constant direction, does the minimum required, may believe (rightly or wrongly) that their ideas aren't wanted.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Alienated</strong></td>
+                                <td>High, independent</td>
+                                <td>Low, passive</td>
+                                <td>Sees problems clearly and thinks critically, but has disengaged &mdash; can present as cynical, and may voice concerns only outside the team rather than to the people who could act on them.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pragmatist</strong><br><span class="text-xs">("Survivor")</span></td>
+                                <td>Moderate</td>
+                                <td>Moderate</td>
+                                <td>Takes a "wait and see" approach, avoids risk, adapts to whatever keeps them safe within the team's current politics.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="mt-3 text-sm"><strong>A self-awareness caution:</strong> Kelley found that 85&ndash;90% of people place themselves in the exemplary category when self-rating &mdash; a proportion that cannot be accurate across a real population. Honest self-placement, rather than an assumed default of "I'm already exemplary," is the necessary first step to improving your own followership.</p>
+                </div>
+
+                <div class="management-box">
+                    <h3>The Courageous Follower (Chaleff)</h3>
+                    <p>Ira Chaleff's <em>The Courageous Follower</em> describes good followers as partners with, not subordinates of, their leader &mdash; both oriented around a shared purpose rather than the follower orbiting the leader. Chaleff's characteristics of good followers include:</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Remaining passionate about the work and the people served; not treating a loss of that passion as normal.</li>
+                        <li>Defending a leader against unfair criticism made behind their back, while still respectfully challenging the leader's own questionable ideas or behaviour.</li>
+                        <li>Actively seeking feedback on their own performance to identify strengths and growth areas.</li>
+                        <li>Pursuing their own legitimate interests only where they align with, rather than compete against, the team's mission.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Followership and Leadership -->
+            <section id="followership-leadership" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">How Followership and Leadership Interconnect</h2>
+
+                <div class="physiology-box">
+                    <h3>Leaders and Followers Orbit a Shared Goal</h3>
+                    <p>Leadership and followership are interdependent, not opposing ends of a hierarchy: there is no leader without a follower, and every leader is also a follower of something &mdash; a clinical practice guideline, a more senior clinician, ambulance control, or the incident commander at a multi-casualty scene. In modern critical-care and pre-hospital teams, leadership is increasingly understood as <strong>shared or distributed</strong>: it shifts fluidly between team members based on expertise and the immediate situation, rather than sitting permanently with whoever holds the highest rank.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Followership Behaviours That Protect Patients</h3>
+                    <p>Crew Resource Management (CRM) research identifies specific followership behaviours that directly reduce clinical error:</p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Closed-loop communication</strong> &mdash; confirming an instruction has been heard and understood correctly.</li>
+                        <li><strong>Mutual performance monitoring</strong> &mdash; team members watch each other's actions, not only their own task.</li>
+                        <li><strong>Backup behaviour</strong> &mdash; stepping in to support a teammate who is overloaded or making an error.</li>
+                        <li><strong>Upward voice / graded assertiveness</strong> &mdash; speaking up about a safety concern regardless of seniority, escalating firmly if the first attempt isn't heard.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Worked Example: The Authority Gradient</h3>
+                    <p>Consider a cardiac arrest where a team leader calls an end to resuscitation, and a newly qualified EMT &mdash; the lowest-authority person on scene &mdash; says "I think I feel a pulse." The correct response from the whole team is to immediately re-assess, not to defer automatically to the leader's prior call. This is <strong>exemplary followership</strong> in action: high engagement, independent critical thinking, and the courage to speak up across an authority gradient. It only works, however, if the team leader has built a culture in which that voice is expected and will be acted on &mdash; which is a <strong>leadership</strong> responsibility. Followership and leadership succeed or fail together.</p>
+                    <p class="mt-2">The inverse failure modes are just as important to recognise: an <strong>alienated follower</strong> who privately doubts a treatment plan but says nothing in the moment, or a <strong>conformist follower</strong> who carries out a flawed instruction without question because challenging a senior clinician feels unsafe. Both patterns have been linked to communication failures and preventable adverse events across high-risk industries, aviation included, which is where CRM concepts originated before being adapted into healthcare.</p>
+                </div>
+            </section>
+
+            <!-- Feedback and Team Development -->
+            <section id="team-development" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Feedback in Clinical Leadership and Team Development</h2>
+                <div class="management-box">
+                    <h3>Feedback and Debriefing as Leadership Tools, Not Just Teaching Tools</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>A team leader who builds a genuine culture of feedback and debriefing is doing safety work, not just educational work &mdash; it is how a "just culture" and psychological safety are actually built, incident by incident.</li>
+                        <li>Constructive alignment means a debrief is most powerful when it is explicitly tied back to defined competencies (e.g. the PDM's eight paramedic domains) and to the organisation's clinical practice guidelines, rather than being a generic, unfocused chat.</li>
+                        <li>Effective team development requires normalising both <em>giving</em> and <em>receiving</em> feedback at every level of seniority &mdash; flattening the authority gradient for raising safety-critical concerns, while still preserving clear role clarity for who makes the final command decision.</li>
+                        <li>The same cyclical logic that drives individual learning (Kolb) scales up to organisational learning: an incident (concrete experience) is followed by a review or morbidity and mortality process (reflection), which produces an updated clinical practice guideline (conceptualisation), which is then used on the next case (experimentation).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Reflective Practice -->
+            <section id="reflective-practice" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Reflective Practice</h2>
+                <div class="assessment-box">
+                    <p><strong>Consider these scenarios:</strong></p>
+                    <ol class="list-decimal list-inside space-y-3 text-sm">
+                        <li>You are debriefing a simulated cardiac arrest in which a peer forgot to check for a pulse before calling ROSC. Which debriefing model would you choose, and why? Draft two open questions you could use in an advocacy-inquiry style analysis phase.</li>
+                        <li>During a group debrief, a colleague who fits the "alienated follower" profile says nothing in the session but later tells you privately that the treatment plan was wrong. What followership and leadership issues does this raise, and how would you respond as the team leader next time?</li>
+                        <li>Write three to four sentences of written peer feedback for a fellow student's OSCE cannulation attempt, using a Situation&ndash;Behaviour&ndash;Impact structure and at least one feed-forward statement.</li>
+                        <li>Compare how you would structure feedback differently for (a) a two-minute post-simulation exchange versus (b) a formal end-of-placement review, naming at least two models from this guide for each.</li>
+                        <li>Think of a time you were a "conformist" or "pragmatist" follower when, in hindsight, the situation called for exemplary followership. What made speaking up feel unsafe, and what would need to change about the team culture for that to be easier next time?</li>
+                    </ol>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">Based on Kolb (1984); Wilson & Asbury, <em>Australasian Journal of Paramedicine</em> (2019) &mdash; the Paramedic Debrief Model; Eppich & Cheng (2015) PEARLS; Rudolph, Simon, Dufresne & Raemer (2006) Debriefing with Good Judgment; Zigmont, Kappus & Sudikoff (2011) 3D Model; Jaye, Thomas & Reedy (2015) Diamond Debrief; Kolbe et al. (2013) TeamGAINS; Orsini, Rodrigues, Tricio & Rosel, <em>JEEHP</em> (2022) &mdash; feedback models; Hattie & Timperley (2007); Kelley (1992) followership styles; Chaleff (2009) <em>The Courageous Follower</em>. Always follow your program's specific debriefing and feedback protocols and maintain a culture of psychological safety in every peer learning interaction.</p>
+        </footer>
+    </div>
+</body>
+</html>
