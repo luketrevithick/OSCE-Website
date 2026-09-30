@@ -1,1 +1,702 @@
-Work  In Progress
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leading from Unexpected Places: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong {
+            color: #b91c1c;
+        }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong {
+            color: #15803d;
+        }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong {
+            color: #b45309;
+        }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong {
+            color: #3730a3;
+        }
+        .note-box {
+            background-color: #faf5ff;
+            border-left: 4px solid #9333ea;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .note-box strong {
+            color: #6b21a8;
+        }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #374151;
+        }
+        h4 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        p + p { margin-top: 0.5rem; }
+        .table-wrap {
+            overflow-x: auto;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 560px;
+        }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f9fafb;
+            font-weight: 600;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+        nav a {
+            transition: all 0.2s ease-in-out;
+        }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .quote {
+            font-style: italic;
+            border-left: 4px solid #6b7280;
+            padding-left: 1rem;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Leading from Unexpected Places</h1>
+            <p class="text-xl text-gray-600 mt-2">Informal Leadership in Paramedicine &amp; Health Care: A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#overview" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">Overview &amp; Learning Outcomes</a>
+                <a href="#comparison" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">Formal vs Informal Leadership</a>
+                <a href="#theory" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Theoretical Lenses</a>
+                <a href="#evidence" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Evidence: Paramedics Leading</a>
+                <a href="#manifest" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">How It Manifests</a>
+                <a href="#practice" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Practising It Safely</a>
+                <a href="#beyond" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Beyond the Ambulance Service</a>
+                <a href="#barriers" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">Risks &amp; Barriers</a>
+                <a href="#cases" class="bg-pink-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-pink-600">Case Analysis</a>
+                <a href="#reflect" class="bg-gray-600 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-gray-700">Reflection &amp; Summary</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Overview -->
+            <section id="overview" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Overview &amp; Learning Outcomes</h2>
+
+                <div class="physiology-box">
+                    <h3>Why "Unexpected Places"?</h3>
+                    <p>Most people picture a leader as someone with a title: a station manager, an operations manager, a clinical supervisor, an incident controller. Yet much of the leadership that shapes patient care happens where no title exists. A graduate paramedic speaks up about a concern, an experienced officer quietly shapes how a new crew approaches a cardiac arrest, a student on placement models good handover. This guide is about that second kind of leadership, and about why paramedics in particular are practising it every shift.</p>
+                    <p>The headline idea: <strong>leadership is an influence process, not a job title.</strong> Formal authority is one way to get influence. It is not the only way, and in the clinical environment it is often not the most important one.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Learning Outcomes Addressed</h3>
+                    <ol class="list-decimal list-inside space-y-2">
+                        <li><strong>LO1:</strong> Identify how informal leadership differs from traditional hierarchical leadership.</li>
+                        <li><strong>LO2:</strong> Explain how informal leadership can manifest and be practised in a health care context.</li>
+                    </ol>
+                    <p class="mt-2 text-sm">Sections 2-3 build LO1. Sections 4-8 build LO2. Sections 9-10 let you test both.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Key Definitions</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th style="width:25%;">Term</th><th>Working definition</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Leadership</strong></td><td>The process of influencing others toward a shared goal. It can be exercised by anyone, regardless of position.</td></tr>
+                                <tr><td><strong>Formal (hierarchical) leadership</strong></td><td>Influence that comes from a position or title within an organisational structure, backed by delegated authority and accountability.</td></tr>
+                                <tr><td><strong>Informal leadership</strong></td><td>The ability to influence others and contribute to a shared goal without holding a formal leadership position. Informal leaders are not bearers of positional authority (Lawson &amp; Fleshman, 2020).</td></tr>
+                                <tr><td><strong>Shared leadership</strong></td><td>Leadership distributed across team members, with influence moving between people as the situation demands, rather than sitting with one person.</td></tr>
+                                <tr><td><strong>Emergent leader</strong></td><td>Someone who becomes a leader through how the group responds to them (skill, trust, credibility) rather than through appointment.</td></tr>
+                                <tr><td><strong>Followership</strong></td><td>The active role of those being led. Leaders and followers depend on each other, and the roles swap regularly in health care teams. See the <em>Debriefing, Feedback and Followership</em> guide.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="note-box">
+                    <h3>How this guide uses its two core sources</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Mercer, Haddon &amp; Loughlin (2018),</strong> <em>Leading on the edge: the nature of paramedic leadership at the front line of care</em> (Health Care Management Review 43(1):12-20). This is the anchor paper for how paramedics themselves describe informal, shared leadership. It is covered in detail in Section 4.</li>
+                        <li><strong>Nixon (2024),</strong> <em>Employment opportunities in paramedicine</em> (Australasian College of Paramedicine). This article is about career pathways rather than leadership theory. Section 7 uses it to show where paramedics lead without a traditional hierarchy behind them. That connection is an application of the article, not something the author argues.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Comparison -->
+            <section id="comparison" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Informal vs Traditional Hierarchical Leadership (LO1)</h2>
+
+                <div class="physiology-box">
+                    <h3>The Core Distinction: Where Does the Influence Come From?</h3>
+                    <p>The clearest way to separate the two is to ask what gives the person their influence.</p>
+                    <ul class="list-disc list-inside mt-2 space-y-2">
+                        <li><strong>Hierarchical leaders</strong> are given influence by the organisation. Someone appointed them, wrote a position description, and made them accountable for outcomes. If they leave the role, the authority stays with the role.</li>
+                        <li><strong>Informal leaders</strong> are given influence by their colleagues. Peers choose to follow, consult, or copy them because of what they know, how they behave, or how they treat people. If they move to a different team, they have to earn that influence again.</li>
+                    </ul>
+                    <p class="mt-2">Colleagues tend to respect informal leaders because of seniority, skill, maturity and influence (Lawson &amp; Fleshman, 2020). Informal leaders shape organisational culture, help the group reach goals, and help interpret group dynamics.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Bases of Power: Position vs Personal</h3>
+                    <p>French and Raven's widely used taxonomy separates <strong>position power</strong> (legitimate, reward, coercive) from <strong>personal power</strong> (expert, referent). Hierarchical leaders hold all five potentially. Informal leaders rely almost entirely on the personal ones.</p>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Power base</th><th>Type</th><th>What it means</th><th>Paramedic example</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Legitimate</strong></td><td>Position</td><td>Authority that comes with the role.</td><td>An incident controller directing resources under AIIMS.</td></tr>
+                                <tr><td><strong>Reward</strong></td><td>Position</td><td>Ability to grant incentives.</td><td>A manager approving a preferred roster or a development opportunity.</td></tr>
+                                <tr><td><strong>Coercive</strong></td><td>Position</td><td>Ability to sanction or discipline.</td><td>A manager initiating a performance review or disciplinary process.</td></tr>
+                                <tr><td><strong>Expert</strong></td><td>Personal</td><td>Others believe you hold knowledge or skill they need.</td><td>The paramedic everyone asks for a second opinion on a difficult cannulation or an unusual ECG.</td></tr>
+                                <tr><td><strong>Referent</strong></td><td>Personal</td><td>Others admire, trust and identify with you.</td><td>The colleague whose calm manner at a paediatric arrest makes the whole crew steadier.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-3 text-sm"><em>Study tip:</em> the health care management literature commonly notes that the most effective leaders influence primarily through expert and referent power. That is why informal leaders can be so effective despite having no formal levers.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Side-by-Side Comparison</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th style="width:18%;">Dimension</th><th>Traditional / hierarchical leadership</th><th>Informal leadership</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Source of authority</strong></td><td>Appointed position or title; delegated by the organisation.</td><td>Earned from peers through credibility, competence, trust and relationships.</td></tr>
+                                <tr><td><strong>How it is obtained</strong></td><td>Recruitment, promotion, rostering into a role (e.g. team leader, duty manager).</td><td>Emerges over time. Nobody applies for it or is formally granted it.</td></tr>
+                                <tr><td><strong>Power base</strong></td><td>Legitimate, reward and coercive, plus expert and referent where the person has earned them.</td><td>Mostly expert and referent.</td></tr>
+                                <tr><td><strong>Visibility</strong></td><td>Shown on the organisational chart and in position descriptions.</td><td>Invisible on paper. Visible in who colleagues consult, copy, or wait for before acting.</td></tr>
+                                <tr><td><strong>Accountability</strong></td><td>Formally accountable for team outcomes, resources and compliance.</td><td>No formal accountability for the team, though still fully accountable for their own practice and scope.</td></tr>
+                                <tr><td><strong>Stability</strong></td><td>Stable while the person holds the role.</td><td>Fluid and situational. Different people lead as the task and the expertise required change.</td></tr>
+                                <tr><td><strong>Direction of influence</strong></td><td>Typically top-down through the chain of command.</td><td>Lateral (peer to peer), upward ("leading up"), and downward through modelling and mentoring.</td></tr>
+                                <tr><td><strong>Typical focus</strong></td><td>Structure, compliance, resource allocation, performance management.</td><td>Culture, norms, practice standards, peer learning, morale, and how the group interprets change.</td></tr>
+                                <tr><td><strong>Response to change</strong></td><td>Change is directed or mandated.</td><td>Change is adopted (or resisted) through informal networks and peer opinion.</td></tr>
+                                <tr><td><strong>Main risk</strong></td><td>Over-reliance on position. Compliance without commitment.</td><td>Unaccountable influence. An informal leader who opposes change can undermine it.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>They Are Complementary, Not Opposites</h3>
+                    <p>A common exam trap is to present informal leadership as "good" and hierarchy as "bad". The literature does not support that. Formal leadership on its own is limited in its influence unless it is accompanied by the personal and interpersonal competencies that characterise both formal and informal leaders. Informal leadership exists alongside the org chart as a complementary model.</p>
+                    <p class="mt-2">A useful way to picture the relationship is a simple 2 x 2:</p>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th></th><th>High informal influence</th><th>Low informal influence</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Holds a formal role</strong></td><td><strong>Aligned leader.</strong> Position and credibility reinforce each other. Change is easiest here.</td><td><strong>Hollow leader.</strong> Compliance is obtained, commitment is not. Peers route around them.</td></tr>
+                                <tr><td><strong>No formal role</strong></td><td><strong>Informal leader.</strong> Shapes culture and practice. Either a powerful ally or a powerful obstacle for management.</td><td><strong>Ordinary team member.</strong> Contributes to the team but is not a focal point of influence.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Theory -->
+            <section id="theory" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Theoretical Lenses for Informal Leadership</h2>
+                <p class="mt-2 mb-2">Use these lenses to explain why informal leadership works and where it fits within the leadership theories from earlier in the unit.</p>
+
+                <div class="physiology-box">
+                    <h3>1. Situational Leadership</h3>
+                    <p>Effective leadership depends on the situation, including the task, the people and the context. In an informal setting, this means the person who leads is the person best placed to lead <em>right now</em>. Technical expertise is the primary foundation of the situational leadership construct (Lawson &amp; Fleshman, 2020). In a resuscitation, the person who best understands the rhythm and the drug plan is leading the clinical decision-making, whatever their rank.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>2. Shared and Distributed Leadership</h3>
+                    <p>Shared leadership sees influence circulating among team members. It matches the reality of health care, where multidisciplinary teams are the main vehicle for patient care. Informal leadership allows more team members to take an active part in setting the team's goals and performance expectations.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>3. Emergent Leadership</h3>
+                    <p>Emergent leaders appear because the group treats them as leaders. Common drivers are competence, reliability, communication skill, and how a person behaves when things go wrong.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>4. Complexity Leadership</h3>
+                    <p>Health care organisations are complex adaptive systems. No formal manager can foresee every scenario, so adaptive solutions often emerge from the front line. Informal leaders act as interpreters and connectors, translating policy into practice and feeding practical problems back upward.</p>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>5. Followership and Relational Leadership</h3>
+                    <p>Leadership depends on followers who choose to engage. As leadership shifts from positional to interaction-based, it relies increasingly on mutual trust and investment in relationships. Robert Kelley's followership styles (see the earlier guide) help explain why a "star follower" or "effective follower" can quietly steer a team without ever holding the title.</p>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Leadership as Imagined vs Leadership as Done</h3>
+                    <p>A recent study of medical residents contrasted leadership-as-imagined (how people rate their own leadership) with leadership-as-done (what their colleagues' interactions show). Using social network analysis, it found that informal leadership shows up in patterns of who colleagues turn to and communicate with. In that study, residents who stood out as informal leaders were characterised as established and humble leaders. The takeaway for you: informal leadership is observable in behaviour and relationships. It does not depend on a self-declared identity as a "leader".</p>
+                </div>
+            </section>
+
+            <!-- Evidence -->
+            <section id="evidence" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">The Evidence: Paramedics as Informal Leaders</h2>
+
+                <div class="disorder-box">
+                    <h3>Mercer, Haddon &amp; Loughlin (2018): "Leading on the edge"</h3>
+                    <p><strong>Why it matters:</strong> Few empirical studies examine shared leadership in health care, and studies of paramedic leadership are scarcer still, despite paramedics' central role in leading care at the front line. The authors examined what it means to lead <em>informally</em> at the front line of out-of-hospital care.</p>
+                    <p><strong>Method:</strong> Qualitative, semistructured interviews with 29 paramedics from a group of companies in central and eastern Canada. The interviews explored the conditions and practices surrounding shared leadership.</p>
+                    <p><strong>Key findings:</strong></p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Despite their job title, paramedics classified themselves as <strong>informal leaders who share the leadership role</strong>.</li>
+                        <li>Participants described the precursors, practices and structural conditions that surround shared leadership in emergency medical services.</li>
+                        <li><strong>The leader shifts in times of urgency, and this is contingent on skills and competence.</strong> Leadership moves to whoever is best placed to lead the task.</li>
+                        <li>Managers routinely called upon paramedics to lead in their absence.</li>
+                        <li>Although informally enacted, paramedics view leadership as a <strong>necessary competency for clinical practice</strong>.</li>
+                    </ul>
+                    <p class="mt-2"><strong>Practice implications the authors draw:</strong></p>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Leadership development for paramedics should <strong>begin during formal education and training</strong>, as part of the core curriculum.</li>
+                        <li>Direct managers can promote an environment of shared leadership and encourage paramedics to practise leadership with the quality of patient service in mind.</li>
+                    </ul>
+                </div>
+
+                <div class="note-box">
+                    <h3>Reading the Paper Critically</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Interpretive, not statistical.</strong> Twenty-nine interviews describe how these paramedics understand their work. They do not measure how common shared leadership is or prove it improves patient outcomes.</li>
+                        <li><strong>Context.</strong> The sample is from Canadian companies. Australian services have different structures, rank systems and governance, so apply the findings as a strong lens rather than as a description of your own service.</li>
+                        <li><strong>Self-perception.</strong> Participants described themselves as informal leaders. That is valuable, but it is not the same as observing how colleagues respond.</li>
+                        <li><strong>The full text is behind a paywall.</strong> This guide draws on the published abstract and how the paper is described in later literature. Read the full paper through your university library before quoting it in assessments.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Supporting Evidence from Wider Health Care</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Setting</th><th>What the evidence shows</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Nursing (acute care)</strong></td><td>A survey of registered nurses in direct care found that staff nurses' clinical leadership behaviours were positively linked to the quality of care they delivered and to their own job satisfaction. The authors describe informal clinical leadership as a potentially underused asset for patient safety.</td></tr>
+                                <tr><td><strong>Nursing (implementation)</strong></td><td>A collective case study of a successful evidence-based practice implementation found that nurse leaders in formal and informal roles worked collaboratively, enacting leadership together across each implementation phase. Leadership was shared and relational.</td></tr>
+                                <tr><td><strong>Interprofessional primary care</strong></td><td>Qualitative work on Dutch GPs found that leadership in loosely organised teams is often informal. GPs enacted it mainly through everyday responsibility for continuity of care, coordination of professionals and oversight.</td></tr>
+                                <tr><td><strong>Medicine</strong></td><td>A systematic review of medical leadership describes leadership as either a formal managerial role or an informal role, exercised in daily practice, that applies to <em>all</em> physicians. Role ambiguity, competing logics, and a lack of time and support were common barriers.</td></tr>
+                                <tr><td><strong>Leadership development</strong></td><td>Commentary on medical education argues that many clinicians without formal leadership roles will be called on to lead informally at various times, so leadership training should extend beyond those who hold titles.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Manifest -->
+            <section id="manifest" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">How Informal Leadership Manifests in Health Care (LO2)</h2>
+
+                <div class="physiology-box">
+                    <h3>The Common Forms</h3>
+                    <p>Informal leadership is recognisable by what people <em>do</em>. The behaviours below show up across nursing, medicine and paramedicine.</p>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th style="width:20%;">Form</th><th>What it looks like in practice</th><th style="width:22%;">Main source of influence</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Clinical expertise and role modelling</strong></td><td>Colleagues copy how you assess, communicate with patients, and handle a deteriorating case. You set the standard through consistency.</td><td>Expert, referent</td></tr>
+                                <tr><td><strong>Situational leadership at the patient</strong></td><td>On scene, you step forward because you have the skill the moment demands (airway, paediatric care, a difficult extrication conversation) and step back when someone else is better placed.</td><td>Expert</td></tr>
+                                <tr><td><strong>Mentoring and teaching</strong></td><td>Guiding students and new graduates, explaining your reasoning, sharing learning from cases, and answering "can I ask you something?"</td><td>Expert, referent</td></tr>
+                                <tr><td><strong>Speaking up and patient advocacy</strong></td><td>Raising a safety concern, questioning a plan, or advocating for a patient's needs to a senior clinician or another service, regardless of rank.</td><td>Referent, moral credibility</td></tr>
+                                <tr><td><strong>Culture and morale shaping</strong></td><td>Setting the tone in the station or team room: how the crew talks about patients, how mistakes are handled, whether people check in on each other.</td><td>Referent</td></tr>
+                                <tr><td><strong>Peer support and debrief facilitation</strong></td><td>Noticing a colleague struggling after a confronting job, initiating a hot debrief, and connecting them with formal support.</td><td>Referent</td></tr>
+                                <tr><td><strong>Change championing</strong></td><td>Trialling a new process or guideline, helping peers understand why it exists, and feeding back what is and is not working. Nursing research describes these people as bridges between policy and frontline practice.</td><td>Expert, referent</td></tr>
+                                <tr><td><strong>Quality improvement and initiative</strong></td><td>Identifying a recurring problem (handover, restocking, documentation), proposing a fix, and collecting the evidence to support it.</td><td>Expert, initiative</td></tr>
+                                <tr><td><strong>Coordination and continuity</strong></td><td>Making sure information reaches the right person, tasks do not fall between roles, and the patient's journey is joined up across services.</td><td>Expert, relational</td></tr>
+                                <tr><td><strong>Stepping up in absence</strong></td><td>Being asked, or choosing, to lead when the manager or senior clinician is unavailable (a pattern Mercer et al. describe).</td><td>Expert, trust</td></tr>
+                                <tr><td><strong>Advocacy at organisational level</strong></td><td>Raising issues seen at the front line, joining committees or working groups, contributing to research, and advocating for policy change based on observed patient needs.</td><td>Expert, credibility</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Why Paramedicine Is a Natural Home for Informal Leadership</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Autonomous, small-team practice.</strong> Paramedics regularly make consequential decisions with a crew of one or two, away from supervisors. Leadership at the patient is unavoidable.</li>
+                        <li><strong>Multi-agency scenes.</strong> Police, fire, rescue, volunteers, bystanders, hospital staff and retrieval teams may all be present. Nobody has formal authority over all of them, so influence has to be earned in minutes.</li>
+                        <li><strong>Mixed experience levels.</strong> Graduates and veterans work side by side. Knowledge and confidence do not follow rank neatly, so leadership moves.</li>
+                        <li><strong>Time-critical decisions.</strong> Mercer et al. found leadership shifts to whoever's skills fit the urgent task.</li>
+                        <li><strong>Managers are often absent from the clinical moment.</strong> Managers rely on crews to lead in their absence.</li>
+                        <li><strong>Growing diversity of practice settings.</strong> Paramedics increasingly work in community, private, remote and non-clinical environments where hierarchy is thin (see Section 7).</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Linking to the Rest of the Unit</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Debriefing and feedback:</strong> facilitating a hot debrief or giving a colleague peer feedback are informal leadership acts that need no title. Models such as advocacy-inquiry and plus-delta are usable by anyone.</li>
+                        <li><strong>Followership:</strong> effective followers challenge, support and contribute. In Kelley's framework, that behaviour is what turns a follower into an informal leader.</li>
+                        <li><strong>Mass casualty and incident management:</strong> formal command structures (AIIMS) run alongside informal expertise-based leadership, for example a paramedic who understands triage guiding a less experienced agency member.</li>
+                        <li><strong>Participatory research and community engagement:</strong> community leaders and lay people are informal leaders whose influence a paramedic or health service needs to recognise and respect.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Practice -->
+            <section id="practice" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Practising Informal Leadership Safely and Effectively</h2>
+                <p class="mt-2">Informal leadership comes with influence but not with authority. That makes <em>how</em> you exercise it important.</p>
+
+                <div class="management-box">
+                    <h3>A Practical Ladder: From Self to System</h3>
+                    <ol class="list-decimal list-inside space-y-3">
+                        <li><strong>Lead yourself.</strong>
+                            <ul class="list-disc ml-6 mt-1 text-sm space-y-1">
+                                <li>Be reliably competent: know your guidelines, check your equipment, own your errors.</li>
+                                <li>Reflect on practice regularly (Gibbs, Kolb). Credibility comes from being someone who learns visibly.</li>
+                                <li>Manage your own wellbeing. People follow those who look steady.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Influence your peers.</strong>
+                            <ul class="list-disc ml-6 mt-1 text-sm space-y-1">
+                                <li>Model the behaviours you want to see: respectful patient communication, clear handover, honest documentation.</li>
+                                <li>Share knowledge freely. Offer case learning rather than lecturing.</li>
+                                <li>Mentor students and new graduates. Ahpra describes graduate supervision as an important developmental tool, and informal mentoring fills the gap where formal supervision is thin.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Lead the team in the moment.</strong>
+                            <ul class="list-disc ml-6 mt-1 text-sm space-y-1">
+                                <li>Use closed-loop communication and clear task allocation when you hold the relevant expertise.</li>
+                                <li>Step forward when your skills fit the task and step back gracefully when someone else's do.</li>
+                                <li>Speak up early and in a structured way (see the toolkit below).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Improve the system.</strong>
+                            <ul class="list-disc ml-6 mt-1 text-sm space-y-1">
+                                <li>Notice recurring problems and collect simple evidence (numbers, examples, patient impact).</li>
+                                <li>Take proposals through the proper channels: your supervisor, clinical governance, incident reporting.</li>
+                                <li>Join working groups, contribute to research, or champion a change you believe in.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="management-box">
+                    <h3>Speaking Up Toolkit (Leading "Up" Across an Authority Gradient)</h3>
+                    <p>An authority gradient exists whenever one person's rank, age or experience makes another reluctant to challenge them. Crew resource management deliberately flattens that gradient. These are standard structured approaches:</p>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th style="width:22%;">Tool</th><th>How it works</th><th style="width:30%;">Example phrase</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>CUS words</strong></td><td>Escalate in three levels: "I am <strong>C</strong>oncerned", "I am <strong>U</strong>ncomfortable", "This is a <strong>S</strong>afety issue". The last level signals that the team must stop and reassess.</td><td>"I'm uncomfortable with that dose. Can we check it together?"</td></tr>
+                                <tr><td><strong>Advocacy-inquiry</strong></td><td>State what you see, share your concern, then ask a genuine question. Covered in the debriefing guide as a debrief model, and equally useful in real time.</td><td>"I noticed the saturation trending down. I'm worried about his airway. What are you seeing?"</td></tr>
+                                <tr><td><strong>Two-challenge rule</strong></td><td>If a safety concern is dismissed the first time, raise it again. If it is dismissed twice, escalate to another person or to the chain of command.</td><td>"I've raised this twice. I'd like to get medical advice before we continue."</td></tr>
+                                <tr><td><strong>Structured handover</strong></td><td>Using a format such as IMISTAMBO ensures your assessment is delivered clearly, which gives your voice credibility with receiving teams.</td><td>Deliver the story in order, and state your concern explicitly.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Guardrails: Influence Without Authority Still Has Limits</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>You remain fully accountable for your own practice</strong> and scope. Informal leadership never means practising outside your scope, guidelines, or registration standards.</li>
+                        <li><strong>Formal clinical governance still applies.</strong> Concerns that persist go through the chain of command, clinical advice lines, incident reporting and, where appropriate, professional or regulatory channels.</li>
+                        <li><strong>Do not undermine the formal leader in front of patients or the public.</strong> Raise disagreements early and respectfully, and revisit them at the debrief if time does not allow.</li>
+                        <li><strong>Patient safety overrides hierarchy.</strong> If there is an immediate threat to the patient, the safety-critical challenge takes priority over deference.</li>
+                        <li><strong>Be honest about what you know.</strong> Expert power depends on credibility, and credibility collapses if you overreach.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>If You Are the Manager: Working With Informal Leaders</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li><strong>Identify them.</strong> Look for who colleagues consult, whose opinion shifts team views, and who newer staff seek out.</li>
+                        <li><strong>Engage them early in change.</strong> Informal leaders help interpret change for peers. Involving them in design turns potential resistance into advocacy.</li>
+                        <li><strong>Create the conditions for shared leadership.</strong> Mercer et al. suggest direct managers can promote shared leadership and encourage paramedics to lead with patient service quality in mind.</li>
+                        <li><strong>Develop and recognise them.</strong> Provide leadership training, mentoring opportunities and recognition. Informal leaders are often the people who do not see themselves as leaders.</li>
+                        <li><strong>Address opposition constructively.</strong> Listen to the concern behind the resistance, since informal leaders often see practical problems that managers miss.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Beyond -->
+            <section id="beyond" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Leading Beyond the Ambulance Service Hierarchy</h2>
+                <p class="mt-2">Nixon's (2024) article in the Australasian College of Paramedicine outlines how paramedic employment has diversified. It does not discuss informal leadership directly, but the pathways it describes are places where paramedics regularly lead without a traditional hierarchy behind them.</p>
+
+                <div class="physiology-box">
+                    <h3>What the Article Tells Us</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Paramedics once worked almost exclusively in jurisdictional ambulance services (JAS) or the defence force, which were seen as lifelong employers with strict governance.</li>
+                        <li>Private organisations (mining, event medicine) opened new employment avenues, and registration of the profession opened more.</li>
+                        <li>About 2,400 students graduate from Australian universities each year, and only about half find employment in a JAS (Australasian College of Paramedicine, 2022, cited in the article).</li>
+                        <li>Ahpra does not require a formal graduate supervision period but describes it as an important developmental tool. Paramedics can therefore be employed in private organisations without a formal graduate year if the position does not require one.</li>
+                        <li>Undergraduate options include patient transport, call centre and volunteer roles, as well as event medic organisations. Beyond a few years of experience, options include mining and FIFO work, schools, sporting venues, cruise ships, film sets, theme parks, travel insurance, university teaching and research, JAS managerial, policy and clinical educator pathways, secondary triage, critical care, flight and community paramedicine, and further study in areas such as public health, disaster management or midwifery.</li>
+                    </ul>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Where Informal Leadership Becomes Essential (Application)</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th style="width:24%;">Setting</th><th>Why leadership is informal</th><th>What it looks like</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>Event and private medicine</strong></td><td>You may be the most clinically qualified person on site while reporting to a non-clinical event manager. Authority over the event is not yours. Authority over clinical care is expected to be.</td><td>Setting clinical standards for a small team, communicating risk to organisers, and coordinating with ambulance services when escalating.</td></tr>
+                                <tr><td><strong>Remote, mining and FIFO work</strong></td><td>Small teams with limited on-site clinical oversight. Others look to you for clinical judgement, and often for health education and culture setting.</td><td>Making autonomous decisions, coordinating retrieval, mentoring first-aid-trained colleagues.</td></tr>
+                                <tr><td><strong>Community and extended-care roles</strong></td><td>Working alongside GPs, nurses, allied health and social services, none of whom answer to you.</td><td>Coordination, advocacy for the patient across services, and building trust with new partners.</td></tr>
+                                <tr><td><strong>Graduate year with thin supervision</strong></td><td>Where formal supervision is limited or absent, peers and near-peers become the practical source of guidance.</td><td>Seeking out mentors, forming peer learning groups, and eventually mentoring the graduates behind you.</td></tr>
+                                <tr><td><strong>Education, research and policy</strong></td><td>Influence rests on expertise and credibility rather than command.</td><td>Shaping curricula, generating evidence, and influencing practice standards through publication and professional bodies.</td></tr>
+                                <tr><td><strong>Professional bodies and community</strong></td><td>Volunteer and committee roles carry no line authority.</td><td>Working groups, position statements, advocacy for the profession, and leading learning communities.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-3 text-sm">The common thread: as the profession diversifies, more paramedics will work where the hierarchy is thin or absent, and informal leadership stops being an optional extra and becomes a core professional capability. This supports the argument by Mercer et al. that leadership development belongs in the core curriculum.</p>
+                </div>
+            </section>
+
+            <!-- Barriers -->
+            <section id="barriers" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Risks, Barriers and Limits</h2>
+
+                <div class="disorder-box">
+                    <h3>Barriers to Practising Informal Leadership</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Not seeing yourself as a leader.</strong> Many clinicians do not identify as leaders unless they hold a managerial title, so they never consciously develop the skill.</li>
+                        <li><strong>Steep authority gradients.</strong> Hierarchical or paramilitary cultures, junior status, or fear of blame can make speaking up feel risky.</li>
+                        <li><strong>Role ambiguity.</strong> Without clear expectations about when to lead, defer or escalate, people hesitate or overstep. Role ambiguity, competing logics, and lack of time and support are documented barriers in medical leadership research.</li>
+                        <li><strong>Lack of training.</strong> Informal leaders often lack formal leadership and evidence-based practice training. Research on nursing informal leaders shows that training improves their implementation leadership.</li>
+                        <li><strong>No recognition or protected time.</strong> Informal leadership is invisible on paper, so it is often unrecognised in performance reviews, rosters and promotion.</li>
+                        <li><strong>Workload and fatigue.</strong> Taking on mentoring, peer support and improvement work on top of clinical duties risks burnout.</li>
+                    </ul>
+                </div>
+
+                <div class="disorder-box">
+                    <h3>Risks of Informal Leadership</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Negative informal leaders.</strong> The same influence that spreads good practice can spread cynicism, resistance to change, or unsafe shortcuts. Informal leaders who oppose management can undermine an initiative even when it is well designed.</li>
+                        <li><strong>Influence without accountability.</strong> An informal leader carries no formal responsibility for the team's outcomes, so poor influence can go unchecked.</li>
+                        <li><strong>In-group dynamics.</strong> Informal networks can exclude newcomers, people who work part time or in different locations, or those from underrepresented groups.</li>
+                        <li><strong>Overreach.</strong> Confidence that exceeds competence or scope is a patient safety risk, especially in high-stress scenes.</li>
+                        <li><strong>Unclear decision rights in emergencies.</strong> When leadership shifts fluidly, the team must still know who is making the final call. Shared leadership does not mean shared confusion.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Mitigating the Risks</h3>
+                    <ul class="list-disc list-inside space-y-1">
+                        <li>Make role and scope expectations explicit before the job: who holds clinical decision-making, who holds incident command.</li>
+                        <li>Announce shifts in leadership aloud ("You take the airway, I'll run the drugs").</li>
+                        <li>Build psychological safety so people can challenge and be challenged.</li>
+                        <li>Treat informal leaders as partners in change rather than obstacles.</li>
+                        <li>Embed leadership education early, as Mercer et al. recommend.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Cases -->
+            <section id="cases" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Case Analysis: Applying the Concepts</h2>
+                <p class="mt-2 text-sm">Work through each case yourself before reading the analysis. For every case, ask: <em>Who holds formal authority? Who holds influence? What is the source of that influence? What should happen next?</em></p>
+
+                <!-- Case 1 -->
+                <div class="assessment-box">
+                    <h3>Case 1: The Graduate Who Spotted the Problem</h3>
+                    <p><strong>Scenario:</strong> A cardiac arrest. You are a graduate paramedic in your first months, managing compressions and the monitor. Your senior partner of 15 years is attempting an airway and the pause in compressions is running long. The rhythm check is due.</p>
+                    <p><strong>Analysis:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm mt-2">
+                        <li><strong>Formal authority:</strong> the senior officer. <strong>Relevant information:</strong> held by you, because you are watching the clock and monitor.</li>
+                        <li>This is a classic authority-gradient situation where informal leadership is a safety behaviour, not a challenge to status.</li>
+                        <li><strong>Practice:</strong> use a short, structured statement early ("Compressions have been paused for a while. Can we check the rhythm?"), escalating through CUS if needed. Deliver it respectfully, and revisit at the debrief.</li>
+                        <li><strong>Source of influence:</strong> the accuracy of your observation and your clear communication, not rank.</li>
+                    </ul>
+                </div>
+
+                <!-- Case 2 -->
+                <div class="assessment-box">
+                    <h3>Case 2: Who Leads the Multi-Agency Scene?</h3>
+                    <p><strong>Scenario:</strong> You arrive at a motor vehicle collision. A firefighter first responder is already treating a patient with a serious injury, the police are managing traffic, and a bystander nurse is holding manual stabilisation. Nobody has told anyone who is in charge of the patient.</p>
+                    <p><strong>Analysis:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm mt-2">
+                        <li>Formal command of the incident sits within the agency structure (AIIMS), while <strong>clinical leadership at the patient</strong> typically passes to the person with the greatest relevant clinical expertise and role.</li>
+                        <li>You do not have authority over the police, the firefighter or the bystander, so you influence through clear introductions, task allocation, and acknowledging what has already been done well.</li>
+                        <li><strong>Practice:</strong> introduce yourself and your role, ask for a brief handover, thank the responders, and assign clear tasks to them.</li>
+                        <li>This is Mercer et al.'s finding in action: the leader shifts with skill and competence, and the change must be communicated so everyone knows who is making decisions.</li>
+                    </ul>
+                </div>
+
+                <!-- Case 3 -->
+                <div class="assessment-box">
+                    <h3>Case 3: The Quiet Check-In After a Paediatric Death</h3>
+                    <p><strong>Scenario:</strong> After a confronting paediatric job, your crew returns to station. Nobody says much. A colleague with no rank, but a reputation as someone people talk to, puts the kettle on and asks whether people want to talk through the job.</p>
+                    <p><strong>Analysis:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm mt-2">
+                        <li>This is informal leadership through <strong>referent power</strong> and culture setting, as the colleague uses trust to open a conversation.</li>
+                        <li>It links directly to the debriefing content: a hot debrief supports the team, and the colleague acts as a facilitator without needing a formal role.</li>
+                        <li><strong>Limits:</strong> an informal chat is not a replacement for formal peer support, employee assistance or clinical debriefing. A good informal leader offers the conversation, does not force it, and knows how to connect colleagues with formal support and notify a supervisor where appropriate.</li>
+                    </ul>
+                </div>
+
+                <!-- Case 4 -->
+                <div class="assessment-box">
+                    <h3>Case 4: The Influential Sceptic</h3>
+                    <p><strong>Scenario:</strong> Your service introduces a new documentation process. A respected, experienced paramedic openly mocks it at the station. Within weeks most of the crew are completing it inconsistently. The station manager has re-sent the policy twice.</p>
+                    <p><strong>Analysis:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm mt-2">
+                        <li>This is a <strong>negative use of informal influence</strong>, and it shows why the org chart does not describe where change succeeds or fails.</li>
+                        <li>Re-issuing the policy relies on legitimate power. It does not change how peers interpret the change.</li>
+                        <li><strong>Better manager response:</strong> speak with the informal leader privately, listen to their specific objections (they may have identified a real workflow problem), invite them to help refine the process, and, where appropriate, ask them to champion the revised version.</li>
+                        <li><strong>As a peer:</strong> raise your view constructively rather than joining the mockery, and take genuine concerns through the proper feedback channel.</li>
+                    </ul>
+                </div>
+
+                <!-- Case 5 -->
+                <div class="assessment-box">
+                    <h3>Case 5: The Event Medic and the Event Manager</h3>
+                    <p><strong>Scenario:</strong> You are working at a large music festival with two other first aiders. The event manager, who is non-clinical, is your line manager. A heat-illness surge begins, and the manager wants to keep the main gates open while patients accumulate in the first-aid tent.</p>
+                    <p><strong>Analysis:</strong></p>
+                    <ul class="list-disc list-inside space-y-1 text-sm mt-2">
+                        <li>The manager holds formal authority over the event. You hold <strong>clinical expertise</strong> that the manager does not. Effective leadership requires blending both.</li>
+                        <li>You lead upward by presenting clear, specific information: number of patients, severity, the resources needed, and the risk if nothing changes.</li>
+                        <li>You lead sideways by delegating tasks to first aiders within their scope and asking for additional resources or early ambulance escalation.</li>
+                        <li>This is the "unexpected place" scenario from Section 7: clinical leadership without positional authority over the operation.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Reflect -->
+            <section id="reflect" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Reflection &amp; Summary</h2>
+
+                <div class="assessment-box">
+                    <h3>Reflective Practice Questions</h3>
+                    <p class="text-sm mb-2">Write your answers in the first person. Use Gibbs' cycle (description, feelings, evaluation, analysis, conclusion, action plan) for any you want to develop into assessed reflection.</p>
+                    <ol class="list-decimal list-inside space-y-3 text-sm">
+                        <li>Think of a time in placement, work or study when you influenced a group without holding a formal role. What was the source of your influence? What did you do?</li>
+                        <li>Who are the informal leaders in a team you have been part of? What made others turn to them? Were they a positive or negative force for change?</li>
+                        <li>Have you ever stayed silent when you had a concern because of someone's seniority? What stopped you? What would you do differently with the speaking-up tools in this guide?</li>
+                        <li>Where in your own future practice (JAS, private, community, education, research) do you expect to lead without positional authority? What capabilities will you need?</li>
+                        <li>How would you respond if an informal leader in your team were resisting a change you believed was safe and necessary?</li>
+                        <li>Mercer et al. argue leadership development should begin in the university curriculum. What would you want that development to include?</li>
+                    </ol>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Exam-Style Prompts</h3>
+                    <ul class="list-disc list-inside space-y-2 text-sm">
+                        <li><strong>LO1:</strong> Compare informal and hierarchical leadership in terms of source of authority, power base, accountability and stability. Use a paramedic example.</li>
+                        <li><strong>LO1:</strong> Explain why informal leadership should not be described as the opposite of formal leadership.</li>
+                        <li><strong>LO2:</strong> Using the evidence from Mercer et al. (2018), explain how paramedics describe informal, shared leadership at the front line of care.</li>
+                        <li><strong>LO2:</strong> Describe three ways informal leadership can manifest in a health care team and the skills needed to practise each safely.</li>
+                        <li><strong>LO2:</strong> Discuss the risks of informal leadership and how a manager might harness it.</li>
+                    </ul>
+                </div>
+
+                <div class="management-box">
+                    <h3>Key Takeaways</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Informal leadership is influence without positional authority. It is earned through expertise, trust and relationships (expert and referent power).</li>
+                        <li>Hierarchical leadership is granted by the organisation. It carries formal accountability and can draw on legitimate, reward and coercive power.</li>
+                        <li>The two are complementary. The strongest teams have formal leaders with real informal credibility and informal leaders who are engaged with the organisation's goals.</li>
+                        <li>Paramedics describe themselves as informal leaders who share the leadership role, with the leader shifting to match the skills the situation demands (Mercer et al., 2018).</li>
+                        <li>In health care, informal leadership appears as role modelling, mentoring, speaking up, culture shaping, peer support, change championing, quality improvement and coordination.</li>
+                        <li>Practise it safely: stay in scope, use structured speaking-up tools, respect formal clinical governance, and let patient safety override hierarchy.</li>
+                        <li>As paramedic careers diversify beyond the ambulance service, informal leadership becomes a core professional capability.</li>
+                    </ul>
+                </div>
+
+                <div class="note-box">
+                    <h3>Sources</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>Mercer D, Haddon A, Loughlin C. Leading on the edge: the nature of paramedic leadership at the front line of care. Health Care Manage Rev. 2018;43(1):12-20. PMID 27467168. doi:10.1097/HMR.0000000000000125</li>
+                        <li>Nixon S. Employment opportunities in paramedicine. Australasian College of Paramedicine; 1 June 2024. paramedics.org/news/employment-opportunities-paramedicine</li>
+                        <li>Lawson D, Fleshman JW. Informal leadership in health care. Clin Colon Rectal Surg. 2020;33(4):225-227. PMID 32624719. doi:10.1055/s-0040-1709439</li>
+                        <li>Expanding the scope of leadership training in medicine (commentary on formal and informal leadership and sources of power). PMID 24662199.</li>
+                        <li>Working well with the informal leaders in your practice (medical practice management article on informal leadership bases of power and characteristics). PMID 25807624.</li>
+                        <li>Medical leaders or masters? A systematic review of medical leadership in hospital settings. PMC5598981.</li>
+                        <li>How formal and informal nurse leaders enact shared implementation leadership in a hospital setting (collective case study). PMID 41220187.</li>
+                        <li>Identifying informal leaders among medical residents as a basis for educational interventions. BMC Med Educ. 2026. PMID 41761177.</li>
+                        <li>Beyond clinical care: a qualitative study on the leadership role of general practitioners in Dutch interprofessional care for older adults. PMID 42647087.</li>
+                        <li>French JRP, Raven B. The bases of social power. In: Cartwright D, editor. Studies in social power. 1959.</li>
+                    </ul>
+                    <p class="text-xs mt-2">Format these references to your unit's required style before using them in assessed work.</p>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-12 mb-4">
+            <p class="text-gray-500 text-sm">This guide covers informal leadership concepts and their application in paramedicine and health care. Always follow your service's clinical practice guidelines, scope of practice and chain of command, and use the full text of the cited papers for assessed work.</p>
+        </footer>
+    </div>
+</body>
+</html>
