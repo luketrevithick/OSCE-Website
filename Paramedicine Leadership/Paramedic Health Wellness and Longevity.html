@@ -1,1 +1,449 @@
-Work  In Progress
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paramedic Health, Wellness and Longevity: A Paramedic Study Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-box {
+            background-color: #f3f4f6;
+            border-left: 4px solid #6b7280;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        .disorder-box {
+            background-color: #fef2f2;
+            border-left: 4px solid #ef4444;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .disorder-box strong { color: #b91c1c; }
+        .management-box {
+            background-color: #ecfdf5;
+            border-left: 4px solid #22c55e;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .management-box strong { color: #15803d; }
+        .assessment-box {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .assessment-box strong { color: #b45309; }
+        .physiology-box {
+            background-color: #eef2ff;
+            border-left: 4px solid #4f46e5;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .physiology-box strong { color: #3730a3; }
+        .note-box {
+            background-color: #faf5ff;
+            border-left: 4px solid #9333ea;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0.25rem;
+        }
+        .note-box strong { color: #6b21a8; }
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #374151;
+        }
+        h4 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #4b5563;
+        }
+        main p { margin: 0.5rem 0; line-height: 1.6; }
+        main ul { list-style: disc; padding-left: 1.25rem; margin: 0.5rem 0; }
+        main ol { list-style: decimal; padding-left: 1.25rem; margin: 0.5rem 0; }
+        main li { margin: 0.25rem 0; line-height: 1.55; }
+        main ul ul, main ol ul, main ul ol { margin: 0.25rem 0; }
+        .tbl-wrap { overflow-x: auto; margin-top: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1); }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .tbl-wrap table { margin-top: 0; }
+        th, td {
+            border: 1px solid #d1d5db;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-size: 0.875rem;
+            vertical-align: top;
+        }
+        th { background-color: #f9fafb; font-weight: 600; }
+        td { background-color: #ffffff; }
+        tr:nth-child(even) td { background-color: #f9fafb; }
+        nav a { transition: all 0.2s ease-in-out; }
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        details {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            margin: 0.75rem 0;
+        }
+        details summary { cursor: pointer; font-weight: 600; color: #374151; }
+        details[open] summary { margin-bottom: 0.5rem; }
+        .flow { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: stretch; margin: 1rem 0; }
+        .flow .step {
+            flex: 1 1 150px;
+            background: #ffffff;
+            border: 1px solid #c7d2fe;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            font-size: 0.85rem;
+        }
+        .flow .step strong { display: block; margin-bottom: 0.25rem; }
+        .flow .arrow { align-self: center; font-weight: 700; color: #6b7280; }
+        .flow.red .step { border-color: #fecaca; }
+        .flow.green .step { border-color: #bbf7d0; }
+        .pill {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.1rem 0.6rem;
+            border-radius: 9999px;
+            margin-right: 0.25rem;
+        }
+        .pill-c { background: #dbeafe; color: #1e40af; }
+        .pill-m { background: #dcfce7; color: #166534; }
+        .pill-e { background: #fef3c7; color: #92400e; }
+        .pill-l { background: #f3e8ff; color: #6b21a8; }
+        .zone-green td:first-child { background: #dcfce7; font-weight: 600; }
+        .zone-yellow td:first-child { background: #fef9c3; font-weight: 600; }
+        .zone-orange td:first-child { background: #ffedd5; font-weight: 600; }
+        .zone-red td:first-child { background: #fee2e2; font-weight: 600; }
+        .loc-bar {
+            height: 14px;
+            border-radius: 9999px;
+            background: linear-gradient(to right, #ef4444, #f59e0b, #22c55e);
+            margin: 0.5rem 0;
+        }
+        .breath-box {
+            width: 140px; height: 140px;
+            margin: 1rem auto;
+            border: 4px solid #4f46e5;
+            border-radius: 0.5rem;
+            display: flex; align-items: center; justify-content: center;
+            flex-direction: column;
+            background: #eef2ff;
+            transition: transform 4s linear, background-color 0.4s;
+        }
+        .breath-box.inhale { transform: scale(1.35); background: #c7d2fe; }
+        .breath-box.hold-in { transform: scale(1.35); background: #a5b4fc; transition: transform 0s, background-color 0.4s; }
+        .breath-box.exhale { transform: scale(1); background: #e0e7ff; }
+        .breath-box.hold-out { transform: scale(1); background: #eef2ff; transition: transform 0s, background-color 0.4s; }
+        @media (prefers-reduced-motion: reduce) {
+            .breath-box { transition: none !important; }
+        }
+        .plan-cell { color: #9ca3af; font-style: italic; }
+        @media print {
+            nav, .no-print { display: none !important; }
+            body { background: #ffffff; }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800">Paramedic Health, Wellness and Longevity</h1>
+            <p class="text-xl text-gray-600 mt-2">A Paramedic Study Guide</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="bg-white p-6 rounded-xl shadow-md mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center text-gray-700">Quick Navigation</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <a href="#overview" class="bg-gray-600 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-gray-700">Overview & Support</a>
+                <a href="#challenges" class="bg-red-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-red-600">LO1: Challenges to Health</a>
+                <a href="#burnout" class="bg-orange-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-orange-600">Burnout & Related Concepts</a>
+                <a href="#loc" class="bg-blue-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-blue-600">LO2: Locus of Control</a>
+                <a href="#salutogenesis" class="bg-indigo-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-indigo-600">LO3: Salutogenesis & SOC</a>
+                <a href="#strategies" class="bg-green-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-green-600">LO4: Strategies</a>
+                <a href="#plan" class="bg-teal-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-teal-600">Personal Wellbeing Plan</a>
+                <a href="#cases" class="bg-purple-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-purple-600">Case Analysis</a>
+                <a href="#reflection" class="bg-yellow-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-yellow-600">Reflection & Rapid Recall</a>
+                <a href="#references" class="bg-gray-500 text-white text-center font-semibold py-3 px-4 rounded-lg shadow-sm hover:bg-gray-600">References</a>
+            </div>
+        </nav>
+
+        <main class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+
+            <!-- Overview -->
+            <section id="overview" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">Overview, Learning Outcomes & Support</h2>
+
+                <div class="note-box">
+                    <h3>Before you read: a note on content</h3>
+                    <p>This guide discusses post-traumatic stress, burnout, depression and suicidality among paramedics. If any of it lands close to home, you do not have to work through it alone.</p>
+                    <ul>
+                        <li><strong>Immediate danger:</strong> call <strong>000</strong>.</li>
+                        <li><strong>Lifeline:</strong> 13 11 14 (24 hours).</li>
+                        <li><strong>Suicide Call Back Service:</strong> 1300 659 467 (24 hours).</li>
+                        <li><strong>Beyond Blue:</strong> 1300 22 4636 (24 hours).</li>
+                        <li><strong>Through work or uni:</strong> your ambulance service's employee assistance, peer support and chaplaincy options, and your university's counselling service. Confirm current offerings locally.</li>
+                    </ul>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>Learning Outcomes</h3>
+                    <ol>
+                        <li><strong>LO1:</strong> Discuss the challenges to maintaining physical and mental health in paramedicine, including burnout and mental health struggles. <a href="#challenges" class="text-blue-600 underline">Jump to LO1</a></li>
+                        <li><strong>LO2:</strong> Understand locus of control and how it relates to paramedic practice. <a href="#loc" class="text-blue-600 underline">Jump to LO2</a></li>
+                        <li><strong>LO3:</strong> Explore salutogenesis and the concept of sense of coherence and its three components. <a href="#salutogenesis" class="text-blue-600 underline">Jump to LO3</a></li>
+                        <li><strong>LO4:</strong> Discuss and create strategies for maintaining health and resilience in paramedicine. <a href="#strategies" class="text-blue-600 underline">Jump to LO4</a></li>
+                    </ol>
+                </div>
+
+                <div class="physiology-box">
+                    <h3>The Big Idea: How the Four Outcomes Connect</h3>
+                    <p>The four outcomes are one argument told in four steps. Read them in this order and the exam answers largely write themselves.</p>
+                    <div class="flow">
+                        <div class="step"><strong>LO1: The problem</strong>Paramedicine carries a heavy, cumulative physical and psychological load, and rates of illness are high.</div>
+                        <div class="arrow">&rarr;</div>
+                        <div class="step"><strong>LO2: The control lens</strong>How much control we believe we have over events shapes how that load affects us.</div>
+                        <div class="arrow">&rarr;</div>
+                        <div class="step"><strong>LO3: The health lens</strong>Salutogenesis asks why most paramedics stay well, and answers with sense of coherence.</div>
+                        <div class="arrow">&rarr;</div>
+                        <div class="step"><strong>LO4: The action</strong>Individual, team and organisational strategies that build the resources LO2 and LO3 identify.</div>
+                    </div>
+                </div>
+
+                <div class="assessment-box">
+                    <h3>Source Map and How Far to Trust Each One</h3>
+                    <p>A good answer names its evidence and knows its limits. This table records what each supplied source is and how to treat it.</p>
+                    <div class="tbl-wrap"><table>
+                        <thead><tr><th>Source</th><th>Type</th><th>What it gives this guide</th><th>Appraisal note</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Meadley et al. 2020</strong> (Occup Med)</td>
+                                <td>Editorial introducing the Monash Paramedic Health and Wellbeing Research Unit (PHAWRU)</td>
+                                <td>Frames paramedic health as a professional priority and an employer duty of care. Names the domains: musculoskeletal, physiological, metabolic, nutritional, mental and sleep health.</td>
+                                <td>Short editorial, not a data study. Paywalled: this guide draws on the publicly visible extract only.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mantas-Jim&eacute;nez et al. 2024</strong> (Front Public Health)</td>
+                                <td>Original cross-sectional study, n = 406 EMS professionals, Catalonia</td>
+                                <td>SOC-13 and positive mental health. Meaningfulness and comprehensibility predicted positive mental health.</td>
+                                <td>Cross-sectional (no causation). One region of Spain. See the sign-reporting caution in LO3.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Streb et al. 2014</strong> (Behav Cogn Psychother)</td>
+                                <td>Original cross-sectional study, n = 668 paramedics</td>
+                                <td>Tests whether SOC and resilience are linked to PTSD severity in paramedics.</td>
+                                <td>Only the abstract was accessed. Detailed results are taken from later reviews that cite it.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pronk 2021</strong> (TacMed Australia blog)</td>
+                                <td>Practitioner opinion piece (ex-military doctor), drawing on the Resilience Shield model</td>
+                                <td>Accessible list of stressors, the "stress vs resilience scales" image, and practical tools (box breathing, journaling, stress inoculation).</td>
+                                <td>Not peer reviewed. Some claims are stronger than the evidence (for example on meditation and thought blocking). Critique these in LO4.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PositivePsychology.com SOC article</strong> (Riopel)</td>
+                                <td>Secondary summary</td>
+                                <td>Clear plain-language definitions, SOC-29 and SOC-13 structure, and criticisms.</td>
+                                <td>Good for orientation. Cite Antonovsky and Eriksson and Lindstr&ouml;m as primary sources in assessments. The article gives two different language/country counts for the SOC scale, so avoid quoting those.</td>
+                            </tr>
+                        </tbody>
+                    </table></div>
+                </div>
+            </section>
+
+            <!-- LO1 Challenges -->
+            <section id="challenges" class="section-box">
+                <h2 class="text-3xl font-bold text-gray-800">LO1: Challenges to Physical and Mental Health in Paramedicine</h2>
+
+                <div class="physiology-box">
+                    <h3>Why This Matters Beyond the Individual</h3>
+                    <p>Ambulance services have to put patients first, but they also need healthy people to deliver that care. Meadley and colleagues argue that a safe and healthy workplace is part of a service's duty of care, not an optional extra. Two things follow:</p>
+                    <ul>
+                        <li>A paramedic who is exhausted, hypervigilant or numb is not at their best for the next patient. Poor health is a patient-safety issue.</li>
+                        <li>Illness creates roster gaps. Colleagues fill them with extra shifts, which raises their own exposure and risk. This is the mechanism behind the "downward spiral" later in this section.</li>
+                    </ul>
+                </div>
+
+                <h3>1.1 How Big Is the Problem?</h3>
+                <div class="disorder-box">
+                    <div class="tbl-wrap"><table>
+                        <thead><tr><th>Indicator</th><th>Finding</th><th>Source and caveat</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Pooled prevalence in ambulance personnel</strong></td>
+                                <td>PTSD about <strong>11%</strong>; depression about <strong>15%</strong>; anxiety about <strong>15%</strong>; general psychological distress about <strong>27%</strong>.</td>
+                                <td>Meta-analysis of 27 studies and 30,878 ambulance personnel (Petrie et al. 2018), as reported by Lawn et al. 2020. Rates are likely under-reported because of stigma.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Range of PTSD estimates</strong></td>
+                                <td>Individual studies range from about 1% to over 80%.</td>
+                                <td>Johnston et al. 2026 systematic review (43 studies, 12,783 paramedics). Large variation reflects different measures, samples and thresholds. Quote a range, not a single number.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Suicidal ideation</strong></td>
+                                <td>Estimated at about <strong>10%</strong> in paramedic research, and probably under-reported.</td>
+                                <td>Cited in Lawn et al. 2020 and by Pronk 2021. Treat as an approximate figure.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Australian emergency services</strong></td>
+                                <td>39% had been diagnosed with a mental health condition versus 20% of the general adult population. Suicidal thoughts were about twice as common and suicide plans more than three times as common. About one in three had high or very high psychological distress.</td>
+                                <td>Beyond Blue <em>Answering the Call</em> (2018), n = 21,014 across police, fire, ambulance and SES. It is not ambulance-only.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sleep and mood in Australian paramedics</strong></td>
+                                <td>Higher depression, anxiety, PTSD and insomnia symptoms, more fatigue and poorer sleep quality than reference populations.</td>
+                                <td>Khan et al. 2020 (Sleep Health), online survey.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Comparison with other groups</strong></td>
+                                <td>Described as up to four times the general public and about double other health professionals.</td>
+                                <td>Pronk 2021 (practitioner opinion summarising the literature). Use only with this attribution.</td>
+                            </tr>
+                        </tbody>
+                    </table></div>
+                </div>
+
+                <div class="note-box">
+                    <h3>The Other Half of the Picture (Important for LO3)</h3>
+                    <ul>
+                        <li>Streb et al. begin from the observation that paramedics have higher PTSD rates than the general population, <strong>yet the vast majority do not develop PTSD</strong>. The research question therefore becomes "what protects?", which is a salutogenic question.</li>
+                        <li>In the Catalonian EMS sample, positive mental health scores were high (mean 131.8 on a 39 to 156 scale), and 94% reported job satisfaction.</li>
+                        <li>Take-home: paramedicine is a high-risk occupation, not a doomed one. Protective factors are identifiable and modifiable.</li>
+                    </ul>
+                </div>
+
+                <h3>1.2 Where Does the Load Come From? A Three-Tier Stressor Map</h3>
+                <p>Occupational health researchers separate stressors by where they originate, because the fix depends on the source. A paramedic cannot roster themselves out of a fatigue problem, and an organisation cannot debrief its way out of a traumatic job.</p>
+                <div class="assessment-box">
+                    <div class="tbl-wrap"><table>
+                        <thead><tr><th style="width:18%">Tier</th><th>Examples</th><th>Why it matters</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Operational / clinical</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Repeated exposure to death, serious injury and paediatric emergencies</li>
+                                        <li>Unpredictable environments with incomplete or inaccurate dispatch information</li>
+                                        <li>Time pressure and high-acuity decisions, often with a small crew and remote clinical support</li>
+                                        <li>Patients and bystanders affected by alcohol, drugs or acute mental health crises</li>
+                                        <li>Occupational violence: verbal, physical and sexual</li>
+                                        <li>Heavy lifting in awkward, confined spaces</li>
+                                    </ul>
+                                </td>
+                                <td>Drives cumulative trauma load, hypervigilance and physical injury. Largely cannot be removed, so has to be managed.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Organisational</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Rotating shifts, overtime and roster gaps</li>
+                                        <li>Delays transferring patients at hospital, and limited resources</li>
+                                        <li>Time-based performance targets</li>
+                                        <li>Little wellbeing education in training</li>
+                                        <li>Few chances to debrief after critical incidents, sometimes an immediate return to work</li>
+                                        <li>Workplace bullying and interpersonal conflict</li>
+                                        <li>A culture that stigmatises distress and under-reports injuries</li>
+                                        <li>Support that is reactive, stepping in only after someone is unwell</li>
+                                    </ul>
+                                </td>
+                                <td>Determines whether stress is recovered from or accumulates. Sits with employers and is a workplace health and safety matter.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Personal / social</strong></td>
+                                <td>
+                                    <ul>
+                                        <li>Sleep debt and circadian disruption</li>
+                                        <li>Less time with family and friends because of shift work</li>
+                                        <li>Alcohol or other substances used to wind down</li>
+                                        <li>Identity fused with the job</li>
+                                        <li>Pre-existing vulnerabilities, financial pressure, caring responsibilities</li>
+                                    </ul>
+                                </td>
+                                <td>Determines the resources a person brings to the load. Partly modifiable by the individual, but often shaped by the roster and the culture.</td>
+                            </tr>
+                        </tbody>
+                    </table></div>
+                    <p class="text-sm mt-2">Bullying, moral conflict and physical or psychological safety concerns were highlighted as drivers of stress in healthcare workers in the literature discussed by Mantas-Jim&eacute;nez et al. 2024.</p>
+                </div>
+
+                <div class="note-box">
+                    <h3>Trauma Exposure Is Rarely One Event: "Traumatic Adaptation"</h3>
+                    <p>Pronk describes a process he calls <strong>traumatic adaptation</strong>. The first death, amputation or seriously ill child is a shock. By the tenth or twentieth, it barely registers as unusual, and every colleague is recalibrating in the same way, so nobody has an outside reference point. Meanwhile the cumulative load keeps building (his image is a "psychological bucket" slowly filling).</p>
+                    <p><strong>Check-question he suggests:</strong> "Are my experiences unusually traumatic or stressful compared with the average person?" If yes, a preventative conversation with a psychologist is reasonable before symptoms appear.</p>
+                    <p class="text-sm"><em>Appraisal:</em> This is a useful teaching frame from a practitioner, not an established clinical construct. It fits the clinical literature on cumulative exposure, but cite it as opinion.</p>
+                </div>
+
+                <h3>1.3 Physical Health Challenges</h3>
+                <div class="physiology-box">
+                    <h4>Chronic Stress Physiology in Brief</h4>
+                    <p>Threat activates the sympathetic-adrenal-medullary system (adrenaline, heart rate, blood pressure) and the hypothalamic-pituitary-adrenal axis (cortisol). That is adaptive for a resus. It becomes costly when it is switched on repeatedly and recovery is incomplete: <strong>constant low-level activation</strong>, punctuated by acute spikes, as Pronk puts it. The cumulative wear is often called <strong>allostatic load</strong>.</p>
+                    <div class="flow">
+                        <div class="step"><strong>Repeated activation</strong>Unpredictable calls, night work, occupational violence risk.</div>
+                        <div class="arrow">&rarr;</div>
+                        <div class="step"><strong>Incomplete recovery</strong>Short sleep, back-to-back jobs, no decompression.</div>
+                        <div class="arrow">&rarr;</div>
+                        <div class="step"><strong>Physiological wear</strong>Raised blood pressure, insulin resistance, immune and sleep disruption.</div>
+                        <div class="arrow">&rarr;</div>
+                        <div class="step"><strong>Clinical outcomes</strong>Cardiometabolic disease, injury, low mood, anxiety.</div>
+                    </div>
+                    <p class="text-sm">The physical and mental pathways feed each other: poor sleep worsens mood, and low mood worsens sleep, eating and activity.</p>
+                </div>
+
+                <div class="disorder-box">
+                    <div class="tbl-wrap"><table>
+                        <thead><tr><th>Domain</th><th>What happens</th><th>Evidence and notes</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Shift work, sleep and circadian misalignment</strong></td>
+                                <td>Working against the body clock is linked to metabolic disorders, cardiovascular disease and mental health conditions. Night shifts add fatigue, sleepiness and stress, and impair performance. Fatigue also makes drowsy driving after a night shift a real hazard.</td>
+                                <td>Khan et al. 2020 and 2021 (Australian paramedics). Crowther et al. 2025 followed intern paramedics as they began shift work, and found the transition to shift work is a vulnerable period for sleep, diet and activity.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Musculoskeletal injury</strong></td>
+                                <td>Repeated lifting of patients and equipment, often twisting under load in confined spaces, causes back, shoulder and knee injuries. Cumulative micro-trauma matters as much as single lifts.</td>
+                                <td>PHAWRU has a dedicated musculoskeletal research arm. Injury is a leading source of lost time and early career exit.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Metabolic and nutritional</strong></td>
+                                <td>Irregular meals, convenience food, high caffeine and sugar intake, and eating to cope with emotion. Together with low activity and shift work, this raises the risk of weight gain, type 2 diabetes and cardiovascular disease.</td>
+                                <td>Meadley et al. 2020 name nutrition and metabolic health as core PHAWRU domains.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Injury from violence and hazards</strong></td>
+                                <td>Assault, sharps and infectious exposure, road-crash risk in emergency driving.</td>
+                                <td>Pronk 2021 states every paramedic will meet at least verbal aggression, and many will meet physical or sexual assault. Underreporting is common.</td>
+                            </tr>
+                        </tbody>
+                    </table></div>
+                </div>
+            </section>
